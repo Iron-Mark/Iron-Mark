@@ -1,4 +1,4 @@
-<p align="center"><img src="https://images.unsplash.com/photo-1736200996971-e3464dacdb94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&h=480&q=80" width="100%" alt="Banner"/></p>
+<p align="center"><img src="assets/github-banner.gif" width="40%" alt="Banner"/></p>
 <h1 align="center">Hey there! I'm Iron-Mark <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"/></h1>
 <p align="center"><em>Front-End Developer • UI/UX Enthusiast • Tech & Philosophy Lover</em></p>
 <div align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=36BCF7&center=true&vCenter=true&width=650&lines=Turning+ideas+into+beautiful+web+experiences;UI%2FUX+focused%2C+Philosophy+powered;Always+Learning+%26+Experimenting!;Let%27s+Create+Something+Amazing+Together%21"/></div>
