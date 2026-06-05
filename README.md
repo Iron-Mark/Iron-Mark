@@ -191,14 +191,14 @@
     <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
     <td><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
     <td><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
-    <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td><sub>Models · reasoning · chat</sub></td>
   </tr>
   <tr align="center">
     <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
     <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td><img src="assets/ai-workflow/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
     <td><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
-    <td><sub>Prompting · codegen · UI gen · deploy loops</sub></td>
+    <td><sub>Prompting · codegen · UI gen</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
@@ -226,10 +226,10 @@
     <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
     <td><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
     <td><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
   </tr>
   <tr align="center">
-    <td colspan="5"><sub>Fastify · Vercel · proof-backed deploy loops</sub></td>
+    <td colspan="5"><sub>Fastify · Git · proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
