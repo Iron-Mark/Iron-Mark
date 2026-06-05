@@ -51,41 +51,41 @@
 <table width="100%" align="center">
   <tr align="center"><td colspan="5"><sub><b>🌐 WEB</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
+    <td><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
+    <td><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
+    <td><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
+    <td><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
+    <td><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
+    <td><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
+    <td><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
+    <td><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
+    <td><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
+    <td><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>📱 MOBILE</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dart/dart-original.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
+    <td><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
+    <td><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
+    <td><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
     <td colspan="2"><sub>Wear OS · cross-platform apps</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎮 GAME DEV</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
+    <td><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
     <td colspan="4"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎨 UI / UX</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
+    <td><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
     <td colspan="4"><sub>Design systems · user research · accessibility · product UI</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🤖 AI</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
+    <td><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
+    <td><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
     <td colspan="2"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
@@ -99,17 +99,17 @@
   <tr align="center">
     <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
     <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td><img src="assets/ai-workflow/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td><img src="assets/ai-workflow/vercel.png" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
     <td><img src="assets/ai-workflow/codex.png" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
     <td><sub>Prompting · codegen · UI gen · deploy loops</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/appwrite/appwrite-original.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
+    <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+    <td><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
+    <td><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
   </tr>
 </table>
 
