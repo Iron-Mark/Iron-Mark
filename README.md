@@ -34,15 +34,42 @@
       </a><br><b>ResQLink</b><br><sub>Offline-first emergency tech</sub>
     </td>
   </tr>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://lexinsights.vercel.app">
+        <img src="assets/projects/lexinsights.svg" width="100%" alt="LexInSight"/>
+      </a><br><b>LexInSight</b><br><sub>AI legal compliance chat</sub>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.marksiazon.dev/projects/good-to-live">
+        <img src="assets/projects/good-to-live.png" width="100%" alt="Good To Live"/>
+      </a><br><b>Good To Live</b><br><sub>Client web launch & SEO</sub>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.marksiazon.dev/projects/flowfit">
+        <img src="assets/projects/flowfit.png" width="100%" alt="FlowFit"/>
+      </a><br><b>FlowFit</b><br><sub>Wear OS · health & sensors</sub>
+    </td>
+  </tr>
 </table>
 
 <p align="center">
   <a href="https://www.marksiazon.dev/projects">All projects</a> ·
   <a href="https://www.marksiazon.dev/proof">Proof matrix</a> ·
+  <a href="https://www.marksiazon.dev/achievements">Achievements</a> ·
   <a href="https://www.marksiazon.dev/lab">Lab</a>
 </p>
 
-<p align="center"><sub>Lab: <a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a> · <a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a> · <a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></sub></p>
+<p align="center"><sub>
+  Lab & more:
+  <a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a> ·
+  <a href="https://Iron-Mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a> ·
+  <a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a> ·
+  <a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a> ·
+  <a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a> ·
+  <a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a> ·
+  <a href="https://www.marksiazon.dev/projects/pulse">Pulse</a>
+</sub></p>
 
 ---
 
@@ -124,10 +151,15 @@
   <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
     <td><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
+    <td><img src="assets/web3-networks/stellar.png" alt="Soroban / Stellar" width="40" height="40"/><br><sub>Soroban</sub></td>
+    <td><img src="assets/web3-networks/celo.png" alt="MiniPay / Celo" width="40" height="40"/><br><sub>MiniPay</sub></td>
     <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
     <td><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+  </tr>
+  <tr align="center">
     <td><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td colspan="3"><sub>Fastify · Vercel · proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
@@ -135,9 +167,9 @@
 
 ---
 
-- **Design → Code** — Case studies at [marksiazon.dev](https://www.marksiazon.dev)
-- **Flagship proof** — [HireProof](https://hireproof.tech/portfolio) · [Stellaroid](https://stellaroid.tech) · [ResQLink](https://github.com/UMakLumen/ResQLinkWeb)
-- **Also on** — [@mark-siazon](https://github.com/mark-siazon) (FM solutions) · [@Iron-Mark](https://github.com/Iron-Mark) (hackathons / lab)
+- **Design → Code** — Case studies at [marksiazon.dev](https://www.marksiazon.dev) · [recruiter brief](https://www.marksiazon.dev/recruiter) · [achievements](https://www.marksiazon.dev/achievements)
+- **Flagship proof** — [HireProof](https://hireproof.tech/portfolio) · [Stellaroid](https://stellaroid.tech) · [ResQLink](https://github.com/UMakLumen/ResQLinkWeb) · [LexInSight](https://lexinsights.vercel.app)
+- **Accounts** — [@Iron-Mark](https://github.com/Iron-Mark) (hackathons / lab / builds) · [@mark-siazon](https://github.com/mark-siazon) (Frontend Mentor & smaller public repos)
 
 > A thoughtful interface fosters deeper human–technology connection.
 
@@ -147,7 +179,9 @@
   <a href="https://github.com/mark-siazon"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge" alt="GitHub"/></a>
   <a href="https://www.linkedin.com/in/mark-siazon/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://www.frontendmentor.io/profile/Iron-Mark"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor"/></a>
+  <a href="https://www.marksiazon.dev/achievements"><img src="https://img.shields.io/badge/Achievements-→-F59E0B?style=for-the-badge" alt="Achievements"/></a>
   <a href="https://www.marksiazon.dev/writing"><img src="https://img.shields.io/badge/Writing-→-64748B?style=for-the-badge" alt="Writing"/></a>
+  <a href="https://www.tiktok.com/@iron_markk"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok"/></a>
   <a href="mailto:marka.siazon@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white&style=for-the-badge" alt="Email"/></a>
 </p>
 
