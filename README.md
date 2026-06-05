@@ -67,9 +67,19 @@
   <tr align="center"><td colspan="5"><sub><b>📱 MOBILE</b></sub></td></tr>
   <tr align="center">
     <td><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
+    <td><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
+    <td><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
+    <td><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
     <td><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
+  </tr>
+  <tr align="center">
     <td><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
-    <td colspan="2"><sub>Wear OS · cross-platform apps</sub></td>
+    <td colspan="4"><sub>Wear OS · cross-platform apps</sub></td>
+  </tr>
+  <tr align="center"><td colspan="5"><sub><b>🧭 TANSTACK</b></sub></td></tr>
+  <tr align="center">
+    <td><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
+    <td colspan="4"><sub>Query · Router · Table · Form · data-driven UI</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎮 GAME DEV</b></sub></td></tr>
   <tr align="center">
