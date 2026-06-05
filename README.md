@@ -188,38 +188,36 @@
   <tr align="center"><td colspan="5"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
   <tr align="center">
     <td><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
-    <td><img src="assets/ai-workflow/claude.png" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
-    <td><img src="assets/ai-workflow/gemini.png" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td><img src="assets/ai-workflow/copilot.png" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
+    <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+    <td><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
     <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
-    <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td><img src="assets/ai-workflow/vercel.png" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
-    <td><img src="assets/ai-workflow/codex.png" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
+    <td><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
+    <td><img src="assets/ai-workflow/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
     <td><sub>Prompting · codegen · UI gen · deploy loops</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
-    <td><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td><a href="https://stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Stellar Network" width="40" height="40"/><br><sub>Stellar</sub></a></td>
-    <td><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo Network" width="40" height="40"/><br><sub>Celo</sub></a></td>
+    <td><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.svg" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
+    <td><a href="https://stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Stellar / Soroban" width="40" height="40"/><br><sub>Stellar / Soroban</sub></a></td>
+    <td><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo / MiniPay" width="40" height="40"/><br><sub>Celo / MiniPay</sub></a></td>
     <td><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
     <td><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
-    <td><a href="https://soroban.stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Soroban" width="40" height="40"/><br><sub>Soroban</sub></a></td>
-    <td><a href="https://minipay.opera.com/"><img src="assets/web3-networks/celo.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
     <td><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-  </tr>
-  <tr align="center">
     <td><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
-    <td colspan="3"><sub>Fastify · Vercel · proof-backed deploy loops</sub></td>
+  </tr>
+  <tr align="center">
+    <td colspan="5"><sub>Fastify · Vercel · proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
