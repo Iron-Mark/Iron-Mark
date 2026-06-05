@@ -88,6 +88,21 @@
     <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
     <td colspan="2"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
+  <tr align="center"><td colspan="5"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
+  <tr align="center">
+    <td><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
+    <td><img src="assets/ai-workflow/claude.png" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td><img src="assets/ai-workflow/gemini.png" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+    <td><img src="assets/ai-workflow/copilot.png" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
+    <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+  </tr>
+  <tr align="center">
+    <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
+    <td><img src="assets/ai-workflow/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td><img src="assets/ai-workflow/codex.png" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
+    <td><sub>Prompting · codegen · UI gen · deploy loops</sub></td>
+  </tr>
   <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
     <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
@@ -98,7 +113,7 @@
   </tr>
 </table>
 
-<p align="center"><em>Web · Mobile · Game · UI/UX · AI · Web3 — proof-backed across the stack</em></p>
+<p align="center"><em>Web · Mobile · Game · UI/UX · AI · Web3 · AI-assisted workflows — proof-backed across the stack</em></p>
 
 ---
 
