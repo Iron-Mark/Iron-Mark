@@ -225,12 +225,49 @@
 
 ---
 
-<h3 align="center">GitHub Activity</h3>
+<h3 align="center">GitHub Stats</h3>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Iron-Mark&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Iron-Mark GitHub stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Iron-Mark&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" height="165"/>
+  <img src="https://komarev.com/ghpvc/?username=Iron-Mark&label=Profile%20views&color=6366f1&style=for-the-badge" alt="Profile views"/>
+  <a href="https://github.com/Iron-Mark?tab=followers"><img src="https://img.shields.io/github/followers/Iron-Mark?label=Followers&style=for-the-badge&color=181717&logo=github" alt="Followers"/></a>
+  <img src="https://img.shields.io/github/stars/Iron-Mark?label=Total%20Stars&style=for-the-badge&color=F59E0B&logo=github" alt="Total stars"/>
+  <img src="https://img.shields.io/badge/dynamic/json?logo=github&label=Public%20Repos&query=%24.public_repos&url=https://api.github.com/users/Iron-Mark&style=for-the-badge&color=36BCF7" alt="Public repos"/>
 </p>
+
+<p align="center">
+  <a href="https://github.com/Iron-Mark">
+    <img src="assets/github/stats.svg" alt="Iron-Mark GitHub stats" height="195"/>
+  </a>
+  <a href="https://github.com/Iron-Mark">
+    <img src="assets/github/top-langs.svg" alt="Top languages" height="195"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Iron-Mark">
+    <img src="assets/github/streak.svg" alt="GitHub streak" height="195"/>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=tokyo-night&hide_border=true&area=true&height=300" alt="Contribution graph"/>
+</p>
+
+<h3 align="center">Pinned Repos</h3>
+
+<p align="center">
+  <a href="https://github.com/Iron-Mark/qwen-ui-lab">
+    <img src="assets/github/pin-qwen-ui-lab.svg" alt="qwen-ui-lab" width="400"/>
+  </a>
+  <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">
+    <img src="assets/github/pin-smart-profile.svg" alt="Smart Profile" width="400"/>
+  </a>
+  <a href="https://github.com/Iron-Mark/Hackathon-LexInsights">
+    <img src="assets/github/pin-lexinsights.svg" alt="LexInSight" width="400"/>
+  </a>
+</p>
+
+<p align="center"><sub>Stats refresh daily via GitHub Actions · contribution graph updates live</sub></p>
 
 ---
 
