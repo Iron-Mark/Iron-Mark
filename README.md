@@ -194,17 +194,29 @@
     <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
-    <td><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
+    <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
     <td><img src="assets/ai-workflow/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
     <td><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
     <td><sub>Prompting · codegen · UI gen · deploy loops</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
-    <td><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.svg" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td><a href="https://stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Stellar / Soroban" width="40" height="40"/><br><sub>Stellar / Soroban</sub></a></td>
-    <td><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo / MiniPay" width="40" height="40"/><br><sub>Celo / MiniPay</sub></a></td>
+    <td><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
+    <td>
+      <a href="https://stellar.org/">
+        <img src="assets/web3-networks/stellar.png" alt="Stellar" width="32" height="32"/>
+        <img src="assets/web3-networks/soroban.png" alt="Soroban" width="32" height="32"/>
+        <br><sub>Stellar / Soroban</sub>
+      </a>
+    </td>
+    <td>
+      <a href="https://celo.org/">
+        <img src="assets/web3-networks/celo.png" alt="Celo" width="32" height="32"/>
+        <img src="assets/web3-networks/minipay.png" alt="MiniPay" width="32" height="32"/>
+        <br><sub>Celo / MiniPay</sub>
+      </a>
+    </td>
     <td><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
