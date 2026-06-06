@@ -178,7 +178,8 @@
   </tr>
   <tr align="center">
     <td width="20%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
-    <td width="20%" colspan="4"><sub>Wear OS · cross-platform apps</sub></td>
+    <td width="20%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
+    <td width="20%" colspan="3"><sub>Health sensors · GPS · cross-platform apps</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🧭 TANSTACK</b></sub></td></tr>
   <tr align="center">
@@ -246,7 +247,10 @@
     <td width="20%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
   </tr>
   <tr align="center">
-    <td colspan="5"><sub>Fastify · Git · proof-backed deploy loops</sub></td>
+    <td width="20%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
+    <td width="20%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td width="20%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+    <td width="20%" colspan="2"><sub>Proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
