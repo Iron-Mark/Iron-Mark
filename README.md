@@ -183,18 +183,26 @@
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🧭 TANSTACK</b></sub></td></tr>
   <tr align="center">
-    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
-    <td width="20%" colspan="4"><sub>Query · Router · Table · Form · data-driven UI</sub></td>
+    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Query" width="40" height="40"/><br><sub>Query</sub></td>
+    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Router" width="40" height="40"/><br><sub>Router</sub></td>
+    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Table" width="40" height="40"/><br><sub>Table</sub></td>
+    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Form" width="40" height="40"/><br><sub>Form</sub></td>
+    <td width="20%"><sub>Data-driven UI · server state · routing · tables · forms</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎮 GAME DEV</b></sub></td></tr>
   <tr align="center">
     <td width="20%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
-    <td width="20%" colspan="4"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
+    <td width="20%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
+    <td width="20%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
+    <td width="20%" colspan="2"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎨 UI / UX</b></sub></td></tr>
   <tr align="center">
     <td width="20%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td width="20%" colspan="4"><sub>Design systems · user research · accessibility · product UI</sub></td>
+    <td width="20%"><img src="assets/stack/storybook.svg" alt="Storybook" width="40" height="40"/><br><sub>Storybook</sub></td>
+    <td width="20%"><img src="assets/stack/adobexd.svg" alt="Adobe XD" width="40" height="40"/><br><sub>Adobe XD</sub></td>
+    <td width="20%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
+    <td width="20%"><sub>Design systems · research · a11y · product UI</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🤖 AI</b></sub></td></tr>
   <tr align="center">
