@@ -19,54 +19,59 @@
 <h3 align="center">Featured Work</h3>
 
 <table width="100%">
+  <colgroup>
+    <col width="33%"/>
+    <col width="33%"/>
+    <col width="33%"/>
+  </colgroup>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/hireproof">
-        <img src="assets/projects/hireproof.png" width="100%" alt="HireProof"/>
+        <img src="assets/projects/hireproof.png" width="100%" height="140" alt="HireProof"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/stellaroid-earn">
-        <img src="assets/projects/stellaroid.png" width="100%" alt="Stellaroid Earn"/>
+        <img src="assets/projects/stellaroid.png" width="100%" height="140" alt="Stellaroid Earn"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/resqlink">
-        <img src="assets/projects/resqlink.png" width="100%" alt="ResQLink"/>
+        <img src="assets/projects/resqlink.png" width="100%" height="140" alt="ResQLink"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb">Repo ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://lexinsights.vercel.app">
-        <img src="assets/projects/lexinsights.svg" width="100%" alt="LexInSight"/>
+        <img src="assets/projects/lexinsights.svg" width="100%" height="140" alt="LexInSight"/>
       </a><br><b><a href="https://lexinsights.vercel.app">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/good-to-live">
-        <img src="assets/projects/good-to-live.png" width="100%" alt="Good To Live"/>
+        <img src="assets/projects/good-to-live.png" width="100%" height="140" alt="Good To Live"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/flowfit">
-        <img src="assets/projects/flowfit.png" width="100%" alt="FlowFit"/>
+        <img src="assets/projects/flowfit.png" width="100%" height="140" alt="FlowFit"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit">Case study ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/palengkepay">
-        <img src="assets/projects/palengkepay.png" width="100%" alt="PalengkePay"/>
+        <img src="assets/projects/palengkepay.png" width="100%" height="140" alt="PalengkePay"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/gawainyah">
-        <img src="assets/projects/gawainyah.png" width="100%" alt="GawainYah"/>
+        <img src="assets/projects/gawainyah.png" width="100%" height="140" alt="GawainYah"/>
       </a><br><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://github.com/Iron-Mark/qwen-ui-lab">
-        <img src="assets/projects/qwen-ui-lab.png" width="100%" alt="qwen-ui-lab"/>
+        <img src="assets/projects/qwen-ui-lab.png" width="100%" height="140" alt="qwen-ui-lab"/>
       </a><br><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app">Live ↗</a></sub>
     </td>
   </tr>
@@ -84,35 +89,40 @@
 <h3 align="center">Hackathon & Lab</h3>
 
 <table width="100%">
+  <colgroup>
+    <col width="22%"/>
+    <col width="43%"/>
+    <col width="35%"/>
+  </colgroup>
   <tr>
-    <th align="left"><sub>Project</sub></th>
-    <th align="left"><sub>Focus</sub></th>
-    <th align="left"><sub>Links</sub></th>
+    <th align="left" width="22%"><sub>Project</sub></th>
+    <th align="left" width="43%"><sub>Focus</sub></th>
+    <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
   <tr>
-    <td><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
-    <td><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
-    <td><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
+    <td width="22%"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
+    <td width="43%"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
+    <td width="35%"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
   </tr>
   <tr>
-    <td><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
-    <td><sub>AI credentials · SaaS · Supabase</sub></td>
-    <td><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
+    <td width="22%"><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
+    <td width="43%"><sub>AI credentials · SaaS · Supabase</sub></td>
+    <td width="35%"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
   </tr>
   <tr>
-    <td><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
-    <td><sub>Baybayin ML · cultural education UX</sub></td>
-    <td><sub><a href="https://beta.baybayinscribe.top">Live</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
+    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
+    <td width="43%"><sub>Baybayin ML · cultural education UX</sub></td>
+    <td width="35%"><sub><a href="https://beta.baybayinscribe.top">Live</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
-    <td><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
-    <td><sub>Flutter · Baybayin learning · Android release</sub></td>
-    <td><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
+    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
+    <td width="43%"><sub>Flutter · Baybayin learning · Android release</sub></td>
+    <td width="35%"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
   </tr>
   <tr>
-    <td><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
-    <td><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
-    <td><sub><a href="https://github.com/KpG782/devcamp">Repo</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
+    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
+    <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
+    <td width="35%"><sub><a href="https://github.com/KpG782/devcamp">Repo</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
 </table>
 
@@ -135,98 +145,105 @@
 
 <h3 align="center">Stack & Fields</h3>
 
-<table width="100%" align="center">
+<table width="100%">
+  <colgroup>
+    <col width="20%"/>
+    <col width="20%"/>
+    <col width="20%"/>
+    <col width="20%"/>
+    <col width="20%"/>
+  </colgroup>
   <tr align="center"><td colspan="5"><sub><b>🌐 WEB</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
-    <td><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
-    <td><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
-    <td><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
-    <td><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
+    <td width="20%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
+    <td width="20%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
+    <td width="20%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
+    <td width="20%"><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
+    <td width="20%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
-    <td><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
-    <td><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
-    <td><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
+    <td width="20%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
+    <td width="20%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
+    <td width="20%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
+    <td width="20%"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
+    <td width="20%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>📱 MOBILE</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
-    <td><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
-    <td><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
-    <td><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
-    <td><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
+    <td width="20%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
+    <td width="20%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
+    <td width="20%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
+    <td width="20%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
+    <td width="20%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
-    <td colspan="4"><sub>Wear OS · cross-platform apps</sub></td>
+    <td width="20%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
+    <td width="20%" colspan="4"><sub>Wear OS · cross-platform apps</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🧭 TANSTACK</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
-    <td colspan="4"><sub>Query · Router · Table · Form · data-driven UI</sub></td>
+    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
+    <td width="20%" colspan="4"><sub>Query · Router · Table · Form · data-driven UI</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎮 GAME DEV</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
-    <td colspan="4"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
+    <td width="20%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
+    <td width="20%" colspan="4"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🎨 UI / UX</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td colspan="4"><sub>Design systems · user research · accessibility · product UI</sub></td>
+    <td width="20%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
+    <td width="20%" colspan="4"><sub>Design systems · user research · accessibility · product UI</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🤖 AI</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
-    <td><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td colspan="2"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
+    <td width="20%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td width="20%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
+    <td width="20%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
+    <td width="20%" colspan="2"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
-    <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
-    <td><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
-    <td><sub>Models · reasoning · chat</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
+    <td width="20%"><sub>Models · reasoning · chat</sub></td>
   </tr>
   <tr align="center">
-    <td><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
-    <td><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
-    <td><sub>Prompting · codegen · UI gen</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td width="20%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
+    <td width="20%"><sub>Prompting · codegen · UI gen</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
-    <td><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td>
+    <td width="20%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
+    <td width="20%">
       <a href="https://stellar.org/">
-        <img src="assets/web3-networks/stellar.png" alt="Stellar" width="32" height="32"/>
-        <img src="assets/web3-networks/soroban.png" alt="Soroban" width="32" height="32"/>
+        <img src="assets/web3-networks/stellar.png" alt="Stellar" width="36" height="36"/>
+        <img src="assets/web3-networks/soroban.png" alt="Soroban" width="36" height="36"/>
         <br><sub>Stellar / Soroban</sub>
       </a>
     </td>
-    <td>
+    <td width="20%">
       <a href="https://celo.org/">
-        <img src="assets/web3-networks/celo.png" alt="Celo" width="32" height="32"/>
-        <img src="assets/web3-networks/minipay.png" alt="MiniPay" width="32" height="32"/>
+        <img src="assets/web3-networks/celo.png" alt="Celo" width="36" height="36"/>
+        <img src="assets/web3-networks/minipay.png" alt="MiniPay" width="36" height="36"/>
         <br><sub>Celo / MiniPay</sub>
       </a>
     </td>
-    <td><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
-    <td><sub>Builder · ecosystem · proof systems</sub></td>
+    <td width="20%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="20%"><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
-    <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-    <td><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td width="20%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
+    <td width="20%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td width="20%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+    <td width="20%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
+    <td width="20%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
   </tr>
   <tr align="center">
     <td colspan="5"><sub>Fastify · Git · proof-backed deploy loops</sub></td>
@@ -246,14 +263,20 @@
   <img src="https://img.shields.io/badge/dynamic/json?logo=github&label=Public%20Repos&query=%24.public_repos&url=https://api.github.com/users/Iron-Mark&style=for-the-badge&color=36BCF7" alt="Public repos"/>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Iron-Mark">
-    <img src="assets/github/stats.svg" alt="Iron-Mark GitHub stats" height="195"/>
-  </a>
-  <a href="https://github.com/Iron-Mark">
-    <img src="assets/github/top-langs.svg" alt="Top languages" height="195"/>
-  </a>
-</p>
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <a href="https://github.com/Iron-Mark">
+        <img src="assets/github/stats.svg" alt="Iron-Mark GitHub stats" height="195"/>
+      </a>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://github.com/Iron-Mark">
+        <img src="assets/github/top-langs.svg" alt="Top languages" height="195"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
   <a href="https://github.com/Iron-Mark">
@@ -267,17 +290,30 @@
 
 <h3 align="center">Pinned Repos</h3>
 
-<p align="center">
-  <a href="https://github.com/Iron-Mark/qwen-ui-lab">
-    <img src="assets/github/pin-qwen-ui-lab.svg" alt="qwen-ui-lab" width="400"/>
-  </a>
-  <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">
-    <img src="assets/github/pin-smart-profile.svg" alt="Smart Profile" width="400"/>
-  </a>
-  <a href="https://github.com/Iron-Mark/Hackathon-LexInsights">
-    <img src="assets/github/pin-lexinsights.svg" alt="LexInSight" width="400"/>
-  </a>
-</p>
+<table width="100%">
+  <colgroup>
+    <col width="33%"/>
+    <col width="34%"/>
+    <col width="33%"/>
+  </colgroup>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://github.com/Iron-Mark/qwen-ui-lab">
+        <img src="assets/github/pin-qwen-ui-lab.svg" alt="qwen-ui-lab" width="100%"/>
+      </a>
+    </td>
+    <td align="center" width="34%">
+      <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">
+        <img src="assets/github/pin-smart-profile.svg" alt="Smart Profile" width="100%"/>
+      </a>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://github.com/Iron-Mark/Hackathon-LexInsights">
+        <img src="assets/github/pin-lexinsights.svg" alt="LexInSight" width="100%"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
 <p align="center"><sub>Stats refresh daily via GitHub Actions · contribution graph updates live</sub></p>
 
