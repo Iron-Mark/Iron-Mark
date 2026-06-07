@@ -312,7 +312,13 @@
 
 ---
 
-<p align="center"><sub>Case studies, recruiter brief &amp; achievements at <a href="https://www.marksiazon.dev">marksiazon.dev</a> · smaller public repos on <a href="https://github.com/mark-siazon">@mark-siazon</a> · contact via <a href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a> or <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a></sub></p>
+<div align="center">
+  <ul style="list-style-position:inside;padding:0;margin:0;text-align:center">
+    <li><sub>Case studies, recruiter brief &amp; achievements at <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></li>
+    <li><sub>Smaller public repos on <a href="https://github.com/mark-siazon">@mark-siazon</a></sub></li>
+    <li><sub>Contact via <a href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a> or <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a></sub></li>
+  </ul>
+</div>
 
 <p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
 
