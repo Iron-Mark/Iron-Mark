@@ -325,33 +325,6 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=tokyo-night&hide_border=true&area=true&height=300" alt="Contribution graph"/>
 </p>
 
-<h3 align="center">Pinned Repos</h3>
-
-<table width="100%">
-  <colgroup>
-    <col width="33%"/>
-    <col width="34%"/>
-    <col width="33%"/>
-  </colgroup>
-  <tr>
-    <td align="center" width="33%">
-      <a href="https://github.com/Iron-Mark/qwen-ui-lab">
-        <img src="assets/github/pin-qwen-ui-lab.svg" alt="qwen-ui-lab" width="100%"/>
-      </a>
-    </td>
-    <td align="center" width="34%">
-      <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">
-        <img src="assets/github/pin-smart-profile.svg" alt="Smart Profile" width="100%"/>
-      </a>
-    </td>
-    <td align="center" width="33%">
-      <a href="https://github.com/Iron-Mark/Hackathon-LexInsights">
-        <img src="assets/github/pin-lexinsights.svg" alt="LexInSight" width="100%"/>
-      </a>
-    </td>
-  </tr>
-</table>
-
 <p align="center"><sub>Stats refresh daily via GitHub Actions · contribution graph updates live</sub></p>
 
 ---
