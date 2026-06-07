@@ -234,19 +234,19 @@
     <td width="11%"><img src="assets/ai-workflow/perplexity-color.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
     <td width="11%"><img src="assets/ai-workflow/grok-color.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
+    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
+    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
   </tr>
   <tr align="center">
-    <td width="11%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/claudecode-color.svg" alt="Claude Code" width="40" height="40"/><br><sub>Claude Code</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/antigravity-color.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>GitHub Copilot</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/kiro-color.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></td>
+    <td width="11%"><a href="https://developers.openai.com/codex" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
+    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode-color.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity-color.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
+    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
+    <td width="11%"><a href="https://v0.dev/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
+    <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
+    <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro-color.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
+    <td width="11%"><a href="https://opencode.ai/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
   <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for proof-backed products</sub></td></tr>
