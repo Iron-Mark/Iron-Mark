@@ -191,13 +191,13 @@
   </tr>
   <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
-    <td width="11%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android Studio</sub></td>
+    <td width="11%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Android&nbsp;Studio</sub></td>
     <td width="11%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
     <td width="11%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
     <td width="11%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
     <td width="11%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
     <td width="11%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
-    <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
+    <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub style="white-space:nowrap">React&nbsp;Native</sub></td>
     <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · Unity prototypes and 3D assets for interactive experiences</sub></td></tr>
@@ -224,11 +224,11 @@
     <td width="11%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
     <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
     <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
-    <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub>Premiere Pro</sub></td>
-    <td width="11%"><img src="assets/stack/capcut.svg" alt="CapCut" width="40" height="40"/><br><sub>CapCut</sub></td>
-    <td width="11%"><img src="assets/stack/obsstudio.svg" alt="OBS Studio" width="40" height="40"/><br><sub>OBS Studio</sub></td>
+    <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub style="white-space:nowrap">Premiere&nbsp;Pro</sub></td>
+    <td width="11%"><img src="assets/stack/capcut.png" alt="CapCut" width="40" height="40"/><br><sub>CapCut</sub></td>
+    <td width="11%"><img src="assets/stack/obsstudio.svg" alt="OBS Studio" width="40" height="40"/><br><sub style="white-space:nowrap">OBS&nbsp;Studio</sub></td>
     <td width="11%"><img src="assets/stack/audacity.svg" alt="Audacity" width="40" height="40"/><br><sub>Audacity</sub></td>
-    <td width="11%"><img src="assets/stack/spline.svg" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
+    <td width="11%"><img src="assets/stack/spline.png" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · model stacks behind agents, trust &amp; safety, and ML product UX</sub></td></tr>
   <tr align="center">
