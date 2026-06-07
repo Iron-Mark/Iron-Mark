@@ -296,7 +296,7 @@
     <td width="11%"><img src="assets/stack/cloudflare.svg" alt="Cloudflare" width="40" height="40"/><br><sub>Cloudflare</sub></td>
     <td width="11%"><img src="assets/stack/netlify.svg" alt="Netlify" width="40" height="40"/><br><sub>Netlify</sub></td>
     <td width="11%"><img src="assets/stack/railway.svg" alt="Railway" width="40" height="40"/><br><sub>Railway</sub></td>
-    <td width="11%"><img src="assets/stack/nginx.svg" alt="NGINX" width="40" height="40"/><br><sub>NGINX</sub></td>
+    <td width="11%"><img src="assets/stack/aws.svg" alt="AWS" width="40" height="40"/><br><sub>AWS</sub></td>
   </tr>
 </table>
 
