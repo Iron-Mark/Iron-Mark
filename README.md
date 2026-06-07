@@ -221,7 +221,7 @@
   <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
-    <td width="11%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
+    <td width="11%"><img src="assets/stack/procreate.png" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
     <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
     <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
     <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub style="white-space:nowrap">Premiere&nbsp;Pro</sub></td>
