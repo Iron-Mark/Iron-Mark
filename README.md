@@ -158,7 +158,7 @@
     <col width="11%"/>
   </colgroup>
   <tr align="center"><td colspan="9"><sub><b>🌐 WEB DEVELOPMENT</b></sub></td></tr>
-  <tr align="center"><td colspan="9"><sub><b>Web Tools</b> · HTML · CSS · JS · TS · build &amp; dev tooling</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Web Tools</b> · core web languages · build tooling · MySQL</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
     <td width="11%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
@@ -168,7 +168,7 @@
     <td width="11%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
     <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="11%"><img src="assets/stack/php.svg" alt="PHP" width="40" height="40"/><br><sub>PHP</sub></td>
-    <td width="11%"><sub>Core web languages · build tooling · MySQL</sub></td>
+    <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b></sub></td></tr>
   <tr align="center">
