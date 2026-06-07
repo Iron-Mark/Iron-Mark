@@ -234,7 +234,8 @@
   <tr align="center">
     <td width="10%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
     <td width="10%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td width="10%" colspan="8"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
+    <td width="10%"><img src="assets/stack/llama.svg" alt="LLaMA" width="40" height="40"/><br><sub>LLaMA</sub></td>
+    <td width="10%" colspan="7"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
   <tr align="center">
