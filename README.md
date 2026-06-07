@@ -128,22 +128,11 @@
 
 ---
 
-<h3 align="center">Writing</h3>
+<h3 align="center">Techstack, Tools & Fields</h3>
 
-<table width="100%">
-  <tr>
-    <td><b><a href="https://www.marksiazon.dev/writing/design-system-switcher">Architecting a Multi-Ism Design System Switcher in Next.js</a></b><br><sub>Style switcher across Modern Minimal, Glassmorphism, Neo-Brutalism, and Bento with zero layout shift.</sub></td>
-  </tr>
-  <tr>
-    <td><b><a href="https://www.marksiazon.dev/writing/offline-first-ux">Offline-First Emergency Response UX: Lessons from ResQLink</a></b><br><sub>Flutter, React, Appwrite, AI triage, and BLE mesh when connectivity fails.</sub></td>
-  </tr>
-</table>
+<p align="center"><sub>(Things I know and Like to learn)</sub></p>
 
-<p align="center"><sub><a href="https://www.marksiazon.dev/writing">All writing →</a></sub></p>
-
----
-
-<h3 align="center">Stack & Fields</h3>
+<p align="center"><em>Jack of all trades. Curiosity is one of my hobbies.</em></p>
 
 <table width="100%">
   <colgroup>
@@ -299,8 +288,6 @@
     <td width="11%"><img src="assets/stack/aws.svg" alt="AWS" width="40" height="40"/><br><sub>AWS</sub></td>
   </tr>
 </table>
-
-<p align="center"><em>From UI flows to live deploys across web, mobile, game, creative, AI, and Web3</em></p>
 
 ---
 
