@@ -264,13 +264,16 @@
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Networks · Wallet</b> · contract tooling through networks to wallet, my on-chain build flow</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling, chains, and wallets for my on-chain build flow</sub></td></tr>
   <tr align="center">
     <td width="11%"><a href="https://soliditylang.org/"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
     <td width="11%"><a href="https://hardhat.org/"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
-    <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
+    <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="11%"><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
     <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+    <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3-networks/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
+    <td width="11%"><a href="https://metamask.io/"><img src="assets/web3-networks/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · containers, serverless, and release loops that get proofs live</sub></td></tr>
   <tr align="center">
