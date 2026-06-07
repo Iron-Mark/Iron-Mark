@@ -300,7 +300,7 @@
   </tr>
 </table>
 
-<p align="center"><em>Web · Mobile · Game · UI/UX · AI · Web3 · AI-assisted workflows · proof-backed across the stack</em></p>
+<p align="center"><em>From UI flows to live deploys across web, mobile, game, creative, AI, and Web3</em></p>
 
 ---
 
