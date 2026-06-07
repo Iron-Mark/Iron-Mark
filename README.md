@@ -241,15 +241,22 @@
     <td width="10%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
     <td width="10%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
     <td width="10%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td width="10%"><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
-    <td width="10%" colspan="6"><sub>Models · reasoning · chat</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/deepseek-color.svg" alt="Deepseek" width="40" height="40"/><br><sub>Deepseek</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/perplexity-color.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/grok-color.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td width="10%" colspan="3"><sub>Models · reasoning · chat</sub></td>
   </tr>
   <tr align="center">
+    <td width="10%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/claudecode-color.svg" alt="Claude Code" width="40" height="40"/><br><sub>Claude Code</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/antigravity-color.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></td>
     <td width="10%"><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
     <td width="10%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td width="10%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="10%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
-    <td width="10%" colspan="6"><sub>Prompting · codegen · UI gen</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
+    <td width="10%" colspan="2"><sub>Coding agents · IDE · UI gen</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
