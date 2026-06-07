@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OpenCode">
+  <rect width="128" height="128" rx="20" fill="#131010"/>
+  <path fill="#5A5858" d="M80 56v32H48V56H80z"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M96 104H32V24h64v80zm-16-44H48v32h32V60z"/>
+</svg>

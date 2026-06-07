@@ -246,6 +246,7 @@
     <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
     <td width="11%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
   <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes, data layers, and BaaS I wire up for proof-backed products</sub></td></tr>
