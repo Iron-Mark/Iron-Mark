@@ -6,7 +6,7 @@
 
 <p align="center"><em>Proof-backed products · AI · Mobile · Web3</em></p>
 
-<p align="center"><sub><b>@Iron-Mark</b> — hackathon builds, lab experiments & open-source shipping · portfolio hub ↓</sub></p>
+<p align="center"><sub><b>@Iron-Mark</b> · hackathon builds, lab experiments & open-source shipping · portfolio hub ↓</sub></p>
 
 <p align="center">
   <a href="https://www.marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio"/></a>
@@ -132,7 +132,7 @@
 
 <table width="100%">
   <tr>
-    <td><b><a href="https://www.marksiazon.dev/writing/design-system-switcher">Architecting a Multi-Ism Design System Switcher in Next.js</a></b><br><sub>Style switcher across Modern Minimal, Glassmorphism, Neo-Brutalism, and Bento — zero layout shift.</sub></td>
+    <td><b><a href="https://www.marksiazon.dev/writing/design-system-switcher">Architecting a Multi-Ism Design System Switcher in Next.js</a></b><br><sub>Style switcher across Modern Minimal, Glassmorphism, Neo-Brutalism, and Bento with zero layout shift.</sub></td>
   </tr>
   <tr>
     <td><b><a href="https://www.marksiazon.dev/writing/offline-first-ux">Offline-First Emergency Response UX: Lessons from ResQLink</a></b><br><sub>Flutter, React, Appwrite, AI triage, and BLE mesh when connectivity fails.</sub></td>
@@ -170,7 +170,7 @@
     <td width="11%"><img src="assets/stack/php.svg" alt="PHP" width="40" height="40"/><br><sub>PHP</sub></td>
     <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b> · interactive UIs I ship — from legacy surfaces to SSR and islands</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b> · interactive UIs I ship, from legacy surfaces to SSR and islands</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/jquery.svg" alt="jQuery" width="40" height="40"/><br><sub>jQuery</sub></td>
     <td width="11%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
@@ -259,7 +259,7 @@
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Networks · Wallet</b> · contract tooling through networks to wallet — my on-chain build flow</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Networks · Wallet</b> · contract tooling through networks to wallet, my on-chain build flow</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
     <td width="11%"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></td>
@@ -276,7 +276,7 @@
   </tr>
 </table>
 
-<p align="center"><em>Web · Mobile · Game · UI/UX · AI · Web3 · AI-assisted workflows — proof-backed across the stack</em></p>
+<p align="center"><em>Web · Mobile · Game · UI/UX · AI · Web3 · AI-assisted workflows · proof-backed across the stack</em></p>
 
 ---
 
@@ -345,9 +345,9 @@
 
 ---
 
-- **Design → Code** — Case studies at [marksiazon.dev](https://www.marksiazon.dev) · [recruiter brief](https://www.marksiazon.dev/recruiter) · [achievements](https://www.marksiazon.dev/achievements)
-- **Flagship proof** — [HireProof](https://hireproof.tech/portfolio) · [Stellaroid](https://stellaroid.tech) · [ResQLink](https://github.com/UMakLumen/ResQLinkWeb) · [LexInSight](https://lexinsights.vercel.app)
-- **Accounts** — [@Iron-Mark](https://github.com/Iron-Mark) (hackathons / lab / builds) · [@mark-siazon](https://github.com/mark-siazon) (Frontend Mentor & smaller public repos)
+- **Design → Code:** Case studies at [marksiazon.dev](https://www.marksiazon.dev) · [recruiter brief](https://www.marksiazon.dev/recruiter) · [achievements](https://www.marksiazon.dev/achievements)
+- **Flagship proof:** [HireProof](https://hireproof.tech/portfolio) · [Stellaroid](https://stellaroid.tech) · [ResQLink](https://github.com/UMakLumen/ResQLinkWeb) · [LexInSight](https://lexinsights.vercel.app)
+- **Accounts:** [@Iron-Mark](https://github.com/Iron-Mark) (hackathons / lab / builds) · [@mark-siazon](https://github.com/mark-siazon) (Frontend Mentor & smaller public repos)
 
 > A thoughtful interface fosters deeper human–technology connection.
 
