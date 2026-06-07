@@ -159,17 +159,39 @@
     <col width="10%"/>
   </colgroup>
   <tr align="center"><td colspan="10"><sub><b>🌐 WEB DEVELOPMENT</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>Web Tools</b> · HTML · CSS · JS · TS · build &amp; dev tooling</sub></td></tr>
   <tr align="center">
     <td width="10%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
     <td width="10%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
-    <td width="10%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
-    <td width="10%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
-    <td width="10%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
     <td width="10%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
     <td width="10%"><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
+    <td width="10%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
+    <td width="10%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
+    <td width="10%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td width="10%"><img src="assets/stack/npm.svg" alt="npm" width="40" height="40"/><br><sub>npm</sub></td>
+    <td width="10%"><img src="assets/stack/eslint.svg" alt="ESLint" width="40" height="40"/><br><sub>ESLint</sub></td>
+    <td width="10%"><img src="assets/stack/prettier.svg" alt="Prettier" width="40" height="40"/><br><sub>Prettier</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>JS Frameworks</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/jquery.svg" alt="jQuery" width="40" height="40"/><br><sub>jQuery</sub></td>
     <td width="10%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
     <td width="10%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td width="10%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
+    <td width="10%"><img src="assets/stack/astro.svg" alt="Astro" width="40" height="40"/><br><sub>Astro</sub></td>
+    <td width="10%"><img src="assets/stack/svelte.svg" alt="Svelte" width="40" height="40"/><br><sub>Svelte</sub></td>
+    <td width="10%"><img src="assets/stack/qwik.svg" alt="Qwik" width="40" height="40"/><br><sub>Qwik</sub></td>
+    <td width="10%" colspan="4"><sub>Component-driven UI · SSR · islands · progressive enhancement</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>CSS Frameworks &amp; Design Libraries</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
+    <td width="10%"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
+    <td width="10%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
+    <td width="10%"><img src="assets/stack/bem.svg" alt="BEM" width="40" height="40"/><br><sub>BEM</sub></td>
+    <td width="10%"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub>shadcn/ui</sub></td>
+    <td width="10%"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></td>
+    <td width="10%"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub>Ant Design</sub></td>
+    <td width="10%" colspan="3"><sub>Utility CSS · design systems · component libraries</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>📱 MOBILE DEVELOPMENT (CROSS-PLATFORM)</b></sub></td></tr>
   <tr align="center">
@@ -258,9 +280,8 @@
     <td width="10%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td width="10%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
     <td width="10%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
-    <td width="10%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="10%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="10%" colspan="2"><sub>Proof-backed deploy loops</sub></td>
+    <td width="10%" colspan="3"><sub>Proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
