@@ -234,6 +234,8 @@
     <td width="11%"><img src="assets/ai-workflow/perplexity-color.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
     <td width="11%"><img src="assets/ai-workflow/grok-color.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
   </tr>
   <tr align="center">
     <td width="11%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
@@ -242,12 +244,8 @@
     <td width="11%"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
     <td width="11%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
     <td width="11%"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>GitHub Copilot</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/kiro-color.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></td>
-  </tr>
-  <tr align="center">
     <td width="11%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/kiro-color.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></td>
     <td width="11%"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
