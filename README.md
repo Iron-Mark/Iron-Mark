@@ -169,8 +169,7 @@
     <td width="10%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
     <td width="10%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="10%"><img src="assets/stack/npm.svg" alt="npm" width="40" height="40"/><br><sub>npm</sub></td>
-    <td width="10%"><img src="assets/stack/eslint.svg" alt="ESLint" width="40" height="40"/><br><sub>ESLint</sub></td>
-    <td width="10%"><img src="assets/stack/prettier.svg" alt="Prettier" width="40" height="40"/><br><sub>Prettier</sub></td>
+    <td width="10%" colspan="2"><sub>Core web languages · build tooling · package management</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>JS Frameworks</b></sub></td></tr>
   <tr align="center">
@@ -203,8 +202,7 @@
     <td width="10%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
     <td width="10%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
     <td width="10%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
-    <td width="10%"><img src="assets/stack/swift.svg" alt="Swift" width="40" height="40"/><br><sub>Swift</sub></td>
-    <td width="10%"><img src="assets/stack/xcode.svg" alt="Xcode" width="40" height="40"/><br><sub>Xcode</sub></td>
+    <td width="10%" colspan="2"><sub>Native Android · Flutter · hybrid mobile apps</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>🎮 GAME DEV</b></sub></td></tr>
   <tr align="center">
