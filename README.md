@@ -291,34 +291,22 @@
 
 <h3 align="center">GitHub Activity</h3>
 
-<p align="center"><sub><b>@Iron-Mark</b> · hackathon builds, lab experiments &amp; open-source shipping</sub></p>
-
 <p align="center">
   <a href="https://github.com/Iron-Mark">
     <img src="assets/github/stats.svg" alt="Iron-Mark GitHub stats" height="195"/>
   </a>
 </p>
 
-<p align="center"><sub>Stars earned, PRs opened, and repos contributed to on this account · <a href="https://github.com/Iron-Mark">view repos ↗</a> · refreshed daily</sub></p>
+<p align="center"><sub>Refreshed daily · <a href="https://github.com/Iron-Mark?tab=repositories">all repos ↗</a></sub></p>
 
 ---
 
-- **Design → Code:** Case studies at [marksiazon.dev](https://www.marksiazon.dev) · [recruiter brief](https://www.marksiazon.dev/recruiter) · [achievements](https://www.marksiazon.dev/achievements)
-- **Flagship proof:** [HireProof](https://hireproof.tech/portfolio) · [Stellaroid](https://stellaroid.tech) · [ResQLink](https://github.com/UMakLumen/ResQLinkWeb) · [LexInSight](https://lexinsights.vercel.app)
-- **Accounts:** [@Iron-Mark](https://github.com/Iron-Mark) (hackathons / lab / builds) · [@mark-siazon](https://github.com/mark-siazon) (Frontend Mentor & smaller public repos)
+<p align="center"><sub>Case studies, recruiter brief &amp; achievements live at <a href="https://www.marksiazon.dev">marksiazon.dev</a> · smaller public repos on <a href="https://github.com/mark-siazon">@mark-siazon</a></sub></p>
 
-> A thoughtful interface fosters deeper human–technology connection.
-
----
+<p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
 
 <p align="center">
-  <a href="https://github.com/mark-siazon"><img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge" alt="GitHub"/></a>
   <a href="https://www.linkedin.com/in/mark-siazon/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <a href="https://www.frontendmentor.io/profile/Iron-Mark"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor"/></a>
-  <a href="https://www.marksiazon.dev/achievements"><img src="https://img.shields.io/badge/Achievements-→-F59E0B?style=for-the-badge" alt="Achievements"/></a>
-  <a href="https://www.marksiazon.dev/writing"><img src="https://img.shields.io/badge/Writing-→-64748B?style=for-the-badge" alt="Writing"/></a>
   <a href="https://www.tiktok.com/@iron_markk"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok"/></a>
-  <a href="https://www.marksiazon.dev/contact"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact"/></a>
 </p>
-
-<p align="center"><strong>Thanks for stopping by! Check out the links above 😁</strong></p>
