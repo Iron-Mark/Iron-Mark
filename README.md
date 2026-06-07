@@ -206,13 +206,17 @@
     <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
     <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, and systems before code ships</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
     <td width="11%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
-    <td width="11%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
     <td width="11%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
+    <td width="11%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
     <td width="11%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
+    <td width="11%"><img src="assets/stack/storybook.svg" alt="Storybook" width="40" height="40"/><br><sub>Storybook</sub></td>
+    <td width="11%"><img src="assets/stack/penpot.svg" alt="Penpot" width="40" height="40"/><br><sub>Penpot</sub></td>
+    <td width="11%"><img src="assets/stack/sketch.svg" alt="Sketch" width="40" height="40"/><br><sub>Sketch</sub></td>
+    <td width="11%"><img src="assets/stack/hotjar.svg" alt="Hotjar" width="40" height="40"/><br><sub>Hotjar</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
   <tr align="center">
@@ -220,6 +224,11 @@
     <td width="11%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
     <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
     <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
+    <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub>Premiere Pro</sub></td>
+    <td width="11%"><img src="assets/stack/capcut.svg" alt="CapCut" width="40" height="40"/><br><sub>CapCut</sub></td>
+    <td width="11%"><img src="assets/stack/obsstudio.svg" alt="OBS Studio" width="40" height="40"/><br><sub>OBS Studio</sub></td>
+    <td width="11%"><img src="assets/stack/audacity.svg" alt="Audacity" width="40" height="40"/><br><sub>Audacity</sub></td>
+    <td width="11%"><img src="assets/stack/spline.svg" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · model stacks behind agents, trust &amp; safety, and ML product UX</sub></td></tr>
   <tr align="center">

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Spline">
+  <rect width="128" height="128" rx="24" fill="#7A5AF8"/>
+  <path fill="#FFFFFF" d="M44 36c16 0 28 10 28 24s-12 24-28 24c-6 0-11-2-15-5v-10c4 3 9 5 15 5 10 0 18-6 18-14s-8-14-18-14c-6 0-11 2-15 5V41c4-3 9-5 15-5z"/>
+  <circle cx="84" cy="84" r="10" fill="#FFFFFF" opacity=".9"/>
+</svg>
