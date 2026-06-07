@@ -233,9 +233,8 @@
   <tr align="center"><td colspan="10"><sub><b>🤖 AI</b></sub></td></tr>
   <tr align="center">
     <td width="10%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td width="10%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
     <td width="10%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td width="10%" colspan="7"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
+    <td width="10%" colspan="8"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
   <tr align="center"><td colspan="10"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
   <tr align="center">
@@ -272,16 +271,33 @@
     <td width="10%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="10%" colspan="6"><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
-  <tr align="center"><td colspan="10"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>Backend &amp; APIs</b> · runtimes · frameworks · databases · BaaS</sub></td></tr>
   <tr align="center">
-    <td width="10%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
-    <td width="10%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td width="10%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
     <td width="10%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td width="10%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
-    <td width="10%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td width="10%"><img src="assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>
+    <td width="10%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td width="10%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
+    <td width="10%"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="40" height="40"/><br><sub>PostgreSQL</sub></td>
+    <td width="10%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
+    <td width="10%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
+    <td width="10%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td width="10%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>Web3 &amp; Smart Contracts</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
+    <td width="10%"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></td>
     <td width="10%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="10%" colspan="3"><sub>Proof-backed deploy loops</sub></td>
+    <td width="10%" colspan="7"><sub>On-chain logic · contract tooling · wallet integration</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>Deploy &amp; Infrastructure</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
+    <td width="10%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td width="10%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td width="10%" colspan="7"><sub>Containers · serverless deploy · proof-backed release loops</sub></td>
   </tr>
 </table>
 
