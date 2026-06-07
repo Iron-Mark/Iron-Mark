@@ -272,6 +272,7 @@
     <td width="11%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling, chains, and wallets for my on-chain build flow</sub></td></tr>
   <tr align="center">
@@ -291,6 +292,11 @@
     <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
     <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="11%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+    <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
+    <td width="11%"><img src="assets/stack/cloudflare.svg" alt="Cloudflare" width="40" height="40"/><br><sub>Cloudflare</sub></td>
+    <td width="11%"><img src="assets/stack/netlify.svg" alt="Netlify" width="40" height="40"/><br><sub>Netlify</sub></td>
+    <td width="11%"><img src="assets/stack/railway.svg" alt="Railway" width="40" height="40"/><br><sub>Railway</sub></td>
+    <td width="11%"><img src="assets/stack/nginx.svg" alt="NGINX" width="40" height="40"/><br><sub>NGINX</sub></td>
   </tr>
 </table>
 
