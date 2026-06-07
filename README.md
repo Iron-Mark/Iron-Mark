@@ -256,7 +256,20 @@
     <td width="11%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
     <td width="11%"><sub>Coding agents · IDE · UI gen</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes · frameworks · databases · BaaS</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
+    <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
+    <td width="11%"><img src="assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>
+    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td width="11%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
+    <td width="11%"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="40" height="40"/><br><sub>PostgreSQL</sub></td>
+    <td width="11%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
+    <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
+    <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+  </tr>
+  <tr align="center"><td colspan="9"><sub><b>Web3 · Networks &amp; Smart Contracts</b></sub></td></tr>
   <tr align="center">
     <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
     <td width="11%">
@@ -276,20 +289,6 @@
     <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="11%" colspan="5"><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
-  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes · frameworks · databases · BaaS</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
-    <td width="11%"><img src="assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>
-    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td width="11%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
-    <td width="11%"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="40" height="40"/><br><sub>PostgreSQL</sub></td>
-    <td width="11%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
-    <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
-    <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-  </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 &amp; Smart Contracts</b></sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
     <td width="11%"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></td>
