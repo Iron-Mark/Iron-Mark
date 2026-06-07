@@ -170,7 +170,7 @@
     <td width="11%"><img src="assets/stack/php.svg" alt="PHP" width="40" height="40"/><br><sub>PHP</sub></td>
     <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b> · interactive UIs I ship — from legacy surfaces to SSR and islands</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/jquery.svg" alt="jQuery" width="40" height="40"/><br><sub>jQuery</sub></td>
     <td width="11%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
@@ -178,9 +178,8 @@
     <td width="11%"><img src="assets/stack/astro.svg" alt="Astro" width="40" height="40"/><br><sub>Astro</sub></td>
     <td width="11%"><img src="assets/stack/svelte.svg" alt="Svelte" width="40" height="40"/><br><sub>Svelte</sub></td>
     <td width="11%"><img src="assets/stack/qwik.svg" alt="Qwik" width="40" height="40"/><br><sub>Qwik</sub></td>
-    <td width="11%" colspan="3"><sub>Component-driven UI · SSR · islands · progressive enhancement</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>CSS Frameworks &amp; Design Libraries</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>CSS Frameworks &amp; Design Libraries</b> · styling and component systems from prototype to production</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
     <td width="11%"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
@@ -189,9 +188,8 @@
     <td width="11%"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub>shadcn/ui</sub></td>
     <td width="11%"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></td>
     <td width="11%"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub>Ant Design</sub></td>
-    <td width="11%" colspan="2"><sub>Utility CSS · design systems · component libraries</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT (CROSS-PLATFORM)</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android Studio</sub></td>
     <td width="11%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
@@ -201,40 +199,35 @@
     <td width="11%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
     <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
     <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
-    <td width="11%"><sub>Native Android · Flutter · hybrid mobile apps</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · Unity prototypes and 3D assets for interactive experiences</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
     <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
     <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
-    <td width="11%" colspan="6"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, and systems before code ships</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
     <td width="11%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
     <td width="11%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
     <td width="11%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
     <td width="11%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
-    <td width="11%" colspan="4"><sub>Design systems · user research · accessibility · product UI</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA TOOLS</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
     <td width="11%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
     <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
     <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
-    <td width="11%" colspan="5"><sub>Visual design · illustration · photo editing</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · model stacks behind agents, trust &amp; safety, and ML product UX</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
     <td width="11%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
     <td width="11%"><img src="assets/stack/llama.svg" alt="LLaMA" width="40" height="40"/><br><sub>LLaMA</sub></td>
-    <td width="11%" colspan="6"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
     <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
@@ -243,7 +236,6 @@
     <td width="11%"><img src="assets/ai-workflow/perplexity-color.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
     <td width="11%"><img src="assets/ai-workflow/grok-color.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="11%" colspan="2"><sub>Models · reasoning · chat</sub></td>
   </tr>
   <tr align="center">
     <td width="11%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
@@ -254,10 +246,9 @@
     <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
     <td width="11%"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub>Qwen Code</sub></td>
-    <td width="11%"><sub>Coding agents · IDE · UI gen</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
-  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes · frameworks · databases · BaaS</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes, data layers, and BaaS I wire up for proof-backed products</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
@@ -269,22 +260,20 @@
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Networks · Wallet</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Networks · Wallet</b> · contract tooling through networks to wallet — my on-chain build flow</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
     <td width="11%"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></td>
     <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
     <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="11%" colspan="4"><sub>Contract tooling → networks → wallet integration</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b></sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · containers, serverless, and release loops that get proofs live</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
     <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
     <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="11%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-    <td width="11%" colspan="5"><sub>Containers · serverless deploy · BaaS · proof-backed release loops</sub></td>
   </tr>
 </table>
 
