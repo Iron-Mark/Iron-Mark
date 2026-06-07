@@ -100,27 +100,27 @@
     <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
   <tr>
-    <td width="22%"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
+    <td width="22%"><img src="assets/projects/icons/qwen-ui-lab.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
     <td width="43%"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
     <td width="35%"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
+    <td width="22%"><img src="assets/projects/icons/smart-profile.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
     <td width="43%"><sub>AI credentials · SaaS · Supabase</sub></td>
     <td width="35%"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
+    <td width="22%"><img src="assets/projects/icons/baybayinscribe.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
     <td width="43%"><sub>Baybayin ML · cultural education UX</sub></td>
     <td width="35%"><sub><a href="https://beta.baybayinscribe.top">Live</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
+    <td width="22%"><img src="assets/projects/icons/kudlit.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
     <td width="43%"><sub>Flutter · Baybayin learning · Android release</sub></td>
     <td width="35%"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
+    <td width="22%"><img src="assets/projects/icons/pulse.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
     <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
     <td width="35%"><sub><a href="https://github.com/KpG782/devcamp">Repo</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
