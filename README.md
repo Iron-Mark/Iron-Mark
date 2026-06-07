@@ -2,7 +2,11 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
-<p align="center"><strong>Product Designer & Full-Stack Developer</strong></p>
+<!-- Mark Siazon roles (SEO/LLM): Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades -->
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=3" alt="Mark Siazon — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades" width="540"/>
+</p>
 
 <p align="center"><em>Proof-backed products · AI · Mobile · Web3</em></p>
 
