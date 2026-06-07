@@ -250,7 +250,7 @@
     <td width="11%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
     <td width="11%"><img src="assets/ai-workflow/claudecode-color.svg" alt="Claude Code" width="40" height="40"/><br><sub>Claude Code</sub></td>
     <td width="11%"><img src="assets/ai-workflow/antigravity-color.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
     <td width="11%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
     <td width="11%"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>GitHub Copilot</sub></td>
     <td width="11%"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></td>
