@@ -23,53 +23,15 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=Iron-Mark&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true
+          options: username=Iron-Mark&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&hide_rank=true
           path: assets/github/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: username=Iron-Mark&layout=compact&theme=tokyonight&hide_border=true&langs_count=8
-          path: assets/github/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate qwen-ui-lab pin
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=Iron-Mark&repo=qwen-ui-lab&theme=tokyonight&hide_border=true
-          path: assets/github/pin-qwen-ui-lab.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Smart Profile pin
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=Iron-Mark&repo=Hackathon-Smart-Profile-Management-System&theme=tokyonight&hide_border=true
-          path: assets/github/pin-smart-profile.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate LexInSight pin
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: pin
-          options: username=Iron-Mark&repo=Hackathon-LexInsights&theme=tokyonight&hide_border=true
-          path: assets/github/pin-lexinsights.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate streak card
-        run: |
-          mkdir -p assets/github
-          curl -fsSL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=tokyonight&hide_border=true" \
-            -o assets/github/streak.svg
 
       - name: Commit updated widgets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github/
+          git add assets/github/stats.svg
           git diff --staged --quiet && echo "No changes" && exit 0
-          git commit -m "Update GitHub profile widget SVGs"
+          git commit -m "Update GitHub profile stats card"
           git push
