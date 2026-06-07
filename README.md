@@ -271,6 +271,7 @@
     <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
     <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="11%"><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
+    <td width="11%"><a href="https://stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
     <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
     <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3-networks/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td width="11%"><a href="https://metamask.io/"><img src="assets/web3-networks/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
