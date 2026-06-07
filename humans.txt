@@ -1,10 +1,54 @@
 /* TEAM */
-Developer & designer: Mark Siazon (@Iron-Mark)
+Owner: Mark Siazon
+Handle: @Iron-Mark (GitHub profile), @mark-siazon (secondary GitHub)
+Role: Product Designer · Full-Stack Developer · Product Engineer · UI/UX Designer
+Location: Philippines
+Tagline: Proof-backed products · AI · Mobile · Web3
 
-/* SITE */
-GitHub profile: https://github.com/Iron-Mark
+/* ABOUT */
+Mark Siazon designs and ships digital products end-to-end — from UX research and design systems to React, Next.js, Flutter, Kotlin/Wear OS, APIs, AI workflows, and Web3 proof layers. He documents work with live demos, case studies, and verification boundaries rather than claims without evidence.
+
+Curiosity is a core habit: jack of all trades across web, mobile, game prototyping, creative multimedia, AI, and deployment tooling.
+
+/* PRIMARY SITES */
+GitHub profile README: https://github.com/Iron-Mark/Iron-Mark
 Portfolio: https://www.marksiazon.dev
+Recruiter brief: https://www.marksiazon.dev/recruiter
 Contact: https://www.marksiazon.dev/contact
+Email: marksiazon.dev@gmail.com
+
+/* PUBLIC PROFILES */
+GitHub (main): https://github.com/Iron-Mark
+GitHub (alt): https://github.com/mark-siazon
+LinkedIn: https://www.linkedin.com/in/mark-siazon/
+Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
+TikTok: https://www.tiktok.com/@iron_markk
+
+/* FLAGSHIP PROOF (start here) */
+HireProof (AI trust & safety): https://hireproof.tech/portfolio
+Stellaroid Earn (Web3 credentials): https://stellaroid.tech
+ResQLink (emergency tech): https://github.com/UMakLumen/ResQLinkWeb
+PalengkePay (Stellar fintech PWA): https://palengke-pay.vercel.app
+GawainYah (MiniPay AI): https://gawainyah-minipay.vercel.app
+
+/* PORTFOLIO ROUTES */
+Projects: https://www.marksiazon.dev/projects
+Proof matrix: https://www.marksiazon.dev/proof
+Achievements: https://www.marksiazon.dev/achievements
+Writing: https://www.marksiazon.dev/writing
+Lab: https://www.marksiazon.dev/lab
+
+/* MACHINE-READABLE */
+LLM index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
+LLM full context (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+Robots (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
+Sitemap (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
+LLM index (portfolio): https://www.marksiazon.dev/llms.txt
+LLM full context (portfolio): https://www.marksiazon.dev/llms-full.txt
+Humans (portfolio): https://www.marksiazon.dev/humans.txt
+Sitemap (portfolio): https://www.marksiazon.dev/sitemap.xml
+RSS: https://www.marksiazon.dev/feed.xml
+JSON Feed: https://www.marksiazon.dev/feed.json
 
 /* THANKS */
-Open source communities, hackathon teammates, and everyone building proof-backed products.
+Open-source communities, hackathon teammates, UMak CCIS & competition peers, Filipino design and dev circles, and everyone building proof-backed products with care.

@@ -2,7 +2,7 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
-<!-- SEO/LLM: Mark Siazon | @Iron-Mark | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | AI | Mobile | Web3 | proof-backed products | marksiazon.dev | marksiazon.dev@gmail.com -->
+<!-- SEO/LLM: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | marksiazon.dev@gmail.com | llms.txt llms-full.txt humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab -->
 
 <p align="center">
   <picture>
@@ -332,8 +332,18 @@
 <details>
 <summary><sub>Profile index for search &amp; LLM crawlers</sub></summary>
 
-<p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban), and client web.</p>
+<p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>, <code>@mark-siazon</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Based in the Philippines. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web. Contact: <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a> · <a href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a>.</p>
 
-<p>Featured: HireProof, Stellaroid Earn, ResQLink, LexInSight, Good To Live, FlowFit, PalengkePay, GawainYah, qwen-ui-lab. Lab: Smart Profile, BaybayInscribe, Kudlit, Pulse. Portfolio: <a href="https://www.marksiazon.dev">marksiazon.dev</a> · Machine-readable: <a href="llms.txt">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt">full portfolio context</a></p>
+<p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a> (offline-first emergency) · <a href="https://lexinsights.vercel.app">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a> (MiniPay AI) · <a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a> (AI UI scaffolding).</p>
+
+<p><strong>Hackathon &amp; lab:</strong> Smart Profile · BaybayInscribe · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab">lab hub</a>.</p>
+
+<p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev">home</a> · <a href="https://www.marksiazon.dev/projects">projects</a> · <a href="https://www.marksiazon.dev/proof">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements">achievements</a> · <a href="https://www.marksiazon.dev/writing">writing</a>.</p>
+
+<p><strong>Machine-readable (this repo):</strong> <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></p>
+
+<p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml">sitemap</a></p>
+
+<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, Web3, Stellar, Celo, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
 
 </details>

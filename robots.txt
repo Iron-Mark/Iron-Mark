@@ -1,0 +1,52 @@
+# Mark Siazon GitHub profile README — crawler hints
+# Repo: https://github.com/Iron-Mark/Iron-Mark
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /README.md
+
+User-agent: ChatGPT-User
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /README.md
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /README.md
+
+User-agent: anthropic-ai
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /humans.txt
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /README.md
+
+Sitemap: https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml
+
+# Portfolio (canonical site)
+# https://www.marksiazon.dev/robots.txt
+# https://www.marksiazon.dev/sitemap.xml

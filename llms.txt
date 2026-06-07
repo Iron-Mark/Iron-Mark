@@ -1,48 +1,78 @@
-# Mark Siazon — GitHub Profile (@Iron-Mark)
+# Mark Siazon
 
-> Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, polymath / jack of all trades. Proof-backed products across AI, mobile, Web3, and client web.
+> Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, and polymath / jack of all trades. Builds proof-backed digital products across AI, mobile, Web3, and client web — portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-## Identity
+Mark Siazon ships end-to-end: research and UX flows → design systems → React/Next.js/Flutter/Kotlin → APIs and Web3 proofs → deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
-- Name: Mark Siazon
-- GitHub: https://github.com/Iron-Mark
-- Alt GitHub: https://github.com/mark-siazon
-- Portfolio: https://www.marksiazon.dev
+## Canonical sources
+
+- Portfolio (primary): https://www.marksiazon.dev
+- GitHub profile README (this repo): https://github.com/Iron-Mark/Iron-Mark
+- GitHub account: https://github.com/Iron-Mark
+- Secondary GitHub: https://github.com/mark-siazon
+- Full LLM context (this repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- Full LLM context (portfolio): https://www.marksiazon.dev/llms-full.txt
+- Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
+
+## Hire & contact
+
 - Recruiter brief: https://www.marksiazon.dev/recruiter
 - Contact form: https://www.marksiazon.dev/contact
 - Email: marksiazon.dev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mark-siazon/
+- Proof matrix (verification boundaries): https://www.marksiazon.dev/proof
 
-## Roles & focus
+## Portfolio routes
 
-Product Designer · Full-Stack Developer · Product Engineer · UI/UX Designer · Front-end Specialist · Developer × Designer · Polymath / Jack of All Trades
-
-Stack breadth: web (React, Next.js, TypeScript), mobile (Flutter, Kotlin, Wear OS), AI workflows (agents, trust & safety, ML UX), Web3 (Stellar, Celo, Soroban), backend (Node, FastAPI, Supabase), design (Figma, systems, research-to-ship).
-
-## Featured work
-
-- HireProof — AI trust & safety: https://www.marksiazon.dev/projects/hireproof · https://hireproof.tech/portfolio
-- Stellaroid Earn — Web3 credential proof: https://www.marksiazon.dev/projects/stellaroid-earn · https://stellaroid.tech
-- ResQLink — Offline-first emergency tech: https://www.marksiazon.dev/projects/resqlink · https://github.com/UMakLumen/ResQLinkWeb
-- LexInSight — AI legal compliance chat: https://lexinsights.vercel.app · https://github.com/Iron-Mark/Hackathon-LexInsights
-- Good To Live — Client web launch & SEO: https://www.marksiazon.dev/projects/good-to-live · https://goodtolivepodcast.com
-- FlowFit — Wear OS health & sensors: https://www.marksiazon.dev/projects/flowfit
-- PalengkePay — Stellar fintech PWA: https://www.marksiazon.dev/projects/palengkepay · https://palengke-pay.vercel.app
-- GawainYah — MiniPay AI utility: https://www.marksiazon.dev/projects/gawainyah · https://gawainyah-minipay.vercel.app
-- qwen-ui-lab — AI-assisted UI scaffolding: https://github.com/Iron-Mark/qwen-ui-lab · https://qwen-ui-lab.vercel.app
-
-## Hackathon & lab
-
-- qwen-ui-lab — Qwen3-VL, React, Tailwind, Next.js
-- Smart Profile — AI credentials, SaaS, Supabase: https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/
-- BaybayInscribe — Baybayin ML, cultural education UX: https://www.marksiazon.dev/projects/baybayinscribe · https://huggingface.co/gilas/baybayinscribe
-- Kudlit — Flutter Baybayin learning, Android release: https://github.com/ACSADians/kudlit-app
-- Pulse — Wear OS, GPS, heart-rate telemetry: https://www.marksiazon.dev/projects/pulse · https://pacebeats.vercel.app
-
-## More indexes
-
-- All projects: https://www.marksiazon.dev/projects
-- Proof matrix: https://www.marksiazon.dev/proof
+- Projects hub: https://www.marksiazon.dev/projects
 - Achievements: https://www.marksiazon.dev/achievements
-- Lab: https://www.marksiazon.dev/lab
-- Full portfolio LLM context: https://www.marksiazon.dev/llms-full.txt
+- Writing: https://www.marksiazon.dev/writing
+- Lab experiments: https://www.marksiazon.dev/lab
+
+## Featured work (case studies)
+
+- HireProof — AI trust & safety for job seekers: https://www.marksiazon.dev/projects/hireproof
+- Stellaroid Earn — Web3 credential proof on Stellar: https://www.marksiazon.dev/projects/stellaroid-earn
+- ResQLink — Offline-first emergency response platform: https://www.marksiazon.dev/projects/resqlink
+- LexInSight — AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsights
+- Good To Live — Client podcast web launch & SEO: https://www.marksiazon.dev/projects/good-to-live
+- FlowFit — Wear OS health & sensor companion: https://www.marksiazon.dev/projects/flowfit
+- PalengkePay — Stellar fintech PWA for wet markets: https://www.marksiazon.dev/projects/palengkepay
+- GawainYah — MiniPay AI utility with payment guardrails: https://www.marksiazon.dev/projects/gawainyah
+- qwen-ui-lab — AI-assisted UI scaffolding lab: https://www.marksiazon.dev/projects/qwen-ui-lab
+
+## Hackathon & lab (GitHub profile)
+
+- qwen-ui-lab: https://github.com/Iron-Mark/qwen-ui-lab
+- Smart Profile (AI credentials SaaS): https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System
+- BaybayInscribe (Baybayin ML & cultural education): https://www.marksiazon.dev/projects/baybayinscribe
+- Kudlit (Flutter Baybayin learning, Android release): https://www.marksiazon.dev/projects/kudlit
+- Pulse (Wear OS, GPS, heart-rate telemetry): https://www.marksiazon.dev/projects/pulse
+
+## Writing
+
+- Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
+- Offline-first emergency UX (ResQLink): https://www.marksiazon.dev/writing/offline-first-ux
+
+## Social & community
+
+- Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
+- TikTok: https://www.tiktok.com/@iron_markk
+
+## Topics & keywords
+
+product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin
+
+## Machine-readable indexes
+
+### This repo
+- LLM full context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
+- Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
+
+### Portfolio
+- Sitemap: https://www.marksiazon.dev/sitemap.xml
+- RSS: https://www.marksiazon.dev/feed.xml
+- JSON Feed: https://www.marksiazon.dev/feed.json
+- Robots: https://www.marksiazon.dev/robots.txt
+- Humans: https://www.marksiazon.dev/humans.txt
