@@ -112,7 +112,7 @@
   <tr>
     <td width="22%"><img src="assets/projects/baybayinscribe/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
     <td width="43%"><sub>Baybayin ML · cultural education UX</sub></td>
-    <td width="35%"><sub><a href="https://beta.baybayinscribe.top">Live</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
+    <td width="35%"><sub><a href="https://huggingface.co/gilas/baybayinscribe">Model</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
     <td width="22%"><img src="assets/projects/kudlit/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
@@ -122,7 +122,7 @@
   <tr>
     <td width="22%"><img src="assets/projects/pulse/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
     <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
-    <td width="35%"><sub><a href="https://github.com/KpG782/devcamp">Repo</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
+    <td width="35%"><sub><a href="https://pacebeats.vercel.app">Live</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
 </table>
 
