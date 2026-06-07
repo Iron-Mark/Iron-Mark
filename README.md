@@ -199,10 +199,21 @@
   <tr align="center"><td colspan="5"><sub><b>🎨 UI / UX</b></sub></td></tr>
   <tr align="center">
     <td width="20%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td width="20%"><img src="assets/stack/storybook.svg" alt="Storybook" width="40" height="40"/><br><sub>Storybook</sub></td>
-    <td width="20%"><img src="assets/stack/adobexd.svg" alt="Adobe XD" width="40" height="40"/><br><sub>Adobe XD</sub></td>
+    <td width="20%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
+    <td width="20%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
+    <td width="20%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
+    <td width="20%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
+  </tr>
+  <tr align="center">
+    <td width="20%" colspan="5"><sub>Design systems · user research · accessibility · product UI</sub></td>
+  </tr>
+  <tr align="center"><td colspan="5"><sub><b>🖌️ CREATIVE / MULTIMEDIA TOOLS</b></sub></td></tr>
+  <tr align="center">
+    <td width="20%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
+    <td width="20%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
+    <td width="20%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
     <td width="20%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
-    <td width="20%"><sub>Design systems · research · a11y · product UI</sub></td>
+    <td width="20%"><sub>Visual design · illustration · photo editing</sub></td>
   </tr>
   <tr align="center"><td colspan="5"><sub><b>🤖 AI</b></sub></td></tr>
   <tr align="center">
