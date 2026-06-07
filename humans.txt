@@ -1,0 +1,10 @@
+/* TEAM */
+Developer & designer: Mark Siazon (@Iron-Mark)
+
+/* SITE */
+GitHub profile: https://github.com/Iron-Mark
+Portfolio: https://www.marksiazon.dev
+Contact: https://www.marksiazon.dev/contact
+
+/* THANKS */
+Open source communities, hackathon teammates, and everyone building proof-backed products.

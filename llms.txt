@@ -1,0 +1,48 @@
+# Mark Siazon — GitHub Profile (@Iron-Mark)
+
+> Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, polymath / jack of all trades. Proof-backed products across AI, mobile, Web3, and client web.
+
+## Identity
+
+- Name: Mark Siazon
+- GitHub: https://github.com/Iron-Mark
+- Alt GitHub: https://github.com/mark-siazon
+- Portfolio: https://www.marksiazon.dev
+- Recruiter brief: https://www.marksiazon.dev/recruiter
+- Contact form: https://www.marksiazon.dev/contact
+- Email: marksiazon.dev@gmail.com
+- LinkedIn: https://www.linkedin.com/in/mark-siazon/
+
+## Roles & focus
+
+Product Designer · Full-Stack Developer · Product Engineer · UI/UX Designer · Front-end Specialist · Developer × Designer · Polymath / Jack of All Trades
+
+Stack breadth: web (React, Next.js, TypeScript), mobile (Flutter, Kotlin, Wear OS), AI workflows (agents, trust & safety, ML UX), Web3 (Stellar, Celo, Soroban), backend (Node, FastAPI, Supabase), design (Figma, systems, research-to-ship).
+
+## Featured work
+
+- HireProof — AI trust & safety: https://www.marksiazon.dev/projects/hireproof · https://hireproof.tech/portfolio
+- Stellaroid Earn — Web3 credential proof: https://www.marksiazon.dev/projects/stellaroid-earn · https://stellaroid.tech
+- ResQLink — Offline-first emergency tech: https://www.marksiazon.dev/projects/resqlink · https://github.com/UMakLumen/ResQLinkWeb
+- LexInSight — AI legal compliance chat: https://lexinsights.vercel.app · https://github.com/Iron-Mark/Hackathon-LexInsights
+- Good To Live — Client web launch & SEO: https://www.marksiazon.dev/projects/good-to-live · https://goodtolivepodcast.com
+- FlowFit — Wear OS health & sensors: https://www.marksiazon.dev/projects/flowfit
+- PalengkePay — Stellar fintech PWA: https://www.marksiazon.dev/projects/palengkepay · https://palengke-pay.vercel.app
+- GawainYah — MiniPay AI utility: https://www.marksiazon.dev/projects/gawainyah · https://gawainyah-minipay.vercel.app
+- qwen-ui-lab — AI-assisted UI scaffolding: https://github.com/Iron-Mark/qwen-ui-lab · https://qwen-ui-lab.vercel.app
+
+## Hackathon & lab
+
+- qwen-ui-lab — Qwen3-VL, React, Tailwind, Next.js
+- Smart Profile — AI credentials, SaaS, Supabase: https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/
+- BaybayInscribe — Baybayin ML, cultural education UX: https://www.marksiazon.dev/projects/baybayinscribe · https://huggingface.co/gilas/baybayinscribe
+- Kudlit — Flutter Baybayin learning, Android release: https://github.com/ACSADians/kudlit-app
+- Pulse — Wear OS, GPS, heart-rate telemetry: https://www.marksiazon.dev/projects/pulse · https://pacebeats.vercel.app
+
+## More indexes
+
+- All projects: https://www.marksiazon.dev/projects
+- Proof matrix: https://www.marksiazon.dev/proof
+- Achievements: https://www.marksiazon.dev/achievements
+- Lab: https://www.marksiazon.dev/lab
+- Full portfolio LLM context: https://www.marksiazon.dev/llms-full.txt
