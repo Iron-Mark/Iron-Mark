@@ -253,7 +253,6 @@
     <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
     <td width="11%"><img src="assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>
-    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
     <td width="11%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
     <td width="11%"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="40" height="40"/><br><sub>PostgreSQL</sub></td>
     <td width="11%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
