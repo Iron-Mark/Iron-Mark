@@ -167,8 +167,8 @@
     <td width="11%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
     <td width="11%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
     <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
-    <td width="11%"><img src="assets/stack/npm.svg" alt="npm" width="40" height="40"/><br><sub>npm</sub></td>
-    <td width="11%"><sub>Core web languages · build tooling · package management</sub></td>
+    <td width="11%"><img src="assets/stack/php.svg" alt="PHP" width="40" height="40"/><br><sub>PHP</sub></td>
+    <td width="11%"><sub>Core web languages · build tooling · MySQL</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>JS Frameworks</b></sub></td></tr>
   <tr align="center">
