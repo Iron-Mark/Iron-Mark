@@ -147,129 +147,120 @@
 
 <table width="100%">
   <colgroup>
-    <col width="20%"/>
-    <col width="20%"/>
-    <col width="20%"/>
-    <col width="20%"/>
-    <col width="20%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
   </colgroup>
-  <tr align="center"><td colspan="5"><sub><b>🌐 WEB</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>🌐 WEB DEVELOPMENT</b></sub></td></tr>
   <tr align="center">
-    <td width="20%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
-    <td width="20%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
-    <td width="20%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
-    <td width="20%"><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
-    <td width="20%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
+    <td width="10%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
+    <td width="10%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
+    <td width="10%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
+    <td width="10%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
+    <td width="10%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
+    <td width="10%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
+    <td width="10%"><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TS</sub></td>
+    <td width="10%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
+    <td width="10%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
+    <td width="10%"><img src="assets/stack/tanstack.svg" alt="TanStack" width="40" height="40"/><br><sub>TanStack</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>📱 MOBILE DEVELOPMENT (CROSS-PLATFORM)</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android Studio</sub></td>
+    <td width="10%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
+    <td width="10%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
+    <td width="10%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
+    <td width="10%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
+    <td width="10%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
+    <td width="10%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
+    <td width="10%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
+    <td width="10%"><img src="assets/stack/swift.svg" alt="Swift" width="40" height="40"/><br><sub>Swift</sub></td>
+    <td width="10%"><img src="assets/stack/xcode.svg" alt="Xcode" width="40" height="40"/><br><sub>Xcode</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>🎮 GAME DEV</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
+    <td width="10%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
+    <td width="10%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
+    <td width="10%" colspan="7"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>🎨 UI / UX</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
+    <td width="10%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
+    <td width="10%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
+    <td width="10%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
+    <td width="10%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
+    <td width="10%" colspan="5"><sub>Design systems · user research · accessibility · product UI</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>🖌️ CREATIVE / MULTIMEDIA TOOLS</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
+    <td width="10%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
+    <td width="10%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
+    <td width="10%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
+    <td width="10%" colspan="6"><sub>Visual design · illustration · photo editing</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>🤖 AI</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td width="10%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
+    <td width="10%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
+    <td width="10%" colspan="7"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
+  </tr>
+  <tr align="center"><td colspan="10"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
+  <tr align="center">
+    <td width="10%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
+    <td width="10%" colspan="6"><sub>Models · reasoning · chat</sub></td>
   </tr>
   <tr align="center">
-    <td width="20%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td width="20%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
-    <td width="20%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
-    <td width="20%"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
-    <td width="20%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td width="10%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
+    <td width="10%" colspan="6"><sub>Prompting · codegen · UI gen</sub></td>
   </tr>
-  <tr align="center"><td colspan="5"><sub><b>📱 MOBILE</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
   <tr align="center">
-    <td width="20%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
-    <td width="20%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub>React Native</sub></td>
-    <td width="20%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
-    <td width="20%"><img src="assets/stack/capacitor.svg" alt="Capacitor" width="40" height="40"/><br><sub>Capacitor</sub></td>
-    <td width="20%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
-  </tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub>Android</sub></td>
-    <td width="20%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
-    <td width="20%" colspan="3"><sub>Health sensors · GPS · cross-platform apps</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🧭 TANSTACK</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Query" width="40" height="40"/><br><sub>Query</sub></td>
-    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Router" width="40" height="40"/><br><sub>Router</sub></td>
-    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Table" width="40" height="40"/><br><sub>Table</sub></td>
-    <td width="20%"><img src="assets/stack/tanstack.svg" alt="TanStack Form" width="40" height="40"/><br><sub>Form</sub></td>
-    <td width="20%"><sub>Data-driven UI · server state · routing · tables · forms</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🎮 GAME DEV</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
-    <td width="20%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
-    <td width="20%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
-    <td width="20%" colspan="2"><sub>Interactive experiences · gameplay UI · prototyping</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🎨 UI / UX</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td width="20%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
-    <td width="20%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
-    <td width="20%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
-    <td width="20%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
-  </tr>
-  <tr align="center">
-    <td width="20%" colspan="5"><sub>Design systems · user research · accessibility · product UI</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🖌️ CREATIVE / MULTIMEDIA TOOLS</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
-    <td width="20%"><img src="assets/stack/procreate.svg" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
-    <td width="20%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
-    <td width="20%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
-    <td width="20%"><sub>Visual design · illustration · photo editing</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🤖 AI</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td width="20%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
-    <td width="20%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td width="20%" colspan="2"><sub>LLM apps · AI agents · trust & safety · ML UX</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/copilot.svg" alt="Copilot" width="40" height="40"/><br><sub>Copilot</sub></td>
-    <td width="20%"><sub>Models · reasoning · chat</sub></td>
-  </tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/ai-workflow/cursor.png" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/v0.png" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="20%"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></td>
-    <td width="20%"><sub>Prompting · codegen · UI gen</sub></td>
-  </tr>
-  <tr align="center"><td colspan="5"><sub><b>🌍 WEB3 NETWORKS</b></sub></td></tr>
-  <tr align="center">
-    <td width="20%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td width="20%">
+    <td width="10%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
+    <td width="10%">
       <a href="https://stellar.org/">
         <img src="assets/web3-networks/stellar.png" alt="Stellar" width="36" height="36"/>
         <img src="assets/web3-networks/soroban.png" alt="Soroban" width="36" height="36"/>
         <br><sub>Stellar / Soroban</sub>
       </a>
     </td>
-    <td width="20%">
+    <td width="10%">
       <a href="https://celo.org/">
         <img src="assets/web3-networks/celo.png" alt="Celo" width="36" height="36"/>
         <img src="assets/web3-networks/minipay.png" alt="MiniPay" width="36" height="36"/>
         <br><sub>Celo / MiniPay</sub>
       </a>
     </td>
-    <td width="20%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
-    <td width="20%"><sub>Builder · ecosystem · proof systems</sub></td>
+    <td width="10%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="10%" colspan="6"><sub>Builder · ecosystem · proof systems</sub></td>
   </tr>
-  <tr align="center"><td colspan="5"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
+  <tr align="center"><td colspan="10"><sub><b>⛓️ WEB3 · BACKEND · TOOLS</b></sub></td></tr>
   <tr align="center">
-    <td width="20%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
-    <td width="20%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td width="20%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-    <td width="20%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td width="20%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
-  </tr>
-  <tr align="center">
-    <td width="20%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
-    <td width="20%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
-    <td width="20%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="20%" colspan="2"><sub>Proof-backed deploy loops</sub></td>
+    <td width="10%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
+    <td width="10%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td width="10%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
+    <td width="10%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
+    <td width="10%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
+    <td width="10%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
+    <td width="10%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td width="10%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+    <td width="10%" colspan="2"><sub>Proof-backed deploy loops</sub></td>
   </tr>
 </table>
 
