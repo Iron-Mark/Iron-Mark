@@ -272,28 +272,11 @@
   <tr align="center"><td colspan="9"><sub><b>Web3 · Networks &amp; Smart Contracts</b></sub></td></tr>
   <tr align="center">
     <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move Network" width="40" height="40"/><br><sub>Move Network</sub></a></td>
-    <td width="11%">
-      <a href="https://stellar.org/">
-        <img src="assets/web3-networks/stellar.png" alt="Stellar" width="36" height="36"/>
-        <img src="assets/web3-networks/soroban.png" alt="Soroban" width="36" height="36"/>
-        <br><sub>Stellar / Soroban</sub>
-      </a>
-    </td>
-    <td width="11%">
-      <a href="https://celo.org/">
-        <img src="assets/web3-networks/celo.png" alt="Celo" width="36" height="36"/>
-        <img src="assets/web3-networks/minipay.png" alt="MiniPay" width="36" height="36"/>
-        <br><sub>Celo / MiniPay</sub>
-      </a>
-    </td>
     <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph Network" width="40" height="40"/><br><sub>Morph</sub></a></td>
-    <td width="11%" colspan="5"><sub>Builder · ecosystem · proof systems</sub></td>
-  </tr>
-  <tr align="center">
     <td width="11%"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></td>
     <td width="11%"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></td>
     <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="11%" colspan="6"><sub>On-chain logic · contract tooling · wallet integration</sub></td>
+    <td width="11%" colspan="4"><sub>Networks · on-chain logic · contract tooling · wallet integration</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b></sub></td></tr>
   <tr align="center">
