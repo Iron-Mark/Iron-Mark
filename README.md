@@ -249,19 +249,19 @@
     <td width="11%"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
-  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes, data layers, and BaaS I wire up for proof-backed products</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for proof-backed products</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
-    <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
     <td width="11%"><img src="assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>
+    <td width="11%"><img src="assets/stack/fastify.svg" alt="Fastify" width="40" height="40"/><br><sub>Fastify</sub></td>
     <td width="11%"><img src="assets/stack/fastapi.svg" alt="FastAPI" width="40" height="40"/><br><sub>FastAPI</sub></td>
     <td width="11%"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="40" height="40"/><br><sub>PostgreSQL</sub></td>
+    <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
     <td width="11%"><img src="assets/stack/mongodb.svg" alt="MongoDB" width="40" height="40"/><br><sub>MongoDB</sub></td>
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td width="11%"><img src="assets/stack/mysql.svg" alt="MySQL" width="40" height="40"/><br><sub>MySQL</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling, chains, and wallets for my on-chain build flow</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling → chains I ship on → wallets users connect with</sub></td></tr>
   <tr align="center">
     <td width="11%"><a href="https://soliditylang.org/"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
     <td width="11%"><a href="https://hardhat.org/"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
@@ -273,16 +273,16 @@
     <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3-networks/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td width="11%"><a href="https://metamask.io/"><img src="assets/web3-networks/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · containers, serverless, and release loops that get proofs live</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
   <tr align="center">
+    <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
+    <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
     <td width="11%"><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
     <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
-    <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
-    <td width="11%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
-    <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
-    <td width="11%"><img src="assets/stack/cloudflare.svg" alt="Cloudflare" width="40" height="40"/><br><sub>Cloudflare</sub></td>
     <td width="11%"><img src="assets/stack/netlify.svg" alt="Netlify" width="40" height="40"/><br><sub>Netlify</sub></td>
     <td width="11%"><img src="assets/stack/railway.svg" alt="Railway" width="40" height="40"/><br><sub>Railway</sub></td>
+    <td width="11%"><img src="assets/stack/cloudflare.svg" alt="Cloudflare" width="40" height="40"/><br><sub>Cloudflare</sub></td>
+    <td width="11%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
     <td width="11%"><img src="assets/stack/aws.svg" alt="AWS" width="40" height="40"/><br><sub>AWS</sub></td>
   </tr>
 </table>
