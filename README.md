@@ -1,18 +1,47 @@
-<p align="center"><img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/></p>
+<style>
+  .readme-fluid { max-width: 100%; height: auto; }
+  .readme-banner { width: 100%; max-width: 880px; height: auto; }
+  .readme-typing { width: 100%; max-width: 540px; height: auto; }
+  .readme-stats { max-width: 100%; height: auto; }
+  .readme-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; align-items: center; }
+  .readme-stack-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; max-width: 100%; }
+  @media (max-width: 1023px) and (min-width: 600px) {
+    .readme-featured tr { display: flex; flex-wrap: wrap; justify-content: center; }
+    .readme-featured td { width: 50% !important; max-width: 50% !important; box-sizing: border-box; padding: 8px 6px; }
+  }
+  @media (max-width: 599px) {
+    .readme-featured tr { display: flex; flex-direction: column; }
+    .readme-featured td { width: 100% !important; max-width: 100% !important; box-sizing: border-box; padding: 10px 4px; }
+    .readme-lab thead { display: none; }
+    .readme-lab tbody tr { display: block; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #d0d7de; }
+    .readme-lab td { display: block !important; width: 100% !important; text-align: left !important; padding: 3px 0; }
+    .readme-lab td[width="43%"] { margin-top: 2px; }
+    .readme-stack { min-width: 640px; }
+  }
+  @media (max-width: 1023px) {
+    .readme-stack-wrap { margin: 0 -4px; }
+    .readme-stack { min-width: 700px; }
+  }
+  @media (prefers-color-scheme: dark) {
+    .readme-lab tbody tr { border-bottom-color: #30363d; }
+  }
+</style>
+
+<p align="center"><img class="readme-banner" src="assets/brand/banner.gif" width="100%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/></p>
 
 <h1 align="center">Mark Siazon 👋</h1>
 
 <!-- SEO/LLM: Mark Siazon | @Iron-Mark | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | AI | Mobile | Web3 | proof-backed products | marksiazon.dev | marksiazon.dev@gmail.com -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=3" alt="Mark Siazon — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades" width="540"/>
+  <img class="readme-typing" src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=3" alt="Mark Siazon — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades" width="100%"/>
 </p>
 
 <p align="center"><em>Proof-backed products · AI · Mobile · Web3</em></p>
 
 <p align="center"><sub><b>@Iron-Mark</b> · product designer, full-stack developer &amp; UI/UX engineer shipping hackathon builds, lab experiments &amp; open-source work · <a href="llms.txt">llms.txt</a> for LLM index</sub></p>
 
-<p align="center">
+<p align="center" class="readme-badges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
   <a href="https://www.marksiazon.dev/contact" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
@@ -22,7 +51,7 @@
 
 <h2 align="center">Featured Work</h2>
 
-<table width="100%">
+<table width="100%" class="readme-featured">
   <colgroup>
     <col width="33%"/>
     <col width="33%"/>
@@ -92,17 +121,20 @@
 
 <h2 align="center">Hackathon & Lab</h2>
 
-<table width="100%">
+<table width="100%" class="readme-lab">
   <colgroup>
     <col width="22%"/>
     <col width="43%"/>
     <col width="35%"/>
   </colgroup>
+  <thead>
   <tr>
     <th align="left" width="22%"><sub>Project</sub></th>
     <th align="left" width="43%"><sub>Focus</sub></th>
     <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td width="22%"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
     <td width="43%"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
@@ -128,6 +160,7 @@
     <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
     <td width="35%"><sub><a href="https://pacebeats.vercel.app">Live</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
+  </tbody>
 </table>
 
 ---
@@ -138,7 +171,9 @@
 
 <p align="center"><em>Jack of all trades. Curiosity is one of my hobbies.</em></p>
 
-<table width="100%">
+<div class="readme-stack-wrap" align="center" style="overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;max-width:100%">
+
+<table width="100%" class="readme-stack">
   <colgroup>
     <col width="11%"/>
     <col width="11%"/>
@@ -291,13 +326,15 @@
   </tr>
 </table>
 
+</div>
+
 ---
 
 <h2 align="center">GitHub Activity</h2>
 
 <p align="center">
   <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
-    <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub contribution statistics" height="195"/>
+    <img class="readme-stats" src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub contribution statistics" height="195"/>
   </a>
 </p>
 
@@ -309,7 +346,7 @@
 
 <p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
 
-<p align="center">
+<p align="center" class="readme-badges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.linkedin.com/in/mark-siazon/" rel="noopener noreferrer" aria-label="Mark Siazon on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"/></a>
   <a href="mailto:marksiazon.dev@gmail.com" aria-label="Email marksiazon.dev@gmail.com"><img src="https://img.shields.io/badge/Email-marksiazon.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email marksiazon.dev@gmail.com"/></a>
   <a href="https://www.frontendmentor.io/profile/Iron-Mark" rel="noopener noreferrer" aria-label="Iron-Mark on Frontend Mentor"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor profile"/></a>
