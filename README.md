@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/github-banner.gif" width="70%" alt="Mark Siazon banner"/></p>
+<p align="center"><img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon banner"/></p>
 
 <h1 align="center">Mark Siazon 👋</h1>
 
@@ -27,52 +27,52 @@
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/hireproof">
-        <img src="assets/projects/hireproof.png" width="100%" height="140" alt="HireProof"/>
-      </a><br><img src="assets/projects/icons/hireproof.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio">Live ↗</a></sub>
+        <img src="assets/projects/hireproof/cover.png" width="100%" height="140" alt="HireProof"/>
+      </a><br><img src="assets/projects/hireproof/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/stellaroid-earn">
-        <img src="assets/projects/stellaroid.png" width="100%" height="140" alt="Stellaroid Earn"/>
-      </a><br><img src="assets/projects/icons/stellaroid.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech">Live ↗</a></sub>
+        <img src="assets/projects/stellaroid-earn/cover.png" width="100%" height="140" alt="Stellaroid Earn"/>
+      </a><br><img src="assets/projects/stellaroid-earn/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/resqlink">
-        <img src="assets/projects/resqlink.png" width="100%" height="140" alt="ResQLink"/>
-      </a><br><img src="assets/projects/icons/resqlink.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb">Repo ↗</a></sub>
+        <img src="assets/projects/resqlink/cover.png" width="100%" height="140" alt="ResQLink"/>
+      </a><br><img src="assets/projects/resqlink/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb">Repo ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://lexinsights.vercel.app">
-        <img src="assets/projects/lexinsights.svg" width="100%" height="140" alt="LexInSight"/>
-      </a><br><img src="assets/projects/icons/lexinsights.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://lexinsights.vercel.app">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights">Repo ↗</a></sub>
+        <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInSight"/>
+      </a><br><img src="assets/projects/lexinsights/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://lexinsights.vercel.app">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/good-to-live">
-        <img src="assets/projects/good-to-live.png" width="100%" height="140" alt="Good To Live"/>
-      </a><br><img src="assets/projects/icons/good-to-live.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com">Live ↗</a></sub>
+        <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
+      </a><br><img src="assets/projects/good-to-live/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/flowfit">
-        <img src="assets/projects/flowfit.png" width="100%" height="140" alt="FlowFit"/>
-      </a><br><img src="assets/projects/icons/flowfit.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit">Case study ↗</a></sub>
+        <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
+      </a><br><img src="assets/projects/flowfit/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit">Case study ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/palengkepay">
-        <img src="assets/projects/palengkepay.png" width="100%" height="140" alt="PalengkePay"/>
-      </a><br><img src="assets/projects/icons/palengkepay.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app">Live ↗</a></sub>
+        <img src="assets/projects/palengkepay/cover.png" width="100%" height="140" alt="PalengkePay"/>
+      </a><br><img src="assets/projects/palengkepay/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/gawainyah">
-        <img src="assets/projects/gawainyah.png" width="100%" height="140" alt="GawainYah"/>
-      </a><br><img src="assets/projects/icons/gawainyah.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app">Live ↗</a></sub>
+        <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
+      </a><br><img src="assets/projects/gawainyah/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://github.com/Iron-Mark/qwen-ui-lab">
-        <img src="assets/projects/qwen-ui-lab.png" width="100%" height="140" alt="qwen-ui-lab"/>
-      </a><br><img src="assets/projects/icons/qwen-ui-lab.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app">Live ↗</a></sub>
+        <img src="assets/projects/qwen-ui-lab/cover.png" width="100%" height="140" alt="qwen-ui-lab"/>
+      </a><br><img src="assets/projects/qwen-ui-lab/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:4px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app">Live ↗</a></sub>
     </td>
   </tr>
 </table>
@@ -100,27 +100,27 @@
     <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
   <tr>
-    <td width="22%"><img src="assets/projects/icons/qwen-ui-lab.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
+    <td width="22%"><img src="assets/projects/qwen-ui-lab/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
     <td width="43%"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
     <td width="35%"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><img src="assets/projects/icons/smart-profile.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
+    <td width="22%"><img src="assets/projects/smart-profile/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
     <td width="43%"><sub>AI credentials · SaaS · Supabase</sub></td>
     <td width="35%"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><img src="assets/projects/icons/baybayinscribe.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
+    <td width="22%"><img src="assets/projects/baybayinscribe/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
     <td width="43%"><sub>Baybayin ML · cultural education UX</sub></td>
     <td width="35%"><sub><a href="https://beta.baybayinscribe.top">Live</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><img src="assets/projects/icons/kudlit.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
+    <td width="22%"><img src="assets/projects/kudlit/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
     <td width="43%"><sub>Flutter · Baybayin learning · Android release</sub></td>
     <td width="35%"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><img src="assets/projects/icons/pulse.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
+    <td width="22%"><img src="assets/projects/pulse/icon.png" alt="" width="18" height="18" style="vertical-align:middle;margin-right:6px"/><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
     <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
     <td width="35%"><sub><a href="https://github.com/KpG782/devcamp">Repo</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
@@ -230,22 +230,22 @@
     <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
     <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
     <td width="11%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/deepseek-color.svg" alt="Deepseek" width="40" height="40"/><br><sub>Deepseek</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/perplexity-color.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/grok-color.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/deepseek.svg" alt="Deepseek" width="40" height="40"/><br><sub>Deepseek</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/perplexity.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/grok.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable-color.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
-    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit-color.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
+    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
+    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
   </tr>
   <tr align="center">
     <td width="11%"><a href="https://developers.openai.com/codex" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
-    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode-color.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity-color.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
+    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
     <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
     <td width="11%"><a href="https://v0.dev/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
     <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
     <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro-color.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
+    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
     <td width="11%"><a href="https://opencode.ai/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
@@ -265,13 +265,13 @@
   <tr align="center">
     <td width="11%"><a href="https://soliditylang.org/"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
     <td width="11%"><a href="https://hardhat.org/"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
-    <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3-networks/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
-    <td width="11%"><a href="https://morph.network/"><img src="assets/web3-networks/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
-    <td width="11%"><a href="https://celo.org/"><img src="assets/web3-networks/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
-    <td width="11%"><a href="https://stellar.org/"><img src="assets/web3-networks/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
-    <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3-networks/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3-networks/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
-    <td width="11%"><a href="https://metamask.io/"><img src="assets/web3-networks/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
+    <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
+    <td width="11%"><a href="https://morph.network/"><img src="assets/web3/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="11%"><a href="https://celo.org/"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
+    <td width="11%"><a href="https://stellar.org/"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
+    <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+    <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
+    <td width="11%"><a href="https://metamask.io/"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
   <tr align="center">
