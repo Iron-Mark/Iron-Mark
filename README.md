@@ -235,11 +235,17 @@
     <td width="11%"><img src="assets/stack/audacity.svg" alt="Audacity" width="40" height="40"/><br><sub>Audacity</sub></td>
     <td width="11%"><img src="assets/stack/spline.png" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · model stacks behind agents, trust &amp; safety, and ML product UX</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · ML foundation → agents &amp; inference → production deploy</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
     <td width="11%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td width="11%"><img src="assets/stack/llama.svg" alt="LLaMA" width="40" height="40"/><br><sub>LLaMA</sub></td>
+    <td width="11%"><img src="assets/stack/huggingface.svg" alt="Hugging Face" width="40" height="40"/><br><sub style="white-space:nowrap">Hugging&nbsp;Face</sub></td>
+    <td width="11%"><img src="assets/stack/langchain.svg" alt="LangChain" width="40" height="40"/><br><sub>LangChain</sub></td>
+    <td width="11%"><img src="assets/stack/groq.svg" alt="Groq" width="40" height="40"/><br><sub>Groq</sub></td>
+    <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel AI SDK" width="40" height="40"/><br><sub style="white-space:nowrap">Vercel&nbsp;AI&nbsp;SDK</sub></td>
+    <td width="11%"><img src="assets/stack/googlecloud.svg" alt="GCP" width="40" height="40"/><br><sub>GCP</sub></td>
+    <td width="11%"><img src="assets/stack/aws.svg" alt="AWS Bedrock" width="40" height="40"/><br><sub style="white-space:nowrap">AWS&nbsp;Bedrock</sub></td>
+    <td width="11%"><img src="assets/stack/azure.svg" alt="Azure AI Foundry" width="40" height="40"/><br><sub style="white-space:nowrap">Azure&nbsp;AI&nbsp;Foundry</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
   <tr align="center">

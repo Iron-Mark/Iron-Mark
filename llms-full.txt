@@ -128,7 +128,7 @@ Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
 Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase, Appwrite
 
 ### AI & ML
-Python, PyTorch, LLaMA; AI-assisted dev with ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode
+Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry; AI-assisted dev with ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode
 
 ### Web3
 Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask
