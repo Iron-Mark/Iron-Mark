@@ -35,51 +35,51 @@
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/hireproof" aria-label="HireProof case study">
         <img src="assets/projects/hireproof/cover.png" width="100%" height="140" alt="HireProof"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/hireproof/icon.png" alt="HireProof icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b></td></tr></table><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio" rel="noopener noreferrer" aria-label="HireProof live project">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/hireproof/icon.png" alt="HireProof icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b></td></tr></table><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio" rel="noopener noreferrer" aria-label="HireProof live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/stellaroid-earn" aria-label="Stellaroid Earn case study">
         <img src="assets/projects/stellaroid-earn/cover.png" width="100%" height="140" alt="Stellaroid Earn"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/stellaroid-earn/icon.png" alt="Stellaroid Earn icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b></td></tr></table><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech" rel="noopener noreferrer" aria-label="Stellaroid Earn live project">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/stellaroid-earn/icon.png" alt="Stellaroid Earn icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b></td></tr></table><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech" rel="noopener noreferrer" aria-label="Stellaroid Earn live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/resqlink" aria-label="ResQLink case study">
         <img src="assets/projects/resqlink/cover.png" width="100%" height="140" alt="ResQLink"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/resqlink/icon.png" alt="ResQLink icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b></td></tr></table><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb" rel="noopener noreferrer" aria-label="ResQLink repository">Repo ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/resqlink/icon.png" alt="ResQLink icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b></td></tr></table><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb" rel="noopener noreferrer" aria-label="ResQLink repository">Repo ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://lexinsights.vercel.app" aria-label="LexInSight live app">
         <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInSight"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://lexinsights.vercel.app">LexInSight</a></b></td></tr></table><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://lexinsights.vercel.app">LexInSight</a></b></td></tr></table><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/good-to-live" aria-label="Good To Live case study">
         <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b></td></tr></table><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b></td></tr></table><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">
         <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/flowfit/icon.png" alt="FlowFit icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b></td></tr></table><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">Case study ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/flowfit/icon.png" alt="FlowFit icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b></td></tr></table><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">Case study ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/palengkepay" aria-label="PalengkePay case study">
         <img src="assets/projects/palengkepay/cover.png" width="100%" height="140" alt="PalengkePay"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/palengkepay/icon.png" alt="PalengkePay icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b></td></tr></table><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app" rel="noopener noreferrer" aria-label="PalengkePay live app">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/palengkepay/icon.png" alt="PalengkePay icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b></td></tr></table><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app" rel="noopener noreferrer" aria-label="PalengkePay live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/gawainyah" aria-label="GawainYah case study">
         <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/gawainyah/icon.png" alt="GawainYah icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b></td></tr></table><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/gawainyah/icon.png" alt="GawainYah icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b></td></tr></table><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://github.com/Iron-Mark/qwen-ui-lab" aria-label="qwen-ui-lab repository">
         <img src="assets/projects/qwen-ui-lab/cover.png" width="100%" height="140" alt="qwen-ui-lab"/>
-      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td></tr></table><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app" rel="noopener noreferrer" aria-label="qwen-ui-lab live app">Live ↗</a></sub>
+      </a><br><table align="center" cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:4px;line-height:0"><img style="display:block" src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td></tr></table><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app" rel="noopener noreferrer" aria-label="qwen-ui-lab live app">Live ↗</a></sub>
     </td>
   </tr>
 </table>
