@@ -186,6 +186,7 @@
     <td width="11%"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub>shadcn/ui</sub></td>
     <td width="11%"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></td>
     <td width="11%"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub>Ant Design</sub></td>
+    <td width="11%"><a href="https://daisyui.com/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
