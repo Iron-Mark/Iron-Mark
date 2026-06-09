@@ -107,29 +107,29 @@
     <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
   <tr>
-    <td width="22%"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td></tr></table></td>
-    <td width="43%"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
-    <td width="35%"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
+    <td width="22%" valign="middle"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px;line-height:0"><img style="display:block" src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td></tr></table></td>
+    <td width="43%" valign="middle"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
+    <td width="35%" valign="middle"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px"><img src="assets/projects/smart-profile/icon.png" alt="Smart Profile icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td></tr></table></td>
-    <td width="43%"><sub>AI credentials · SaaS · Supabase</sub></td>
-    <td width="35%"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
+    <td width="22%" valign="middle"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px;line-height:0"><img style="display:block" src="assets/projects/smart-profile/icon.png" alt="Smart Profile icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td></tr></table></td>
+    <td width="43%" valign="middle"><sub>AI credentials · SaaS · Supabase</sub></td>
+    <td width="35%" valign="middle"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px"><img src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td></tr></table></td>
-    <td width="43%"><sub>Baybayin ML · cultural education UX</sub></td>
-    <td width="35%"><sub><a href="https://huggingface.co/gilas/baybayinscribe">Model</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
+    <td width="22%" valign="middle"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px;line-height:0"><img style="display:block" src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td></tr></table></td>
+    <td width="43%" valign="middle"><sub>Baybayin ML · cultural education UX</sub></td>
+    <td width="35%" valign="middle"><sub><a href="https://huggingface.co/gilas/baybayinscribe">Model</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px"><img src="assets/projects/kudlit/icon.png" alt="Kudlit icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td></tr></table></td>
-    <td width="43%"><sub>Flutter · Baybayin learning · Android release</sub></td>
-    <td width="35%"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
+    <td width="22%" valign="middle"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px;line-height:0"><img style="display:block" src="assets/projects/kudlit/icon.png" alt="Kudlit icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td></tr></table></td>
+    <td width="43%" valign="middle"><sub>Flutter · Baybayin learning · Android release</sub></td>
+    <td width="35%" valign="middle"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px"><img src="assets/projects/pulse/icon.png" alt="Pulse icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td></tr></table></td>
-    <td width="43%"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
-    <td width="35%"><sub><a href="https://pacebeats.vercel.app">Live</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
+    <td width="22%" valign="middle"><table cellpadding="0" cellspacing="0" border="0"><tr><td valign="middle" style="padding-right:6px;line-height:0"><img style="display:block" src="assets/projects/pulse/icon.png" alt="Pulse icon" width="18" height="18"/></td><td valign="middle"><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td></tr></table></td>
+    <td width="43%" valign="middle"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
+    <td width="35%" valign="middle"><sub><a href="https://pacebeats.vercel.app">Live</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
 </table>
 
