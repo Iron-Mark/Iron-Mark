@@ -209,6 +209,7 @@
     <td width="11%"><img src="assets/stack/fmod.svg" alt="FMOD" width="40" height="40"/><br><sub>FMOD</sub></td>
     <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
     <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
+    <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
   <tr align="center">
