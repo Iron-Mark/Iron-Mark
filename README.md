@@ -199,77 +199,22 @@
     <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub style="white-space:nowrap">React&nbsp;Native</sub></td>
     <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · engines &amp; IDE → art pipeline → indie tools → browser games</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
-    <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
-    <td width="11%"><img src="assets/stack/visualstudio.svg" alt="Visual Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Visual&nbsp;Studio</sub></td>
-    <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
-    <td width="11%"><img src="assets/stack/aseprite.svg" alt="Aseprite" width="40" height="40"/><br><sub>Aseprite</sub></td>
-    <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
-    <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
-    <td width="11%"><a href="https://phaser.io/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/phaser.svg" alt="Phaser" width="40" height="40"/><br><sub style="white-space:nowrap">Phaser.js</sub></a></td>
-    <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
-  </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td width="11%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
-    <td width="11%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
-    <td width="11%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
-    <td width="11%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
-    <td width="11%"><img src="assets/stack/storybook.svg" alt="Storybook" width="40" height="40"/><br><sub>Storybook</sub></td>
-    <td width="11%"><img src="assets/stack/penpot.svg" alt="Penpot" width="40" height="40"/><br><sub>Penpot</sub></td>
-    <td width="11%"><img src="assets/stack/sketch.svg" alt="Sketch" width="40" height="40"/><br><sub>Sketch</sub></td>
-    <td width="11%"><img src="assets/stack/hotjar.svg" alt="Hotjar" width="40" height="40"/><br><sub>Hotjar</sub></td>
-  </tr>
-  <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
-    <td width="11%"><img src="assets/stack/procreate.png" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
-    <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
-    <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
-    <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub style="white-space:nowrap">Premiere&nbsp;Pro</sub></td>
-    <td width="11%"><img src="assets/stack/capcut.png" alt="CapCut" width="40" height="40"/><br><sub>CapCut</sub></td>
-    <td width="11%"><img src="assets/stack/obsstudio.svg" alt="OBS Studio" width="40" height="40"/><br><sub style="white-space:nowrap">OBS&nbsp;Studio</sub></td>
-    <td width="11%"><img src="assets/stack/audacity.svg" alt="Audacity" width="40" height="40"/><br><sub>Audacity</sub></td>
-    <td width="11%"><img src="assets/stack/spline.png" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
-  </tr>
-  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · ML foundation → agents &amp; inference → production deploy</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td width="11%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
-    <td width="11%"><img src="assets/stack/huggingface.svg" alt="Hugging Face" width="40" height="40"/><br><sub style="white-space:nowrap">Hugging&nbsp;Face</sub></td>
-    <td width="11%"><img src="assets/stack/langchain.svg" alt="LangChain" width="40" height="40"/><br><sub>LangChain</sub></td>
-    <td width="11%"><img src="assets/stack/groq.svg" alt="Groq" width="40" height="40"/><br><sub>Groq</sub></td>
-    <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel AI SDK" width="40" height="40"/><br><sub style="white-space:nowrap">Vercel&nbsp;AI&nbsp;SDK</sub></td>
-    <td width="11%"><img src="assets/stack/googlecloud.svg" alt="GCP" width="40" height="40"/><br><sub>GCP</sub></td>
-    <td width="11%"><img src="assets/stack/aws.svg" alt="AWS Bedrock" width="40" height="40"/><br><sub style="white-space:nowrap">AWS&nbsp;Bedrock</sub></td>
-    <td width="11%"><img src="assets/stack/azure.svg" alt="Azure AI Foundry" width="40" height="40"/><br><sub style="white-space:nowrap">Azure&nbsp;AI&nbsp;Foundry</sub></td>
-  </tr>
-  <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
-  <tr align="center">
-    <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/deepseek.svg" alt="Deepseek" width="40" height="40"/><br><sub>Deepseek</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/perplexity.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/grok.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
-    <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
-    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
-  </tr>
-  <tr align="center">
-    <td width="11%"><a href="https://developers.openai.com/codex" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
-    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
-    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
-    <td width="11%"><a href="https://v0.dev/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
-    <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
-    <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
-    <td width="11%"><a href="https://opencode.ai/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
-  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
   <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
   <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for proof-backed products</sub></td></tr>
   <tr align="center">
@@ -306,6 +251,157 @@
     <td width="11%"><img src="assets/stack/cloudflare.svg" alt="Cloudflare" width="40" height="40"/><br><sub>Cloudflare</sub></td>
     <td width="11%"><img src="assets/stack/appwrite.svg" alt="Appwrite" width="40" height="40"/><br><sub>Appwrite</sub></td>
     <td width="11%"><img src="assets/stack/aws.svg" alt="AWS" width="40" height="40"/><br><sub>AWS</sub></td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
+  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · engines &amp; IDE → art pipeline → indie tools → browser games</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
+    <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
+    <td width="11%"><img src="assets/stack/visualstudio.svg" alt="Visual Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Visual&nbsp;Studio</sub></td>
+    <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
+    <td width="11%"><img src="assets/stack/aseprite.svg" alt="Aseprite" width="40" height="40"/><br><sub>Aseprite</sub></td>
+    <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
+    <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
+    <td width="11%"><a href="https://phaser.io/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/phaser.svg" alt="Phaser" width="40" height="40"/><br><sub style="white-space:nowrap">Phaser.js</sub></a></td>
+    <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
+  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
+    <td width="11%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
+    <td width="11%"><img src="assets/stack/miro.svg" alt="Miro" width="40" height="40"/><br><sub>Miro</sub></td>
+    <td width="11%"><img src="assets/stack/notion.svg" alt="Notion" width="40" height="40"/><br><sub>Notion</sub></td>
+    <td width="11%"><img src="assets/stack/webflow.svg" alt="Webflow" width="40" height="40"/><br><sub>Webflow</sub></td>
+    <td width="11%"><img src="assets/stack/storybook.svg" alt="Storybook" width="40" height="40"/><br><sub>Storybook</sub></td>
+    <td width="11%"><img src="assets/stack/penpot.svg" alt="Penpot" width="40" height="40"/><br><sub>Penpot</sub></td>
+    <td width="11%"><img src="assets/stack/sketch.svg" alt="Sketch" width="40" height="40"/><br><sub>Sketch</sub></td>
+    <td width="11%"><img src="assets/stack/hotjar.svg" alt="Hotjar" width="40" height="40"/><br><sub>Hotjar</sub></td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
+  <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
+    <td width="11%"><img src="assets/stack/procreate.png" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
+    <td width="11%"><img src="assets/stack/photoshop.svg" alt="Photoshop" width="40" height="40"/><br><sub>Photoshop</sub></td>
+    <td width="11%"><img src="assets/stack/adobeillustrator.svg" alt="Illustrator" width="40" height="40"/><br><sub>Illustrator</sub></td>
+    <td width="11%"><img src="assets/stack/premierepro.svg" alt="Premiere Pro" width="40" height="40"/><br><sub style="white-space:nowrap">Premiere&nbsp;Pro</sub></td>
+    <td width="11%"><img src="assets/stack/capcut.png" alt="CapCut" width="40" height="40"/><br><sub>CapCut</sub></td>
+    <td width="11%"><img src="assets/stack/obsstudio.svg" alt="OBS Studio" width="40" height="40"/><br><sub style="white-space:nowrap">OBS&nbsp;Studio</sub></td>
+    <td width="11%"><img src="assets/stack/audacity.svg" alt="Audacity" width="40" height="40"/><br><sub>Audacity</sub></td>
+    <td width="11%"><img src="assets/stack/spline.png" alt="Spline" width="40" height="40"/><br><sub>Spline</sub></td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
+  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · ML foundation → agents &amp; inference → production deploy</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td width="11%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
+    <td width="11%"><img src="assets/stack/huggingface.svg" alt="Hugging Face" width="40" height="40"/><br><sub style="white-space:nowrap">Hugging&nbsp;Face</sub></td>
+    <td width="11%"><img src="assets/stack/langchain.svg" alt="LangChain" width="40" height="40"/><br><sub>LangChain</sub></td>
+    <td width="11%"><img src="assets/stack/groq.svg" alt="Groq" width="40" height="40"/><br><sub>Groq</sub></td>
+    <td width="11%"><img src="assets/stack/vercel.svg" alt="Vercel AI SDK" width="40" height="40"/><br><sub style="white-space:nowrap">Vercel&nbsp;AI&nbsp;SDK</sub></td>
+    <td width="11%"><img src="assets/stack/googlecloud.svg" alt="GCP" width="40" height="40"/><br><sub>GCP</sub></td>
+    <td width="11%"><img src="assets/stack/aws.svg" alt="AWS Bedrock" width="40" height="40"/><br><sub style="white-space:nowrap">AWS&nbsp;Bedrock</sub></td>
+    <td width="11%"><img src="assets/stack/azure.svg" alt="Azure AI Foundry" width="40" height="40"/><br><sub style="white-space:nowrap">Azure&nbsp;AI&nbsp;Foundry</sub></td>
+  </tr>
+</table>
+
+<br>
+
+<table width="100%">
+  <colgroup>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+    <col width="11%"/>
+  </colgroup>
+  <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
+  <tr align="center">
+    <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/deepseek.svg" alt="Deepseek" width="40" height="40"/><br><sub>Deepseek</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/perplexity.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/grok.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
+    <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
+    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
+    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
+  </tr>
+  <tr align="center">
+    <td width="11%"><a href="https://developers.openai.com/codex" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
+    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
+    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
+    <td width="11%"><a href="https://v0.dev/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
+    <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
+    <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
+    <td width="11%"><a href="https://opencode.ai/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
   </tr>
 </table>
 
