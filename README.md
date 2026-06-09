@@ -199,17 +199,17 @@
     <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub style="white-space:nowrap">React&nbsp;Native</sub></td>
     <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · Unity prototypes and 3D assets for interactive experiences</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · engines &amp; IDE → art pipeline → indie tools → browser games</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
     <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
-    <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
     <td width="11%"><img src="assets/stack/visualstudio.svg" alt="Visual Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Visual&nbsp;Studio</sub></td>
+    <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
     <td width="11%"><img src="assets/stack/aseprite.svg" alt="Aseprite" width="40" height="40"/><br><sub>Aseprite</sub></td>
+    <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
+    <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
     <td width="11%"><a href="https://phaser.io/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/phaser.svg" alt="Phaser" width="40" height="40"/><br><sub style="white-space:nowrap">Phaser.js</sub></a></td>
     <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
-    <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
-    <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
   <tr align="center">
