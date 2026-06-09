@@ -206,7 +206,7 @@
     <td width="11%"><img src="assets/stack/blender.svg" alt="Blender" width="40" height="40"/><br><sub>Blender</sub></td>
     <td width="11%"><img src="assets/stack/visualstudio.svg" alt="Visual Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Visual&nbsp;Studio</sub></td>
     <td width="11%"><img src="assets/stack/aseprite.svg" alt="Aseprite" width="40" height="40"/><br><sub>Aseprite</sub></td>
-    <td width="11%"><img src="assets/stack/fmod.svg" alt="FMOD" width="40" height="40"/><br><sub>FMOD</sub></td>
+    <td width="11%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
     <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
     <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
     <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
