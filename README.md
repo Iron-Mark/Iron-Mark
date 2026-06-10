@@ -411,8 +411,6 @@
 
 <h2 align="center">GitHub Activity</h2>
 
-<p align="center"><sub>Open-source velocity on <a href="https://github.com/Iron-Mark">@Iron-Mark</a> · smaller experiments on <a href="https://github.com/mark-siazon">@mark-siazon</a></sub></p>
-
 <p align="center">
   <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
     <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub stats — stars, commits, and pull requests" height="165"/>
