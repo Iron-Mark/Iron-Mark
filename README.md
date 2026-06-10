@@ -30,6 +30,12 @@
       table.readme-featured td + td { border-top-color: #30363d; }
     }
   }
+  @media only screen and (max-width: 640px) {
+    .github-stats-desktop { display: none !important; }
+  }
+  @media only screen and (min-width: 641px) {
+    .github-stats-mobile { display: none !important; }
+  }
 </style>
 
 <p align="center"><img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/></p>
@@ -453,14 +459,28 @@
 
 <h2 align="center">GitHub Activity</h2>
 
-<p align="center">
-  <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
-    <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub stats — stars, commits, and pull requests" height="165"/>
+<p align="center"><sub>Public contribution snapshot for <a href="https://github.com/Iron-Mark">@Iron-Mark</a> · updated daily</sub></p>
+
+<p align="center" class="github-stats-desktop" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:0">
+  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile — stars, commits, and pull requests">
+    <img src="assets/github/stats.svg" alt="GitHub statistics for Mark Siazon (@Iron-Mark): total stars earned, commits, and pull requests across public repositories" height="165"/>
   </a>
-  <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark top programming languages">
-    <img src="assets/github/top-langs.svg" alt="Mark Siazon (@Iron-Mark) most used programming languages" height="165"/>
+  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub language breakdown in public repositories">
+    <img src="assets/github/top-langs.svg" alt="Most-used programming languages in Mark Siazon (@Iron-Mark) public GitHub repositories, shown as a compact language breakdown" height="165"/>
   </a>
 </p>
+
+<details class="github-stats-mobile" align="center">
+  <summary><sub>Show GitHub stats</sub></summary>
+  <p align="center" style="display:flex;flex-direction:column;align-items:center;gap:12px;margin:12px 0 0">
+    <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile — stars, commits, and pull requests">
+      <img src="assets/github/stats.svg" alt="GitHub statistics for Mark Siazon (@Iron-Mark): total stars earned, commits, and pull requests across public repositories" height="165"/>
+    </a>
+    <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub language breakdown in public repositories">
+      <img src="assets/github/top-langs.svg" alt="Most-used programming languages in Mark Siazon (@Iron-Mark) public GitHub repositories, shown as a compact language breakdown" height="165"/>
+    </a>
+  </p>
+</details>
 
 ---
 
