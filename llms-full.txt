@@ -80,7 +80,7 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 ### Good To Live
 - Case study: https://www.marksiazon.dev/projects/good-to-live
-- Live: https://goodtolivepodcast.com
+- Live: https://www.goodtolivepodcast.com
 - Focus: Client podcast web launch, SEO, feeds, and production delivery
 
 ### FlowFit
@@ -90,13 +90,12 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 ### PalengkePay
 - Case study: https://www.marksiazon.dev/projects/palengkepay
 - Live: https://palengke-pay.vercel.app
-- Repo: https://github.com/Iron-Mark/Hackathon-Stellar-PalengkePay-Pro
+- Team repo: https://github.com/polsalarm/PalengkePay-Pro
 - Focus: Stellar fintech PWA for wet-market vendor payments (testnet-first proof)
 
 ### GawainYah
 - Case study: https://www.marksiazon.dev/projects/gawainyah
 - Live: https://gawainyah-minipay.vercel.app
-- Repo: https://github.com/Iron-Mark/Hackathon-MiniPay
 - Focus: MiniPay-native AI utility with payment-before-AI guardrails and Celo proof receipts
 
 ### qwen-ui-lab
@@ -107,9 +106,9 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 ## Hackathon & lab (profile table)
 
 - Smart Profile — AI credentials SaaS: https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System · Demo: https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/
-- BaybayInscribe — Baybayin ML & cultural education: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe · Beta: https://beta.baybayinscribe.top
+- BaybayInscribe — Baybayin ML & cultural education: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe
 - Kudlit — Flutter Baybayin learning, Android v1.0.0: https://www.marksiazon.dev/projects/kudlit · Repo: https://github.com/ACSADians/kudlit-app
-- Pulse — Wear OS, GPS, heart-rate telemetry: https://www.marksiazon.dev/projects/pulse · Live: https://pacebeats.vercel.app · Repo: https://github.com/KpG782/devcamp
+- Pulse — Wear OS, GPS, heart-rate telemetry: https://www.marksiazon.dev/projects/pulse · Live: https://pacebeats.vercel.app
 
 ## Writing (portfolio)
 
