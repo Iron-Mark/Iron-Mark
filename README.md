@@ -179,14 +179,14 @@
   </tr>
   <tr align="center"><td colspan="9"><sub><b>CSS Frameworks &amp; Design Libraries</b> · styling and component systems from prototype to production</sub></td></tr>
   <tr align="center">
-    <td width="11%"><a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
-    <td width="11%"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></a></td>
-    <td width="11%"><a href="https://sass-lang.com/install/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></a></td>
-    <td width="11%"><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/bem.svg" alt="BEM" width="40" height="40"/><br><sub>BEM</sub></a></td>
-    <td width="11%"><a href="https://ui.shadcn.com/docs/installation" target="_blank" rel="noopener noreferrer"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub style="white-space:nowrap">shadcn/ui</sub></a></td>
-    <td width="11%"><a href="https://mui.com/material-ui/getting-started/installation/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></a></td>
-    <td width="11%"><a href="https://ant.design/docs/react/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub style="white-space:nowrap">Ant&nbsp;Design</sub></a></td>
-    <td width="11%"><a href="https://daisyui.com/docs/install/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
+    <td width="11%"><a href="https://tailwindcss.com/docs/installation" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
+    <td width="11%"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" rel="noopener noreferrer"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></a></td>
+    <td width="11%"><a href="https://sass-lang.com/install/" rel="noopener noreferrer"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></a></td>
+    <td width="11%"><a href="https://en.bem.info/methodology/quick-start/" rel="noopener noreferrer"><img src="assets/stack/bem.svg" alt="BEM" width="40" height="40"/><br><sub>BEM</sub></a></td>
+    <td width="11%"><a href="https://ui.shadcn.com/docs/installation" rel="noopener noreferrer"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub style="white-space:nowrap">shadcn/ui</sub></a></td>
+    <td width="11%"><a href="https://mui.com/material-ui/getting-started/installation/" rel="noopener noreferrer"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></a></td>
+    <td width="11%"><a href="https://ant.design/docs/react/getting-started" rel="noopener noreferrer"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub style="white-space:nowrap">Ant&nbsp;Design</sub></a></td>
+    <td width="11%"><a href="https://daisyui.com/docs/install/" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
@@ -277,7 +277,7 @@
     <td width="11%"><img src="assets/stack/aseprite.png" alt="Aseprite" width="40" height="40"/><br><sub>Aseprite</sub></td>
     <td width="11%"><img src="assets/stack/godot.svg" alt="Godot" width="40" height="40"/><br><sub>Godot</sub></td>
     <td width="11%"><img src="assets/stack/rpgmaker.png" alt="RPG Maker" width="40" height="40"/><br><sub style="white-space:nowrap">RPG&nbsp;Maker</sub></td>
-    <td width="11%"><a href="https://phaser.io/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/phaser.svg" alt="Phaser" width="40" height="40"/><br><sub style="white-space:nowrap">Phaser.js</sub></a></td>
+    <td width="11%"><a href="https://phaser.io/" rel="noopener noreferrer"><img src="assets/stack/phaser.svg" alt="Phaser" width="40" height="40"/><br><sub style="white-space:nowrap">Phaser.js</sub></a></td>
     <td width="11%"><img src="assets/stack/threejs.svg" alt="Three.js" width="40" height="40"/><br><sub style="white-space:nowrap">Three.js</sub></td>
   </tr>
 </table>
@@ -389,19 +389,19 @@
     <td width="11%"><img src="assets/ai-workflow/perplexity.svg" alt="Perplexity" width="40" height="40"/><br><sub>Perplexity</sub></td>
     <td width="11%"><img src="assets/ai-workflow/grok.svg" alt="Grok" width="40" height="40"/><br><sub>Grok</sub></td>
     <td width="11%"><img src="assets/ai-workflow/qwen.svg" alt="Qwen" width="40" height="40"/><br><sub>Qwen</sub></td>
-    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
-    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/replit.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
+    <td width="11%"><a href="https://docs.lovable.dev/introduction/welcome" rel="noopener noreferrer"><img src="assets/ai-workflow/lovable.svg" alt="Lovable" width="40" height="40"/><br><sub>Lovable</sub></a></td>
+    <td width="11%"><a href="https://docs.replit.com/getting-started/intro-replit" rel="noopener noreferrer"><img src="assets/ai-workflow/replit.svg" alt="Replit" width="40" height="40"/><br><sub>Replit</sub></a></td>
   </tr>
   <tr align="center">
-    <td width="11%"><a href="https://developers.openai.com/codex" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
-    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://antigravity.google/docs/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
-    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
-    <td width="11%"><a href="https://v0.dev/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
-    <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
-    <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
-    <td width="11%"><a href="https://kiro.dev/docs/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
-    <td width="11%"><a href="https://opencode.ai/docs" target="_blank" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
+    <td width="11%"><a href="https://developers.openai.com/codex" rel="noopener noreferrer"><img src="assets/ai-workflow/codex.svg" alt="Codex" width="40" height="40"/><br><sub>Codex</sub></a></td>
+    <td width="11%"><a href="https://docs.anthropic.com/en/docs/claude-code/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://antigravity.google/docs/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/antigravity.svg" alt="Antigravity" width="40" height="40"/><br><sub>Antigravity</sub></a></td>
+    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
+    <td width="11%"><a href="https://v0.dev/docs" rel="noopener noreferrer"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></a></td>
+    <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Copilot</sub></a></td>
+    <td width="11%"><a href="https://qwenlm.github.io/qwen-code-docs/" rel="noopener noreferrer"><img src="assets/ai-workflow/qwencode.svg" alt="Qwen Code" width="40" height="40"/><br><sub style="white-space:nowrap">Qwen&nbsp;Code</sub></a></td>
+    <td width="11%"><a href="https://kiro.dev/docs/getting-started" rel="noopener noreferrer"><img src="assets/ai-workflow/kiro.svg" alt="Kiro" width="40" height="40"/><br><sub>Kiro</sub></a></td>
+    <td width="11%"><a href="https://opencode.ai/docs" rel="noopener noreferrer"><img src="assets/ai-workflow/opencode.svg" alt="OpenCode" width="40" height="40"/><br><sub>OpenCode</sub></a></td>
   </tr>
 </table>
 
