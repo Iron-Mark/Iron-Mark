@@ -411,13 +411,18 @@
 
 <h2 align="center">GitHub Activity</h2>
 
+<p align="center"><sub>Open-source velocity on <a href="https://github.com/Iron-Mark">@Iron-Mark</a> · smaller experiments on <a href="https://github.com/mark-siazon">@mark-siazon</a></sub></p>
+
 <p align="center">
   <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
-    <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub contribution statistics" height="195"/>
+    <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub stats — stars, commits, and pull requests" height="165"/>
+  </a>
+  <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark top programming languages">
+    <img src="assets/github/top-langs.svg" alt="Mark Siazon (@Iron-Mark) most used programming languages" height="165"/>
   </a>
 </p>
 
-<p align="center"><sub>Refreshed daily · <a href="https://github.com/Iron-Mark?tab=repositories">all repos ↗</a></sub></p>
+<p align="center"><sub>Self-hosted cards · refreshed daily · <a href="https://github.com/Iron-Mark?tab=repositories">all repos ↗</a></sub></p>
 
 ---
 

@@ -23,15 +23,23 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=Iron-Mark&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&hide_rank=true
+          options: username=Iron-Mark&show_icons=true&hide_border=true&include_all_commits=true&hide_rank=true&custom_title=Mark+Siazon+%40Iron-Mark&disable_animations=true&hide=issues,contribs&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&bg_color=0B0F14&border_color=1F2937
           path: assets/github/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=Iron-Mark&layout=compact&langs_count=6&hide_progress=false&card_width=320&custom_title=Most+Used+Languages&disable_animations=true&hide_border=true&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&bg_color=0B0F14&border_color=1F2937
+          path: assets/github/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated widgets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github/stats.svg
+          git add assets/github/stats.svg assets/github/top-langs.svg
           git diff --staged --quiet && echo "No changes" && exit 0
-          git commit -m "Update GitHub profile stats card"
+          git commit -m "Update GitHub profile stats cards"
           git push
