@@ -488,7 +488,6 @@
   <ul style="list-style-position:inside;padding:0;margin:0;text-align:center">
     <li><sub>Case studies, recruiter brief &amp; achievements at <a href="https://www.marksiazon.dev" rel="noopener noreferrer">marksiazon.dev</a></sub></li>
     <li><sub>Smaller public repos on <a href="https://github.com/mark-siazon" rel="noopener noreferrer">@mark-siazon</a></sub></li>
-    <li><sub>Contact via <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer">marksiazon.dev/contact</a> or <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a></sub></li>
   </ul>
 </div>
 
