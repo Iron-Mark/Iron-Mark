@@ -13,12 +13,12 @@
 
 <p align="center"><em>Proof-backed products · AI · Mobile · Web3</em></p>
 
-<p align="center"><sub><b>@Iron-Mark</b> · product designer, full-stack developer &amp; UI/UX engineer shipping hackathon builds, lab experiments &amp; open-source work · <a href="llms.txt">llms.txt</a> for LLM index</sub></p>
+<p align="center"><sub><b>@Iron-Mark</b> · product designer, full-stack developer &amp; UI/UX engineer shipping hackathon builds, lab experiments &amp; open-source work · <a target="_blank" rel="noopener noreferrer" href="llms.txt">llms.txt</a> for LLM index</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
-  <a href="https://www.marksiazon.dev" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
-  <a href="https://www.marksiazon.dev/recruiter" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
-  <a href="https://www.marksiazon.dev/contact" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/recruiter" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/contact" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
 </p>
 
 ---
@@ -33,62 +33,62 @@
   </colgroup>
   <tr>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/hireproof" aria-label="HireProof case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/hireproof" aria-label="HireProof case study">
         <img src="assets/projects/hireproof/cover.png" width="100%" height="140" alt="HireProof"/>
-      </a><br><img src="assets/projects/hireproof/icon.png" alt="HireProof icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio" rel="noopener noreferrer" aria-label="HireProof live project">Live ↗</a></sub>
+      </a><br><img src="assets/projects/hireproof/icon.png" alt="HireProof icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/hireproof">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a target="_blank" href="https://hireproof.tech/portfolio" rel="noopener noreferrer" aria-label="HireProof live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/stellaroid-earn" aria-label="Stellaroid Earn case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/stellaroid-earn" aria-label="Stellaroid Earn case study">
         <img src="assets/projects/stellaroid-earn/cover.png" width="100%" height="140" alt="Stellaroid Earn"/>
-      </a><br><img src="assets/projects/stellaroid-earn/icon.png" alt="Stellaroid Earn icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech" rel="noopener noreferrer" aria-label="Stellaroid Earn live project">Live ↗</a></sub>
+      </a><br><img src="assets/projects/stellaroid-earn/icon.png" alt="Stellaroid Earn icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a target="_blank" href="https://stellaroid.tech" rel="noopener noreferrer" aria-label="Stellaroid Earn live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/resqlink" aria-label="ResQLink case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/resqlink" aria-label="ResQLink case study">
         <img src="assets/projects/resqlink/cover.png" width="100%" height="140" alt="ResQLink"/>
-      </a><br><img src="assets/projects/resqlink/icon.png" alt="ResQLink icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb" rel="noopener noreferrer" aria-label="ResQLink repository">Repo ↗</a></sub>
+      </a><br><img src="assets/projects/resqlink/icon.png" alt="ResQLink icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a target="_blank" href="https://github.com/UMakLumen/ResQLinkWeb" rel="noopener noreferrer" aria-label="ResQLink repository">Repo ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://lexinsights.vercel.app" aria-label="LexInSight live app">
+      <a target="_blank" rel="noopener noreferrer" href="https://lexinsights.vercel.app" aria-label="LexInSight live app">
         <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInSight"/>
-      </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://lexinsights.vercel.app">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
+      </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://lexinsights.vercel.app">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a target="_blank" href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/good-to-live" aria-label="Good To Live case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/good-to-live" aria-label="Good To Live case study">
         <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
-      </a><br><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
+      </a><br><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a target="_blank" href="https://goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">
         <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
-      </a><br><img src="assets/projects/flowfit/icon.png" alt="FlowFit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">Case study ↗</a></sub>
+      </a><br><img src="assets/projects/flowfit/icon.png" alt="FlowFit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/flowfit" aria-label="FlowFit case study">Case study ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/palengkepay" aria-label="PalengkePay case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/palengkepay" aria-label="PalengkePay case study">
         <img src="assets/projects/palengkepay/cover.png" width="100%" height="140" alt="PalengkePay"/>
-      </a><br><img src="assets/projects/palengkepay/icon.png" alt="PalengkePay icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app" rel="noopener noreferrer" aria-label="PalengkePay live app">Live ↗</a></sub>
+      </a><br><img src="assets/projects/palengkepay/icon.png" alt="PalengkePay icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a target="_blank" href="https://palengke-pay.vercel.app" rel="noopener noreferrer" aria-label="PalengkePay live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/gawainyah" aria-label="GawainYah case study">
+      <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/gawainyah" aria-label="GawainYah case study">
         <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
-      </a><br><img src="assets/projects/gawainyah/icon.png" alt="GawainYah icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
+      </a><br><img src="assets/projects/gawainyah/icon.png" alt="GawainYah icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a target="_blank" href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
-      <a href="https://github.com/Iron-Mark/qwen-ui-lab" aria-label="qwen-ui-lab repository">
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/qwen-ui-lab" aria-label="qwen-ui-lab repository">
         <img src="assets/projects/qwen-ui-lab/cover.png" width="100%" height="140" alt="qwen-ui-lab"/>
-      </a><br><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b><br><sub>AI-assisted UI scaffolding</sub><br><sub><a href="https://qwen-ui-lab.vercel.app" rel="noopener noreferrer" aria-label="qwen-ui-lab live app">Live ↗</a></sub>
+      </a><br><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b><br><sub>AI-assisted UI scaffolding</sub><br><sub><a target="_blank" href="https://qwen-ui-lab.vercel.app" rel="noopener noreferrer" aria-label="qwen-ui-lab live app">Live ↗</a></sub>
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <a href="https://www.marksiazon.dev/projects">All projects</a> ·
-  <a href="https://www.marksiazon.dev/proof">Proof matrix</a> ·
-  <a href="https://www.marksiazon.dev/achievements">Achievements</a> ·
-  <a href="https://www.marksiazon.dev/lab">Lab</a>
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects">All projects</a> ·
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/proof">Proof matrix</a> ·
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/achievements">Achievements</a> ·
+  <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/lab">Lab</a>
 </p>
 
 ---
@@ -107,29 +107,29 @@
     <th align="left" width="35%"><sub>Links</sub></th>
   </tr>
   <tr>
-    <td width="22%" valign="middle"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
+    <td width="22%" valign="middle"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a></b></td>
     <td width="43%" valign="middle"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
-    <td width="35%" valign="middle"><sub><a href="https://qwen-ui-lab.vercel.app">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
+    <td width="35%" valign="middle"><sub><a target="_blank" rel="noopener noreferrer" href="https://qwen-ui-lab.vercel.app">Live</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/qwen-ui-lab">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%" valign="middle"><img src="assets/projects/smart-profile/icon.png" alt="Smart Profile icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
+    <td width="22%" valign="middle"><img src="assets/projects/smart-profile/icon.png" alt="Smart Profile icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Smart Profile</a></b></td>
     <td width="43%" valign="middle"><sub>AI credentials · SaaS · Supabase</sub></td>
-    <td width="35%" valign="middle"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
+    <td width="35%" valign="middle"><sub><a target="_blank" rel="noopener noreferrer" href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/">Demo</a> · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System">Repo</a></sub></td>
   </tr>
   <tr>
-    <td width="22%" valign="middle"><img src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
+    <td width="22%" valign="middle"><img src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/baybayinscribe">BaybayInscribe</a></b></td>
     <td width="43%" valign="middle"><sub>Baybayin ML · cultural education UX</sub></td>
-    <td width="35%" valign="middle"><sub><a href="https://huggingface.co/gilas/baybayinscribe">Model</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
+    <td width="35%" valign="middle"><sub><a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/gilas/baybayinscribe">Model</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/baybayinscribe">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%" valign="middle"><img src="assets/projects/kudlit/icon.png" alt="Kudlit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
+    <td width="22%" valign="middle"><img src="assets/projects/kudlit/icon.png" alt="Kudlit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/kudlit">Kudlit</a></b></td>
     <td width="43%" valign="middle"><sub>Flutter · Baybayin learning · Android release</sub></td>
-    <td width="35%" valign="middle"><sub><a href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
+    <td width="35%" valign="middle"><sub><a target="_blank" rel="noopener noreferrer" href="https://github.com/ACSADians/kudlit-app">Repo</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/kudlit">Case study</a></sub></td>
   </tr>
   <tr>
-    <td width="22%" valign="middle"><img src="assets/projects/pulse/icon.png" alt="Pulse icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
+    <td width="22%" valign="middle"><img src="assets/projects/pulse/icon.png" alt="Pulse icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/pulse">Pulse</a></b></td>
     <td width="43%" valign="middle"><sub>Wear OS · GPS · heart-rate telemetry</sub></td>
-    <td width="35%" valign="middle"><sub><a href="https://pacebeats.vercel.app">Live</a> · <a href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
+    <td width="35%" valign="middle"><sub><a target="_blank" rel="noopener noreferrer" href="https://pacebeats.vercel.app">Live</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/pulse">Case study</a></sub></td>
   </tr>
 </table>
 
@@ -230,15 +230,15 @@
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling → chains I ship on → wallets users connect with</sub></td></tr>
   <tr align="center">
-    <td width="11%"><a href="https://soliditylang.org/"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
-    <td width="11%"><a href="https://hardhat.org/"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
-    <td width="11%"><a href="https://movementnetwork.xyz/"><img src="assets/web3/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
-    <td width="11%"><a href="https://morph.network/"><img src="assets/web3/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
-    <td width="11%"><a href="https://celo.org/"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
-    <td width="11%"><a href="https://stellar.org/"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
-    <td width="11%"><a href="https://www.freighter.app/"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
-    <td width="11%"><a href="https://www.opera.com/products/minipay"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
-    <td width="11%"><a href="https://metamask.io/"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://soliditylang.org/"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://hardhat.org/"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://movementnetwork.xyz/"><img src="assets/web3/movement.png" alt="Move" width="40" height="40"/><br><sub>Move</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://morph.network/"><img src="assets/web3/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://celo.org/"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://stellar.org/"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://www.freighter.app/"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://www.opera.com/products/minipay"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
+    <td width="11%"><a target="_blank" rel="noopener noreferrer" href="https://metamask.io/"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
   <tr align="center">
@@ -412,10 +412,10 @@
 <h2 align="center">GitHub Activity</h2>
 
 <p align="center">
-  <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark GitHub profile">
     <img src="assets/github/stats.svg" alt="Mark Siazon (@Iron-Mark) GitHub stats — stars, commits, and pull requests" height="165"/>
   </a>
-  <a href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark top programming languages">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark" aria-label="View @Iron-Mark top programming languages">
     <img src="assets/github/top-langs.svg" alt="Mark Siazon (@Iron-Mark) most used programming languages" height="165"/>
   </a>
 </p>
@@ -424,35 +424,35 @@
 
 <div align="center">
   <ul style="list-style-position:inside;padding:0;margin:0;text-align:center">
-    <li><sub>Case studies, recruiter brief &amp; achievements at <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></li>
-    <li><sub>Smaller public repos on <a href="https://github.com/mark-siazon">@mark-siazon</a></sub></li>
-    <li><sub>Contact via <a href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a> or <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a></sub></li>
+    <li><sub>Case studies, recruiter brief &amp; achievements at <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev">marksiazon.dev</a></sub></li>
+    <li><sub>Smaller public repos on <a target="_blank" rel="noopener noreferrer" href="https://github.com/mark-siazon">@mark-siazon</a></sub></li>
+    <li><sub>Contact via <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a> or <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a></sub></li>
   </ul>
 </div>
 
 <p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
-  <a href="https://www.linkedin.com/in/mark-siazon/" rel="noopener noreferrer" aria-label="Mark Siazon on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"/></a>
+  <a target="_blank" href="https://www.linkedin.com/in/mark-siazon/" rel="noopener noreferrer" aria-label="Mark Siazon on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"/></a>
   <a href="mailto:marksiazon.dev@gmail.com" aria-label="Email marksiazon.dev@gmail.com"><img src="https://img.shields.io/badge/Email-marksiazon.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email marksiazon.dev@gmail.com"/></a>
-  <a href="https://www.frontendmentor.io/profile/Iron-Mark" rel="noopener noreferrer" aria-label="Iron-Mark on Frontend Mentor"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor profile"/></a>
-  <a href="https://www.tiktok.com/@iron_markk" rel="noopener noreferrer" aria-label="Iron-Mark on TikTok"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok profile"/></a>
+  <a target="_blank" href="https://www.frontendmentor.io/profile/Iron-Mark" rel="noopener noreferrer" aria-label="Iron-Mark on Frontend Mentor"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor profile"/></a>
+  <a target="_blank" href="https://www.tiktok.com/@iron_markk" rel="noopener noreferrer" aria-label="Iron-Mark on TikTok"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok profile"/></a>
 </p>
 
 <details>
 <summary><sub>Profile index for search &amp; LLM crawlers</sub></summary>
 
-<p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>, <code>@mark-siazon</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Based in the Philippines. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web. Contact: <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a> · <a href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a>.</p>
+<p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>, <code>@mark-siazon</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Based in the Philippines. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web. Contact: <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/contact">marksiazon.dev/contact</a>.</p>
 
-<p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a> (offline-first emergency) · <a href="https://lexinsights.vercel.app">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a> (MiniPay AI) · <a href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a> (AI UI scaffolding).</p>
+<p><strong>Featured work:</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/hireproof">HireProof</a> (AI trust &amp; safety) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/stellaroid-earn">Stellaroid Earn</a> (Web3 credentials) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/resqlink">ResQLink</a> (offline-first emergency) · <a target="_blank" rel="noopener noreferrer" href="https://lexinsights.vercel.app">LexInSight</a> (AI legal chat) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/good-to-live">Good To Live</a> (client launch) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/flowfit">FlowFit</a> (Wear OS) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/palengkepay">PalengkePay</a> (Stellar fintech PWA) · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects/gawainyah">GawainYah</a> (MiniPay AI) · <a target="_blank" rel="noopener noreferrer" href="https://github.com/Iron-Mark/qwen-ui-lab">qwen-ui-lab</a> (AI UI scaffolding).</p>
 
-<p><strong>Hackathon &amp; lab:</strong> Smart Profile · BaybayInscribe · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab">lab hub</a>.</p>
+<p><strong>Hackathon &amp; lab:</strong> Smart Profile · BaybayInscribe · Kudlit · Pulse · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/lab">lab hub</a>.</p>
 
-<p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev">home</a> · <a href="https://www.marksiazon.dev/projects">projects</a> · <a href="https://www.marksiazon.dev/proof">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements">achievements</a> · <a href="https://www.marksiazon.dev/writing">writing</a>.</p>
+<p><strong>Portfolio routes:</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev">home</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/projects">projects</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/proof">proof matrix</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/recruiter">recruiter brief</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/achievements">achievements</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/writing">writing</a>.</p>
 
-<p><strong>Machine-readable (this repo):</strong> <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></p>
+<p><strong>Machine-readable (this repo):</strong> <a target="_blank" rel="noopener noreferrer" href="llms.txt">llms.txt</a> · <a target="_blank" rel="noopener noreferrer" href="llms-full.txt">llms-full.txt</a> · <a target="_blank" rel="noopener noreferrer" href="humans.txt">humans.txt</a> · <a target="_blank" rel="noopener noreferrer" href="robots.txt">robots.txt</a> · <a target="_blank" rel="noopener noreferrer" href="sitemap.xml">sitemap.xml</a></p>
 
-<p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml">sitemap</a></p>
+<p><strong>Machine-readable (portfolio):</strong> <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/llms.txt">llms.txt</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/llms-full.txt">llms-full.txt</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/humans.txt">humans.txt</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/feed.xml">RSS</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.marksiazon.dev/sitemap.xml">sitemap</a></p>
 
 <p><strong>Keywords:</strong> product design, UI/UX, full-stack development, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, Web3, Stellar, Celo, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
 
