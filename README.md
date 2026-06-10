@@ -422,8 +422,6 @@
   </a>
 </p>
 
-<p align="center"><sub>Self-hosted cards · refreshed daily · <a href="https://github.com/Iron-Mark?tab=repositories">all repos ↗</a></sub></p>
-
 ---
 
 <div align="center">
