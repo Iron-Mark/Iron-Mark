@@ -179,14 +179,14 @@
   </tr>
   <tr align="center"><td colspan="9"><sub><b>CSS Frameworks &amp; Design Libraries</b> · styling and component systems from prototype to production</sub></td></tr>
   <tr align="center">
-    <td width="11%"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></td>
-    <td width="11%"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></td>
-    <td width="11%"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></td>
-    <td width="11%"><img src="assets/stack/bem.svg" alt="BEM" width="40" height="40"/><br><sub>BEM</sub></td>
-    <td width="11%"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub>shadcn/ui</sub></td>
-    <td width="11%"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></td>
-    <td width="11%"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub>Ant Design</sub></td>
-    <td width="11%"><a href="https://daisyui.com/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
+    <td width="11%"><a href="https://tailwindcss.com/docs/installation" target="_blank" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
+    <td width="11%"><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/bootstrap.svg" alt="Bootstrap" width="40" height="40"/><br><sub>Bootstrap</sub></a></td>
+    <td width="11%"><a href="https://sass-lang.com/install/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/sass.svg" alt="Sass" width="40" height="40"/><br><sub>Sass</sub></a></td>
+    <td width="11%"><a href="https://en.bem.info/methodology/quick-start/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/bem.svg" alt="BEM" width="40" height="40"/><br><sub>BEM</sub></a></td>
+    <td width="11%"><a href="https://ui.shadcn.com/docs/installation" target="_blank" rel="noopener noreferrer"><img src="assets/stack/shadcnui.svg" alt="shadcn/ui" width="40" height="40"/><br><sub style="white-space:nowrap">shadcn/ui</sub></a></td>
+    <td width="11%"><a href="https://mui.com/material-ui/getting-started/installation/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/mui.svg" alt="MUI" width="40" height="40"/><br><sub>MUI</sub></a></td>
+    <td width="11%"><a href="https://ant.design/docs/react/getting-started" target="_blank" rel="noopener noreferrer"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub style="white-space:nowrap">Ant&nbsp;Design</sub></a></td>
+    <td width="11%"><a href="https://daisyui.com/docs/install/" target="_blank" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
   </tr>
   <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
