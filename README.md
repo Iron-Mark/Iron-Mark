@@ -492,7 +492,7 @@
 
 <p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev">home</a> · <a href="https://www.marksiazon.dev/projects">projects</a> · <a href="https://www.marksiazon.dev/proof">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements">achievements</a> · <a href="https://www.marksiazon.dev/writing">writing</a>.</p>
 
-<p><strong>Machine-readable (this repo):</strong> <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
+<p><strong>Machine-readable (this repo):</strong> <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a></p>
 
 <p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml">sitemap</a></p>
 
