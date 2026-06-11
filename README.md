@@ -11,7 +11,7 @@
 
 <!-- SEO/LLM: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | marksiazon.dev@gmail.com | llms.txt llms-full.txt humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab -->
 
-<p align="center"><sub>Product Design Engineer &amp; Full-Stack Developer | Frontend-Specialist | UI/UX | React, Next.js, TypeScript | AI Products, Workflows &amp; Design Systems | Multi-Hackathon Champion | Tech Enthusiast</sub></p>
+<p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.45"><sub>Product Design Engineer &amp; Full-Stack Developer | Frontend-Specialist | UI/UX | React, Next.js, TypeScript | AI Products, Workflows &amp; Design Systems | Multi-Hackathon Champion | Tech Enthusiast</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
