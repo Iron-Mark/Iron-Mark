@@ -1,43 +1,3 @@
-<style>
-  @media only screen and (max-width: 640px) {
-    table.readme-lab thead { display: none; }
-    table.readme-lab tbody tr { display: block; width: 100%; padding: 10px 0; border-top: 1px solid #d0d7de; box-sizing: border-box; }
-    table.readme-lab td { display: block !important; width: 100% !important; text-align: left !important; padding: 4px 0 !important; box-sizing: border-box; white-space: normal !important; }
-  }
-  @media (prefers-color-scheme: dark) {
-    @media only screen and (max-width: 640px) {
-      table.readme-lab tbody tr { border-top-color: #30363d; }
-    }
-  }
-  p.readme-badges { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 8px !important; align-items: center !important; width: 100%; max-width: 100%; box-sizing: border-box; }
-  .readme-stack { overflow-x: auto; width: 100%; max-width: 100%; -webkit-overflow-scrolling: touch; }
-  .readme-stack table { min-width: 560px; }
-  @media only screen and (max-width: 1024px) {
-    table.readme-featured colgroup { display: none; }
-    table.readme-featured { table-layout: auto; width: 100%; border-collapse: separate; border-spacing: 0; }
-    table.readme-featured tbody { display: block; width: 100%; }
-    table.readme-featured tr { display: block; width: 100%; }
-    table.readme-featured td { display: inline-block !important; width: 50% !important; box-sizing: border-box; vertical-align: top; padding: 8px 4px !important; }
-  }
-  @media only screen and (max-width: 640px) {
-    table.readme-featured td { display: block !important; width: 100% !important; padding: 12px 0 !important; border-top: 1px solid #d0d7de; }
-    table.readme-featured tbody tr:first-child td:first-child { border-top: none; }
-    table.readme-featured td + td { border-top: 1px solid #d0d7de; }
-  }
-  @media (prefers-color-scheme: dark) {
-    @media only screen and (max-width: 640px) {
-      table.readme-featured td,
-      table.readme-featured td + td { border-top-color: #30363d; }
-    }
-  }
-  @media only screen and (max-width: 640px) {
-    .github-stats-desktop { display: none !important; }
-  }
-  @media only screen and (min-width: 641px) {
-    .github-stats-mobile { display: none !important; }
-  }
-</style>
-
 <p align="center"><img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/></p>
 
 <h1 align="center">Mark Siazon 👋</h1>
@@ -55,7 +15,7 @@
 
 <p align="center"><sub><b>@Iron-Mark</b> · product designer, full-stack developer &amp; UI/UX engineer shipping hackathon builds, lab experiments &amp; open-source work · <a href="llms.txt">llms.txt</a> for LLM index</sub></p>
 
-<p align="center" class="readme-badges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
+<p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
   <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
@@ -65,7 +25,7 @@
 
 <h2 align="center">Featured Work</h2>
 
-<table class="readme-featured" width="100%">
+<table width="100%">
   <colgroup>
     <col width="33%"/>
     <col width="33%"/>
@@ -137,7 +97,7 @@
 
 <div align="center" style="width:100%;max-width:100%;overflow-x:auto">
 
-<table class="readme-lab" width="100%" style="table-layout:fixed;border-collapse:collapse">
+<table width="100%" style="table-layout:fixed;border-collapse:collapse">
   <colgroup>
     <col width="30%"/>
     <col width="45%"/>
@@ -189,7 +149,7 @@
 
 <p align="center"><em>Jack of all trades. Curiosity is one of my hobbies.</em></p>
 
-<div align="center" class="readme-stack" style="overflow-x:auto;width:100%;max-width:100%">
+<div align="center" style="overflow-x:auto;width:100%;max-width:100%">
 
 <table width="100%">
   <colgroup>
@@ -461,7 +421,7 @@
 
 <p align="center"><sub>Public contribution snapshot for <a href="https://github.com/Iron-Mark">@Iron-Mark</a> · updated daily</sub></p>
 
-<p align="center" class="github-stats-desktop" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:0">
+<p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:0">
   <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile — stars, commits, and pull requests">
     <img src="assets/github/stats.svg" alt="GitHub statistics for Mark Siazon (@Iron-Mark): total stars earned, commits, and pull requests across public repositories" height="165"/>
   </a>
@@ -469,18 +429,6 @@
     <img src="assets/github/top-langs.svg" alt="Most-used programming languages in Mark Siazon (@Iron-Mark) public GitHub repositories, shown as a compact language breakdown" height="165"/>
   </a>
 </p>
-
-<details class="github-stats-mobile" align="center">
-  <summary><sub>Show GitHub stats</sub></summary>
-  <p align="center" style="display:flex;flex-direction:column;align-items:center;gap:12px;margin:12px 0 0">
-    <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile — stars, commits, and pull requests">
-      <img src="assets/github/stats.svg" alt="GitHub statistics for Mark Siazon (@Iron-Mark): total stars earned, commits, and pull requests across public repositories" height="165"/>
-    </a>
-    <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub language breakdown in public repositories">
-      <img src="assets/github/top-langs.svg" alt="Most-used programming languages in Mark Siazon (@Iron-Mark) public GitHub repositories, shown as a compact language breakdown" height="165"/>
-    </a>
-  </p>
-</details>
 
 ---
 
@@ -493,7 +441,7 @@
 
 <p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
 
-<p align="center" class="readme-badges" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
+<p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.linkedin.com/in/mark-siazon/" rel="noopener noreferrer" aria-label="Mark Siazon on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"/></a>
   <a href="mailto:marksiazon.dev@gmail.com" aria-label="Email marksiazon.dev@gmail.com"><img src="https://img.shields.io/badge/Email-marksiazon.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email marksiazon.dev@gmail.com"/></a>
   <a href="https://www.frontendmentor.io/profile/Iron-Mark" rel="noopener noreferrer" aria-label="Iron-Mark on Frontend Mentor"><img src="https://img.shields.io/badge/Frontend%20Mentor-3A0DCC?style=for-the-badge&logoColor=white" alt="Frontend Mentor profile"/></a>
