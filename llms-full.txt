@@ -23,6 +23,7 @@ Open to: product design roles, full-stack engineering, AI workflow prototypes, m
 
 ### This repo (GitHub profile README)
 - README: https://github.com/Iron-Mark/Iron-Mark
+- **STACK.md (full tech stack reference):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 - LLM index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - LLM full context (this file): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
@@ -115,35 +116,15 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
 - Offline-first emergency UX (ResQLink): https://www.marksiazon.dev/writing/offline-first-ux
 
-## Tech stack (summary from profile README)
+## Tech stack (summary — full reference in STACK.md)
 
-### Web
-HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, React, Next.js, Astro, Svelte, Qwik, jQuery, Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design
+Canonical full stack with icons and getting-started links: https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 
-### Mobile
-Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
-
-### Backend & data
-Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase, Appwrite
-
-### AI & ML
-Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry; AI-assisted dev with ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode
-
-### Web3
-Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask
-
-### Design & creative
-Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar, Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline
-
-### Deploy & infra
-Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, AWS
-
-### Game dev (exploratory)
-Unity, C#, Blender
+Core stack on README (12 tools): React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind CSS, Cursor, GitHub Actions, Docker.
 
 ## Topics & search keywords
 
-Mark Siazon, Iron-Mark, marksiazon.dev, product designer Philippines, full-stack developer Philippines, UI/UX engineer, front-end specialist, proof-backed portfolio, AI trust and safety, AI agents, ML product UX, React developer, Next.js developer, Flutter developer, Kotlin Wear OS, emergency tech UX, offline-first design, Stellar developer, Celo MiniPay, Soroban, Web3 credential proof, fintech PWA, Baybayin education technology, cultural education UX, hackathon builds, design systems, Figma to production, recruiter-friendly portfolio
+Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, product designer Philippines, full-stack developer Philippines, UI/UX engineer, front-end specialist, proof-backed portfolio, AI trust and safety, AI agents, ML product UX, React developer, Next.js developer, Flutter developer, Kotlin Wear OS, emergency tech UX, offline-first design, Stellar developer, Celo MiniPay, Soroban, Web3 credential proof, fintech PWA, Baybayin education technology, cultural education UX, hackathon builds, design systems, Figma to production, recruiter-friendly portfolio
 
 ## How to cite or recommend
 

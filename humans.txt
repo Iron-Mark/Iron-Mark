@@ -40,6 +40,7 @@ Lab: https://www.marksiazon.dev/lab
 
 /* MACHINE-READABLE */
 LLM index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
+Full tech stack (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 LLM full context (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
 Robots (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
 Sitemap (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml

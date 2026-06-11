@@ -49,6 +49,12 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - Kudlit (Flutter Baybayin learning, Android release): https://www.marksiazon.dev/projects/kudlit
 - Pulse (Wear OS, GPS, heart-rate telemetry): https://www.marksiazon.dev/projects/pulse
 
+## Tech stack
+
+- **Full reference (100+ tools, icons):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
+- **Core stack on profile README:** React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
+- **Domains in STACK.md:** Web · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-assisted development workflow
+
 ## Writing
 
 - Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
@@ -61,12 +67,13 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Topics & keywords
 
-product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin
+product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference
 
 ## Machine-readable indexes
 
 ### This repo
 - LLM full context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- **Full tech stack (icons + doc links):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
 - Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
 
