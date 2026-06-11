@@ -4,15 +4,6 @@
 
 <!-- SEO/LLM: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | marksiazon.dev@gmail.com | llms.txt llms-full.txt humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab -->
 
-<p align="center">
-  <picture>
-    <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=3"/>
-    <img src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=3" alt="Mark Siazon — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades" width="540"/>
-  </picture>
-</p>
-
-<p align="center"><em>Proof-backed products · AI · Mobile · Web3</em></p>
-
 <p align="center"><sub><b>@Iron-Mark</b> · product designer, full-stack developer &amp; UI/UX engineer shipping hackathon builds, lab experiments &amp; open-source work · <a href="llms.txt">llms.txt</a> for LLM index</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
