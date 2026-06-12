@@ -9,14 +9,23 @@
   </picture>
 </p>
 
-<!-- SEO/LLM: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Product Engineer | UI/UX Designer | Front-end Specialist | Developer x Designer | Polymath | Jack of All Trades | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | marksiazon.dev@gmail.com | STACK.md llms.txt llms-full.txt humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab -->
+<!-- SEO/LLM/AEO/GEO: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | STACK.md llms.txt llms-full.txt llms-index.json humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab | open to product design full-stack AI workflow remote -->
 
 <p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Frontend-Specialist | Tech Enthusiast |<br>Multi-Hackathon Champion | AI Products, Workflows &amp; Design Systems |</sub></p>
+
+<p align="center"><sub>Open to product design · full-stack engineering · AI workflow roles · contract or full-time · Philippines &amp; remote</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
   <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
+</p>
+
+<p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center;margin-top:4px">
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="UMak InfotechOlympics 2025 Android Productivity Champion — ResQLink"><img src="https://img.shields.io/badge/UMak_InfotechOlympics-2025_Android_Champion-8B5CF6?style=for-the-badge" alt="UMak InfotechOlympics 2025 Android Productivity Champion"/></a>
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="InfotechOlympics 2024 Android App Development winner — BaybayInscribe"><img src="https://img.shields.io/badge/InfotechOlympics-2024_Android_Winner-6366F1?style=for-the-badge" alt="InfotechOlympics 2024 Android winner"/></a>
+  <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer" aria-label="Stellar bootcamp Top 5 of 105 teams"><img src="https://img.shields.io/badge/Stellar_Bootcamp-Top_5%2F105-111827?style=for-the-badge" alt="Stellar bootcamp Top 5 of 105"/></a>
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="Full achievements and certifications"><img src="https://img.shields.io/badge/All_achievements-→-374151?style=for-the-badge" alt="All achievements"/></a>
 </p>
 
 ---
@@ -32,51 +41,75 @@
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer" aria-label="HireProof case study">
-        <img src="assets/projects/hireproof/cover.png" width="100%" height="140" alt="HireProof"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/hireproof/cover.webp"/>
+          <img src="assets/projects/hireproof/cover.png" width="100%" height="140" alt="HireProof"/>
+        </picture>
       </a><br><img src="assets/projects/hireproof/icon.png" alt="HireProof icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a></b><br><sub>AI trust & safety</sub><br><sub><a href="https://hireproof.tech/portfolio" rel="noopener noreferrer" aria-label="HireProof live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer" aria-label="Stellaroid Earn case study">
-        <img src="assets/projects/stellaroid-earn/cover.png" width="100%" height="140" alt="Stellaroid Earn"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/stellaroid-earn/cover.webp"/>
+          <img src="assets/projects/stellaroid-earn/cover.png" width="100%" height="140" alt="Stellaroid Earn"/>
+        </picture>
       </a><br><img src="assets/projects/stellaroid-earn/icon.png" alt="Stellaroid Earn icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a></b><br><sub>Web3 credential proof</sub><br><sub><a href="https://stellaroid.tech" rel="noopener noreferrer" aria-label="Stellaroid Earn live project">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer" aria-label="ResQLink case study">
-        <img src="assets/projects/resqlink/cover.png" width="100%" height="140" alt="ResQLink"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/resqlink/cover.webp"/>
+          <img src="assets/projects/resqlink/cover.png" width="100%" height="140" alt="ResQLink"/>
+        </picture>
       </a><br><img src="assets/projects/resqlink/icon.png" alt="ResQLink icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a></b><br><sub>Offline-first emergency tech</sub><br><sub><a href="https://github.com/UMakLumen/ResQLinkWeb" rel="noopener noreferrer" aria-label="ResQLink repository">Repo ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://lexinsights.vercel.app" rel="noopener noreferrer" aria-label="LexInSight live app">
+      <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer" aria-label="LexInSight case study">
         <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInSight"/>
-      </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://lexinsights.vercel.app" rel="noopener noreferrer">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
+      </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://lexinsights.vercel.app" rel="noopener noreferrer" aria-label="LexInSight live app">Live ↗</a> · <a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer" aria-label="Good To Live case study">
-        <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/good-to-live/cover.webp"/>
+          <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
+        </picture>
       </a><br><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://www.goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer" aria-label="FlowFit case study">
-        <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/flowfit/cover.webp"/>
+          <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
+        </picture>
       </a><br><img src="assets/projects/flowfit/icon.png" alt="FlowFit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer" aria-label="FlowFit case study">Case study ↗</a></sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer" aria-label="PalengkePay case study">
-        <img src="assets/projects/palengkepay/cover.png" width="100%" height="140" alt="PalengkePay"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/palengkepay/cover.webp"/>
+          <img src="assets/projects/palengkepay/cover.png" width="100%" height="140" alt="PalengkePay"/>
+        </picture>
       </a><br><img src="assets/projects/palengkepay/icon.png" alt="PalengkePay icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a></b><br><sub>Stellar fintech PWA</sub><br><sub><a href="https://palengke-pay.vercel.app" rel="noopener noreferrer" aria-label="PalengkePay live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer" aria-label="GawainYah case study">
-        <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/gawainyah/cover.webp"/>
+          <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
+        </picture>
       </a><br><img src="assets/projects/gawainyah/icon.png" alt="GawainYah icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer" aria-label="BaybayInscribe case study">
-        <img src="assets/projects/baybayinscribe/cover.png" width="100%" height="140" alt="BaybayInscribe"/>
+        <picture>
+          <source type="image/webp" srcset="assets/projects/baybayinscribe/cover.webp"/>
+          <img src="assets/projects/baybayinscribe/cover.png" width="100%" height="140" alt="BaybayInscribe"/>
+        </picture>
       </a><br><img src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a></b><br><sub>Baybayin ML · cultural education UX</sub><br><sub><a href="https://huggingface.co/gilas/baybayinscribe" rel="noopener noreferrer" aria-label="BaybayInscribe Hugging Face model">Model ↗</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer" aria-label="BaybayInscribe case study">Case study ↗</a></sub>
     </td>
   </tr>
@@ -146,6 +179,15 @@
   </a>
   <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub language breakdown in public repositories">
     <img src="assets/github/top-langs.svg" alt="Most-used programming languages in Mark Siazon (@Iron-Mark) public GitHub repositories, shown as a compact language breakdown" height="165"/>
+  </a>
+</p>
+
+<p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:12px 0 0">
+  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub contribution activity graph">
+    <img src="assets/github/activity-graph.svg" alt="GitHub contribution activity graph for Mark Siazon (@Iron-Mark) showing public commit frequency over the last year" height="180"/>
+  </a>
+  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub contribution streak">
+    <img src="assets/github/streak.svg" alt="GitHub contribution streak for Mark Siazon (@Iron-Mark): current streak, longest streak, and total contributions" height="180"/>
   </a>
 </p>
 
@@ -248,7 +290,7 @@
 
 <p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>, <code>@mark-siazon</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Based in the Philippines. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web. Contact: <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a> · <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer">marksiazon.dev/contact</a>.</p>
 
-<p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://lexinsights.vercel.app" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
+<p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
 
 <p><strong>Tech stack:</strong> <a href="STACK.md">STACK.md</a> (full reference) · core stack on README (React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker).</p>
 
@@ -256,10 +298,10 @@
 
 <p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev" rel="noopener noreferrer">home</a> · <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">projects</a> · <a href="https://www.marksiazon.dev/proof" rel="noopener noreferrer">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer">achievements</a> · <a href="https://www.marksiazon.dev/writing" rel="noopener noreferrer">writing</a>.</p>
 
-<p><strong>Machine-readable (this repo):</strong> <a href="STACK.md">STACK.md</a> (full tech stack) · <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
+<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> (structured entity index) · <a href="STACK.md">STACK.md</a> (full tech stack) · <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
 
 <p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt" rel="noopener noreferrer">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt" rel="noopener noreferrer">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt" rel="noopener noreferrer">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml" rel="noopener noreferrer">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml" rel="noopener noreferrer">sitemap</a></p>
 
-<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, tech stack, STACK.md, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, Web3, Stellar, Celo, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
+<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, tech stack, STACK.md, llms-index.json, AEO, GEO, SEO, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, Web3, Stellar, Celo, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
 
 </details>

@@ -10,6 +10,8 @@
 
 <p align="center"><em>Jack of all trades. Curiosity is one of my hobbies.</em></p>
 
+<p align="center"><sub><strong>Jump to:</strong> <a href="#web-development">Web</a> · <a href="#mobile-development">Mobile</a> · <a href="#backend-development">Backend</a> · <a href="#web3">Web3</a> · <a href="#deploy-infrastructure">Deploy</a> · <a href="#game-dev">Game Dev</a> · <a href="#ui-ux">UI/UX</a> · <a href="#creative">Creative</a> · <a href="#ai">AI</a> · <a href="#ai-workflow">AI workflow</a></sub></p>
+
 <div align="center" style="overflow-x:auto;width:100%;max-width:100%">
 
 <table width="100%">
@@ -24,7 +26,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🌐 WEB DEVELOPMENT</b></sub></td></tr>
+  <tr align="center" id="web-development"><td colspan="9"><sub><b>🌐 WEB DEVELOPMENT</b></sub></td></tr>
   <tr align="center"><td colspan="9"><sub><b>Web Tools</b> · markup-to-database stack for products I design and ship end-to-end</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
@@ -57,7 +59,7 @@
     <td width="11%"><a href="https://ant.design/docs/react/getting-started" rel="noopener noreferrer"><img src="assets/stack/antdesign.svg" alt="Ant Design" width="40" height="40"/><br><sub style="white-space:nowrap">Ant&nbsp;Design</sub></a></td>
     <td width="11%"><a href="https://daisyui.com/docs/install/" rel="noopener noreferrer"><img src="assets/stack/daisyui.svg" alt="daisyUI" width="40" height="40"/><br><sub style="white-space:nowrap">daisyUI</sub></a></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
+  <tr align="center" id="mobile-development"><td colspan="9"><sub><b>📱 MOBILE DEVELOPMENT</b> · native and cross-platform stacks behind Wear OS, PWAs, and mobile builds</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/androidstudio.svg" alt="Android Studio" width="40" height="40"/><br><sub style="white-space:nowrap">Android&nbsp;Studio</sub></td>
     <td width="11%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
@@ -84,7 +86,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
+  <tr align="center" id="backend-development"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
   <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for proof-backed products</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
@@ -97,7 +99,7 @@
     <td width="11%"><img src="assets/stack/redis.svg" alt="Redis" width="40" height="40"/><br><sub>Redis</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling → chains I ship on → wallets users connect with</sub></td></tr>
+  <tr align="center" id="web3"><td colspan="9"><sub><b>Web3 · Tools · Chains · Wallets</b> · contract tooling → chains I ship on → wallets users connect with</sub></td></tr>
   <tr align="center">
     <td width="11%"><a href="https://www.soliditylang.org/" rel="noopener noreferrer"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
     <td width="11%"><a href="https://hardhat.org/" rel="noopener noreferrer"><img src="assets/stack/hardhat.svg" alt="Hardhat" width="40" height="40"/><br><sub>Hardhat</sub></a></td>
@@ -109,7 +111,7 @@
     <td width="11%"><a href="https://minipay.to/" rel="noopener noreferrer"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
   </tr>
-  <tr align="center"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
+  <tr align="center" id="deploy-infrastructure"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
     <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
@@ -137,7 +139,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🎮 GAME DEV</b> · engines &amp; IDE → art pipeline → indie tools → browser games</sub></td></tr>
+  <tr align="center" id="game-dev"><td colspan="9"><sub><b>🎮 GAME DEV</b> · engines &amp; IDE → art pipeline → indie tools → browser games</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/unity.svg" alt="Unity" width="40" height="40"/><br><sub>Unity</sub></td>
     <td width="11%"><img src="assets/stack/csharp.svg" alt="C#" width="40" height="40"/><br><sub>C#</sub></td>
@@ -165,7 +167,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
+  <tr align="center" id="ui-ux"><td colspan="9"><sub><b>🎨 UI / UX</b> · research, flows, systems, and design-to-ship before code lands</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
     <td width="11%"><img src="assets/stack/framer.svg" alt="Framer" width="40" height="40"/><br><sub>Framer</sub></td>
@@ -193,7 +195,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
+  <tr align="center" id="creative"><td colspan="9"><sub><b>🖌️ CREATIVE / MULTIMEDIA</b> · visual polish for launches, decks, and brand touchpoints</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/canva.svg" alt="Canva" width="40" height="40"/><br><sub>Canva</sub></td>
     <td width="11%"><img src="assets/stack/procreate.png" alt="Procreate" width="40" height="40"/><br><sub>Procreate</sub></td>
@@ -221,7 +223,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🤖 AI</b> · ML foundation → agents &amp; inference → production deploy</sub></td></tr>
+  <tr align="center" id="ai"><td colspan="9"><sub><b>🤖 AI</b> · ML foundation → agents &amp; inference → production deploy</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
     <td width="11%"><img src="assets/stack/pytorch.svg" alt="PyTorch" width="40" height="40"/><br><sub>PyTorch</sub></td>
@@ -249,7 +251,7 @@
     <col width="11%"/>
     <col width="11%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
+  <tr align="center" id="ai-workflow"><td colspan="9"><sub><b>🛠️ AI ASSISTED DEVELOPMENT WORKFLOW</b> · models for reasoning, agents and IDEs for shipping faster</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
     <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
@@ -278,6 +280,6 @@
 
 ---
 
-<p align="center"><sub>← <a href="README.md">Profile README</a> · <a href="llms.txt">llms.txt</a> · <a href="https://www.marksiazon.dev/projects">Portfolio projects</a> · <a href="https://www.marksiazon.dev/proof">Proof matrix</a></sub></p>
+<p align="center"><sub>← <a href="README.md">Profile README</a> · <a href="llms.txt">llms.txt</a> · <a href="llms-index.json">llms-index.json</a> · <a href="https://www.marksiazon.dev/projects">Portfolio projects</a> · <a href="https://www.marksiazon.dev/proof">Proof matrix</a></sub></p>
 
 <p align="center"><sub><strong>Domains:</strong> Web Development · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-Assisted Development Workflow</sub></p>

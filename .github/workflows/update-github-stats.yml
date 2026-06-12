@@ -37,11 +37,21 @@ jobs:
           path: assets/github/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate contribution activity graph
+        run: |
+          curl -sL "https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180" \
+            -o assets/github/activity-graph.svg
+
+      - name: Generate contribution streak card
+        run: |
+          curl -sL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB" \
+            -o assets/github/streak.svg
+
       - name: Commit updated widgets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github/stats.svg assets/github/top-langs.svg
+          git add assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg
           git diff --staged --quiet && echo "No changes" && exit 0
           git commit -m "Update GitHub profile stats cards"
           git push

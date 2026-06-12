@@ -19,7 +19,7 @@ This repo powers Mark Siazon's public GitHub profile. It mixes **original portfo
 
 ### README text & structure
 
-All prose, layout, HTML/Markdown markup, and organizational structure in `README.md`, `STACK.md`, and related index files in this repo (`llms.txt`, `llms-full.txt`, `humans.txt`, etc.) are **© Mark Siazon**. All rights reserved unless explicitly permitted below.
+All prose, layout, HTML/Markdown markup, and organizational structure in `README.md`, `STACK.md`, `llms-index.json`, and related index files in this repo (`llms.txt`, `llms-full.txt`, `humans.txt`, etc.) are **© Mark Siazon**. All rights reserved unless explicitly permitted below.
 
 ### Original graphics (portfolio IP)
 

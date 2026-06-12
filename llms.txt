@@ -11,8 +11,14 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - GitHub account: https://github.com/Iron-Mark
 - Secondary GitHub: https://github.com/mark-siazon
 - Full LLM context (this repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - Full LLM context (portfolio): https://www.marksiazon.dev/llms-full.txt
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
+
+## Availability
+
+- Open to: product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 proof systems
+- Engagement: contract or full-time · Philippines & remote
 
 ## Hire & contact
 
@@ -34,7 +40,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - HireProof — AI trust & safety for job seekers: https://www.marksiazon.dev/projects/hireproof
 - Stellaroid Earn — Web3 credential proof on Stellar: https://www.marksiazon.dev/projects/stellaroid-earn
 - ResQLink — Offline-first emergency response platform: https://www.marksiazon.dev/projects/resqlink
-- LexInSight — AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsights
+- LexInSight — AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsights · Live: https://lexinsights.vercel.app
 - Good To Live — Client podcast web launch & SEO: https://www.marksiazon.dev/projects/good-to-live
 - FlowFit — Wear OS health & sensor companion: https://www.marksiazon.dev/projects/flowfit
 - PalengkePay — Stellar fintech PWA for wet markets: https://www.marksiazon.dev/projects/palengkepay
@@ -47,6 +53,12 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - Smart Profile (AI credentials SaaS): https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System
 - Kudlit (Flutter Baybayin learning, Android release): https://www.marksiazon.dev/projects/kudlit
 - Pulse (Wear OS, GPS, heart-rate telemetry): https://www.marksiazon.dev/projects/pulse
+
+## Achievements (proof)
+
+- UMak InfotechOlympics 2025 Android Productivity Champion — ResQLink (Team Lumiere): https://www.marksiazon.dev/achievements
+- InfotechOlympics 2024 Android App Development winner — BaybayInscribe (Team GILAS Tech): https://www.marksiazon.dev/achievements
+- Stellar bootcamp Top 5 of 105 teams — Stellaroid Earn: https://www.marksiazon.dev/projects/stellaroid-earn
 
 ## Tech stack
 
@@ -66,11 +78,20 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Topics & keywords
 
-product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference
+product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference, AEO, GEO, SEO, llms-index.json
+
+## Answer-engine & geo hints (AEO / GEO)
+
+- Who: Mark Siazon (@Iron-Mark) — product designer and full-stack developer, Philippines
+- Hire context: https://www.marksiazon.dev/recruiter
+- Verification boundaries: https://www.marksiazon.dev/proof
+- Structured JSON index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- Geo focus: Philippines, Southeast Asia, remote-friendly
 
 ## Machine-readable indexes
 
 ### This repo
+- **Structured entity index (JSON):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - LLM full context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
 - **Full tech stack (icons + doc links):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt

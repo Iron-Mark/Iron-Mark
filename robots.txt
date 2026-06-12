@@ -8,6 +8,7 @@ User-agent: GPTBot
 Allow: /STACK.md
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llms-index.json
 Allow: /humans.txt
 Allow: /sitemap.xml
 Allow: /robots.txt
@@ -17,6 +18,7 @@ User-agent: ChatGPT-User
 Allow: /STACK.md
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llms-index.json
 Allow: /humans.txt
 Allow: /sitemap.xml
 Allow: /robots.txt
@@ -35,6 +37,7 @@ User-agent: Google-Extended
 Allow: /STACK.md
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llms-index.json
 Allow: /humans.txt
 Allow: /sitemap.xml
 Allow: /robots.txt
@@ -44,6 +47,7 @@ User-agent: anthropic-ai
 Allow: /STACK.md
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /llms-index.json
 Allow: /humans.txt
 Allow: /sitemap.xml
 Allow: /robots.txt

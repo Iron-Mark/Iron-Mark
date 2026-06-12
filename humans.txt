@@ -10,12 +10,18 @@ Mark Siazon designs and ships digital products end-to-end — from UX research a
 
 Curiosity is a core habit: jack of all trades across web, mobile, game prototyping, creative multimedia, AI, and deployment tooling.
 
+/* AVAILABILITY */
+Open to: product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 proof systems
+Engagement: contract or full-time · Philippines & remote
+Recruiter brief: https://www.marksiazon.dev/recruiter
+Contact: https://www.marksiazon.dev/contact
+Email: marksiazon.dev@gmail.com
+
 /* PRIMARY SITES */
 GitHub profile README: https://github.com/Iron-Mark/Iron-Mark
 Portfolio: https://www.marksiazon.dev
 Recruiter brief: https://www.marksiazon.dev/recruiter
 Contact: https://www.marksiazon.dev/contact
-Email: marksiazon.dev@gmail.com
 
 /* PUBLIC PROFILES */
 GitHub (main): https://github.com/Iron-Mark
@@ -24,12 +30,29 @@ LinkedIn: https://www.linkedin.com/in/mark-siazon/
 Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
 TikTok: https://www.tiktok.com/@iron_markk
 
-/* FLAGSHIP PROOF (start here) */
-HireProof (AI trust & safety): https://hireproof.tech/portfolio
-Stellaroid Earn (Web3 credentials): https://stellaroid.tech
-ResQLink (emergency tech): https://github.com/UMakLumen/ResQLinkWeb
-PalengkePay (Stellar fintech PWA): https://palengke-pay.vercel.app
-GawainYah (MiniPay AI): https://gawainyah-minipay.vercel.app
+/* ACHIEVEMENTS (proof) */
+UMak InfotechOlympics 2025 Android App Development Productivity Champion — ResQLink (Team Lumiere): https://www.marksiazon.dev/achievements
+InfotechOlympics 2024 Android App Development winner — BaybayInscribe (Team GILAS Tech): https://www.marksiazon.dev/achievements
+Stellar bootcamp Top 5 of 105 teams (score 75.00) — Stellaroid Earn: https://www.marksiazon.dev/projects/stellaroid-earn
+Full achievements index: https://www.marksiazon.dev/achievements
+
+/* FEATURED WORK (profile README grid — case study first) */
+HireProof (AI trust & safety): https://www.marksiazon.dev/projects/hireproof · Live: https://hireproof.tech/portfolio
+Stellaroid Earn (Web3 credentials): https://www.marksiazon.dev/projects/stellaroid-earn · Live: https://stellaroid.tech
+ResQLink (offline-first emergency): https://www.marksiazon.dev/projects/resqlink · Repo: https://github.com/UMakLumen/ResQLinkWeb
+LexInSight (AI legal chat): https://www.marksiazon.dev/projects/lexinsights · Live: https://lexinsights.vercel.app
+Good To Live (client web launch): https://www.marksiazon.dev/projects/good-to-live · Live: https://www.goodtolivepodcast.com
+FlowFit (Wear OS): https://www.marksiazon.dev/projects/flowfit
+PalengkePay (Stellar fintech PWA): https://www.marksiazon.dev/projects/palengkepay · Live: https://palengke-pay.vercel.app
+GawainYah (MiniPay AI): https://www.marksiazon.dev/projects/gawainyah · Live: https://gawainyah-minipay.vercel.app
+BaybayInscribe (Baybayin ML): https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe
+
+/* HACKATHON & LAB */
+qwen-ui-lab: https://www.marksiazon.dev/projects/qwen-ui-lab · Repo: https://github.com/Iron-Mark/qwen-ui-lab
+Smart Profile: https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System
+Kudlit: https://www.marksiazon.dev/projects/kudlit
+Pulse: https://www.marksiazon.dev/projects/pulse
+Lab hub: https://www.marksiazon.dev/lab
 
 /* PORTFOLIO ROUTES */
 Projects: https://www.marksiazon.dev/projects
@@ -39,6 +62,7 @@ Writing: https://www.marksiazon.dev/writing
 Lab: https://www.marksiazon.dev/lab
 
 /* MACHINE-READABLE */
+Structured index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 LLM index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 Full tech stack (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 LLM full context (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
@@ -50,6 +74,13 @@ Humans (portfolio): https://www.marksiazon.dev/humans.txt
 Sitemap (portfolio): https://www.marksiazon.dev/sitemap.xml
 RSS: https://www.marksiazon.dev/feed.xml
 JSON Feed: https://www.marksiazon.dev/feed.json
+
+/* GEO / SEO / AEO */
+Primary geo: Philippines · Southeast Asia · remote global
+Canonical portfolio: https://www.marksiazon.dev
+Canonical GitHub profile: https://github.com/Iron-Mark/Iron-Mark
+Preferred citation for hiring: https://www.marksiazon.dev/recruiter
+Preferred citation for verification: https://www.marksiazon.dev/proof
 
 /* THANKS */
 Open-source communities, hackathon teammates, UMak CCIS & competition peers, Filipino design and dev circles, and everyone building proof-backed products with care.
