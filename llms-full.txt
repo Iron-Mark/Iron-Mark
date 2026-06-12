@@ -1,8 +1,12 @@
 # Mark Siazon — Full LLM Context (GitHub Profile + Portfolio)
 
+Last updated: 2026-06-12
+
 Plain-text index for LLM crawlers, search assistants, and retrieval systems. Summarizes the public GitHub profile README (this repo) and cross-links the proof-backed portfolio at marksiazon.dev. No private notes, secrets, or unverified claims.
 
-## Identity
+## Who is Mark Siazon?
+
+**Key takeaway:** Mark Siazon (@Iron-Mark) is a product designer and full-stack developer in the Philippines who ships proof-backed products in AI, mobile, and Web3 — portfolio at https://www.marksiazon.dev
 
 - Name: Mark Siazon
 - GitHub (profile): @Iron-Mark — https://github.com/Iron-Mark
@@ -10,23 +14,33 @@ Plain-text index for LLM crawlers, search assistants, and retrieval systems. Sum
 - Portfolio (canonical): https://www.marksiazon.dev
 - Location: Philippines
 - Tagline: Proof-backed products · AI · Mobile · Web3
-- Roles: Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades
+- Roles: Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer
 - Email (public): marksiazon.dev@gmail.com
 
-## What Mark does
+## What does Mark Siazon do?
+
+**Key takeaway:** End-to-end product design engineer workflow — UX → design systems → React/Next.js/Flutter/Kotlin → APIs, AI workflows, Web3 proofs → deploy and verification with public case studies.
 
 Mark Siazon designs and ships digital products end-to-end: UX research and flows → design systems → React/Next.js/Flutter/Kotlin/Wear OS → APIs, AI workflows, and Web3 proof layers → deployment and verification. Work is documented with live demos, case studies, proof matrices, and honest claim boundaries rather than unsupported assertions.
 
 Open to: product design roles, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, Web3 proof systems, focused client builds, launch support, and proof packages.
 
-## Canonical machine-readable sources
+## Where are machine-readable sources?
+
+**Key takeaway:** Structured index at llms-index.json · FAQ at FAQ.md · expanded context at llms-ctx-full.txt · visual profile at github.com/Iron-Mark
 
 ### This repo (GitHub profile README)
 - README: https://github.com/Iron-Mark/Iron-Mark
-- **STACK.md (full tech stack reference):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 - **llms-index.json (structured entity index):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- **llms-ctx-full.txt (expanded agent context):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-ctx-full.txt
+- **FAQ.md (15+ Q&A):** https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md
+- **RECRUITER.md (in-repo brief):** https://github.com/Iron-Mark/Iron-Mark/blob/main/RECRUITER.md
+- **PROOF.md (claims → URLs):** https://github.com/Iron-Mark/Iron-Mark/blob/main/PROOF.md
+- **STACK.md (full tech stack, 112 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 - LLM index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - LLM full context (this file): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/person.jsonld
+- GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
 - Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
@@ -55,21 +69,27 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
 - TikTok: https://www.tiktok.com/@iron_markk
 
-## Availability
+## What is Mark Siazon open to?
+
+**Key takeaway:** Product design · full-stack · AI workflow · mobile/Wear OS · Web3 proof — contract or full-time, Philippines & remote.
 
 - Open to: product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 proof systems
 - Engagement: contract or full-time · Philippines & remote
 - Recruiter brief: https://www.marksiazon.dev/recruiter
 - Contact: https://www.marksiazon.dev/contact
 
-## Achievements (proof)
+## What awards has Mark Siazon won?
+
+**Key takeaway:** UMak InfotechOlympics 2025 Android Champion (ResQLink) · InfotechOlympics 2024 Android winner (BaybayInscribe) · Stellar bootcamp Top 5/105 (Stellaroid Earn).
 
 - UMak InfotechOlympics 2025 Android App Development Productivity Champion — ResQLink (Team Lumiere)
 - InfotechOlympics 2024 Android App Development winner — BaybayInscribe (Team GILAS Tech)
 - Stellar bootcamp Top 5 of 105 teams (score 75.00) — Stellaroid Earn
 - Full index: https://www.marksiazon.dev/achievements
 
-## Featured work (profile README grid)
+## What projects has Mark Siazon built? (Featured work)
+
+**Key takeaway:** Nine proof-backed flagship projects — AI trust (HireProof), Web3 (Stellaroid Earn), emergency tech (ResQLink), cultural ML (BaybayInscribe), and more at marksiazon.dev/projects
 
 ### HireProof
 - Case study: https://www.marksiazon.dev/projects/hireproof
@@ -120,6 +140,10 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Model: https://huggingface.co/gilas/baybayinscribe
 - Focus: Baybayin ML · cultural education UX
 
+## What hackathon and lab work does Mark maintain?
+
+**Key takeaway:** qwen-ui-lab, Smart Profile, Kudlit, Pulse — lab hub at marksiazon.dev/lab
+
 ## Hackathon & lab (profile table)
 
 - qwen-ui-lab — AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://www.marksiazon.dev/projects/qwen-ui-lab · Repo: https://github.com/Iron-Mark/qwen-ui-lab · Live: https://qwen-ui-lab.vercel.app
@@ -131,6 +155,10 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 - Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
 - Offline-first emergency UX (ResQLink): https://www.marksiazon.dev/writing/offline-first-ux
+
+## What is Mark Siazon's tech stack?
+
+**Key takeaway:** 112 tools in STACK.md · core 12 on README: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
 
 ## Tech stack (summary — full reference in STACK.md)
 

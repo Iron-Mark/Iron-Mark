@@ -1,0 +1,11 @@
+# Design sources (keep locally, not in repo)
+assets/brand/banner.source.gif
+assets/brand/*.source.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
