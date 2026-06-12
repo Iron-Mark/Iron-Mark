@@ -35,4 +35,17 @@ https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/FAQ.md
 
 - `scripts/validate_index.py` — asset + index consistency checks
 - `scripts/generate_llms_ctx.py` — regenerates llms-ctx-full.txt from llms-index.json
+- `scripts/test_mcp_server.py` — MCP server e2e smoke test (stdio)
 - `.github/workflows/validate-index.yml` — CI on pull requests
+- `.github/workflows/mcp-server.yml` — MCP e2e on pull requests
+
+## Optional MCP server
+
+Local stdio MCP server for tools, resources, and hiring prompts: [mcp-server/README.md](mcp-server/README.md)
+
+```bash
+pip install -e mcp-server/
+iron-mark-profile-mcp
+```
+
+Cursor / Claude config: [mcp-server/mcp-config.example.json](mcp-server/mcp-config.example.json)

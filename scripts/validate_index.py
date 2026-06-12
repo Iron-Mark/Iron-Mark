@@ -44,6 +44,11 @@ def main() -> int:
         if key not in data:
             errors.append(f"llms-index.json missing key: {key}")
 
+    mcp_readme = ROOT / "mcp-server" / "README.md"
+    mcp_server = ROOT / "mcp-server" / "iron_mark_profile" / "server.py"
+    if not mcp_readme.exists() or not mcp_server.exists():
+        warnings.append("MCP server files missing under mcp-server/")
+
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     if len(snippets) < 10:
         warnings.append(f"Only {len(snippets)} answerSnippets (recommend 10+)")

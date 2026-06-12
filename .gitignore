@@ -9,3 +9,7 @@ Thumbs.db
 # Python
 __pycache__/
 *.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/

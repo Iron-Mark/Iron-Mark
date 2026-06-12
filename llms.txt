@@ -117,6 +117,7 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 ## Optional
 
 - [STACK.md](STACK.md): Full 112-tool stack with icons — skip for short hiring context
+- [mcp-server/README.md](mcp-server/README.md): Optional MCP server (tools, resources, prompts for agents)
 - [LINK_QA.md](LINK_QA.md): Internal link audit report
 - [LICENSE.md](LICENSE.md): Usage terms for README, indexes, and original assets
 - [CITATION.cff](CITATION.cff): Academic/software citation metadata

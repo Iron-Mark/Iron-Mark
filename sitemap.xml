@@ -235,6 +235,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/PROFILE.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>

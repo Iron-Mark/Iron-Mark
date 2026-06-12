@@ -82,6 +82,12 @@
       "sitemap": "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml",
       "robots": "https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt"
     },
+    "mcpServer": {
+      "docs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md",
+      "configExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/mcp-config.example.json",
+      "command": "iron-mark-profile-mcp",
+      "transport": "stdio"
+    },
     "portfolio": {
       "llmsTxt": "https://www.marksiazon.dev/llms.txt",
       "llmsFullTxt": "https://www.marksiazon.dev/llms-full.txt",

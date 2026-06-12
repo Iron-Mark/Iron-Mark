@@ -73,6 +73,17 @@ python3 scripts/check_portfolio_mirror.py
 
 Follow [schema/WIKIDATA.md](../schema/WIKIDATA.md) to create a Wikidata item. After you receive a Q-id, add it to `schema/person.jsonld` and `llms-index.json` → `identifiers.wikidata`.
 
+## 9. Optional MCP server (local agents)
+
+For Cursor / Claude Desktop agent access to profile tools and resources:
+
+```bash
+pip install -e mcp-server/
+python3 scripts/test_mcp_server.py
+```
+
+Config: [mcp-server/mcp-config.example.json](../mcp-server/mcp-config.example.json) · Docs: [mcp-server/README.md](../mcp-server/README.md)
+
 ## 7. LinkedIn headline sync
 
 Match README one-liner:

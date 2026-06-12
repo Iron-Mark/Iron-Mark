@@ -84,6 +84,7 @@ LLM expanded context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-ctx-
 FAQ (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md
 Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/RECRUITER.md
 Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/AGENTS.md
+MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md
 Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/person.jsonld
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
 LLM index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt

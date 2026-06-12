@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "iron-mark-profile": {
+      "command": "python3",
+      "args": ["-m", "iron_mark_profile.server"],
+      "cwd": "${workspaceFolder}/mcp-server",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/mcp-server"
+      }
+    }
+  }
+}
