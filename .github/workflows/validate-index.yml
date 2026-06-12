@@ -1,0 +1,28 @@
+name: Validate index
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, cursor/**]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate llms-index and assets
+        run: python3 scripts/validate_index.py
+
+      - name: Regenerate llms-ctx-full and check drift
+        run: |
+          python3 scripts/generate_llms_ctx.py
+          git diff --exit-code llms-ctx-full.txt || (
+            echo "::error::llms-ctx-full.txt is out of date — run scripts/generate_llms_ctx.py"
+            exit 1
+          )
+
+      - name: Validate JSON
+        run: python3 -m json.tool llms-index.json > /dev/null

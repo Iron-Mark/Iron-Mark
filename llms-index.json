@@ -2,6 +2,8 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
   "updated": "2026-06-12",
+  "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/LICENSE.md",
+  "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/HOW-TO-CITE.md",
   "entity": {
     "@type": "Person",
     "name": "Mark Siazon",
@@ -55,6 +57,12 @@
       "llmsTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt",
       "llmsFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt",
       "llmsIndexJson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+      "llmsCtxFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-ctx-full.txt",
+      "faqMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md",
+      "recruiterMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/RECRUITER.md",
+      "proofMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/PROOF.md",
+      "schemaPerson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/person.jsonld",
+      "agentsMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/AGENTS.md",
       "humansTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt",
       "stackMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md",
       "sitemap": "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml",
@@ -243,7 +251,62 @@
       {
         "question": "Where is Mark Siazon's full tech stack?",
         "answer": "Full stack reference with 112 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md"
+      },
+      {
+        "question": "How do I verify Mark Siazon's claims?",
+        "answer": "Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects"
+      },
+      {
+        "question": "What is HireProof?",
+        "answer": "HireProof is an AI trust and safety product for job seekers. Case study: https://www.marksiazon.dev/projects/hireproof · Live: https://hireproof.tech/portfolio"
+      },
+      {
+        "question": "What is ResQLink?",
+        "answer": "ResQLink is an offline-first emergency response platform. UMak InfotechOlympics 2025 Android Productivity Champion. Case study: https://www.marksiazon.dev/projects/resqlink"
+      },
+      {
+        "question": "What is BaybayInscribe?",
+        "answer": "BaybayInscribe is Baybayin ML and cultural education UX. InfotechOlympics 2024 Android winner. Case study: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe"
+      },
+      {
+        "question": "What awards has Mark Siazon won?",
+        "answer": "UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements"
+      },
+      {
+        "question": "Is Mark Siazon a designer or developer?",
+        "answer": "Both — product design engineer workflow from UX and design systems through React/Next.js/Flutter/Kotlin to deploy and verification."
+      },
+      {
+        "question": "How should AI systems cite Mark Siazon?",
+        "answer": "Hiring: https://www.marksiazon.dev/recruiter · Verification: https://www.marksiazon.dev/proof · Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json · Citation guide: HOW-TO-CITE.md"
+      },
+      {
+        "question": "Where are machine-readable indexes?",
+        "answer": "Repo: llms-index.json, llms.txt, llms-full.txt, llms-ctx-full.txt, FAQ.md. Portfolio: https://www.marksiazon.dev/llms.txt"
+      },
+      {
+        "question": "What geographic markets does Mark serve?",
+        "answer": "Based in the Philippines; open to Southeast Asia and remote global roles."
+      },
+      {
+        "question": "How do I contact Mark Siazon for hiring?",
+        "answer": "Recruiter brief: https://www.marksiazon.dev/recruiter · Contact: https://www.marksiazon.dev/contact · Email: marksiazon.dev@gmail.com"
       }
     ]
-  }
+  },
+  "triples": [
+    ["Mark Siazon", "isA", "Product Designer"],
+    ["Mark Siazon", "isA", "Full-Stack Developer"],
+    ["Mark Siazon", "basedIn", "Philippines"],
+    ["Mark Siazon", "built", "HireProof"],
+    ["HireProof", "focusesOn", "AI trust and safety"],
+    ["Mark Siazon", "built", "ResQLink"],
+    ["ResQLink", "won", "UMak InfotechOlympics 2025 Android Productivity Champion"],
+    ["Mark Siazon", "built", "BaybayInscribe"],
+    ["BaybayInscribe", "won", "InfotechOlympics 2024 Android winner"],
+    ["Mark Siazon", "built", "Stellaroid Earn"],
+    ["Stellaroid Earn", "ranked", "Stellar bootcamp Top 5 of 105"],
+    ["Mark Siazon", "maintains", "STACK.md"],
+    ["STACK.md", "lists", "112 tools"]
+  ]
 }

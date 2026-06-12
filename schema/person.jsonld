@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.marksiazon.dev/#person",
+      "name": "Mark Siazon",
+      "alternateName": ["Iron-Mark", "mark-siazon"],
+      "jobTitle": "Product Designer and Full-Stack Developer",
+      "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products in AI trust and safety, mobile, and Web3.",
+      "url": "https://www.marksiazon.dev",
+      "email": "mailto:marksiazon.dev@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PH",
+        "addressRegion": "Philippines"
+      },
+      "sameAs": [
+        "https://github.com/Iron-Mark",
+        "https://github.com/mark-siazon",
+        "https://www.linkedin.com/in/mark-siazon/",
+        "https://www.frontendmentor.io/profile/Iron-Mark"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark#website",
+      "name": "Mark Siazon GitHub Profile Index",
+      "url": "https://github.com/Iron-Mark/Iron-Mark",
+      "author": { "@id": "https://www.marksiazon.dev/#person" },
+      "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, and tech stack reference."
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
+      "mainEntity": { "@id": "https://www.marksiazon.dev/#person" },
+      "url": "https://github.com/Iron-Mark/Iron-Mark"
+    }
+  ]
+}

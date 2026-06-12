@@ -2,6 +2,8 @@
 
 > Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, and polymath / jack of all trades. Builds proof-backed digital products across AI, mobile, Web3, and client web — portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
+> **Machines start here:** [llms-index.json](llms-index.json) (structured) · [llms-ctx-full.txt](llms-ctx-full.txt) (expanded) · [FAQ.md](FAQ.md) (Q&A) · [AGENTS.md](AGENTS.md) (agent rules)
+
 Mark Siazon ships end-to-end: research and UX flows → design systems → React/Next.js/Flutter/Kotlin → APIs and Web3 proofs → deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
 ## Canonical sources
@@ -22,7 +24,8 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Hire & contact
 
-- Recruiter brief: https://www.marksiazon.dev/recruiter
+- Recruiter brief (repo): [RECRUITER.md](RECRUITER.md)
+- Recruiter brief (live): https://www.marksiazon.dev/recruiter
 - Contact form: https://www.marksiazon.dev/contact
 - Email: marksiazon.dev@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mark-siazon/
@@ -66,6 +69,12 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - **Core stack on profile README:** React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
 - **Domains in STACK.md:** Web · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-assisted development workflow
 
+## FAQ
+
+- [FAQ.md](FAQ.md): 15+ question/answer pairs for hiring, projects, stack, and citation
+- [PROOF.md](PROOF.md): README claims mapped to verification URLs
+- [HOW-TO-CITE.md](HOW-TO-CITE.md): Citation guide for humans and AI
+
 ## Writing
 
 - Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
@@ -103,3 +112,12 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - JSON Feed: https://www.marksiazon.dev/feed.json
 - Robots: https://www.marksiazon.dev/robots.txt
 - Humans: https://www.marksiazon.dev/humans.txt
+
+## Optional
+
+- [STACK.md](STACK.md): Full 112-tool stack with icons — skip for short hiring context
+- [LINK_QA.md](LINK_QA.md): Internal link audit report
+- [LICENSE.md](LICENSE.md): Usage terms for README, indexes, and original assets
+- [CITATION.cff](CITATION.cff): Academic/software citation metadata
+- [schema/person.jsonld](schema/person.jsonld): Schema.org JSON-LD entity graph
+- [PROFILE.md](PROFILE.md): Plain markdown profile mirror (no HTML tables)

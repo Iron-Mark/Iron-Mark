@@ -2,6 +2,8 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
+<p align="center"><sub>Product designer &amp; full-stack developer in the Philippines · proof-backed AI, mobile &amp; Web3 products · <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></p>
+
 <p align="center">
   <picture>
     <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=3"/>
@@ -18,6 +20,8 @@
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
+  <a href="RECRUITER.md" aria-label="Recruiter brief markdown in this repo"><img src="https://img.shields.io/badge/Recruiter_MD-repo-374151?style=for-the-badge" alt="Recruiter MD in repo"/></a>
+  <a href="FAQ.md" aria-label="FAQ for search and LLM crawlers"><img src="https://img.shields.io/badge/FAQ-→-6B7280?style=for-the-badge" alt="FAQ"/></a>
   <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
 </p>
 
@@ -298,7 +302,7 @@
 
 <p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev" rel="noopener noreferrer">home</a> · <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">projects</a> · <a href="https://www.marksiazon.dev/proof" rel="noopener noreferrer">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer">achievements</a> · <a href="https://www.marksiazon.dev/writing" rel="noopener noreferrer">writing</a>.</p>
 
-<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> (structured entity index) · <a href="STACK.md">STACK.md</a> (full tech stack) · <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="humans.txt">humans.txt</a> · <a href="robots.txt">robots.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
+<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> · <a href="llms-ctx-full.txt">llms-ctx-full.txt</a> · <a href="FAQ.md">FAQ.md</a> · <a href="RECRUITER.md">RECRUITER.md</a> · <a href="AGENTS.md">AGENTS.md</a> · <a href="STACK.md">STACK.md</a> · <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="PROOF.md">PROOF.md</a> · <a href="schema/person.jsonld">person.jsonld</a> · <a href="humans.txt">humans.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
 
 <p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt" rel="noopener noreferrer">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt" rel="noopener noreferrer">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt" rel="noopener noreferrer">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml" rel="noopener noreferrer">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml" rel="noopener noreferrer">sitemap</a></p>
 
