@@ -1,7 +1,10 @@
 # Mark Siazon — Frequently Asked Questions
 
 Last updated: 2026-06-12  
-Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark
+Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
+Entity @id: https://www.marksiazon.dev/#person
+
+Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [recruiter](https://www.marksiazon.dev/recruiter) · [proof](https://www.marksiazon.dev/proof)
 
 ---
 

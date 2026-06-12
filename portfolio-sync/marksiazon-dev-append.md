@@ -32,3 +32,7 @@ Verify after deploy:
 ```bash
 python3 scripts/check_portfolio_mirror.py
 ```
+
+## FAQ cross-links (Phase 3.4)
+
+Also copy the FAQ table from [faq-crosslinks.md](faq-crosslinks.md) into marksiazon.dev `llms.txt` and link from `/recruiter` or `/contact#faq`.

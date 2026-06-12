@@ -48,10 +48,10 @@ def main() -> int:
     if len(snippets) < 10:
         warnings.append(f"Only {len(snippets)} answerSnippets (recommend 10+)")
 
-    # Asset refs in README
-    for m in re.findall(r'src="(assets/[^"]+)"', readme):
-        if not (ROOT / m).exists():
-            errors.append(f"README references missing asset: {m}")
+    for m in re.findall(r'src="(assets/[^"]+)"|srcset="(assets/[^"]+)"', readme):
+        path = m[0] or m[1]
+        if not (ROOT / path).exists():
+            errors.append(f"README references missing asset: {path}")
 
     print("validate_index.py")
     if warnings:

@@ -9,6 +9,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 ## Canonical sources
 
 - Portfolio (primary): https://www.marksiazon.dev
+- Person entity @id: https://www.marksiazon.dev/#person
 - GitHub profile README (this repo): https://github.com/Iron-Mark/Iron-Mark
 - GitHub account: https://github.com/Iron-Mark
 - Secondary GitHub: https://github.com/mark-siazon
@@ -120,4 +121,6 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - [LICENSE.md](LICENSE.md): Usage terms for README, indexes, and original assets
 - [CITATION.cff](CITATION.cff): Academic/software citation metadata
 - [schema/person.jsonld](schema/person.jsonld): Schema.org JSON-LD entity graph
+- [schema/ENTITY.md](schema/ENTITY.md): Canonical @id map
+- [schema/WIKIDATA.md](schema/WIKIDATA.md): Wikidata item creation guide
 - [PROFILE.md](PROFILE.md): Plain markdown profile mirror (no HTML tables)

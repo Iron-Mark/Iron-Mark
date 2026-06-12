@@ -1,4 +1,9 @@
-<p align="center"><img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/></p>
+<p align="center">
+  <picture>
+    <source type="image/webp" srcset="assets/brand/banner.webp"/>
+    <img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/>
+  </picture>
+</p>
 
 <h1 align="center">Mark Siazon 👋</h1>
 
@@ -36,7 +41,9 @@
 
 <h2 align="center">Featured Work</h2>
 
-<table width="100%">
+<div align="center" style="width:100%;max-width:100%;overflow-x:auto">
+
+<table width="100%" style="table-layout:fixed;min-width:680px;border-collapse:collapse">
   <colgroup>
     <col width="33%"/>
     <col width="33%"/>
@@ -118,6 +125,8 @@
     </td>
   </tr>
 </table>
+
+</div>
 
 <p align="center">
   <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">All projects</a> ·

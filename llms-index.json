@@ -6,6 +6,7 @@
   "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/HOW-TO-CITE.md",
   "entity": {
     "@type": "Person",
+    "@id": "https://www.marksiazon.dev/#person",
     "name": "Mark Siazon",
     "alternateName": ["Iron-Mark", "mark-siazon"],
     "jobTitle": [
@@ -28,8 +29,21 @@
       "https://github.com/mark-siazon",
       "https://www.linkedin.com/in/mark-siazon/",
       "https://www.frontendmentor.io/profile/Iron-Mark",
-      "https://www.tiktok.com/@iron_markk"
+      "https://www.tiktok.com/@iron_markk",
+      "https://github.com/Iron-Mark/Iron-Mark"
     ]
+  },
+  "identifiers": {
+    "person": "https://www.marksiazon.dev/#person",
+    "portfolioWebsite": "https://www.marksiazon.dev/#website",
+    "githubProfilePage": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
+    "githubProfileIndex": "https://github.com/Iron-Mark/Iron-Mark#website",
+    "githubPagesMirror": "https://iron-mark.github.io/Iron-Mark/#website",
+    "faqDocument": "https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md#faq",
+    "structuredIndex": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+    "wikidata": null,
+    "wikidataGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/WIKIDATA.md",
+    "entityGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/ENTITY.md"
   },
   "availability": {
     "status": "open",

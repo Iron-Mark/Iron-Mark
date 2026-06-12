@@ -27,7 +27,9 @@ See [CITATION.cff](CITATION.cff) in this repository.
 
 ## Schema.org JSON-LD
 
-See [schema/person.jsonld](schema/person.jsonld).
+See [schema/person.jsonld](schema/person.jsonld). Canonical Person `@id`: **https://www.marksiazon.dev/#person**
+
+Entity identifier map: [schema/ENTITY.md](schema/ENTITY.md) · Wikidata setup: [schema/WIKIDATA.md](schema/WIKIDATA.md)
 
 ## License
 

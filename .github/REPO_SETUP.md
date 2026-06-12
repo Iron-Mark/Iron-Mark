@@ -61,11 +61,17 @@ If README does not show on https://github.com/Iron-Mark:
 
 ## 6. Portfolio mirror (marksiazon.dev)
 
-Copy block from [portfolio-sync/marksiazon-dev-append.md](../portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Verify with:
+Copy block from [portfolio-sync/marksiazon-dev-append.md](../portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Add FAQ cross-link table from [portfolio-sync/faq-crosslinks.md](../portfolio-sync/faq-crosslinks.md).
+
+Verify with:
 
 ```bash
 python3 scripts/check_portfolio_mirror.py
 ```
+
+## 8. Wikidata entity (optional, Phase 4)
+
+Follow [schema/WIKIDATA.md](../schema/WIKIDATA.md) to create a Wikidata item. After you receive a Q-id, add it to `schema/person.jsonld` and `llms-index.json` → `identifiers.wikidata`.
 
 ## 7. LinkedIn headline sync
 

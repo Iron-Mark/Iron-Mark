@@ -1,3 +1,20 @@
+/* ENTITY (@id) */
+Person: https://www.marksiazon.dev/#person
+Portfolio website: https://www.marksiazon.dev/#website
+GitHub profile page: https://github.com/Iron-Mark/Iron-Mark#profilepage
+GitHub profile index: https://github.com/Iron-Mark/Iron-Mark#website
+GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/#website
+FAQ document: https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md#faq
+Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+Entity guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/ENTITY.md
+Wikidata: pending — see https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/WIKIDATA.md
+
+/* FAQ & AEO */
+GitHub FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md
+Portfolio contact FAQ: https://www.marksiazon.dev/contact#faq
+FAQ cross-link table (for portfolio llms.txt): portfolio-sync/faq-crosslinks.md in repo
+Answer snippets (JSON): llms-index.json → aeo.answerSnippets
+
 /* TEAM */
 Owner: Mark Siazon
 Handle: @Iron-Mark (GitHub profile), @mark-siazon (secondary GitHub)
