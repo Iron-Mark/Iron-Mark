@@ -1,76 +1,54 @@
 # Link QA Report
 
-**Date:** 2026-06-10  
-**Scope:** `README.md`, `llms.txt`, `llms-full.txt`, `humans.txt`, `sitemap.xml`  
-**Method:** Extract unique `http`/`https`/`mailto` URLs; verify with `curl -L -I` (15s connect / 30s total timeout).
+**Date:** 2026-06-10 (updated post stack split + BaybayInscribe swap)  
+**Scope:** `README.md`, `STACK.md`, `llms.txt`, `llms-full.txt`, `humans.txt`, `sitemap.xml`, `LICENSE.md`  
+**Method:** Extract unique `http`/`https`/`mailto` URLs; verify with `curl -L -I` (15s timeout, parallel checks).
 
 ## Summary
 
 | Metric | Count |
 |--------|------:|
-| Unique URLs extracted | 101 |
-| HTTP/HTTPS URLs checked | 97 |
-| `mailto:` links (skipped HEAD check) | 4 |
-| XML namespace URI (non-navigable, skipped) | 1 |
-| Fixes applied in source files | 18 |
-| Remaining issues for manual review | 9 |
+| Unique URLs extracted | 86 |
+| HTTP/HTTPS URLs checked | 86 |
+| Passing (2xx/3xx) | 78 |
+| Pre-merge 404s (branch not on `main` yet) | 6 |
+| Bot / anti-scrape (LinkedIn, TikTok) | 2 |
+| Broken external links | **0** |
+| STACK.md external doc links (32) | **32/32 OK** |
 
-## Fixes applied
+## Changes since last audit
 
-### README.md (13)
-
-| Old URL | New canonical URL | Reason |
-|---------|-------------------|--------|
-| `https://en.bem.info/methodology/quick-start/` | `https://en.bem.info/` | 404 |
-| `https://docs.anthropic.com/en/docs/claude-code/quickstart` | `https://code.claude.com/docs/en/quickstart` | 301 redirect |
-| `https://docs.replit.com/getting-started/intro-replit` | `https://docs.replit.com/build/welcome` | 308 redirect |
-| `https://goodtolivepodcast.com` | `https://www.goodtolivepodcast.com` | 308 redirect |
-| `https://kiro.dev/docs/getting-started` | `https://kiro.dev/docs/` | 301 redirect |
-| `https://movementnetwork.xyz/` | `https://www.movementnetwork.xyz/` | 308 redirect |
-| `https://soliditylang.org/` | `https://www.soliditylang.org/` | 301 redirect |
-| `https://tailwindcss.com/docs/installation` | `https://tailwindcss.com/docs/installation/using-vite` | 307 redirect |
-| `https://v0.dev/docs` | `https://v0.app/docs` | 308 redirect |
-| `https://www.freighter.app/` | `https://freighter.app/` | 301 redirect |
-| `https://www.opera.com/products/minipay` | `https://minipay.to/` | 301 redirect |
-| `https://phaser.io/` | `https://phaser.io/download` | 403 to bots on homepage; `/download` returns 200 |
-| — | Added `rel="noopener noreferrer"` | 68 external `https` anchor tags outside GitHub Activity section |
-
-GitHub Activity section was left unchanged per task constraints.
-
-### llms-full.txt (5)
-
-| Change | Reason |
-|--------|--------|
-| `Hackathon-Stellar-PalengkePay-Pro` → `polsalarm/PalengkePay-Pro` | Original repo 404; team repo verified 200 |
-| Removed `Hackathon-MiniPay` repo line | Repo 404; no public GitHub proof listed on portfolio |
-| Removed `beta.baybayinscribe.top` | DNS/connection failure (timeout) |
-| Removed `KpG782/devcamp` Pulse repo | Repo 404; portfolio notes private source not advertised |
-| `goodtolivepodcast.com` → `www.goodtolivepodcast.com` | 308 redirect |
+| Fix | Files |
+|-----|-------|
+| Added `STACK.md` to audit scope | 32 third-party doc links verified |
+| Removed duplicate BaybayInscribe from Hackathon table | `README.md`, `llms.txt`, `llms-full.txt` |
+| Aligned qwen-ui-lab canonical URL to portfolio case study | `README.md`, `llms.txt`, `llms-full.txt` |
+| Restored grouped tool keyword list in `llms-full.txt` | points to STACK.md for icons + doc links |
 
 ## Remaining issues (manual review)
 
-### Pre-merge 404s (8) — expected until index files land on `main`
+### Pre-merge 404s (6) — expected until branch merges to `main`
 
-These URLs are correct canonical targets but return **404** today because `llms.txt`, `llms-full.txt`, `humans.txt`, `robots.txt`, and `sitemap.xml` exist on branch `cursor/profile-readme-improvements-dcf2` only (`origin/main` currently has `README.md` + `assets/`).
+These URLs are correct canonical targets but return **404** today because index files exist on branch `cursor/profile-readme-improvements-dcf2` only:
 
+- `https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md`
 - `https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt`
 - `https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt`
 - `https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt`
 - `https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt`
 - `https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml`
-- `https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/llms.txt`
-- `https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/llms-full.txt`
-- `https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/humans.txt`
 
-**Action:** Re-run link check after merging this branch to `main`.
+**Action:** Re-run link check after merging to `main`.
 
-### Bot / anti-scrape protection (1)
+### Bot / anti-scrape protection (2)
 
-- `https://www.linkedin.com/in/mark-siazon/` — returns HTTP **999** to automated HEAD requests; works in browsers.
+- `https://www.linkedin.com/in/mark-siazon/` — HTTP **999** to automated HEAD requests; works in browsers.
+- `https://www.tiktok.com/@iron_markk` — HTTP **403** to automated HEAD requests; works in browsers.
 
 ## Verification notes
 
-- All portfolio routes on `marksiazon.dev` returned **200**.
-- All third-party project live demos (Vercel, HireProof, Stellaroid, etc.) returned **200**.
-- No remaining redirect chains where source URL differs from final URL after fixes.
+- All portfolio routes on `marksiazon.dev` returned **200** (including `/projects/qwen-ui-lab`, `/projects/baybayinscribe`).
+- All third-party project live demos (Vercel, HireProof, Stellaroid, qwen-ui-lab, etc.) returned **200**.
+- All `STACK.md` getting-started / doc links returned **200**.
+- All relative `assets/` paths in `README.md` and `STACK.md` resolve on disk (0 missing files).
 - `mailto:marksiazon.dev@gmail.com` present in README and index files; not modified.

@@ -110,7 +110,7 @@
   </thead>
   <tbody>
     <tr>
-      <td valign="middle" style="padding:12px 8px 10px 0;border-top:1px solid #d0d7de"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://github.com/Iron-Mark/qwen-ui-lab" rel="noopener noreferrer">qwen-ui-lab</a></b></td>
+      <td valign="middle" style="padding:12px 8px 10px 0;border-top:1px solid #d0d7de"><img src="assets/projects/qwen-ui-lab/icon.png" alt="qwen-ui-lab icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/qwen-ui-lab" rel="noopener noreferrer">qwen-ui-lab</a></b></td>
       <td valign="middle" style="padding:12px 8px 10px;word-wrap:break-word;overflow-wrap:break-word"><sub>Qwen3-VL · React · Tailwind · Next.js</sub></td>
       <td valign="middle" style="padding:12px 0 10px 8px;white-space:nowrap"><sub><a href="https://qwen-ui-lab.vercel.app" rel="noopener noreferrer">Live</a> · <a href="https://github.com/Iron-Mark/qwen-ui-lab" rel="noopener noreferrer">Repo</a></sub></td>
     </tr>
@@ -118,11 +118,6 @@
       <td valign="middle" style="padding:12px 8px 10px 0;border-top:1px solid #d0d7de"><img src="assets/projects/smart-profile/icon.png" alt="Smart Profile icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/" rel="noopener noreferrer">Smart Profile</a></b></td>
       <td valign="middle" style="padding:12px 8px 10px;word-wrap:break-word;overflow-wrap:break-word"><sub>AI credentials · SaaS · Supabase</sub></td>
       <td valign="middle" style="padding:12px 0 10px 8px;white-space:nowrap"><sub><a href="https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/" rel="noopener noreferrer">Demo</a> · <a href="https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System" rel="noopener noreferrer">Repo</a></sub></td>
-    </tr>
-    <tr>
-      <td valign="middle" style="padding:12px 8px 10px 0;border-top:1px solid #d0d7de"><img src="assets/projects/baybayinscribe/icon.png" alt="BaybayInscribe icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a></b></td>
-      <td valign="middle" style="padding:12px 8px 10px;word-wrap:break-word;overflow-wrap:break-word"><sub>Baybayin ML · cultural education UX</sub></td>
-      <td valign="middle" style="padding:12px 0 10px 8px;white-space:nowrap"><sub><a href="https://huggingface.co/gilas/baybayinscribe" rel="noopener noreferrer">Model</a> · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">Case study</a></sub></td>
     </tr>
     <tr>
       <td valign="middle" style="padding:12px 8px 10px 0;border-top:1px solid #d0d7de"><img src="assets/projects/kudlit/icon.png" alt="Kudlit icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/kudlit" rel="noopener noreferrer">Kudlit</a></b></td>
@@ -157,7 +152,7 @@
 ---
 
 
-<h2 align="center" id="tech-stack">Tech Stack</h2>
+<h2 align="center">Tech Stack</h2>
 
 <p align="center"><sub>Core tools I ship with · <a href="STACK.md">full stack reference (100+ tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
 
@@ -165,10 +160,9 @@
 
 <table width="100%">
   <colgroup>
-    <col width="11%"/><col width="11%"/><col width="11%"/><col width="11%"/><col width="11%"/>
-    <col width="11%"/><col width="11%"/><col width="11%"/><col width="11%"/>
+    <col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/>
   </colgroup>
-  <tr align="center"><td colspan="9"><sub><b>Core stack</b> · product design → ship → deploy</sub></td></tr>
+  <tr align="center"><td colspan="6"><sub><b>Core stack</b> · product design → ship → deploy</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
     <td width="11%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
@@ -176,11 +170,11 @@
     <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
     <td width="11%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
     <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+  </tr>
+  <tr align="center">
     <td width="11%"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></td>
     <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
     <td width="11%"><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
-  </tr>
-  <tr align="center">
     <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
     <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
     <td width="11%"><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
@@ -200,30 +194,30 @@
     <tr align="center"><td colspan="9"><sub><b>Web</b></sub></td></tr>
     <tr align="center">
       <td width="11%"><img src="assets/stack/html5.svg" alt="HTML5" width="40" height="40"/><br><sub>HTML5</sub></td>
-      <td width="11%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
-      <td width="11%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-      <td width="11%"><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
+      <td width="11%"><img src="assets/stack/css3.svg" alt="CSS3" width="40" height="40"/><br><sub>CSS3</sub></td>
+      <td width="11%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
+      <td width="11%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
     </tr>
     <tr align="center"><td colspan="9"><sub><b>Mobile</b></sub></td></tr>
     <tr align="center">
-      <td width="11%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
       <td width="11%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
       <td width="11%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
       <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
+      <td width="11%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
     </tr>
     <tr align="center"><td colspan="9"><sub><b>AI workflow</b></sub></td></tr>
     <tr align="center">
-      <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
       <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>Copilot</sub></a></td>
       <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
       <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
+      <td width="11%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
     </tr>
     <tr align="center"><td colspan="9"><sub><b>Web3</b></sub></td></tr>
     <tr align="center">
       <td width="11%"><a href="https://www.soliditylang.org/" rel="noopener noreferrer"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
-      <td width="11%"><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
       <td width="11%"><a href="https://celo.org/" rel="noopener noreferrer"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
       <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
+      <td width="11%"><a href="https://freighter.app/" rel="noopener noreferrer"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
     </tr>
   </table>
   </div>
@@ -258,7 +252,7 @@
 
 <p><strong>Tech stack:</strong> <a href="STACK.md">STACK.md</a> (full reference) · core stack on README (React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker).</p>
 
-<p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · BaybayInscribe · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
+<p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
 
 <p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev" rel="noopener noreferrer">home</a> · <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">projects</a> · <a href="https://www.marksiazon.dev/proof" rel="noopener noreferrer">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer">achievements</a> · <a href="https://www.marksiazon.dev/writing" rel="noopener noreferrer">writing</a>.</p>
 

@@ -43,9 +43,8 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Hackathon & lab (GitHub profile)
 
-- qwen-ui-lab: https://github.com/Iron-Mark/qwen-ui-lab
+- qwen-ui-lab — AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://www.marksiazon.dev/projects/qwen-ui-lab · Repo: https://github.com/Iron-Mark/qwen-ui-lab · Live: https://qwen-ui-lab.vercel.app
 - Smart Profile (AI credentials SaaS): https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System
-- BaybayInscribe (Baybayin ML & cultural education): https://www.marksiazon.dev/projects/baybayinscribe
 - Kudlit (Flutter Baybayin learning, Android release): https://www.marksiazon.dev/projects/kudlit
 - Pulse (Wear OS, GPS, heart-rate telemetry): https://www.marksiazon.dev/projects/pulse
 

@@ -106,9 +106,8 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 ## Hackathon & lab (profile table)
 
-- qwen-ui-lab — AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://github.com/Iron-Mark/qwen-ui-lab · Live: https://qwen-ui-lab.vercel.app
+- qwen-ui-lab — AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://www.marksiazon.dev/projects/qwen-ui-lab · Repo: https://github.com/Iron-Mark/qwen-ui-lab · Live: https://qwen-ui-lab.vercel.app
 - Smart Profile — AI credentials SaaS: https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System · Demo: https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/
-- BaybayInscribe — Baybayin ML & cultural education: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe
 - Kudlit — Flutter Baybayin learning, Android v1.0.0: https://www.marksiazon.dev/projects/kudlit · Repo: https://github.com/ACSADians/kudlit-app
 - Pulse — Wear OS, GPS, heart-rate telemetry: https://www.marksiazon.dev/projects/pulse · Live: https://pacebeats.vercel.app
 
@@ -122,6 +121,19 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 Canonical full stack with icons and getting-started links: https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
 
 Core stack on README (12 tools): React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind CSS, Cursor, GitHub Actions, Docker.
+
+Tools indexed in STACK.md (112 icons, grouped by domain):
+
+- Web: HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, React, Next.js, Astro, Svelte, Qwik, Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI, jQuery, Java, PHP, MySQL
+- Mobile: Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
+- Backend: Node.js, Express, Fastify, FastAPI, PostgreSQL, MongoDB, Redis, Supabase
+- Web3: Solidity, Hardhat, Move, Morph, Celo, Stellar, Freighter, MiniPay, MetaMask
+- Deploy: Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS
+- Game Dev: Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js
+- UI/UX: Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar
+- Creative: Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline
+- AI: Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry
+- AI workflow: ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode
 
 ## Topics & search keywords
 
