@@ -99,13 +99,14 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Live: https://gawainyah-minipay.vercel.app
 - Focus: MiniPay-native AI utility with payment-before-AI guardrails and Celo proof receipts
 
-### qwen-ui-lab
-- Repo: https://github.com/Iron-Mark/qwen-ui-lab
-- Live: https://qwen-ui-lab.vercel.app
-- Focus: AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js)
+### BaybayInscribe
+- Case study: https://www.marksiazon.dev/projects/baybayinscribe
+- Model: https://huggingface.co/gilas/baybayinscribe
+- Focus: Baybayin ML · cultural education UX
 
 ## Hackathon & lab (profile table)
 
+- qwen-ui-lab — AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://github.com/Iron-Mark/qwen-ui-lab · Live: https://qwen-ui-lab.vercel.app
 - Smart Profile — AI credentials SaaS: https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System · Demo: https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/
 - BaybayInscribe — Baybayin ML & cultural education: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe
 - Kudlit — Flutter Baybayin learning, Android v1.0.0: https://www.marksiazon.dev/projects/kudlit · Repo: https://github.com/ACSADians/kudlit-app
