@@ -2,7 +2,12 @@
 
 Run these once after merging to `main`. The cloud agent token cannot edit repo settings or user pins — **you** run these locally with `gh` auth as @Iron-Mark.
 
-## 1. Repository About & topics
+> **Skipped (optional):** repo About/topics, social preview image, and pin 6 repos — not required for index/MCP/AEO functionality.
+
+## 1. Repository About & topics *(optional — skip if redundant)*
+
+<details>
+<summary>Only if you want extra GitHub search discoverability</summary>
 
 ```bash
 gh repo edit Iron-Mark/Iron-Mark \
@@ -22,15 +27,23 @@ gh repo edit Iron-Mark/Iron-Mark \
 
 Remove stale topics if needed: `config`, `github-config`, `readme-template` (Settings → Topics).
 
-## 2. Social preview image
+</details>
+
+## 2. Social preview image *(optional — skip if redundant)*
+
+<details>
+<summary>Only for branded link previews on social shares</summary>
 
 **Settings → General → Social preview → Upload**
 
 Use `assets/brand/banner.gif` (or a static 1280×640 PNG export) so link shares look on-brand.
 
-## 3. Pin 6 repositories (profile, not this repo)
+</details>
 
-**github.com/Iron-Mark → Customize pins**
+## 3. Pin 6 repositories *(optional — skip if redundant)*
+
+<details>
+<summary>Profile pin alignment with Featured Work</summary>
 
 Suggested alignment with Featured Work + lab:
 
@@ -43,7 +56,19 @@ Suggested alignment with Featured Work + lab:
 
 Pick the six with strongest proof + recent activity.
 
-## 4. GitHub Pages
+</details>
+
+## 4. Refresh GitHub stats widgets
+
+After merge to `main`, run **Actions → Update GitHub Stats → Run workflow** (or wait for daily 06:00 UTC cron).
+
+Regenerates `assets/github/stats.svg`, `top-langs.svg`, `activity-graph.svg`, `streak.svg`.
+
+```bash
+gh workflow run "Update GitHub Stats"   # after workflow exists on main
+```
+
+## 5. GitHub Pages
 
 **Settings → Pages → Build and deployment → Source: GitHub Actions**
 
@@ -51,7 +76,7 @@ Then run workflow **Deploy GitHub Pages mirror** once. Live at:
 
 https://iron-mark.github.io/Iron-Mark/
 
-## 5. Profile README visibility
+## 6. Profile README visibility
 
 If README does not show on https://github.com/Iron-Mark:
 
@@ -59,7 +84,7 @@ If README does not show on https://github.com/Iron-Mark:
 - `README.md` on **default branch** (`main`)
 - Click **Share to profile** on the repo page if prompted
 
-## 6. Portfolio mirror (marksiazon.dev)
+## 7. Portfolio mirror (marksiazon.dev)
 
 Copy block from [portfolio-sync/marksiazon-dev-append.md](../portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Add FAQ cross-link table from [portfolio-sync/faq-crosslinks.md](../portfolio-sync/faq-crosslinks.md).
 
@@ -69,11 +94,11 @@ Verify with:
 python3 scripts/check_portfolio_mirror.py
 ```
 
-## 8. Wikidata entity (optional, Phase 4)
+## 9. Wikidata entity (optional, Phase 4)
 
 Follow [schema/WIKIDATA.md](../schema/WIKIDATA.md) to create a Wikidata item. After you receive a Q-id, add it to `schema/person.jsonld` and `llms-index.json` → `identifiers.wikidata`.
 
-## 9. Optional MCP server (local agents)
+## 10. Optional MCP server (local agents)
 
 For Cursor / Claude Desktop agent access to profile tools and resources:
 
@@ -84,7 +109,7 @@ python3 scripts/test_mcp_server.py
 
 Config: [mcp-server/mcp-config.example.json](../mcp-server/mcp-config.example.json) · Docs: [mcp-server/README.md](../mcp-server/README.md)
 
-## 7. LinkedIn headline sync
+## 8. LinkedIn headline sync *(optional)*
 
 Match README one-liner:
 
