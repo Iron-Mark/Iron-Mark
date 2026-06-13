@@ -9,8 +9,6 @@
 
 <p align="center"><sub>Index layout: <a href="docs/STRUCTURE.md">docs/STRUCTURE.md</a> · post-merge: <a href=".github/POST_MERGE.md">POST_MERGE.md</a> · content in <code>public/</code> · MCP in <code>src/mcp-server/</code></sub></p>
 
-<p align="center"><sub>Product designer &amp; full-stack developer in the Philippines · proof-backed AI, mobile &amp; Web3 products · <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></p>
-
 <p align="center">
   <picture>
     <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=3"/>
