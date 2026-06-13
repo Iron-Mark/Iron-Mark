@@ -1,0 +1,7 @@
+services:
+  iron-mark-profile-mcp:
+    build:
+      context: ../..
+      dockerfile: src/mcp-server/Dockerfile
+    ports:
+      - "8000:8000"

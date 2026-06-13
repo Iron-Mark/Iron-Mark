@@ -31,37 +31,37 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/llms-full.txt</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/llms-full.txt</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/llms-ctx-full.txt</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/llms-ctx-full.txt</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/FAQ.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/FAQ.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/RECRUITER.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/RECRUITER.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/STACK.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/STACK.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md</loc>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -73,7 +73,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/schema/person.jsonld</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/person.jsonld</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -223,37 +223,37 @@
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/PROOF.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/PROOF.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/AGENTS.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/AGENTS.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md</loc>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/PROFILE.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/PROFILE.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/HOW-TO-CITE.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/HOW-TO-CITE.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/LICENSE.md</loc>
+    <loc>https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/LICENSE.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -265,19 +265,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md</loc>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/PROOF.md</loc>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/AGENTS.md</loc>
+    <loc>https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md</loc>
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

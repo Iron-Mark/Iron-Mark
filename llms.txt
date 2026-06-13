@@ -2,7 +2,7 @@
 
 > Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, and polymath / jack of all trades. Builds proof-backed digital products across AI, mobile, Web3, and client web — portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-> **Machines start here:** [llms-index.json](llms-index.json) (structured) · [llms-ctx-full.txt](llms-ctx-full.txt) (expanded) · [FAQ.md](FAQ.md) (Q&A) · [AGENTS.md](AGENTS.md) (agent rules)
+> **Machines start here:** [llms-index.json](llms-index.json) (structured) · [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) · [FAQ.md](public/FAQ.md) (Q&A) · [AGENTS.md](public/AGENTS.md) (agent rules)
 
 Mark Siazon ships end-to-end: research and UX flows → design systems → React/Next.js/Flutter/Kotlin → APIs and Web3 proofs → deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
@@ -13,7 +13,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 - GitHub profile README (this repo): https://github.com/Iron-Mark/Iron-Mark
 - GitHub account: https://github.com/Iron-Mark
 - Secondary GitHub: https://github.com/mark-siazon
-- Full LLM context (this repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+- Full LLM context (this repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - Full LLM context (portfolio): https://www.marksiazon.dev/llms-full.txt
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
@@ -25,7 +25,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Hire & contact
 
-- Recruiter brief (repo): [RECRUITER.md](RECRUITER.md)
+- Recruiter brief (repo): [RECRUITER.md](public/RECRUITER.md)
 - Recruiter brief (live): https://www.marksiazon.dev/recruiter
 - Contact form: https://www.marksiazon.dev/contact
 - Email: marksiazon.dev@gmail.com
@@ -66,15 +66,15 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Tech stack
 
-- **Full reference (100+ tools, icons):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
+- **Full reference (100+ tools, icons):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - **Core stack on profile README:** React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
 - **Domains in STACK.md:** Web · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-assisted development workflow
 
 ## FAQ
 
-- [FAQ.md](FAQ.md): 15+ question/answer pairs for hiring, projects, stack, and citation
-- [PROOF.md](PROOF.md): README claims mapped to verification URLs
-- [HOW-TO-CITE.md](HOW-TO-CITE.md): Citation guide for humans and AI
+- [FAQ.md](public/FAQ.md): 15+ question/answer pairs for hiring, projects, stack, and citation
+- [PROOF.md](public/PROOF.md): README claims mapped to verification URLs
+- [HOW-TO-CITE.md](public/HOW-TO-CITE.md): Citation guide for humans and AI
 
 ## Writing
 
@@ -100,12 +100,23 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 
 ## Machine-readable indexes
 
-### This repo
+### Repo root (crawler entrypoints)
 - **Structured entity index (JSON):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- LLM full context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
-- **Full tech stack (icons + doc links):** https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
+- LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
 - Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
+- Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
+
+### public/ (content)
+- **Full LLM context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
+- **Expanded context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+- **FAQ.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
+- **STACK.md (112 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- Schema.org: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+
+### src/ (optional MCP server)
+- MCP docs: https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md
+- HTTP endpoint (self-hosted): `http://HOST:8000/mcp`
 
 ### Portfolio
 - Sitemap: https://www.marksiazon.dev/sitemap.xml
@@ -116,12 +127,12 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 
 ## Optional
 
-- [STACK.md](STACK.md): Full 112-tool stack with icons — skip for short hiring context
-- [mcp-server/README.md](mcp-server/README.md): Optional MCP server (tools, resources, prompts for agents)
-- [LINK_QA.md](LINK_QA.md): Internal link audit report
-- [LICENSE.md](LICENSE.md): Usage terms for README, indexes, and original assets
-- [CITATION.cff](CITATION.cff): Academic/software citation metadata
-- [schema/person.jsonld](schema/person.jsonld): Schema.org JSON-LD entity graph
-- [schema/ENTITY.md](schema/ENTITY.md): Canonical @id map
-- [schema/WIKIDATA.md](schema/WIKIDATA.md): Wikidata item creation guide
-- [PROFILE.md](PROFILE.md): Plain markdown profile mirror (no HTML tables)
+- [STACK.md](public/STACK.md): Full 112-tool stack with icons — skip for short hiring context
+- [src/mcp-server/README.md](src/mcp-server/README.md): Optional MCP server (tools, resources, prompts for agents)
+- [docs/internal/LINK_QA.md](docs/internal/LINK_QA.md): Internal link audit report
+- [LICENSE.md](public/LICENSE.md): Usage terms for README, indexes, and original assets
+- [CITATION.cff](public/CITATION.cff): Academic/software citation metadata
+- [person.jsonld](public/schema/person.jsonld): Schema.org JSON-LD entity graph
+- [schema/ENTITY.md](public/schema/ENTITY.md): Canonical @id map
+- [schema/WIKIDATA.md](public/schema/WIKIDATA.md): Wikidata item creation guide
+- [PROFILE.md](public/PROFILE.md): Plain markdown profile mirror (no HTML tables)

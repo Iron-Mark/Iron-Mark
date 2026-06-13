@@ -46,17 +46,14 @@ Allow: /
 # --- Common crawlers (explicit allow for index files) ---
 User-agent: CCBot
 Allow: /llms.txt
-Allow: /llms-full.txt
 Allow: /llms-index.json
-Allow: /llms-ctx-full.txt
-Allow: /FAQ.md
-Allow: /STACK.md
+Allow: /public/
+Allow: /
 
 User-agent: Bytespider
 Allow: /llms.txt
-Allow: /llms-full.txt
 Allow: /llms-index.json
-Allow: /FAQ.md
+Allow: /public/
 
 # --- Sitemaps ---
 Sitemap: https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml

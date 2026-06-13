@@ -4,15 +4,15 @@ Portfolio website: https://www.marksiazon.dev/#website
 GitHub profile page: https://github.com/Iron-Mark/Iron-Mark#profilepage
 GitHub profile index: https://github.com/Iron-Mark/Iron-Mark#website
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/#website
-FAQ document: https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md#faq
+FAQ document: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq
 Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-Entity guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/ENTITY.md
-Wikidata: pending — see https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/WIKIDATA.md
+Entity guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/ENTITY.md
+Wikidata: pending — see https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/WIKIDATA.md
 
 /* FAQ & AEO */
-GitHub FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md
+GitHub FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 Portfolio contact FAQ: https://www.marksiazon.dev/contact#faq
-FAQ cross-link table (for portfolio llms.txt): portfolio-sync/faq-crosslinks.md in repo
+FAQ cross-link table (for portfolio llms.txt): src/portfolio-sync/faq-crosslinks.md in repo
 Answer snippets (JSON): llms-index.json → aeo.answerSnippets
 
 /* TEAM */
@@ -80,16 +80,16 @@ Lab: https://www.marksiazon.dev/lab
 
 /* MACHINE-READABLE */
 Structured index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-LLM expanded context: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-ctx-full.txt
-FAQ (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md
-Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/RECRUITER.md
-Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/AGENTS.md
-MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md
-Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/person.jsonld
+LLM expanded context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+FAQ (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
+Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
+Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md
+MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md
+Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
 LLM index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
-Full tech stack (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md
-LLM full context (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt
+Full tech stack (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+LLM full context (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 Robots (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
 Sitemap (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
 LLM index (portfolio): https://www.marksiazon.dev/llms.txt

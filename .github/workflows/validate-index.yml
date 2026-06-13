@@ -14,13 +14,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Validate llms-index and assets
-        run: python3 scripts/validate_index.py
+        run: python3 src/scripts/validate_index.py
 
       - name: Regenerate llms-ctx-full and check drift
         run: |
-          python3 scripts/generate_llms_ctx.py
-          git diff --exit-code llms-ctx-full.txt || (
-            echo "::error::llms-ctx-full.txt is out of date — run scripts/generate_llms_ctx.py"
+          python3 src/scripts/generate_llms_ctx.py
+          git diff --exit-code public/llms-ctx-full.txt || (
+            echo "::error::public/llms-ctx-full.txt is out of date — run src/scripts/generate_llms_ctx.py"
             exit 1
           )
 

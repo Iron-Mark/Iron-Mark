@@ -2,8 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
   "updated": "2026-06-12",
-  "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/LICENSE.md",
-  "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/HOW-TO-CITE.md",
+  "contentRoot": "public/",
+  "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+  "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
   "entity": {
     "@type": "Person",
     "@id": "https://www.marksiazon.dev/#person",
@@ -39,11 +40,11 @@
     "githubProfilePage": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
     "githubProfileIndex": "https://github.com/Iron-Mark/Iron-Mark#website",
     "githubPagesMirror": "https://iron-mark.github.io/Iron-Mark/#website",
-    "faqDocument": "https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md#faq",
+    "faqDocument": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
     "structuredIndex": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
     "wikidata": null,
-    "wikidataGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/WIKIDATA.md",
-    "entityGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/ENTITY.md"
+    "wikidataGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/WIKIDATA.md",
+    "entityGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/ENTITY.md"
   },
   "availability": {
     "status": "open",
@@ -63,30 +64,33 @@
   "canonical": {
     "portfolio": "https://www.marksiazon.dev",
     "githubProfileReadme": "https://github.com/Iron-Mark/Iron-Mark",
-    "techStack": "https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md",
+    "techStack": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
     "proofMatrix": "https://www.marksiazon.dev/proof"
   },
   "machineReadable": {
     "repo": {
       "llmsTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt",
-      "llmsFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-full.txt",
+      "llmsFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt",
       "llmsIndexJson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
-      "llmsCtxFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-ctx-full.txt",
-      "faqMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/FAQ.md",
-      "recruiterMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/RECRUITER.md",
-      "proofMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/PROOF.md",
-      "schemaPerson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/schema/person.jsonld",
-      "agentsMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/AGENTS.md",
+      "llmsCtxFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt",
+      "faqMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "recruiterMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md",
+      "proofMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "schemaPerson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld",
+      "agentsMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md",
       "humansTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt",
-      "stackMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md",
+      "stackMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
       "sitemap": "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml",
       "robots": "https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt"
     },
     "mcpServer": {
-      "docs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/README.md",
-      "configExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/mcp-server/mcp-config.example.json",
+      "docs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md",
+      "configExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config.example.json",
+      "configHttpExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config-http.example.json",
       "command": "iron-mark-profile-mcp",
-      "transport": "stdio"
+      "transport": ["stdio", "streamable-http"],
+      "httpEndpoint": "/mcp",
+      "defaultPort": 8000
     },
     "portfolio": {
       "llmsTxt": "https://www.marksiazon.dev/llms.txt",
@@ -270,7 +274,7 @@
       },
       {
         "question": "Where is Mark Siazon's full tech stack?",
-        "answer": "Full stack reference with 112 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/STACK.md"
+        "answer": "Full stack reference with 112 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md"
       },
       {
         "question": "How do I verify Mark Siazon's claims?",

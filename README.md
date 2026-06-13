@@ -7,6 +7,8 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
+<p align="center"><sub>Index layout: <a href="docs/STRUCTURE.md">docs/STRUCTURE.md</a> · content in <code>public/</code> · MCP in <code>src/mcp-server/</code></sub></p>
+
 <p align="center"><sub>Product designer &amp; full-stack developer in the Philippines · proof-backed AI, mobile &amp; Web3 products · <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></p>
 
 <p align="center">
@@ -25,8 +27,8 @@
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
-  <a href="RECRUITER.md" aria-label="Recruiter brief markdown in this repo"><img src="https://img.shields.io/badge/Recruiter_MD-repo-374151?style=for-the-badge" alt="Recruiter MD in repo"/></a>
-  <a href="FAQ.md" aria-label="FAQ for search and LLM crawlers"><img src="https://img.shields.io/badge/FAQ-→-6B7280?style=for-the-badge" alt="FAQ"/></a>
+  <a href="public/RECRUITER.md" aria-label="Recruiter brief markdown in this repo"><img src="https://img.shields.io/badge/Recruiter_MD-repo-374151?style=for-the-badge" alt="Recruiter MD in repo"/></a>
+  <a href="public/FAQ.md" aria-label="FAQ for search and LLM crawlers"><img src="https://img.shields.io/badge/FAQ-→-6B7280?style=for-the-badge" alt="FAQ"/></a>
   <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
 </p>
 
@@ -209,7 +211,7 @@
 
 <h2 align="center">Tech Stack</h2>
 
-<p align="center"><sub>Core tools I ship with · <a href="STACK.md">full stack reference (100+ tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
+<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference (100+ tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
 
 <div align="center" style="overflow-x:auto;width:100%;max-width:100%">
 
@@ -276,7 +278,7 @@
     </tr>
   </table>
   </div>
-  <p align="center"><sub><a href="STACK.md">See full stack — Web · Mobile · Backend · Web3 · Game Dev · UI/UX · Creative · AI · AI workflow →</a></sub></p>
+  <p align="center"><sub><a href="public/STACK.md">See full stack — Web · Mobile · Backend · Web3 · Game Dev · UI/UX · Creative · AI · AI workflow →</a></sub></p>
 </details>
 
 ---
@@ -305,13 +307,13 @@
 
 <p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
 
-<p><strong>Tech stack:</strong> <a href="STACK.md">STACK.md</a> (full reference) · core stack on README (React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker).</p>
+<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README (React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker).</p>
 
 <p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
 
 <p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev" rel="noopener noreferrer">home</a> · <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">projects</a> · <a href="https://www.marksiazon.dev/proof" rel="noopener noreferrer">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer">achievements</a> · <a href="https://www.marksiazon.dev/writing" rel="noopener noreferrer">writing</a>.</p>
 
-<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> · <a href="llms-ctx-full.txt">llms-ctx-full.txt</a> · <a href="FAQ.md">FAQ.md</a> · <a href="RECRUITER.md">RECRUITER.md</a> · <a href="AGENTS.md">AGENTS.md</a> · <a href="mcp-server/README.md">MCP server</a> · <a href="STACK.md">STACK.md</a> · <a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a> · <a href="PROOF.md">PROOF.md</a> · <a href="schema/person.jsonld">person.jsonld</a> · <a href="humans.txt">humans.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="LICENSE.md">LICENSE</a></p>
+<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> · <a href="public/llms-ctx-full.txt">llms-ctx-full.txt</a> · <a href="public/FAQ.md">FAQ.md</a> · <a href="public/RECRUITER.md">RECRUITER.md</a> · <a href="public/AGENTS.md">AGENTS.md</a> · <a href="src/mcp-server/README.md">MCP server</a> · <a href="public/STACK.md">STACK.md</a> · <a href="llms.txt">llms.txt</a> · <a href="public/llms-full.txt">llms-full.txt</a> · <a href="public/PROOF.md">PROOF.md</a> · <a href="schema/person.jsonld">person.jsonld</a> · <a href="humans.txt">humans.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="public/LICENSE.md">LICENSE</a></p>
 
 <p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt" rel="noopener noreferrer">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt" rel="noopener noreferrer">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt" rel="noopener noreferrer">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml" rel="noopener noreferrer">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml" rel="noopener noreferrer">sitemap</a></p>
 

@@ -86,12 +86,12 @@ If README does not show on https://github.com/Iron-Mark:
 
 ## 7. Portfolio mirror (marksiazon.dev)
 
-Copy block from [portfolio-sync/marksiazon-dev-append.md](../portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Add FAQ cross-link table from [portfolio-sync/faq-crosslinks.md](../portfolio-sync/faq-crosslinks.md).
+Copy block from [src/portfolio-sync/marksiazon-dev-append.md](../src/portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Add FAQ cross-link table from [src/portfolio-sync/faq-crosslinks.md](../src/portfolio-sync/faq-crosslinks.md).
 
 Verify with:
 
 ```bash
-python3 scripts/check_portfolio_mirror.py
+python3 src/scripts/check_portfolio_mirror.py
 ```
 
 ## 9. Wikidata entity (optional, Phase 4)
@@ -103,11 +103,11 @@ Follow [schema/WIKIDATA.md](../schema/WIKIDATA.md) to create a Wikidata item. Af
 For Cursor / Claude Desktop agent access to profile tools and resources:
 
 ```bash
-pip install -e mcp-server/
-python3 scripts/test_mcp_server.py
+pip install -e src/mcp-server/
+python3 src/scripts/test_mcp_server.py
 ```
 
-Config: [mcp-server/mcp-config.example.json](../mcp-server/mcp-config.example.json) · Docs: [mcp-server/README.md](../mcp-server/README.md)
+Config: [src/mcp-server/mcp-config.example.json](../src/mcp-server/mcp-config.example.json) · Docs: [src/mcp-server/README.md](../src/mcp-server/README.md)
 
 ## 8. LinkedIn headline sync *(optional)*
 

@@ -26,12 +26,14 @@ jobs:
       - name: Build docs mirror
         run: |
           mkdir -p docs/schema
-          for f in llms.txt llms-full.txt llms-ctx-full.txt llms-index.json FAQ.md RECRUITER.md PROOF.md HOW-TO-CITE.md PROFILE.md AGENTS.md humans.txt robots.txt sitemap.xml CITATION.cff; do
+          # Root crawler entrypoints
+          for f in llms.txt llms-index.json humans.txt robots.txt sitemap.xml; do
             cp "$f" "docs/$f"
           done
-          cp schema/person.jsonld docs/schema/person.jsonld
-          cp schema/ENTITY.md docs/schema/ENTITY.md
-          cp schema/WIKIDATA.md docs/schema/WIKIDATA.md
+          # Flatten public/ into docs/ for stable Pages URLs (…/FAQ.md not …/public/FAQ.md)
+          cp public/*.md public/*.txt public/*.cff docs/ 2>/dev/null || true
+          cp -r public/schema docs/schema
+          cp docs/index.html docs/index.html.bak 2>/dev/null || true
           cat > docs/index.html <<'HTML'
           <!DOCTYPE html>
           <html lang="en">
@@ -54,6 +56,7 @@ jobs:
                 <li><a href="RECRUITER.md">RECRUITER.md</a> — recruiter brief</li>
                 <li><a href="llms.txt">llms.txt</a> — LLM manifest</li>
                 <li><a href="schema/person.jsonld">schema/person.jsonld</a> — Schema.org JSON-LD</li>
+                <li><a href="https://github.com/Iron-Mark/Iron-Mark/tree/main/src/mcp-server">MCP server</a> — optional agent tools (stdio + HTTP)</li>
               </ul>
               <h2>Citation</h2>
               <p><a href="HOW-TO-CITE.md">HOW-TO-CITE.md</a> · <a href="PROOF.md">PROOF.md</a></p>
