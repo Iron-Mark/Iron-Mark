@@ -20,7 +20,7 @@
 
 <p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Frontend-Specialist | Tech Enthusiast |<br>Multi-Hackathon Champion | AI Products, Workflows &amp; Design Systems |</sub></p>
 
-<p align="center"><sub>Open to product design · full-stack engineering · AI workflow roles · contract or full-time · Philippines &amp; remote</sub></p>
+<p align="center"><sub>Contract or full-time · Philippines &amp; remote · mobile &amp; Web3 proof · case studies &amp; live demos below</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
