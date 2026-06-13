@@ -233,7 +233,7 @@
     <td><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="36" height="36"/><br><sub>Copilot</sub></a></td>
     <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="36" height="36"/><br><sub>Claude</sub></td>
     <td><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="36" height="36"/><br><sub>Stellar</sub></a></td>
-    <td><a href="https://stellar.org/soroban" rel="noopener noreferrer"><img src="assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="36" height="36"/><br><sub>Soroban</sub></a></td>
+    <td><a href="https://celo.org/" rel="noopener noreferrer"><img src="assets/web3/celo.png" alt="Celo" width="36" height="36"/><br><sub>Celo</sub></a></td>
     <td><img src="assets/stack/python.svg" alt="Python" width="36" height="36"/><br><sub>Python</sub></td>
     <td><img src="assets/stack/supabase.svg" alt="Supabase" width="36" height="36"/><br><sub>Supabase</sub></td>
     <td><img src="assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="36" height="36" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
@@ -272,12 +272,12 @@
       <td width="11%"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></td>
       <td width="11%"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
     </tr>
-    <tr align="center"><td colspan="9"><sub><b>Web3</b> · beyond core Stellar · Soroban</sub></td></tr>
+    <tr align="center"><td colspan="9"><sub><b>Web3</b> · beyond core Stellar · Celo</sub></td></tr>
     <tr align="center">
-      <td width="11%"><a href="https://celo.org/" rel="noopener noreferrer"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
       <td width="11%"><a href="https://minipay.to/" rel="noopener noreferrer"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
       <td width="11%"><a href="https://freighter.app/" rel="noopener noreferrer"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
       <td width="11%"><a href="https://www.soliditylang.org/" rel="noopener noreferrer"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
+      <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
     </tr>
   </table>
   </div>
@@ -310,7 +310,7 @@
 
 <p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
 
-<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README grouped by domain — Design (Figma); Web (React, Next.js, TypeScript, Tailwind); Mobile (Flutter, Kotlin); AI workflow (Cursor, Copilot, Claude); Web3 (Stellar, Soroban); Backend &amp; ship (Python, Supabase, CI/CD, Docker).</p>
+<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README grouped by domain — Design (Figma); Web (React, Next.js, TypeScript, Tailwind); Mobile (Flutter, Kotlin); AI workflow (Cursor, Copilot, Claude); Web3 (Stellar, Celo); Backend &amp; ship (Python, Supabase, CI/CD, Docker).</p>
 
 <p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
 

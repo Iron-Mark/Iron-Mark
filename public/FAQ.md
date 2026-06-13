@@ -18,7 +18,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile and Wear 
 
 ## Where is Mark Siazon's full tech stack?
 
-113 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md. Core stack on the profile README (16 tools, domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind CSS; Mobile — Flutter, Kotlin; AI workflow — Cursor, GitHub Copilot, Claude; Web3 — Stellar, Soroban; Backend & ship — Python, Supabase, GitHub Actions CI/CD, Docker.
+113 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md. Core stack on the profile README (16 tools, domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind CSS; Mobile — Flutter, Kotlin; AI workflow — Cursor, GitHub Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, GitHub Actions CI/CD, Docker.
 
 ## How do I verify Mark Siazon's claims?
 

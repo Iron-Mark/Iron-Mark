@@ -158,13 +158,13 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 ## What is Mark Siazon's tech stack?
 
-**Key takeaway:** 113 tools in STACK.md · core 16 on README (domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind; Mobile — Flutter, Kotlin; AI workflow — Cursor, Copilot, Claude; Web3 — Stellar, Soroban; Backend & ship — Python, Supabase, CI/CD, Docker
+**Key takeaway:** 113 tools in STACK.md · core 16 on README (domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind; Mobile — Flutter, Kotlin; AI workflow — Cursor, Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, CI/CD, Docker
 
 ## Tech stack (summary — full reference in STACK.md)
 
 Canonical full stack with icons and getting-started links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 
-Core stack on README (16 tools, domain-grouped): Figma · React · Next.js · TypeScript · Tailwind CSS · Flutter · Kotlin · Cursor · GitHub Copilot · Claude · Stellar · Soroban · Python · Supabase · GitHub Actions CI/CD · Docker.
+Core stack on README (16 tools, domain-grouped): Figma · React · Next.js · TypeScript · Tailwind CSS · Flutter · Kotlin · Cursor · GitHub Copilot · Claude · Stellar · Celo · Python · Supabase · GitHub Actions CI/CD · Docker.
 
 Tools indexed in STACK.md (113 icons, grouped by domain):
 
