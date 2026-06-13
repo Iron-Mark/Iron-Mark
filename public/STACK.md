@@ -1,10 +1,10 @@
 # Tech Stack, Tools & Fields
 
-<!-- SEO/LLM: Mark Siazon | @Iron-Mark | tech stack | web development | React | Next.js | TypeScript | Tailwind | Flutter | Kotlin | Wear OS | Python | PyTorch | LangChain | Web3 | Stellar | Celo | Solidity | Hardhat | MiniPay | MetaMask | Figma | UI/UX | game dev | Unity | Godot | AI workflow | Cursor | GitHub Copilot | Claude Code | design systems | full-stack | product engineer | Philippines | marksiazon.dev -->
+<!-- SEO/LLM: Mark Siazon | @Iron-Mark | tech stack | web development | React | Next.js | TypeScript | Tailwind | Flutter | Kotlin | Wear OS | Python | PyTorch | LangChain | Web3 | Stellar | Soroban | Celo | Solidity | Hardhat | MiniPay | MetaMask | Figma | UI/UX | game dev | Unity | Godot | AI workflow | Cursor | GitHub Copilot | Claude Code | design systems | full-stack | product engineer | Philippines | marksiazon.dev -->
 
 <p align="center"><strong>Mark Siazon (@Iron-Mark)</strong> — full technology reference for the <a href="README.md">GitHub profile README</a>.</p>
 
-<p align="center"><sub>Core stack (12 tools) on <a href="README.md#tech-stack">README</a> · Proof-backed projects at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
+<p align="center"><sub>Core stack (16 tools, domain-grouped) on <a href="README.md#tech-stack">README</a> · Proof-backed projects at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
 
 <p align="center"><sub>(Things I know and Like to learn)</sub></p>
 
@@ -107,6 +107,7 @@
     <td width="11%"><a href="https://morph.network/" rel="noopener noreferrer"><img src="../assets/web3/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="11%"><a href="https://celo.org/" rel="noopener noreferrer"><img src="../assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
     <td width="11%"><a href="https://stellar.org/" rel="noopener noreferrer"><img src="../assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
+    <td width="11%"><a href="https://soroban.stellar.org/" rel="noopener noreferrer"><img src="../assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="40" height="40"/><br><sub>Soroban</sub></a></td>
     <td width="11%"><a href="https://freighter.app/" rel="noopener noreferrer"><img src="../assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
     <td width="11%"><a href="https://minipay.to/" rel="noopener noreferrer"><img src="../assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="../assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
@@ -114,7 +115,7 @@
   <tr align="center" id="deploy-infrastructure"><td colspan="9"><sub><b>Deploy &amp; Infrastructure</b> · source control → CI → containers → hosts that get proofs live</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="../assets/stack/git.svg" alt="Git" width="40" height="40"/><br><sub>Git</sub></td>
-    <td width="11%"><img src="../assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
+    <td width="11%"><img src="../assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="40" height="40" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
     <td width="11%"><img src="../assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
     <td width="11%"><img src="../assets/stack/vercel.svg" alt="Vercel" width="40" height="40"/><br><sub>Vercel</sub></td>
     <td width="11%"><img src="../assets/stack/netlify.svg" alt="Netlify" width="40" height="40"/><br><sub>Netlify</sub></td>

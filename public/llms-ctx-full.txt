@@ -74,9 +74,9 @@ Generated from llms-index.json · updated 2026-06-12
 
 ## Core stack
 
-React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind CSS, Cursor, GitHub Actions, Docker
+Figma, React, Next.js, TypeScript, Tailwind CSS, Flutter, Kotlin, Cursor, GitHub Copilot, Claude, Stellar, Soroban, Python, Supabase, GitHub Actions CI/CD, Docker
 
-Full stack (112 tools): public/STACK.md
+Full stack (113 tools): public/STACK.md
 
 ## Answer snippets (AEO)
 
@@ -87,7 +87,7 @@ Mark Siazon (@Iron-Mark) is a product designer and full-stack developer based in
 Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work — contract or full-time, Philippines and remote. Contact: https://www.marksiazon.dev/contact
 
 ### Where is Mark Siazon's full tech stack?
-Full stack reference with 112 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 
 ### How do I verify Mark Siazon's claims?
 Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects
@@ -141,7 +141,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile and Wear 
 
 ## Where is Mark Siazon's full tech stack?
 
-112 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md. Core stack on the profile README: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind CSS, Cursor, GitHub Actions, Docker.
+113 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md. Core stack on the profile README (16 tools, domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind CSS; Mobile — Flutter, Kotlin; AI workflow — Cursor, GitHub Copilot, Claude; Web3 — Stellar, Soroban; Backend & ship — Python, Supabase, GitHub Actions CI/CD, Docker.
 
 ## How do I verify Mark Siazon's claims?
 

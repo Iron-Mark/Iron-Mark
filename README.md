@@ -219,29 +219,52 @@
   <colgroup>
     <col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/>
   </colgroup>
-  <tr align="center"><td colspan="6"><sub><b>Core stack</b> · product design → ship → deploy</sub></td></tr>
+  <tr align="center"><td colspan="6"><sub><b>Core stack</b> · design → build → ship · aligned to featured work</sub></td></tr>
+  <tr align="center"><td colspan="6"><sub><b>Design</b></sub></td></tr>
   <tr align="center">
-    <td width="11%"><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
-    <td width="11%"><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td width="11%"><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TypeScript</sub></td>
-    <td width="11%"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
-    <td width="11%"><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
-    <td width="11%"><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td colspan="6"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
   </tr>
+  <tr align="center"><td colspan="6"><sub><b>Web</b></sub></td></tr>
   <tr align="center">
-    <td width="11%"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></td>
-    <td width="11%"><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td width="11%"><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
-    <td width="11%"><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
-    <td width="11%"><img src="assets/stack/githubactions.svg" alt="GitHub Actions" width="40" height="40"/><br><sub style="white-space:nowrap">GitHub&nbsp;Actions</sub></td>
-    <td width="11%"><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
+    <td><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
+    <td><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
+    <td><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TypeScript</sub></td>
+    <td><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr align="center"><td colspan="6"><sub><b>Mobile</b></sub></td></tr>
+  <tr align="center">
+    <td><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
+    <td><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
+    <td colspan="4"></td>
+  </tr>
+  <tr align="center"><td colspan="6"><sub><b>AI workflow</b></sub></td></tr>
+  <tr align="center">
+    <td><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
+    <td><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>Copilot</sub></a></td>
+    <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
+    <td colspan="3"></td>
+  </tr>
+  <tr align="center"><td colspan="6"><sub><b>Web3</b></sub></td></tr>
+  <tr align="center">
+    <td><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
+    <td><a href="https://soroban.stellar.org/" rel="noopener noreferrer"><img src="assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="40" height="40"/><br><sub>Soroban</sub></a></td>
+    <td colspan="4"></td>
+  </tr>
+  <tr align="center"><td colspan="6"><sub><b>Backend &amp; ship</b></sub></td></tr>
+  <tr align="center">
+    <td><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
+    <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
+    <td><img src="assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="40" height="40" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
+    <td><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
+    <td colspan="2"></td>
   </tr>
 </table>
 
 </div>
 
 <details align="center">
-  <summary><sub>Preview: Web · Mobile · AI workflow · Web3</sub></summary>
+  <summary><sub>Extended stack · deeper cuts per domain</sub></summary>
   <div align="center" style="overflow-x:auto;width:100%;max-width:100%;margin-top:12px">
   <table width="100%">
     <colgroup>
@@ -255,26 +278,26 @@
       <td width="11%"><img src="assets/stack/javascript.svg" alt="JavaScript" width="40" height="40"/><br><sub>JS</sub></td>
       <td width="11%"><img src="assets/stack/vitejs.svg" alt="Vite" width="40" height="40"/><br><sub>Vite</sub></td>
     </tr>
-    <tr align="center"><td colspan="9"><sub><b>Mobile</b></sub></td></tr>
+    <tr align="center"><td colspan="9"><sub><b>Mobile</b> · beyond core Flutter · Kotlin</sub></td></tr>
     <tr align="center">
-      <td width="11%"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
       <td width="11%"><img src="assets/stack/wearos.svg" alt="Wear OS" width="40" height="40"/><br><sub>Wear OS</sub></td>
       <td width="11%"><img src="assets/stack/expo.svg" alt="Expo" width="40" height="40"/><br><sub>Expo</sub></td>
       <td width="11%"><img src="assets/stack/dart.svg" alt="Dart" width="40" height="40"/><br><sub>Dart</sub></td>
+      <td width="11%"><img src="assets/stack/reactnative.svg" alt="React Native" width="40" height="40"/><br><sub style="white-space:nowrap">React&nbsp;Native</sub></td>
     </tr>
-    <tr align="center"><td colspan="9"><sub><b>AI workflow</b></sub></td></tr>
+    <tr align="center"><td colspan="9"><sub><b>AI workflow</b> · beyond core Cursor · Copilot · Claude</sub></td></tr>
     <tr align="center">
-      <td width="11%"><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>Copilot</sub></a></td>
-      <td width="11%"><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
       <td width="11%"><img src="assets/ai-workflow/chatgpt.svg" alt="ChatGPT" width="40" height="40"/><br><sub>ChatGPT</sub></td>
       <td width="11%"><img src="assets/ai-workflow/gemini.svg" alt="Gemini" width="40" height="40"/><br><sub>Gemini</sub></td>
+      <td width="11%"><img src="assets/ai-workflow/claudecode.svg" alt="Claude Code" width="40" height="40"/><br><sub style="white-space:nowrap">Claude&nbsp;Code</sub></td>
+      <td width="11%"><img src="assets/ai-workflow/v0.svg" alt="v0" width="40" height="40"/><br><sub>v0</sub></td>
     </tr>
-    <tr align="center"><td colspan="9"><sub><b>Web3</b></sub></td></tr>
+    <tr align="center"><td colspan="9"><sub><b>Web3</b> · beyond core Stellar · Soroban</sub></td></tr>
     <tr align="center">
-      <td width="11%"><a href="https://www.soliditylang.org/" rel="noopener noreferrer"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
       <td width="11%"><a href="https://celo.org/" rel="noopener noreferrer"><img src="assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
-      <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
+      <td width="11%"><a href="https://minipay.to/" rel="noopener noreferrer"><img src="assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
       <td width="11%"><a href="https://freighter.app/" rel="noopener noreferrer"><img src="assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
+      <td width="11%"><a href="https://www.soliditylang.org/" rel="noopener noreferrer"><img src="assets/stack/solidity.svg" alt="Solidity" width="40" height="40"/><br><sub>Solidity</sub></a></td>
     </tr>
   </table>
   </div>
@@ -307,7 +330,7 @@
 
 <p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
 
-<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README (React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker).</p>
+<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README grouped by domain — Design (Figma); Web (React, Next.js, TypeScript, Tailwind); Mobile (Flutter, Kotlin); AI workflow (Cursor, Copilot, Claude); Web3 (Stellar, Soroban); Backend &amp; ship (Python, Supabase, CI/CD, Docker).</p>
 
 <p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
 
@@ -317,6 +340,6 @@
 
 <p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt" rel="noopener noreferrer">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt" rel="noopener noreferrer">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt" rel="noopener noreferrer">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml" rel="noopener noreferrer">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml" rel="noopener noreferrer">sitemap</a></p>
 
-<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, tech stack, STACK.md, llms-index.json, AEO, GEO, SEO, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, Web3, Stellar, Celo, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
+<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, tech stack, STACK.md, llms-index.json, AEO, GEO, SEO, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, Cursor, GitHub Copilot, Claude, trust and safety, Web3, Stellar, Soroban, Celo, MiniPay, CI/CD, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
 
 </details>

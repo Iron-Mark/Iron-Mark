@@ -209,22 +209,26 @@
     }
   ],
   "coreStack": [
+    "Figma",
     "React",
     "Next.js",
     "TypeScript",
-    "Figma",
-    "Flutter",
-    "Python",
-    "Stellar",
-    "Supabase",
     "Tailwind CSS",
+    "Flutter",
+    "Kotlin",
     "Cursor",
-    "GitHub Actions",
+    "GitHub Copilot",
+    "Claude",
+    "Stellar",
+    "Soroban",
+    "Python",
+    "Supabase",
+    "GitHub Actions CI/CD",
     "Docker"
   ],
   "stackReference": {
     "file": "STACK.md",
-    "toolCount": 112,
+    "toolCount": 113,
     "domains": [
       "Web",
       "Mobile",
@@ -274,7 +278,7 @@
       },
       {
         "question": "Where is Mark Siazon's full tech stack?",
-        "answer": "Full stack reference with 112 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md"
+        "answer": "Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md"
       },
       {
         "question": "How do I verify Mark Siazon's claims?",
@@ -331,6 +335,6 @@
     ["Mark Siazon", "built", "Stellaroid Earn"],
     ["Stellaroid Earn", "ranked", "Stellar bootcamp Top 5 of 105"],
     ["Mark Siazon", "maintains", "STACK.md"],
-    ["STACK.md", "lists", "112 tools"]
+    ["STACK.md", "lists", "113 tools"]
   ]
 }

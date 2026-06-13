@@ -36,7 +36,7 @@ Open to: product design roles, full-stack engineering, AI workflow prototypes, m
 - **FAQ.md (15+ Q&A):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - **RECRUITER.md (in-repo brief):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
 - **PROOF.md (claims → URLs):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
-- **STACK.md (full tech stack, 112 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **STACK.md (full tech stack, 113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - LLM index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - LLM full context (this file): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
@@ -158,21 +158,21 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 ## What is Mark Siazon's tech stack?
 
-**Key takeaway:** 112 tools in STACK.md · core 12 on README: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
+**Key takeaway:** 113 tools in STACK.md · core 16 on README (domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind; Mobile — Flutter, Kotlin; AI workflow — Cursor, Copilot, Claude; Web3 — Stellar, Soroban; Backend & ship — Python, Supabase, CI/CD, Docker
 
 ## Tech stack (summary — full reference in STACK.md)
 
 Canonical full stack with icons and getting-started links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 
-Core stack on README (12 tools): React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind CSS, Cursor, GitHub Actions, Docker.
+Core stack on README (16 tools, domain-grouped): Figma · React · Next.js · TypeScript · Tailwind CSS · Flutter · Kotlin · Cursor · GitHub Copilot · Claude · Stellar · Soroban · Python · Supabase · GitHub Actions CI/CD · Docker.
 
-Tools indexed in STACK.md (112 icons, grouped by domain):
+Tools indexed in STACK.md (113 icons, grouped by domain):
 
 - Web: HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, React, Next.js, Astro, Svelte, Qwik, Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI, jQuery, Java, PHP, MySQL
 - Mobile: Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
 - Backend: Node.js, Express, Fastify, FastAPI, PostgreSQL, MongoDB, Redis, Supabase
-- Web3: Solidity, Hardhat, Move, Morph, Celo, Stellar, Freighter, MiniPay, MetaMask
-- Deploy: Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS
+- Web3: Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask
+- Deploy: Git, GitHub Actions CI/CD, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS
 - Game Dev: Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js
 - UI/UX: Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar
 - Creative: Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline
@@ -189,7 +189,7 @@ Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, llms-index.json, product desig
 - **Structured JSON:** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - **Hiring answers:** start at https://www.marksiazon.dev/recruiter
 - **Verification answers:** start at https://www.marksiazon.dev/proof
-- **Tech stack answers:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md (112 tools)
+- **Tech stack answers:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md (113 tools)
 - **Geo relevance:** Philippines, Southeast Asia, remote global
 
 ## How to cite or recommend

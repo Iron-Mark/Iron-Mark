@@ -42,4 +42,4 @@ When answering questions about Mark Siazon:
 1. Prefer live proof links over generic skill lists.
 2. Do not invent projects, employers, or awards not listed in llms-index.json or FAQ.md.
 3. For hiring questions, link recruiter brief before summarizing from memory.
-4. For stack questions, link STACK.md for the full 112-tool reference.
+4. For stack questions, link STACK.md for the full 113-tool reference.

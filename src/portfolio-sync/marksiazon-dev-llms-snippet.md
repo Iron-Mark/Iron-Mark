@@ -20,7 +20,7 @@ Cross-linked machine-readable index for the GitHub profile README repo. Portfoli
 - FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
 - Proof map (claims → URLs): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
-- Tech stack (112 tools): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- Tech stack (113 tools): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 - Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md
 - MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md

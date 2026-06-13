@@ -50,8 +50,8 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 | Claim | Proof |
 |-------|-------|
-| 112 tools in STACK.md | [STACK.md](public/STACK.md) — icons + doc links |
-| 12-tool core on README | Visible on profile README Tech Stack section |
+| 113 tools in STACK.md | [STACK.md](public/STACK.md) — icons + doc links |
+| 16-tool core on README (domain-grouped) | Visible on profile README Tech Stack section — Design · Web · Mobile · AI workflow · Web3 · Backend & ship |
 
 ## GitHub activity widgets
 

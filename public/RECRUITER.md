@@ -45,11 +45,11 @@ Product designer and full-stack developer in the Philippines who ships **proof-b
 
 Details: https://www.marksiazon.dev/achievements
 
-## Core stack (12 tools on profile)
+## Core stack (16 tools on profile, domain-grouped)
 
-React · Next.js · TypeScript · Figma · Flutter · Python · Stellar · Supabase · Tailwind CSS · Cursor · GitHub Actions · Docker
+**Design:** Figma · **Web:** React · Next.js · TypeScript · Tailwind CSS · **Mobile:** Flutter · Kotlin · **AI workflow:** Cursor · GitHub Copilot · Claude · **Web3:** Stellar · Soroban · **Backend & ship:** Python · Supabase · CI/CD (GitHub Actions) · Docker
 
-Full reference (112 tools): [STACK.md](public/STACK.md)
+Full reference (113 tools): [STACK.md](public/STACK.md)
 
 ## Contact
 

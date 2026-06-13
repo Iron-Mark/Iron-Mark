@@ -38,7 +38,7 @@ Mark Siazon is a product designer and full-stack developer based in the Philippi
 ## Tech stack
 
 Core: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker  
-Full (112 tools): [STACK.md](STACK.md)
+Full (113 tools): [STACK.md](STACK.md)
 
 ## Machine-readable
 

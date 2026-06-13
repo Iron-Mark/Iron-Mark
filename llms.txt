@@ -111,7 +111,7 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - **Full LLM context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - **Expanded context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - **FAQ.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
-- **STACK.md (112 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **STACK.md (113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - Schema.org: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 
 ### src/ (optional MCP server)
@@ -127,7 +127,7 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 
 ## Optional
 
-- [STACK.md](public/STACK.md): Full 112-tool stack with icons — skip for short hiring context
+- [STACK.md](public/STACK.md): Full 113-tool stack with icons — skip for short hiring context
 - [src/mcp-server/README.md](src/mcp-server/README.md): Optional MCP server (tools, resources, prompts for agents)
 - [docs/internal/LINK_QA.md](docs/internal/LINK_QA.md): Internal link audit report
 - [LICENSE.md](public/LICENSE.md): Usage terms for README, indexes, and original assets
