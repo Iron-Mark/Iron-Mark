@@ -209,53 +209,35 @@
 
 <h2 align="center">Tech Stack</h2>
 
-<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference (100+ tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
+<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference (113 tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
 
 <div align="center" style="overflow-x:auto;width:100%;max-width:100%">
 
 <table width="100%">
   <colgroup>
-    <col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/><col width="16.67%"/>
+    <col width="12.5%"/><col width="12.5%"/><col width="12.5%"/><col width="12.5%"/>
+    <col width="12.5%"/><col width="12.5%"/><col width="12.5%"/><col width="12.5%"/>
   </colgroup>
-  <tr align="center"><td colspan="6"><sub><b>Core stack</b> · design → build → ship · aligned to featured work</sub></td></tr>
-  <tr align="center"><td colspan="6"><sub><b>Design</b></sub></td></tr>
+  <tr align="center"><td colspan="8"><sub><b>Core stack</b> · <b>Design</b> · <b>Web</b> · <b>Mobile</b> · <b>AI workflow</b> · <b>Web3</b> · <b>Ship</b></sub></td></tr>
   <tr align="center">
-    <td colspan="6"><img src="assets/stack/figma.svg" alt="Figma" width="40" height="40"/><br><sub>Figma</sub></td>
+    <td><img src="assets/stack/figma.svg" alt="Figma" width="36" height="36"/><br><sub>Figma</sub></td>
+    <td><img src="assets/stack/react.svg" alt="React" width="36" height="36"/><br><sub>React</sub></td>
+    <td><img src="assets/stack/nextjs.svg" alt="Next.js" width="36" height="36"/><br><sub>Next.js</sub></td>
+    <td><img src="assets/stack/typescript.svg" alt="TypeScript" width="36" height="36"/><br><sub>TypeScript</sub></td>
+    <td><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="36" height="36"/><br><sub>Tailwind</sub></a></td>
+    <td><img src="assets/stack/flutter.svg" alt="Flutter" width="36" height="36"/><br><sub>Flutter</sub></td>
+    <td><img src="assets/stack/kotlin.svg" alt="Kotlin" width="36" height="36"/><br><sub>Kotlin</sub></td>
+    <td><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="36" height="36"/><br><sub>Cursor</sub></a></td>
   </tr>
-  <tr align="center"><td colspan="6"><sub><b>Web</b></sub></td></tr>
   <tr align="center">
-    <td><img src="assets/stack/react.svg" alt="React" width="40" height="40"/><br><sub>React</sub></td>
-    <td><img src="assets/stack/nextjs.svg" alt="Next.js" width="40" height="40"/><br><sub>Next.js</sub></td>
-    <td><img src="assets/stack/typescript.svg" alt="TypeScript" width="40" height="40"/><br><sub>TypeScript</sub></td>
-    <td><a href="https://tailwindcss.com/docs/installation/using-vite" rel="noopener noreferrer"><img src="assets/stack/tailwindcss.svg" alt="Tailwind CSS" width="40" height="40"/><br><sub>Tailwind</sub></a></td>
-    <td colspan="2"></td>
-  </tr>
-  <tr align="center"><td colspan="6"><sub><b>Mobile</b></sub></td></tr>
-  <tr align="center">
-    <td><img src="assets/stack/flutter.svg" alt="Flutter" width="40" height="40"/><br><sub>Flutter</sub></td>
-    <td><img src="assets/stack/kotlin.svg" alt="Kotlin" width="40" height="40"/><br><sub>Kotlin</sub></td>
-    <td colspan="4"></td>
-  </tr>
-  <tr align="center"><td colspan="6"><sub><b>AI workflow</b></sub></td></tr>
-  <tr align="center">
-    <td><a href="https://cursor.com/docs/get-started/quickstart" rel="noopener noreferrer"><img src="assets/ai-workflow/cursor.svg" alt="Cursor" width="40" height="40"/><br><sub>Cursor</sub></a></td>
-    <td><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="40" height="40"/><br><sub>Copilot</sub></a></td>
-    <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="40" height="40"/><br><sub>Claude</sub></td>
-    <td colspan="3"></td>
-  </tr>
-  <tr align="center"><td colspan="6"><sub><b>Web3</b></sub></td></tr>
-  <tr align="center">
-    <td><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
-    <td><a href="https://soroban.stellar.org/" rel="noopener noreferrer"><img src="assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="40" height="40"/><br><sub>Soroban</sub></a></td>
-    <td colspan="4"></td>
-  </tr>
-  <tr align="center"><td colspan="6"><sub><b>Backend &amp; ship</b></sub></td></tr>
-  <tr align="center">
-    <td><img src="assets/stack/python.svg" alt="Python" width="40" height="40"/><br><sub>Python</sub></td>
-    <td><img src="assets/stack/supabase.svg" alt="Supabase" width="40" height="40"/><br><sub>Supabase</sub></td>
-    <td><img src="assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="40" height="40" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
-    <td><img src="assets/stack/docker.svg" alt="Docker" width="40" height="40"/><br><sub>Docker</sub></td>
-    <td colspan="2"></td>
+    <td><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="36" height="36"/><br><sub>Copilot</sub></a></td>
+    <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="36" height="36"/><br><sub>Claude</sub></td>
+    <td><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="36" height="36"/><br><sub>Stellar</sub></a></td>
+    <td><a href="https://soroban.stellar.org/" rel="noopener noreferrer"><img src="assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="36" height="36"/><br><sub>Soroban</sub></a></td>
+    <td><img src="assets/stack/python.svg" alt="Python" width="36" height="36"/><br><sub>Python</sub></td>
+    <td><img src="assets/stack/supabase.svg" alt="Supabase" width="36" height="36"/><br><sub>Supabase</sub></td>
+    <td><img src="assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="36" height="36" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
+    <td><img src="assets/stack/docker.svg" alt="Docker" width="36" height="36"/><br><sub>Docker</sub></td>
   </tr>
 </table>
 
