@@ -1,0 +1,37 @@
+name: Link QA (monthly)
+
+on:
+  schedule:
+    - cron: "0 8 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  link-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run link QA
+        id: qa
+        run: |
+          python3 src/scripts/link_qa.py 2>&1 | tee link-qa-output.txt
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Check portfolio mirror
+        run: python3 src/scripts/check_portfolio_mirror.py
+        continue-on-error: true
+
+      - name: Open issue on link failures
+        if: steps.qa.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Link QA failed — $(date -u +%Y-%m-%d)" \
+            --body "$(printf 'Monthly link QA found broken URLs.\n\n```\n%s\n```\n\nRun locally: \`python3 src/scripts/link_qa.py\`' "$(head -80 link-qa-output.txt)")"

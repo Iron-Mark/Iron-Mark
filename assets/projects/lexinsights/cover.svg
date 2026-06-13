@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="LexInSight">
+  <rect width="400" height="225" rx="16" fill="#0B1220"/>
+  <rect x="24" y="24" width="352" height="177" rx="12" fill="#111827" stroke="#1E293B"/>
+  <text x="200" y="108" fill="#38BDF8" font-family="Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle">LexInSight</text>
+  <text x="200" y="138" fill="#94A3B8" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">AI legal compliance chat</text>
+  <text x="200" y="164" fill="#64748B" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">lexinsights.vercel.app</text>
+</svg>

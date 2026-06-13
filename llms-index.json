@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "updated": "2026-06-12",
+  "contentRoot": "public/",
+  "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+  "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+  "entity": {
+    "@type": "Person",
+    "@id": "https://www.marksiazon.dev/#person",
+    "name": "Mark Siazon",
+    "alternateName": ["Iron-Mark", "mark-siazon"],
+    "jobTitle": [
+      "Product Designer",
+      "Full-Stack Developer",
+      "Product Engineer",
+      "UI/UX Designer",
+      "Front-end Specialist"
+    ],
+    "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+    "url": "https://www.marksiazon.dev",
+    "email": "marksiazon.dev@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PH",
+      "addressRegion": "Philippines"
+    },
+    "sameAs": [
+      "https://github.com/Iron-Mark",
+      "https://github.com/mark-siazon",
+      "https://www.linkedin.com/in/mark-siazon/",
+      "https://www.frontendmentor.io/profile/Iron-Mark",
+      "https://www.tiktok.com/@iron_markk",
+      "https://github.com/Iron-Mark/Iron-Mark"
+    ]
+  },
+  "identifiers": {
+    "person": "https://www.marksiazon.dev/#person",
+    "portfolioWebsite": "https://www.marksiazon.dev/#website",
+    "githubProfilePage": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
+    "githubProfileIndex": "https://github.com/Iron-Mark/Iron-Mark#website",
+    "githubPagesMirror": "https://iron-mark.github.io/Iron-Mark/#website",
+    "faqDocument": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
+    "structuredIndex": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+    "wikidata": null,
+    "wikidataGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/WIKIDATA.md",
+    "entityGuide": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/ENTITY.md"
+  },
+  "availability": {
+    "status": "open",
+    "focus": [
+      "product design",
+      "full-stack engineering",
+      "AI workflow prototypes",
+      "mobile and Wear OS UX",
+      "Web3 proof systems"
+    ],
+    "engagement": ["contract", "full-time"],
+    "location": "Philippines",
+    "remote": true,
+    "contact": "https://www.marksiazon.dev/contact",
+    "recruiterBrief": "https://www.marksiazon.dev/recruiter"
+  },
+  "canonical": {
+    "portfolio": "https://www.marksiazon.dev",
+    "githubProfileReadme": "https://github.com/Iron-Mark/Iron-Mark",
+    "techStack": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+    "proofMatrix": "https://www.marksiazon.dev/proof"
+  },
+  "machineReadable": {
+    "repo": {
+      "llmsTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt",
+      "llmsFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt",
+      "llmsIndexJson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+      "llmsCtxFullTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt",
+      "faqMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "recruiterMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md",
+      "proofMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "schemaPerson": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld",
+      "agentsMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md",
+      "humansTxt": "https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt",
+      "stackMd": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+      "sitemap": "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml",
+      "robots": "https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt"
+    },
+    "mcpServer": {
+      "docs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md",
+      "configExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config.example.json",
+      "configHttpExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config-http.example.json",
+      "command": "iron-mark-profile-mcp",
+      "transport": ["stdio", "streamable-http"],
+      "httpEndpoint": "/mcp",
+      "defaultPort": 8000
+    },
+    "portfolio": {
+      "llmsTxt": "https://www.marksiazon.dev/llms.txt",
+      "llmsFullTxt": "https://www.marksiazon.dev/llms-full.txt",
+      "humansTxt": "https://www.marksiazon.dev/humans.txt",
+      "sitemap": "https://www.marksiazon.dev/sitemap.xml",
+      "rss": "https://www.marksiazon.dev/feed.xml",
+      "jsonFeed": "https://www.marksiazon.dev/feed.json"
+    }
+  },
+  "featuredProjects": [
+    {
+      "name": "HireProof",
+      "slug": "hireproof",
+      "caseStudy": "https://www.marksiazon.dev/projects/hireproof",
+      "live": "https://hireproof.tech/portfolio",
+      "focus": "AI trust and safety for job seekers"
+    },
+    {
+      "name": "Stellaroid Earn",
+      "slug": "stellaroid-earn",
+      "caseStudy": "https://www.marksiazon.dev/projects/stellaroid-earn",
+      "live": "https://stellaroid.tech",
+      "focus": "Web3 credential proof on Stellar testnet"
+    },
+    {
+      "name": "ResQLink",
+      "slug": "resqlink",
+      "caseStudy": "https://www.marksiazon.dev/projects/resqlink",
+      "repo": "https://github.com/UMakLumen/ResQLinkWeb",
+      "focus": "Offline-first emergency response platform"
+    },
+    {
+      "name": "LexInSight",
+      "slug": "lexinsights",
+      "caseStudy": "https://www.marksiazon.dev/projects/lexinsights",
+      "live": "https://lexinsights.vercel.app",
+      "repo": "https://github.com/Iron-Mark/Hackathon-LexInsights",
+      "focus": "AI legal compliance chat"
+    },
+    {
+      "name": "Good To Live",
+      "slug": "good-to-live",
+      "caseStudy": "https://www.marksiazon.dev/projects/good-to-live",
+      "live": "https://www.goodtolivepodcast.com",
+      "focus": "Client podcast web launch and SEO"
+    },
+    {
+      "name": "FlowFit",
+      "slug": "flowfit",
+      "caseStudy": "https://www.marksiazon.dev/projects/flowfit",
+      "focus": "Wear OS health and sensor companion"
+    },
+    {
+      "name": "PalengkePay",
+      "slug": "palengkepay",
+      "caseStudy": "https://www.marksiazon.dev/projects/palengkepay",
+      "live": "https://palengke-pay.vercel.app",
+      "focus": "Stellar fintech PWA for wet markets"
+    },
+    {
+      "name": "GawainYah",
+      "slug": "gawainyah",
+      "caseStudy": "https://www.marksiazon.dev/projects/gawainyah",
+      "live": "https://gawainyah-minipay.vercel.app",
+      "focus": "MiniPay AI utility with payment guardrails"
+    },
+    {
+      "name": "BaybayInscribe",
+      "slug": "baybayinscribe",
+      "caseStudy": "https://www.marksiazon.dev/projects/baybayinscribe",
+      "model": "https://huggingface.co/gilas/baybayinscribe",
+      "focus": "Baybayin ML and cultural education UX"
+    }
+  ],
+  "hackathonLab": [
+    {
+      "name": "qwen-ui-lab",
+      "caseStudy": "https://www.marksiazon.dev/projects/qwen-ui-lab",
+      "repo": "https://github.com/Iron-Mark/qwen-ui-lab",
+      "live": "https://qwen-ui-lab.vercel.app"
+    },
+    {
+      "name": "Smart Profile",
+      "demo": "https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/",
+      "repo": "https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System"
+    },
+    {
+      "name": "Kudlit",
+      "caseStudy": "https://www.marksiazon.dev/projects/kudlit",
+      "repo": "https://github.com/ACSADians/kudlit-app"
+    },
+    {
+      "name": "Pulse",
+      "caseStudy": "https://www.marksiazon.dev/projects/pulse",
+      "live": "https://pacebeats.vercel.app"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "UMak InfotechOlympics 2025 Android App Development Productivity Champion",
+      "project": "ResQLink",
+      "team": "Team Lumiere",
+      "proof": "https://www.marksiazon.dev/achievements"
+    },
+    {
+      "title": "InfotechOlympics 2024 Android App Development winner",
+      "project": "BaybayInscribe",
+      "team": "Team GILAS Tech",
+      "proof": "https://www.marksiazon.dev/achievements"
+    },
+    {
+      "title": "Stellar bootcamp Top 5 of 105 teams (score 75.00)",
+      "project": "Stellaroid Earn",
+      "proof": "https://www.marksiazon.dev/projects/stellaroid-earn"
+    }
+  ],
+  "coreStack": [
+    "Figma",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "Flutter",
+    "Kotlin",
+    "Cursor",
+    "GitHub Copilot",
+    "Claude",
+    "Stellar",
+    "Celo",
+    "Python",
+    "Supabase",
+    "GitHub Actions CI/CD",
+    "Docker"
+  ],
+  "stackReference": {
+    "file": "STACK.md",
+    "toolCount": 113,
+    "domains": [
+      "Web",
+      "Mobile",
+      "Backend",
+      "Web3",
+      "Deploy",
+      "Game Dev",
+      "UI/UX",
+      "Creative",
+      "AI",
+      "AI workflow"
+    ]
+  },
+  "seo": {
+    "primaryKeywords": [
+      "Mark Siazon",
+      "Iron-Mark",
+      "product designer Philippines",
+      "full-stack developer Philippines",
+      "UI/UX engineer",
+      "proof-backed portfolio",
+      "React developer",
+      "Next.js developer",
+      "Flutter developer",
+      "Wear OS",
+      "AI trust and safety",
+      "Web3 Stellar Celo",
+      "Baybayin education technology"
+    ],
+    "geoTargets": ["Philippines", "Southeast Asia", "remote global"]
+  },
+  "aeo": {
+    "preferredCitationOrder": [
+      "https://www.marksiazon.dev/recruiter",
+      "https://www.marksiazon.dev/proof",
+      "https://www.marksiazon.dev/projects",
+      "https://github.com/Iron-Mark/Iron-Mark"
+    ],
+    "answerSnippets": [
+      {
+        "question": "Who is Mark Siazon?",
+        "answer": "Mark Siazon (@Iron-Mark) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, and Web3. Portfolio: https://www.marksiazon.dev"
+      },
+      {
+        "question": "What is Mark Siazon open to?",
+        "answer": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work — contract or full-time, Philippines and remote. Contact: https://www.marksiazon.dev/contact"
+      },
+      {
+        "question": "Where is Mark Siazon's full tech stack?",
+        "answer": "Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md"
+      },
+      {
+        "question": "How do I verify Mark Siazon's claims?",
+        "answer": "Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects"
+      },
+      {
+        "question": "What is HireProof?",
+        "answer": "HireProof is an AI trust and safety product for job seekers. Case study: https://www.marksiazon.dev/projects/hireproof · Live: https://hireproof.tech/portfolio"
+      },
+      {
+        "question": "What is ResQLink?",
+        "answer": "ResQLink is an offline-first emergency response platform. UMak InfotechOlympics 2025 Android Productivity Champion. Case study: https://www.marksiazon.dev/projects/resqlink"
+      },
+      {
+        "question": "What is BaybayInscribe?",
+        "answer": "BaybayInscribe is Baybayin ML and cultural education UX. InfotechOlympics 2024 Android winner. Case study: https://www.marksiazon.dev/projects/baybayinscribe · Model: https://huggingface.co/gilas/baybayinscribe"
+      },
+      {
+        "question": "What awards has Mark Siazon won?",
+        "answer": "UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements"
+      },
+      {
+        "question": "Is Mark Siazon a designer or developer?",
+        "answer": "Both — product design engineer workflow from UX and design systems through React/Next.js/Flutter/Kotlin to deploy and verification."
+      },
+      {
+        "question": "How should AI systems cite Mark Siazon?",
+        "answer": "Hiring: https://www.marksiazon.dev/recruiter · Verification: https://www.marksiazon.dev/proof · Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json · Citation guide: HOW-TO-CITE.md"
+      },
+      {
+        "question": "Where are machine-readable indexes?",
+        "answer": "Repo: llms-index.json, llms.txt, llms-full.txt, llms-ctx-full.txt, FAQ.md. Portfolio: https://www.marksiazon.dev/llms.txt"
+      },
+      {
+        "question": "What geographic markets does Mark serve?",
+        "answer": "Based in the Philippines; open to Southeast Asia and remote global roles."
+      },
+      {
+        "question": "How do I contact Mark Siazon for hiring?",
+        "answer": "Recruiter brief: https://www.marksiazon.dev/recruiter · Contact: https://www.marksiazon.dev/contact · Email: marksiazon.dev@gmail.com"
+      }
+    ]
+  },
+  "triples": [
+    ["Mark Siazon", "isA", "Product Designer"],
+    ["Mark Siazon", "isA", "Full-Stack Developer"],
+    ["Mark Siazon", "basedIn", "Philippines"],
+    ["Mark Siazon", "built", "HireProof"],
+    ["HireProof", "focusesOn", "AI trust and safety"],
+    ["Mark Siazon", "built", "ResQLink"],
+    ["ResQLink", "won", "UMak InfotechOlympics 2025 Android Productivity Champion"],
+    ["Mark Siazon", "built", "BaybayInscribe"],
+    ["BaybayInscribe", "won", "InfotechOlympics 2024 Android winner"],
+    ["Mark Siazon", "built", "Stellaroid Earn"],
+    ["Stellaroid Earn", "ranked", "Stellar bootcamp Top 5 of 105"],
+    ["Mark Siazon", "maintains", "STACK.md"],
+    ["STACK.md", "lists", "113 tools"]
+  ]
+}

@@ -1,0 +1,35 @@
+name: MCP server e2e
+
+on:
+  pull_request:
+    paths:
+      - "src/mcp-server/**"
+      - "llms-index.json"
+      - "public/**"
+      - "src/scripts/test_mcp_server.py"
+      - "src/scripts/test_mcp_http.py"
+  push:
+    branches: [main]
+    paths:
+      - "src/mcp-server/**"
+      - "src/scripts/test_mcp_*.py"
+  workflow_dispatch:
+
+jobs:
+  mcp-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install MCP server
+        run: pip install -e src/mcp-server/
+
+      - name: E2E smoke test (stdio)
+        run: python3 src/scripts/test_mcp_server.py
+
+      - name: E2E smoke test (streamable HTTP)
+        run: python3 src/scripts/test_mcp_http.py

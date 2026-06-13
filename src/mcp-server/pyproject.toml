@@ -1,0 +1,26 @@
+[project]
+name = "iron-mark-profile-mcp"
+version = "1.0.0"
+description = "MCP server for Mark Siazon GitHub profile index (Iron-Mark/Iron-Mark)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "See LICENSE.md in repo root" }
+authors = [{ name = "Mark Siazon", email = "marksiazon.dev@gmail.com" }]
+dependencies = [
+  "mcp>=1.0",
+]
+
+[project.scripts]
+iron-mark-profile-mcp = "iron_mark_profile.server:main"
+
+[project.urls]
+Repository = "https://github.com/Iron-Mark/Iron-Mark"
+Homepage = "https://www.marksiazon.dev"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["iron_mark_profile*"]

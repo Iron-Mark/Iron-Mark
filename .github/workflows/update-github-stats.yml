@@ -1,0 +1,57 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/update-github-stats.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          # Purple theme (#8B5CF6); hide rank/issues/contribs; stars + commits + PRs only
+          options: username=Iron-Mark&show_icons=true&hide_border=true&include_all_commits=true&hide_rank=true&custom_title=Mark+Siazon+%40Iron-Mark&disable_animations=true&hide=issues,contribs&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&bg_color=0B0F14&border_color=1F2937
+          path: assets/github/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          # Compact layout at card_width=320 (165px height to pair with stats card)
+          options: username=Iron-Mark&layout=compact&langs_count=6&hide_progress=false&card_width=320&custom_title=Most+Used+Languages&disable_animations=true&hide_border=true&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&bg_color=0B0F14&border_color=1F2937
+          path: assets/github/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate contribution activity graph
+        run: |
+          curl -sL "https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180" \
+            -o assets/github/activity-graph.svg
+
+      - name: Generate contribution streak card
+        run: |
+          curl -sL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB" \
+            -o assets/github/streak.svg
+
+      - name: Commit updated widgets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "Update GitHub profile stats cards"
+          git push

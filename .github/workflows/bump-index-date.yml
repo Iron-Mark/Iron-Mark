@@ -1,0 +1,40 @@
+name: Bump index dates
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "llms-index.json"
+      - "llms.txt"
+      - "public/llms-full.txt"
+      - "public/llms-ctx-full.txt"
+      - "public/FAQ.md"
+      - "public/RECRUITER.md"
+      - "public/PROOF.md"
+      - "README.md"
+      - "public/STACK.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump updated / lastmod dates
+        run: python3 src/scripts/bump_index_dates.py
+
+      - name: Regenerate llms-ctx-full
+        run: python3 src/scripts/generate_llms_ctx.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add llms-index.json sitemap.xml public/llms-ctx-full.txt
+          git diff --staged --quiet && echo "No date changes" && exit 0
+          git commit -m "chore: bump index freshness dates [skip ci]"
+          git push

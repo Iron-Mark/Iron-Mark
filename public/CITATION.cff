@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Mark Siazon — GitHub Profile & Portfolio Index"
+message: "If you use this profile index or reference Mark Siazon's public work, please cite as:"
+type: software
+authors:
+  - given-names: Mark
+    family-names: Siazon
+    website: https://www.marksiazon.dev
+    email: marksiazon.dev@gmail.com
+repository-code: https://github.com/Iron-Mark/Iron-Mark
+url: https://github.com/Iron-Mark/Iron-Mark
+abstract: "Public GitHub profile README, machine-readable portfolio indexes (llms.txt, llms-index.json), and tech stack reference for Mark Siazon (@Iron-Mark)."
+keywords:
+  - portfolio
+  - product-design
+  - full-stack
+  - llms.txt
+  - proof-backed
+license: LicenseRef-LICENSE.md
