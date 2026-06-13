@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
-  "updated": "2026-06-12",
+  "updated": "2026-06-13",
   "contentRoot": "public/",
   "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
   "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
@@ -9,7 +9,10 @@
     "@type": "Person",
     "@id": "https://www.marksiazon.dev/#person",
     "name": "Mark Siazon",
-    "alternateName": ["Iron-Mark", "mark-siazon"],
+    "alternateName": [
+      "Iron-Mark",
+      "mark-siazon"
+    ],
     "jobTitle": [
       "Product Designer",
       "Full-Stack Developer",
@@ -55,7 +58,10 @@
       "mobile and Wear OS UX",
       "Web3 proof systems"
     ],
-    "engagement": ["contract", "full-time"],
+    "engagement": [
+      "contract",
+      "full-time"
+    ],
     "location": "Philippines",
     "remote": true,
     "contact": "https://www.marksiazon.dev/contact",
@@ -88,7 +94,10 @@
       "configExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config.example.json",
       "configHttpExample": "https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/mcp-config-http.example.json",
       "command": "iron-mark-profile-mcp",
-      "transport": ["stdio", "streamable-http"],
+      "transport": [
+        "stdio",
+        "streamable-http"
+      ],
       "httpEndpoint": "/mcp",
       "defaultPort": 8000
     },
@@ -258,7 +267,11 @@
       "Web3 Stellar Celo",
       "Baybayin education technology"
     ],
-    "geoTargets": ["Philippines", "Southeast Asia", "remote global"]
+    "geoTargets": [
+      "Philippines",
+      "Southeast Asia",
+      "remote global"
+    ]
   },
   "aeo": {
     "preferredCitationOrder": [
@@ -323,18 +336,70 @@
     ]
   },
   "triples": [
-    ["Mark Siazon", "isA", "Product Designer"],
-    ["Mark Siazon", "isA", "Full-Stack Developer"],
-    ["Mark Siazon", "basedIn", "Philippines"],
-    ["Mark Siazon", "built", "HireProof"],
-    ["HireProof", "focusesOn", "AI trust and safety"],
-    ["Mark Siazon", "built", "ResQLink"],
-    ["ResQLink", "won", "UMak InfotechOlympics 2025 Android Productivity Champion"],
-    ["Mark Siazon", "built", "BaybayInscribe"],
-    ["BaybayInscribe", "won", "InfotechOlympics 2024 Android winner"],
-    ["Mark Siazon", "built", "Stellaroid Earn"],
-    ["Stellaroid Earn", "ranked", "Stellar bootcamp Top 5 of 105"],
-    ["Mark Siazon", "maintains", "STACK.md"],
-    ["STACK.md", "lists", "113 tools"]
+    [
+      "Mark Siazon",
+      "isA",
+      "Product Designer"
+    ],
+    [
+      "Mark Siazon",
+      "isA",
+      "Full-Stack Developer"
+    ],
+    [
+      "Mark Siazon",
+      "basedIn",
+      "Philippines"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "HireProof"
+    ],
+    [
+      "HireProof",
+      "focusesOn",
+      "AI trust and safety"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "ResQLink"
+    ],
+    [
+      "ResQLink",
+      "won",
+      "UMak InfotechOlympics 2025 Android Productivity Champion"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "BaybayInscribe"
+    ],
+    [
+      "BaybayInscribe",
+      "won",
+      "InfotechOlympics 2024 Android winner"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "Stellaroid Earn"
+    ],
+    [
+      "Stellaroid Earn",
+      "ranked",
+      "Stellar bootcamp Top 5 of 105"
+    ],
+    [
+      "Mark Siazon",
+      "maintains",
+      "STACK.md"
+    ],
+    [
+      "STACK.md",
+      "lists",
+      "113 tools"
+    ]
   ]
 }
