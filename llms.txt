@@ -20,7 +20,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Availability
 
-- Open to: product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 proof systems
+- Open to: part-time · product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 systems
 - Engagement: contract or full-time · Philippines & remote
 
 ## Hire & contact
@@ -67,7 +67,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 ## Tech stack
 
 - **Full reference (100+ tools, icons):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
-- **Core stack on profile README:** React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker
+- **Core stack on profile README (16 tools):** Figma · React, Next.js, TypeScript, Tailwind CSS · Flutter, Kotlin · Cursor, GitHub Copilot, Claude · Stellar, Celo · Python, Supabase, GitHub Actions CI/CD, Docker
 - **Domains in STACK.md:** Web · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-assisted development workflow
 
 ## FAQ

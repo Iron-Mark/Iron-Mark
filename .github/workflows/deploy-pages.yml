@@ -25,14 +25,14 @@ jobs:
 
       - name: Build docs mirror
         run: |
-          mkdir -p docs/schema
+          mkdir -p docs
           # Root crawler entrypoints
           for f in llms.txt llms-index.json humans.txt robots.txt sitemap.xml; do
             cp "$f" "docs/$f"
           done
           # Flatten public/ into docs/ for stable Pages URLs (…/FAQ.md not …/public/FAQ.md)
           cp public/*.md public/*.txt public/*.cff docs/ 2>/dev/null || true
-          cp -r public/schema docs/schema
+          cp -r public/schema docs/
           cp docs/index.html docs/index.html.bak 2>/dev/null || true
           cat > docs/index.html <<'HTML'
           <!DOCTYPE html>
@@ -64,6 +64,7 @@ jobs:
           </body>
           </html>
           HTML
+          python3 src/scripts/build_pages_mirror.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
