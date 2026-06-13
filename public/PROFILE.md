@@ -1,7 +1,7 @@
 # Mark Siazon — Profile (plain markdown)
 
 Last updated: 2026-06-12  
-**Visual profile:** [README.md](README.md) · **Portfolio:** https://www.marksiazon.dev
+**Visual profile:** [README.md](../README.md) · **Portfolio:** https://www.marksiazon.dev
 
 ---
 
@@ -38,8 +38,8 @@ Mark Siazon is a product designer and full-stack developer based in the Philippi
 ## Tech stack
 
 Core: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker  
-Full (112 tools): [STACK.md](public/STACK.md)
+Full (112 tools): [STACK.md](STACK.md)
 
 ## Machine-readable
 
-- [llms-index.json](llms-index.json) · [FAQ.md](public/FAQ.md) · [llms.txt](llms.txt) · [llms-full.txt](public/llms-full.txt)
+- [llms-index.json](../llms-index.json) · [FAQ.md](FAQ.md) · [llms.txt](../llms.txt) · [llms-full.txt](llms-full.txt)

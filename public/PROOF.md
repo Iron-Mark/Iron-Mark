@@ -62,4 +62,4 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 ---
 
-← [FAQ.md](public/FAQ.md) · [llms-index.json](llms-index.json) · [Proof matrix (portfolio)](https://www.marksiazon.dev/proof)
+← [FAQ.md](FAQ.md) · [llms-index.json](../llms-index.json) · [Proof matrix (portfolio)](https://www.marksiazon.dev/proof)

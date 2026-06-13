@@ -59,7 +59,7 @@ Full reference (112 tools): [STACK.md](public/STACK.md)
 
 ## Machine-readable (for ATS / AI screening)
 
-- Structured index: [llms-index.json](llms-index.json)
+- Structured index: [llms-index.json](../llms-index.json)
 - FAQ: [FAQ.md](public/FAQ.md)
 - Full context: [llms-full.txt](public/llms-full.txt)
 

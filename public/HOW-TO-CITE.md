@@ -27,13 +27,13 @@ See [CITATION.cff](CITATION.cff) in this repository.
 
 ## Schema.org JSON-LD
 
-See [person.jsonld](public/schema/person.jsonld). Canonical Person `@id`: **https://www.marksiazon.dev/#person**
+See [person.jsonld](schema/person.jsonld). Canonical Person `@id`: **https://www.marksiazon.dev/#person**
 
 Entity identifier map: [schema/ENTITY.md](schema/ENTITY.md) · Wikidata setup: [schema/WIKIDATA.md](schema/WIKIDATA.md)
 
 ## License
 
-README layout, index files, and original assets: see [LICENSE.md](public/LICENSE.md). Third-party brand icons in STACK.md remain property of their respective owners.
+README layout, index files, and original assets: see [LICENSE.md](LICENSE.md). Third-party brand icons in STACK.md remain property of their respective owners.
 
 ## For AI assistants
 
