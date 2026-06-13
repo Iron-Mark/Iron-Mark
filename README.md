@@ -7,7 +7,7 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
-<p align="center"><sub>Index layout: <a href="docs/STRUCTURE.md">docs/STRUCTURE.md</a> · content in <code>public/</code> · MCP in <code>src/mcp-server/</code></sub></p>
+<p align="center"><sub>Index layout: <a href="docs/STRUCTURE.md">docs/STRUCTURE.md</a> · post-merge: <a href=".github/POST_MERGE.md">POST_MERGE.md</a> · content in <code>public/</code> · MCP in <code>src/mcp-server/</code></sub></p>
 
 <p align="center"><sub>Product designer &amp; full-stack developer in the Philippines · proof-backed AI, mobile &amp; Web3 products · <a href="https://www.marksiazon.dev">marksiazon.dev</a></sub></p>
 

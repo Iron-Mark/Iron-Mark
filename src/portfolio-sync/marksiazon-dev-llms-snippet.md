@@ -1,11 +1,33 @@
-See [marksiazon-dev-llms-snippet.md](marksiazon-dev-llms-snippet.md) for the complete paste block.
+# Paste into marksiazon.dev `llms.txt`
+
+**Where:** append under `## Machine-readable indexes` (after portfolio RSS/JSON Feed lines), or create `## GitHub profile index`.
+
+**Also add:** link from `/recruiter` and `/contact#faq` to GitHub FAQ.
+
+---
 
 ```markdown
-## FAQ & GitHub profile index (cross-links)
+## GitHub profile index (Iron-Mark/Iron-Mark)
 
-Extended FAQ (15+ Q&A, repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md  
-Structured answer snippets (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json  
-Entity @id: https://www.marksiazon.dev/#person
+Cross-linked machine-readable index for the GitHub profile README repo. Portfolio remains canonical for case studies; GitHub repo adds structured FAQ, stack reference, and agent tools.
+
+- Visual profile README: https://github.com/Iron-Mark
+- Repo root manifest: https://github.com/Iron-Mark/Iron-Mark
+- Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
+- Expanded agent context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+- Full LLM context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
+- FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
+- Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
+- Proof map (claims → URLs): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
+- Tech stack (112 tools): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md
+- MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md
+- GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
+- Entity @id: https://www.marksiazon.dev/#person
+
+### FAQ cross-links (portfolio ↔ GitHub)
 
 | Question | Start on portfolio | Full answer (GitHub FAQ) |
 |----------|-------------------|---------------------------|
@@ -23,17 +45,22 @@ Entity @id: https://www.marksiazon.dev/#person
 | How should AI cite Mark? | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon |
 ```
 
+---
+
 ## Optional HTML (recruiter or contact page)
 
 ```html
-<p>Extended FAQ with 15+ hiring and project answers:
+<p>Extended FAQ (15+ Q&amp;A) and structured index:
   <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md">GitHub FAQ.md</a>
   · <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json">llms-index.json</a>
+  · <a href="https://iron-mark.github.io/Iron-Mark/">Pages mirror</a>
 </p>
 ```
 
-Verify after deploy:
+## Verify after deploy
 
 ```bash
 python3 src/scripts/check_portfolio_mirror.py
 ```
+
+Expected: `OK: https://www.marksiazon.dev/llms.txt references GitHub profile index`

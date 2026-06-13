@@ -13,6 +13,7 @@ REQUIRED = [
     "FAQ.md",
     "STACK.md",
     "github.com/Iron-Mark",
+    "iron-mark.github.io",
 ]
 FAQ_OPTIONAL = [
     "FAQ & GitHub",

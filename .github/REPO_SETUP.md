@@ -1,6 +1,6 @@
 # GitHub repo & profile setup (manual)
 
-Run these once after merging to `main`. The cloud agent token cannot edit repo settings or user pins — **you** run these locally with `gh` auth as @Iron-Mark.
+Run these once after merging to `main`. **Start here:** [POST_MERGE.md](POST_MERGE.md) (checkbox checklist).
 
 > **Skipped (optional):** repo About/topics, social preview image, and pin 6 repos — not required for index/MCP/AEO functionality.
 
@@ -86,7 +86,9 @@ If README does not show on https://github.com/Iron-Mark:
 
 ## 7. Portfolio mirror (marksiazon.dev)
 
-Copy block from [src/portfolio-sync/marksiazon-dev-append.md](../src/portfolio-sync/marksiazon-dev-append.md) into portfolio `llms.txt` and footer. Add FAQ cross-link table from [src/portfolio-sync/faq-crosslinks.md](../src/portfolio-sync/faq-crosslinks.md).
+Paste the ready-made block from [src/portfolio-sync/marksiazon-dev-llms-snippet.md](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into portfolio `llms.txt` (under `## Machine-readable indexes`).
+
+Legacy split files: [marksiazon-dev-append.md](../src/portfolio-sync/marksiazon-dev-append.md) · [faq-crosslinks.md](../src/portfolio-sync/faq-crosslinks.md)
 
 Verify with:
 
@@ -94,9 +96,15 @@ Verify with:
 python3 src/scripts/check_portfolio_mirror.py
 ```
 
+## 8. LinkedIn headline sync *(optional)*
+
+Match README one-liner:
+
+> Product Design Engineer & Full-Stack Developer | Proof-backed AI, mobile & Web3 | Philippines & remote
+
 ## 9. Wikidata entity (optional, Phase 4)
 
-Follow [schema/WIKIDATA.md](../schema/WIKIDATA.md) to create a Wikidata item. After you receive a Q-id, add it to `schema/person.jsonld` and `llms-index.json` → `identifiers.wikidata`.
+Follow [public/schema/WIKIDATA.md](../public/schema/WIKIDATA.md) to create a Wikidata item. After you receive a Q-id, add it to `public/schema/person.jsonld` and `llms-index.json` → `identifiers.wikidata`.
 
 ## 10. Optional MCP server (local agents)
 
@@ -109,8 +117,4 @@ python3 src/scripts/test_mcp_server.py
 
 Config: [src/mcp-server/mcp-config.example.json](../src/mcp-server/mcp-config.example.json) · Docs: [src/mcp-server/README.md](../src/mcp-server/README.md)
 
-## 8. LinkedIn headline sync *(optional)*
-
-Match README one-liner:
-
-> Product Design Engineer & Full-Stack Developer | Proof-backed AI, mobile & Web3 | Philippines & remote
+The cloud agent token cannot edit repo settings or user pins — **you** run manual steps locally with `gh` auth as @Iron-Mark.
