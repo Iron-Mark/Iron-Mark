@@ -233,7 +233,7 @@
     <td><a href="https://docs.github.com/en/copilot/get-started" rel="noopener noreferrer"><img src="assets/ai-workflow/copilot.svg" alt="GitHub Copilot" width="36" height="36"/><br><sub>Copilot</sub></a></td>
     <td><img src="assets/ai-workflow/claude.svg" alt="Claude" width="36" height="36"/><br><sub>Claude</sub></td>
     <td><a href="https://stellar.org/" rel="noopener noreferrer"><img src="assets/web3/stellar.png" alt="Stellar" width="36" height="36"/><br><sub>Stellar</sub></a></td>
-    <td><a href="https://stellar.org/soroban" rel="noopener noreferrer"><img src="assets/web3/soroban.png" alt="Soroban smart contracts on Stellar" width="36" height="36"/><br><sub>Soroban</sub></a></td>
+    <td><a href="https://stellar.org/soroban" rel="noopener noreferrer"><img src="assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="36" height="36"/><br><sub>Soroban</sub></a></td>
     <td><img src="assets/stack/python.svg" alt="Python" width="36" height="36"/><br><sub>Python</sub></td>
     <td><img src="assets/stack/supabase.svg" alt="Supabase" width="36" height="36"/><br><sub>Supabase</sub></td>
     <td><img src="assets/stack/githubactions.svg" alt="GitHub Actions CI/CD" width="36" height="36" title="GitHub Actions — validate, test, deploy"/><br><sub style="white-space:nowrap">CI/CD</sub></td>
