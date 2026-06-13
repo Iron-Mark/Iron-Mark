@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Soroban">
-  <rect width="128" height="128" rx="16" fill="#141424"/>
-  <rect x="24" y="30" width="80" height="14" rx="4" fill="#00baff"/>
-  <rect x="24" y="54" width="52" height="14" rx="4" fill="#00baff" opacity=".85"/>
-  <rect x="24" y="78" width="80" height="14" rx="4" fill="#00baff" opacity=".7"/>
-</svg>

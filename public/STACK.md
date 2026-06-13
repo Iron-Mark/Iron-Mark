@@ -107,7 +107,7 @@
     <td width="11%"><a href="https://morph.network/" rel="noopener noreferrer"><img src="../assets/web3/morph.png" alt="Morph" width="40" height="40"/><br><sub>Morph</sub></a></td>
     <td width="11%"><a href="https://celo.org/" rel="noopener noreferrer"><img src="../assets/web3/celo.png" alt="Celo" width="40" height="40"/><br><sub>Celo</sub></a></td>
     <td width="11%"><a href="https://stellar.org/" rel="noopener noreferrer"><img src="../assets/web3/stellar.png" alt="Stellar" width="40" height="40"/><br><sub>Stellar</sub></a></td>
-    <td width="11%"><a href="https://soroban.stellar.org/" rel="noopener noreferrer"><img src="../assets/web3/soroban.svg" alt="Soroban smart contracts on Stellar" width="40" height="40"/><br><sub>Soroban</sub></a></td>
+    <td width="11%"><a href="https://stellar.org/soroban" rel="noopener noreferrer"><img src="../assets/web3/soroban.png" alt="Soroban smart contracts on Stellar" width="40" height="40"/><br><sub>Soroban</sub></a></td>
     <td width="11%"><a href="https://freighter.app/" rel="noopener noreferrer"><img src="../assets/web3/freighter.png" alt="Freighter" width="40" height="40"/><br><sub>Freighter</sub></a></td>
     <td width="11%"><a href="https://minipay.to/" rel="noopener noreferrer"><img src="../assets/web3/minipay.png" alt="MiniPay" width="40" height="40"/><br><sub>MiniPay</sub></a></td>
     <td width="11%"><a href="https://metamask.io/" rel="noopener noreferrer"><img src="../assets/web3/metamask.svg" alt="MetaMask" width="40" height="40"/><br><sub>MetaMask</sub></a></td>
