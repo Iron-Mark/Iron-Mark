@@ -1,6 +1,6 @@
 # Mark Siazon — LLM context (expanded)
 
-Generated from llms-index.json · updated 2026-06-13
+Generated from llms-index.json · updated 2026-06-14
 
 > Auto-expanded context for agents. Canonical narrative: public/llms-full.txt · Structured: llms-index.json
 

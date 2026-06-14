@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "version": "1.0.0",
-  "updated": "2026-06-13",
+  "updated": "2026-06-14",
   "contentRoot": "public/",
   "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
   "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
