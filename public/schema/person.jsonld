@@ -2055,6 +2055,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-profile-facts",
       "name": "Profile Facts",
       "url": "https://iron-mark.github.io/Iron-Mark/#profile-facts",
+      "description": "Visible profile facts for Mark Siazon name, roles, availability, service geography, contact, and recruiter brief.",
+      "abstract": "Visible profile facts for Mark Siazon name, roles, availability, service geography, contact, and recruiter brief.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#profile-facts"
       },
@@ -2153,6 +2155,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-featured-work",
       "name": "Featured Work",
       "url": "https://iron-mark.github.io/Iron-Mark/#featured-work",
+      "description": "Visible featured project list for Mark Siazon proof-backed product, AI, mobile, Web3, and client web work.",
+      "abstract": "Visible featured project list for Mark Siazon proof-backed product, AI, mobile, Web3, and client web work.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#featured-work"
       },
@@ -2224,6 +2228,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-answer-corpus",
       "name": "Answer Corpus",
       "url": "https://iron-mark.github.io/Iron-Mark/#answer-corpus",
+      "description": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+      "abstract": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#answer-corpus"
       },
@@ -2358,6 +2364,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-geo-topic-signals",
       "name": "Geo And Topic Signals",
       "url": "https://iron-mark.github.io/Iron-Mark/#geo-topic-signals",
+      "description": "Visible search topics and service regions for Mark Siazon AEO, SEO, and GEO discovery.",
+      "abstract": "Visible search topics and service regions for Mark Siazon AEO, SEO, and GEO discovery.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#geo-topic-signals"
       },
@@ -2492,6 +2500,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-knowledge-graph",
       "name": "Knowledge Graph",
       "url": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph",
+      "description": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
+      "abstract": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph"
       },
@@ -2593,6 +2603,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-start-here",
       "name": "Start Here",
       "url": "https://iron-mark.github.io/Iron-Mark/#start-here",
+      "description": "Visible entry links to Mark Siazon structured profile, answer, proof, recruiter, LLM, and Schema.org files.",
+      "abstract": "Visible entry links to Mark Siazon structured profile, answer, proof, recruiter, LLM, and Schema.org files.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#start-here"
       },
@@ -2670,6 +2682,8 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#nav-citation",
       "name": "Citation",
       "url": "https://iron-mark.github.io/Iron-Mark/#citation",
+      "description": "Visible citation order and verification boundaries for Mark Siazon public profile facts.",
+      "abstract": "Visible citation order and verification boundaries for Mark Siazon public profile facts.",
       "about": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#citation"
       },

@@ -1087,6 +1087,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"{label} name drift")
         if nav_item.get("url") != f"{PAGES_BASE}/#{section['fragment']}":
             issues.append(f"{label} url drift")
+        if nav_item.get("description") != section["description"]:
+            issues.append(f"{label} description drift")
+        if nav_item.get("abstract") != nav_item.get("description"):
+            issues.append(f"{label} abstract drift")
         if nav_item.get("about", {}).get("@id") != pages_section_id(section["fragment"]):
             issues.append(f"{label} about drift")
         if nav_item.get("isPartOf", {}).get("@id") != pages_section_nav_id:

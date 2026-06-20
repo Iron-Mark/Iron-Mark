@@ -1607,6 +1607,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"{label} name drift")
         if nav_item.get("url") != f"{pages.get('home')}#{section['fragment']}":
             errors.append(f"{label} url drift")
+        if nav_item.get("description") != section["description"]:
+            errors.append(f"{label} description drift")
+        if nav_item.get("abstract") != nav_item.get("description"):
+            errors.append(f"{label} abstract drift")
         if nav_item.get("about", {}).get("@id") != pages_section_id(section["fragment"]):
             errors.append(f"{label} about drift")
         if nav_item.get("isPartOf", {}).get("@id") != pages_section_nav_id:

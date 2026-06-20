@@ -1282,6 +1282,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "@id": pages_section_nav_item_id(section["fragment"]),
                 "name": section["heading"],
                 "url": f"{pages['home']}#{section['fragment']}",
+                "description": description,
+                "abstract": description,
                 "about": ref(pages_section_id(section["fragment"])),
                 "isPartOf": ref(pages_section_nav_id),
                 "position": position,
