@@ -1340,6 +1340,22 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     else:
         if inline_faq_node.get("identifier") != faq_document_identifier(inline_faq_id):
             errors.append("docs/index.html inline JSON-LD FAQPage identifier drift")
+        if inline_faq_node.get("isBasedOn") != data.get("machineReadable", {}).get("pages", {}).get("faqMd"):
+            errors.append("docs/index.html inline JSON-LD FAQPage isBasedOn drift")
+        if inline_faq_node.get("dateModified") != data.get("updated"):
+            errors.append("docs/index.html inline JSON-LD FAQPage dateModified drift")
+        if inline_faq_node.get("about", {}).get("@id") != person_id:
+            errors.append("docs/index.html inline JSON-LD FAQPage about drift")
+        if inline_faq_node.get("inLanguage") != content_language():
+            errors.append("docs/index.html inline JSON-LD FAQPage inLanguage drift")
+        if inline_faq_node.get("author", {}).get("@id") != person_id:
+            errors.append("docs/index.html inline JSON-LD FAQPage author drift")
+        if inline_faq_node.get("publisher", {}).get("@id") != person_id:
+            errors.append("docs/index.html inline JSON-LD FAQPage publisher drift")
+        if inline_faq_node.get("keywords") != profile_keywords(data):
+            errors.append("docs/index.html inline JSON-LD FAQPage keywords drift")
+        if inline_faq_node.get("isAccessibleForFree") is not True:
+            errors.append("docs/index.html inline JSON-LD FAQPage must be isAccessibleForFree")
         actual_has_part = node_ref_ids(inline_faq_node.get("hasPart"))
         missing_has_part = sorted(expected_inline_question_ids - actual_has_part)
         if missing_has_part:
