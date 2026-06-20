@@ -42,6 +42,10 @@ def linked(url: str, label: str) -> str:
     return f'<a href="{escape(url, quote=True)}">{escape(label)}</a>'
 
 
+def pages_href(path: str) -> str:
+    return f"{PAGES_BASE}/{path.lstrip('/')}"
+
+
 def slugify(value: str) -> str:
     value = value.lower()
     value = re.sub(r"[^a-z0-9\s-]", "", value)
@@ -226,27 +230,27 @@ def main() -> None:
   <link rel="canonical" href="{PAGES_URL}"/>
   <link rel="alternate" hreflang="en" href="{PAGES_URL}"/>
   <link rel="alternate" hreflang="x-default" href="{PAGES_URL}"/>
-  <link rel="author" href="humans.txt"/>
+  <link rel="author" href="{pages_href('humans.txt')}"/>
 {identity_links}
-  <link rel="alternate" type="application/json" href="llms-index.json"/>
-  <link rel="alternate" type="text/plain" href="llms.txt"/>
-  <link rel="alternate" type="text/plain" href="llms-full.txt"/>
-  <link rel="alternate" type="text/plain" href="llms-ctx-full.txt"/>
-  <link rel="alternate" type="text/markdown" href="FAQ.md"/>
-  <link rel="alternate" type="text/markdown" href="RECRUITER.md"/>
-  <link rel="alternate" type="text/markdown" href="PROOF.md"/>
-  <link rel="alternate" type="text/markdown" href="STACK.md"/>
-  <link rel="alternate" type="text/markdown" href="PROFILE.md"/>
-  <link rel="alternate" type="text/markdown" href="README.md"/>
-  <link rel="alternate" type="text/markdown" href="HOW-TO-CITE.md"/>
-  <link rel="alternate" type="text/markdown" href="LICENSE.md"/>
-  <link rel="alternate" type="text/plain" href="CITATION.cff"/>
-  <link rel="alternate" type="text/plain" href="humans.txt"/>
-  <link rel="license" href="LICENSE.md"/>
-  <link rel="alternate" type="application/ld+json" href="schema/person.jsonld"/>
-  <link rel="alternate" type="application/ld+json" href="schema/faq.jsonld"/>
-  <link rel="alternate" type="application/schema+json" href="schema/llms-index.schema.json"/>
-  <link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+  <link rel="alternate" type="application/json" href="{pages_href('llms-index.json')}"/>
+  <link rel="alternate" type="text/plain" href="{pages_href('llms.txt')}"/>
+  <link rel="alternate" type="text/plain" href="{pages_href('llms-full.txt')}"/>
+  <link rel="alternate" type="text/plain" href="{pages_href('llms-ctx-full.txt')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('FAQ.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('RECRUITER.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('PROOF.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('STACK.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('PROFILE.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('README.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('HOW-TO-CITE.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('LICENSE.md')}"/>
+  <link rel="alternate" type="text/plain" href="{pages_href('CITATION.cff')}"/>
+  <link rel="alternate" type="text/plain" href="{pages_href('humans.txt')}"/>
+  <link rel="license" href="{pages_href('LICENSE.md')}"/>
+  <link rel="alternate" type="application/ld+json" href="{pages_href('schema/person.jsonld')}"/>
+  <link rel="alternate" type="application/ld+json" href="{pages_href('schema/faq.jsonld')}"/>
+  <link rel="alternate" type="application/schema+json" href="{pages_href('schema/llms-index.schema.json')}"/>
+  <link rel="sitemap" type="application/xml" href="{pages_href('sitemap.xml')}"/>
   <script type="application/ld+json">
 {person_schema}
   </script>

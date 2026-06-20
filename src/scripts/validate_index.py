@@ -1137,7 +1137,7 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             errors.append(f"docs/index.html missing social image metadata: {tag}")
     if png_dimensions(SOCIAL_IMAGE_ASSET) != (SOCIAL_IMAGE_WIDTH, SOCIAL_IMAGE_HEIGHT):
         errors.append("primary social image asset dimensions must match metadata")
-    if '<link rel="author" href="humans.txt"/>' not in html:
+    if f'<link rel="author" href="{PAGES}/humans.txt"/>' not in html:
         errors.append("docs/index.html missing author link to humans.txt")
     for same_as in data.get("entity", {}).get("sameAs", []):
         if isinstance(same_as, str) and same_as.startswith("https://") and f'<link rel="me" href="{same_as}"/>' not in html:
@@ -1153,27 +1153,34 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         if selector.startswith("#") and f'id="{selector[1:]}"' not in html:
             errors.append(f"docs/index.html missing speakable selector target: {selector}")
     required_alternates = {
-        'type="application/json" href="llms-index.json"',
-        'type="text/plain" href="llms.txt"',
-        'type="text/plain" href="llms-full.txt"',
-        'type="text/plain" href="llms-ctx-full.txt"',
-        'type="text/markdown" href="FAQ.md"',
-        'type="text/markdown" href="RECRUITER.md"',
-        'type="text/markdown" href="PROOF.md"',
-        'type="text/markdown" href="STACK.md"',
-        'type="text/markdown" href="PROFILE.md"',
-        'type="text/markdown" href="README.md"',
-        'type="text/markdown" href="HOW-TO-CITE.md"',
-        'type="text/markdown" href="LICENSE.md"',
-        'type="text/plain" href="CITATION.cff"',
-        'type="text/plain" href="humans.txt"',
-        'type="application/ld+json" href="schema/person.jsonld"',
-        'type="application/ld+json" href="schema/faq.jsonld"',
-        'type="application/schema+json" href="schema/llms-index.schema.json"',
+        f'type="application/json" href="{PAGES}/llms-index.json"',
+        f'type="text/plain" href="{PAGES}/llms.txt"',
+        f'type="text/plain" href="{PAGES}/llms-full.txt"',
+        f'type="text/plain" href="{PAGES}/llms-ctx-full.txt"',
+        f'type="text/markdown" href="{PAGES}/FAQ.md"',
+        f'type="text/markdown" href="{PAGES}/RECRUITER.md"',
+        f'type="text/markdown" href="{PAGES}/PROOF.md"',
+        f'type="text/markdown" href="{PAGES}/STACK.md"',
+        f'type="text/markdown" href="{PAGES}/PROFILE.md"',
+        f'type="text/markdown" href="{PAGES}/README.md"',
+        f'type="text/markdown" href="{PAGES}/HOW-TO-CITE.md"',
+        f'type="text/markdown" href="{PAGES}/LICENSE.md"',
+        f'type="text/plain" href="{PAGES}/CITATION.cff"',
+        f'type="text/plain" href="{PAGES}/humans.txt"',
+        f'type="application/ld+json" href="{PAGES}/schema/person.jsonld"',
+        f'type="application/ld+json" href="{PAGES}/schema/faq.jsonld"',
+        f'type="application/schema+json" href="{PAGES}/schema/llms-index.schema.json"',
     }
     for alternate in required_alternates:
         if alternate not in html:
             errors.append(f"docs/index.html missing alternate link: {alternate}")
+    required_resource_links = {
+        f'<link rel="license" href="{PAGES}/LICENSE.md"/>',
+        f'<link rel="sitemap" type="application/xml" href="{PAGES}/sitemap.xml"/>',
+    }
+    for tag in required_resource_links:
+        if tag not in html:
+            errors.append(f"docs/index.html missing absolute resource link: {tag}")
     entity = data.get("entity", {})
     if entity.get("description") and entity["description"] not in html:
         errors.append("docs/index.html missing visible entity description")

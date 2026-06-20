@@ -1944,7 +1944,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             check_publisher_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_ownership_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
-    if '<link rel="author" href="humans.txt"/>' not in index_text:
+    if f'<link rel="author" href="{PAGES_BASE}/humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:
         issues.append("Pages index missing rel=me identity link")
@@ -1981,6 +1981,38 @@ def validate_artifact(artifact: Path) -> list[str]:
     for key, expected in expected_pages.items():
         if pages.get(key) != expected:
             issues.append(f"Pages llms-index.json machineReadable.pages.{key} must be {expected}")
+    required_alternate_head_links = (
+        ("application/json", expected_pages["llmsIndexJson"]),
+        ("text/plain", expected_pages["llmsTxt"]),
+        ("text/plain", expected_pages["llmsFullTxt"]),
+        ("text/plain", expected_pages["llmsCtxFullTxt"]),
+        ("text/markdown", expected_pages["faqMd"]),
+        ("text/markdown", expected_pages["recruiterMd"]),
+        ("text/markdown", expected_pages["proofMd"]),
+        ("text/markdown", expected_pages["stackMd"]),
+        ("text/markdown", expected_pages["profileMd"]),
+        ("text/markdown", expected_pages["readmeMd"]),
+        ("text/markdown", expected_pages["howToCiteMd"]),
+        ("text/markdown", expected_pages["licenseMd"]),
+        ("text/plain", expected_pages["citationCff"]),
+        ("text/plain", expected_pages["humansTxt"]),
+        ("application/ld+json", expected_pages["schemaPerson"]),
+        ("application/ld+json", expected_pages["schemaFaq"]),
+        ("application/schema+json", expected_pages["schemaIndex"]),
+    )
+    required_head_links = {
+        f'<link rel="alternate" type="{content_type}" href="{href}"/>'
+        for content_type, href in required_alternate_head_links
+    }
+    required_head_links.update(
+        {
+            f'<link rel="license" href="{expected_pages["licenseMd"]}"/>',
+            f'<link rel="sitemap" type="application/xml" href="{expected_pages["sitemap"]}"/>',
+        }
+    )
+    for tag in required_head_links:
+        if tag not in index_text:
+            issues.append(f"Pages index missing absolute head resource link: {tag}")
 
     robots_text = (artifact / "robots.txt").read_text(encoding="utf-8")
     if "Allow: /public/" in robots_text:
