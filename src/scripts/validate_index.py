@@ -2850,6 +2850,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if person_faq_page.get("identifier") != faq_document_identifier(faq_id):
             errors.append("person.jsonld FAQPage identifier drift")
+        if person_faq_page.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld FAQPage dateModified drift")
+        if person_faq_page.get("isBasedOn") != repo.get("faqMd"):
+            errors.append("person.jsonld FAQPage isBasedOn drift")
+        if person_faq_page.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld FAQPage about drift")
         if person_faq_page.get("inLanguage") != content_language():
             errors.append("person.jsonld FAQPage inLanguage drift")
         if person_faq_page.get("author", {}).get("@id") != person_id:

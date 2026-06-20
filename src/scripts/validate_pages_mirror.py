@@ -1891,6 +1891,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage identifier drift")
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
             issues.append("Pages index FAQPage isBasedOn drift")
+        if faq_page.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index FAQPage dateModified drift")
+        if faq_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index FAQPage about drift")
         if faq_page.get("inLanguage") != content_language():
             issues.append("Pages index FAQPage inLanguage drift")
         if faq_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
