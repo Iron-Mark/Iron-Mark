@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
-"""Bump updated date in llms-index.json and lastmod in sitemap.xml."""
+"""Bump public freshness dates for the production-facing index files."""
 
 from __future__ import annotations
 
 import json
 import re
-from datetime import date
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TODAY = date.today().isoformat()
+PROJECT_TIMEZONE = timezone(timedelta(hours=8), name="Asia/Manila")
+TODAY = datetime.now(PROJECT_TIMEZONE).date().isoformat()
+LAST_UPDATED_DOCS = (
+    ROOT / "public/FAQ.md",
+    ROOT / "public/llms-full.txt",
+)
 
 
 def bump_json() -> bool:
@@ -32,8 +37,34 @@ def bump_sitemap() -> bool:
     return True
 
 
+def bump_robots() -> bool:
+    path = ROOT / "robots.txt"
+    text = path.read_text(encoding="utf-8")
+    new = re.sub(r"# Last updated: \d{4}-\d{2}-\d{2}", f"# Last updated: {TODAY}", text)
+    if new == text:
+        return False
+    path.write_text(new, encoding="utf-8")
+    return True
+
+
+def bump_last_updated(path: Path) -> bool:
+    text = path.read_text(encoding="utf-8")
+    new = re.sub(r"Last updated: \d{4}-\d{2}-\d{2}", f"Last updated: {TODAY}", text, count=1)
+    if new == text:
+        return False
+    path.write_text(new, encoding="utf-8")
+    return True
+
+
 def main() -> None:
-    changed = bump_json() or bump_sitemap()
+    changed = any(
+        (
+            bump_json(),
+            bump_sitemap(),
+            bump_robots(),
+            *(bump_last_updated(path) for path in LAST_UPDATED_DOCS),
+        )
+    )
     print(f"date={TODAY} changed={changed}")
 
 

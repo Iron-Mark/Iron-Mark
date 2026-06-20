@@ -43,10 +43,10 @@ jobs:
 
       - name: Regenerate derived files
         run: |
-          python3 src/scripts/generate_schema.py
           python3 src/scripts/generate_llms_ctx.py
-          python3 src/scripts/build_pages_index.py
           python3 src/scripts/generate_sitemap.py
+          python3 src/scripts/generate_schema.py
+          python3 src/scripts/build_pages_index.py
 
       - name: Validate
         run: python3 src/scripts/validate_index.py
@@ -55,7 +55,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add llms-index.json sitemap.xml public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html
+          git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html
           git diff --staged --quiet && echo "No date changes" && exit 0
           git commit -m "chore: bump index freshness dates [skip ci]"
           git push
