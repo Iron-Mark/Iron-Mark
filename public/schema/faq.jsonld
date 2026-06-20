@@ -156,6 +156,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -169,12 +176,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer",
         "text": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -200,6 +214,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -213,12 +234,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to-answer",
         "text": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -244,6 +272,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -257,12 +292,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack-answer",
         "text": "Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -288,6 +330,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -301,12 +350,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims-answer",
         "text": "Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -332,6 +388,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -345,12 +408,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof-answer",
         "text": "HireProof is an AI trust and safety product for job seekers. Case study: https://www.marksiazon.dev/projects/hireproof. Live: https://hireproof.tech/portfolio",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -376,6 +446,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -389,12 +466,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink-answer",
         "text": "ResQLink is an offline-first emergency response platform. UMak InfotechOlympics 2025 Android Productivity Champion. Case study: https://www.marksiazon.dev/projects/resqlink",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -421,6 +505,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -434,12 +525,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe-answer",
         "text": "BaybayInscribe is Baybayin ML and cultural education UX. InfotechOlympics 2024 Android winner. Case study: https://www.marksiazon.dev/projects/baybayinscribe. Model: https://huggingface.co/gilas/baybayinscribe",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -466,6 +564,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -479,12 +584,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn-answer",
         "text": "Stellaroid Earn is a Web3 credential proof app on Stellar testnet with Soroban and Freighter. Case study: https://www.marksiazon.dev/projects/stellaroid-earn. Live: https://stellaroid.tech",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -510,6 +622,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -523,12 +642,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain-answer",
         "text": "qwen-ui-lab, Smart Profile, Kudlit, and Pulse are maintained as hackathon/lab work. Lab hub: https://www.marksiazon.dev/lab",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -554,6 +680,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -567,12 +700,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer-answer",
         "text": "Both - product design engineer workflow from UX research and design systems through React/Next.js/Flutter/Kotlin implementation, deployment, and verification.",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -598,6 +738,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -611,12 +758,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won-answer",
         "text": "UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -642,6 +796,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -655,12 +816,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon-answer",
         "text": "Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: public/HOW-TO-CITE.md",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -688,6 +856,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -701,12 +876,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes-answer",
         "text": "Repo: llms-index.json, llms.txt, public/llms-full.txt, public/llms-ctx-full.txt, public/FAQ.md, public/schema/llms-index.schema.json, public/schema/person.jsonld, public/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -733,6 +915,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -746,12 +935,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve-answer",
         "text": "Based in the Philippines; open to Southeast Asia and remote global roles.",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",
@@ -777,6 +973,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "sdPublisher": {
@@ -790,12 +993,19 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring-answer",
         "text": "Recruiter brief: https://www.marksiazon.dev/recruiter. Contact: https://www.marksiazon.dev/contact. Email: marksiazon.dev@gmail.com. LinkedIn: https://www.linkedin.com/in/mark-siazon/",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
         "about": {
           "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-20",

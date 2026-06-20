@@ -2014,6 +2014,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question url drift for: {question.get('question')}")
         if question_node.get("about", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Question about drift for: {question.get('question')}")
+        if question_node.get("isPartOf", {}).get("@id") != faq_id:
+            errors.append(f"faq.jsonld Question isPartOf drift for: {question.get('question')}")
+        if question_node.get("parentItem", {}).get("@id") != faq_id:
+            errors.append(f"faq.jsonld Question parentItem drift for: {question.get('question')}")
+        if question_node.get("answerCount") != 1:
+            errors.append(f"faq.jsonld Question answerCount drift for: {question.get('question')}")
         if question_node.get("inLanguage") != "en":
             errors.append(f"faq.jsonld Question inLanguage must be en for: {question.get('question')}")
         if question_node.get("dateModified") != data.get("updated"):
@@ -2023,12 +2029,18 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if not isinstance(accepted_answer, dict):
             errors.append(f"faq.jsonld Question missing acceptedAnswer: {expected}")
             continue
+        if accepted_answer.get("url") != f"{expected}-answer":
+            errors.append(f"faq.jsonld Answer url drift for: {question.get('question')}")
         if accepted_answer.get("text") != question.get("answer"):
             errors.append(f"faq.jsonld answer drift for: {question.get('question')}")
         if accepted_answer.get("author", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Answer author drift for: {question.get('question')}")
         if accepted_answer.get("about", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Answer about drift for: {question.get('question')}")
+        if accepted_answer.get("isPartOf", {}).get("@id") != faq_id:
+            errors.append(f"faq.jsonld Answer isPartOf drift for: {question.get('question')}")
+        if accepted_answer.get("parentItem", {}).get("@id") != expected:
+            errors.append(f"faq.jsonld Answer parentItem drift for: {question.get('question')}")
         if accepted_answer.get("inLanguage") != "en":
             errors.append(f"faq.jsonld Answer inLanguage must be en for: {question.get('question')}")
         if accepted_answer.get("dateModified") != data.get("updated"):
