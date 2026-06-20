@@ -125,6 +125,9 @@
           ]
         }
       ],
+      "hasOfferCatalog": {
+        "@id": "https://www.marksiazon.dev/#services"
+      },
       "makesOffer": [
         {
           "@id": "https://www.marksiazon.dev/#offer-product-design"
@@ -243,7 +246,10 @@
       "@type": "OfferCatalog",
       "@id": "https://www.marksiazon.dev/#services",
       "name": "Mark Siazon services and availability",
+      "description": "Service catalog for Mark Siazon product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
       "url": "https://www.marksiazon.dev/recruiter",
+      "numberOfItems": 5,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
           "@id": "https://www.marksiazon.dev/#offer-product-design"
@@ -985,6 +991,37 @@
       ]
     },
     {
+      "@type": "ServiceChannel",
+      "@id": "https://www.marksiazon.dev/#hiring-service-channel",
+      "name": "Mark Siazon hiring service channel",
+      "description": "Web contact channel for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+      "serviceUrl": "https://www.marksiazon.dev/contact",
+      "availableLanguage": [
+        "en"
+      ],
+      "providesService": [
+        {
+          "@id": "https://www.marksiazon.dev/#service-product-design"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#service-full-stack-engineering"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#service-ai-workflow-prototypes"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#service-mobile-and-wear-os-ux"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#service-web3-proof-systems"
+        }
+      ],
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "dateModified": "2026-06-20"
+    },
+    {
       "@type": "ImageObject",
       "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image",
       "name": "Mark Siazon product design and full-stack development profile banner",
@@ -1676,6 +1713,9 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "url": "https://www.marksiazon.dev/recruiter",
+      "availableChannel": {
+        "@id": "https://www.marksiazon.dev/#hiring-service-channel"
+      },
       "areaServed": [
         {
           "@type": "Country",
@@ -1732,6 +1772,9 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "url": "https://www.marksiazon.dev/recruiter",
+      "availableChannel": {
+        "@id": "https://www.marksiazon.dev/#hiring-service-channel"
+      },
       "areaServed": [
         {
           "@type": "Country",
@@ -1788,6 +1831,9 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "url": "https://www.marksiazon.dev/recruiter",
+      "availableChannel": {
+        "@id": "https://www.marksiazon.dev/#hiring-service-channel"
+      },
       "areaServed": [
         {
           "@type": "Country",
@@ -1844,6 +1890,9 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "url": "https://www.marksiazon.dev/recruiter",
+      "availableChannel": {
+        "@id": "https://www.marksiazon.dev/#hiring-service-channel"
+      },
       "areaServed": [
         {
           "@type": "Country",
@@ -1900,6 +1949,9 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "url": "https://www.marksiazon.dev/recruiter",
+      "availableChannel": {
+        "@id": "https://www.marksiazon.dev/#hiring-service-channel"
+      },
       "areaServed": [
         {
           "@type": "Country",

@@ -1213,6 +1213,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     person_fragment_base = f"{str(person_id).split('#', 1)[0]}#"
     contact_action_id = f"{person_fragment_base}contact-action"
     contact_entry_id = f"{person_fragment_base}contact-entrypoint"
+    service_channel_id = f"{person_fragment_base}hiring-service-channel"
     portfolio_site_id = data.get("identifiers", {}).get("portfolioWebsite")
     github_site_id = data.get("identifiers", {}).get("githubProfileIndex")
     profile_page_id = data.get("identifiers", {}).get("githubProfilePage")
@@ -1264,6 +1265,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 errors.append(f"person.jsonld hiring contactPoint areaServed missing: {missing_contact_area}")
 
         expected_offer_ids = {f"{person_fragment_base}offer-{slugify(focus)}" for focus in availability.get("focus", [])}
+        expected_service_ids = {
+            f"{person_fragment_base}service-{slugify(focus)}"
+            for focus in availability.get("focus", [])
+        }
+        if person.get("hasOfferCatalog", {}).get("@id") != f"{person_fragment_base}services":
+            errors.append("person.jsonld Person hasOfferCatalog must reference services OfferCatalog")
         missing_offer_refs = sorted(expected_offer_ids - node_ref_ids(person.get("makesOffer")))
         if missing_offer_refs:
             errors.append(f"person.jsonld Person makesOffer missing: {missing_offer_refs}")
@@ -1288,9 +1295,28 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if not offer_catalog or "OfferCatalog" not in node_types(offer_catalog):
             errors.append("person.jsonld missing OfferCatalog services node")
         else:
+            if offer_catalog.get("numberOfItems") != len(expected_offer_ids):
+                errors.append("person.jsonld OfferCatalog numberOfItems drift")
+            if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":
+                errors.append("person.jsonld OfferCatalog itemListOrder drift")
             missing_catalog_refs = sorted(expected_offer_ids - node_ref_ids(offer_catalog.get("itemListElement")))
             if missing_catalog_refs:
                 errors.append(f"person.jsonld OfferCatalog itemListElement missing: {missing_catalog_refs}")
+        service_channel = node_by_id(person_schema, service_channel_id)
+        if not service_channel or "ServiceChannel" not in node_types(service_channel):
+            errors.append("person.jsonld missing hiring ServiceChannel node")
+        else:
+            if service_channel.get("serviceUrl") != availability.get("contact"):
+                errors.append("person.jsonld ServiceChannel serviceUrl drift")
+            if "en" not in service_channel.get("availableLanguage", []):
+                errors.append("person.jsonld ServiceChannel availableLanguage must include en")
+            missing_channel_services = sorted(expected_service_ids - node_ref_ids(service_channel.get("providesService")))
+            if missing_channel_services:
+                errors.append(f"person.jsonld ServiceChannel providesService missing: {missing_channel_services}")
+            if service_channel.get("about", {}).get("@id") != person_id:
+                errors.append("person.jsonld ServiceChannel about drift")
+            if service_channel.get("dateModified") != data.get("updated"):
+                errors.append("person.jsonld ServiceChannel dateModified drift")
         for focus in availability.get("focus", []):
             offer_id = f"{person_fragment_base}offer-{slugify(focus)}"
             service_id = f"{person_fragment_base}service-{slugify(focus)}"
@@ -1309,6 +1335,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             else:
                 if service.get("provider", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Service provider drift for: {focus}")
+                if service.get("availableChannel", {}).get("@id") != service_channel_id:
+                    errors.append(f"person.jsonld Service availableChannel drift for: {focus}")
                 missing_service_area = sorted(area_served - area_names(service.get("areaServed")))
                 if missing_service_area:
                     errors.append(f"person.jsonld Service areaServed missing for {focus}: {missing_service_area}")

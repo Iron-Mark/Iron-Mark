@@ -771,6 +771,58 @@ def validate_artifact(artifact: Path) -> list[str]:
     ]
     for person_node in person_nodes:
         check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
+    availability = index_data.get("availability", {})
+    if not isinstance(availability, dict):
+        availability = {}
+    focus_items = availability.get("focus", [])
+    if not isinstance(focus_items, list):
+        focus_items = []
+    expected_offer_ids = {
+        f"https://www.marksiazon.dev/#offer-{slugify(str(focus))}"
+        for focus in focus_items
+        if focus
+    }
+    expected_service_ids = {
+        f"https://www.marksiazon.dev/#service-{slugify(str(focus))}"
+        for focus in focus_items
+        if focus
+    }
+    services_catalog_id = "https://www.marksiazon.dev/#services"
+    service_channel_id = "https://www.marksiazon.dev/#hiring-service-channel"
+    if person and person.get("hasOfferCatalog", {}).get("@id") != services_catalog_id:
+        issues.append("Pages index Person hasOfferCatalog drift")
+    offer_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == services_catalog_id), None)
+    if not offer_catalog or "OfferCatalog" not in node_type_set(offer_catalog):
+        issues.append("Pages index inline JSON-LD missing services OfferCatalog")
+    else:
+        if offer_catalog.get("numberOfItems") != len(expected_offer_ids):
+            issues.append("Pages index OfferCatalog numberOfItems drift")
+        if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":
+            issues.append("Pages index OfferCatalog itemListOrder drift")
+        missing_catalog_refs = sorted(expected_offer_ids - ref_ids(offer_catalog.get("itemListElement")))
+        if missing_catalog_refs:
+            issues.append(f"Pages index OfferCatalog itemListElement missing: {missing_catalog_refs}")
+    service_channel = next((node for node in parsed_jsonld_nodes if node.get("@id") == service_channel_id), None)
+    if not service_channel or "ServiceChannel" not in node_type_set(service_channel):
+        issues.append("Pages index inline JSON-LD missing hiring ServiceChannel")
+    else:
+        if service_channel.get("serviceUrl") != availability.get("contact"):
+            issues.append("Pages index ServiceChannel serviceUrl drift")
+        if "en" not in service_channel.get("availableLanguage", []):
+            issues.append("Pages index ServiceChannel availableLanguage must include en")
+        missing_channel_services = sorted(expected_service_ids - ref_ids(service_channel.get("providesService")))
+        if missing_channel_services:
+            issues.append(f"Pages index ServiceChannel providesService missing: {missing_channel_services}")
+        if service_channel.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index ServiceChannel about drift")
+        if service_channel.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index ServiceChannel dateModified drift")
+    for service_id in expected_service_ids:
+        service = next((node for node in parsed_jsonld_nodes if node.get("@id") == service_id), None)
+        if not service or "Service" not in node_type_set(service):
+            issues.append(f"Pages index missing Service node: {service_id}")
+        elif service.get("availableChannel", {}).get("@id") != service_channel_id:
+            issues.append(f"Pages index Service availableChannel drift: {service_id}")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")

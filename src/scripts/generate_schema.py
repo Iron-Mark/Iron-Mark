@@ -448,6 +448,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     portfolio_site_id = ids["portfolioWebsite"]
     contact_action_id = fragment_id(person_id, "contact-action")
     contact_entry_id = fragment_id(person_id, "contact-entrypoint")
+    service_channel_id = fragment_id(person_id, "hiring-service-channel")
     faq_id = ids["faqDocument"]
     updated = data["updated"]
     availability = data.get("availability", {})
@@ -512,6 +513,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "availableLanguage": ["en"],
                 }
             ],
+            "hasOfferCatalog": ref(fragment_id(person_id, "services")),
             "makesOffer": [ref(offer_id) for offer_id in offer_ids],
             "hasOccupation": [
                 {
@@ -546,7 +548,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "OfferCatalog",
             "@id": fragment_id(person_id, "services"),
             "name": "Mark Siazon services and availability",
+            "description": "Service catalog for Mark Siazon product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
             "url": availability.get("recruiterBrief", entity["url"]),
+            "numberOfItems": len(offer_ids),
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "itemListElement": [ref(offer_id) for offer_id in offer_ids],
         },
         {
@@ -701,6 +706,17 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "https://schema.org/DesktopWebPlatform",
                 "https://schema.org/MobileWebPlatform",
             ],
+        },
+        {
+            "@type": "ServiceChannel",
+            "@id": service_channel_id,
+            "name": "Mark Siazon hiring service channel",
+            "description": "Web contact channel for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+            "serviceUrl": availability.get("contact", entity["url"]),
+            "availableLanguage": ["en"],
+            "providesService": [ref(service_id) for service_id in service_ids],
+            "about": ref(person_id),
+            "dateModified": updated,
         },
         {
             "@type": "ImageObject",
@@ -873,6 +889,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "serviceType": focus,
                     "provider": ref(person_id),
                     "url": availability.get("recruiterBrief", entity["url"]),
+                    "availableChannel": ref(service_channel_id),
                     "areaServed": area_nodes,
                     "audience": {
                         "@type": "Audience",
