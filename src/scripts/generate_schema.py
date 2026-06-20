@@ -6,8 +6,20 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
 from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from build_pages_mirror import (
+    rewrite_github_public_urls,
+    rewrite_llms_index,
+    rewrite_relative_public_paths,
+    rewrite_repo_only_paths,
+    rewrite_robots,
+    rewrite_sitemap,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -29,6 +41,26 @@ PROJECT_IMAGE_EXTENSIONS = (
     (".png", "image/png"),
     (".svg", "image/svg+xml"),
 )
+DOWNLOAD_SOURCE_PATHS = {
+    "llms-index-json": ROOT / "llms-index.json",
+    "llms-txt": ROOT / "llms.txt",
+    "llms-full-txt": PUBLIC / "llms-full.txt",
+    "llms-ctx-full-txt": PUBLIC / "llms-ctx-full.txt",
+    "faq-md": PUBLIC / "FAQ.md",
+    "recruiter-md": PUBLIC / "RECRUITER.md",
+    "proof-md": PUBLIC / "PROOF.md",
+    "stack-md": PUBLIC / "STACK.md",
+    "profile-md": PUBLIC / "PROFILE.md",
+    "readme-md": PUBLIC / "README.md",
+    "how-to-cite-md": PUBLIC / "HOW-TO-CITE.md",
+    "license-md": PUBLIC / "LICENSE.md",
+    "citation-cff": PUBLIC / "CITATION.cff",
+    "faq-jsonld": SCHEMA / "faq.jsonld",
+    "schema-json": SCHEMA / "llms-index.schema.json",
+    "humans-txt": ROOT / "humans.txt",
+    "sitemap-xml": ROOT / "sitemap.xml",
+    "robots-txt": ROOT / "robots.txt",
+}
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -714,6 +746,45 @@ def content_work(
         **(ownership or {}),
         **(sd_provenance or {}),
     }
+
+
+def serialized_json(data: dict[str, Any]) -> str:
+    return json.dumps(data, indent=2, ensure_ascii=False) + "\n"
+
+
+def text_integrity_metadata(text: str) -> dict[str, str]:
+    data = text.encode("utf-8")
+    return {
+        "contentSize": f"{len(data)} bytes",
+        "sha256": hashlib.sha256(data).hexdigest(),
+    }
+
+
+def pages_mirror_text(text: str, source_path: Path) -> str:
+    if source_path.name == "llms-index.json":
+        return rewrite_llms_index(text)
+
+    updated = rewrite_github_public_urls(text)
+    updated = rewrite_relative_public_paths(updated, source_path)
+    updated = rewrite_repo_only_paths(updated)
+    if source_path.name == "robots.txt":
+        updated = rewrite_robots(updated)
+    if source_path.name == "sitemap.xml":
+        updated = rewrite_sitemap(updated)
+    return updated
+
+
+def download_integrity_metadata(key: str, data: dict[str, Any]) -> dict[str, str]:
+    if key == "person-jsonld":
+        return {}
+    source_path = DOWNLOAD_SOURCE_PATHS.get(key)
+    if not source_path:
+        return {}
+    if key == "faq-jsonld":
+        text = serialized_json(build_faq_graph(data))
+    else:
+        text = source_path.read_text(encoding="utf-8")
+    return text_integrity_metadata(pages_mirror_text(text, source_path))
 
 
 def download_id(key: str) -> str:
@@ -1406,6 +1477,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "encodingFormat": item["encoding"],
                 "description": download_description(item["name"], item["encoding"]),
                 "abstract": download_description(item["name"], item["encoding"]),
+                **download_integrity_metadata(item["key"], data),
                 "inLanguage": "en",
                 "dateModified": updated,
                 "license": data.get("license"),

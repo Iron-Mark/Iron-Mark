@@ -19,6 +19,7 @@ from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
     download_description,
     download_id,
+    download_integrity_metadata,
     featured_projects_list_description,
     lab_projects_list_description,
     lab_project_id,
@@ -1504,6 +1505,13 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index DataDownload description drift: {item['key']}")
             if download.get("abstract") != download.get("description"):
                 issues.append(f"Pages index DataDownload abstract drift: {item['key']}")
+            expected_integrity = download_integrity_metadata(item["key"], index_data)
+            for integrity_key in ("contentSize", "sha256"):
+                if expected_integrity:
+                    if download.get(integrity_key) != expected_integrity[integrity_key]:
+                        issues.append(f"Pages index DataDownload {integrity_key} drift: {item['key']}")
+                elif integrity_key in download:
+                    issues.append(f"Pages index DataDownload unexpected {integrity_key}: {item['key']}")
             if download.get("inLanguage") != "en":
                 issues.append(f"Pages index DataDownload inLanguage must be en: {item['key']}")
             check_content_usage_policy(issues, download, f"Pages index DataDownload {item['key']}")

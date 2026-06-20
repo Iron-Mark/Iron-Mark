@@ -25,6 +25,7 @@ from build_pages_mirror import (
 )
 from generate_schema import (
     download_description,
+    download_integrity_metadata,
     featured_projects_list_description,
     lab_projects_list_description,
     offer_description,
@@ -1868,6 +1869,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld DataDownload description drift for: {key}")
         if download.get("abstract") != download.get("description"):
             errors.append(f"person.jsonld DataDownload abstract drift for: {key}")
+        expected_integrity = download_integrity_metadata(key, data)
+        for integrity_key in ("contentSize", "sha256"):
+            if expected_integrity:
+                if download.get(integrity_key) != expected_integrity[integrity_key]:
+                    errors.append(f"person.jsonld DataDownload {integrity_key} drift for: {key}")
+            elif integrity_key in download:
+                errors.append(f"person.jsonld DataDownload unexpected {integrity_key} for: {key}")
         if download.get("inLanguage") != "en":
             errors.append(f"person.jsonld DataDownload inLanguage must be en for: {key}")
         if download.get("dateModified") != data.get("updated"):
