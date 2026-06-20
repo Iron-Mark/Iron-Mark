@@ -19,6 +19,8 @@ from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
     download_description,
     download_id,
+    featured_projects_list_description,
+    lab_projects_list_description,
     lab_project_id,
     lab_project_url,
     machine_downloads,
@@ -1262,6 +1264,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         featured_projects = index_data.get("featuredProjects", [])
         if not isinstance(featured_projects, list):
             featured_projects = []
+        if featured_list.get("description") != featured_projects_list_description(index_data):
+            issues.append("Pages index featured projects ItemList description drift")
         if featured_list.get("numberOfItems") != len(featured_projects):
             issues.append("Pages index featured projects ItemList count drift")
         expected_featured_ids = {
@@ -1280,6 +1284,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         lab_projects = index_data.get("hackathonLab", [])
         if not isinstance(lab_projects, list):
             lab_projects = []
+        if lab_list.get("description") != lab_projects_list_description(index_data):
+            issues.append("Pages index hackathon and lab ItemList description drift")
         if lab_list.get("numberOfItems") != len(lab_projects):
             issues.append("Pages index hackathon and lab ItemList count drift")
         expected_lab_ids = {

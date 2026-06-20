@@ -128,6 +128,16 @@ def offer_description(data: dict[str, Any], focus: str) -> str:
     return f"{status} availability for Mark Siazon {focus} service{region_text}."
 
 
+def featured_projects_list_description(data: dict[str, Any]) -> str:
+    count = len(data.get("featuredProjects", []))
+    return f"Ordered list of {count} featured Mark Siazon project case studies for proof-backed product, AI, mobile, Web3, and client web work."
+
+
+def lab_projects_list_description(data: dict[str, Any]) -> str:
+    count = len(data.get("hackathonLab", []))
+    return f"Ordered list of {count} Mark Siazon hackathon and lab projects with demos, repositories, or case studies."
+
+
 def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     pages = data["machineReadable"]["pages"]
@@ -1212,6 +1222,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "ItemList",
             "@id": f"{GITHUB_BLOB}/llms-index.json#featured-projects",
             "name": "Mark Siazon featured projects",
+            "description": featured_projects_list_description(data),
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("featuredProjects", [])),
             "itemListElement": [
@@ -1228,6 +1239,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "ItemList",
             "@id": f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
             "name": "Mark Siazon hackathon and lab projects",
+            "description": lab_projects_list_description(data),
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("hackathonLab", [])),
             "itemListElement": [

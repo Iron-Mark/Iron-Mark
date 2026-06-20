@@ -25,6 +25,8 @@ from build_pages_mirror import (
 )
 from generate_schema import (
     download_description,
+    featured_projects_list_description,
+    lab_projects_list_description,
     offer_description,
     pages_section_id,
     pages_section_nav_item_id,
@@ -1981,6 +1983,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not featured_list or "ItemList" not in node_types(featured_list):
         errors.append("person.jsonld missing featured projects ItemList")
     else:
+        if featured_list.get("description") != featured_projects_list_description(data):
+            errors.append("person.jsonld featured projects ItemList description drift")
         if featured_list.get("numberOfItems") != len(data.get("featuredProjects", [])):
             errors.append("person.jsonld featured projects ItemList count drift")
         missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
@@ -1994,6 +1998,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not lab_list or "ItemList" not in node_types(lab_list):
         errors.append("person.jsonld missing hackathon and lab ItemList")
     else:
+        if lab_list.get("description") != lab_projects_list_description(data):
+            errors.append("person.jsonld hackathon and lab ItemList description drift")
         if lab_list.get("numberOfItems") != len(data.get("hackathonLab", [])):
             errors.append("person.jsonld hackathon and lab ItemList count drift")
         missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))
