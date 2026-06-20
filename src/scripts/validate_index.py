@@ -1462,6 +1462,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld GitHub ProfilePage significantLink drift")
         if profile_page.get("relatedLink") != profile_related_links(data):
             errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
+        if profile_page.get("inLanguage") != "en":
+            errors.append("person.jsonld GitHub ProfilePage inLanguage must be en")
         check_review_metadata(profile_page, data, "person.jsonld GitHub ProfilePage")
         check_spatial_coverage(profile_page, data, "person.jsonld GitHub ProfilePage")
 
@@ -1896,6 +1898,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not person_faq_page or "FAQPage" not in node_types(person_faq_page):
         errors.append("person.jsonld missing FAQPage node matching identifiers.faqDocument")
     else:
+        if person_faq_page.get("inLanguage") != "en":
+            errors.append("person.jsonld FAQPage inLanguage must be en")
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)

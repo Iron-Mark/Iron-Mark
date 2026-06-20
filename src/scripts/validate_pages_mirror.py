@@ -959,6 +959,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
     else:
+        if profile_page.get("inLanguage") != "en":
+            issues.append("Pages index GitHub ProfilePage inLanguage must be en")
         check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
         check_spatial_coverage(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
@@ -1233,6 +1235,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
             issues.append("Pages index FAQPage isBasedOn drift")
+        if faq_page.get("inLanguage") != "en":
+            issues.append("Pages index FAQPage inLanguage must be en")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")

@@ -498,6 +498,7 @@
       "name": "Mark Siazon GitHub profile README",
       "description": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
       "abstract": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
+      "inLanguage": "en",
       "mainEntity": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -1639,6 +1640,7 @@
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+      "inLanguage": "en",
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-20",
       "author": {
