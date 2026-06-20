@@ -68,6 +68,33 @@
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/hireproof/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/stellaroid-earn/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/resqlink/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/good-to-live/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://iron-mark.github.io/Iron-Mark/HOW-TO-CITE.md</loc>

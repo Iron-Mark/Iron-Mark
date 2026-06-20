@@ -12,6 +12,10 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from build_pages_mirror import featured_project_cover_urls, project_cover_asset
+
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
@@ -26,6 +30,11 @@ SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
+PROJECT_IMAGE_ENCODING = {
+    ".webp": "image/webp",
+    ".png": "image/png",
+    ".svg": "image/svg+xml",
+}
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
 PUBLIC_FILES = (
@@ -121,6 +130,18 @@ def ref_ids(value: object) -> set[str]:
     if not isinstance(value, list):
         return set()
     return {item.get("@id", "") for item in value if isinstance(item, dict)}
+
+
+def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
+    asset = project_cover_asset(str(project.get("slug", "")))
+    if not asset:
+        return None
+    url = f"{PAGES_BASE}/{asset}"
+    return {
+        "@id": f"{url}#image",
+        "url": url,
+        "encodingFormat": PROJECT_IMAGE_ENCODING.get(Path(asset).suffix, ""),
+    }
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -310,6 +331,33 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_values = sorted(expected_values - identifier_values)
         if missing_values:
             issues.append(f"Pages index inline Dataset identifier missing value(s): {missing_values}")
+    jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
+    for project in index_data.get("featuredProjects", []):
+        if not isinstance(project, dict):
+            continue
+        expected_project_id = f"{project.get('caseStudy')}#project"
+        project_node = jsonld_node_by_id.get(expected_project_id)
+        if not project_node or "CreativeWork" not in node_type_set(project_node):
+            issues.append(f"Pages index inline JSON-LD missing featured project CreativeWork: {project.get('name')}")
+            continue
+        expected_image = expected_project_image(project)
+        if not expected_image:
+            issues.append(f"Pages index cannot resolve featured project cover image: {project.get('name')}")
+            continue
+        if project_node.get("image", {}).get("@id") != expected_image["@id"]:
+            issues.append(f"Pages index featured project image ref drift: {project.get('name')}")
+        if project_node.get("thumbnailUrl") != expected_image["url"]:
+            issues.append(f"Pages index featured project thumbnailUrl drift: {project.get('name')}")
+        image_node = jsonld_node_by_id.get(expected_image["@id"])
+        if not image_node or "ImageObject" not in node_type_set(image_node):
+            issues.append(f"Pages index inline JSON-LD missing featured project ImageObject: {project.get('name')}")
+            continue
+        if image_node.get("contentUrl") != expected_image["url"]:
+            issues.append(f"Pages index featured project image contentUrl drift: {project.get('name')}")
+        if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
+            issues.append(f"Pages index featured project image encodingFormat drift: {project.get('name')}")
+        if image_node.get("about", {}).get("@id") != expected_project_id:
+            issues.append(f"Pages index featured project image about drift: {project.get('name')}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:
@@ -372,12 +420,27 @@ def validate_artifact(artifact: Path) -> list[str]:
             ),
             None,
         )
-        image = root_url.find("image:image", ns) if root_url is not None else None
-        if image is None:
+        root_images = root_url.findall("image:image", ns) if root_url is not None else []
+        if not root_images:
             issues.append("Pages sitemap root URL missing primary image entry")
         else:
-            if image.findtext("image:loc", default="", namespaces=ns) != PAGES_SOCIAL_IMAGE:
+            root_image_locs = [image.findtext("image:loc", default="", namespaces=ns) for image in root_images]
+            if root_image_locs != [PAGES_SOCIAL_IMAGE]:
                 issues.append("Pages sitemap primary image loc drift")
+        readme_url = next(
+            (
+                url
+                for url in sitemap.findall(".//sm:url", ns)
+                if url.findtext("sm:loc", default="", namespaces=ns) == f"{PAGES_BASE}/README.md"
+            ),
+            None,
+        )
+        readme_images = readme_url.findall("image:image", ns) if readme_url is not None else []
+        readme_image_locs = [image.findtext("image:loc", default="", namespaces=ns) for image in readme_images]
+        expected_project_images = featured_project_cover_urls()
+        if readme_image_locs != expected_project_images:
+            issues.append("Pages sitemap README.md image entries must match featured project cover assets")
+        for image in root_images + readme_images:
             deprecated_image_tags = [
                 tag
                 for tag in ("caption", "geo_location", "title", "license")

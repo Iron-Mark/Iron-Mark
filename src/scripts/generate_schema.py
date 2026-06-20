@@ -22,6 +22,11 @@ IMAGE_ALT = "Mark Siazon product design and full-stack development profile banne
 IMAGE_WIDTH = 400
 IMAGE_HEIGHT = 225
 PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
+PROJECT_IMAGE_EXTENSIONS = (
+    (".webp", "image/webp"),
+    (".png", "image/png"),
+    (".svg", "image/svg+xml"),
+)
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -42,6 +47,22 @@ def faq_question_id(faq_id: str, question: str) -> str:
 
 def project_id(project: dict[str, Any]) -> str:
     return f"{project['caseStudy']}#project"
+
+
+def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
+    slug = str(project.get("slug", ""))
+    if not slug:
+        return None
+    for suffix, encoding in PROJECT_IMAGE_EXTENSIONS:
+        path = ROOT / "assets" / "projects" / slug / f"cover{suffix}"
+        if path.exists():
+            url = f"{PAGES}/assets/projects/{slug}/cover{suffix}"
+            return {
+                "@id": f"{url}#image",
+                "url": url,
+                "encodingFormat": encoding,
+            }
+    return None
 
 
 def compact(values: list[str | None]) -> list[str]:
@@ -499,24 +520,44 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         )
 
     for project in data.get("featuredProjects", []):
-        graph.append(
-            {
-                "@type": "CreativeWork",
-                "@id": project_id(project),
-                "name": project["name"],
-                "url": project["caseStudy"],
-                "description": project.get("focus", ""),
-                "creator": ref(person_id),
-                "author": ref(person_id),
-                "about": ref(person_id),
-                "isPartOf": ref(portfolio_site_id),
-                "inLanguage": "en",
-                "dateModified": updated,
-                "isAccessibleForFree": True,
-                "sameAs": compact([project.get("live"), project.get("repo"), project.get("model")]),
-                "keywords": compact([project.get("slug"), project.get("focus")]),
-            }
-        )
+        image = project_image_info(project)
+        project_node = {
+            "@type": "CreativeWork",
+            "@id": project_id(project),
+            "name": project["name"],
+            "url": project["caseStudy"],
+            "description": project.get("focus", ""),
+            "creator": ref(person_id),
+            "author": ref(person_id),
+            "about": ref(person_id),
+            "isPartOf": ref(portfolio_site_id),
+            "inLanguage": "en",
+            "dateModified": updated,
+            "isAccessibleForFree": True,
+            "sameAs": compact([project.get("live"), project.get("repo"), project.get("model")]),
+            "keywords": compact([project.get("slug"), project.get("focus")]),
+        }
+        if image:
+            project_node["image"] = ref(image["@id"])
+            project_node["thumbnailUrl"] = image["url"]
+        graph.append(project_node)
+        if image:
+            graph.append(
+                {
+                    "@type": "ImageObject",
+                    "@id": image["@id"],
+                    "name": f"{project['name']} project cover image",
+                    "caption": f"{project['name']} project cover image",
+                    "url": image["url"],
+                    "contentUrl": image["url"],
+                    "encodingFormat": image["encodingFormat"],
+                    "inLanguage": "en",
+                    "dateModified": updated,
+                    "creator": ref(person_id),
+                    "about": ref(project_id(project)),
+                    "isPartOf": ref(project_id(project)),
+                }
+            )
 
     graph.extend(
         [

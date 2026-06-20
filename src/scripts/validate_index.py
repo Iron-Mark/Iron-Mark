@@ -16,7 +16,12 @@ from typing import Any
 from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_pages_mirror import PAGES_PRIMARY_IMAGE, PAGES_SITEMAP_ENTRIES
+from build_pages_mirror import (
+    PAGES_PRIMARY_IMAGE,
+    PAGES_SITEMAP_ENTRIES,
+    featured_project_cover_urls,
+    project_cover_asset,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -42,6 +47,11 @@ SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
+PROJECT_IMAGE_ENCODING = {
+    ".webp": "image/webp",
+    ".png": "image/png",
+    ".svg": "image/svg+xml",
+}
 README_PRODUCTION_FORBIDDEN_LINKS = {
     ".github/": "GitHub maintenance files",
     "docs/STRUCTURE.md": "internal repository layout docs",
@@ -299,6 +309,20 @@ def check_assets(slug: str) -> None:
     icon = ROOT / "assets" / "projects" / slug / "icon.png"
     if not icon.exists():
         errors.append(f"Missing icon: assets/projects/{slug}/icon.png")
+    if not project_cover_asset(slug):
+        errors.append(f"Missing featured project cover: assets/projects/{slug}/cover.(webp|png|svg)")
+
+
+def expected_project_image(project: dict[str, Any]) -> dict[str, str] | None:
+    asset = project_cover_asset(str(project.get("slug", "")))
+    if not asset:
+        return None
+    url = f"{PAGES}/{asset}"
+    return {
+        "@id": f"{url}#image",
+        "url": url,
+        "encodingFormat": PROJECT_IMAGE_ENCODING.get(Path(asset).suffix, ""),
+    }
 
 
 def check_required_index_keys(data: dict[str, Any]) -> None:
@@ -1169,6 +1193,32 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
         if project_node.get("isAccessibleForFree") is not True:
             errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
+        expected_image = expected_project_image(project)
+        if not expected_image:
+            errors.append(f"person.jsonld featured project cannot resolve cover image: {project.get('name')}")
+            continue
+        if project_node.get("image", {}).get("@id") != expected_image["@id"]:
+            errors.append(f"person.jsonld featured project image ref drift: {project.get('name')}")
+        if project_node.get("thumbnailUrl") != expected_image["url"]:
+            errors.append(f"person.jsonld featured project thumbnailUrl drift: {project.get('name')}")
+        image_node = project_nodes.get(expected_image["@id"])
+        if not image_node or "ImageObject" not in node_types(image_node):
+            errors.append(f"person.jsonld missing featured project ImageObject: {project.get('name')}")
+            continue
+        if image_node.get("url") != expected_image["url"]:
+            errors.append(f"person.jsonld featured project image url drift: {project.get('name')}")
+        if image_node.get("contentUrl") != expected_image["url"]:
+            errors.append(f"person.jsonld featured project image contentUrl drift: {project.get('name')}")
+        if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
+            errors.append(f"person.jsonld featured project image encodingFormat drift: {project.get('name')}")
+        if image_node.get("creator", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld featured project image creator drift: {project.get('name')}")
+        if image_node.get("about", {}).get("@id") != expected:
+            errors.append(f"person.jsonld featured project image about drift: {project.get('name')}")
+        if image_node.get("isPartOf", {}).get("@id") != expected:
+            errors.append(f"person.jsonld featured project image isPartOf drift: {project.get('name')}")
+        if image_node.get("dateModified") != data.get("updated"):
+            errors.append(f"person.jsonld featured project image dateModified drift: {project.get('name')}")
 
 
 def sitemap_entries() -> list[dict[str, str]]:
@@ -1270,12 +1320,23 @@ def check_crawl_files(data: dict[str, Any]) -> None:
             (url for url in sitemap.findall(".//sm:url", ns) if url.findtext("sm:loc", default="", namespaces=ns) == f"{PAGES}/"),
             None,
         )
-        image = root_url.find("image:image", ns) if root_url is not None else None
-        if image is None:
+        root_images = root_url.findall("image:image", ns) if root_url is not None else []
+        if not root_images:
             errors.append("sitemap.xml root URL missing primary image sitemap entry")
         else:
-            if image.findtext("image:loc", default="", namespaces=ns) != PAGES_PRIMARY_IMAGE:
+            root_image_locs = [image.findtext("image:loc", default="", namespaces=ns) for image in root_images]
+            if root_image_locs != [PAGES_PRIMARY_IMAGE]:
                 errors.append("sitemap.xml primary image loc drift")
+        readme_url = next(
+            (url for url in sitemap.findall(".//sm:url", ns) if url.findtext("sm:loc", default="", namespaces=ns) == f"{PAGES}/README.md"),
+            None,
+        )
+        readme_images = readme_url.findall("image:image", ns) if readme_url is not None else []
+        readme_image_locs = [image.findtext("image:loc", default="", namespaces=ns) for image in readme_images]
+        expected_project_images = featured_project_cover_urls()
+        if readme_image_locs != expected_project_images:
+            errors.append("sitemap.xml README.md image entries must match featured project cover assets")
+        for image in root_images + readme_images:
             deprecated_image_tags = [
                 tag
                 for tag in ("caption", "geo_location", "title", "license")

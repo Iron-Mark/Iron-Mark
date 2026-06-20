@@ -11,11 +11,13 @@ from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
+INDEX = ROOT / "llms-index.json"
 
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 PAGES_PRIMARY_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
+PROJECT_COVER_EXTENSIONS = (".webp", ".png", ".svg")
 
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".jsonld", ".cff"}
 SKIP_NAMES = {"index.html"}
@@ -40,6 +42,31 @@ PAGES_SITEMAP_ENTRIES = (
     ("schema/faq.jsonld", "monthly", "0.85"),
     ("schema/llms-index.schema.json", "monthly", "0.8"),
 )
+
+
+def project_cover_asset(slug: str) -> str | None:
+    for suffix in PROJECT_COVER_EXTENSIONS:
+        path = ROOT / "assets" / "projects" / slug / f"cover{suffix}"
+        if path.exists():
+            return f"assets/projects/{slug}/cover{suffix}"
+    return None
+
+
+def featured_project_cover_urls() -> list[str]:
+    try:
+        data = json.loads(INDEX.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+    urls: list[str] = []
+    for project in data.get("featuredProjects", []):
+        if not isinstance(project, dict):
+            continue
+        slug = str(project.get("slug", ""))
+        asset = project_cover_asset(slug)
+        if asset:
+            urls.append(f"{PAGES_BASE}/{asset}")
+    return urls
 
 
 def rewrite_github_public_urls(text: str) -> str:
@@ -121,6 +148,15 @@ def build_pages_sitemap(lastmod: str) -> str:
                     "    </image:image>",
                 ]
             )
+        if path == "README.md":
+            for image_url in featured_project_cover_urls():
+                lines.extend(
+                    [
+                        "    <image:image>",
+                        f"      <image:loc>{escape(image_url)}</image:loc>",
+                        "    </image:image>",
+                    ]
+                )
         lines.append("  </url>")
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
