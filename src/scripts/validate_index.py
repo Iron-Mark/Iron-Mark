@@ -772,6 +772,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     person_fragment_base = f"{str(person_id).split('#', 1)[0]}#"
     contact_action_id = f"{person_fragment_base}contact-action"
     contact_entry_id = f"{person_fragment_base}contact-entrypoint"
+    pages_site_id = data.get("identifiers", {}).get("githubPagesMirror")
+    pages_page_id = f"{PAGES}/#webpage"
+    pages_breadcrumb_id = f"{PAGES}/#breadcrumb"
+    pages_catalog_id = f"{PAGES}/#data-catalog"
+    pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
+    pages_image_id = f"{PAGES}/#primary-image"
     person = node_by_id(person_schema, person_id)
     if not person or "Person" not in node_types(person):
         errors.append("person.jsonld missing Person node matching llms-index entity @id")
@@ -815,6 +821,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person image must reference Pages primary ImageObject")
         if person.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Person potentialAction must reference hiring ContactAction")
+        if pages_page_id not in node_ref_ids(person.get("mainEntityOfPage")):
+            errors.append("person.jsonld Person mainEntityOfPage must reference Pages CollectionPage")
         known_languages = person.get("knowsLanguage", [])
         if not isinstance(known_languages, list):
             known_languages = [known_languages]
@@ -855,13 +863,6 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 if missing_service_area:
                     errors.append(f"person.jsonld Service areaServed missing for {focus}: {missing_service_area}")
 
-    pages = data.get("machineReadable", {}).get("pages", {})
-    pages_site_id = data.get("identifiers", {}).get("githubPagesMirror")
-    pages_page_id = f"{PAGES}/#webpage"
-    pages_breadcrumb_id = f"{PAGES}/#breadcrumb"
-    pages_catalog_id = f"{PAGES}/#data-catalog"
-    pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
-    pages_image_id = f"{PAGES}/#primary-image"
     pages_site = node_by_id(person_schema, pages_site_id)
     if not pages_site or "WebSite" not in node_types(pages_site):
         errors.append("person.jsonld missing GitHub Pages WebSite node")

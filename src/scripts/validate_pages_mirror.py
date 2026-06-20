@@ -115,6 +115,14 @@ def has_english_knows_language(node: dict[str, object]) -> bool:
     )
 
 
+def ref_ids(value: object) -> set[str]:
+    if isinstance(value, dict):
+        value = [value]
+    if not isinstance(value, list):
+        return set()
+    return {item.get("@id", "") for item in value if isinstance(item, dict)}
+
+
 def copy_tree(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -252,6 +260,11 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages SVG favicon must declare a square viewBox")
     if not any("Person" in node_type_set(node) and has_english_knows_language(node) for node in parsed_jsonld_nodes):
         issues.append("Pages index inline JSON-LD missing Person English knowsLanguage signal")
+    person = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#person"), None)
+    if not person or "Person" not in node_type_set(person):
+        issues.append("Pages index inline JSON-LD missing Person node")
+    elif f"{PAGES_BASE}/#webpage" not in ref_ids(person.get("mainEntityOfPage")):
+        issues.append("Pages index inline JSON-LD Person mainEntityOfPage missing Pages CollectionPage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
     if not pages_site or "WebSite" not in node_type_set(pages_site):
         issues.append("Pages index inline JSON-LD missing Pages WebSite node")

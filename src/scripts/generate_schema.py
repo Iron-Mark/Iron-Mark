@@ -211,7 +211,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 {"@type": "AdministrativeArea", "name": "Southeast Asia"},
                 {"@type": "VirtualLocation", "name": "Remote global"},
             ],
-            "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id)],
+            "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id), ref(pages_page_id)],
             "potentialAction": ref(contact_action_id),
             "subjectOf": [
                 ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
