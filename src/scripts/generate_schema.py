@@ -401,12 +401,8 @@ def person_occupations(data: dict[str, Any]) -> list[dict[str, Any]]:
     ]
 
 
-def person_work_locations() -> list[dict[str, str]]:
-    return [
-        {"@type": "Country", "name": "Philippines"},
-        {"@type": "AdministrativeArea", "name": "Southeast Asia"},
-        {"@type": "VirtualLocation", "name": "Remote global"},
-    ]
+def person_work_locations(data: dict[str, Any]) -> list[dict[str, str]]:
+    return spatial_coverage(data)
 
 
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
@@ -1041,7 +1037,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "hasOfferCatalog": ref(fragment_id(person_id, "services")),
             "makesOffer": [ref(offer_id) for offer_id in offer_ids],
             "hasOccupation": person_occupations(data),
-            "workLocation": person_work_locations(),
+            "workLocation": person_work_locations(data),
             "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id), ref(pages_page_id)],
             "potentialAction": ref(contact_action_id),
             "subjectOf": [

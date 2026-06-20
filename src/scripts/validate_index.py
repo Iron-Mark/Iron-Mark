@@ -2050,7 +2050,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person jobTitle drift")
         if person.get("hasOccupation") != person_occupations(data):
             errors.append("person.jsonld Person hasOccupation drift")
-        if person.get("workLocation") != person_work_locations():
+        if person.get("workLocation") != person_work_locations(data):
             errors.append("person.jsonld Person workLocation drift")
 
         availability = data.get("availability", {})

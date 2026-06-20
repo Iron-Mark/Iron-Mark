@@ -1274,7 +1274,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index Person jobTitle drift")
         if person.get("hasOccupation") != person_occupations(index_data):
             issues.append("Pages index Person hasOccupation drift")
-        if person.get("workLocation") != person_work_locations():
+        if person.get("workLocation") != person_work_locations(index_data):
             issues.append("Pages index Person workLocation drift")
     if person and pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
         issues.append("Pages index Person knowsAbout missing topic taxonomy")
