@@ -292,6 +292,11 @@ def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> 
         },
         {
             "@type": "PropertyValue",
+            "name": "Verified achievement count",
+            "value": len(data.get("achievements", [])),
+        },
+        {
+            "@type": "PropertyValue",
             "name": "Answer snippet count",
             "value": len(data.get("aeo", {}).get("answerSnippets", [])),
         },
@@ -354,6 +359,17 @@ def lab_project_url(project: dict[str, Any]) -> str:
 
 def lab_project_id(project: dict[str, Any]) -> str:
     return f"{lab_project_url(project)}#project"
+
+
+def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
+    awards: dict[str, list[str]] = {}
+    for achievement in data.get("achievements", []):
+        project = achievement.get("project")
+        title = achievement.get("title")
+        if not project or not title:
+            continue
+        awards.setdefault(project, []).append(title)
+    return awards
 
 
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
@@ -1476,6 +1492,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if missing_lab_items:
             errors.append(f"person.jsonld hackathon and lab ItemList missing: {missing_lab_items}")
 
+    project_awards = awards_by_project(data)
     for project in data.get("featuredProjects", []):
         expected = f"{project.get('caseStudy')}#project"
         project_node = project_nodes.get(expected)
@@ -1502,6 +1519,11 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
         if project_node.get("isAccessibleForFree") is not True:
             errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
+        expected_awards = project_awards.get(project.get("name", ""), [])
+        if expected_awards and project_node.get("award") != expected_awards:
+            errors.append(f"person.jsonld featured project award drift: {project.get('name')}")
+        if not expected_awards and "award" in project_node:
+            errors.append(f"person.jsonld featured project unexpected award: {project.get('name')}")
         check_content_usage_policy(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_global_citation(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_structured_data_provenance(project_node, data, f"person.jsonld featured project {project.get('name')}")

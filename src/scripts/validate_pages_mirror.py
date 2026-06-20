@@ -188,6 +188,9 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
     lab_projects = index_data.get("hackathonLab", [])
     if not isinstance(lab_projects, list):
         lab_projects = []
+    achievements = index_data.get("achievements", [])
+    if not isinstance(achievements, list):
+        achievements = []
     answer_snippets = aeo.get("answerSnippets", [])
     if not isinstance(answer_snippets, list):
         answer_snippets = []
@@ -215,6 +218,11 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
             "@type": "PropertyValue",
             "name": "Hackathon and lab project count",
             "value": len(lab_projects),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Verified achievement count",
+            "value": len(achievements),
         },
         {
             "@type": "PropertyValue",
@@ -290,6 +298,22 @@ def expected_mention_ids(index_data: dict[str, object]) -> set[str]:
         *project_ids,
         *lab_project_ids,
     }
+
+
+def awards_by_project(index_data: dict[str, object]) -> dict[str, list[str]]:
+    awards: dict[str, list[str]] = {}
+    achievements = index_data.get("achievements", [])
+    if not isinstance(achievements, list):
+        return awards
+    for achievement in achievements:
+        if not isinstance(achievement, dict):
+            continue
+        project = achievement.get("project")
+        title = achievement.get("title")
+        if not isinstance(project, str) or not isinstance(title, str):
+            continue
+        awards.setdefault(project, []).append(title)
+    return awards
 
 
 def pages_rewrite_public_source(source: str) -> str:
@@ -685,6 +709,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_lab_ids = sorted(expected_lab_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_ids:
             issues.append(f"Pages index hackathon and lab ItemList missing: {missing_lab_ids}")
+    project_awards = awards_by_project(index_data)
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):
             continue
@@ -703,6 +728,11 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image ref drift: {project.get('name')}")
         if project_node.get("thumbnailUrl") != expected_image["url"]:
             issues.append(f"Pages index featured project thumbnailUrl drift: {project.get('name')}")
+        expected_awards = project_awards.get(str(project.get("name", "")), [])
+        if expected_awards and project_node.get("award") != expected_awards:
+            issues.append(f"Pages index featured project award drift: {project.get('name')}")
+        if not expected_awards and "award" in project_node:
+            issues.append(f"Pages index featured project unexpected award: {project.get('name')}")
         check_content_usage_policy(issues, project_node, f"Pages index featured project {project.get('name')}")
         check_global_citation(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         check_structured_data_provenance(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")

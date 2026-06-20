@@ -138,6 +138,11 @@ def dataset_variable_measurements(
         },
         {
             "@type": "PropertyValue",
+            "name": "Verified achievement count",
+            "value": len(data.get("achievements", [])),
+        },
+        {
+            "@type": "PropertyValue",
             "name": "Answer snippet count",
             "value": len(data.get("aeo", {}).get("answerSnippets", [])),
         },
@@ -157,6 +162,17 @@ def dataset_variable_measurements(
             "value": len(downloads),
         },
     ]
+
+
+def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
+    awards: dict[str, list[str]] = {}
+    for achievement in data.get("achievements", []):
+        project = achievement.get("project")
+        title = achievement.get("title")
+        if not project or not title:
+            continue
+        awards.setdefault(project, []).append(title)
+    return awards
 
 
 def citation_targets(data: dict[str, Any]) -> list[str]:
@@ -320,6 +336,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     usage_policy = content_usage_policy(data)
     image_rights_metadata = image_rights(data)
     citations = citation_targets(data)
+    project_awards = awards_by_project(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -726,6 +743,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             **usage_policy,
             **sd_provenance,
         }
+        awards = project_awards.get(project["name"], [])
+        if awards:
+            project_node["award"] = awards
         if image:
             project_node["image"] = ref(image["@id"])
             project_node["thumbnailUrl"] = image["url"]
