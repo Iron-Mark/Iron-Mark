@@ -1472,6 +1472,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 {
                     "@type": "ListItem",
                     "position": index,
+                    "url": project["caseStudy"],
                     "item": ref(project_id(project)),
                 }
                 for index, project in enumerate(data.get("featuredProjects", []), start=1)
@@ -1499,6 +1500,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 {
                     "@type": "ListItem",
                     "position": index,
+                    "url": lab_project_url(project),
                     "item": ref(lab_project_id(project)),
                 }
                 for index, project in enumerate(data.get("hackathonLab", []), start=1)

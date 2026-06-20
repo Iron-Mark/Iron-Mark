@@ -279,6 +279,16 @@ def item_list_ref_ids(values: Any) -> set[str]:
     return refs
 
 
+def item_list_urls(values: Any) -> set[str]:
+    if not isinstance(values, list):
+        return set()
+    return {
+        item["url"]
+        for item in values
+        if isinstance(item, dict) and isinstance(item.get("url"), str)
+    }
+
+
 def repo_public_url_values(value: Any) -> list[str]:
     if isinstance(value, dict):
         found: list[str] = []
@@ -2795,6 +2805,11 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     featured_list_id = f"{GITHUB_BLOB}/llms-index.json#featured-projects"
     featured_list = project_nodes.get(featured_list_id)
     expected_featured_project_ids = {f"{project.get('caseStudy')}#project" for project in data.get("featuredProjects", [])}
+    expected_featured_project_urls = {
+        project.get("caseStudy")
+        for project in data.get("featuredProjects", [])
+        if isinstance(project.get("caseStudy"), str)
+    }
     if not featured_list or "ItemList" not in node_types(featured_list):
         errors.append("person.jsonld missing featured projects ItemList")
     else:
@@ -2821,6 +2836,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_items:
             errors.append(f"person.jsonld featured projects ItemList missing: {missing_featured_items}")
+        featured_item_urls = item_list_urls(featured_list.get("itemListElement"))
+        missing_featured_urls = sorted(expected_featured_project_urls - featured_item_urls)
+        if missing_featured_urls:
+            errors.append(f"person.jsonld featured projects ItemList missing URLs: {missing_featured_urls}")
+        bad_featured_urls = sorted(url for url in featured_item_urls if not is_absolute_http_url(url))
+        if bad_featured_urls:
+            errors.append(f"person.jsonld featured projects ItemList URLs must be absolute HTTP(S): {bad_featured_urls}")
         check_content_usage_policy(featured_list, data, "person.jsonld featured projects ItemList")
         check_global_citation(featured_list, data, "person.jsonld featured projects ItemList")
         check_ownership_metadata(featured_list, data, "person.jsonld featured projects ItemList")
@@ -2829,6 +2851,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     lab_list_id = f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"
     lab_list = project_nodes.get(lab_list_id)
     expected_lab_project_ids = {lab_project_id(project) for project in data.get("hackathonLab", []) if lab_project_url(project)}
+    expected_lab_project_urls = {lab_project_url(project) for project in data.get("hackathonLab", []) if lab_project_url(project)}
     if not lab_list or "ItemList" not in node_types(lab_list):
         errors.append("person.jsonld missing hackathon and lab ItemList")
     else:
@@ -2855,6 +2878,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_items:
             errors.append(f"person.jsonld hackathon and lab ItemList missing: {missing_lab_items}")
+        lab_item_urls = item_list_urls(lab_list.get("itemListElement"))
+        missing_lab_urls = sorted(expected_lab_project_urls - lab_item_urls)
+        if missing_lab_urls:
+            errors.append(f"person.jsonld hackathon and lab ItemList missing URLs: {missing_lab_urls}")
+        bad_lab_urls = sorted(url for url in lab_item_urls if not is_absolute_http_url(url))
+        if bad_lab_urls:
+            errors.append(f"person.jsonld hackathon and lab ItemList URLs must be absolute HTTP(S): {bad_lab_urls}")
         check_content_usage_policy(lab_list, data, "person.jsonld hackathon and lab ItemList")
         check_global_citation(lab_list, data, "person.jsonld hackathon and lab ItemList")
         check_ownership_metadata(lab_list, data, "person.jsonld hackathon and lab ItemList")

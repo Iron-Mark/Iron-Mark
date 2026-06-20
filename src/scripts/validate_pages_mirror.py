@@ -256,6 +256,16 @@ def item_list_ref_ids(value: object) -> set[str]:
     return refs
 
 
+def item_list_urls(value: object) -> set[str]:
+    if not isinstance(value, list):
+        return set()
+    return {
+        item["url"]
+        for item in value
+        if isinstance(item, dict) and isinstance(item.get("url"), str)
+    }
+
+
 def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
     asset = project_cover_asset(str(project.get("slug", "")))
     if not asset:
@@ -1745,9 +1755,21 @@ def validate_artifact(artifact: Path) -> list[str]:
             for project in featured_projects
             if isinstance(project, dict)
         }
+        expected_featured_urls = {
+            project.get("caseStudy")
+            for project in featured_projects
+            if isinstance(project, dict) and isinstance(project.get("caseStudy"), str)
+        }
         missing_featured_ids = sorted(expected_featured_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_ids:
             issues.append(f"Pages index featured projects ItemList missing: {missing_featured_ids}")
+        featured_item_urls = item_list_urls(featured_list.get("itemListElement"))
+        missing_featured_urls = sorted(expected_featured_urls - featured_item_urls)
+        if missing_featured_urls:
+            issues.append(f"Pages index featured projects ItemList missing URLs: {missing_featured_urls}")
+        bad_featured_urls = sorted(url for url in featured_item_urls if not is_absolute_http_url(url))
+        if bad_featured_urls:
+            issues.append(f"Pages index featured projects ItemList URLs must be absolute HTTP(S): {bad_featured_urls}")
         check_content_usage_policy(issues, featured_list, "Pages index featured projects ItemList")
         check_global_citation(issues, featured_list, index_data, "Pages index featured projects ItemList")
         check_ownership_metadata(issues, featured_list, index_data, "Pages index featured projects ItemList")
@@ -1783,9 +1805,21 @@ def validate_artifact(artifact: Path) -> list[str]:
             for project in lab_projects
             if isinstance(project, dict) and lab_project_url(project)
         }
+        expected_lab_urls = {
+            lab_project_url(project)
+            for project in lab_projects
+            if isinstance(project, dict) and lab_project_url(project)
+        }
         missing_lab_ids = sorted(expected_lab_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_ids:
             issues.append(f"Pages index hackathon and lab ItemList missing: {missing_lab_ids}")
+        lab_item_urls = item_list_urls(lab_list.get("itemListElement"))
+        missing_lab_urls = sorted(expected_lab_urls - lab_item_urls)
+        if missing_lab_urls:
+            issues.append(f"Pages index hackathon and lab ItemList missing URLs: {missing_lab_urls}")
+        bad_lab_urls = sorted(url for url in lab_item_urls if not is_absolute_http_url(url))
+        if bad_lab_urls:
+            issues.append(f"Pages index hackathon and lab ItemList URLs must be absolute HTTP(S): {bad_lab_urls}")
         check_content_usage_policy(issues, lab_list, "Pages index hackathon and lab ItemList")
         check_global_citation(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
         check_ownership_metadata(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
