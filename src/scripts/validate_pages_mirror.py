@@ -1918,6 +1918,11 @@ def validate_artifact(artifact: Path) -> list[str]:
         for item in index_data.get("aeo", {}).get("answerSnippets", [])
         if isinstance(item, dict)
     }
+    faq_answers_by_question = {
+        str(item.get("question", "")): str(item.get("answer", ""))
+        for item in index_data.get("aeo", {}).get("answerSnippets", [])
+        if isinstance(item, dict)
+    }
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
         if "Question" in node_types:
@@ -1939,6 +1944,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Question answerCount drift: {node.get('name')}")
             if node.get("inLanguage") != content_language():
                 issues.append(f"Pages index Question inLanguage drift: {node.get('name')}")
+            if node.get("dateModified") != index_data.get("updated"):
+                issues.append(f"Pages index Question dateModified drift: {node.get('name')}")
             if node.get("isAccessibleForFree") is not True:
                 issues.append(f"Pages index Question must be isAccessibleForFree: {node.get('name')}")
             expected_citations = set(faq_sources_by_question.get(question_name, []))
@@ -1950,24 +1957,39 @@ def validate_artifact(artifact: Path) -> list[str]:
             check_content_usage_policy(issues, node, f"Pages index Question {node.get('name')}")
             check_structured_data_provenance(issues, node, index_data, f"Pages index Question {node.get('name')}")
             answer = node.get("acceptedAnswer", {})
-            if isinstance(answer, dict):
-                answer_id = f"{question_id}-answer"
-                if answer.get("url") != answer_id:
-                    issues.append(f"Pages index Answer url drift: {node.get('name')}")
-                if answer.get("identifier") != faq_item_identifier(answer_id, "answer"):
-                    issues.append(f"Pages index Answer identifier drift: {node.get('name')}")
-                if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
-                    issues.append(f"Pages index Answer publisher drift: {node.get('name')}")
-                if answer.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
-                    issues.append(f"Pages index Answer isPartOf drift: {node.get('name')}")
-                if answer.get("parentItem", {}).get("@id") != question_id:
-                    issues.append(f"Pages index Answer parentItem drift: {node.get('name')}")
-                if answer.get("inLanguage") != content_language():
-                    issues.append(f"Pages index Answer inLanguage drift: {node.get('name')}")
-                if answer.get("isAccessibleForFree") is not True:
-                    issues.append(f"Pages index Answer must be isAccessibleForFree: {node.get('name')}")
-                check_content_usage_policy(issues, answer, f"Pages index Answer {node.get('name')}")
-                check_structured_data_provenance(issues, answer, index_data, f"Pages index Answer {node.get('name')}")
+            if not isinstance(answer, dict):
+                issues.append(f"Pages index Question missing acceptedAnswer: {node.get('name')}")
+                continue
+            answer_id = f"{question_id}-answer"
+            if answer.get("url") != answer_id:
+                issues.append(f"Pages index Answer url drift: {node.get('name')}")
+            if answer.get("identifier") != faq_item_identifier(answer_id, "answer"):
+                issues.append(f"Pages index Answer identifier drift: {node.get('name')}")
+            if answer.get("text") != faq_answers_by_question.get(question_name):
+                issues.append(f"Pages index Answer text drift: {node.get('name')}")
+            if answer.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Answer author drift: {node.get('name')}")
+            if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Answer publisher drift: {node.get('name')}")
+            if answer.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Answer about drift: {node.get('name')}")
+            if answer.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
+                issues.append(f"Pages index Answer isPartOf drift: {node.get('name')}")
+            if answer.get("parentItem", {}).get("@id") != question_id:
+                issues.append(f"Pages index Answer parentItem drift: {node.get('name')}")
+            if answer.get("inLanguage") != content_language():
+                issues.append(f"Pages index Answer inLanguage drift: {node.get('name')}")
+            if answer.get("dateModified") != index_data.get("updated"):
+                issues.append(f"Pages index Answer dateModified drift: {node.get('name')}")
+            if answer.get("isAccessibleForFree") is not True:
+                issues.append(f"Pages index Answer must be isAccessibleForFree: {node.get('name')}")
+            answer_citations = answer.get("citation", [])
+            if isinstance(answer_citations, str):
+                answer_citations = [answer_citations]
+            if set(answer_citations) != expected_citations:
+                issues.append(f"Pages index Answer citation drift: {node.get('name')}")
+            check_content_usage_policy(issues, answer, f"Pages index Answer {node.get('name')}")
+            check_structured_data_provenance(issues, answer, index_data, f"Pages index Answer {node.get('name')}")
     jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
     featured_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#featured-projects")
     if not featured_list or "ItemList" not in node_type_set(featured_list):
