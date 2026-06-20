@@ -1877,11 +1877,16 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_spatial_coverage(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
         check_expected_mentions(issues, dataset, index_data, "Pages index Dataset")
-    faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
+    pages_faq_id = f"{PAGES_BASE}/FAQ.md#faq"
+    expected_question_ids = {
+        faq_question_id(pages_faq_id, str(item.get("question", "")))
+        for item in index_data.get("aeo", {}).get("answerSnippets", [])
+        if isinstance(item, dict)
+    }
+    faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == pages_faq_id), None)
     if not faq_page or "FAQPage" not in node_type_set(faq_page):
         issues.append("Pages index inline JSON-LD missing FAQPage")
     else:
-        pages_faq_id = f"{PAGES_BASE}/FAQ.md#faq"
         if faq_page.get("identifier") != faq_document_identifier(pages_faq_id):
             issues.append("Pages index FAQPage identifier drift")
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
@@ -1896,11 +1901,6 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage keywords drift")
         if faq_page.get("isAccessibleForFree") is not True:
             issues.append("Pages index FAQPage must be isAccessibleForFree")
-        expected_question_ids = {
-            faq_question_id(pages_faq_id, str(item.get("question", "")))
-            for item in index_data.get("aeo", {}).get("answerSnippets", [])
-            if isinstance(item, dict)
-        }
         missing_has_part = sorted(expected_question_ids - ref_ids(faq_page.get("hasPart")))
         if missing_has_part:
             issues.append(f"Pages index FAQPage hasPart missing questions: {missing_has_part}")
@@ -1923,6 +1923,14 @@ def validate_artifact(artifact: Path) -> list[str]:
         for item in index_data.get("aeo", {}).get("answerSnippets", [])
         if isinstance(item, dict)
     }
+    question_node_ids = {
+        str(node.get("@id", ""))
+        for node in parsed_jsonld_nodes
+        if "Question" in node_type_set(node)
+    }
+    missing_question_nodes = sorted(expected_question_ids - question_node_ids)
+    if missing_question_nodes:
+        issues.append(f"Pages index missing Question nodes: {missing_question_nodes}")
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
         if "Question" in node_types:
@@ -1932,6 +1940,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Question url drift: {node.get('name')}")
             if node.get("identifier") != faq_item_identifier(question_id, "question"):
                 issues.append(f"Pages index Question identifier drift: {node.get('name')}")
+            if node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Question about drift: {node.get('name')}")
             if node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
                 issues.append(f"Pages index Question author drift: {node.get('name')}")
             if node.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
