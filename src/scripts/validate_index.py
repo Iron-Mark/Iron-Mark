@@ -34,6 +34,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     primary_image_description,
+    profile_keywords,
     project_image_description,
     service_description,
 )
@@ -1455,6 +1456,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_expected_mentions(node, expected_mentions, label)
         check_ownership_metadata(node, data, label)
         check_spatial_coverage(node, data, label)
+        if node.get("keywords") != profile_keywords(data):
+            errors.append(f"{label} keywords drift")
 
     profile_page = node_by_id(person_schema, profile_page_id)
     if not profile_page or "ProfilePage" not in node_types(profile_page):
@@ -1918,6 +1921,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld FAQPage author drift")
         if person_faq_page.get("publisher", {}).get("@id") != person_id:
             errors.append("person.jsonld FAQPage publisher drift")
+        if person_faq_page.get("keywords") != profile_keywords(data):
+            errors.append("person.jsonld FAQPage keywords drift")
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
@@ -1941,6 +1946,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage about drift")
         if faq_page.get("inLanguage") != "en":
             errors.append("faq.jsonld FAQPage inLanguage must be en")
+        if faq_page.get("keywords") != profile_keywords(data):
+            errors.append("faq.jsonld FAQPage keywords drift")
         check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_review_metadata(faq_page, data, "faq.jsonld FAQPage")

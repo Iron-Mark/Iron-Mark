@@ -138,6 +138,16 @@ def lab_projects_list_description(data: dict[str, Any]) -> str:
     return f"Ordered list of {count} Mark Siazon hackathon and lab projects with demos, repositories, or case studies."
 
 
+def profile_keywords(data: dict[str, Any]) -> list[str]:
+    availability = data.get("availability", {})
+    area_served = availability.get("areaServed") or data.get("seo", {}).get("geoSignals", {}).get("serviceRegions", [])
+    return unique_compact(
+        data.get("seo", {}).get("primaryKeywords", [])
+        + data.get("seo", {}).get("geoTargets", [])
+        + area_served
+    )
+
+
 def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     pages = data["machineReadable"]["pages"]
@@ -786,11 +796,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
 
     topic_terms = topic_term_values(data)
     knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []) + [ref(pages_topic_set_id)]
-    dataset_keywords = unique_compact(
-        data.get("seo", {}).get("primaryKeywords", [])
-        + data.get("seo", {}).get("geoTargets", [])
-        + area_served
-    )
+    keywords = profile_keywords(data)
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
     usage_policy = content_usage_policy(data)
@@ -886,6 +892,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
             "abstract": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
+            "keywords": keywords,
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
             "mentions": mentioned_entities,
@@ -904,6 +911,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "abstract": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+            "keywords": keywords,
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
             "mentions": mentioned_entities,
@@ -919,6 +927,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": "Mark Siazon GitHub profile README",
             "description": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
             "abstract": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
+            "keywords": keywords,
             "inLanguage": "en",
             "author": ref(person_id),
             "publisher": ref(person_id),
@@ -950,6 +959,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
             "abstract": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "keywords": keywords,
             "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
             "image": ref(pages_image_id),
@@ -968,6 +978,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "alternateName": PAGES_SITE_ALTERNATE_NAMES,
             "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
             "abstract": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+            "keywords": keywords,
             "isBasedOn": repo["llmsIndexJson"],
             "isPartOf": ref(pages_site_id),
             "about": ref(person_id),
@@ -1113,6 +1124,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": pages["home"],
             "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
             "abstract": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+            "keywords": keywords,
             "isBasedOn": repo["llmsIndexJson"],
             "publisher": ref(person_id),
             "about": ref(person_id),
@@ -1153,7 +1165,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "dateModified": updated,
             "license": data.get("license"),
-            "keywords": dataset_keywords,
+            "keywords": keywords,
             "citation": citations,
             "spatialCoverage": area_served,
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
@@ -1191,6 +1203,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": repo["faqMd"],
             "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+            "keywords": keywords,
             "inLanguage": "en",
             "isBasedOn": repo["faqMd"],
             "dateModified": updated,
@@ -1610,6 +1623,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": repo["faqMd"],
             "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+            "keywords": profile_keywords(data),
             "isBasedOn": repo["faqMd"],
             "dateModified": data["updated"],
             "author": ref(person_id),

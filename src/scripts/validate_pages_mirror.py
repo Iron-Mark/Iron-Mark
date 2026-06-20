@@ -31,6 +31,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     primary_image_description,
+    profile_keywords,
     project_image_description,
     service_description,
     slugify,
@@ -967,6 +968,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index GitHub ProfilePage author drift")
         if profile_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index GitHub ProfilePage publisher drift")
+        if profile_page.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index GitHub ProfilePage keywords drift")
         check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
         check_spatial_coverage(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
@@ -983,6 +986,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         expected_based_on = canonical.get("githubProfileReadme") if isinstance(canonical, dict) else None
         if pages_site.get("isBasedOn") != expected_based_on:
             issues.append("Pages index WebSite isBasedOn drift")
+        if pages_site.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index WebSite keywords drift")
         check_content_usage_policy(issues, pages_site, "Pages index WebSite")
         check_ownership_metadata(issues, pages_site, index_data, "Pages index WebSite")
         check_spatial_coverage(issues, pages_site, index_data, "Pages index WebSite")
@@ -1022,6 +1027,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage author drift")
         if pages_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index CollectionPage publisher drift")
+        if pages_page.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index CollectionPage keywords drift")
         if pages_topic_set_id not in ref_ids(pages_page.get("hasPart")):
             issues.append("Pages index CollectionPage hasPart missing topic taxonomy")
         if pages_main_content_id not in ref_ids(pages_page.get("hasPart")):
@@ -1193,6 +1200,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if data_catalog.get("isBasedOn") != expected_based_on:
             issues.append("Pages index DataCatalog isBasedOn drift")
+        if data_catalog.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index DataCatalog keywords drift")
         check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_ownership_metadata(issues, data_catalog, index_data, "Pages index DataCatalog")
@@ -1237,6 +1246,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset variableMeasured drift")
         if {"https://www.marksiazon.dev/#person", pages_topic_set_id} - ref_ids(dataset.get("about")):
             issues.append("Pages index Dataset about must reference Person and topic taxonomy")
+        if dataset.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index Dataset keywords drift")
         check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_ownership_metadata(issues, dataset, index_data, "Pages index Dataset")
@@ -1255,6 +1266,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage author drift")
         if faq_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index FAQPage publisher drift")
+        if faq_page.get("keywords") != profile_keywords(index_data):
+            issues.append("Pages index FAQPage keywords drift")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")
