@@ -172,6 +172,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             json.loads((artifact / json_name).read_text(encoding="utf-8"))
         except Exception as exc:
             issues.append(f"invalid JSON in Pages artifact {json_name}: {exc}")
+    try:
+        index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
+    except Exception:
+        index_data = {}
 
     index_text = (artifact / "index.html").read_text(encoding="utf-8") if (artifact / "index.html").exists() else ""
     for needle in ("schema/llms-index.schema.json", "schema/person.jsonld", "schema/faq.jsonld", "llms-index.json"):
@@ -256,6 +260,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline JSON-LD WebSite site-name drift")
         if pages_site.get("url") != f"{PAGES_BASE}/":
             issues.append("Pages index inline JSON-LD WebSite url drift")
+        if pages_site.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index inline JSON-LD WebSite dateModified drift")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
             issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
@@ -264,7 +270,6 @@ def validate_artifact(artifact: Path) -> list[str]:
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:
         issues.append("Pages index missing rel=me identity link")
 
-    index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
     if index_data.get("contentRoot") != "./":
         issues.append("Pages llms-index.json contentRoot must be ./")
     machine_readable = index_data.get("machineReadable", {})

@@ -281,6 +281,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "dateModified": updated,
             "image": ref(pages_image_id),
             "potentialAction": ref(contact_action_id),
         },

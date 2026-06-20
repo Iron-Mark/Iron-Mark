@@ -870,6 +870,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages WebSite site name drift")
         if pages_site.get("url") != f"{PAGES}/":
             errors.append("person.jsonld Pages WebSite url drift")
+        if pages_site.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld Pages WebSite dateModified drift")
         missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_site_alternates:
             errors.append(f"person.jsonld Pages WebSite alternateName missing: {missing_site_alternates}")
