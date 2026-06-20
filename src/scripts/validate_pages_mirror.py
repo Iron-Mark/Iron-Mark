@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
-from generate_schema import download_id, machine_downloads
+from generate_schema import download_id, machine_downloads, slugify
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -232,6 +232,31 @@ def expected_citation_targets(index_data: dict[str, object]) -> list[str]:
     return output
 
 
+def expected_mention_ids(index_data: dict[str, object]) -> set[str]:
+    availability = index_data.get("availability", {})
+    if not isinstance(availability, dict):
+        availability = {}
+    focus_items = availability.get("focus", [])
+    if not isinstance(focus_items, list):
+        focus_items = []
+    service_ids = {
+        f"https://www.marksiazon.dev/#service-{slugify(str(focus))}"
+        for focus in focus_items
+        if focus
+    }
+    project_ids = {
+        f"{project.get('caseStudy')}#project"
+        for project in index_data.get("featuredProjects", [])
+        if isinstance(project, dict) and project.get("caseStudy")
+    }
+    return {
+        f"{GITHUB_BLOB}/llms-index.json#featured-projects",
+        "https://www.marksiazon.dev/#services",
+        *service_ids,
+        *project_ids,
+    }
+
+
 def pages_rewrite_public_source(source: str) -> str:
     replacements = (
         (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
@@ -251,6 +276,17 @@ def check_global_citation(
 ) -> None:
     if node.get("citation") != expected_citation_targets(index_data):
         issues.append(f"{label} citation chain drift")
+
+
+def check_expected_mentions(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    missing = sorted(expected_mention_ids(index_data) - ref_ids(node.get("mentions")))
+    if missing:
+        issues.append(f"{label} mentions missing: {missing}")
 
 
 def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
@@ -494,6 +530,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index WebSite isBasedOn drift")
         check_content_usage_policy(issues, pages_site, "Pages index WebSite")
         check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
+        check_expected_mentions(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
             issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
@@ -511,6 +548,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
+        check_expected_mentions(issues, pages_page, index_data, "Pages index CollectionPage")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
     if not data_catalog or "DataCatalog" not in node_type_set(data_catalog):
         issues.append("Pages index inline JSON-LD missing DataCatalog")
@@ -520,6 +558,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
+        check_expected_mentions(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
     if not breadcrumb or "BreadcrumbList" not in node_type_set(breadcrumb):
         issues.append("Pages index inline JSON-LD missing BreadcrumbList")
@@ -559,6 +598,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
+        check_expected_mentions(issues, dataset, index_data, "Pages index Dataset")
     faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
     if not faq_page or "FAQPage" not in node_type_set(faq_page):
         issues.append("Pages index inline JSON-LD missing FAQPage")

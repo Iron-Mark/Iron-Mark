@@ -283,7 +283,13 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     area_served = availability.get("areaServed") or data.get("seo", {}).get("geoSignals", {}).get("serviceRegions", [])
     area_nodes = area_served_nodes(area_served)
     offer_ids = [fragment_id(person_id, f"offer-{slugify(focus)}") for focus in availability.get("focus", [])]
+    service_ids = [fragment_id(person_id, f"service-{slugify(focus)}") for focus in availability.get("focus", [])]
     downloads = machine_downloads(pages, repo)
+    mentioned_entities = (
+        [ref(f"{GITHUB_BLOB}/llms-index.json#featured-projects"), ref(fragment_id(person_id, "services"))]
+        + [ref(service_id) for service_id in service_ids]
+        + [ref(project_id(project)) for project in data.get("featuredProjects", [])]
+    )
 
     knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", [])
     dataset_keywords = unique_compact(
@@ -372,6 +378,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
             "image": ref(pages_image_id),
+            "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **sd_provenance,
         },
@@ -386,6 +393,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "image": ref(pages_image_id),
+            "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **usage_policy,
             **sd_provenance,
@@ -401,6 +409,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
+            "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **usage_policy,
             **sd_provenance,
@@ -419,6 +428,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
             "image": ref(pages_image_id),
+            "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **usage_policy,
             **sd_provenance,
@@ -439,6 +449,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
+            "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             "citation": citations,
             **usage_policy,
@@ -515,6 +526,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dataset": ref(pages_dataset_id),
             "inLanguage": "en",
             "dateModified": updated,
+            "mentions": mentioned_entities,
             "citation": citations,
             **usage_policy,
             **sd_provenance,
@@ -551,6 +563,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "spatialCoverage": area_served,
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),
+            "mentions": mentioned_entities,
             "isAccessibleForFree": True,
             "distribution": [ref(download_id(item["key"])) for item in downloads],
             **usage_policy,
@@ -606,8 +619,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         },
     ]
 
-    for focus, offer_id in zip(availability.get("focus", []), offer_ids, strict=False):
-        service_id = fragment_id(person_id, f"service-{slugify(focus)}")
+    for focus, offer_id, service_id in zip(availability.get("focus", []), offer_ids, service_ids, strict=False):
         graph.extend(
             [
                 {

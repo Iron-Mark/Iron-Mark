@@ -303,9 +303,29 @@ def expected_citation_targets(data: dict[str, Any]) -> list[str]:
     return output
 
 
+def expected_mention_ids(data: dict[str, Any], person_fragment_base: str) -> set[str]:
+    service_ids = {
+        f"{person_fragment_base}service-{slugify(focus)}"
+        for focus in data.get("availability", {}).get("focus", [])
+    }
+    project_ids = {f"{project.get('caseStudy')}#project" for project in data.get("featuredProjects", [])}
+    return {
+        f"{GITHUB_BLOB}/llms-index.json#featured-projects",
+        f"{person_fragment_base}services",
+        *service_ids,
+        *project_ids,
+    }
+
+
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
     if node.get("citation") != expected_citation_targets(data):
         errors.append(f"{label} citation chain drift")
+
+
+def check_expected_mentions(node: dict[str, Any], expected: set[str], label: str) -> None:
+    missing = sorted(expected - node_ref_ids(node.get("mentions")))
+    if missing:
+        errors.append(f"{label} mentions missing: {missing}")
 
 
 def schema_type_ok(value: Any, schema_type: str) -> bool:
@@ -955,12 +975,16 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     person_fragment_base = f"{str(person_id).split('#', 1)[0]}#"
     contact_action_id = f"{person_fragment_base}contact-action"
     contact_entry_id = f"{person_fragment_base}contact-entrypoint"
+    portfolio_site_id = data.get("identifiers", {}).get("portfolioWebsite")
+    github_site_id = data.get("identifiers", {}).get("githubProfileIndex")
+    profile_page_id = data.get("identifiers", {}).get("githubProfilePage")
     pages_site_id = data.get("identifiers", {}).get("githubPagesMirror")
     pages_page_id = f"{PAGES}/#webpage"
     pages_breadcrumb_id = f"{PAGES}/#breadcrumb"
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    expected_mentions = expected_mention_ids(data, person_fragment_base)
     person = node_by_id(person_schema, person_id)
     if not person or "Person" not in node_types(person):
         errors.append("person.jsonld missing Person node matching llms-index entity @id")
@@ -1045,6 +1069,21 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 missing_service_area = sorted(area_served - area_names(service.get("areaServed")))
                 if missing_service_area:
                     errors.append(f"person.jsonld Service areaServed missing for {focus}: {missing_service_area}")
+
+    for node_id, label in (
+        (portfolio_site_id, "person.jsonld Portfolio WebSite"),
+        (github_site_id, "person.jsonld GitHub profile WebSite"),
+        (profile_page_id, "person.jsonld GitHub ProfilePage"),
+        (pages_site_id, "person.jsonld Pages WebSite"),
+        (pages_page_id, "person.jsonld Pages CollectionPage"),
+        (pages_catalog_id, "person.jsonld DataCatalog"),
+        (pages_dataset_id, "person.jsonld Dataset"),
+    ):
+        node = node_by_id(person_schema, node_id)
+        if not node:
+            errors.append(f"{label} missing mention-bearing node")
+            continue
+        check_expected_mentions(node, expected_mentions, label)
 
     pages_site = node_by_id(person_schema, pages_site_id)
     if not pages_site or "WebSite" not in node_types(pages_site):
