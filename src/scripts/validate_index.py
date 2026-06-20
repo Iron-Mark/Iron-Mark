@@ -127,12 +127,19 @@ PRODUCTION_SURFACE_FORBIDDEN_LINKS = {
     "mcp-server": "optional local MCP server docs",
     "REPO_SETUP": "repo setup checklist",
 }
-README_PRODUCTION_FORBIDDEN_PATTERNS = (
-    "po" + r"st[- ]merge",
-    "po" + r"st[- ]deployment",
-    "po" + r"st deploy",
-    "after " + "deploy",
-)
+PRODUCTION_SURFACE_FORBIDDEN_PATTERNS = {
+    "po" + r"st[- ]merge": "post-merge workflow notes",
+    "po" + r"st[- ]deployment": "post-deployment workflow notes",
+    "po" + r"st[- ]deploy": "post-deploy workflow notes",
+    r"after\s+deploy(?:ment)?": "after-deploy workflow notes",
+    r"dev\s+branch": "development branch notes",
+    r"development\s+branch": "development branch notes",
+    r"deploy(?:ment)?\s+notes?": "deployment notes",
+    r"repo\s+setup": "repo setup notes",
+    r"maintenance\s+scripts?": "maintenance script notes",
+    r"optional\s+local": "optional local tooling notes",
+    r"internal\s+maintain(?:er|ance)": "internal maintainer notes",
+}
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -966,9 +973,9 @@ def check_readme_public_surface(readme: str) -> None:
     for needle, reason in README_PRODUCTION_FORBIDDEN_LINKS.items():
         if needle.lower() in lower:
             errors.append(f"README.md links production surface to {reason}: {needle}")
-    for pattern in README_PRODUCTION_FORBIDDEN_PATTERNS:
+    for pattern, reason in PRODUCTION_SURFACE_FORBIDDEN_PATTERNS.items():
         if re.search(pattern, lower):
-            errors.append("README.md contains retired deployment/setup phrasing")
+            errors.append(f"README.md contains {reason}")
 
 
 def check_public_surface() -> None:
@@ -978,6 +985,7 @@ def check_public_surface() -> None:
         "llms.txt": ROOT / "llms.txt",
         "docs/index.html": DOCS_INDEX,
         "sitemap.xml": SITEMAP,
+        "robots.txt": ROBOTS,
     }
     for name, path in surfaces.items():
         if not path.exists():
@@ -987,9 +995,9 @@ def check_public_surface() -> None:
         for needle, reason in PRODUCTION_SURFACE_FORBIDDEN_LINKS.items():
             if needle.lower() in lower:
                 errors.append(f"{name} exposes {reason}: {needle}")
-        for pattern in README_PRODUCTION_FORBIDDEN_PATTERNS:
+        for pattern, reason in PRODUCTION_SURFACE_FORBIDDEN_PATTERNS.items():
             if re.search(pattern, lower):
-                errors.append(f"{name} contains retired deployment/setup phrasing")
+                errors.append(f"{name} contains {reason}")
     for name in ("llms.txt", "humans.txt", "robots.txt"):
         path = ROOT / name
         if not path.exists():

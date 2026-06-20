@@ -117,6 +117,31 @@ REQUIRED_FILES = (
 )
 FORBIDDEN_FILES = ("AGENTS.md",)
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".json", ".jsonld", ".cff"}
+PRODUCTION_ARTIFACT_SURFACES = {"index.html", "README.md", "llms.txt", "humans.txt", "robots.txt", "sitemap.xml"}
+PRODUCTION_ARTIFACT_FORBIDDEN_LINKS = {
+    ".github/": "GitHub maintenance files",
+    "docs/internal/": "internal maintainer docs",
+    "src/": "source/development files",
+    "src/mcp-server": "optional local MCP server docs",
+    "src/scripts/": "maintenance scripts",
+    "src/portfolio-sync": "portfolio sync helper files",
+    "AGENTS.md": "agent maintenance instructions",
+    "mcp-server": "optional local MCP server docs",
+    "REPO_SETUP": "repo setup checklist",
+}
+PRODUCTION_ARTIFACT_FORBIDDEN_PATTERNS = {
+    "po" + r"st[- ]merge": "post-merge workflow notes",
+    "po" + r"st[- ]deployment": "post-deployment workflow notes",
+    "po" + r"st[- ]deploy": "post-deploy workflow notes",
+    r"after\s+deploy(?:ment)?": "after-deploy workflow notes",
+    r"dev\s+branch": "development branch notes",
+    r"development\s+branch": "development branch notes",
+    r"deploy(?:ment)?\s+notes?": "deployment notes",
+    r"repo\s+setup": "repo setup notes",
+    r"maintenance\s+scripts?": "maintenance script notes",
+    r"optional\s+local": "optional local tooling notes",
+    r"internal\s+maintain(?:er|ance)": "internal maintainer notes",
+}
 
 
 def repo_public_url_values(value: object) -> list[str]:
@@ -868,6 +893,17 @@ def validate_artifact(artifact: Path) -> list[str]:
         non_ascii = sorted({f"U+{ord(char):04X}" for char in text if ord(char) > 127})
         if non_ascii:
             issues.append(f"Pages {name} must stay ASCII-only for plain-text crawler compatibility: {non_ascii}")
+    for name in sorted(PRODUCTION_ARTIFACT_SURFACES):
+        path = artifact / name
+        if not path.exists():
+            continue
+        lower = path.read_text(encoding="utf-8").lower()
+        for needle, reason in PRODUCTION_ARTIFACT_FORBIDDEN_LINKS.items():
+            if needle.lower() in lower:
+                issues.append(f"Pages {name} exposes {reason}: {needle}")
+        for pattern, reason in PRODUCTION_ARTIFACT_FORBIDDEN_PATTERNS.items():
+            if re.search(pattern, lower):
+                issues.append(f"Pages {name} contains {reason}")
     check_pages_generated_context(issues, artifact, index_data)
 
     index_text = (artifact / "index.html").read_text(encoding="utf-8") if (artifact / "index.html").exists() else ""
