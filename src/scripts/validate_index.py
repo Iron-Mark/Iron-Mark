@@ -614,6 +614,13 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
+    expected_hreflangs = {
+        f'<link rel="alternate" hreflang="en" href="{PAGES}/"/>',
+        f'<link rel="alternate" hreflang="x-default" href="{PAGES}/"/>',
+    }
+    for tag in expected_hreflangs:
+        if tag not in html:
+            errors.append(f"docs/index.html missing self-referencing hreflang link: {tag}")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in html:
         errors.append("docs/index.html missing Open Graph locale metadata")
     expected_site_name_tags = {

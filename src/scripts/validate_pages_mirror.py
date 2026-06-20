@@ -452,6 +452,13 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in expected_site_name_tags:
         if tag not in index_text:
             issues.append(f"Pages index site-name signal drift: {tag}")
+    expected_hreflangs = {
+        f'<link rel="alternate" hreflang="en" href="{PAGES_BASE}/"/>',
+        f'<link rel="alternate" hreflang="x-default" href="{PAGES_BASE}/"/>',
+    }
+    for tag in expected_hreflangs:
+        if tag not in index_text:
+            issues.append(f"Pages index missing self-referencing hreflang link: {tag}")
     if 'aria-label="Breadcrumb"' not in index_text:
         issues.append("Pages index missing visible breadcrumb navigation")
     if f'<a href="https://www.marksiazon.dev">Mark Siazon Portfolio</a> / <span>{PAGES_SITE_NAME}</span>' not in index_text:

@@ -193,6 +193,8 @@ def main() -> None:
   <title>{SITE_NAME}</title>
   <link rel="icon" type="image/svg+xml" href="{FAVICON}"/>
   <link rel="canonical" href="{PAGES_URL}"/>
+  <link rel="alternate" hreflang="en" href="{PAGES_URL}"/>
+  <link rel="alternate" hreflang="x-default" href="{PAGES_URL}"/>
   <link rel="author" href="humans.txt"/>
 {identity_links}
   <link rel="alternate" type="application/json" href="llms-index.json"/>
