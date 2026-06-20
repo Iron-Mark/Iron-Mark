@@ -795,7 +795,11 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     )
 
     topic_terms = topic_term_values(data)
-    knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []) + [ref(pages_topic_set_id)]
+    knows_about = (
+        unique_compact(data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []))
+        + [ref(topic_term_id(term)) for term in topic_terms]
+        + [ref(pages_topic_set_id)]
+    )
     keywords = profile_keywords(data)
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)

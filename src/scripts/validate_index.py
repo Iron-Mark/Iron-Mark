@@ -1375,6 +1375,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person mainEntityOfPage must reference Pages CollectionPage")
         if pages_topic_set_id not in node_ref_ids(person.get("knowsAbout")):
             errors.append("person.jsonld Person knowsAbout must reference topic taxonomy")
+        missing_known_terms = sorted(
+            {topic_term_id(term) for term in expected_topic_terms(data)}
+            - node_ref_ids(person.get("knowsAbout"))
+        )
+        if missing_known_terms:
+            errors.append(f"person.jsonld Person knowsAbout missing topic terms: {missing_known_terms}")
         known_languages = person.get("knowsLanguage", [])
         if not isinstance(known_languages, list):
             known_languages = [known_languages]

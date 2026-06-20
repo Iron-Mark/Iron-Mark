@@ -918,6 +918,13 @@ def validate_artifact(artifact: Path) -> list[str]:
     pages_topic_set_id = topic_term_set_id()
     if person and pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
         issues.append("Pages index Person knowsAbout missing topic taxonomy")
+    if person:
+        missing_known_terms = sorted(
+            {topic_term_id(term) for term in expected_topic_terms(index_data)}
+            - ref_ids(person.get("knowsAbout"))
+        )
+        if missing_known_terms:
+            issues.append(f"Pages index Person knowsAbout missing topic terms: {missing_known_terms}")
     availability = index_data.get("availability", {})
     if not isinstance(availability, dict):
         availability = {}
