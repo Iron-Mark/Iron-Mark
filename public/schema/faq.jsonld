@@ -145,6 +145,53 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
         }
       ],
+      "hasPart": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
+        }
+      ],
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "reviewedBy": {

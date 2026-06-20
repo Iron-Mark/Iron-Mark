@@ -2018,6 +2018,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld FAQPage keywords drift")
         if person_faq_page.get("isAccessibleForFree") is not True:
             errors.append("person.jsonld FAQPage must be isAccessibleForFree")
+        expected_question_ids = {
+            faq_question_id(faq_id, item.get("question", ""))
+            for item in data.get("aeo", {}).get("answerSnippets", [])
+        }
+        missing_has_part = sorted(expected_question_ids - node_ref_ids(person_faq_page.get("hasPart")))
+        if missing_has_part:
+            errors.append(f"person.jsonld FAQPage hasPart missing questions: {missing_has_part}")
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
@@ -2045,6 +2052,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage keywords drift")
         if faq_page.get("isAccessibleForFree") is not True:
             errors.append("faq.jsonld FAQPage must be isAccessibleForFree")
+        expected_question_ids = {
+            faq_question_id(faq_id, item.get("question", ""))
+            for item in data.get("aeo", {}).get("answerSnippets", [])
+        }
+        missing_has_part = sorted(expected_question_ids - node_ref_ids(faq_page.get("hasPart")))
+        if missing_has_part:
+            errors.append(f"faq.jsonld FAQPage hasPart missing questions: {missing_has_part}")
         check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_review_metadata(faq_page, data, "faq.jsonld FAQPage")

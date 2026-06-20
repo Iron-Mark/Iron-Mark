@@ -21,6 +21,7 @@ from generate_schema import (
     download_description,
     download_id,
     download_integrity_metadata,
+    faq_question_id,
     featured_projects_list_description,
     lab_projects_list_description,
     lab_project_id,
@@ -1370,6 +1371,14 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage keywords drift")
         if faq_page.get("isAccessibleForFree") is not True:
             issues.append("Pages index FAQPage must be isAccessibleForFree")
+        expected_question_ids = {
+            faq_question_id(f"{PAGES_BASE}/FAQ.md#faq", str(item.get("question", "")))
+            for item in index_data.get("aeo", {}).get("answerSnippets", [])
+            if isinstance(item, dict)
+        }
+        missing_has_part = sorted(expected_question_ids - ref_ids(faq_page.get("hasPart")))
+        if missing_has_part:
+            issues.append(f"Pages index FAQPage hasPart missing questions: {missing_has_part}")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")
