@@ -573,6 +573,7 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
         errors.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         errors.append(f"{label} creator url drift")
+    check_ownership_metadata(node, data, label)
     check_structured_data_provenance(node, data, label)
 
 
@@ -607,6 +608,17 @@ def check_structured_data_provenance(
         errors.append(f"{label} sdDatePublished drift")
     if node.get("sdLicense") != (expected_license or data.get("license")):
         errors.append(f"{label} sdLicense drift")
+
+
+def check_ownership_metadata(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    person_id = data.get("entity", {}).get("@id")
+    if node.get("accountablePerson", {}).get("@id") != person_id:
+        errors.append(f"{label} accountablePerson drift")
+    if node.get("copyrightHolder", {}).get("@id") != person_id:
+        errors.append(f"{label} copyrightHolder drift")
+    expected_year = int(str(data.get("updated", "0000"))[:4])
+    if node.get("copyrightYear") != expected_year:
+        errors.append(f"{label} copyrightYear drift")
 
 
 def check_required_index_keys(data: dict[str, Any]) -> None:
@@ -1212,6 +1224,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"{label} missing mention-bearing node")
             continue
         check_expected_mentions(node, expected_mentions, label)
+        check_ownership_metadata(node, data, label)
 
     profile_page = node_by_id(person_schema, profile_page_id)
     if not profile_page or "ProfilePage" not in node_types(profile_page):
@@ -1428,6 +1441,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if download.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld DataDownload about drift for: {key}")
         check_global_citation(download, data, f"person.jsonld DataDownload {key}")
+        check_ownership_metadata(download, data, f"person.jsonld DataDownload {key}")
         check_structured_data_provenance(download, data, f"person.jsonld DataDownload {key}")
     repo = data.get("machineReadable", {}).get("repo", {})
     expected_content_works = {
@@ -1462,6 +1476,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld CreativeWork about drift for: {node_id}")
         check_content_usage_policy(work, data, f"person.jsonld CreativeWork {node_id}")
         check_global_citation(work, data, f"person.jsonld CreativeWork {node_id}")
+        check_ownership_metadata(work, data, f"person.jsonld CreativeWork {node_id}")
         check_structured_data_provenance(work, data, f"person.jsonld CreativeWork {node_id}")
     breadcrumb = node_by_id(person_schema, pages_breadcrumb_id)
     if not breadcrumb or "BreadcrumbList" not in node_types(breadcrumb):
@@ -1497,6 +1512,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage inLanguage must be en")
         check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
+        check_ownership_metadata(faq_page, data, "faq.jsonld FAQPage")
         check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 
     question_nodes = [node for node in graph_nodes(faq_schema) if "Question" in node_types(node)]
@@ -1553,6 +1569,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_items:
             errors.append(f"person.jsonld featured projects ItemList missing: {missing_featured_items}")
+        check_ownership_metadata(featured_list, data, "person.jsonld featured projects ItemList")
 
     lab_list_id = f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"
     lab_list = project_nodes.get(lab_list_id)
@@ -1565,6 +1582,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_items:
             errors.append(f"person.jsonld hackathon and lab ItemList missing: {missing_lab_items}")
+        check_ownership_metadata(lab_list, data, "person.jsonld hackathon and lab ItemList")
 
     project_awards = awards_by_project(data)
     for project in data.get("featuredProjects", []):
@@ -1600,6 +1618,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project unexpected award: {project.get('name')}")
         check_content_usage_policy(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_global_citation(project_node, data, f"person.jsonld featured project {project.get('name')}")
+        check_ownership_metadata(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_structured_data_provenance(project_node, data, f"person.jsonld featured project {project.get('name')}")
         expected_image = expected_project_image(project)
         if not expected_image:
@@ -1676,6 +1695,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld hackathon/lab project genre drift: {project.get('name')}")
         check_content_usage_policy(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
         check_global_citation(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
+        check_ownership_metadata(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
         check_structured_data_provenance(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
 
 

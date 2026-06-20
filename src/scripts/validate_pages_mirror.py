@@ -413,6 +413,7 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
         issues.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         issues.append(f"{label} creator url drift")
+    check_ownership_metadata(issues, node, index_data, label)
     check_structured_data_provenance(issues, node, index_data, label)
 
 
@@ -449,6 +450,28 @@ def check_structured_data_provenance(
         issues.append(f"{label} sdDatePublished drift")
     if node.get("sdLicense") != f"{PAGES_BASE}/LICENSE.md":
         issues.append(f"{label} sdLicense drift")
+
+
+def check_ownership_metadata(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    entity = index_data.get("entity", {})
+    if not isinstance(entity, dict):
+        issues.append(f"{label} cannot validate ownership metadata")
+        return
+    person_id = entity.get("@id")
+    accountable = node.get("accountablePerson", {})
+    if not isinstance(accountable, dict) or accountable.get("@id") != person_id:
+        issues.append(f"{label} accountablePerson drift")
+    holder = node.get("copyrightHolder", {})
+    if not isinstance(holder, dict) or holder.get("@id") != person_id:
+        issues.append(f"{label} copyrightHolder drift")
+    expected_year = int(str(index_data.get("updated", "0000"))[:4])
+    if node.get("copyrightYear") != expected_year:
+        issues.append(f"{label} copyrightYear drift")
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -624,6 +647,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         if pages_site.get("isBasedOn") != expected_based_on:
             issues.append("Pages index WebSite isBasedOn drift")
         check_content_usage_policy(issues, pages_site, "Pages index WebSite")
+        check_ownership_metadata(issues, pages_site, index_data, "Pages index WebSite")
         check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
         check_expected_mentions(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
@@ -646,6 +670,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage relatedLink drift")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
+        check_ownership_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
         check_expected_mentions(issues, pages_page, index_data, "Pages index CollectionPage")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
@@ -656,6 +681,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index DataCatalog isBasedOn drift")
         check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
+        check_ownership_metadata(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_expected_mentions(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
@@ -696,6 +722,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset variableMeasured drift")
         check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
+        check_ownership_metadata(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
         check_expected_mentions(issues, dataset, index_data, "Pages index Dataset")
     faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
@@ -706,6 +733,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage isBasedOn drift")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
+        check_ownership_metadata(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
@@ -732,6 +760,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_featured_ids = sorted(expected_featured_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_ids:
             issues.append(f"Pages index featured projects ItemList missing: {missing_featured_ids}")
+        check_ownership_metadata(issues, featured_list, index_data, "Pages index featured projects ItemList")
     lab_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#hackathon-lab")
     if not lab_list or "ItemList" not in node_type_set(lab_list):
         issues.append("Pages index inline JSON-LD missing hackathon and lab ItemList")
@@ -749,6 +778,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_lab_ids = sorted(expected_lab_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_ids:
             issues.append(f"Pages index hackathon and lab ItemList missing: {missing_lab_ids}")
+        check_ownership_metadata(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
     project_awards = awards_by_project(index_data)
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):
@@ -775,6 +805,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project unexpected award: {project.get('name')}")
         check_content_usage_policy(issues, project_node, f"Pages index featured project {project.get('name')}")
         check_global_citation(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
+        check_ownership_metadata(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         check_structured_data_provenance(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         image_node = jsonld_node_by_id.get(expected_image["@id"])
         if not image_node or "ImageObject" not in node_type_set(image_node):
@@ -828,6 +859,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index hackathon/lab project genre drift: {project.get('name')}")
         check_content_usage_policy(issues, project_node, f"Pages index hackathon/lab project {project.get('name')}")
         check_global_citation(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
+        check_ownership_metadata(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
         check_structured_data_provenance(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
     machine_readable = index_data.get("machineReadable", {})
     pages_for_downloads = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
@@ -842,6 +874,7 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index DataDownload isBasedOn drift: {item['key']}")
             check_content_usage_policy(issues, download, f"Pages index DataDownload {item['key']}")
             check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
+            check_ownership_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")

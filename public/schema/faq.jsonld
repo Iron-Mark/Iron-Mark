@@ -78,6 +78,13 @@
       ],
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
