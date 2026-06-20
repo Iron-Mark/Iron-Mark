@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
-from generate_schema import machine_downloads
+from generate_schema import download_id, machine_downloads
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -208,6 +208,37 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
             "value": len(machine_downloads(pages)),
         },
     ]
+
+
+def expected_citation_targets(index_data: dict[str, object]) -> list[str]:
+    aeo = index_data.get("aeo", {})
+    if not isinstance(aeo, dict):
+        aeo = {}
+    preferred = aeo.get("preferredCitationOrder", [])
+    if not isinstance(preferred, list):
+        preferred = []
+    values = [
+        *(str(item) for item in preferred if isinstance(item, str) and item),
+        f"{PAGES_BASE}/HOW-TO-CITE.md",
+        f"{PAGES_BASE}/CITATION.cff",
+    ]
+    output: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if value not in seen:
+            output.append(value)
+            seen.add(value)
+    return output
+
+
+def check_global_citation(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    if node.get("citation") != expected_citation_targets(index_data):
+        issues.append(f"{label} citation chain drift")
 
 
 def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
@@ -437,7 +468,14 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not pages_page or "CollectionPage" not in node_type_set(pages_page):
         issues.append("Pages index inline JSON-LD missing CollectionPage")
     else:
+        check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
+    data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
+    if not data_catalog or "DataCatalog" not in node_type_set(data_catalog):
+        issues.append("Pages index inline JSON-LD missing DataCatalog")
+    else:
+        check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
+        check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
     if not breadcrumb or "BreadcrumbList" not in node_type_set(breadcrumb):
         issues.append("Pages index inline JSON-LD missing BreadcrumbList")
@@ -472,11 +510,13 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset spatialCoverage drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
             issues.append("Pages index inline Dataset variableMeasured drift")
+        check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
     faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
     if not faq_page or "FAQPage" not in node_type_set(faq_page):
         issues.append("Pages index inline JSON-LD missing FAQPage")
     else:
+        check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
@@ -502,6 +542,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image ref drift: {project.get('name')}")
         if project_node.get("thumbnailUrl") != expected_image["url"]:
             issues.append(f"Pages index featured project thumbnailUrl drift: {project.get('name')}")
+        check_global_citation(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         check_structured_data_provenance(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         image_node = jsonld_node_by_id.get(expected_image["@id"])
         if not image_node or "ImageObject" not in node_type_set(image_node):
@@ -514,6 +555,16 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_image_rights(issues, image_node, index_data, f"Pages index featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected_project_id:
             issues.append(f"Pages index featured project image about drift: {project.get('name')}")
+    machine_readable = index_data.get("machineReadable", {})
+    pages_for_downloads = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
+    if isinstance(pages_for_downloads, dict):
+        for item in machine_downloads(pages_for_downloads):
+            download = jsonld_node_by_id.get(download_id(item["key"]))
+            if not download or "DataDownload" not in node_type_set(download):
+                issues.append(f"Pages index inline JSON-LD missing DataDownload: {item['key']}")
+                continue
+            check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
+            check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:

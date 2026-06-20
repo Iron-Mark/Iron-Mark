@@ -137,6 +137,17 @@ def dataset_variable_measurements(
     ]
 
 
+def citation_targets(data: dict[str, Any]) -> list[str]:
+    repo = data["machineReadable"]["repo"]
+    return unique_compact(
+        data.get("aeo", {}).get("preferredCitationOrder", [])
+        + [
+            repo.get("howToCiteMd"),
+            repo.get("citationCff"),
+        ]
+    )
+
+
 def compact(values: list[str | None]) -> list[str]:
     return [value for value in values if value]
 
@@ -182,6 +193,7 @@ def content_work(
     date_modified: str,
     license_url: str,
     sd_provenance: dict[str, Any] | None = None,
+    citations: list[str] | None = None,
 ) -> dict[str, Any]:
     return {
         "@type": "CreativeWork",
@@ -196,6 +208,7 @@ def content_work(
         "dateModified": date_modified,
         "license": license_url,
         "isAccessibleForFree": True,
+        "citation": citations or [],
         **(sd_provenance or {}),
     }
 
@@ -263,6 +276,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
     image_rights_metadata = image_rights(data)
+    citations = citation_targets(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -402,6 +416,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
             "potentialAction": ref(contact_action_id),
+            "citation": citations,
             **sd_provenance,
             "hasPart": [
                 ref(pages_catalog_id),
@@ -474,6 +489,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dataset": ref(pages_dataset_id),
             "inLanguage": "en",
             "dateModified": updated,
+            "citation": citations,
             **sd_provenance,
         },
         {
@@ -503,6 +519,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "license": data.get("license"),
             "keywords": dataset_keywords,
+            "citation": citations,
             "spatialCoverage": area_served,
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),
@@ -537,6 +554,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "author": ref(person_id),
             "about": ref(person_id),
             "isPartOf": ref(github_site_id),
+            "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **sd_provenance,
         },
@@ -602,6 +620,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "isAccessibleForFree": True,
                 "isPartOf": ref(pages_dataset_id),
                 "about": ref(person_id),
+                "citation": citations,
                 **sd_provenance,
             }
         )
@@ -623,6 +642,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isAccessibleForFree": True,
             "sameAs": compact([project.get("live"), project.get("repo"), project.get("model")]),
             "keywords": compact([project.get("slug"), project.get("focus")]),
+            "citation": citations,
             **sd_provenance,
         }
         if image:
@@ -659,6 +679,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/FAQ.md#creativework",
@@ -670,6 +691,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/PROOF.md#creativework",
@@ -681,6 +703,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/RECRUITER.md#creativework",
@@ -692,6 +715,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/STACK.md#creativework",
@@ -703,6 +727,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/schema/llms-index.schema.json#creativework",
@@ -714,6 +739,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 updated,
                 data.get("license"),
                 sd_provenance,
+                citations,
             ),
         ]
     )
@@ -729,6 +755,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
     person_id = entity["@id"]
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
+    citations = citation_targets(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -746,6 +773,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "author": ref(person_id),
             "about": ref(person_id),
             "inLanguage": "en",
+            "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **sd_provenance,
         },

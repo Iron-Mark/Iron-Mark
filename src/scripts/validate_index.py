@@ -260,6 +260,29 @@ def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> 
     ]
 
 
+def expected_citation_targets(data: dict[str, Any]) -> list[str]:
+    repo = data.get("machineReadable", {}).get("repo", {})
+    values = (
+        data.get("aeo", {}).get("preferredCitationOrder", [])
+        + [
+            repo.get("howToCiteMd", ""),
+            repo.get("citationCff", ""),
+        ]
+    )
+    output: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if isinstance(value, str) and value and value not in seen:
+            output.append(value)
+            seen.add(value)
+    return output
+
+
+def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    if node.get("citation") != expected_citation_targets(data):
+        errors.append(f"{label} citation chain drift")
+
+
 def schema_type_ok(value: Any, schema_type: str) -> bool:
     if schema_type == "object":
         return isinstance(value, dict)
@@ -1018,6 +1041,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage thumbnailUrl drift")
         if pages_page.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Pages CollectionPage potentialAction drift")
+        check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")
         check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
         required_parts = {
             pages_catalog_id,
@@ -1052,6 +1076,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog dataset drift")
         if data_catalog.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld DataCatalog about drift")
+        check_global_citation(data_catalog, data, "person.jsonld DataCatalog")
         check_structured_data_provenance(data_catalog, data, "person.jsonld DataCatalog")
     image = node_by_id(person_schema, pages_image_id)
     if not image or "ImageObject" not in node_types(image):
@@ -1124,6 +1149,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
         if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
             errors.append("person.jsonld Dataset variableMeasured drift")
+        check_global_citation(dataset, data, "person.jsonld Dataset")
         check_structured_data_provenance(dataset, data, "person.jsonld Dataset")
         if dataset.get("isAccessibleForFree") is not True:
             errors.append("person.jsonld Dataset must be marked isAccessibleForFree")
@@ -1163,6 +1189,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld DataDownload isPartOf drift for: {key}")
         if download.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld DataDownload about drift for: {key}")
+        check_global_citation(download, data, f"person.jsonld DataDownload {key}")
         check_structured_data_provenance(download, data, f"person.jsonld DataDownload {key}")
     repo = data.get("machineReadable", {}).get("repo", {})
     expected_content_works = {
@@ -1195,6 +1222,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld CreativeWork author drift for: {node_id}")
         if work.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld CreativeWork about drift for: {node_id}")
+        check_global_citation(work, data, f"person.jsonld CreativeWork {node_id}")
         check_structured_data_provenance(work, data, f"person.jsonld CreativeWork {node_id}")
     breadcrumb = node_by_id(person_schema, pages_breadcrumb_id)
     if not breadcrumb or "BreadcrumbList" not in node_types(breadcrumb):
@@ -1226,6 +1254,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage about drift")
         if faq_page.get("inLanguage") != "en":
             errors.append("faq.jsonld FAQPage inLanguage must be en")
+        check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 
     question_nodes = [node for node in graph_nodes(faq_schema) if "Question" in node_types(node)]
@@ -1295,6 +1324,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
         if project_node.get("isAccessibleForFree") is not True:
             errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
+        check_global_citation(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_structured_data_provenance(project_node, data, f"person.jsonld featured project {project.get('name')}")
         expected_image = expected_project_image(project)
         if not expected_image:
