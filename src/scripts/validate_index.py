@@ -952,13 +952,22 @@ def check_public_surface() -> None:
     for name, path in surfaces.items():
         if not path.exists():
             continue
-        lower = path.read_text(encoding="utf-8").lower()
+        text = path.read_text(encoding="utf-8")
+        lower = text.lower()
         for needle, reason in PRODUCTION_SURFACE_FORBIDDEN_LINKS.items():
             if needle.lower() in lower:
                 errors.append(f"{name} exposes {reason}: {needle}")
         for pattern in README_PRODUCTION_FORBIDDEN_PATTERNS:
             if re.search(pattern, lower):
                 errors.append(f"{name} contains retired deployment/setup phrasing")
+    for name in ("llms.txt", "humans.txt", "robots.txt"):
+        path = ROOT / name
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        non_ascii = sorted({f"U+{ord(char):04X}" for char in text if ord(char) > 127})
+        if non_ascii:
+            errors.append(f"{name} must stay ASCII-only for plain-text crawler compatibility: {non_ascii}")
 
 
 def check_pages_index_visible_content(data: dict[str, Any]) -> None:

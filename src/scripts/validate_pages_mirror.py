@@ -842,6 +842,14 @@ def validate_artifact(artifact: Path) -> list[str]:
         index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
     except Exception:
         index_data = {}
+    for name in ("llms.txt", "humans.txt", "robots.txt"):
+        path = artifact / name
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        non_ascii = sorted({f"U+{ord(char):04X}" for char in text if ord(char) > 127})
+        if non_ascii:
+            issues.append(f"Pages {name} must stay ASCII-only for plain-text crawler compatibility: {non_ascii}")
     check_pages_generated_context(issues, artifact, index_data)
 
     index_text = (artifact / "index.html").read_text(encoding="utf-8") if (artifact / "index.html").exists() else ""
