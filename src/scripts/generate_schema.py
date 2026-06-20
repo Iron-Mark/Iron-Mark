@@ -1471,6 +1471,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "serviceType": focus,
                     "description": service_description(data, focus),
                     "provider": ref(person_id),
+                    "offers": ref(offer_id),
                     "url": availability.get("recruiterBrief", entity["url"]),
                     "availableChannel": ref(service_channel_id),
                     "areaServed": area_nodes,

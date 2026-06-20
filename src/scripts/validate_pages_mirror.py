@@ -1045,6 +1045,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         else:
             if service.get("description") != service_description(index_data, str(focus)):
                 issues.append(f"Pages index Service description drift: {focus}")
+            if service.get("offers", {}).get("@id") != offer_id:
+                issues.append(f"Pages index Service offers drift: {focus}")
             if service.get("availableChannel", {}).get("@id") != service_channel_id:
                 issues.append(f"Pages index Service availableChannel drift: {service_id}")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)

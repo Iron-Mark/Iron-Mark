@@ -3363,6 +3363,9 @@
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "offers": {
+        "@id": "https://www.marksiazon.dev/#offer-product-design"
+      },
       "url": "https://www.marksiazon.dev/recruiter",
       "availableChannel": {
         "@id": "https://www.marksiazon.dev/#hiring-service-channel"
@@ -3441,6 +3444,9 @@
       "description": "Mark Siazon full-stack engineering service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
+      },
+      "offers": {
+        "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
       },
       "url": "https://www.marksiazon.dev/recruiter",
       "availableChannel": {
@@ -3521,6 +3527,9 @@
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "offers": {
+        "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
+      },
       "url": "https://www.marksiazon.dev/recruiter",
       "availableChannel": {
         "@id": "https://www.marksiazon.dev/#hiring-service-channel"
@@ -3600,6 +3609,9 @@
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "offers": {
+        "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
+      },
       "url": "https://www.marksiazon.dev/recruiter",
       "availableChannel": {
         "@id": "https://www.marksiazon.dev/#hiring-service-channel"
@@ -3678,6 +3690,9 @@
       "description": "Mark Siazon Web3 proof systems service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
+      },
+      "offers": {
+        "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
       },
       "url": "https://www.marksiazon.dev/recruiter",
       "availableChannel": {

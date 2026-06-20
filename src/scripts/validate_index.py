@@ -1481,6 +1481,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                     errors.append(f"person.jsonld Service description drift for: {focus}")
                 if service.get("provider", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Service provider drift for: {focus}")
+                if service.get("offers", {}).get("@id") != offer_id:
+                    errors.append(f"person.jsonld Service offers drift for: {focus}")
                 if service.get("availableChannel", {}).get("@id") != service_channel_id:
                     errors.append(f"person.jsonld Service availableChannel drift for: {focus}")
                 missing_service_area = sorted(area_served - area_names(service.get("areaServed")))
