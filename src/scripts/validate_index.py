@@ -2850,8 +2850,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if person_faq_page.get("identifier") != faq_document_identifier(faq_id):
             errors.append("person.jsonld FAQPage identifier drift")
-        if person_faq_page.get("inLanguage") != "en":
-            errors.append("person.jsonld FAQPage inLanguage must be en")
+        if person_faq_page.get("inLanguage") != content_language():
+            errors.append("person.jsonld FAQPage inLanguage drift")
         if person_faq_page.get("author", {}).get("@id") != person_id:
             errors.append("person.jsonld FAQPage author drift")
         if person_faq_page.get("publisher", {}).get("@id") != person_id:
@@ -2890,8 +2890,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage publisher drift")
         if faq_page.get("about", {}).get("@id") != person_id:
             errors.append("faq.jsonld FAQPage about drift")
-        if faq_page.get("inLanguage") != "en":
-            errors.append("faq.jsonld FAQPage inLanguage must be en")
+        if faq_page.get("inLanguage") != content_language():
+            errors.append("faq.jsonld FAQPage inLanguage drift")
         if faq_page.get("keywords") != profile_keywords(data):
             errors.append("faq.jsonld FAQPage keywords drift")
         if faq_page.get("isAccessibleForFree") is not True:
@@ -2937,8 +2937,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question parentItem drift for: {question.get('question')}")
         if question_node.get("answerCount") != 1:
             errors.append(f"faq.jsonld Question answerCount drift for: {question.get('question')}")
-        if question_node.get("inLanguage") != "en":
-            errors.append(f"faq.jsonld Question inLanguage must be en for: {question.get('question')}")
+        if question_node.get("inLanguage") != content_language():
+            errors.append(f"faq.jsonld Question inLanguage drift for: {question.get('question')}")
         if question_node.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Question dateModified drift for: {question.get('question')}")
         if question_node.get("isAccessibleForFree") is not True:
@@ -2972,8 +2972,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Answer isPartOf drift for: {question.get('question')}")
         if accepted_answer.get("parentItem", {}).get("@id") != expected:
             errors.append(f"faq.jsonld Answer parentItem drift for: {question.get('question')}")
-        if accepted_answer.get("inLanguage") != "en":
-            errors.append(f"faq.jsonld Answer inLanguage must be en for: {question.get('question')}")
+        if accepted_answer.get("inLanguage") != content_language():
+            errors.append(f"faq.jsonld Answer inLanguage drift for: {question.get('question')}")
         if accepted_answer.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Answer dateModified drift for: {question.get('question')}")
         if accepted_answer.get("isAccessibleForFree") is not True:

@@ -1886,8 +1886,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage identifier drift")
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
             issues.append("Pages index FAQPage isBasedOn drift")
-        if faq_page.get("inLanguage") != "en":
-            issues.append("Pages index FAQPage inLanguage must be en")
+        if faq_page.get("inLanguage") != content_language():
+            issues.append("Pages index FAQPage inLanguage drift")
         if faq_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index FAQPage author drift")
         if faq_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
@@ -1937,6 +1937,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Question parentItem drift: {node.get('name')}")
             if node.get("answerCount") != 1:
                 issues.append(f"Pages index Question answerCount drift: {node.get('name')}")
+            if node.get("inLanguage") != content_language():
+                issues.append(f"Pages index Question inLanguage drift: {node.get('name')}")
             if node.get("isAccessibleForFree") is not True:
                 issues.append(f"Pages index Question must be isAccessibleForFree: {node.get('name')}")
             expected_citations = set(faq_sources_by_question.get(question_name, []))
@@ -1960,6 +1962,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                     issues.append(f"Pages index Answer isPartOf drift: {node.get('name')}")
                 if answer.get("parentItem", {}).get("@id") != question_id:
                     issues.append(f"Pages index Answer parentItem drift: {node.get('name')}")
+                if answer.get("inLanguage") != content_language():
+                    issues.append(f"Pages index Answer inLanguage drift: {node.get('name')}")
                 if answer.get("isAccessibleForFree") is not True:
                     issues.append(f"Pages index Answer must be isAccessibleForFree: {node.get('name')}")
                 check_content_usage_policy(issues, answer, f"Pages index Answer {node.get('name')}")
