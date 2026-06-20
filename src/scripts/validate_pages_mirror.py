@@ -78,6 +78,22 @@ ABSTRACT_REQUIRED_TYPES = {
     "WebPageElement",
     "SiteNavigationElement",
 }
+DATASET_SEARCH_TYPES = {"DataCatalog", "Dataset", "DataDownload"}
+DATASET_TEXT_MIN_CHARS = 50
+DATASET_TEXT_MAX_CHARS = 5000
+DATASET_URL_PROPERTIES_BY_TYPE = {
+    "DataCatalog": ("url", "isBasedOn", "license", "usageInfo", "publishingPrinciples", "sdLicense"),
+    "Dataset": ("url", "sameAs", "isBasedOn", "license", "usageInfo", "publishingPrinciples", "sdLicense"),
+    "DataDownload": (
+        "url",
+        "contentUrl",
+        "isBasedOn",
+        "license",
+        "usageInfo",
+        "publishingPrinciples",
+        "sdLicense",
+    ),
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -673,6 +689,38 @@ def check_creativework_abstract(issues: list[str], node: dict[str, object], labe
         issues.append(f"{label} abstract must match description")
 
 
+def is_absolute_http_url(value: str) -> bool:
+    parsed = urlparse(value)
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def check_dataset_search_metadata(issues: list[str], node: dict[str, object], label: str) -> None:
+    types = node_type_set(node) & DATASET_SEARCH_TYPES
+    if not types:
+        return
+    name = node.get("name")
+    if not isinstance(name, str) or not name.strip():
+        issues.append(f"{label} must expose a non-empty name")
+    elif len(name) > DATASET_TEXT_MAX_CHARS:
+        issues.append(f"{label} name must stay within {DATASET_TEXT_MAX_CHARS} characters")
+    for key in ("description", "abstract"):
+        value = node.get(key)
+        if not isinstance(value, str) or not value.strip():
+            issues.append(f"{label} must expose a non-empty {key}")
+            continue
+        if len(value) < DATASET_TEXT_MIN_CHARS:
+            issues.append(f"{label} {key} must be at least {DATASET_TEXT_MIN_CHARS} characters")
+        if len(value) > DATASET_TEXT_MAX_CHARS:
+            issues.append(f"{label} {key} must stay within {DATASET_TEXT_MAX_CHARS} characters")
+    required_url_properties = set()
+    for node_type in types:
+        required_url_properties.update(DATASET_URL_PROPERTIES_BY_TYPE.get(node_type, ()))
+    for key in sorted(required_url_properties):
+        value = node.get(key)
+        if not isinstance(value, str) or not is_absolute_http_url(value):
+            issues.append(f"{label} {key} must be an absolute HTTP(S) URL")
+
+
 def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
     entity = index_data.get("entity", {})
     availability = index_data.get("availability", {})
@@ -932,7 +980,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     if public_url_values:
         issues.append(f"Pages index inline JSON-LD must use Pages URLs for deployed public files: {public_url_values}")
     for node in parsed_jsonld_nodes:
-        check_creativework_abstract(issues, node, f"Pages index {node.get('@id', node.get('name', 'node'))}")
+        label = f"Pages index {node.get('@id', node.get('name', 'node'))}"
+        check_creativework_abstract(issues, node, label)
+        check_dataset_search_metadata(issues, node, label)
     if "https://iron-mark.github.io/Iron-Mark/FAQ.md#faq" not in "\n".join(jsonld_scripts):
         issues.append("Pages index inline FAQ JSON-LD must use the Pages FAQ identifier")
     if '"@type": "ImageObject"' not in index_text:

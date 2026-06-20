@@ -93,6 +93,22 @@ ABSTRACT_REQUIRED_TYPES = {
     "WebPageElement",
     "SiteNavigationElement",
 }
+DATASET_SEARCH_TYPES = {"DataCatalog", "Dataset", "DataDownload"}
+DATASET_TEXT_MIN_CHARS = 50
+DATASET_TEXT_MAX_CHARS = 5000
+DATASET_URL_PROPERTIES_BY_TYPE = {
+    "DataCatalog": ("url", "isBasedOn", "license", "usageInfo", "publishingPrinciples", "sdLicense"),
+    "Dataset": ("url", "sameAs", "isBasedOn", "license", "usageInfo", "publishingPrinciples", "sdLicense"),
+    "DataDownload": (
+        "url",
+        "contentUrl",
+        "isBasedOn",
+        "license",
+        "usageInfo",
+        "publishingPrinciples",
+        "sdLicense",
+    ),
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -638,6 +654,38 @@ def check_creativework_abstract(node: dict[str, Any], label: str) -> None:
         return
     if node.get("abstract") != description:
         errors.append(f"{label} abstract must match description")
+
+
+def is_absolute_http_url(value: str) -> bool:
+    parsed = urlparse(value)
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def check_dataset_search_metadata(node: dict[str, Any], label: str) -> None:
+    types = node_types(node) & DATASET_SEARCH_TYPES
+    if not types:
+        return
+    name = node.get("name")
+    if not isinstance(name, str) or not name.strip():
+        errors.append(f"{label} must expose a non-empty name")
+    elif len(name) > DATASET_TEXT_MAX_CHARS:
+        errors.append(f"{label} name must stay within {DATASET_TEXT_MAX_CHARS} characters")
+    for key in ("description", "abstract"):
+        value = node.get(key)
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{label} must expose a non-empty {key}")
+            continue
+        if len(value) < DATASET_TEXT_MIN_CHARS:
+            errors.append(f"{label} {key} must be at least {DATASET_TEXT_MIN_CHARS} characters")
+        if len(value) > DATASET_TEXT_MAX_CHARS:
+            errors.append(f"{label} {key} must stay within {DATASET_TEXT_MAX_CHARS} characters")
+    required_url_properties = set()
+    for node_type in types:
+        required_url_properties.update(DATASET_URL_PROPERTIES_BY_TYPE.get(node_type, ()))
+    for key in sorted(required_url_properties):
+        value = node.get(key)
+        if not isinstance(value, str) or not is_absolute_http_url(value):
+            errors.append(f"{label} {key} must be an absolute HTTP(S) URL")
 
 
 def schema_type_ok(value: Any, schema_type: str) -> bool:
@@ -1858,7 +1906,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
-        check_creativework_abstract(node, f"person.jsonld {node.get('@id', node.get('name', 'node'))}")
+        label = f"person.jsonld {node.get('@id', node.get('name', 'node'))}"
+        check_creativework_abstract(node, label)
+        check_dataset_search_metadata(node, label)
     for node in graph_nodes(faq_schema):
         check_creativework_abstract(node, f"faq.jsonld {node.get('@id', node.get('name', 'node'))}")
     person = node_by_id(person_schema, person_id)
