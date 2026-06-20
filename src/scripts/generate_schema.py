@@ -387,6 +387,28 @@ def service_audience() -> dict[str, str]:
     }
 
 
+def person_occupations(data: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        {
+            "@type": "Occupation",
+            "name": title,
+            "occupationLocation": {
+                "@type": "Country",
+                "name": "Philippines",
+            },
+        }
+        for title in data.get("entity", {}).get("jobTitle", [])
+    ]
+
+
+def person_work_locations() -> list[dict[str, str]]:
+    return [
+        {"@type": "Country", "name": "Philippines"},
+        {"@type": "AdministrativeArea", "name": "Southeast Asia"},
+        {"@type": "VirtualLocation", "name": "Remote global"},
+    ]
+
+
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
     awards: dict[str, list[str]] = {}
     for achievement in data.get("achievements", []):
@@ -1018,22 +1040,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             ],
             "hasOfferCatalog": ref(fragment_id(person_id, "services")),
             "makesOffer": [ref(offer_id) for offer_id in offer_ids],
-            "hasOccupation": [
-                {
-                    "@type": "Occupation",
-                    "name": title,
-                    "occupationLocation": {
-                        "@type": "Country",
-                        "name": "Philippines",
-                    },
-                }
-                for title in entity.get("jobTitle", [])
-            ],
-            "workLocation": [
-                {"@type": "Country", "name": "Philippines"},
-                {"@type": "AdministrativeArea", "name": "Southeast Asia"},
-                {"@type": "VirtualLocation", "name": "Remote global"},
-            ],
+            "hasOccupation": person_occupations(data),
+            "workLocation": person_work_locations(),
             "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id), ref(pages_page_id)],
             "potentialAction": ref(contact_action_id),
             "subjectOf": [

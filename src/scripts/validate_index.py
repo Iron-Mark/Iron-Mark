@@ -44,6 +44,8 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    person_occupations,
+    person_work_locations,
     primary_image_description,
     profile_page_part_ids,
     profile_keywords,
@@ -2044,6 +2046,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_awards = sorted(achievement_titles - schema_awards)
         if missing_awards:
             errors.append(f"person.jsonld Person award missing: {missing_awards}")
+        if person.get("jobTitle") != data.get("entity", {}).get("jobTitle", []):
+            errors.append("person.jsonld Person jobTitle drift")
+        if person.get("hasOccupation") != person_occupations(data):
+            errors.append("person.jsonld Person hasOccupation drift")
+        if person.get("workLocation") != person_work_locations():
+            errors.append("person.jsonld Person workLocation drift")
 
         availability = data.get("availability", {})
         area_served = set(availability.get("areaServed", []))

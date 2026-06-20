@@ -42,6 +42,8 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    person_occupations,
+    person_work_locations,
     primary_image_description,
     profile_page_part_ids,
     profile_keywords,
@@ -1267,6 +1269,13 @@ def validate_artifact(artifact: Path) -> list[str]:
     for person_node in person_nodes:
         check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
     pages_topic_set_id = topic_term_set_id()
+    if person:
+        if person.get("jobTitle") != index_data.get("entity", {}).get("jobTitle", []):
+            issues.append("Pages index Person jobTitle drift")
+        if person.get("hasOccupation") != person_occupations(index_data):
+            issues.append("Pages index Person hasOccupation drift")
+        if person.get("workLocation") != person_work_locations():
+            issues.append("Pages index Person workLocation drift")
     if person and pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
         issues.append("Pages index Person knowsAbout missing topic taxonomy")
     if person:
