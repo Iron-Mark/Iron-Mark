@@ -1354,7 +1354,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "name": term,
                 "termCode": slugify(term),
                 "description": topic_term_description(data, term),
-                "url": pages["home"],
+                "url": topic_term_id(term),
                 "inDefinedTermSet": ref(pages_topic_set_id),
                 "inLanguage": "en",
                 "dateModified": updated,

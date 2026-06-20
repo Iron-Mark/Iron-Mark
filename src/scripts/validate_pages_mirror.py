@@ -1236,6 +1236,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index DefinedTerm termCode drift: {term}")
         if term_node.get("description") != expected_topic_term_description(index_data, term):
             issues.append(f"Pages index DefinedTerm description drift: {term}")
+        if term_node.get("url") != topic_term_id(term):
+            issues.append(f"Pages index DefinedTerm url drift: {term}")
         if term_node.get("inDefinedTermSet", {}).get("@id") != pages_topic_set_id:
             issues.append(f"Pages index DefinedTerm set drift: {term}")
         if term_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":

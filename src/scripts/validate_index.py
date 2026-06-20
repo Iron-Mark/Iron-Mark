@@ -1717,6 +1717,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld DefinedTerm termCode drift: {term}")
         if term_node.get("description") != expected_topic_term_description(data, term):
             errors.append(f"person.jsonld DefinedTerm description drift: {term}")
+        if term_node.get("url") != topic_term_id(term):
+            errors.append(f"person.jsonld DefinedTerm url drift: {term}")
         if term_node.get("inDefinedTermSet", {}).get("@id") != pages_topic_set_id:
             errors.append(f"person.jsonld DefinedTerm set drift: {term}")
         if term_node.get("about", {}).get("@id") != person_id:
