@@ -33,6 +33,7 @@ jobs:
           python3 src/scripts/generate_llms_ctx.py
           python3 src/scripts/build_pages_index.py
           python3 src/scripts/generate_sitemap.py
+          python3 src/scripts/generate_portfolio_sync.py
 
       - name: Validate source metadata
         run: python3 src/scripts/validate_index.py

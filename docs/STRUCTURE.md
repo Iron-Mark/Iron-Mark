@@ -46,6 +46,7 @@ Generated artifacts:
 - `src/scripts/generate_llms_ctx.py` rebuilds `public/llms-ctx-full.txt`.
 - `src/scripts/build_pages_index.py` rebuilds `docs/index.html` with metadata and inline JSON-LD for the Pages mirror.
 - `src/scripts/generate_sitemap.py` rebuilds `sitemap.xml` as a host-specific GitHub Pages crawl sitemap.
+- `src/scripts/generate_portfolio_sync.py` rebuilds the `src/portfolio-sync/` paste blocks for the portfolio `llms.txt` cross-link.
 - `src/scripts/build_pages_mirror.py` rewrites the flattened Pages artifact, including a Pages-only `robots.txt`/`sitemap.xml`.
 - `src/scripts/validate_pages_mirror.py` builds and validates the flattened Pages artifact in a temp directory.
 - `public/schema/llms-index.schema.json` defines the validation contract for `llms-index.json`.

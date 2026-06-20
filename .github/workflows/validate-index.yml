@@ -52,6 +52,14 @@ jobs:
             exit 1
           )
 
+      - name: Generate portfolio sync snippets and check drift
+        run: |
+          python3 src/scripts/generate_portfolio_sync.py
+          git diff --exit-code src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md || (
+            echo "::error::Portfolio sync snippets are out of date - run src/scripts/generate_portfolio_sync.py"
+            exit 1
+          )
+
       - name: Validate llms-index, assets, schema, and crawl files
         run: python3 src/scripts/validate_index.py
 

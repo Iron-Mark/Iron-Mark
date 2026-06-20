@@ -49,6 +49,12 @@ from generate_schema import (
     service_description,
     service_focus_identifier,
 )
+from generate_portfolio_sync import (
+    FAQ_CROSSLINKS_PATH,
+    LLMS_SNIPPET_PATH,
+    render_faq_crosslinks,
+    render_llms_snippet,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -1345,6 +1351,45 @@ def check_generated_context(data: dict[str, Any]) -> None:
             errors.append(f"public/llms-ctx-full.txt missing lab project heading: {name}")
         if focus and f"- Focus: {focus}" not in text:
             errors.append(f"public/llms-ctx-full.txt missing lab project focus: {name}")
+
+
+def check_portfolio_sync_artifacts(data: dict[str, Any]) -> None:
+    expected_artifacts = {
+        LLMS_SNIPPET_PATH: render_llms_snippet(data),
+        FAQ_CROSSLINKS_PATH: render_faq_crosslinks(data),
+    }
+    for path, expected in expected_artifacts.items():
+        if not path.exists():
+            errors.append(f"Missing generated portfolio sync artifact: {path.relative_to(ROOT)}")
+            continue
+        actual = path.read_text(encoding="utf-8").replace("\r\n", "\n")
+        if actual != expected.replace("\r\n", "\n"):
+            errors.append(f"{path.relative_to(ROOT)} is stale; run src/scripts/generate_portfolio_sync.py")
+
+    snippet = LLMS_SNIPPET_PATH.read_text(encoding="utf-8") if LLMS_SNIPPET_PATH.exists() else ""
+    repo = data.get("machineReadable", {}).get("repo", {})
+    pages = data.get("machineReadable", {}).get("pages", {})
+    required_references = [
+        data.get("canonical", {}).get("githubProfileReadme", ""),
+        repo.get("llmsIndexJson", ""),
+        repo.get("schemaIndex", ""),
+        repo.get("faqMd", ""),
+        repo.get("stackMd", ""),
+        repo.get("schemaPerson", ""),
+        repo.get("schemaFaq", ""),
+        pages.get("home", ""),
+        data.get("entity", {}).get("@id", ""),
+    ]
+    for reference in required_references:
+        if reference and reference not in snippet:
+            errors.append(f"portfolio sync llms snippet missing required reference: {reference}")
+    for item in data.get("aeo", {}).get("answerSnippets", []):
+        question = item.get("question", "")
+        if question and question not in snippet:
+            errors.append(f"portfolio sync llms snippet missing AEO question: {question}")
+        expected_answer_url = f"{repo.get('faqMd', '')}#{slugify(question)}" if question else ""
+        if expected_answer_url and expected_answer_url not in snippet:
+            errors.append(f"portfolio sync llms snippet missing FAQ answer URL: {expected_answer_url}")
 
 
 def check_schema(data: dict[str, Any], questions: list[str]) -> None:
@@ -2946,6 +2991,7 @@ def main() -> int:
     check_aeo_coverage(data, questions)
     check_knowledge_graph(data)
     check_generated_context(data)
+    check_portfolio_sync_artifacts(data)
     check_schema(data, questions)
     check_crawl_files(data)
 
