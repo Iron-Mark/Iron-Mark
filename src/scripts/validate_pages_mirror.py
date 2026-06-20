@@ -41,6 +41,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     primary_image_description,
+    profile_page_part_ids,
     profile_keywords,
     project_image_description,
     service_audience,
@@ -1233,8 +1234,29 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index GitHub ProfilePage publisher drift")
         if profile_page.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index GitHub ProfilePage keywords drift")
+        if profile_page.get("mainEntity", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index GitHub ProfilePage mainEntity drift")
+        if profile_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index GitHub ProfilePage about drift")
+        if profile_page.get("isPartOf", {}).get("@id") != "https://github.com/Iron-Mark/Iron-Mark#website":
+            issues.append("Pages index GitHub ProfilePage isPartOf drift")
+        if profile_page.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index GitHub ProfilePage dateModified drift")
+        if profile_page.get("primaryImageOfPage", {}).get("@id") != f"{PAGES_BASE}/#primary-image":
+            issues.append("Pages index GitHub ProfilePage primaryImageOfPage drift")
+        if profile_page.get("thumbnailUrl") != PAGES_SOCIAL_IMAGE:
+            issues.append("Pages index GitHub ProfilePage thumbnailUrl drift")
+        if profile_page.get("potentialAction", {}).get("@id") != "https://www.marksiazon.dev/#contact-action":
+            issues.append("Pages index GitHub ProfilePage potentialAction drift")
+        missing_profile_parts = sorted(pages_rewrite_ids(profile_page_part_ids(index_data)) - ref_ids(profile_page.get("hasPart")))
+        if missing_profile_parts:
+            issues.append(f"Pages index GitHub ProfilePage hasPart missing: {missing_profile_parts}")
         check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
+        check_content_usage_policy(issues, profile_page, "Pages index GitHub ProfilePage")
+        check_ownership_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
         check_spatial_coverage(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
+        check_structured_data_provenance(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
+        check_expected_mentions(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
     if not pages_site or "WebSite" not in node_type_set(pages_site):
         issues.append("Pages index inline JSON-LD missing Pages WebSite node")

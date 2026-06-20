@@ -770,6 +770,62 @@
           "@id": "https://www.marksiazon.dev/projects/pulse#project"
         }
       ],
+      "hasPart": [
+        {
+          "@id": "https://www.marksiazon.dev/#services"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#featured-projects"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#hackathon-lab"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROFILE.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json"
+        }
+      ],
       "significantLink": [
         "https://www.marksiazon.dev",
         "https://www.marksiazon.dev/recruiter",

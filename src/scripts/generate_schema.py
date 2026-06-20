@@ -700,6 +700,37 @@ def pages_section_relation_ids(data: dict[str, Any]) -> dict[str, dict[str, list
     }
 
 
+def profile_page_part_ids(data: dict[str, Any]) -> list[str]:
+    entity = data.get("entity", {})
+    person_id = entity.get("@id", "")
+    machine_readable = data.get("machineReadable", {})
+    repo = machine_readable.get("repo", {}) if isinstance(machine_readable, dict) else {}
+    identifiers = data.get("identifiers", {})
+
+    return unique_compact(
+        [
+            fragment_id(person_id, "services"),
+            f"{GITHUB_BLOB}/llms-index.json#featured-projects",
+            f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
+            identifiers.get("faqDocument", ""),
+            repo.get("llmsIndexJson", ""),
+            repo.get("llmsTxt", ""),
+            repo.get("llmsFullTxt", ""),
+            repo.get("llmsCtxFullTxt", ""),
+            repo.get("faqMd", ""),
+            repo.get("recruiterMd", ""),
+            repo.get("proofMd", ""),
+            repo.get("profileMd", ""),
+            repo.get("stackMd", ""),
+            repo.get("howToCiteMd", ""),
+            repo.get("citationCff", ""),
+            repo.get("schemaPerson", ""),
+            repo.get("schemaFaq", ""),
+            repo.get("schemaIndex", ""),
+        ]
+    )
+
+
 def topic_term_values(data: dict[str, Any]) -> list[str]:
     return unique_compact(
         data.get("seo", {}).get("primaryKeywords", [])
@@ -1097,6 +1128,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "thumbnailUrl": PAGES_IMAGE,
             "spatialCoverage": spatial,
             "mentions": mentioned_entities,
+            "hasPart": [ref(part_id) for part_id in profile_page_part_ids(data)],
             "significantLink": profile_significant_links(data),
             "relatedLink": profile_related_links(data),
             "potentialAction": ref(contact_action_id),

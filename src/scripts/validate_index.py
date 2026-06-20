@@ -43,6 +43,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     primary_image_description,
+    profile_page_part_ids,
     profile_keywords,
     project_image_description,
     service_audience,
@@ -2070,11 +2071,30 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
         if profile_page.get("inLanguage") != "en":
             errors.append("person.jsonld GitHub ProfilePage inLanguage must be en")
+        if profile_page.get("mainEntity", {}).get("@id") != person_id:
+            errors.append("person.jsonld GitHub ProfilePage mainEntity drift")
+        if profile_page.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld GitHub ProfilePage about drift")
+        if profile_page.get("isPartOf", {}).get("@id") != github_site_id:
+            errors.append("person.jsonld GitHub ProfilePage isPartOf drift")
+        if profile_page.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld GitHub ProfilePage dateModified drift")
         if profile_page.get("author", {}).get("@id") != person_id:
             errors.append("person.jsonld GitHub ProfilePage author drift")
         if profile_page.get("publisher", {}).get("@id") != person_id:
             errors.append("person.jsonld GitHub ProfilePage publisher drift")
+        if profile_page.get("primaryImageOfPage", {}).get("@id") != pages_image_id:
+            errors.append("person.jsonld GitHub ProfilePage primaryImageOfPage drift")
+        if profile_page.get("thumbnailUrl") != PAGES_SOCIAL_IMAGE:
+            errors.append("person.jsonld GitHub ProfilePage thumbnailUrl drift")
+        if profile_page.get("potentialAction", {}).get("@id") != contact_action_id:
+            errors.append("person.jsonld GitHub ProfilePage potentialAction drift")
+        missing_profile_parts = sorted(set(profile_page_part_ids(data)) - node_ref_ids(profile_page.get("hasPart")))
+        if missing_profile_parts:
+            errors.append(f"person.jsonld GitHub ProfilePage hasPart missing: {missing_profile_parts}")
         check_review_metadata(profile_page, data, "person.jsonld GitHub ProfilePage")
+        check_content_usage_policy(profile_page, data, "person.jsonld GitHub ProfilePage")
+        check_structured_data_provenance(profile_page, data, "person.jsonld GitHub ProfilePage")
         check_spatial_coverage(profile_page, data, "person.jsonld GitHub ProfilePage")
 
     pages_site = node_by_id(person_schema, pages_site_id)
