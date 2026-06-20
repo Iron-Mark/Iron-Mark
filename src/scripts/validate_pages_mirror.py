@@ -21,6 +21,7 @@ from generate_schema import (
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
     available_languages,
+    content_language,
     contact_action_description,
     contact_action_name,
     contact_action_platforms,
@@ -285,7 +286,7 @@ def has_english_knows_language(node: dict[str, object]) -> bool:
         isinstance(language, dict)
         and language.get("@type") == "Language"
         and language.get("name") == "English"
-        and language.get("alternateName") == "en"
+        and language.get("alternateName") == content_language()
         for language in languages
     )
 
@@ -1215,8 +1216,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index contact EntryPoint contentType drift")
         if contact_entry.get("httpMethod") != contact_entry_http_method():
             issues.append("Pages index contact EntryPoint httpMethod drift")
-        if contact_entry.get("inLanguage") != "en":
-            issues.append("Pages index contact EntryPoint inLanguage must be en")
+        if contact_entry.get("inLanguage") != content_language():
+            issues.append("Pages index contact EntryPoint inLanguage drift")
         if contact_entry.get("actionPlatform") != contact_action_platforms():
             issues.append("Pages index contact EntryPoint actionPlatform drift")
     if "Knowledge Graph" not in index_text:
@@ -1382,8 +1383,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index OfferCatalog mainEntityOfPage drift")
         if offer_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index OfferCatalog about drift")
-        if offer_catalog.get("inLanguage") != "en":
-            issues.append("Pages index OfferCatalog inLanguage must be en")
+        if offer_catalog.get("inLanguage") != content_language():
+            issues.append("Pages index OfferCatalog inLanguage drift")
         if offer_catalog.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index OfferCatalog dateModified drift")
         if offer_catalog.get("isAccessibleForFree") is not True:

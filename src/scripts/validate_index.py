@@ -28,6 +28,7 @@ from generate_schema import (
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
     available_languages,
+    content_language,
     contact_action_description,
     contact_action_name,
     contact_action_platforms,
@@ -321,7 +322,7 @@ def has_english_knows_language(node: dict[str, Any]) -> bool:
     return any(
         isinstance(language, dict)
         and language.get("@type") == "Language"
-        and language.get("alternateName") == "en"
+        and language.get("alternateName") == content_language()
         and language.get("name") == "English"
         for language in languages
     )
@@ -2152,8 +2153,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 errors.append("person.jsonld OfferCatalog mainEntityOfPage drift")
             if offer_catalog.get("about", {}).get("@id") != person_id:
                 errors.append("person.jsonld OfferCatalog about drift")
-            if offer_catalog.get("inLanguage") != "en":
-                errors.append("person.jsonld OfferCatalog inLanguage must be en")
+            if offer_catalog.get("inLanguage") != content_language():
+                errors.append("person.jsonld OfferCatalog inLanguage drift")
             if offer_catalog.get("dateModified") != data.get("updated"):
                 errors.append("person.jsonld OfferCatalog dateModified drift")
             if offer_catalog.get("isAccessibleForFree") is not True:
@@ -2683,8 +2684,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ContactAction EntryPoint contentType drift")
         if contact_entry.get("httpMethod") != contact_entry_http_method():
             errors.append("person.jsonld ContactAction EntryPoint httpMethod drift")
-        if contact_entry.get("inLanguage") != "en":
-            errors.append("person.jsonld ContactAction EntryPoint inLanguage must be en")
+        if contact_entry.get("inLanguage") != content_language():
+            errors.append("person.jsonld ContactAction EntryPoint inLanguage drift")
         if contact_entry.get("actionPlatform") != contact_action_platforms():
             errors.append("person.jsonld ContactAction EntryPoint actionPlatform drift")
     dataset = node_by_id(person_schema, pages_dataset_id)

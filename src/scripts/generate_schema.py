@@ -35,7 +35,8 @@ PAGES_IMAGE_ASSET = ROOT / "assets" / "brand" / "mark-siazon-product-design-full
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 IMAGE_WIDTH = 1200
 IMAGE_HEIGHT = 675
-PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
+CONTENT_LANGUAGE = "en"
+PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": CONTENT_LANGUAGE}
 PROVIDE_SERVICE_BUSINESS_FUNCTION = "http://purl.org/goodrelations/v1#ProvideService"
 DATASET_DATE_PUBLISHED = "2026-06-13"
 SERVICE_PROVIDER_MOBILITY = "dynamic"
@@ -66,12 +67,16 @@ DOWNLOAD_SOURCE_PATHS = {
 }
 
 
-def person_languages() -> list[dict[str, str]]:
-    return [PROFILE_LANGUAGE]
+def content_language() -> str:
+    return CONTENT_LANGUAGE
 
 
 def available_languages() -> list[str]:
-    return ["en"]
+    return [content_language()]
+
+
+def person_languages() -> list[dict[str, str]]:
+    return [PROFILE_LANGUAGE]
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -1156,7 +1161,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             },
             "mainEntityOfPage": availability.get("recruiterBrief", entity["url"]),
             "about": ref(person_id),
-            "inLanguage": "en",
+            "inLanguage": content_language(),
             "dateModified": updated,
             "isAccessibleForFree": True,
             "numberOfItems": len(offer_ids),
@@ -1388,7 +1393,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "urlTemplate": availability.get("contact", entity["url"]),
             "contentType": contact_entry_content_type(),
             "httpMethod": contact_entry_http_method(),
-            "inLanguage": "en",
+            "inLanguage": content_language(),
             "actionPlatform": contact_action_platforms(),
         },
         {
