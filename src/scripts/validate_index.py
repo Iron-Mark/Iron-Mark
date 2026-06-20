@@ -433,6 +433,27 @@ def pages_related_links(data: dict[str, Any]) -> list[str]:
     )
 
 
+def answer_dom_id(question: str) -> str:
+    return f"answer-{slugify(question)}"
+
+
+def expected_pages_speakable_selectors(data: dict[str, Any]) -> list[str]:
+    selectors = ["#profile-summary"]
+    for item in data.get("aeo", {}).get("answerSnippets", [])[:3]:
+        question = item.get("question")
+        if isinstance(question, str) and question:
+            selectors.append(f"#{answer_dom_id(question)}")
+    return selectors
+
+
+def expected_pages_speakable(data: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "@type": "SpeakableSpecification",
+        "@id": f"{PAGES}/#speakable",
+        "cssSelector": expected_pages_speakable_selectors(data),
+    }
+
+
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
     if node.get("citation") != expected_citation_targets(data):
         errors.append(f"{label} citation chain drift")
@@ -827,6 +848,9 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     for heading in ("Profile Facts", "Featured Work", "Answer Corpus", "Geo And Topic Signals", "Knowledge Graph", "Citation"):
         if heading not in html:
             errors.append(f"docs/index.html missing visible section: {heading}")
+    for selector in expected_pages_speakable_selectors(data):
+        if selector.startswith("#") and f'id="{selector[1:]}"' not in html:
+            errors.append(f"docs/index.html missing speakable selector target: {selector}")
     required_alternates = {
         'type="application/json" href="llms-index.json"',
         'type="text/plain" href="llms.txt"',
@@ -1298,6 +1322,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage significantLink drift")
         if pages_page.get("relatedLink") != pages_related_links(data):
             errors.append("person.jsonld Pages CollectionPage relatedLink drift")
+        if pages_page.get("speakable") != expected_pages_speakable(data):
+            errors.append("person.jsonld Pages CollectionPage speakable drift")
         check_review_metadata(pages_page, data, "person.jsonld Pages CollectionPage")
         check_content_usage_policy(pages_page, data, "person.jsonld Pages CollectionPage")
         check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")

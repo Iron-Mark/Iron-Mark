@@ -741,6 +741,16 @@
         "Southeast Asia",
         "remote global"
       ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "@id": "https://iron-mark.github.io/Iron-Mark/#speakable",
+        "cssSelector": [
+          "#profile-summary",
+          "#answer-who-is-mark-siazon",
+          "#answer-what-roles-is-mark-siazon-open-to",
+          "#answer-where-is-mark-siazons-full-tech-stack"
+        ]
+      },
       "mentions": [
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#featured-projects"

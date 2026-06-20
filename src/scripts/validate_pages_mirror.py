@@ -352,6 +352,33 @@ def pages_related_links(index_data: dict[str, object]) -> list[str]:
     )
 
 
+def answer_dom_id(question: str) -> str:
+    return f"answer-{slugify(question)}"
+
+
+def expected_pages_speakable_selectors(index_data: dict[str, object]) -> list[str]:
+    selectors = ["#profile-summary"]
+    aeo = index_data.get("aeo", {})
+    snippets = aeo.get("answerSnippets", []) if isinstance(aeo, dict) else []
+    if not isinstance(snippets, list):
+        snippets = []
+    for item in snippets[:3]:
+        if not isinstance(item, dict):
+            continue
+        question = item.get("question")
+        if isinstance(question, str) and question:
+            selectors.append(f"#{answer_dom_id(question)}")
+    return selectors
+
+
+def expected_pages_speakable(index_data: dict[str, object]) -> dict[str, object]:
+    return {
+        "@type": "SpeakableSpecification",
+        "@id": f"{PAGES_BASE}/#speakable",
+        "cssSelector": expected_pages_speakable_selectors(index_data),
+    }
+
+
 def pages_rewrite_public_source(source: str) -> str:
     replacements = (
         (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
@@ -613,6 +640,9 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing contact URL")
     if "Knowledge Graph" not in index_text:
         issues.append("Pages index missing visible Knowledge Graph section")
+    for selector in expected_pages_speakable_selectors(index_data):
+        if selector.startswith("#") and f'id="{selector[1:]}"' not in index_text:
+            issues.append(f"Pages index missing speakable selector target: {selector}")
     expected_image_tags = {
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
@@ -707,6 +737,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage significantLink drift")
         if pages_page.get("relatedLink") != pages_related_links(index_data):
             issues.append("Pages index CollectionPage relatedLink drift")
+        if pages_page.get("speakable") != expected_pages_speakable(index_data):
+            issues.append("Pages index CollectionPage speakable drift")
         check_review_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")

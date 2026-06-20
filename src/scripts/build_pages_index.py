@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from html import escape
 from pathlib import Path
 from typing import Any
@@ -34,6 +35,17 @@ def csv(values: list[str]) -> str:
 
 def linked(url: str, label: str) -> str:
     return f'<a href="{escape(url, quote=True)}">{escape(label)}</a>'
+
+
+def slugify(value: str) -> str:
+    value = value.lower()
+    value = re.sub(r"[^a-z0-9\s-]", "", value)
+    value = re.sub(r"\s+", "-", value).strip("-")
+    return value
+
+
+def answer_dom_id(question: str) -> str:
+    return f"answer-{slugify(question)}"
 
 
 def render_projects(projects: list[dict[str, str]]) -> str:
@@ -68,7 +80,7 @@ def render_answers(snippets: list[dict[str, str]]) -> str:
         if source_links:
             sources = f"<br/><span class=\"meta\">Sources: {' | '.join(source_links)}</span>"
         items.append(
-            "      <li>"
+            f"      <li id=\"{escape(answer_dom_id(item.get('question', '')), quote=True)}\">"
             f"<strong>{escape(item.get('question', 'Question'))}</strong><br/>"
             f"{escape(item.get('answer', ''))}"
             f"{sources}"
@@ -245,7 +257,7 @@ def main() -> None:
       <a href="{PORTFOLIO_URL}">Mark Siazon Portfolio</a> / <span>{SITE_NAME}</span>
     </nav>
     <h1>{SITE_NAME}</h1>
-    <p>{escape(entity.get("description", description))}</p>
+    <p id="profile-summary">{escape(entity.get("description", description))}</p>
     <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
     <h2>Profile Facts</h2>
     <ul class="facts">
@@ -260,7 +272,7 @@ def main() -> None:
     <ul>
 {projects}
     </ul>
-    <h2>Answer Corpus</h2>
+    <h2 id="answer-corpus">Answer Corpus</h2>
     <ul>
 {answers}
     </ul>

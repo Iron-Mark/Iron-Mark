@@ -257,6 +257,27 @@ def pages_related_links(data: dict[str, Any]) -> list[str]:
     )
 
 
+def answer_dom_id(question: str) -> str:
+    return f"answer-{slugify(question)}"
+
+
+def pages_speakable_selectors(data: dict[str, Any]) -> list[str]:
+    selectors = ["#profile-summary"]
+    for item in data.get("aeo", {}).get("answerSnippets", [])[:3]:
+        question = item.get("question")
+        if isinstance(question, str) and question:
+            selectors.append(f"#{answer_dom_id(question)}")
+    return selectors
+
+
+def pages_speakable_spec(data: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "@type": "SpeakableSpecification",
+        "@id": f"{PAGES}/#speakable",
+        "cssSelector": pages_speakable_selectors(data),
+    }
+
+
 def citation_targets(data: dict[str, Any]) -> list[str]:
     repo = data["machineReadable"]["repo"]
     return unique_compact(
@@ -585,6 +606,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
             "spatialCoverage": spatial,
+            "speakable": pages_speakable_spec(data),
             "mentions": mentioned_entities,
             "significantLink": pages_significant_links(data),
             "relatedLink": pages_related_links(data),
