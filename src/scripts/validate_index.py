@@ -2004,8 +2004,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not featured_list or "ItemList" not in node_types(featured_list):
         errors.append("person.jsonld missing featured projects ItemList")
     else:
+        if "CreativeWork" not in node_types(featured_list):
+            errors.append("person.jsonld featured projects ItemList must also be CreativeWork")
         if featured_list.get("description") != featured_projects_list_description(data):
             errors.append("person.jsonld featured projects ItemList description drift")
+        if featured_list.get("abstract") != featured_list.get("description"):
+            errors.append("person.jsonld featured projects ItemList abstract drift")
         if featured_list.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld featured projects ItemList about drift")
         if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
@@ -2027,8 +2031,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not lab_list or "ItemList" not in node_types(lab_list):
         errors.append("person.jsonld missing hackathon and lab ItemList")
     else:
+        if "CreativeWork" not in node_types(lab_list):
+            errors.append("person.jsonld hackathon and lab ItemList must also be CreativeWork")
         if lab_list.get("description") != lab_projects_list_description(data):
             errors.append("person.jsonld hackathon and lab ItemList description drift")
+        if lab_list.get("abstract") != lab_list.get("description"):
+            errors.append("person.jsonld hackathon and lab ItemList abstract drift")
         if lab_list.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld hackathon and lab ItemList about drift")
         if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":

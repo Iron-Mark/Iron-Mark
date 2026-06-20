@@ -1286,11 +1286,15 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not featured_list or "ItemList" not in node_type_set(featured_list):
         issues.append("Pages index inline JSON-LD missing featured projects ItemList")
     else:
+        if "CreativeWork" not in node_type_set(featured_list):
+            issues.append("Pages index featured projects ItemList must also be CreativeWork")
         featured_projects = index_data.get("featuredProjects", [])
         if not isinstance(featured_projects, list):
             featured_projects = []
         if featured_list.get("description") != featured_projects_list_description(index_data):
             issues.append("Pages index featured projects ItemList description drift")
+        if featured_list.get("abstract") != featured_list.get("description"):
+            issues.append("Pages index featured projects ItemList abstract drift")
         if featured_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index featured projects ItemList about drift")
         if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
@@ -1314,11 +1318,15 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not lab_list or "ItemList" not in node_type_set(lab_list):
         issues.append("Pages index inline JSON-LD missing hackathon and lab ItemList")
     else:
+        if "CreativeWork" not in node_type_set(lab_list):
+            issues.append("Pages index hackathon and lab ItemList must also be CreativeWork")
         lab_projects = index_data.get("hackathonLab", [])
         if not isinstance(lab_projects, list):
             lab_projects = []
         if lab_list.get("description") != lab_projects_list_description(index_data):
             issues.append("Pages index hackathon and lab ItemList description drift")
+        if lab_list.get("abstract") != lab_list.get("description"):
+            issues.append("Pages index hackathon and lab ItemList abstract drift")
         if lab_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index hackathon and lab ItemList about drift")
         if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
