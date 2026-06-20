@@ -1946,6 +1946,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     missing_question_nodes = sorted(expected_question_ids - question_node_ids)
     if missing_question_nodes:
         issues.append(f"Pages index missing Question nodes: {missing_question_nodes}")
+    unexpected_question_nodes = sorted(question_node_ids - expected_question_ids)
+    if unexpected_question_nodes:
+        issues.append(f"Pages index unexpected Question nodes: {unexpected_question_nodes}")
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
         if "Question" in node_types:

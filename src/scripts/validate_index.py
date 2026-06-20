@@ -2943,6 +2943,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         errors.append(f"faq.jsonld has {len(question_nodes)} Question nodes; FAQ.md has {len(questions)}")
     question_by_id = {node.get("@id", ""): node for node in question_nodes}
     question_ids = set(question_by_id)
+    unexpected_question_ids = sorted(question_ids - expected_question_ids)
+    if unexpected_question_ids:
+        errors.append(f"faq.jsonld unexpected Question nodes: {unexpected_question_ids}")
     for question in data.get("aeo", {}).get("answerSnippets", []):
         expected = faq_question_id(faq_id, question.get("question", ""))
         if expected not in question_ids:
