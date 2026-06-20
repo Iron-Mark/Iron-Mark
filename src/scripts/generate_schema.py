@@ -316,6 +316,14 @@ def pages_section_id(fragment: str) -> str:
     return f"{PAGES}/#{fragment}"
 
 
+def pages_section_navigation_id() -> str:
+    return f"{PAGES}/#section-navigation"
+
+
+def pages_section_nav_item_id(fragment: str) -> str:
+    return f"{PAGES}/#nav-{fragment}"
+
+
 def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
     entity = data.get("entity", {})
     availability = data.get("availability", {})
@@ -682,6 +690,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
     pages_main_content_id = f"{PAGES}/#main-content"
+    pages_section_nav_id = pages_section_navigation_id()
     pages_topic_set_id = topic_term_set_id()
     portfolio_site_id = ids["portfolioWebsite"]
     contact_action_id = fragment_id(person_id, "contact-action")
@@ -725,6 +734,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     page_sections = pages_section_specs(data)
     page_section_relations = pages_section_relation_ids(data)
     page_section_refs = [ref(pages_section_id(section["fragment"])) for section in page_sections]
+    page_section_nav_refs = [ref(pages_section_nav_item_id(section["fragment"])) for section in page_sections]
 
     graph: list[dict[str, Any]] = [
         {
@@ -911,6 +921,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 ref(pages_catalog_id),
                 ref(pages_dataset_id),
                 ref(pages_main_content_id),
+                ref(pages_section_nav_id),
                 *page_section_refs,
                 ref(pages["llmsIndexJson"]),
                 ref(pages["llmsTxt"]),
@@ -957,7 +968,25 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "isAccessibleForFree": True,
             "citation": citations,
-            "hasPart": page_section_refs,
+            "hasPart": [ref(pages_section_nav_id), *page_section_refs],
+            **usage_policy,
+            **ownership,
+            **sd_provenance,
+        },
+        {
+            "@type": "SiteNavigationElement",
+            "@id": pages_section_nav_id,
+            "name": "Mark Siazon profile index section navigation",
+            "url": f"{pages['home']}#section-navigation",
+            "description": "Visible section navigation for the Mark Siazon profile index.",
+            "abstract": "Visible section navigation for the Mark Siazon profile index.",
+            "about": ref(person_id),
+            "isPartOf": ref(pages_page_id),
+            "inLanguage": "en",
+            "dateModified": updated,
+            "isAccessibleForFree": True,
+            "citation": citations,
+            "hasPart": page_section_nav_refs,
             **usage_policy,
             **ownership,
             **sd_provenance,
@@ -1150,7 +1179,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         },
     ]
 
-    for section in page_sections:
+    for position, section in enumerate(page_sections, start=1):
         description = section["description"]
         relations = page_section_relations.get(section["fragment"], {})
         graph.append(
@@ -1181,6 +1210,21 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 **usage_policy,
                 **ownership,
                 **sd_provenance,
+            }
+        )
+        graph.append(
+            {
+                "@type": "SiteNavigationElement",
+                "@id": pages_section_nav_item_id(section["fragment"]),
+                "name": section["heading"],
+                "url": f"{pages['home']}#{section['fragment']}",
+                "about": ref(pages_section_id(section["fragment"])),
+                "isPartOf": ref(pages_section_nav_id),
+                "position": position,
+                "inLanguage": "en",
+                "dateModified": updated,
+                "isAccessibleForFree": True,
+                **ownership,
             }
         )
 

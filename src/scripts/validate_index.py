@@ -22,7 +22,13 @@ from build_pages_mirror import (
     featured_project_cover_urls,
     project_cover_asset,
 )
-from generate_schema import pages_section_id, pages_section_relation_ids, pages_section_specs
+from generate_schema import (
+    pages_section_id,
+    pages_section_nav_item_id,
+    pages_section_navigation_id,
+    pages_section_relation_ids,
+    pages_section_specs,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -57,6 +63,7 @@ ABSTRACT_REQUIRED_TYPES = {
     "ProfilePage",
     "WebSite",
     "WebPageElement",
+    "SiteNavigationElement",
 }
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
@@ -891,6 +898,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if '<main id="main-content">' not in html:
         errors.append("docs/index.html main content must expose #main-content")
+    if '<nav id="section-navigation" class="section-nav" aria-label="Profile index sections">' not in html:
+        errors.append("docs/index.html must expose visible section navigation")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
     expected_hreflangs = {
@@ -945,6 +954,9 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         heading_tag = f'<h2 id="{section["fragment"]}">{section["heading"]}</h2>'
         if heading_tag not in html:
             errors.append(f"docs/index.html missing visible anchored section: {heading_tag}")
+        section_link = f'<a href="#{section["fragment"]}">{section["heading"]}</a>'
+        if section_link not in html:
+            errors.append(f"docs/index.html missing section navigation link: {section_link}")
     for selector in expected_pages_speakable_selectors(data):
         if selector.startswith("#") and f'id="{selector[1:]}"' not in html:
             errors.append(f"docs/index.html missing speakable selector target: {selector}")
@@ -1261,8 +1273,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
     pages_main_content_id = f"{PAGES}/#main-content"
+    pages_section_nav_id = pages_section_navigation_id()
     pages_section_ids = {pages_section_id(section["fragment"]) for section in pages_section_specs(data)}
     pages_section_relations = pages_section_relation_ids(data)
+    pages_section_nav_item_ids = {
+        pages_section_nav_item_id(section["fragment"])
+        for section in pages_section_specs(data)
+    }
     pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
@@ -1470,6 +1487,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             pages_catalog_id,
             pages_dataset_id,
             pages_main_content_id,
+            pages_section_nav_id,
             pages.get("llmsIndexJson", ""),
             pages.get("llmsTxt", ""),
             pages.get("llmsCtxFullTxt", ""),
@@ -1517,6 +1535,53 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_section_parts = sorted(pages_section_ids - node_ref_ids(main_content.get("hasPart")))
         if missing_section_parts:
             errors.append(f"person.jsonld main WebPageElement hasPart missing: {missing_section_parts}")
+        if pages_section_nav_id not in node_ref_ids(main_content.get("hasPart")):
+            errors.append("person.jsonld main WebPageElement hasPart missing section navigation")
+    section_navigation = node_by_id(person_schema, pages_section_nav_id)
+    if not section_navigation or "SiteNavigationElement" not in node_types(section_navigation):
+        errors.append("person.jsonld missing section SiteNavigationElement node")
+    else:
+        if section_navigation.get("url") != f"{pages.get('home')}#section-navigation":
+            errors.append("person.jsonld section navigation url drift")
+        if section_navigation.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld section navigation about drift")
+        if section_navigation.get("isPartOf", {}).get("@id") != pages_page_id:
+            errors.append("person.jsonld section navigation isPartOf drift")
+        if section_navigation.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld section navigation dateModified drift")
+        if section_navigation.get("isAccessibleForFree") is not True:
+            errors.append("person.jsonld section navigation must be isAccessibleForFree")
+        missing_nav_items = sorted(pages_section_nav_item_ids - node_ref_ids(section_navigation.get("hasPart")))
+        if missing_nav_items:
+            errors.append(f"person.jsonld section navigation hasPart missing: {missing_nav_items}")
+        check_content_usage_policy(section_navigation, data, "person.jsonld section navigation")
+        check_global_citation(section_navigation, data, "person.jsonld section navigation")
+        check_ownership_metadata(section_navigation, data, "person.jsonld section navigation")
+        check_structured_data_provenance(section_navigation, data, "person.jsonld section navigation")
+    for position, section in enumerate(pages_section_specs(data), start=1):
+        nav_item_id = pages_section_nav_item_id(section["fragment"])
+        nav_item = node_by_id(person_schema, nav_item_id)
+        label = f"person.jsonld section navigation item {section['fragment']}"
+        if not nav_item or "SiteNavigationElement" not in node_types(nav_item):
+            errors.append(f"person.jsonld missing section navigation item: {nav_item_id}")
+            continue
+        if nav_item.get("name") != section["heading"]:
+            errors.append(f"{label} name drift")
+        if nav_item.get("url") != f"{pages.get('home')}#{section['fragment']}":
+            errors.append(f"{label} url drift")
+        if nav_item.get("about", {}).get("@id") != pages_section_id(section["fragment"]):
+            errors.append(f"{label} about drift")
+        if nav_item.get("isPartOf", {}).get("@id") != pages_section_nav_id:
+            errors.append(f"{label} isPartOf drift")
+        if nav_item.get("position") != position:
+            errors.append(f"{label} position drift")
+        if nav_item.get("inLanguage") != "en":
+            errors.append(f"{label} inLanguage must be en")
+        if nav_item.get("dateModified") != data.get("updated"):
+            errors.append(f"{label} dateModified drift")
+        if nav_item.get("isAccessibleForFree") is not True:
+            errors.append(f"{label} must be isAccessibleForFree")
+        check_ownership_metadata(nav_item, data, label)
     for section in pages_section_specs(data):
         section_id = pages_section_id(section["fragment"])
         section_node = node_by_id(person_schema, section_id)

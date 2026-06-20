@@ -916,6 +916,9 @@
           "@id": "https://iron-mark.github.io/Iron-Mark/#main-content"
         },
         {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+        },
+        {
           "@id": "https://iron-mark.github.io/Iron-Mark/#profile-facts"
         },
         {
@@ -1040,6 +1043,9 @@
       ],
       "hasPart": [
         {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+        },
+        {
           "@id": "https://iron-mark.github.io/Iron-Mark/#profile-facts"
         },
         {
@@ -1059,6 +1065,71 @@
         },
         {
           "@id": "https://iron-mark.github.io/Iron-Mark/#citation"
+        }
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026,
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-06-20",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation",
+      "name": "Mark Siazon profile index section navigation",
+      "url": "https://iron-mark.github.io/Iron-Mark/#section-navigation",
+      "description": "Visible section navigation for the Mark Siazon profile index.",
+      "abstract": "Visible section navigation for the Mark Siazon profile index.",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/proof",
+        "https://www.marksiazon.dev/projects",
+        "https://github.com/Iron-Mark/Iron-Mark",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+      ],
+      "hasPart": [
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-profile-facts"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-featured-work"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-answer-corpus"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-geo-topic-signals"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-knowledge-graph"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-start-here"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#nav-citation"
         }
       ],
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
@@ -1974,6 +2045,29 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-profile-facts",
+      "name": "Profile Facts",
+      "url": "https://iron-mark.github.io/Iron-Mark/#profile-facts",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#profile-facts"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 1,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
+    },
+    {
       "@type": "WebPageElement",
       "@id": "https://iron-mark.github.io/Iron-Mark/#featured-work",
       "name": "Mark Siazon featured work",
@@ -2049,6 +2143,29 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-featured-work",
+      "name": "Featured Work",
+      "url": "https://iron-mark.github.io/Iron-Mark/#featured-work",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#featured-work"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 2,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
+    },
+    {
       "@type": "WebPageElement",
       "@id": "https://iron-mark.github.io/Iron-Mark/#answer-corpus",
       "name": "Mark Siazon answer corpus",
@@ -2095,6 +2212,29 @@
       },
       "sdDatePublished": "2026-06-20",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-answer-corpus",
+      "name": "Answer Corpus",
+      "url": "https://iron-mark.github.io/Iron-Mark/#answer-corpus",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#answer-corpus"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 3,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
     },
     {
       "@type": "WebPageElement",
@@ -2208,6 +2348,29 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-geo-topic-signals",
+      "name": "Geo And Topic Signals",
+      "url": "https://iron-mark.github.io/Iron-Mark/#geo-topic-signals",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#geo-topic-signals"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 4,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
+    },
+    {
       "@type": "WebPageElement",
       "@id": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph",
       "name": "Mark Siazon knowledge graph",
@@ -2319,6 +2482,29 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-knowledge-graph",
+      "name": "Knowledge Graph",
+      "url": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 5,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
+    },
+    {
       "@type": "WebPageElement",
       "@id": "https://iron-mark.github.io/Iron-Mark/#start-here",
       "name": "Mark Siazon machine-readable starting points",
@@ -2397,6 +2583,29 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-start-here",
+      "name": "Start Here",
+      "url": "https://iron-mark.github.io/Iron-Mark/#start-here",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#start-here"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 6,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
+    },
+    {
       "@type": "WebPageElement",
       "@id": "https://iron-mark.github.io/Iron-Mark/#citation",
       "name": "Mark Siazon citation guidance",
@@ -2449,6 +2658,29 @@
       },
       "sdDatePublished": "2026-06-20",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#nav-citation",
+      "name": "Citation",
+      "url": "https://iron-mark.github.io/Iron-Mark/#citation",
+      "about": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#citation"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#section-navigation"
+      },
+      "position": 7,
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026
     },
     {
       "@type": "DefinedTerm",

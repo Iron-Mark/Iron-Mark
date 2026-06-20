@@ -5,9 +5,14 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from html import escape
 from pathlib import Path
 from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(SCRIPT_DIR))
+from generate_schema import pages_section_specs
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -120,6 +125,16 @@ def render_identity_links(urls: list[str]) -> str:
     return "\n".join(links)
 
 
+def render_section_navigation(sections: list[dict[str, str]]) -> str:
+    links: list[str] = []
+    for section in sections:
+        links.append(
+            f'<a href="#{escape(section["fragment"], quote=True)}">'
+            f'{escape(section["heading"])}</a>'
+        )
+    return "\n      ".join(links)
+
+
 def pages_local_schema(value: Any) -> Any:
     """Rewrite public source-file identifiers to the deployed Pages mirror."""
     if isinstance(value, dict):
@@ -172,6 +187,7 @@ def main() -> None:
     triples = render_triples(data.get("triples", []))
     citation_links = render_citation_links(aeo.get("preferredCitationOrder", []))
     identity_links = render_identity_links(entity.get("sameAs", []))
+    section_navigation = render_section_navigation(pages_section_specs(data))
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -250,6 +266,7 @@ def main() -> None:
     .meta {{ color: #64748b; }}
     .breadcrumb {{ margin: 0 0 20px; font-size: 0.95rem; color: #64748b; }}
     .breadcrumb a {{ color: inherit; }}
+    .section-nav {{ display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 20px 0 28px; font-size: 0.95rem; }}
     .facts {{ display: grid; gap: 10px; padding-left: 0; list-style: none; }}
     .facts li {{ margin: 0; }}
   </style>
@@ -262,6 +279,9 @@ def main() -> None:
     <h1>{SITE_NAME}</h1>
     <p id="profile-summary">{escape(entity.get("description", description))}</p>
     <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
+    <nav id="section-navigation" class="section-nav" aria-label="Profile index sections">
+      {section_navigation}
+    </nav>
     <h2 id="profile-facts">Profile Facts</h2>
     <ul class="facts">
       <li><strong>Name:</strong> {escape(entity.get("name", "Mark Siazon"))} ({csv(entity.get("alternateName", []))})</li>
