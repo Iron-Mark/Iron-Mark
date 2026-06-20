@@ -17,9 +17,11 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
+    DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     dataset_alternate_names,
     dataset_measurement_techniques,
+    dataset_temporal_coverage,
     download_description,
     download_id,
     download_integrity_metadata,
@@ -1335,6 +1337,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset version drift")
         if dataset.get("alternateName") != dataset_alternate_names(index_data):
             issues.append("Pages index inline Dataset alternateName drift")
+        if dataset.get("datePublished") != DATASET_DATE_PUBLISHED:
+            issues.append("Pages index inline Dataset datePublished drift")
         identifiers = dataset.get("identifier", [])
         if isinstance(identifiers, dict):
             identifiers = [identifiers]
@@ -1347,6 +1351,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         area_served = availability.get("areaServed", []) if isinstance(availability, dict) else []
         if dataset.get("spatialCoverage") != area_served:
             issues.append("Pages index inline Dataset spatialCoverage drift")
+        if dataset.get("temporalCoverage") != dataset_temporal_coverage(index_data):
+            issues.append("Pages index inline Dataset temporalCoverage drift")
         if dataset.get("measurementTechnique") != dataset_measurement_techniques():
             issues.append("Pages index inline Dataset measurementTechnique drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):

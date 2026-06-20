@@ -37,6 +37,7 @@ IMAGE_WIDTH = 1200
 IMAGE_HEIGHT = 675
 PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
 PROVIDE_SERVICE_BUSINESS_FUNCTION = "http://purl.org/goodrelations/v1#ProvideService"
+DATASET_DATE_PUBLISHED = "2026-06-13"
 PROJECT_IMAGE_EXTENSIONS = (
     (".webp", "image/webp"),
     (".png", "image/png"),
@@ -345,6 +346,10 @@ def dataset_measurement_techniques() -> list[str]:
         "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
         "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output.",
     ]
+
+
+def dataset_temporal_coverage(data: dict[str, Any]) -> str:
+    return f"{DATASET_DATE_PUBLISHED}/{data['updated']}"
 
 
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
@@ -1276,11 +1281,13 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "creator": ref(person_id),
             "publisher": ref(person_id),
             "inLanguage": "en",
+            "datePublished": DATASET_DATE_PUBLISHED,
             "dateModified": updated,
             "license": data.get("license"),
             "keywords": keywords,
             "citation": citations,
             "spatialCoverage": area_served,
+            "temporalCoverage": dataset_temporal_coverage(data),
             "measurementTechnique": dataset_measurement_techniques(),
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),

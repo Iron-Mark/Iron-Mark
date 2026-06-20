@@ -1607,6 +1607,7 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "inLanguage": "en",
+      "datePublished": "2026-06-13",
       "dateModified": "2026-06-21",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "keywords": [
@@ -1640,6 +1641,7 @@
         "Southeast Asia",
         "remote global"
       ],
+      "temporalCoverage": "2026-06-13/2026-06-21",
       "measurementTechnique": [
         "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
         "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output."
@@ -4737,8 +4739,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "1133 bytes",
-      "sha256": "6cb0a095880806d7945482810c4819b620fe9bdcc8e4bbcb194e8f3f88d224a3",
+      "contentSize": "1129 bytes",
+      "sha256": "506545fefcc583a2a0aaf1f123c5c98d795da175ba0fb5e0c73099c19c72397a",
       "inLanguage": "en",
       "dateModified": "2026-06-21",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",

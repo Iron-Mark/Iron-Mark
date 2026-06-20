@@ -24,9 +24,11 @@ from build_pages_mirror import (
     project_cover_asset,
 )
 from generate_schema import (
+    DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     dataset_alternate_names,
     dataset_measurement_techniques,
+    dataset_temporal_coverage,
     download_description,
     download_integrity_metadata,
     featured_projects_list_description,
@@ -1874,6 +1876,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset version must match updated date")
         if dataset.get("alternateName") != dataset_alternate_names(data):
             errors.append("person.jsonld Dataset alternateName drift")
+        if dataset.get("datePublished") != DATASET_DATE_PUBLISHED:
+            errors.append("person.jsonld Dataset datePublished drift")
         identifiers = dataset.get("identifier", [])
         if isinstance(identifiers, dict):
             identifiers = [identifiers]
@@ -1888,6 +1892,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset catalog membership drift")
         if dataset.get("spatialCoverage") != data.get("availability", {}).get("areaServed", []):
             errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
+        if dataset.get("temporalCoverage") != dataset_temporal_coverage(data):
+            errors.append("person.jsonld Dataset temporalCoverage drift")
         if dataset.get("measurementTechnique") != dataset_measurement_techniques():
             errors.append("person.jsonld Dataset measurementTechnique drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
