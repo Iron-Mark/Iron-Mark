@@ -41,6 +41,7 @@ ROBOTS = ROOT / "robots.txt"
 DOCS_INDEX = ROOT / "docs" / "index.html"
 LLMS_CTX = PUBLIC / "llms-ctx-full.txt"
 FAVICON = ROOT / "assets" / "brand" / "mark-siazon-favicon.svg"
+SOCIAL_IMAGE_ASSET = ROOT / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
 
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
@@ -48,10 +49,10 @@ PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
-PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
+PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
-SOCIAL_IMAGE_WIDTH = 400
-SOCIAL_IMAGE_HEIGHT = 225
+SOCIAL_IMAGE_WIDTH = 1200
+SOCIAL_IMAGE_HEIGHT = 675
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 ABSTRACT_REQUIRED_TYPES = {
@@ -691,6 +692,17 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
     check_structured_data_provenance(node, data, label)
 
 
+def png_dimensions(path: Path) -> tuple[int, int] | None:
+    if not path.exists():
+        errors.append(f"Missing PNG image asset: {path.relative_to(ROOT)}")
+        return None
+    data = path.read_bytes()
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        errors.append(f"Image asset must be PNG: {path.relative_to(ROOT)}")
+        return None
+    return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+
+
 def check_content_usage_policy(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
     repo = data.get("machineReadable", {}).get("repo", {})
     if node.get("usageInfo") != repo.get("howToCiteMd"):
@@ -935,7 +947,7 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     expected_image_tags = {
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
-        '<meta property="og:image:type" content="image/webp"/>',
+        '<meta property="og:image:type" content="image/png"/>',
         f'<meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>',
         f'<meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>',
         f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
@@ -945,6 +957,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     for tag in expected_image_tags:
         if tag not in html:
             errors.append(f"docs/index.html missing social image metadata: {tag}")
+    if png_dimensions(SOCIAL_IMAGE_ASSET) != (SOCIAL_IMAGE_WIDTH, SOCIAL_IMAGE_HEIGHT):
+        errors.append("primary social image asset dimensions must match metadata")
     if '<link rel="author" href="humans.txt"/>' not in html:
         errors.append("docs/index.html missing author link to humans.txt")
     for same_as in data.get("entity", {}).get("sameAs", []):
@@ -1676,8 +1690,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ImageObject url drift")
         if image.get("contentUrl") != PAGES_SOCIAL_IMAGE:
             errors.append("person.jsonld ImageObject contentUrl drift")
-        if image.get("encodingFormat") != "image/webp":
-            errors.append("person.jsonld ImageObject encodingFormat must be image/webp")
+        if image.get("encodingFormat") != "image/png":
+            errors.append("person.jsonld ImageObject encodingFormat must be image/png")
         if image.get("width") != SOCIAL_IMAGE_WIDTH:
             errors.append("person.jsonld ImageObject width drift")
         if image.get("height") != SOCIAL_IMAGE_HEIGHT:

@@ -511,7 +511,7 @@
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png",
       "spatialCoverage": [
         "Philippines",
         "Southeast Asia",
@@ -774,7 +774,7 @@
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png",
       "spatialCoverage": [
         "Philippines",
         "Southeast Asia",
@@ -1196,11 +1196,11 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image",
       "name": "Mark Siazon product design and full-stack development profile banner",
       "caption": "Mark Siazon product design and full-stack development profile banner",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
-      "encodingFormat": "image/webp",
-      "width": 400,
-      "height": 225,
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png",
+      "encodingFormat": "image/png",
+      "width": 1200,
+      "height": 675,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",

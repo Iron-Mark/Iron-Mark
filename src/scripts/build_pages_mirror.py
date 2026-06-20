@@ -16,7 +16,7 @@ INDEX = ROOT / "llms-index.json"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
-PAGES_PRIMARY_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
+PAGES_PRIMARY_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
 PROJECT_COVER_EXTENSIONS = (".webp", ".png", ".svg")
 
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".jsonld", ".cff"}

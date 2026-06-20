@@ -37,10 +37,10 @@ GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES_HOST = "iron-mark.github.io"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
-PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
+PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
-SOCIAL_IMAGE_WIDTH = 400
-SOCIAL_IMAGE_HEIGHT = 225
+SOCIAL_IMAGE_WIDTH = 1200
+SOCIAL_IMAGE_HEIGHT = 675
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
@@ -556,6 +556,17 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
     check_structured_data_provenance(issues, node, index_data, label)
 
 
+def png_dimensions(path: Path, issues: list[str]) -> tuple[int, int] | None:
+    if not path.exists():
+        issues.append(f"Pages artifact missing PNG image asset: {path}")
+        return None
+    data = path.read_bytes()
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        issues.append(f"Pages image asset must be PNG: {path}")
+        return None
+    return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+
+
 def check_content_usage_policy(issues: list[str], node: dict[str, object], label: str) -> None:
     if node.get("usageInfo") != f"{PAGES_BASE}/HOW-TO-CITE.md":
         issues.append(f"{label} usageInfo drift")
@@ -745,6 +756,18 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not primary_image or "ImageObject" not in node_type_set(primary_image):
         issues.append("Pages index inline JSON-LD missing primary ImageObject node")
     else:
+        if primary_image.get("url") != PAGES_SOCIAL_IMAGE:
+            issues.append("Pages index primary ImageObject url drift")
+        if primary_image.get("contentUrl") != PAGES_SOCIAL_IMAGE:
+            issues.append("Pages index primary ImageObject contentUrl drift")
+        if primary_image.get("encodingFormat") != "image/png":
+            issues.append("Pages index primary ImageObject encodingFormat must be image/png")
+        if primary_image.get("width") != SOCIAL_IMAGE_WIDTH:
+            issues.append("Pages index primary ImageObject width drift")
+        if primary_image.get("height") != SOCIAL_IMAGE_HEIGHT:
+            issues.append("Pages index primary ImageObject height drift")
+        if primary_image.get("caption") != SOCIAL_IMAGE_ALT:
+            issues.append("Pages index primary ImageObject caption drift")
         check_image_rights(issues, primary_image, index_data, "Pages index primary ImageObject")
     if '"@type": "ContactAction"' not in index_text:
         issues.append("Pages index inline JSON-LD missing hiring ContactAction")
@@ -771,7 +794,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     expected_image_tags = {
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
-        '<meta property="og:image:type" content="image/webp"/>',
+        '<meta property="og:image:type" content="image/png"/>',
         f'<meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>',
         f'<meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>',
         f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
@@ -781,6 +804,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in expected_image_tags:
         if tag not in index_text:
             issues.append(f"Pages index missing social image metadata: {tag}")
+    social_image_path = artifact / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
+    if png_dimensions(social_image_path, issues) != (SOCIAL_IMAGE_WIDTH, SOCIAL_IMAGE_HEIGHT):
+        issues.append("Pages primary social image dimensions must match metadata")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
         issues.append("Pages index missing Open Graph locale metadata")
     updated = str(index_data.get("updated", ""))

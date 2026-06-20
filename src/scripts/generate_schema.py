@@ -17,10 +17,10 @@ GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = ["Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"]
-PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
+PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
-IMAGE_WIDTH = 400
-IMAGE_HEIGHT = 225
+IMAGE_WIDTH = 1200
+IMAGE_HEIGHT = 675
 PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
 PROJECT_IMAGE_EXTENSIONS = (
     (".webp", "image/webp"),
@@ -1019,7 +1019,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "caption": IMAGE_ALT,
             "url": PAGES_IMAGE,
             "contentUrl": PAGES_IMAGE,
-            "encodingFormat": "image/webp",
+            "encodingFormat": "image/png",
             "width": IMAGE_WIDTH,
             "height": IMAGE_HEIGHT,
             "inLanguage": "en",
