@@ -87,6 +87,20 @@ def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
     return None
 
 
+def primary_image_description() -> str:
+    return IMAGE_ALT
+
+
+def project_image_description(project: dict[str, Any]) -> str:
+    name = str(project.get("name", "")).strip()
+    focus = str(project.get("focus", "")).strip()
+    if name and focus:
+        return f"{name} project cover image for {focus}."
+    if name:
+        return f"{name} project cover image."
+    return "Project cover image."
+
+
 def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     pages = data["machineReadable"]["pages"]
@@ -1035,6 +1049,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": pages_image_id,
             "name": IMAGE_ALT,
             "caption": IMAGE_ALT,
+            "description": primary_image_description(),
+            "abstract": primary_image_description(),
             "url": PAGES_IMAGE,
             "contentUrl": PAGES_IMAGE,
             "encodingFormat": "image/png",
@@ -1357,6 +1373,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "@id": image["@id"],
                     "name": f"{project['name']} project cover image",
                     "caption": f"{project['name']} project cover image",
+                    "description": project_image_description(project),
+                    "abstract": project_image_description(project),
                     "url": image["url"],
                     "contentUrl": image["url"],
                     "encodingFormat": image["encodingFormat"],

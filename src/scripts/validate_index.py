@@ -30,6 +30,8 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    primary_image_description,
+    project_image_description,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -1712,6 +1714,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ImageObject height drift")
         if image.get("caption") != SOCIAL_IMAGE_ALT:
             errors.append("person.jsonld ImageObject caption drift")
+        if image.get("description") != primary_image_description():
+            errors.append("person.jsonld ImageObject description drift")
+        if image.get("abstract") != image.get("description"):
+            errors.append("person.jsonld ImageObject abstract drift")
         for key, expected in file_integrity_metadata(SOCIAL_IMAGE_ASSET).items():
             if image.get(key) != expected:
                 errors.append(f"person.jsonld ImageObject {key} drift")
@@ -2035,6 +2041,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             errors.append(f"person.jsonld featured project image encodingFormat drift: {project.get('name')}")
+        if image_node.get("description") != project_image_description(project):
+            errors.append(f"person.jsonld featured project image description drift: {project.get('name')}")
+        if image_node.get("abstract") != image_node.get("description"):
+            errors.append(f"person.jsonld featured project image abstract drift: {project.get('name')}")
         for key in ("contentSize", "sha256"):
             if image_node.get(key) != expected_image[key]:
                 errors.append(f"person.jsonld featured project image {key} drift: {project.get('name')}")

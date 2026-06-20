@@ -27,6 +27,8 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    primary_image_description,
+    project_image_description,
     slugify,
     unique_compact,
 )
@@ -783,6 +785,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index primary ImageObject height drift")
         if primary_image.get("caption") != SOCIAL_IMAGE_ALT:
             issues.append("Pages index primary ImageObject caption drift")
+        if primary_image.get("description") != primary_image_description():
+            issues.append("Pages index primary ImageObject description drift")
+        if primary_image.get("abstract") != primary_image.get("description"):
+            issues.append("Pages index primary ImageObject abstract drift")
         if social_image_path.exists():
             for key, expected in file_integrity_metadata(social_image_path).items():
                 if primary_image.get(key) != expected:
@@ -1298,6 +1304,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             issues.append(f"Pages index featured project image encodingFormat drift: {project.get('name')}")
+        if image_node.get("description") != project_image_description(project):
+            issues.append(f"Pages index featured project image description drift: {project.get('name')}")
+        if image_node.get("abstract") != image_node.get("description"):
+            issues.append(f"Pages index featured project image abstract drift: {project.get('name')}")
         for key in ("contentSize", "sha256"):
             if image_node.get(key) != expected_image[key]:
                 issues.append(f"Pages index featured project image {key} drift: {project.get('name')}")
