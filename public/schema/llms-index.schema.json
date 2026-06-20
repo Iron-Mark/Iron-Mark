@@ -75,6 +75,7 @@
         },
         "alternateName": {
           "type": "array",
+          "uniqueItems": true,
           "items": {
             "type": "string"
           }
@@ -82,6 +83,7 @@
         "jobTitle": {
           "type": "array",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string"
           }
@@ -101,6 +103,7 @@
         "sameAs": {
           "type": "array",
           "minItems": 3,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "format": "uri"
@@ -224,6 +227,7 @@
         "focus": {
           "type": "array",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 2
@@ -232,6 +236,7 @@
         "engagement": {
           "type": "array",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 2
@@ -244,6 +249,7 @@
         "areaServed": {
           "type": "array",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 2
@@ -554,6 +560,7 @@
     "featuredProjects": {
       "type": "array",
       "minItems": 9,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -598,6 +605,7 @@
     "hackathonLab": {
       "type": "array",
       "minItems": 1,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -640,6 +648,7 @@
     "achievements": {
       "type": "array",
       "minItems": 3,
+      "uniqueItems": true,
       "items": {
         "type": "object",
         "required": [
@@ -671,6 +680,7 @@
     "coreStack": {
       "type": "array",
       "minItems": 10,
+      "uniqueItems": true,
       "items": {
         "type": "string"
       }
@@ -693,6 +703,7 @@
         "domains": {
           "type": "array",
           "minItems": 5,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 1
@@ -714,6 +725,7 @@
         "primaryKeywords": {
           "type": "array",
           "minItems": 10,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 2
@@ -722,6 +734,7 @@
         "geoTargets": {
           "type": "array",
           "minItems": 3,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "minLength": 2
@@ -749,6 +762,7 @@
             "schemaGraphs": {
               "type": "array",
               "minItems": 2,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "format": "uri"
@@ -757,6 +771,7 @@
             "sitemaps": {
               "type": "array",
               "minItems": 2,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "format": "uri"
@@ -765,6 +780,7 @@
             "robots": {
               "type": "array",
               "minItems": 2,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "format": "uri"
@@ -792,6 +808,7 @@
             "serviceRegions": {
               "type": "array",
               "minItems": 3,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "minLength": 2
@@ -800,6 +817,7 @@
             "searchModifiers": {
               "type": "array",
               "minItems": 3,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "minLength": 5
@@ -828,6 +846,7 @@
             "answerSources": {
               "type": "array",
               "minItems": 5,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "format": "uri"
@@ -836,6 +855,7 @@
             "agentReadySurfaces": {
               "type": "array",
               "minItems": 5,
+              "uniqueItems": true,
               "items": {
                 "type": "string",
                 "minLength": 1
@@ -857,6 +877,7 @@
         "preferredCitationOrder": {
           "type": "array",
           "minItems": 1,
+          "uniqueItems": true,
           "items": {
             "type": "string",
             "format": "uri"
@@ -865,6 +886,7 @@
         "answerSnippets": {
           "type": "array",
           "minItems": 15,
+          "uniqueItems": true,
           "items": {
             "type": "object",
             "required": [
@@ -884,6 +906,7 @@
               "sources": {
                 "type": "array",
                 "minItems": 1,
+                "uniqueItems": true,
                 "items": {
                   "type": "string",
                   "format": "uri"
@@ -899,6 +922,7 @@
     "triples": {
       "type": "array",
       "minItems": 20,
+      "uniqueItems": true,
       "items": {
         "type": "array",
         "minItems": 3,

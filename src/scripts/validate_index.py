@@ -692,6 +692,16 @@ def validate_contract_subset(value: Any, schema: dict[str, Any], path: str) -> N
         max_items = schema.get("maxItems")
         if isinstance(max_items, int) and len(value) > max_items:
             errors.append(f"{path} must contain at most {max_items} items")
+        if schema.get("uniqueItems") is True:
+            seen: set[str] = set()
+            duplicates: list[str] = []
+            for item in value:
+                key = json.dumps(item, sort_keys=True, ensure_ascii=False)
+                if key in seen:
+                    duplicates.append(key)
+                seen.add(key)
+            if duplicates:
+                errors.append(f"{path} must contain unique items; duplicate(s): {duplicates}")
         item_schema = schema.get("items")
         if isinstance(item_schema, dict):
             for index, item in enumerate(value):
@@ -1228,6 +1238,11 @@ def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
     if len(snippets) < 15:
         warnings.append(f"Only {len(snippets)} answerSnippets (recommend 15+)")
     snippet_questions = [item.get("question", "") for item in snippets]
+    duplicate_questions = sorted(
+        {question for question in snippet_questions if question and snippet_questions.count(question) > 1}
+    )
+    if duplicate_questions:
+        errors.append(f"AEO snippets contain duplicate question(s): {duplicate_questions}")
     missing_from_faq = sorted(q for q in snippet_questions if q and q not in questions)
     if missing_from_faq:
         errors.append(f"AEO snippets missing visible FAQ question(s): {missing_from_faq}")
@@ -1645,6 +1660,47 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         property_schema = schema_object_schema.get("properties", {}).get(key, {})
         if property_schema.get("type") != "string" or property_schema.get("pattern") != r"^src/scripts/[a-z0-9_]+\.py$":
             errors.append(f"llms-index.schema.json schema.{key} must be a src/scripts Python path")
+
+    def schema_property(*keys: str) -> dict[str, Any]:
+        node = properties_schema.get(keys[0], {}) if keys else {}
+        for key in keys[1:]:
+            node = node.get("properties", {}).get(key, {})
+        return node if isinstance(node, dict) else {}
+
+    unique_array_contracts = {
+        "entity.alternateName": schema_property("entity", "alternateName"),
+        "entity.jobTitle": schema_property("entity", "jobTitle"),
+        "entity.sameAs": schema_property("entity", "sameAs"),
+        "availability.focus": schema_property("availability", "focus"),
+        "availability.engagement": schema_property("availability", "engagement"),
+        "availability.areaServed": schema_property("availability", "areaServed"),
+        "featuredProjects": properties_schema.get("featuredProjects", {}),
+        "hackathonLab": properties_schema.get("hackathonLab", {}),
+        "achievements": properties_schema.get("achievements", {}),
+        "coreStack": properties_schema.get("coreStack", {}),
+        "stackReference.domains": schema_property("stackReference", "domains"),
+        "seo.primaryKeywords": schema_property("seo", "primaryKeywords"),
+        "seo.geoTargets": schema_property("seo", "geoTargets"),
+        "seo.technicalSignals.schemaGraphs": schema_property("seo", "technicalSignals", "schemaGraphs"),
+        "seo.technicalSignals.sitemaps": schema_property("seo", "technicalSignals", "sitemaps"),
+        "seo.technicalSignals.robots": schema_property("seo", "technicalSignals", "robots"),
+        "seo.geoSignals.serviceRegions": schema_property("seo", "geoSignals", "serviceRegions"),
+        "seo.geoSignals.searchModifiers": schema_property("seo", "geoSignals", "searchModifiers"),
+        "seo.generativeSearch.answerSources": schema_property("seo", "generativeSearch", "answerSources"),
+        "seo.generativeSearch.agentReadySurfaces": schema_property("seo", "generativeSearch", "agentReadySurfaces"),
+        "aeo.preferredCitationOrder": schema_property("aeo", "preferredCitationOrder"),
+        "aeo.answerSnippets": schema_property("aeo", "answerSnippets"),
+        "aeo.answerSnippets.sources": (
+            schema_property("aeo", "answerSnippets")
+            .get("items", {})
+            .get("properties", {})
+            .get("sources", {})
+        ),
+        "triples": properties_schema.get("triples", {}),
+    }
+    for label, array_schema in unique_array_contracts.items():
+        if array_schema.get("type") != "array" or array_schema.get("uniqueItems") is not True:
+            errors.append(f"llms-index.schema.json {label} must require uniqueItems")
 
     seo_schema = properties_schema.get("seo", {})
     seo_expected_properties = {"primaryKeywords", "geoTargets", "technicalSignals", "geoSignals", "generativeSearch"}
