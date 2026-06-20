@@ -2182,10 +2182,16 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not offer or "Offer" not in node_types(offer):
                 errors.append(f"person.jsonld missing Offer node: {offer_id}")
             else:
+                if offer.get("name") != f"{focus} availability":
+                    errors.append(f"person.jsonld Offer name drift for: {focus}")
+                if offer.get("category") != focus:
+                    errors.append(f"person.jsonld Offer category drift for: {focus}")
                 if offer.get("identifier") != service_focus_identifier(focus, "offer"):
                     errors.append(f"person.jsonld Offer identifier drift for: {focus}")
                 if offer.get("description") != offer_description(data, focus):
                     errors.append(f"person.jsonld Offer description drift for: {focus}")
+                if offer.get("url") != availability.get("recruiterBrief"):
+                    errors.append(f"person.jsonld Offer url drift for: {focus}")
                 if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                     errors.append(f"person.jsonld Offer mainEntityOfPage drift for: {focus}")
                 if offer.get("availability") != offer_availability(data):
@@ -2194,6 +2200,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
                 if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
                     errors.append(f"person.jsonld Offer businessFunction drift for: {focus}")
+                if offer.get("offeredBy", {}).get("@id") != person_id:
+                    errors.append(f"person.jsonld Offer offeredBy drift for: {focus}")
                 if offer.get("seller", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Offer seller drift for: {focus}")
                 missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))
@@ -2208,10 +2216,16 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not service or "Service" not in node_types(service):
                 errors.append(f"person.jsonld missing Service node: {service_id}")
             else:
+                if service.get("name") != focus:
+                    errors.append(f"person.jsonld Service name drift for: {focus}")
+                if service.get("serviceType") != focus:
+                    errors.append(f"person.jsonld Service serviceType drift for: {focus}")
                 if service.get("identifier") != service_focus_identifier(focus, "service"):
                     errors.append(f"person.jsonld Service identifier drift for: {focus}")
                 if service.get("description") != service_description(data, focus):
                     errors.append(f"person.jsonld Service description drift for: {focus}")
+                if service.get("url") != availability.get("recruiterBrief"):
+                    errors.append(f"person.jsonld Service url drift for: {focus}")
                 if service.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                     errors.append(f"person.jsonld Service mainEntityOfPage drift for: {focus}")
                 if service.get("provider", {}).get("@id") != person_id:

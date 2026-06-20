@@ -1372,6 +1372,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index ServiceChannel about drift")
         if service_channel.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index ServiceChannel dateModified drift")
+    area_served = set(availability.get("areaServed", []))
     for focus in focus_items:
         offer_id = f"https://www.marksiazon.dev/#offer-{slugify(str(focus))}"
         service_id = f"https://www.marksiazon.dev/#service-{slugify(str(focus))}"
@@ -1379,10 +1380,16 @@ def validate_artifact(artifact: Path) -> list[str]:
         if not offer or "Offer" not in node_type_set(offer):
             issues.append(f"Pages index missing Offer node: {offer_id}")
         else:
+            if offer.get("name") != f"{focus} availability":
+                issues.append(f"Pages index Offer name drift: {focus}")
+            if offer.get("category") != str(focus):
+                issues.append(f"Pages index Offer category drift: {focus}")
             if offer.get("identifier") != service_focus_identifier(str(focus), "offer"):
                 issues.append(f"Pages index Offer identifier drift: {focus}")
             if offer.get("description") != offer_description(index_data, str(focus)):
                 issues.append(f"Pages index Offer description drift: {focus}")
+            if offer.get("url") != availability.get("recruiterBrief"):
+                issues.append(f"Pages index Offer url drift: {focus}")
             if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                 issues.append(f"Pages index Offer mainEntityOfPage drift: {focus}")
             if offer.get("availability") != offer_availability(index_data):
@@ -1391,9 +1398,13 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
             if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
                 issues.append(f"Pages index Offer businessFunction drift: {focus}")
+            if offer.get("offeredBy", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Offer offeredBy drift: {focus}")
             if offer.get("seller", {}).get("@id") != "https://www.marksiazon.dev/#person":
                 issues.append(f"Pages index Offer seller drift: {focus}")
-            area_served = set(availability.get("areaServed", []))
+            missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))
+            if missing_offer_area:
+                issues.append(f"Pages index Offer areaServed missing for {focus}: {missing_offer_area}")
             missing_eligible_region = sorted(area_served - area_names(offer.get("eligibleRegion")))
             if missing_eligible_region:
                 issues.append(f"Pages index Offer eligibleRegion missing for {focus}: {missing_eligible_region}")
@@ -1401,12 +1412,20 @@ def validate_artifact(artifact: Path) -> list[str]:
         if not service or "Service" not in node_type_set(service):
             issues.append(f"Pages index missing Service node: {service_id}")
         else:
+            if service.get("name") != str(focus):
+                issues.append(f"Pages index Service name drift: {focus}")
+            if service.get("serviceType") != str(focus):
+                issues.append(f"Pages index Service serviceType drift: {focus}")
             if service.get("identifier") != service_focus_identifier(str(focus), "service"):
                 issues.append(f"Pages index Service identifier drift: {focus}")
             if service.get("description") != service_description(index_data, str(focus)):
                 issues.append(f"Pages index Service description drift: {focus}")
+            if service.get("url") != availability.get("recruiterBrief"):
+                issues.append(f"Pages index Service url drift: {focus}")
             if service.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                 issues.append(f"Pages index Service mainEntityOfPage drift: {focus}")
+            if service.get("provider", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Service provider drift: {focus}")
             if service.get("offers", {}).get("@id") != offer_id:
                 issues.append(f"Pages index Service offers drift: {focus}")
             if service.get("availableChannel", {}).get("@id") != service_channel_id:
@@ -1417,6 +1436,9 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Service audience drift: {focus}")
             if service.get("serviceAudience") != service_audience():
                 issues.append(f"Pages index Service serviceAudience drift: {focus}")
+            missing_service_area = sorted(area_served - area_names(service.get("areaServed")))
+            if missing_service_area:
+                issues.append(f"Pages index Service areaServed missing for {focus}: {missing_service_area}")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
