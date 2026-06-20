@@ -473,6 +473,15 @@ def person_hiring_contact(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def person_main_entity_pages(data: dict[str, Any]) -> list[dict[str, str]]:
+    ids = data["identifiers"]
+    return [
+        ref(ids["githubProfilePage"]),
+        ref(ids["portfolioWebsite"]),
+        ref(f"{PAGES}/#webpage"),
+    ]
+
+
 def person_subjects(data: dict[str, Any]) -> list[dict[str, str]]:
     schema = data["schema"]
     return [
@@ -1110,7 +1119,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "makesOffer": [ref(offer_id) for offer_id in offer_ids],
             "hasOccupation": person_occupations(data),
             "workLocation": person_work_locations(data),
-            "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id), ref(pages_page_id)],
+            "mainEntityOfPage": person_main_entity_pages(data),
             "potentialAction": ref(contact_action_id),
             "subjectOf": person_subjects(data),
         },

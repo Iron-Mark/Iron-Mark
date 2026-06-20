@@ -51,6 +51,7 @@ from generate_schema import (
     person_core_identity,
     person_email,
     person_hiring_contact,
+    person_main_entity_pages,
     person_occupations,
     person_subjects,
     person_work_locations,
@@ -1289,8 +1290,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     person = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#person"), None)
     if not person or "Person" not in node_type_set(person):
         issues.append("Pages index inline JSON-LD missing Person node")
-    elif f"{PAGES_BASE}/#webpage" not in ref_ids(person.get("mainEntityOfPage")):
-        issues.append("Pages index inline JSON-LD Person mainEntityOfPage missing Pages CollectionPage")
+    elif ref_ids(person.get("mainEntityOfPage")) != ref_ids(person_main_entity_pages(index_data)):
+        issues.append("Pages index inline JSON-LD Person mainEntityOfPage identity references drift")
     person_nodes = [
         node
         for node in parsed_jsonld_nodes
