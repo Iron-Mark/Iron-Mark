@@ -60,7 +60,10 @@ def lab_project_id(project: dict[str, Any]) -> str:
 
 
 def file_integrity_metadata(path: Path) -> dict[str, str]:
-    data = path.read_bytes()
+    if path.suffix.lower() == ".svg":
+        data = path.read_text(encoding="utf-8").replace("\r\n", "\n").encode("utf-8")
+    else:
+        data = path.read_bytes()
     return {
         "contentSize": f"{len(data)} bytes",
         "sha256": hashlib.sha256(data).hexdigest(),
