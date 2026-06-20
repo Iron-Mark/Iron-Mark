@@ -403,7 +403,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "GitHub Profile Index",
+                    "name": PAGES_SITE_NAME,
                     "item": pages["home"],
                 },
             ],

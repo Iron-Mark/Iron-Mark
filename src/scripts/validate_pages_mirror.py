@@ -250,6 +250,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in expected_site_name_tags:
         if tag not in index_text:
             issues.append(f"Pages index site-name signal drift: {tag}")
+    if 'aria-label="Breadcrumb"' not in index_text:
+        issues.append("Pages index missing visible breadcrumb navigation")
+    if f'<a href="https://www.marksiazon.dev">Mark Siazon Portfolio</a> / <span>{PAGES_SITE_NAME}</span>' not in index_text:
+        issues.append("Pages index visible breadcrumb must match BreadcrumbList")
     if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in index_text:
         issues.append("Pages index missing SVG favicon link")
     favicon = artifact / FAVICON_HREF
@@ -278,6 +282,18 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
             issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
+    breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
+    if not breadcrumb or "BreadcrumbList" not in node_type_set(breadcrumb):
+        issues.append("Pages index inline JSON-LD missing BreadcrumbList")
+    else:
+        items = breadcrumb.get("itemListElement", [])
+        if not isinstance(items, list) or len(items) < 2:
+            issues.append("Pages index inline BreadcrumbList must contain portfolio and Pages items")
+        else:
+            if items[0].get("name") != "Mark Siazon Portfolio" or items[0].get("item") != "https://www.marksiazon.dev":
+                issues.append("Pages index inline BreadcrumbList portfolio item drift")
+            if items[1].get("name") != PAGES_SITE_NAME or items[1].get("item") != f"{PAGES_BASE}/":
+                issues.append("Pages index inline BreadcrumbList Pages item drift")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:

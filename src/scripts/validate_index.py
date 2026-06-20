@@ -454,6 +454,10 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     for tag in expected_site_name_tags:
         if tag not in html:
             errors.append(f"docs/index.html site-name signal drift: {tag}")
+    if 'aria-label="Breadcrumb"' not in html:
+        errors.append("docs/index.html missing visible breadcrumb navigation")
+    if f'<a href="{data.get("canonical", {}).get("portfolio")}">Mark Siazon Portfolio</a> / <span>{PAGES_SITE_NAME}</span>' not in html:
+        errors.append("docs/index.html visible breadcrumb must match BreadcrumbList")
     if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in html:
         errors.append("docs/index.html missing SVG favicon link")
     favicon = FAVICON.read_text(encoding="utf-8") if FAVICON.exists() else ""
@@ -1067,8 +1071,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         else:
             if items[0].get("item") != data.get("canonical", {}).get("portfolio"):
                 errors.append("person.jsonld Pages BreadcrumbList portfolio item drift")
+            if items[0].get("name") != "Mark Siazon Portfolio" or items[0].get("position") != 1:
+                errors.append("person.jsonld Pages BreadcrumbList portfolio name/position drift")
             if items[1].get("item") != pages.get("home"):
                 errors.append("person.jsonld Pages BreadcrumbList Pages item drift")
+            if items[1].get("name") != PAGES_SITE_NAME or items[1].get("position") != 2:
+                errors.append("person.jsonld Pages BreadcrumbList Pages name/position drift")
 
     faq_id = data.get("identifiers", {}).get("faqDocument")
     faq_page = node_by_id(faq_schema, faq_id)

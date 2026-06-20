@@ -231,12 +231,17 @@ def main() -> None:
     li {{ margin: 8px 0; }}
     code {{ font-size: 0.95em; }}
     .meta {{ color: #64748b; }}
+    .breadcrumb {{ margin: 0 0 20px; font-size: 0.95rem; color: #64748b; }}
+    .breadcrumb a {{ color: inherit; }}
     .facts {{ display: grid; gap: 10px; padding-left: 0; list-style: none; }}
     .facts li {{ margin: 0; }}
   </style>
 </head>
 <body>
   <main>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="{PORTFOLIO_URL}">Mark Siazon Portfolio</a> / <span>{SITE_NAME}</span>
+    </nav>
     <h1>{SITE_NAME}</h1>
     <p>{escape(entity.get("description", description))}</p>
     <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
