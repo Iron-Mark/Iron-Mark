@@ -474,6 +474,23 @@ def check_ownership_metadata(
         issues.append(f"{label} copyrightYear drift")
 
 
+def check_review_metadata(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    entity = index_data.get("entity", {})
+    if not isinstance(entity, dict):
+        issues.append(f"{label} cannot validate review metadata")
+        return
+    reviewed_by = node.get("reviewedBy", {})
+    if not isinstance(reviewed_by, dict) or reviewed_by.get("@id") != entity.get("@id"):
+        issues.append(f"{label} reviewedBy drift")
+    if node.get("lastReviewed") != index_data.get("updated"):
+        issues.append(f"{label} lastReviewed drift")
+
+
 def copy_tree(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -632,6 +649,11 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing Person node")
     elif f"{PAGES_BASE}/#webpage" not in ref_ids(person.get("mainEntityOfPage")):
         issues.append("Pages index inline JSON-LD Person mainEntityOfPage missing Pages CollectionPage")
+    profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
+    if not profile_page or "ProfilePage" not in node_type_set(profile_page):
+        issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
+    else:
+        check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
     if not pages_site or "WebSite" not in node_type_set(pages_site):
         issues.append("Pages index inline JSON-LD missing Pages WebSite node")
@@ -668,6 +690,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage significantLink drift")
         if pages_page.get("relatedLink") != pages_related_links(index_data):
             issues.append("Pages index CollectionPage relatedLink drift")
+        check_review_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_ownership_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
@@ -733,6 +756,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage isBasedOn drift")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
+        check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")
         check_ownership_metadata(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:

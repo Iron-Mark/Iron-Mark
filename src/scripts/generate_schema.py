@@ -125,6 +125,13 @@ def ownership_metadata(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def review_metadata(data: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "reviewedBy": ref(data["entity"]["@id"]),
+        "lastReviewed": data["updated"],
+    }
+
+
 def dataset_variable_measurements(
     data: dict[str, Any],
     area_served: list[str],
@@ -411,6 +418,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     citations = citation_targets(data)
     project_awards = awards_by_project(data)
     ownership = ownership_metadata(data)
+    review = review_metadata(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -525,6 +533,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "relatedLink": profile_related_links(data),
             "potentialAction": ref(contact_action_id),
             **usage_policy,
+            **review,
             **ownership,
             **sd_provenance,
         },
@@ -570,6 +579,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "potentialAction": ref(contact_action_id),
             "citation": citations,
             **usage_policy,
+            **review,
             **ownership,
             **sd_provenance,
             "hasPart": [
@@ -720,6 +730,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **usage_policy,
+            **review,
             **ownership,
             **sd_provenance,
         },
@@ -1003,6 +1014,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
     usage_policy = content_usage_policy(data)
     citations = citation_targets(data)
     ownership = ownership_metadata(data)
+    review = review_metadata(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -1024,6 +1036,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **usage_policy,
+            **review,
             **ownership,
             **sd_provenance,
         },

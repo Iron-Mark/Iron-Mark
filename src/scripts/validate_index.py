@@ -621,6 +621,14 @@ def check_ownership_metadata(node: dict[str, Any], data: dict[str, Any], label: 
         errors.append(f"{label} copyrightYear drift")
 
 
+def check_review_metadata(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    person_id = data.get("entity", {}).get("@id")
+    if node.get("reviewedBy", {}).get("@id") != person_id:
+        errors.append(f"{label} reviewedBy drift")
+    if node.get("lastReviewed") != data.get("updated"):
+        errors.append(f"{label} lastReviewed drift")
+
+
 def check_required_index_keys(data: dict[str, Any]) -> None:
     for key in ("updated", "entity", "featuredProjects", "hackathonLab", "aeo", "triples", "schema", "machineReadable"):
         if key not in data:
@@ -1234,6 +1242,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld GitHub ProfilePage significantLink drift")
         if profile_page.get("relatedLink") != profile_related_links(data):
             errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
+        check_review_metadata(profile_page, data, "person.jsonld GitHub ProfilePage")
 
     pages_site = node_by_id(person_schema, pages_site_id)
     if not pages_site or "WebSite" not in node_types(pages_site):
@@ -1281,6 +1290,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage significantLink drift")
         if pages_page.get("relatedLink") != pages_related_links(data):
             errors.append("person.jsonld Pages CollectionPage relatedLink drift")
+        check_review_metadata(pages_page, data, "person.jsonld Pages CollectionPage")
         check_content_usage_policy(pages_page, data, "person.jsonld Pages CollectionPage")
         check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")
         check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
@@ -1496,6 +1506,11 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 errors.append("person.jsonld Pages BreadcrumbList Pages name/position drift")
 
     faq_id = data.get("identifiers", {}).get("faqDocument")
+    person_faq_page = node_by_id(person_schema, faq_id)
+    if not person_faq_page or "FAQPage" not in node_types(person_faq_page):
+        errors.append("person.jsonld missing FAQPage node matching identifiers.faqDocument")
+    else:
+        check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
     if not faq_page or "FAQPage" not in node_types(faq_page):
         errors.append("faq.jsonld missing FAQPage node matching identifiers.faqDocument")
@@ -1512,6 +1527,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage inLanguage must be en")
         check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
+        check_review_metadata(faq_page, data, "faq.jsonld FAQPage")
         check_ownership_metadata(faq_page, data, "faq.jsonld FAQPage")
         check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 

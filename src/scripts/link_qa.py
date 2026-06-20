@@ -3,10 +3,11 @@
 
 from __future__ import annotations
 
+import argparse
+import os
 import re
 import subprocess
 import sys
-import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -46,6 +47,22 @@ LOCAL_BLOB_PREFIX = "https://github.com/Iron-Mark/Iron-Mark/blob/main/"
 LOCAL_RAW_PREFIX = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/"
 PRE_PAGES_PREFIX = "https://iron-mark.github.io/Iron-Mark/"
 USER_AGENT = "Mozilla/5.0 (compatible; IronMarkLinkQA/1.0; +https://github.com/Iron-Mark/Iron-Mark)"
+
+
+def curl_status(args: list[str]) -> int:
+    r = subprocess.run(
+        args,
+        capture_output=True,
+        text=True,
+        timeout=20,
+    )
+    status = 0
+    for line in r.stdout.splitlines():
+        if line.startswith("HTTP/"):
+            status = int(line.split()[1])
+    if status == 0 and r.stdout.strip().isdigit():
+        status = int(r.stdout.strip())
+    return status
 
 
 def extract_urls() -> set[str]:
@@ -115,16 +132,23 @@ def check(url: str) -> tuple[str, str]:
     if local_blob_ok(url):
         return url, "local"
     try:
-        r = subprocess.run(
-            ["curl", "-sI", "-L", "--max-time", "15", "-A", USER_AGENT, url],
-            capture_output=True,
-            text=True,
-            timeout=20,
-        )
-        status = 0
-        for line in r.stdout.splitlines():
-            if line.startswith("HTTP/"):
-                status = int(line.split()[1])
+        status = curl_status(["curl", "-sI", "-L", "--max-time", "15", "-A", USER_AGENT, url])
+        if status == 0:
+            status = curl_status(
+                [
+                    "curl",
+                    "-sL",
+                    "--max-time",
+                    "15",
+                    "-A",
+                    USER_AGENT,
+                    "-o",
+                    os.devnull,
+                    "-w",
+                    "%{http_code}",
+                    url,
+                ]
+            )
         if 200 <= status < 400:
             return url, "ok"
         return url, f"fail:{status}"

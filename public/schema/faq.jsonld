@@ -78,6 +78,10 @@
       ],
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "reviewedBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "lastReviewed": "2026-06-20",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#person"
       },
