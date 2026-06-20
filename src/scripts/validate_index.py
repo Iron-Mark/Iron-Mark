@@ -986,6 +986,13 @@ def check_content_usage_policy(node: dict[str, Any], data: dict[str, Any], label
         errors.append(f"{label} publishingPrinciples drift")
 
 
+def check_pages_content_usage_policy(node: dict[str, Any], label: str) -> None:
+    if node.get("usageInfo") != f"{PAGES}/HOW-TO-CITE.md":
+        errors.append(f"{label} usageInfo drift")
+    if node.get("publishingPrinciples") != f"{PAGES}/PROOF.md":
+        errors.append(f"{label} publishingPrinciples drift")
+
+
 def check_structured_data_provenance(
     node: dict[str, Any],
     data: dict[str, Any],
@@ -1008,6 +1015,30 @@ def check_structured_data_provenance(
     if node.get("sdDatePublished") != data.get("updated"):
         errors.append(f"{label} sdDatePublished drift")
     if node.get("sdLicense") != (expected_license or data.get("license")):
+        errors.append(f"{label} sdLicense drift")
+
+
+def check_pages_structured_data_provenance(
+    node: dict[str, Any],
+    data: dict[str, Any],
+    label: str,
+) -> None:
+    entity = data.get("entity", {})
+    publisher = node.get("sdPublisher", {})
+    if not isinstance(publisher, dict):
+        errors.append(f"{label} missing sdPublisher Person object")
+        return
+    if publisher.get("@type") != "Person":
+        errors.append(f"{label} sdPublisher must be Person")
+    if publisher.get("@id") != entity.get("@id"):
+        errors.append(f"{label} sdPublisher @id drift")
+    if publisher.get("name") != entity.get("name"):
+        errors.append(f"{label} sdPublisher name drift")
+    if publisher.get("url") != entity.get("url"):
+        errors.append(f"{label} sdPublisher url drift")
+    if node.get("sdDatePublished") != data.get("updated"):
+        errors.append(f"{label} sdDatePublished drift")
+    if node.get("sdLicense") != f"{PAGES}/LICENSE.md":
         errors.append(f"{label} sdLicense drift")
 
 
@@ -1370,6 +1401,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         extra_main_entity = sorted(actual_main_entity - expected_inline_question_ids)
         if extra_main_entity:
             errors.append(f"docs/index.html inline JSON-LD FAQPage mainEntity unexpected questions: {extra_main_entity}")
+        check_pages_content_usage_policy(inline_faq_node, "docs/index.html inline JSON-LD FAQPage")
+        check_pages_structured_data_provenance(inline_faq_node, data, "docs/index.html inline JSON-LD FAQPage")
     question_nodes = {node.get("@id", ""): node for node in jsonld_nodes if "Question" in node_types(node)}
     unexpected_question_ids = sorted(set(question_nodes) - expected_inline_question_ids)
     if unexpected_question_ids:
@@ -1408,6 +1441,15 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             question_citations = [question_citations]
         if set(question_citations) != expected_citations:
             errors.append(f"docs/index.html inline JSON-LD Question citation drift for: {snippet.get('question')}")
+        check_pages_content_usage_policy(
+            question_node,
+            f"docs/index.html inline JSON-LD Question {snippet.get('question')}",
+        )
+        check_pages_structured_data_provenance(
+            question_node,
+            data,
+            f"docs/index.html inline JSON-LD Question {snippet.get('question')}",
+        )
         answer_node = question_node.get("acceptedAnswer", {})
         if not isinstance(answer_node, dict) or answer_node.get("text") != snippet.get("answer"):
             errors.append(f"docs/index.html inline JSON-LD answer drift for: {snippet.get('question')}")
@@ -1438,6 +1480,15 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             answer_citations = [answer_citations]
         if set(answer_citations) != expected_citations:
             errors.append(f"docs/index.html inline JSON-LD Answer citation drift for: {snippet.get('question')}")
+        check_pages_content_usage_policy(
+            answer_node,
+            f"docs/index.html inline JSON-LD Answer {snippet.get('question')}",
+        )
+        check_pages_structured_data_provenance(
+            answer_node,
+            data,
+            f"docs/index.html inline JSON-LD Answer {snippet.get('question')}",
+        )
     for index, script in enumerate(
         re.findall(
             r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
