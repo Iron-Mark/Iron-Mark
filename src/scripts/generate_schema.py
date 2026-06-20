@@ -83,6 +83,45 @@ def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def dataset_variable_measurements(
+    data: dict[str, Any],
+    area_served: list[str],
+    downloads: list[dict[str, str]],
+) -> list[dict[str, Any]]:
+    return [
+        {
+            "@type": "PropertyValue",
+            "name": "Person entity identifier",
+            "value": data["entity"]["@id"],
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Featured project count",
+            "value": len(data.get("featuredProjects", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Answer snippet count",
+            "value": len(data.get("aeo", {}).get("answerSnippets", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Primary keyword count",
+            "value": len(data.get("seo", {}).get("primaryKeywords", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Service regions",
+            "value": ", ".join(area_served),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Machine-readable download count",
+            "value": len(downloads),
+        },
+    ]
+
+
 def compact(values: list[str | None]) -> list[str]:
     return [value for value in values if value]
 
@@ -440,6 +479,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "license": data.get("license"),
             "keywords": dataset_keywords,
+            "spatialCoverage": area_served,
+            "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),
             "isAccessibleForFree": True,
             "distribution": [ref(download_id(item["key"])) for item in downloads],

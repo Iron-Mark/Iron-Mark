@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
+from generate_schema import machine_downloads
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -142,6 +143,71 @@ def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
         "url": url,
         "encodingFormat": PROJECT_IMAGE_ENCODING.get(Path(asset).suffix, ""),
     }
+
+
+def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[str, object]]:
+    availability = index_data.get("availability", {})
+    seo = index_data.get("seo", {})
+    aeo = index_data.get("aeo", {})
+    entity = index_data.get("entity", {})
+    if not isinstance(availability, dict):
+        availability = {}
+    if not isinstance(seo, dict):
+        seo = {}
+    if not isinstance(aeo, dict):
+        aeo = {}
+    if not isinstance(entity, dict):
+        entity = {}
+    area_served = availability.get("areaServed", [])
+    if not isinstance(area_served, list):
+        area_served = []
+    featured_projects = index_data.get("featuredProjects", [])
+    if not isinstance(featured_projects, list):
+        featured_projects = []
+    answer_snippets = aeo.get("answerSnippets", [])
+    if not isinstance(answer_snippets, list):
+        answer_snippets = []
+    primary_keywords = seo.get("primaryKeywords", [])
+    if not isinstance(primary_keywords, list):
+        primary_keywords = []
+    machine_readable = index_data.get("machineReadable", {})
+    if not isinstance(machine_readable, dict):
+        machine_readable = {}
+    pages = machine_readable.get("pages", {})
+    if not isinstance(pages, dict):
+        pages = {}
+    return [
+        {
+            "@type": "PropertyValue",
+            "name": "Person entity identifier",
+            "value": entity.get("@id"),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Featured project count",
+            "value": len(featured_projects),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Answer snippet count",
+            "value": len(answer_snippets),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Primary keyword count",
+            "value": len(primary_keywords),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Service regions",
+            "value": ", ".join(str(region) for region in area_served),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Machine-readable download count",
+            "value": len(machine_downloads(pages)),
+        },
+    ]
 
 
 def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
@@ -365,6 +431,12 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_values = sorted(expected_values - identifier_values)
         if missing_values:
             issues.append(f"Pages index inline Dataset identifier missing value(s): {missing_values}")
+        availability = index_data.get("availability", {})
+        area_served = availability.get("areaServed", []) if isinstance(availability, dict) else []
+        if dataset.get("spatialCoverage") != area_served:
+            issues.append("Pages index inline Dataset spatialCoverage drift")
+        if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
+            issues.append("Pages index inline Dataset variableMeasured drift")
     jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):

@@ -224,6 +224,42 @@ def expected_downloads(pages: dict[str, str]) -> dict[str, tuple[str, str]]:
     }
 
 
+def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> list[dict[str, Any]]:
+    area_served = data.get("availability", {}).get("areaServed", [])
+    return [
+        {
+            "@type": "PropertyValue",
+            "name": "Person entity identifier",
+            "value": data.get("entity", {}).get("@id"),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Featured project count",
+            "value": len(data.get("featuredProjects", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Answer snippet count",
+            "value": len(data.get("aeo", {}).get("answerSnippets", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Primary keyword count",
+            "value": len(data.get("seo", {}).get("primaryKeywords", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Service regions",
+            "value": ", ".join(area_served),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Machine-readable download count",
+            "value": download_count,
+        },
+    ]
+
+
 def schema_type_ok(value: Any, schema_type: str) -> bool:
     if schema_type == "object":
         return isinstance(value, dict)
@@ -1055,6 +1091,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset about drift")
         if dataset.get("includedInDataCatalog", {}).get("@id") != pages_catalog_id:
             errors.append("person.jsonld Dataset catalog membership drift")
+        if dataset.get("spatialCoverage") != data.get("availability", {}).get("areaServed", []):
+            errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
+        if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
+            errors.append("person.jsonld Dataset variableMeasured drift")
         if dataset.get("isAccessibleForFree") is not True:
             errors.append("person.jsonld Dataset must be marked isAccessibleForFree")
         expected_keywords = set(
