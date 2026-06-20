@@ -71,6 +71,7 @@ def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     availability = data.get("availability", {})
     return {
         "license": pages["licenseMd"],
+        "usageInfo": pages["licenseMd"],
         "acquireLicensePage": availability.get("contact", entity["url"]),
         "creditText": entity["name"],
         "copyrightNotice": f"Copyright {entity['name']}",
@@ -81,6 +82,14 @@ def image_rights(data: dict[str, Any]) -> dict[str, Any]:
             "url": entity["url"],
         },
         **structured_data_provenance(data),
+    }
+
+
+def content_usage_policy(data: dict[str, Any]) -> dict[str, str]:
+    repo = data["machineReadable"]["repo"]
+    return {
+        "usageInfo": repo["howToCiteMd"],
+        "publishingPrinciples": repo["proofMd"],
     }
 
 
@@ -194,6 +203,7 @@ def content_work(
     license_url: str,
     sd_provenance: dict[str, Any] | None = None,
     citations: list[str] | None = None,
+    usage_policy: dict[str, str] | None = None,
 ) -> dict[str, Any]:
     return {
         "@type": "CreativeWork",
@@ -209,6 +219,7 @@ def content_work(
         "license": license_url,
         "isAccessibleForFree": True,
         "citation": citations or [],
+        **(usage_policy or {}),
         **(sd_provenance or {}),
     }
 
@@ -282,6 +293,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     )
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
+    usage_policy = content_usage_policy(data)
     image_rights_metadata = image_rights(data)
     citations = citation_targets(data)
 
@@ -375,6 +387,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "image": ref(pages_image_id),
             "potentialAction": ref(contact_action_id),
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -389,6 +402,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
             "potentialAction": ref(contact_action_id),
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -406,6 +420,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "image": ref(pages_image_id),
             "potentialAction": ref(contact_action_id),
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -426,6 +441,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "thumbnailUrl": PAGES_IMAGE,
             "potentialAction": ref(contact_action_id),
             "citation": citations,
+            **usage_policy,
             **sd_provenance,
             "hasPart": [
                 ref(pages_catalog_id),
@@ -500,6 +516,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "dateModified": updated,
             "citation": citations,
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -536,6 +553,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "includedInDataCatalog": ref(pages_catalog_id),
             "isAccessibleForFree": True,
             "distribution": [ref(download_id(item["key"])) for item in downloads],
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -568,6 +586,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isPartOf": ref(github_site_id),
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
+            **usage_policy,
             **sd_provenance,
         },
         {
@@ -634,6 +653,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "about": ref(person_id),
                 "citation": citations,
                 **({"isBasedOn": item["sourceUrl"]} if item.get("sourceUrl") else {}),
+                **usage_policy,
                 **sd_provenance,
             }
         )
@@ -656,6 +676,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "sameAs": compact([project.get("live"), project.get("repo"), project.get("model")]),
             "keywords": compact([project.get("slug"), project.get("focus")]),
             "citation": citations,
+            **usage_policy,
             **sd_provenance,
         }
         if image:
@@ -693,6 +714,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/FAQ.md#creativework",
@@ -705,6 +727,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/PROOF.md#creativework",
@@ -717,6 +740,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/RECRUITER.md#creativework",
@@ -729,6 +753,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/STACK.md#creativework",
@@ -741,6 +766,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/schema/llms-index.schema.json#creativework",
@@ -753,6 +779,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 data.get("license"),
                 sd_provenance,
                 citations,
+                usage_policy,
             ),
         ]
     )
@@ -768,6 +795,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
     person_id = entity["@id"]
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
+    usage_policy = content_usage_policy(data)
     citations = citation_targets(data)
 
     graph: list[dict[str, Any]] = [
@@ -789,6 +817,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
+            **usage_policy,
             **sd_provenance,
         },
     ]

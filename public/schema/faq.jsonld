@@ -76,6 +76,8 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
         }
       ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",

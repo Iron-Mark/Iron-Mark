@@ -417,6 +417,8 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
     expected_name = entity.get("name")
     if node.get("license") != pages.get("licenseMd"):
         errors.append(f"{label} license drift")
+    if node.get("usageInfo") != pages.get("licenseMd"):
+        errors.append(f"{label} usageInfo drift")
     if node.get("acquireLicensePage") != availability.get("contact"):
         errors.append(f"{label} acquireLicensePage drift")
     if node.get("creditText") != expected_name:
@@ -436,6 +438,14 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
     if creator.get("url") != entity.get("url"):
         errors.append(f"{label} creator url drift")
     check_structured_data_provenance(node, data, label)
+
+
+def check_content_usage_policy(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    repo = data.get("machineReadable", {}).get("repo", {})
+    if node.get("usageInfo") != repo.get("howToCiteMd"):
+        errors.append(f"{label} usageInfo drift")
+    if node.get("publishingPrinciples") != repo.get("proofMd"):
+        errors.append(f"{label} publishingPrinciples drift")
 
 
 def check_structured_data_provenance(
@@ -1041,6 +1051,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages WebSite dateModified drift")
         if pages_site.get("isBasedOn") != data.get("canonical", {}).get("githubProfileReadme"):
             errors.append("person.jsonld Pages WebSite isBasedOn drift")
+        check_content_usage_policy(pages_site, data, "person.jsonld Pages WebSite")
         check_structured_data_provenance(pages_site, data, "person.jsonld Pages WebSite")
         missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_site_alternates:
@@ -1070,6 +1081,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage potentialAction drift")
         if pages_page.get("isBasedOn") != repo.get("llmsIndexJson"):
             errors.append("person.jsonld Pages CollectionPage isBasedOn drift")
+        check_content_usage_policy(pages_page, data, "person.jsonld Pages CollectionPage")
         check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")
         check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
         required_parts = {
@@ -1107,6 +1119,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog about drift")
         if data_catalog.get("isBasedOn") != repo.get("llmsIndexJson"):
             errors.append("person.jsonld DataCatalog isBasedOn drift")
+        check_content_usage_policy(data_catalog, data, "person.jsonld DataCatalog")
         check_global_citation(data_catalog, data, "person.jsonld DataCatalog")
         check_structured_data_provenance(data_catalog, data, "person.jsonld DataCatalog")
     image = node_by_id(person_schema, pages_image_id)
@@ -1182,6 +1195,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
         if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
             errors.append("person.jsonld Dataset variableMeasured drift")
+        check_content_usage_policy(dataset, data, "person.jsonld Dataset")
         check_global_citation(dataset, data, "person.jsonld Dataset")
         check_structured_data_provenance(dataset, data, "person.jsonld Dataset")
         if dataset.get("isAccessibleForFree") is not True:
@@ -1213,6 +1227,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         download_sources = expected_download_sources(repo)
         if download.get("isBasedOn") != download_sources.get(key):
             errors.append(f"person.jsonld DataDownload isBasedOn drift for: {key}")
+        check_content_usage_policy(download, data, f"person.jsonld DataDownload {key}")
         if download.get("encodingFormat") != encoding:
             errors.append(f"person.jsonld DataDownload encodingFormat drift for: {key}")
         if download.get("dateModified") != data.get("updated"):
@@ -1258,6 +1273,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld CreativeWork author drift for: {node_id}")
         if work.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld CreativeWork about drift for: {node_id}")
+        check_content_usage_policy(work, data, f"person.jsonld CreativeWork {node_id}")
         check_global_citation(work, data, f"person.jsonld CreativeWork {node_id}")
         check_structured_data_provenance(work, data, f"person.jsonld CreativeWork {node_id}")
     breadcrumb = node_by_id(person_schema, pages_breadcrumb_id)
@@ -1292,6 +1308,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage about drift")
         if faq_page.get("inLanguage") != "en":
             errors.append("faq.jsonld FAQPage inLanguage must be en")
+        check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 
@@ -1362,6 +1379,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
         if project_node.get("isAccessibleForFree") is not True:
             errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
+        check_content_usage_policy(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_global_citation(project_node, data, f"person.jsonld featured project {project.get('name')}")
         check_structured_data_provenance(project_node, data, f"person.jsonld featured project {project.get('name')}")
         expected_image = expected_project_image(project)

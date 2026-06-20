@@ -262,6 +262,8 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
     expected_name = entity.get("name")
     if node.get("license") != f"{PAGES_BASE}/LICENSE.md":
         issues.append(f"{label} license drift")
+    if node.get("usageInfo") != f"{PAGES_BASE}/LICENSE.md":
+        issues.append(f"{label} usageInfo drift")
     if node.get("acquireLicensePage") != availability.get("contact"):
         issues.append(f"{label} acquireLicensePage drift")
     if node.get("creditText") != expected_name:
@@ -281,6 +283,13 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
     if creator.get("url") != entity.get("url"):
         issues.append(f"{label} creator url drift")
     check_structured_data_provenance(issues, node, index_data, label)
+
+
+def check_content_usage_policy(issues: list[str], node: dict[str, object], label: str) -> None:
+    if node.get("usageInfo") != f"{PAGES_BASE}/HOW-TO-CITE.md":
+        issues.append(f"{label} usageInfo drift")
+    if node.get("publishingPrinciples") != f"{PAGES_BASE}/PROOF.md":
+        issues.append(f"{label} publishingPrinciples drift")
 
 
 def check_structured_data_provenance(
@@ -476,6 +485,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         expected_based_on = canonical.get("githubProfileReadme") if isinstance(canonical, dict) else None
         if pages_site.get("isBasedOn") != expected_based_on:
             issues.append("Pages index WebSite isBasedOn drift")
+        check_content_usage_policy(issues, pages_site, "Pages index WebSite")
         check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
@@ -491,6 +501,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if pages_page.get("isBasedOn") != expected_based_on:
             issues.append("Pages index CollectionPage isBasedOn drift")
+        check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
@@ -499,6 +510,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if data_catalog.get("isBasedOn") != expected_based_on:
             issues.append("Pages index DataCatalog isBasedOn drift")
+        check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
@@ -537,6 +549,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset spatialCoverage drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
             issues.append("Pages index inline Dataset variableMeasured drift")
+        check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
     faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
@@ -545,6 +558,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
             issues.append("Pages index FAQPage isBasedOn drift")
+        check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:
@@ -571,6 +585,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image ref drift: {project.get('name')}")
         if project_node.get("thumbnailUrl") != expected_image["url"]:
             issues.append(f"Pages index featured project thumbnailUrl drift: {project.get('name')}")
+        check_content_usage_policy(issues, project_node, f"Pages index featured project {project.get('name')}")
         check_global_citation(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         check_structured_data_provenance(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         image_node = jsonld_node_by_id.get(expected_image["@id"])
@@ -595,6 +610,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             expected_download_source = pages_rewrite_public_source(item.get("sourceUrl", ""))
             if download.get("isBasedOn") != expected_download_source:
                 issues.append(f"Pages index DataDownload isBasedOn drift: {item['key']}")
+            check_content_usage_policy(issues, download, f"Pages index DataDownload {item['key']}")
             check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
