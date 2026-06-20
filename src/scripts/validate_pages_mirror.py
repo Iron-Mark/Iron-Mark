@@ -96,6 +96,28 @@ DATASET_URL_PROPERTIES_BY_TYPE = {
         "sdLicense",
     ),
 }
+JSONLD_URL_VALUE_KEYS = {
+    "@id",
+    "url",
+    "contentUrl",
+    "sameAs",
+    "mainEntityOfPage",
+    "isBasedOn",
+    "license",
+    "usageInfo",
+    "publishingPrinciples",
+    "sdLicense",
+    "significantLink",
+    "relatedLink",
+    "citation",
+    "thumbnailUrl",
+    "urlTemplate",
+    "serviceUrl",
+    "acquireLicensePage",
+    "item",
+    "actionPlatform",
+    "businessFunction",
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -739,6 +761,39 @@ def is_absolute_http_url(value: str) -> bool:
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
+def check_jsonld_absolute_url_values(issues: list[str], node: dict[str, object], label: str) -> None:
+    def check_url_value(value: object, path: str) -> None:
+        if isinstance(value, str):
+            if not is_absolute_http_url(value):
+                issues.append(f"{label} {path} must be an absolute HTTP(S) URL")
+            return
+        if isinstance(value, dict):
+            if isinstance(value.get("@id"), str):
+                check_url_value(value["@id"], f"{path}.@id")
+            else:
+                walk(value, path)
+            return
+        if isinstance(value, list):
+            for index, item in enumerate(value):
+                check_url_value(item, f"{path}[{index}]")
+            return
+        issues.append(f"{label} {path} must be an absolute HTTP(S) URL")
+
+    def walk(value: object, path: str) -> None:
+        if isinstance(value, dict):
+            for key, child in value.items():
+                child_path = f"{path}.{key}" if path else key
+                if key in JSONLD_URL_VALUE_KEYS:
+                    check_url_value(child, child_path)
+                else:
+                    walk(child, child_path)
+        elif isinstance(value, list):
+            for index, item in enumerate(value):
+                walk(item, f"{path}[{index}]")
+
+    walk(node, "")
+
+
 def check_dataset_search_metadata(issues: list[str], node: dict[str, object], label: str) -> None:
     types = node_type_set(node) & DATASET_SEARCH_TYPES
     if not types:
@@ -975,6 +1030,14 @@ def validate_artifact(artifact: Path) -> list[str]:
             parsed_json = json.loads((artifact / json_name).read_text(encoding="utf-8"))
             if json_name.endswith(".jsonld"):
                 check_jsonld_graph_integrity(issues, parsed_json, f"Pages artifact {json_name}")
+                for node in jsonld_nodes(parsed_json):
+                    if "@graph" in node and "@id" not in node:
+                        continue
+                    check_jsonld_absolute_url_values(
+                        issues,
+                        node,
+                        f"Pages artifact {json_name} {node.get('@id', node.get('name', 'node'))}",
+                    )
         except Exception as exc:
             issues.append(f"invalid JSON in Pages artifact {json_name}: {exc}")
     try:
@@ -1022,7 +1085,16 @@ def validate_artifact(artifact: Path) -> list[str]:
             jsonld = json.loads(script)
             check_jsonld_graph_integrity(issues, jsonld, f"Pages index inline JSON-LD script #{index}")
             public_url_values.extend(repo_public_url_values(jsonld))
-            parsed_jsonld_nodes.extend(jsonld_nodes(jsonld))
+            script_nodes = jsonld_nodes(jsonld)
+            for node in script_nodes:
+                if "@graph" in node and "@id" not in node:
+                    continue
+                check_jsonld_absolute_url_values(
+                    issues,
+                    node,
+                    f"Pages index inline JSON-LD script #{index} {node.get('@id', node.get('name', 'node'))}",
+                )
+            parsed_jsonld_nodes.extend(script_nodes)
         except json.JSONDecodeError:
             issues.append("Pages index contains invalid inline JSON-LD")
     if public_url_values:

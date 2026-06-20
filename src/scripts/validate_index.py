@@ -111,6 +111,28 @@ DATASET_URL_PROPERTIES_BY_TYPE = {
         "sdLicense",
     ),
 }
+JSONLD_URL_VALUE_KEYS = {
+    "@id",
+    "url",
+    "contentUrl",
+    "sameAs",
+    "mainEntityOfPage",
+    "isBasedOn",
+    "license",
+    "usageInfo",
+    "publishingPrinciples",
+    "sdLicense",
+    "significantLink",
+    "relatedLink",
+    "citation",
+    "thumbnailUrl",
+    "urlTemplate",
+    "serviceUrl",
+    "acquireLicensePage",
+    "item",
+    "actionPlatform",
+    "businessFunction",
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -249,8 +271,12 @@ def html_jsonld_nodes(html: str, surface: str) -> list[dict[str, Any]]:
             continue
         if isinstance(doc, dict) and "@graph" in doc:
             check_jsonld_graph_integrity(doc, f"{surface} JSON-LD script #{index}")
-            nodes.extend(graph_nodes(doc))
+            script_nodes = graph_nodes(doc)
+            for node in script_nodes:
+                check_jsonld_absolute_url_values(node, f"{surface} JSON-LD script #{index}")
+            nodes.extend(script_nodes)
         elif isinstance(doc, dict):
+            check_jsonld_absolute_url_values(doc, f"{surface} JSON-LD script #{index}")
             nodes.append(doc)
         else:
             errors.append(f"{surface} JSON-LD script #{index} must be an object or @graph")
@@ -702,6 +728,39 @@ def check_creativework_abstract(node: dict[str, Any], label: str) -> None:
 def is_absolute_http_url(value: str) -> bool:
     parsed = urlparse(value)
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def check_jsonld_absolute_url_values(node: dict[str, Any], label: str) -> None:
+    def check_url_value(value: Any, path: str) -> None:
+        if isinstance(value, str):
+            if not is_absolute_http_url(value):
+                errors.append(f"{label} {path} must be an absolute HTTP(S) URL")
+            return
+        if isinstance(value, dict):
+            if isinstance(value.get("@id"), str):
+                check_url_value(value["@id"], f"{path}.@id")
+            else:
+                walk(value, path)
+            return
+        if isinstance(value, list):
+            for index, item in enumerate(value):
+                check_url_value(item, f"{path}[{index}]")
+            return
+        errors.append(f"{label} {path} must be an absolute HTTP(S) URL")
+
+    def walk(value: Any, path: str) -> None:
+        if isinstance(value, dict):
+            for key, child in value.items():
+                child_path = f"{path}.{key}" if path else key
+                if key in JSONLD_URL_VALUE_KEYS:
+                    check_url_value(child, child_path)
+                else:
+                    walk(child, child_path)
+        elif isinstance(value, list):
+            for index, item in enumerate(value):
+                walk(item, f"{path}[{index}]")
+
+    walk(node, "")
 
 
 def check_dataset_search_metadata(node: dict[str, Any], label: str) -> None:
@@ -1534,6 +1593,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         return
     check_jsonld_graph_integrity(person_schema, "person.jsonld")
     check_jsonld_graph_integrity(faq_schema, "faq.jsonld")
+    for graph_label, graph_doc in (("person.jsonld", person_schema), ("faq.jsonld", faq_schema)):
+        for node in graph_nodes(graph_doc):
+            node_label = f"{graph_label} {node.get('@id', node.get('name', 'node'))}"
+            check_jsonld_absolute_url_values(node, node_label)
     if index_schema.get("$schema") != "https://json-schema.org/draft/2020-12/schema":
         errors.append("llms-index.schema.json must declare JSON Schema draft 2020-12")
     validate_contract_subset(data, index_schema, "llms-index.json")
