@@ -1431,6 +1431,61 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             property_schema = item_schema.get("properties", {}).get(property_name, {})
             if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
                 errors.append(f"llms-index.schema.json machineReadable.{key}.{property_name} must be a URI string")
+    properties_schema = index_schema.get("properties", {})
+    seo_schema = properties_schema.get("seo", {})
+    seo_expected_properties = {"primaryKeywords", "geoTargets", "technicalSignals", "geoSignals", "generativeSearch"}
+    seo_actual_properties = set(seo_schema.get("properties", {}))
+    missing_seo_properties = sorted(seo_expected_properties - seo_actual_properties)
+    if missing_seo_properties:
+        errors.append(f"llms-index.schema.json seo schema missing properties: {missing_seo_properties}")
+    if seo_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json seo schema must disallow additionalProperties")
+    seo_object_contracts = {
+        "technicalSignals": {
+            "canonicalPersonId",
+            "canonicalPortfolio",
+            "schemaGraphs",
+            "sitemaps",
+            "robots",
+            "pagesMirror",
+        },
+        "geoSignals": {"homeCountry", "serviceRegions", "searchModifiers"},
+        "generativeSearch": {"principle", "llmsTxtRole", "answerSources", "agentReadySurfaces"},
+    }
+    for key, expected_properties in seo_object_contracts.items():
+        item_schema = seo_schema.get("properties", {}).get(key, {})
+        actual_properties = set(item_schema.get("properties", {}))
+        missing_properties = sorted(expected_properties - actual_properties)
+        if missing_properties:
+            errors.append(f"llms-index.schema.json seo.{key} schema missing properties: {missing_properties}")
+        if item_schema.get("additionalProperties") is not False:
+            errors.append(f"llms-index.schema.json seo.{key} schema must disallow additionalProperties")
+    answer_source_items = (
+        seo_schema.get("properties", {})
+        .get("generativeSearch", {})
+        .get("properties", {})
+        .get("answerSources", {})
+        .get("items", {})
+    )
+    if answer_source_items.get("type") != "string" or answer_source_items.get("format") != "uri":
+        errors.append("llms-index.schema.json seo.generativeSearch.answerSources items must be URI strings")
+    agent_surface_items = (
+        seo_schema.get("properties", {})
+        .get("generativeSearch", {})
+        .get("properties", {})
+        .get("agentReadySurfaces", {})
+        .get("items", {})
+    )
+    if agent_surface_items.get("type") != "string" or agent_surface_items.get("minLength") != 1:
+        errors.append("llms-index.schema.json seo.generativeSearch.agentReadySurfaces items must be non-empty strings")
+    aeo_schema = properties_schema.get("aeo", {})
+    aeo_expected_properties = {"preferredCitationOrder", "answerSnippets"}
+    aeo_actual_properties = set(aeo_schema.get("properties", {}))
+    missing_aeo_properties = sorted(aeo_expected_properties - aeo_actual_properties)
+    if missing_aeo_properties:
+        errors.append(f"llms-index.schema.json aeo schema missing properties: {missing_aeo_properties}")
+    if aeo_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json aeo schema must disallow additionalProperties")
     schema_index_url = data.get("schema", {}).get("index")
     if schema_index_url != f"{GITHUB_BLOB}/public/schema/llms-index.schema.json":
         errors.append("llms-index.json schema.index must point to public/schema/llms-index.schema.json")

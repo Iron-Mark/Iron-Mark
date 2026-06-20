@@ -672,7 +672,7 @@
               "format": "uri"
             }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         },
         "geoSignals": {
           "type": "object",
@@ -703,7 +703,7 @@
               }
             }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         },
         "generativeSearch": {
           "type": "object",
@@ -726,21 +726,23 @@
               "type": "array",
               "minItems": 5,
               "items": {
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               }
             },
             "agentReadySurfaces": {
               "type": "array",
               "minItems": 5,
               "items": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               }
             }
           },
-          "additionalProperties": true
+          "additionalProperties": false
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "aeo": {
       "type": "object",
@@ -789,7 +791,7 @@
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "triples": {
       "type": "array",
