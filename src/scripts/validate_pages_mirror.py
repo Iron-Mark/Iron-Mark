@@ -21,6 +21,7 @@ from generate_schema import (
     lab_project_url,
     machine_downloads,
     pages_section_id,
+    pages_section_relation_ids,
     pages_section_specs,
     slugify,
     unique_compact,
@@ -472,6 +473,10 @@ def pages_rewrite_public_source(source: str) -> str:
     return source
 
 
+def pages_rewrite_ids(values: list[str]) -> set[str]:
+    return {pages_rewrite_public_source(value) for value in values if value}
+
+
 def check_global_citation(
     issues: list[str],
     node: dict[str, object],
@@ -912,6 +917,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     expected_based_on = repo_sources.get("llmsIndexJson")
     pages_main_content_id = f"{PAGES_BASE}/#main-content"
     pages_section_ids = {pages_section_id(section["fragment"]) for section in pages_section_specs(index_data)}
+    pages_section_relations = pages_section_relation_ids(index_data)
     pages_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#webpage"), None)
     if not pages_page or "CollectionPage" not in node_type_set(pages_page):
         issues.append("Pages index inline JSON-LD missing CollectionPage")
@@ -988,6 +994,13 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"{label} dateModified drift")
         if section_node.get("isAccessibleForFree") is not True:
             issues.append(f"{label} must be isAccessibleForFree")
+        relations = pages_section_relations.get(section["fragment"], {})
+        missing_has_part = sorted(pages_rewrite_ids(relations.get("hasPart", [])) - ref_ids(section_node.get("hasPart")))
+        if missing_has_part:
+            issues.append(f"{label} hasPart missing: {missing_has_part}")
+        missing_mentions = sorted(pages_rewrite_ids(relations.get("mentions", [])) - ref_ids(section_node.get("mentions")))
+        if missing_mentions:
+            issues.append(f"{label} mentions missing: {missing_mentions}")
         check_content_usage_policy(issues, section_node, label)
         check_global_citation(issues, section_node, index_data, label)
         check_ownership_metadata(issues, section_node, index_data, label)

@@ -421,6 +421,109 @@ def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
     ]
 
 
+def pages_section_relation_ids(data: dict[str, Any]) -> dict[str, dict[str, list[str]]]:
+    entity = data.get("entity", {})
+    person_id = entity.get("@id", "")
+    machine_readable = data.get("machineReadable", {})
+    repo = machine_readable.get("repo", {}) if isinstance(machine_readable, dict) else {}
+    pages = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
+    availability = data.get("availability", {})
+    focus_items = availability.get("focus", []) if isinstance(availability, dict) else []
+    featured_projects = data.get("featuredProjects", [])
+    lab_projects = data.get("hackathonLab", [])
+
+    pages_catalog_id = f"{PAGES}/#data-catalog"
+    pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
+    pages_topic_set_id = topic_term_set_id()
+    faq_id = data.get("identifiers", {}).get("faqDocument", "")
+    contact_action_id = fragment_id(person_id, "contact-action")
+    contact_entry_id = fragment_id(person_id, "contact-entrypoint")
+    service_channel_id = fragment_id(person_id, "hiring-service-channel")
+    services_catalog_id = fragment_id(person_id, "services")
+    offer_ids = [fragment_id(person_id, f"offer-{slugify(str(focus))}") for focus in focus_items]
+    service_ids = [fragment_id(person_id, f"service-{slugify(str(focus))}") for focus in focus_items]
+    featured_list_id = f"{GITHUB_BLOB}/llms-index.json#featured-projects"
+    lab_list_id = f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"
+    featured_project_ids = [
+        project_id(project)
+        for project in featured_projects
+        if isinstance(project, dict) and project.get("caseStudy")
+    ]
+    lab_project_ids = [
+        lab_project_id(project)
+        for project in lab_projects
+        if isinstance(project, dict) and lab_project_url(project)
+    ]
+    topic_ids = [topic_term_id(term) for term in topic_term_values(data)]
+    download_ids = {
+        item["key"]: download_id(item["key"])
+        for item in machine_downloads(pages, repo)
+        if item.get("key")
+    }
+
+    def downloads(*keys: str) -> list[str]:
+        return [download_ids[key] for key in keys if key in download_ids]
+
+    return {
+        "profile-facts": {
+            "mentions": unique_compact(
+                [
+                    services_catalog_id,
+                    contact_action_id,
+                    contact_entry_id,
+                    service_channel_id,
+                    *offer_ids,
+                    *service_ids,
+                ]
+            )
+        },
+        "featured-work": {
+            "hasPart": unique_compact([featured_list_id, *featured_project_ids])
+        },
+        "answer-corpus": {
+            "hasPart": unique_compact([faq_id])
+        },
+        "geo-topic-signals": {
+            "hasPart": unique_compact([pages_topic_set_id, *topic_ids])
+        },
+        "knowledge-graph": {
+            "mentions": unique_compact(
+                [
+                    featured_list_id,
+                    lab_list_id,
+                    services_catalog_id,
+                    *service_ids,
+                    *featured_project_ids,
+                    *lab_project_ids,
+                    pages_topic_set_id,
+                ]
+            )
+        },
+        "start-here": {
+            "hasPart": unique_compact(
+                [
+                    pages_catalog_id,
+                    pages_dataset_id,
+                    *downloads(
+                        "llms-index-json",
+                        "llms-ctx-full-txt",
+                        "faq-md",
+                        "recruiter-md",
+                        "proof-md",
+                        "llms-txt",
+                        "schema-json",
+                        "person-jsonld",
+                        "faq-jsonld",
+                    ),
+                ]
+            )
+        },
+        "citation": {
+            "hasPart": downloads("how-to-cite-md", "proof-md", "citation-cff")
+        },
+    }
+
+
 def topic_term_values(data: dict[str, Any]) -> list[str]:
     return unique_compact(
         data.get("seo", {}).get("primaryKeywords", [])
@@ -620,6 +723,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     review = review_metadata(data)
     spatial = spatial_coverage(data)
     page_sections = pages_section_specs(data)
+    page_section_relations = pages_section_relation_ids(data)
     page_section_refs = [ref(pages_section_id(section["fragment"])) for section in page_sections]
 
     graph: list[dict[str, Any]] = [
@@ -1048,6 +1152,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
 
     for section in page_sections:
         description = section["description"]
+        relations = page_section_relations.get(section["fragment"], {})
         graph.append(
             {
                 "@type": "WebPageElement",
@@ -1063,6 +1168,16 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "dateModified": updated,
                 "isAccessibleForFree": True,
                 "citation": citations,
+                **(
+                    {"hasPart": [ref(node_id) for node_id in relations["hasPart"]]}
+                    if relations.get("hasPart")
+                    else {}
+                ),
+                **(
+                    {"mentions": [ref(node_id) for node_id in relations["mentions"]]}
+                    if relations.get("mentions")
+                    else {}
+                ),
                 **usage_policy,
                 **ownership,
                 **sd_provenance,

@@ -22,7 +22,7 @@ from build_pages_mirror import (
     featured_project_cover_urls,
     project_cover_asset,
 )
-from generate_schema import pages_section_id, pages_section_specs
+from generate_schema import pages_section_id, pages_section_relation_ids, pages_section_specs
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -1262,6 +1262,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_image_id = f"{PAGES}/#primary-image"
     pages_main_content_id = f"{PAGES}/#main-content"
     pages_section_ids = {pages_section_id(section["fragment"]) for section in pages_section_specs(data)}
+    pages_section_relations = pages_section_relation_ids(data)
     pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
@@ -1539,6 +1540,13 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"{label} dateModified drift")
         if section_node.get("isAccessibleForFree") is not True:
             errors.append(f"{label} must be isAccessibleForFree")
+        relations = pages_section_relations.get(section["fragment"], {})
+        missing_has_part = sorted(set(relations.get("hasPart", [])) - node_ref_ids(section_node.get("hasPart")))
+        if missing_has_part:
+            errors.append(f"{label} hasPart missing: {missing_has_part}")
+        missing_mentions = sorted(set(relations.get("mentions", [])) - node_ref_ids(section_node.get("mentions")))
+        if missing_mentions:
+            errors.append(f"{label} mentions missing: {missing_mentions}")
         check_content_usage_policy(section_node, data, label)
         check_global_citation(section_node, data, label)
         check_ownership_metadata(section_node, data, label)
