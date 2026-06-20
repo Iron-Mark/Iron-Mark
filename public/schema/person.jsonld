@@ -310,7 +310,11 @@
     {
       "@type": "WebSite",
       "@id": "https://iron-mark.github.io/Iron-Mark/#website",
-      "name": "Mark Siazon Profile Index (GitHub Pages)",
+      "name": "Mark Siazon Profile Index",
+      "alternateName": [
+        "Iron-Mark Profile Index",
+        "Mark Siazon GitHub Profile Index"
+      ],
       "url": "https://iron-mark.github.io/Iron-Mark/",
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
@@ -334,7 +338,11 @@
       "@type": "CollectionPage",
       "@id": "https://iron-mark.github.io/Iron-Mark/#webpage",
       "url": "https://iron-mark.github.io/Iron-Mark/",
-      "name": "Mark Siazon GitHub Profile Index",
+      "name": "Mark Siazon Profile Index",
+      "alternateName": [
+        "Iron-Mark Profile Index",
+        "Mark Siazon GitHub Profile Index"
+      ],
       "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#website"

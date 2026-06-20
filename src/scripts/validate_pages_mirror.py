@@ -17,6 +17,8 @@ DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
+PAGES_SITE_NAME = "Mark Siazon Profile Index"
+PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
 PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
@@ -226,6 +228,16 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index missing social image metadata: {tag}")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
         issues.append("Pages index missing Open Graph locale metadata")
+    expected_site_name_tags = {
+        f"<title>{PAGES_SITE_NAME}</title>",
+        f'<meta property="og:title" content="{PAGES_SITE_NAME}"/>',
+        f'<meta property="og:site_name" content="{PAGES_SITE_NAME}"/>',
+        f'<meta name="twitter:title" content="{PAGES_SITE_NAME}"/>',
+        f"<h1>{PAGES_SITE_NAME}</h1>",
+    }
+    for tag in expected_site_name_tags:
+        if tag not in index_text:
+            issues.append(f"Pages index site-name signal drift: {tag}")
     if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in index_text:
         issues.append("Pages index missing SVG favicon link")
     favicon = artifact / FAVICON_HREF
@@ -236,6 +248,17 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages SVG favicon must declare a square viewBox")
     if not any("Person" in node_type_set(node) and has_english_knows_language(node) for node in parsed_jsonld_nodes):
         issues.append("Pages index inline JSON-LD missing Person English knowsLanguage signal")
+    pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
+    if not pages_site or "WebSite" not in node_type_set(pages_site):
+        issues.append("Pages index inline JSON-LD missing Pages WebSite node")
+    else:
+        if pages_site.get("name") != PAGES_SITE_NAME:
+            issues.append("Pages index inline JSON-LD WebSite site-name drift")
+        if pages_site.get("url") != f"{PAGES_BASE}/":
+            issues.append("Pages index inline JSON-LD WebSite url drift")
+        missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
+        if missing_alternates:
+            issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:

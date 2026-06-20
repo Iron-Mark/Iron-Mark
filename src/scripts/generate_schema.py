@@ -15,6 +15,8 @@ INDEX = ROOT / "llms-index.json"
 
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
+PAGES_SITE_NAME = "Mark Siazon Profile Index"
+PAGES_SITE_ALTERNATE_NAMES = ["Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"]
 PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 IMAGE_WIDTH = 400
@@ -271,7 +273,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "WebSite",
             "@id": pages_site_id,
-            "name": "Mark Siazon Profile Index (GitHub Pages)",
+            "name": PAGES_SITE_NAME,
+            "alternateName": PAGES_SITE_ALTERNATE_NAMES,
             "url": f"{PAGES}/",
             "author": ref(person_id),
             "publisher": ref(person_id),
@@ -285,7 +288,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "CollectionPage",
             "@id": pages_page_id,
             "url": pages["home"],
-            "name": "Mark Siazon GitHub Profile Index",
+            "name": PAGES_SITE_NAME,
+            "alternateName": PAGES_SITE_ALTERNATE_NAMES,
             "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
             "isPartOf": ref(pages_site_id),
             "about": ref(person_id),

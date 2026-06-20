@@ -17,6 +17,7 @@ INDEX = ROOT / "llms-index.json"
 PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
 PAGES_BASE = PAGES_URL.rstrip("/")
 PORTFOLIO_URL = "https://www.marksiazon.dev"
+SITE_NAME = "Mark Siazon Profile Index"
 SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
@@ -170,7 +171,7 @@ def main() -> None:
   <meta name="author" content="Mark Siazon"/>
   <meta property="og:type" content="profile"/>
   <meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>
-  <meta property="og:title" content="Mark Siazon - Profile Index"/>
+  <meta property="og:title" content="{SITE_NAME}"/>
   <meta property="og:description" content="{escape(description)}"/>
   <meta property="og:url" content="{PAGES_URL}"/>
   <meta property="og:image" content="{SOCIAL_IMAGE}"/>
@@ -179,17 +180,17 @@ def main() -> None:
   <meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>
   <meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>
   <meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
-  <meta property="og:site_name" content="Mark Siazon Profile Index"/>
+  <meta property="og:site_name" content="{SITE_NAME}"/>
   <meta property="profile:first_name" content="Mark"/>
   <meta property="profile:last_name" content="Siazon"/>
   <meta property="profile:username" content="Iron-Mark"/>
   <meta name="date" content="{escape(updated)}"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Mark Siazon - Profile Index"/>
+  <meta name="twitter:title" content="{SITE_NAME}"/>
   <meta name="twitter:description" content="{escape(description)}"/>
   <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
   <meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
-  <title>Mark Siazon - Profile Index</title>
+  <title>{SITE_NAME}</title>
   <link rel="icon" type="image/svg+xml" href="{FAVICON}"/>
   <link rel="canonical" href="{PAGES_URL}"/>
   <link rel="author" href="humans.txt"/>
@@ -236,7 +237,7 @@ def main() -> None:
 </head>
 <body>
   <main>
-    <h1>Mark Siazon - GitHub Profile Index</h1>
+    <h1>{SITE_NAME}</h1>
     <p>{escape(entity.get("description", description))}</p>
     <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
     <h2>Profile Facts</h2>

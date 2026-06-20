@@ -34,6 +34,8 @@ GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
+PAGES_SITE_NAME = "Mark Siazon Profile Index"
+PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
 PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
@@ -442,6 +444,16 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in html:
         errors.append("docs/index.html missing Open Graph locale metadata")
+    expected_site_name_tags = {
+        f"<title>{PAGES_SITE_NAME}</title>",
+        f'<meta property="og:title" content="{PAGES_SITE_NAME}"/>',
+        f'<meta property="og:site_name" content="{PAGES_SITE_NAME}"/>',
+        f'<meta name="twitter:title" content="{PAGES_SITE_NAME}"/>',
+        f"<h1>{PAGES_SITE_NAME}</h1>",
+    }
+    for tag in expected_site_name_tags:
+        if tag not in html:
+            errors.append(f"docs/index.html site-name signal drift: {tag}")
     if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in html:
         errors.append("docs/index.html missing SVG favicon link")
     favicon = FAVICON.read_text(encoding="utf-8") if FAVICON.exists() else ""
@@ -850,10 +862,26 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    pages_site = node_by_id(person_schema, pages_site_id)
+    if not pages_site or "WebSite" not in node_types(pages_site):
+        errors.append("person.jsonld missing GitHub Pages WebSite node")
+    else:
+        if pages_site.get("name") != PAGES_SITE_NAME:
+            errors.append("person.jsonld Pages WebSite site name drift")
+        if pages_site.get("url") != f"{PAGES}/":
+            errors.append("person.jsonld Pages WebSite url drift")
+        missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
+        if missing_site_alternates:
+            errors.append(f"person.jsonld Pages WebSite alternateName missing: {missing_site_alternates}")
     pages_page = node_by_id(person_schema, pages_page_id)
     if not pages_page or "CollectionPage" not in node_types(pages_page):
         errors.append("person.jsonld missing GitHub Pages CollectionPage node")
     else:
+        if pages_page.get("name") != PAGES_SITE_NAME:
+            errors.append("person.jsonld Pages CollectionPage site name drift")
+        missing_page_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_page.get("alternateName", [])))
+        if missing_page_alternates:
+            errors.append(f"person.jsonld Pages CollectionPage alternateName missing: {missing_page_alternates}")
         if pages_page.get("url") != pages.get("home"):
             errors.append("person.jsonld Pages CollectionPage url drift")
         if pages_page.get("isPartOf", {}).get("@id") != pages_site_id:
