@@ -20,6 +20,7 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    available_languages,
     contact_action_description,
     contact_action_name,
     contact_action_platforms,
@@ -1425,8 +1426,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index ServiceChannel description drift")
         if service_channel.get("serviceUrl") != availability.get("contact"):
             issues.append("Pages index ServiceChannel serviceUrl drift")
-        if "en" not in service_channel.get("availableLanguage", []):
-            issues.append("Pages index ServiceChannel availableLanguage must include en")
+        if service_channel.get("availableLanguage") != available_languages():
+            issues.append("Pages index ServiceChannel availableLanguage drift")
         missing_channel_services = sorted(expected_service_ids - ref_ids(service_channel.get("providesService")))
         if missing_channel_services:
             issues.append(f"Pages index ServiceChannel providesService missing: {missing_channel_services}")

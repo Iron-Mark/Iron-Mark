@@ -70,6 +70,10 @@ def person_languages() -> list[dict[str, str]]:
     return [PROFILE_LANGUAGE]
 
 
+def available_languages() -> list[str]:
+    return ["en"]
+
+
 def ref(node_id: str) -> dict[str, str]:
     return {"@id": node_id}
 
@@ -473,7 +477,7 @@ def person_hiring_contact(data: dict[str, Any]) -> dict[str, Any]:
         "email": person_email(data),
         "url": availability.get("contact", entity["url"]),
         "areaServed": spatial_coverage(data),
-        "availableLanguage": ["en"],
+        "availableLanguage": available_languages(),
     }
 
 
@@ -1385,7 +1389,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": service_channel_name(),
             "description": service_channel_description(),
             "serviceUrl": availability.get("contact", entity["url"]),
-            "availableLanguage": ["en"],
+            "availableLanguage": available_languages(),
             "providesService": [ref(service_id) for service_id in service_ids],
             "about": ref(person_id),
             "dateModified": updated,
