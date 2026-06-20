@@ -1372,6 +1372,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project node must be CreativeWork: {project.get('name')}")
         if project_node.get("url") != project.get("caseStudy"):
             errors.append(f"person.jsonld featured project url drift: {project.get('name')}")
+        if project_node.get("mainEntityOfPage") != project.get("caseStudy"):
+            errors.append(f"person.jsonld featured project mainEntityOfPage drift: {project.get('name')}")
         if project_node.get("description") != project.get("focus"):
             errors.append(f"person.jsonld featured project description drift: {project.get('name')}")
         if project_node.get("creator", {}).get("@id") != person_id:

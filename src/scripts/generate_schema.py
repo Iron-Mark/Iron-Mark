@@ -665,6 +665,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": project_id(project),
             "name": project["name"],
             "url": project["caseStudy"],
+            "mainEntityOfPage": project["caseStudy"],
             "description": project.get("focus", ""),
             "creator": ref(person_id),
             "author": ref(person_id),

@@ -584,6 +584,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         if not project_node or "CreativeWork" not in node_type_set(project_node):
             issues.append(f"Pages index inline JSON-LD missing featured project CreativeWork: {project.get('name')}")
             continue
+        if project_node.get("mainEntityOfPage") != project.get("caseStudy"):
+            issues.append(f"Pages index featured project mainEntityOfPage drift: {project.get('name')}")
         expected_image = expected_project_image(project)
         if not expected_image:
             issues.append(f"Pages index cannot resolve featured project cover image: {project.get('name')}")
