@@ -58,6 +58,16 @@ def main() -> None:
             if p.get(key):
                 lines.append(f"- {key.title()}: {p[key]}")
         lines.append("")
+    lines.append("## Hackathon and lab projects")
+    lines.append("")
+    for p in data.get("hackathonLab", []):
+        lines.append(f"### {p['name']}")
+        lines.append(f"- Focus: {p.get('focus', '')}")
+        for key in ("caseStudy", "demo", "live", "repo", "model"):
+            if p.get(key):
+                label = "Case study" if key == "caseStudy" else key.title()
+                lines.append(f"- {label}: {p[key]}")
+        lines.append("")
     lines.append("## Achievements")
     lines.append("")
     for a in data.get("achievements", []):

@@ -49,6 +49,14 @@ def project_id(project: dict[str, Any]) -> str:
     return f"{project['caseStudy']}#project"
 
 
+def lab_project_url(project: dict[str, Any]) -> str:
+    return str(project.get("caseStudy") or project.get("demo") or project.get("live") or project.get("repo") or "")
+
+
+def lab_project_id(project: dict[str, Any]) -> str:
+    return f"{lab_project_url(project)}#project"
+
+
 def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
     slug = str(project.get("slug", ""))
     if not slug:
@@ -122,6 +130,11 @@ def dataset_variable_measurements(
             "@type": "PropertyValue",
             "name": "Featured project count",
             "value": len(data.get("featuredProjects", [])),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Hackathon and lab project count",
+            "value": len(data.get("hackathonLab", [])),
         },
         {
             "@type": "PropertyValue",
@@ -286,9 +299,14 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     service_ids = [fragment_id(person_id, f"service-{slugify(focus)}") for focus in availability.get("focus", [])]
     downloads = machine_downloads(pages, repo)
     mentioned_entities = (
-        [ref(f"{GITHUB_BLOB}/llms-index.json#featured-projects"), ref(fragment_id(person_id, "services"))]
+        [
+            ref(f"{GITHUB_BLOB}/llms-index.json#featured-projects"),
+            ref(f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"),
+            ref(fragment_id(person_id, "services")),
+        ]
         + [ref(service_id) for service_id in service_ids]
         + [ref(project_id(project)) for project in data.get("featuredProjects", [])]
+        + [ref(lab_project_id(project)) for project in data.get("hackathonLab", []) if lab_project_url(project)]
     )
 
     knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", [])
@@ -617,6 +635,22 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 for index, project in enumerate(data.get("featuredProjects", []), start=1)
             ],
         },
+        {
+            "@type": "ItemList",
+            "@id": f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
+            "name": "Mark Siazon hackathon and lab projects",
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "numberOfItems": len(data.get("hackathonLab", [])),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": index,
+                    "item": ref(lab_project_id(project)),
+                }
+                for index, project in enumerate(data.get("hackathonLab", []), start=1)
+                if lab_project_url(project)
+            ],
+        },
     ]
 
     for focus, offer_id, service_id in zip(availability.get("focus", []), offer_ids, service_ids, strict=False):
@@ -713,6 +747,47 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "isPartOf": ref(project_id(project)),
                 }
             )
+
+    for project in data.get("hackathonLab", []):
+        url = lab_project_url(project)
+        if not url:
+            continue
+        same_as = [
+            value
+            for value in unique_compact(
+                [
+                    project.get("caseStudy"),
+                    project.get("demo"),
+                    project.get("live"),
+                    project.get("repo"),
+                    project.get("model"),
+                ]
+            )
+            if value != url
+        ]
+        graph.append(
+            {
+                "@type": "CreativeWork",
+                "@id": lab_project_id(project),
+                "name": project["name"],
+                "url": url,
+                "mainEntityOfPage": url,
+                "description": project.get("focus", "Hackathon and lab project maintained by Mark Siazon."),
+                "creator": ref(person_id),
+                "author": ref(person_id),
+                "about": ref(person_id),
+                "isPartOf": ref(portfolio_site_id if project.get("caseStudy") else github_site_id),
+                "inLanguage": "en",
+                "dateModified": updated,
+                "isAccessibleForFree": True,
+                "sameAs": same_as,
+                "keywords": compact([slugify(project.get("name", "")), project.get("focus")]),
+                "genre": "Hackathon and lab project",
+                "citation": citations,
+                **usage_policy,
+                **sd_provenance,
+            }
+        )
 
     graph.extend(
         [

@@ -15,7 +15,14 @@ from urllib.parse import urlparse
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
-from generate_schema import download_id, machine_downloads, slugify
+from generate_schema import (
+    download_id,
+    lab_project_id,
+    lab_project_url,
+    machine_downloads,
+    slugify,
+    unique_compact,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -134,6 +141,19 @@ def ref_ids(value: object) -> set[str]:
     return {item.get("@id", "") for item in value if isinstance(item, dict)}
 
 
+def item_list_ref_ids(value: object) -> set[str]:
+    if not isinstance(value, list):
+        return set()
+    refs: set[str] = set()
+    for item in value:
+        if not isinstance(item, dict):
+            continue
+        item_ref = item.get("item", {})
+        if isinstance(item_ref, dict) and item_ref.get("@id"):
+            refs.add(str(item_ref["@id"]))
+    return refs
+
+
 def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
     asset = project_cover_asset(str(project.get("slug", "")))
     if not asset:
@@ -165,6 +185,9 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
     featured_projects = index_data.get("featuredProjects", [])
     if not isinstance(featured_projects, list):
         featured_projects = []
+    lab_projects = index_data.get("hackathonLab", [])
+    if not isinstance(lab_projects, list):
+        lab_projects = []
     answer_snippets = aeo.get("answerSnippets", [])
     if not isinstance(answer_snippets, list):
         answer_snippets = []
@@ -187,6 +210,11 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
             "@type": "PropertyValue",
             "name": "Featured project count",
             "value": len(featured_projects),
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Hackathon and lab project count",
+            "value": len(lab_projects),
         },
         {
             "@type": "PropertyValue",
@@ -249,11 +277,18 @@ def expected_mention_ids(index_data: dict[str, object]) -> set[str]:
         for project in index_data.get("featuredProjects", [])
         if isinstance(project, dict) and project.get("caseStudy")
     }
+    lab_project_ids = {
+        lab_project_id(project)
+        for project in index_data.get("hackathonLab", [])
+        if isinstance(project, dict) and lab_project_url(project)
+    }
     return {
         f"{GITHUB_BLOB}/llms-index.json#featured-projects",
+        f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
         "https://www.marksiazon.dev/#services",
         *service_ids,
         *project_ids,
+        *lab_project_ids,
     }
 
 
@@ -616,6 +651,40 @@ def validate_artifact(artifact: Path) -> list[str]:
             if isinstance(answer, dict):
                 check_structured_data_provenance(issues, answer, index_data, f"Pages index Answer {node.get('name')}")
     jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
+    featured_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#featured-projects")
+    if not featured_list or "ItemList" not in node_type_set(featured_list):
+        issues.append("Pages index inline JSON-LD missing featured projects ItemList")
+    else:
+        featured_projects = index_data.get("featuredProjects", [])
+        if not isinstance(featured_projects, list):
+            featured_projects = []
+        if featured_list.get("numberOfItems") != len(featured_projects):
+            issues.append("Pages index featured projects ItemList count drift")
+        expected_featured_ids = {
+            f"{project.get('caseStudy')}#project"
+            for project in featured_projects
+            if isinstance(project, dict)
+        }
+        missing_featured_ids = sorted(expected_featured_ids - item_list_ref_ids(featured_list.get("itemListElement")))
+        if missing_featured_ids:
+            issues.append(f"Pages index featured projects ItemList missing: {missing_featured_ids}")
+    lab_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#hackathon-lab")
+    if not lab_list or "ItemList" not in node_type_set(lab_list):
+        issues.append("Pages index inline JSON-LD missing hackathon and lab ItemList")
+    else:
+        lab_projects = index_data.get("hackathonLab", [])
+        if not isinstance(lab_projects, list):
+            lab_projects = []
+        if lab_list.get("numberOfItems") != len(lab_projects):
+            issues.append("Pages index hackathon and lab ItemList count drift")
+        expected_lab_ids = {
+            lab_project_id(project)
+            for project in lab_projects
+            if isinstance(project, dict) and lab_project_url(project)
+        }
+        missing_lab_ids = sorted(expected_lab_ids - item_list_ref_ids(lab_list.get("itemListElement")))
+        if missing_lab_ids:
+            issues.append(f"Pages index hackathon and lab ItemList missing: {missing_lab_ids}")
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):
             continue
@@ -648,6 +717,48 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_image_rights(issues, image_node, index_data, f"Pages index featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected_project_id:
             issues.append(f"Pages index featured project image about drift: {project.get('name')}")
+    for project in index_data.get("hackathonLab", []):
+        if not isinstance(project, dict):
+            continue
+        expected_project_id = lab_project_id(project)
+        project_node = jsonld_node_by_id.get(expected_project_id)
+        if not project_node or "CreativeWork" not in node_type_set(project_node):
+            issues.append(f"Pages index inline JSON-LD missing hackathon/lab CreativeWork: {project.get('name')}")
+            continue
+        expected_url = lab_project_url(project)
+        if project_node.get("url") != expected_url:
+            issues.append(f"Pages index hackathon/lab project url drift: {project.get('name')}")
+        if project_node.get("mainEntityOfPage") != expected_url:
+            issues.append(f"Pages index hackathon/lab project mainEntityOfPage drift: {project.get('name')}")
+        if project_node.get("description") != project.get("focus"):
+            issues.append(f"Pages index hackathon/lab project description drift: {project.get('name')}")
+        if project_node.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append(f"Pages index hackathon/lab project creator drift: {project.get('name')}")
+        if project_node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append(f"Pages index hackathon/lab project author drift: {project.get('name')}")
+        expected_parent = "https://www.marksiazon.dev/#website" if project.get("caseStudy") else "https://github.com/Iron-Mark/Iron-Mark#website"
+        if project_node.get("isPartOf", {}).get("@id") != expected_parent:
+            issues.append(f"Pages index hackathon/lab project isPartOf drift: {project.get('name')}")
+        expected_same_as = [
+            value
+            for value in unique_compact(
+                [
+                    project.get("caseStudy"),
+                    project.get("demo"),
+                    project.get("live"),
+                    project.get("repo"),
+                    project.get("model"),
+                ]
+            )
+            if value != expected_url
+        ]
+        if project_node.get("sameAs") != expected_same_as:
+            issues.append(f"Pages index hackathon/lab project sameAs drift: {project.get('name')}")
+        if project_node.get("genre") != "Hackathon and lab project":
+            issues.append(f"Pages index hackathon/lab project genre drift: {project.get('name')}")
+        check_content_usage_policy(issues, project_node, f"Pages index hackathon/lab project {project.get('name')}")
+        check_global_citation(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
+        check_structured_data_provenance(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
     machine_readable = index_data.get("machineReadable", {})
     pages_for_downloads = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
     if isinstance(pages_for_downloads, dict):

@@ -172,6 +172,29 @@ def node_ref_ids(values: Any) -> set[str]:
     return {item.get("@id", "") for item in values if isinstance(item, dict) and item.get("@id")}
 
 
+def unique_compact(values: list[str | None]) -> list[str]:
+    output: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if value and value not in seen:
+            output.append(value)
+            seen.add(value)
+    return output
+
+
+def item_list_ref_ids(values: Any) -> set[str]:
+    if not isinstance(values, list):
+        return set()
+    refs: set[str] = set()
+    for item in values:
+        if not isinstance(item, dict):
+            continue
+        ref_value = item.get("item", {})
+        if isinstance(ref_value, dict) and ref_value.get("@id"):
+            refs.add(ref_value["@id"])
+    return refs
+
+
 def repo_public_url_values(value: Any) -> list[str]:
     if isinstance(value, dict):
         found: list[str] = []
@@ -264,6 +287,11 @@ def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> 
         },
         {
             "@type": "PropertyValue",
+            "name": "Hackathon and lab project count",
+            "value": len(data.get("hackathonLab", [])),
+        },
+        {
+            "@type": "PropertyValue",
             "name": "Answer snippet count",
             "value": len(data.get("aeo", {}).get("answerSnippets", [])),
         },
@@ -309,12 +337,23 @@ def expected_mention_ids(data: dict[str, Any], person_fragment_base: str) -> set
         for focus in data.get("availability", {}).get("focus", [])
     }
     project_ids = {f"{project.get('caseStudy')}#project" for project in data.get("featuredProjects", [])}
+    lab_project_ids = {lab_project_id(project) for project in data.get("hackathonLab", []) if lab_project_url(project)}
     return {
         f"{GITHUB_BLOB}/llms-index.json#featured-projects",
+        f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
         f"{person_fragment_base}services",
         *service_ids,
         *project_ids,
+        *lab_project_ids,
     }
+
+
+def lab_project_url(project: dict[str, Any]) -> str:
+    return str(project.get("caseStudy") or project.get("demo") or project.get("live") or project.get("repo") or "")
+
+
+def lab_project_id(project: dict[str, Any]) -> str:
+    return f"{lab_project_url(project)}#project"
 
 
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
@@ -868,8 +907,11 @@ def check_knowledge_graph(data: dict[str, Any]) -> None:
             required.add((name, "focusesOn", focus))
     for project in data.get("hackathonLab", []):
         name = project.get("name", "")
+        focus = project.get("focus", "")
         if name:
             required.add((entity_name, "maintains", name))
+        if name and focus:
+            required.add((name, "focusesOn", focus))
 
     missing = sorted(item for item in required if item not in triples)
     if missing:
@@ -889,11 +931,20 @@ def check_generated_context(data: dict[str, Any]) -> None:
         errors.append("public/llms-ctx-full.txt missing Availability remote flag")
     if "## Knowledge graph triples" not in text:
         errors.append("public/llms-ctx-full.txt missing Knowledge graph triples section")
+    if "## Hackathon and lab projects" not in text:
+        errors.append("public/llms-ctx-full.txt missing Hackathon and lab projects section")
     for triple in data.get("triples", []):
         if isinstance(triple, list) and len(triple) == 3:
             line = f"- {triple[0]} | {triple[1]} | {triple[2]}"
             if line not in text:
                 errors.append(f"public/llms-ctx-full.txt missing knowledge graph triple: {line}")
+    for project in data.get("hackathonLab", []):
+        name = project.get("name", "")
+        focus = project.get("focus", "")
+        if name and f"### {name}" not in text:
+            errors.append(f"public/llms-ctx-full.txt missing lab project heading: {name}")
+        if focus and f"- Focus: {focus}" not in text:
+            errors.append(f"public/llms-ctx-full.txt missing lab project focus: {name}")
 
 
 def check_schema(data: dict[str, Any], questions: list[str]) -> None:
@@ -1401,6 +1452,30 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld citation drift for: {question.get('question')}")
 
     project_nodes = {node.get("@id", ""): node for node in graph_nodes(person_schema)}
+    featured_list_id = f"{GITHUB_BLOB}/llms-index.json#featured-projects"
+    featured_list = project_nodes.get(featured_list_id)
+    expected_featured_project_ids = {f"{project.get('caseStudy')}#project" for project in data.get("featuredProjects", [])}
+    if not featured_list or "ItemList" not in node_types(featured_list):
+        errors.append("person.jsonld missing featured projects ItemList")
+    else:
+        if featured_list.get("numberOfItems") != len(data.get("featuredProjects", [])):
+            errors.append("person.jsonld featured projects ItemList count drift")
+        missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
+        if missing_featured_items:
+            errors.append(f"person.jsonld featured projects ItemList missing: {missing_featured_items}")
+
+    lab_list_id = f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"
+    lab_list = project_nodes.get(lab_list_id)
+    expected_lab_project_ids = {lab_project_id(project) for project in data.get("hackathonLab", []) if lab_project_url(project)}
+    if not lab_list or "ItemList" not in node_types(lab_list):
+        errors.append("person.jsonld missing hackathon and lab ItemList")
+    else:
+        if lab_list.get("numberOfItems") != len(data.get("hackathonLab", [])):
+            errors.append("person.jsonld hackathon and lab ItemList count drift")
+        missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))
+        if missing_lab_items:
+            errors.append(f"person.jsonld hackathon and lab ItemList missing: {missing_lab_items}")
+
     for project in data.get("featuredProjects", []):
         expected = f"{project.get('caseStudy')}#project"
         project_node = project_nodes.get(expected)
@@ -1455,6 +1530,57 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project image isPartOf drift: {project.get('name')}")
         if image_node.get("dateModified") != data.get("updated"):
             errors.append(f"person.jsonld featured project image dateModified drift: {project.get('name')}")
+
+    for project in data.get("hackathonLab", []):
+        expected = lab_project_id(project)
+        project_node = project_nodes.get(expected)
+        if not project_node:
+            errors.append(f"person.jsonld missing hackathon/lab project node: {project.get('name')}")
+            continue
+        expected_url = lab_project_url(project)
+        if "CreativeWork" not in node_types(project_node):
+            errors.append(f"person.jsonld hackathon/lab project node must be CreativeWork: {project.get('name')}")
+        if project_node.get("url") != expected_url:
+            errors.append(f"person.jsonld hackathon/lab project url drift: {project.get('name')}")
+        if project_node.get("mainEntityOfPage") != expected_url:
+            errors.append(f"person.jsonld hackathon/lab project mainEntityOfPage drift: {project.get('name')}")
+        if project_node.get("description") != project.get("focus"):
+            errors.append(f"person.jsonld hackathon/lab project description drift: {project.get('name')}")
+        if project_node.get("creator", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld hackathon/lab project creator drift: {project.get('name')}")
+        if project_node.get("author", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld hackathon/lab project author drift: {project.get('name')}")
+        if project_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld hackathon/lab project about drift: {project.get('name')}")
+        expected_parent = data.get("identifiers", {}).get("portfolioWebsite") if project.get("caseStudy") else data.get("identifiers", {}).get("githubProfileIndex")
+        if project_node.get("isPartOf", {}).get("@id") != expected_parent:
+            errors.append(f"person.jsonld hackathon/lab project isPartOf drift: {project.get('name')}")
+        if project_node.get("inLanguage") != "en":
+            errors.append(f"person.jsonld hackathon/lab project inLanguage must be en: {project.get('name')}")
+        if project_node.get("dateModified") != data.get("updated"):
+            errors.append(f"person.jsonld hackathon/lab project dateModified drift: {project.get('name')}")
+        if project_node.get("isAccessibleForFree") is not True:
+            errors.append(f"person.jsonld hackathon/lab project must be marked isAccessibleForFree: {project.get('name')}")
+        expected_same_as = [
+            value
+            for value in unique_compact(
+                [
+                    project.get("caseStudy"),
+                    project.get("demo"),
+                    project.get("live"),
+                    project.get("repo"),
+                    project.get("model"),
+                ]
+            )
+            if value != expected_url
+        ]
+        if project_node.get("sameAs") != expected_same_as:
+            errors.append(f"person.jsonld hackathon/lab project sameAs drift: {project.get('name')}")
+        if project_node.get("genre") != "Hackathon and lab project":
+            errors.append(f"person.jsonld hackathon/lab project genre drift: {project.get('name')}")
+        check_content_usage_policy(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
+        check_global_citation(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
+        check_structured_data_provenance(project_node, data, f"person.jsonld hackathon/lab project {project.get('name')}")
 
 
 def sitemap_entries() -> list[dict[str, str]]:

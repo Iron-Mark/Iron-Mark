@@ -301,12 +301,17 @@
       "items": {
         "type": "object",
         "required": [
-          "name"
+          "name",
+          "focus"
         ],
         "properties": {
           "name": {
             "type": "string",
             "minLength": 1
+          },
+          "focus": {
+            "type": "string",
+            "minLength": 5
           },
           "caseStudy": {
             "type": "string",

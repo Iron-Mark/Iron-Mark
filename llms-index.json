@@ -204,22 +204,26 @@
       "name": "qwen-ui-lab",
       "caseStudy": "https://www.marksiazon.dev/projects/qwen-ui-lab",
       "repo": "https://github.com/Iron-Mark/qwen-ui-lab",
-      "live": "https://qwen-ui-lab.vercel.app"
+      "live": "https://qwen-ui-lab.vercel.app",
+      "focus": "Qwen3-VL React UI lab with Tailwind and Next.js"
     },
     {
       "name": "Smart Profile",
       "demo": "https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/",
-      "repo": "https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System"
+      "repo": "https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System",
+      "focus": "AI credentials SaaS prototype with Supabase"
     },
     {
       "name": "Kudlit",
       "caseStudy": "https://www.marksiazon.dev/projects/kudlit",
-      "repo": "https://github.com/ACSADians/kudlit-app"
+      "repo": "https://github.com/ACSADians/kudlit-app",
+      "focus": "Flutter Baybayin learning app for Android release"
     },
     {
       "name": "Pulse",
       "caseStudy": "https://www.marksiazon.dev/projects/pulse",
-      "live": "https://pacebeats.vercel.app"
+      "live": "https://pacebeats.vercel.app",
+      "focus": "Wear OS GPS and heart-rate telemetry companion"
     }
   ],
   "achievements": [
@@ -637,9 +641,19 @@
       "qwen-ui-lab"
     ],
     [
+      "qwen-ui-lab",
+      "focusesOn",
+      "Qwen3-VL React UI lab with Tailwind and Next.js"
+    ],
+    [
       "Mark Siazon",
       "maintains",
       "Smart Profile"
+    ],
+    [
+      "Smart Profile",
+      "focusesOn",
+      "AI credentials SaaS prototype with Supabase"
     ],
     [
       "Mark Siazon",
@@ -647,9 +661,19 @@
       "Kudlit"
     ],
     [
+      "Kudlit",
+      "focusesOn",
+      "Flutter Baybayin learning app for Android release"
+    ],
+    [
       "Mark Siazon",
       "maintains",
       "Pulse"
+    ],
+    [
+      "Pulse",
+      "focusesOn",
+      "Wear OS GPS and heart-rate telemetry companion"
     ],
     [
       "Mark Siazon",
