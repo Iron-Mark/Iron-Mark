@@ -28,6 +28,7 @@ SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
 DOCS_INDEX = ROOT / "docs" / "index.html"
 LLMS_CTX = PUBLIC / "llms-ctx-full.txt"
+FAVICON = ROOT / "assets" / "brand" / "mark-siazon-favicon.svg"
 
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
@@ -38,6 +39,7 @@ SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profil
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
+FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 README_PRODUCTION_FORBIDDEN_LINKS = {
     ".github/": "GitHub maintenance files",
     "docs/STRUCTURE.md": "internal repository layout docs",
@@ -440,6 +442,13 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in html:
         errors.append("docs/index.html missing Open Graph locale metadata")
+    if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in html:
+        errors.append("docs/index.html missing SVG favicon link")
+    favicon = FAVICON.read_text(encoding="utf-8") if FAVICON.exists() else ""
+    if not favicon:
+        errors.append("missing SVG favicon asset")
+    elif 'viewBox="0 0 96 96"' not in favicon:
+        errors.append("SVG favicon must declare a square viewBox")
     expected_image_tags = {
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',

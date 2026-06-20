@@ -22,6 +22,7 @@ SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profil
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
+FAVICON = "assets/brand/mark-siazon-favicon.svg"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 
@@ -189,6 +190,7 @@ def main() -> None:
   <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
   <meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <title>Mark Siazon - Profile Index</title>
+  <link rel="icon" type="image/svg+xml" href="{FAVICON}"/>
   <link rel="canonical" href="{PAGES_URL}"/>
   <link rel="author" href="humans.txt"/>
 {identity_links}

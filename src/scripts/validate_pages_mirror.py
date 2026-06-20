@@ -22,6 +22,7 @@ SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profil
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
+FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
@@ -225,6 +226,14 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index missing social image metadata: {tag}")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
         issues.append("Pages index missing Open Graph locale metadata")
+    if f'<link rel="icon" type="image/svg+xml" href="{FAVICON_HREF}"/>' not in index_text:
+        issues.append("Pages index missing SVG favicon link")
+    favicon = artifact / FAVICON_HREF
+    favicon_text = favicon.read_text(encoding="utf-8") if favicon.exists() else ""
+    if not favicon_text:
+        issues.append("Pages artifact missing SVG favicon asset")
+    elif 'viewBox="0 0 96 96"' not in favicon_text:
+        issues.append("Pages SVG favicon must declare a square viewBox")
     if not any("Person" in node_type_set(node) and has_english_knows_language(node) for node in parsed_jsonld_nodes):
         issues.append("Pages index inline JSON-LD missing Person English knowsLanguage signal")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
