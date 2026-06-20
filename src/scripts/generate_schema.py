@@ -957,7 +957,18 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": availability.get("recruiterBrief", entity["url"]),
             "numberOfItems": len(offer_ids),
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
-            "itemListElement": [ref(offer_id) for offer_id in offer_ids],
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": index,
+                    "name": focus,
+                    "item": ref(offer_id),
+                }
+                for index, (focus, offer_id) in enumerate(
+                    zip(availability.get("focus", []), offer_ids, strict=False),
+                    start=1,
+                )
+            ],
         },
         {
             "@type": "WebSite",

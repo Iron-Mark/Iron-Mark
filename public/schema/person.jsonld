@@ -318,19 +318,44 @@
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
-          "@id": "https://www.marksiazon.dev/#offer-product-design"
+          "@type": "ListItem",
+          "position": 1,
+          "name": "product design",
+          "item": {
+            "@id": "https://www.marksiazon.dev/#offer-product-design"
+          }
         },
         {
-          "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
+          "@type": "ListItem",
+          "position": 2,
+          "name": "full-stack engineering",
+          "item": {
+            "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
+          }
         },
         {
-          "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI workflow prototypes",
+          "item": {
+            "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
+          }
         },
         {
-          "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
+          "@type": "ListItem",
+          "position": 4,
+          "name": "mobile and Wear OS UX",
+          "item": {
+            "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
+          }
         },
         {
-          "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Web3 proof systems",
+          "item": {
+            "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
+          }
         }
       ]
     },

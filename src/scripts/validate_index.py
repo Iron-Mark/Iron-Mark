@@ -1409,9 +1409,32 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                 errors.append("person.jsonld OfferCatalog numberOfItems drift")
             if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":
                 errors.append("person.jsonld OfferCatalog itemListOrder drift")
-            missing_catalog_refs = sorted(expected_offer_ids - node_ref_ids(offer_catalog.get("itemListElement")))
+            catalog_entries = offer_catalog.get("itemListElement", [])
+            missing_catalog_refs = sorted(expected_offer_ids - item_list_ref_ids(catalog_entries))
             if missing_catalog_refs:
                 errors.append(f"person.jsonld OfferCatalog itemListElement missing: {missing_catalog_refs}")
+            if not isinstance(catalog_entries, list):
+                errors.append("person.jsonld OfferCatalog itemListElement must be a list")
+            else:
+                for position, focus in enumerate(availability.get("focus", []), start=1):
+                    expected_offer_id = f"{person_fragment_base}offer-{slugify(focus)}"
+                    entry = next(
+                        (
+                            item
+                            for item in catalog_entries
+                            if isinstance(item, dict)
+                            and item.get("item", {}).get("@id") == expected_offer_id
+                        ),
+                        None,
+                    )
+                    if not entry:
+                        continue
+                    if "ListItem" not in node_types(entry):
+                        errors.append(f"person.jsonld OfferCatalog entry must be ListItem for: {focus}")
+                    if entry.get("position") != position:
+                        errors.append(f"person.jsonld OfferCatalog position drift for: {focus}")
+                    if entry.get("name") != focus:
+                        errors.append(f"person.jsonld OfferCatalog entry name drift for: {focus}")
         service_channel = node_by_id(person_schema, service_channel_id)
         if not service_channel or "ServiceChannel" not in node_types(service_channel):
             errors.append("person.jsonld missing hiring ServiceChannel node")

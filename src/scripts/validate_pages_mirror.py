@@ -979,9 +979,32 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index OfferCatalog numberOfItems drift")
         if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":
             issues.append("Pages index OfferCatalog itemListOrder drift")
-        missing_catalog_refs = sorted(expected_offer_ids - ref_ids(offer_catalog.get("itemListElement")))
+        catalog_entries = offer_catalog.get("itemListElement", [])
+        missing_catalog_refs = sorted(expected_offer_ids - item_list_ref_ids(catalog_entries))
         if missing_catalog_refs:
             issues.append(f"Pages index OfferCatalog itemListElement missing: {missing_catalog_refs}")
+        if not isinstance(catalog_entries, list):
+            issues.append("Pages index OfferCatalog itemListElement must be a list")
+        else:
+            for position, focus in enumerate(focus_items, start=1):
+                expected_offer_id = f"https://www.marksiazon.dev/#offer-{slugify(str(focus))}"
+                entry = next(
+                    (
+                        item
+                        for item in catalog_entries
+                        if isinstance(item, dict)
+                        and item.get("item", {}).get("@id") == expected_offer_id
+                    ),
+                    None,
+                )
+                if not entry:
+                    continue
+                if "ListItem" not in node_type_set(entry):
+                    issues.append(f"Pages index OfferCatalog entry must be ListItem: {focus}")
+                if entry.get("position") != position:
+                    issues.append(f"Pages index OfferCatalog position drift: {focus}")
+                if entry.get("name") != str(focus):
+                    issues.append(f"Pages index OfferCatalog entry name drift: {focus}")
     service_channel = next((node for node in parsed_jsonld_nodes if node.get("@id") == service_channel_id), None)
     if not service_channel or "ServiceChannel" not in node_type_set(service_channel):
         issues.append("Pages index inline JSON-LD missing hiring ServiceChannel")
