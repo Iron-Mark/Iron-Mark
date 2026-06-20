@@ -709,6 +709,7 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
         errors.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         errors.append(f"{label} creator url drift")
+    check_publisher_metadata(node, data, label)
     check_ownership_metadata(node, data, label)
     check_structured_data_provenance(node, data, label)
 
@@ -766,6 +767,12 @@ def check_ownership_metadata(node: dict[str, Any], data: dict[str, Any], label: 
     expected_year = int(str(data.get("updated", "0000"))[:4])
     if node.get("copyrightYear") != expected_year:
         errors.append(f"{label} copyrightYear drift")
+
+
+def check_publisher_metadata(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    person_id = data.get("entity", {}).get("@id")
+    if node.get("publisher", {}).get("@id") != person_id:
+        errors.append(f"{label} publisher drift")
 
 
 def check_review_metadata(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
@@ -1872,6 +1879,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if download.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld DataDownload about drift for: {key}")
         check_global_citation(download, data, f"person.jsonld DataDownload {key}")
+        check_publisher_metadata(download, data, f"person.jsonld DataDownload {key}")
         check_ownership_metadata(download, data, f"person.jsonld DataDownload {key}")
         check_structured_data_provenance(download, data, f"person.jsonld DataDownload {key}")
     repo = data.get("machineReadable", {}).get("repo", {})
@@ -1903,6 +1911,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld CreativeWork must be marked isAccessibleForFree for: {node_id}")
         if work.get("author", {}).get("@id") != person_id:
             errors.append(f"person.jsonld CreativeWork author drift for: {node_id}")
+        if work.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld CreativeWork publisher drift for: {node_id}")
         if work.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld CreativeWork about drift for: {node_id}")
         check_content_usage_policy(work, data, f"person.jsonld CreativeWork {node_id}")
@@ -2029,6 +2039,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld featured projects ItemList abstract drift")
         if featured_list.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld featured projects ItemList about drift")
+        if featured_list.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld featured projects ItemList publisher drift")
         if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
             errors.append("person.jsonld featured projects ItemList isPartOf drift")
         if featured_list.get("inLanguage") != "en":
@@ -2056,6 +2068,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld hackathon and lab ItemList abstract drift")
         if lab_list.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld hackathon and lab ItemList about drift")
+        if lab_list.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld hackathon and lab ItemList publisher drift")
         if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
             errors.append("person.jsonld hackathon and lab ItemList isPartOf drift")
         if lab_list.get("inLanguage") != "en":
@@ -2088,6 +2102,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project creator drift: {project.get('name')}")
         if project_node.get("author", {}).get("@id") != person_id:
             errors.append(f"person.jsonld featured project author drift: {project.get('name')}")
+        if project_node.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld featured project publisher drift: {project.get('name')}")
         if project_node.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld featured project about drift: {project.get('name')}")
         if project_node.get("inLanguage") != "en":
@@ -2157,6 +2173,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld hackathon/lab project creator drift: {project.get('name')}")
         if project_node.get("author", {}).get("@id") != person_id:
             errors.append(f"person.jsonld hackathon/lab project author drift: {project.get('name')}")
+        if project_node.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld hackathon/lab project publisher drift: {project.get('name')}")
         if project_node.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld hackathon/lab project about drift: {project.get('name')}")
         expected_parent = data.get("identifiers", {}).get("portfolioWebsite") if project.get("caseStudy") else data.get("identifiers", {}).get("githubProfileIndex")

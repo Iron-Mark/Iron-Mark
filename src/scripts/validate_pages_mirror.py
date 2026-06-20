@@ -573,6 +573,7 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
         issues.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         issues.append(f"{label} creator url drift")
+    check_publisher_metadata(issues, node, index_data, label)
     check_ownership_metadata(issues, node, index_data, label)
     check_structured_data_provenance(issues, node, index_data, label)
 
@@ -643,6 +644,21 @@ def check_ownership_metadata(
     expected_year = int(str(index_data.get("updated", "0000"))[:4])
     if node.get("copyrightYear") != expected_year:
         issues.append(f"{label} copyrightYear drift")
+
+
+def check_publisher_metadata(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    entity = index_data.get("entity", {})
+    if not isinstance(entity, dict):
+        issues.append(f"{label} cannot validate publisher metadata")
+        return
+    publisher = node.get("publisher", {})
+    if not isinstance(publisher, dict) or publisher.get("@id") != entity.get("@id"):
+        issues.append(f"{label} publisher drift")
 
 
 def check_review_metadata(
@@ -1329,6 +1345,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index featured projects ItemList abstract drift")
         if featured_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index featured projects ItemList about drift")
+        check_publisher_metadata(issues, featured_list, index_data, "Pages index featured projects ItemList")
         if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
             issues.append("Pages index featured projects ItemList isPartOf drift")
         if featured_list.get("inLanguage") != "en":
@@ -1361,6 +1378,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index hackathon and lab ItemList abstract drift")
         if lab_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index hackathon and lab ItemList about drift")
+        check_publisher_metadata(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
         if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
             issues.append("Pages index hackathon and lab ItemList isPartOf drift")
         if lab_list.get("inLanguage") != "en":
@@ -1389,6 +1407,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             continue
         if project_node.get("mainEntityOfPage") != project.get("caseStudy"):
             issues.append(f"Pages index featured project mainEntityOfPage drift: {project.get('name')}")
+        check_publisher_metadata(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         expected_image = expected_project_image(project)
         if not expected_image:
             issues.append(f"Pages index cannot resolve featured project cover image: {project.get('name')}")
@@ -1443,6 +1462,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index hackathon/lab project creator drift: {project.get('name')}")
         if project_node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append(f"Pages index hackathon/lab project author drift: {project.get('name')}")
+        check_publisher_metadata(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
         expected_parent = "https://www.marksiazon.dev/#website" if project.get("caseStudy") else "https://github.com/Iron-Mark/Iron-Mark#website"
         if project_node.get("isPartOf", {}).get("@id") != expected_parent:
             issues.append(f"Pages index hackathon/lab project isPartOf drift: {project.get('name')}")
@@ -1486,6 +1506,7 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index DataDownload inLanguage must be en: {item['key']}")
             check_content_usage_policy(issues, download, f"Pages index DataDownload {item['key']}")
             check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
+            check_publisher_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_ownership_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
