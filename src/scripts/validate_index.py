@@ -32,6 +32,7 @@ from generate_schema import (
     dataset_temporal_coverage,
     download_description,
     download_integrity_metadata,
+    faq_item_identifier,
     featured_projects_list_description,
     lab_projects_list_description,
     offer_description,
@@ -261,6 +262,19 @@ def repo_public_url_values(value: Any) -> list[str]:
     if isinstance(value, str) and (value.startswith(f"{GITHUB_BLOB}/public/") or value.startswith(f"{GITHUB_RAW}/public/")):
         return [value]
     return []
+
+
+def pages_rewrite_public_source(source: str) -> str:
+    replacements = (
+        (f"{GITHUB_BLOB}/public/schema/", f"{PAGES}/schema/"),
+        (f"{GITHUB_BLOB}/public/", f"{PAGES}/"),
+        (f"{GITHUB_RAW}/public/schema/", f"{PAGES}/schema/"),
+        (f"{GITHUB_RAW}/public/", f"{PAGES}/"),
+    )
+    for prefix, replacement in replacements:
+        if source.startswith(prefix):
+            return source.replace(prefix, replacement, 1)
+    return source
 
 
 def area_names(values: Any) -> set[str]:
@@ -1095,9 +1109,25 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         if not question_node:
             errors.append(f"docs/index.html inline JSON-LD missing Question node: {expected}")
             continue
+        if question_node.get("url") != expected:
+            errors.append(f"docs/index.html inline JSON-LD Question url drift for: {snippet.get('question')}")
+        if question_node.get("identifier") != faq_item_identifier(expected, "question"):
+            errors.append(f"docs/index.html inline JSON-LD Question identifier drift for: {snippet.get('question')}")
+        expected_citations = {pages_rewrite_public_source(str(source)) for source in snippet.get("sources", [])}
+        question_citations = question_node.get("citation", [])
+        if isinstance(question_citations, str):
+            question_citations = [question_citations]
+        if set(question_citations) != expected_citations:
+            errors.append(f"docs/index.html inline JSON-LD Question citation drift for: {snippet.get('question')}")
         answer_node = question_node.get("acceptedAnswer", {})
         if not isinstance(answer_node, dict) or answer_node.get("text") != snippet.get("answer"):
             errors.append(f"docs/index.html inline JSON-LD answer drift for: {snippet.get('question')}")
+            continue
+        answer_id = f"{expected}-answer"
+        if answer_node.get("url") != answer_id:
+            errors.append(f"docs/index.html inline JSON-LD Answer url drift for: {snippet.get('question')}")
+        if answer_node.get("identifier") != faq_item_identifier(answer_id, "answer"):
+            errors.append(f"docs/index.html inline JSON-LD Answer identifier drift for: {snippet.get('question')}")
     for index, script in enumerate(
         re.findall(
             r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
@@ -2152,6 +2182,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         question_node = question_by_id[expected]
         if question_node.get("url") != expected:
             errors.append(f"faq.jsonld Question url drift for: {question.get('question')}")
+        if question_node.get("identifier") != faq_item_identifier(expected, "question"):
+            errors.append(f"faq.jsonld Question identifier drift for: {question.get('question')}")
         if question_node.get("about", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Question about drift for: {question.get('question')}")
         if question_node.get("author", {}).get("@id") != person_id:
@@ -2170,14 +2202,23 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question dateModified drift for: {question.get('question')}")
         if question_node.get("isAccessibleForFree") is not True:
             errors.append(f"faq.jsonld Question must be isAccessibleForFree for: {question.get('question')}")
+        expected_citations = set(question.get("sources", []))
+        question_citations = question_node.get("citation", [])
+        if isinstance(question_citations, str):
+            question_citations = [question_citations]
+        if set(question_citations) != expected_citations:
+            errors.append(f"faq.jsonld Question citation drift for: {question.get('question')}")
         check_content_usage_policy(question_node, data, f"faq.jsonld Question {question.get('question')}")
         check_structured_data_provenance(question_node, data, f"faq.jsonld Question {question.get('question')}")
         accepted_answer = question_node.get("acceptedAnswer", {})
         if not isinstance(accepted_answer, dict):
             errors.append(f"faq.jsonld Question missing acceptedAnswer: {expected}")
             continue
-        if accepted_answer.get("url") != f"{expected}-answer":
+        answer_id = f"{expected}-answer"
+        if accepted_answer.get("url") != answer_id:
             errors.append(f"faq.jsonld Answer url drift for: {question.get('question')}")
+        if accepted_answer.get("identifier") != faq_item_identifier(answer_id, "answer"):
+            errors.append(f"faq.jsonld Answer identifier drift for: {question.get('question')}")
         if accepted_answer.get("text") != question.get("answer"):
             errors.append(f"faq.jsonld answer drift for: {question.get('question')}")
         if accepted_answer.get("author", {}).get("@id") != person_id:
@@ -2198,7 +2239,6 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Answer must be isAccessibleForFree for: {question.get('question')}")
         check_content_usage_policy(accepted_answer, data, f"faq.jsonld Answer {question.get('question')}")
         check_structured_data_provenance(accepted_answer, data, f"faq.jsonld Answer {question.get('question')}")
-        expected_citations = set(question.get("sources", []))
         answer_citations = accepted_answer.get("citation", [])
         if isinstance(answer_citations, str):
             answer_citations = [answer_citations]

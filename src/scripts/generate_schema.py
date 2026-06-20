@@ -82,6 +82,15 @@ def faq_question_id(faq_id: str, question: str) -> str:
     return f"{faq_url}#{slugify(question)}"
 
 
+def faq_item_identifier(item_id: str, kind: str) -> dict[str, str]:
+    return {
+        "@type": "PropertyValue",
+        "propertyID": f"Iron-Mark FAQ {kind}",
+        "value": item_id.rsplit("#", 1)[-1],
+        "url": item_id,
+    }
+
+
 def project_id(project: dict[str, Any]) -> str:
     return f"{project['caseStudy']}#project"
 
@@ -1844,12 +1853,14 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
 
     for item in snippets:
         question_id = faq_question_id(faq_id, item["question"])
+        answer_id = f"{question_id}-answer"
         graph.append(
             {
                 "@type": "Question",
                 "@id": question_id,
                 "name": item["question"],
                 "url": question_id,
+                "identifier": faq_item_identifier(question_id, "question"),
                 "author": ref(person_id),
                 "publisher": ref(person_id),
                 "about": ref(person_id),
@@ -1859,12 +1870,14 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "inLanguage": "en",
                 "dateModified": data["updated"],
                 "isAccessibleForFree": True,
+                "citation": item.get("sources", []),
                 **usage_policy,
                 **sd_provenance,
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "@id": f"{question_id}-answer",
-                    "url": f"{question_id}-answer",
+                    "@id": answer_id,
+                    "url": answer_id,
+                    "identifier": faq_item_identifier(answer_id, "answer"),
                     "text": item["answer"],
                     "author": ref(person_id),
                     "publisher": ref(person_id),

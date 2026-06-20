@@ -26,6 +26,7 @@ from generate_schema import (
     download_description,
     download_id,
     download_integrity_metadata,
+    faq_item_identifier,
     faq_question_id,
     featured_projects_list_description,
     lab_projects_list_description,
@@ -53,6 +54,7 @@ DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
+GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 PAGES_HOST = "iron-mark.github.io"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
@@ -508,6 +510,8 @@ def pages_rewrite_public_source(source: str) -> str:
     replacements = (
         (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
         (f"{GITHUB_BLOB}/public/", f"{PAGES_BASE}/"),
+        (f"{GITHUB_RAW}/public/schema/", f"{PAGES_BASE}/schema/"),
+        (f"{GITHUB_RAW}/public/", f"{PAGES_BASE}/"),
     )
     for prefix, replacement in replacements:
         if source.startswith(prefix):
@@ -1458,12 +1462,23 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_ownership_metadata(issues, faq_page, index_data, "Pages index FAQPage")
         check_spatial_coverage(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
+    faq_sources_by_question = {
+        str(item.get("question", "")): [
+            pages_rewrite_public_source(str(source))
+            for source in item.get("sources", [])
+        ]
+        for item in index_data.get("aeo", {}).get("answerSnippets", [])
+        if isinstance(item, dict)
+    }
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
         if "Question" in node_types:
             question_id = str(node.get("@id", ""))
+            question_name = str(node.get("name", ""))
             if node.get("url") != question_id:
                 issues.append(f"Pages index Question url drift: {node.get('name')}")
+            if node.get("identifier") != faq_item_identifier(question_id, "question"):
+                issues.append(f"Pages index Question identifier drift: {node.get('name')}")
             if node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
                 issues.append(f"Pages index Question author drift: {node.get('name')}")
             if node.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
@@ -1476,12 +1491,21 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Question answerCount drift: {node.get('name')}")
             if node.get("isAccessibleForFree") is not True:
                 issues.append(f"Pages index Question must be isAccessibleForFree: {node.get('name')}")
+            expected_citations = set(faq_sources_by_question.get(question_name, []))
+            question_citations = node.get("citation", [])
+            if isinstance(question_citations, str):
+                question_citations = [question_citations]
+            if set(question_citations) != expected_citations:
+                issues.append(f"Pages index Question citation drift: {node.get('name')}")
             check_content_usage_policy(issues, node, f"Pages index Question {node.get('name')}")
             check_structured_data_provenance(issues, node, index_data, f"Pages index Question {node.get('name')}")
             answer = node.get("acceptedAnswer", {})
             if isinstance(answer, dict):
-                if answer.get("url") != f"{question_id}-answer":
+                answer_id = f"{question_id}-answer"
+                if answer.get("url") != answer_id:
                     issues.append(f"Pages index Answer url drift: {node.get('name')}")
+                if answer.get("identifier") != faq_item_identifier(answer_id, "answer"):
+                    issues.append(f"Pages index Answer identifier drift: {node.get('name')}")
                 if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
                     issues.append(f"Pages index Answer publisher drift: {node.get('name')}")
                 if answer.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
