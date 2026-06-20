@@ -27,6 +27,7 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    contact_action_platforms,
     data_catalog_description,
     data_catalog_name,
     dataset_alternate_names,
@@ -2655,6 +2656,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ContactAction EntryPoint httpMethod must be GET")
         if contact_entry.get("inLanguage") != "en":
             errors.append("person.jsonld ContactAction EntryPoint inLanguage must be en")
+        if contact_entry.get("actionPlatform") != contact_action_platforms():
+            errors.append("person.jsonld ContactAction EntryPoint actionPlatform drift")
     dataset = node_by_id(person_schema, pages_dataset_id)
     downloads = expected_downloads(pages)
     expected_download_ids = {download_id(key) for key in downloads}

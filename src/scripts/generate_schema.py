@@ -393,6 +393,13 @@ def service_audience() -> dict[str, str]:
     }
 
 
+def contact_action_platforms() -> list[str]:
+    return [
+        "https://schema.org/DesktopWebPlatform",
+        "https://schema.org/MobileWebPlatform",
+    ]
+
+
 def person_occupations(data: dict[str, Any]) -> list[dict[str, Any]]:
     return [
         {
@@ -1308,10 +1315,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "contentType": "text/html",
             "httpMethod": "GET",
             "inLanguage": "en",
-            "actionPlatform": [
-                "https://schema.org/DesktopWebPlatform",
-                "https://schema.org/MobileWebPlatform",
-            ],
+            "actionPlatform": contact_action_platforms(),
         },
         {
             "@type": "ServiceChannel",

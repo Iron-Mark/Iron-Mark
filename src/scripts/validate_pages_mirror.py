@@ -20,6 +20,7 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    contact_action_platforms,
     data_catalog_description,
     data_catalog_name,
     dataset_alternate_names,
@@ -1185,6 +1186,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index contact EntryPoint httpMethod must be GET")
         if contact_entry.get("inLanguage") != "en":
             issues.append("Pages index contact EntryPoint inLanguage must be en")
+        if contact_entry.get("actionPlatform") != contact_action_platforms():
+            issues.append("Pages index contact EntryPoint actionPlatform drift")
     if "Knowledge Graph" not in index_text:
         issues.append("Pages index missing visible Knowledge Graph section")
     if '<main id="main-content">' not in index_text:
