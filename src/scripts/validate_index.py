@@ -1771,6 +1771,17 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if contact_entry.get("urlTemplate") != data.get("availability", {}).get("contact"):
             errors.append("person.jsonld ContactAction EntryPoint urlTemplate drift")
+        if contact_entry.get("name") != "Mark Siazon contact form entry point":
+            errors.append("person.jsonld ContactAction EntryPoint name drift")
+        if (
+            contact_entry.get("description")
+            != "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
+        ):
+            errors.append("person.jsonld ContactAction EntryPoint description drift")
+        if contact_entry.get("contentType") != "text/html":
+            errors.append("person.jsonld ContactAction EntryPoint contentType must be text/html")
+        if contact_entry.get("httpMethod") != "GET":
+            errors.append("person.jsonld ContactAction EntryPoint httpMethod must be GET")
         if contact_entry.get("inLanguage") != "en":
             errors.append("person.jsonld ContactAction EntryPoint inLanguage must be en")
     dataset = node_by_id(person_schema, pages_dataset_id)

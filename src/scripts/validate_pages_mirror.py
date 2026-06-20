@@ -805,6 +805,31 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing hiring ContactAction EntryPoint")
     if "https://www.marksiazon.dev/contact" not in "\n".join(jsonld_scripts):
         issues.append("Pages index inline JSON-LD missing contact URL")
+    availability = index_data.get("availability", {})
+    if not isinstance(availability, dict):
+        availability = {}
+    contact_entry = next(
+        (node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#contact-entrypoint"),
+        None,
+    )
+    if not contact_entry or "EntryPoint" not in node_type_set(contact_entry):
+        issues.append("Pages index inline JSON-LD missing contact EntryPoint node")
+    else:
+        if contact_entry.get("name") != "Mark Siazon contact form entry point":
+            issues.append("Pages index contact EntryPoint name drift")
+        if (
+            contact_entry.get("description")
+            != "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
+        ):
+            issues.append("Pages index contact EntryPoint description drift")
+        if contact_entry.get("urlTemplate") != availability.get("contact"):
+            issues.append("Pages index contact EntryPoint urlTemplate drift")
+        if contact_entry.get("contentType") != "text/html":
+            issues.append("Pages index contact EntryPoint contentType must be text/html")
+        if contact_entry.get("httpMethod") != "GET":
+            issues.append("Pages index contact EntryPoint httpMethod must be GET")
+        if contact_entry.get("inLanguage") != "en":
+            issues.append("Pages index contact EntryPoint inLanguage must be en")
     if "Knowledge Graph" not in index_text:
         issues.append("Pages index missing visible Knowledge Graph section")
     if '<main id="main-content">' not in index_text:

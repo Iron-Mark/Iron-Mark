@@ -1079,7 +1079,11 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "EntryPoint",
             "@id": contact_entry_id,
+            "name": "Mark Siazon contact form entry point",
+            "description": "Web entry point for Mark Siazon hiring contact and recruiter inquiries.",
             "urlTemplate": availability.get("contact", entity["url"]),
+            "contentType": "text/html",
+            "httpMethod": "GET",
             "inLanguage": "en",
             "actionPlatform": [
                 "https://schema.org/DesktopWebPlatform",
