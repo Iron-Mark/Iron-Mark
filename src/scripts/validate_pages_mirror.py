@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
-from build_pages_mirror import featured_project_cover_urls, project_cover_asset
+from build_pages_mirror import featured_project_cover_urls, project_cover_asset, rewrite_github_public_urls
 from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
@@ -1044,6 +1044,19 @@ def validate_artifact(artifact: Path) -> list[str]:
         index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
     except Exception:
         index_data = {}
+    faq_text = (artifact / "FAQ.md").read_text(encoding="utf-8") if (artifact / "FAQ.md").exists() else ""
+    aeo = index_data.get("aeo", {}) if isinstance(index_data, dict) else {}
+    snippets = aeo.get("answerSnippets", []) if isinstance(aeo, dict) else []
+    for item in snippets:
+        if not isinstance(item, dict):
+            continue
+        question = str(item.get("question", ""))
+        answer = str(item.get("answer", ""))
+        deployed_answer = rewrite_github_public_urls(answer)
+        if question and question not in faq_text:
+            issues.append(f"Pages FAQ.md missing visible AEO question: {question}")
+        if deployed_answer and deployed_answer not in faq_text:
+            issues.append(f"Pages FAQ.md missing visible AEO answer: {question}")
     for name in ("llms.txt", "humans.txt", "robots.txt"):
         path = artifact / name
         if not path.exists():

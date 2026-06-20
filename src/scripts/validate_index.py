@@ -1401,6 +1401,7 @@ def faq_questions() -> list[str]:
 
 def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
     snippets = data.get("aeo", {}).get("answerSnippets", [])
+    faq_text = FAQ.read_text(encoding="utf-8") if FAQ.exists() else ""
     if len(snippets) < 15:
         warnings.append(f"Only {len(snippets)} answerSnippets (recommend 15+)")
     snippet_questions = [item.get("question", "") for item in snippets]
@@ -1425,6 +1426,8 @@ def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
         if bad_sources:
             errors.append(f"AEO snippet has invalid source URL(s) for {question}: {bad_sources}")
         answer = item.get("answer", "")
+        if answer and answer not in faq_text:
+            errors.append(f"AEO snippet answer missing from visible FAQ.md: {question}")
         relative_refs = re.findall(
             r"(?<![\w:/.-])(?:public/[\w./-]+|schema/[\w./-]+|llms-index\.json|llms\.txt|"
             r"llms-full\.txt|llms-ctx-full\.txt|FAQ\.md|HOW-TO-CITE\.md|STACK\.md|"
