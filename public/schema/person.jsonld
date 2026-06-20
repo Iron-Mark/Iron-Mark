@@ -85,7 +85,10 @@
         "Wear OS",
         "AI trust and safety",
         "Web3 Stellar Celo",
-        "Baybayin education technology"
+        "Baybayin education technology",
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+        }
       ],
       "knowsLanguage": [
         {
@@ -959,6 +962,9 @@
         },
         {
           "@id": "https://iron-mark.github.io/Iron-Mark/robots.txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
         }
       ]
     },
@@ -1210,9 +1216,6 @@
       "publisher": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "about": {
-        "@id": "https://www.marksiazon.dev/#person"
-      },
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -1355,6 +1358,14 @@
         },
         {
           "@id": "https://www.marksiazon.dev/projects/pulse#project"
+        }
+      ],
+      "about": [
+        {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
         }
       ],
       "isAccessibleForFree": true,
@@ -1554,6 +1565,112 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
+      "@type": "DefinedTermSet",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy",
+      "name": "Mark Siazon profile topic taxonomy",
+      "description": "Controlled topic, service, and geography terms used by the Mark Siazon profile index.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#website"
+      },
+      "hasDefinedTerm": [
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-mark-siazon"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-iron-mark"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-product-designer-philippines"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-full-stack-developer-philippines"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-uiux-engineer"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-proof-backed-portfolio"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-react-developer"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-nextjs-developer"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-flutter-developer"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-wear-os"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-ai-trust-and-safety"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-web3-stellar-celo"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-baybayin-education-technology"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-product-design"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-full-stack-engineering"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-ai-workflow-prototypes"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-mobile-and-wear-os-ux"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-web3-proof-systems"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-philippines"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-southeast-asia"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#term-remote-global"
+        }
+      ],
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/proof",
+        "https://www.marksiazon.dev/projects",
+        "https://github.com/Iron-Mark/Iron-Mark",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026,
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-06-20",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+    },
+    {
       "@type": "ItemList",
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#featured-projects",
       "name": "Mark Siazon featured projects",
@@ -1675,6 +1792,342 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "copyrightYear": 2026
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-mark-siazon",
+      "name": "Mark Siazon",
+      "termCode": "mark-siazon",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Mark Siazon.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-iron-mark",
+      "name": "Iron-Mark",
+      "termCode": "iron-mark",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Iron-Mark.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-product-designer-philippines",
+      "name": "product designer Philippines",
+      "termCode": "product-designer-philippines",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: product designer Philippines.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-full-stack-developer-philippines",
+      "name": "full-stack developer Philippines",
+      "termCode": "full-stack-developer-philippines",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: full-stack developer Philippines.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-uiux-engineer",
+      "name": "UI/UX engineer",
+      "termCode": "uiux-engineer",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: UI/UX engineer.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-proof-backed-portfolio",
+      "name": "proof-backed portfolio",
+      "termCode": "proof-backed-portfolio",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: proof-backed portfolio.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-react-developer",
+      "name": "React developer",
+      "termCode": "react-developer",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: React developer.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-nextjs-developer",
+      "name": "Next.js developer",
+      "termCode": "nextjs-developer",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Next.js developer.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-flutter-developer",
+      "name": "Flutter developer",
+      "termCode": "flutter-developer",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Flutter developer.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-wear-os",
+      "name": "Wear OS",
+      "termCode": "wear-os",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Wear OS.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-ai-trust-and-safety",
+      "name": "AI trust and safety",
+      "termCode": "ai-trust-and-safety",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: AI trust and safety.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-web3-stellar-celo",
+      "name": "Web3 Stellar Celo",
+      "termCode": "web3-stellar-celo",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Web3 Stellar Celo.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-baybayin-education-technology",
+      "name": "Baybayin education technology",
+      "termCode": "baybayin-education-technology",
+      "description": "Primary search and answer-engine topic for the Mark Siazon profile index: Baybayin education technology.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-product-design",
+      "name": "product design",
+      "termCode": "product-design",
+      "description": "Service focus for Mark Siazon hiring and collaboration discovery: product design.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-full-stack-engineering",
+      "name": "full-stack engineering",
+      "termCode": "full-stack-engineering",
+      "description": "Service focus for Mark Siazon hiring and collaboration discovery: full-stack engineering.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-ai-workflow-prototypes",
+      "name": "AI workflow prototypes",
+      "termCode": "ai-workflow-prototypes",
+      "description": "Service focus for Mark Siazon hiring and collaboration discovery: AI workflow prototypes.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-mobile-and-wear-os-ux",
+      "name": "mobile and Wear OS UX",
+      "termCode": "mobile-and-wear-os-ux",
+      "description": "Service focus for Mark Siazon hiring and collaboration discovery: mobile and Wear OS UX.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-web3-proof-systems",
+      "name": "Web3 proof systems",
+      "termCode": "web3-proof-systems",
+      "description": "Service focus for Mark Siazon hiring and collaboration discovery: Web3 proof systems.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-philippines",
+      "name": "Philippines",
+      "termCode": "philippines",
+      "description": "Geographic service target for the Mark Siazon profile index: Philippines.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-southeast-asia",
+      "name": "Southeast Asia",
+      "termCode": "southeast-asia",
+      "description": "Geographic service target for the Mark Siazon profile index: Southeast Asia.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#term-remote-global",
+      "name": "remote global",
+      "termCode": "remote-global",
+      "description": "Geographic service target for the Mark Siazon profile index: remote global.",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "inDefinedTermSet": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
     },
     {
       "@type": "Offer",

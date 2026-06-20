@@ -312,6 +312,30 @@ def pages_speakable_spec(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def topic_term_values(data: dict[str, Any]) -> list[str]:
+    return unique_compact(
+        data.get("seo", {}).get("primaryKeywords", [])
+        + data.get("availability", {}).get("focus", [])
+        + data.get("seo", {}).get("geoTargets", [])
+    )
+
+
+def topic_term_set_id() -> str:
+    return f"{PAGES}/#topic-taxonomy"
+
+
+def topic_term_id(value: str) -> str:
+    return f"{PAGES}/#term-{slugify(value)}"
+
+
+def topic_term_description(data: dict[str, Any], value: str) -> str:
+    if value in data.get("seo", {}).get("geoTargets", []):
+        return f"Geographic service target for the Mark Siazon profile index: {value}."
+    if value in data.get("availability", {}).get("focus", []):
+        return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
+    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+
+
 def citation_targets(data: dict[str, Any]) -> list[str]:
     repo = data["machineReadable"]["repo"]
     return unique_compact(
@@ -445,6 +469,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    pages_topic_set_id = topic_term_set_id()
     portfolio_site_id = ids["portfolioWebsite"]
     contact_action_id = fragment_id(person_id, "contact-action")
     contact_entry_id = fragment_id(person_id, "contact-entrypoint")
@@ -468,7 +493,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         + [ref(lab_project_id(project)) for project in data.get("hackathonLab", []) if lab_project_url(project)]
     )
 
-    knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", [])
+    topic_terms = topic_term_values(data)
+    knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []) + [ref(pages_topic_set_id)]
     dataset_keywords = unique_compact(
         data.get("seo", {}).get("primaryKeywords", [])
         + data.get("seo", {}).get("geoTargets", [])
@@ -685,6 +711,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 ref(pages["humansTxt"]),
                 ref(pages["sitemap"]),
                 ref(pages["robots"]),
+                ref(pages_topic_set_id),
             ],
         },
         {
@@ -779,7 +806,6 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "abstract": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
             "creator": ref(person_id),
             "publisher": ref(person_id),
-            "about": ref(person_id),
             "inLanguage": "en",
             "dateModified": updated,
             "license": data.get("license"),
@@ -789,6 +815,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),
             "mentions": mentioned_entities,
+            "about": [ref(person_id), ref(pages_topic_set_id)],
             "isAccessibleForFree": True,
             "distribution": [ref(download_id(item["key"])) for item in downloads],
             **usage_policy,
@@ -834,6 +861,23 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             **sd_provenance,
         },
         {
+            "@type": "DefinedTermSet",
+            "@id": pages_topic_set_id,
+            "name": "Mark Siazon profile topic taxonomy",
+            "description": "Controlled topic, service, and geography terms used by the Mark Siazon profile index.",
+            "url": pages["home"],
+            "inLanguage": "en",
+            "dateModified": updated,
+            "about": ref(person_id),
+            "isPartOf": ref(pages_site_id),
+            "hasDefinedTerm": [ref(topic_term_id(term)) for term in topic_terms],
+            "isAccessibleForFree": True,
+            "citation": citations,
+            **usage_policy,
+            **ownership,
+            **sd_provenance,
+        },
+        {
             "@type": "ItemList",
             "@id": f"{GITHUB_BLOB}/llms-index.json#featured-projects",
             "name": "Mark Siazon featured projects",
@@ -867,6 +911,22 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             **ownership,
         },
     ]
+
+    for term in topic_terms:
+        graph.append(
+            {
+                "@type": "DefinedTerm",
+                "@id": topic_term_id(term),
+                "name": term,
+                "termCode": slugify(term),
+                "description": topic_term_description(data, term),
+                "url": pages["home"],
+                "inDefinedTermSet": ref(pages_topic_set_id),
+                "inLanguage": "en",
+                "dateModified": updated,
+                "about": ref(person_id),
+            }
+        )
 
     for focus, offer_id, service_id in zip(availability.get("focus", []), offer_ids, service_ids, strict=False):
         graph.extend(

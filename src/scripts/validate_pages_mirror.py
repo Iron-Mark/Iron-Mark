@@ -425,6 +425,39 @@ def expected_pages_speakable(index_data: dict[str, object]) -> dict[str, object]
     }
 
 
+def expected_topic_terms(index_data: dict[str, object]) -> list[str]:
+    seo = index_data.get("seo", {})
+    availability = index_data.get("availability", {})
+    primary = seo.get("primaryKeywords", []) if isinstance(seo, dict) else []
+    focus = availability.get("focus", []) if isinstance(availability, dict) else []
+    geo = seo.get("geoTargets", []) if isinstance(seo, dict) else []
+    return unique_compact(
+        [str(item) for item in primary if isinstance(item, str)]
+        + [str(item) for item in focus if isinstance(item, str)]
+        + [str(item) for item in geo if isinstance(item, str)]
+    )
+
+
+def topic_term_set_id() -> str:
+    return f"{PAGES_BASE}/#topic-taxonomy"
+
+
+def topic_term_id(value: str) -> str:
+    return f"{PAGES_BASE}/#term-{slugify(value)}"
+
+
+def expected_topic_term_description(index_data: dict[str, object], value: str) -> str:
+    seo = index_data.get("seo", {})
+    availability = index_data.get("availability", {})
+    geo = seo.get("geoTargets", []) if isinstance(seo, dict) else []
+    focus = availability.get("focus", []) if isinstance(availability, dict) else []
+    if value in geo:
+        return f"Geographic service target for the Mark Siazon profile index: {value}."
+    if value in focus:
+        return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
+    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+
+
 def pages_rewrite_public_source(source: str) -> str:
     replacements = (
         (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
@@ -771,6 +804,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     ]
     for person_node in person_nodes:
         check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
+    pages_topic_set_id = topic_term_set_id()
+    if person and pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
+        issues.append("Pages index Person knowsAbout missing topic taxonomy")
     availability = index_data.get("availability", {})
     if not isinstance(availability, dict):
         availability = {}
@@ -868,6 +904,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage relatedLink drift")
         if pages_page.get("speakable") != expected_pages_speakable(index_data):
             issues.append("Pages index CollectionPage speakable drift")
+        if pages_topic_set_id not in ref_ids(pages_page.get("hasPart")):
+            issues.append("Pages index CollectionPage hasPart missing topic taxonomy")
         check_review_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
@@ -875,6 +913,45 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_spatial_coverage(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
         check_expected_mentions(issues, pages_page, index_data, "Pages index CollectionPage")
+    topic_terms = expected_topic_terms(index_data)
+    topic_set = next((node for node in parsed_jsonld_nodes if node.get("@id") == pages_topic_set_id), None)
+    if not topic_set or "DefinedTermSet" not in node_type_set(topic_set):
+        issues.append("Pages index inline JSON-LD missing DefinedTermSet")
+    else:
+        if topic_set.get("name") != "Mark Siazon profile topic taxonomy":
+            issues.append("Pages index DefinedTermSet name drift")
+        if topic_set.get("url") != f"{PAGES_BASE}/":
+            issues.append("Pages index DefinedTermSet url drift")
+        if topic_set.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index DefinedTermSet dateModified drift")
+        if topic_set.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index DefinedTermSet about drift")
+        if topic_set.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#website":
+            issues.append("Pages index DefinedTermSet isPartOf drift")
+        missing_terms = sorted({topic_term_id(term) for term in topic_terms} - ref_ids(topic_set.get("hasDefinedTerm")))
+        if missing_terms:
+            issues.append(f"Pages index DefinedTermSet hasDefinedTerm missing: {missing_terms}")
+        check_content_usage_policy(issues, topic_set, "Pages index DefinedTermSet")
+        check_global_citation(issues, topic_set, index_data, "Pages index DefinedTermSet")
+        check_ownership_metadata(issues, topic_set, index_data, "Pages index DefinedTermSet")
+        check_structured_data_provenance(issues, topic_set, index_data, "Pages index DefinedTermSet")
+    for term in topic_terms:
+        term_node = next((node for node in parsed_jsonld_nodes if node.get("@id") == topic_term_id(term)), None)
+        if not term_node or "DefinedTerm" not in node_type_set(term_node):
+            issues.append(f"Pages index missing DefinedTerm node: {term}")
+            continue
+        if term_node.get("name") != term:
+            issues.append(f"Pages index DefinedTerm name drift: {term}")
+        if term_node.get("termCode") != slugify(term):
+            issues.append(f"Pages index DefinedTerm termCode drift: {term}")
+        if term_node.get("description") != expected_topic_term_description(index_data, term):
+            issues.append(f"Pages index DefinedTerm description drift: {term}")
+        if term_node.get("inDefinedTermSet", {}).get("@id") != pages_topic_set_id:
+            issues.append(f"Pages index DefinedTerm set drift: {term}")
+        if term_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append(f"Pages index DefinedTerm about drift: {term}")
+        if term_node.get("dateModified") != index_data.get("updated"):
+            issues.append(f"Pages index DefinedTerm dateModified drift: {term}")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
     if not data_catalog or "DataCatalog" not in node_type_set(data_catalog):
         issues.append("Pages index inline JSON-LD missing DataCatalog")
@@ -923,6 +1000,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset spatialCoverage drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
             issues.append("Pages index inline Dataset variableMeasured drift")
+        if {"https://www.marksiazon.dev/#person", pages_topic_set_id} - ref_ids(dataset.get("about")):
+            issues.append("Pages index Dataset about must reference Person and topic taxonomy")
         check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_ownership_metadata(issues, dataset, index_data, "Pages index Dataset")

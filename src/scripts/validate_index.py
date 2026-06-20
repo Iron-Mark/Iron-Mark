@@ -497,6 +497,30 @@ def expected_pages_speakable(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def expected_topic_terms(data: dict[str, Any]) -> list[str]:
+    return unique_compact(
+        data.get("seo", {}).get("primaryKeywords", [])
+        + data.get("availability", {}).get("focus", [])
+        + data.get("seo", {}).get("geoTargets", [])
+    )
+
+
+def topic_term_set_id() -> str:
+    return f"{PAGES}/#topic-taxonomy"
+
+
+def topic_term_id(value: str) -> str:
+    return f"{PAGES}/#term-{slugify(value)}"
+
+
+def expected_topic_term_description(data: dict[str, Any], value: str) -> str:
+    if value in data.get("seo", {}).get("geoTargets", []):
+        return f"Geographic service target for the Mark Siazon profile index: {value}."
+    if value in data.get("availability", {}).get("focus", []):
+        return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
+    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+
+
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
     if node.get("citation") != expected_citation_targets(data):
         errors.append(f"{label} citation chain drift")
@@ -1223,6 +1247,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
         check_creativework_abstract(node, f"person.jsonld {node.get('@id', node.get('name', 'node'))}")
@@ -1280,6 +1305,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person potentialAction must reference hiring ContactAction")
         if pages_page_id not in node_ref_ids(person.get("mainEntityOfPage")):
             errors.append("person.jsonld Person mainEntityOfPage must reference Pages CollectionPage")
+        if pages_topic_set_id not in node_ref_ids(person.get("knowsAbout")):
+            errors.append("person.jsonld Person knowsAbout must reference topic taxonomy")
         known_languages = person.get("knowsLanguage", [])
         if not isinstance(known_languages, list):
             known_languages = [known_languages]
@@ -1442,10 +1469,50 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             pages.get("humansTxt", ""),
             pages.get("sitemap", ""),
             pages.get("robots", ""),
+            pages_topic_set_id,
         }
         missing_parts = sorted(required_parts - node_ref_ids(pages_page.get("hasPart")))
         if missing_parts:
             errors.append(f"person.jsonld Pages CollectionPage hasPart missing: {missing_parts}")
+    topic_terms = expected_topic_terms(data)
+    topic_set = node_by_id(person_schema, pages_topic_set_id)
+    if not topic_set or "DefinedTermSet" not in node_types(topic_set):
+        errors.append("person.jsonld missing Pages DefinedTermSet node")
+    else:
+        if topic_set.get("name") != "Mark Siazon profile topic taxonomy":
+            errors.append("person.jsonld DefinedTermSet name drift")
+        if topic_set.get("url") != pages.get("home"):
+            errors.append("person.jsonld DefinedTermSet url drift")
+        if topic_set.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld DefinedTermSet dateModified drift")
+        if topic_set.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld DefinedTermSet about drift")
+        if topic_set.get("isPartOf", {}).get("@id") != pages_site_id:
+            errors.append("person.jsonld DefinedTermSet isPartOf drift")
+        missing_terms = sorted({topic_term_id(term) for term in topic_terms} - node_ref_ids(topic_set.get("hasDefinedTerm")))
+        if missing_terms:
+            errors.append(f"person.jsonld DefinedTermSet hasDefinedTerm missing: {missing_terms}")
+        check_content_usage_policy(topic_set, data, "person.jsonld DefinedTermSet")
+        check_global_citation(topic_set, data, "person.jsonld DefinedTermSet")
+        check_ownership_metadata(topic_set, data, "person.jsonld DefinedTermSet")
+        check_structured_data_provenance(topic_set, data, "person.jsonld DefinedTermSet")
+    for term in topic_terms:
+        term_node = node_by_id(person_schema, topic_term_id(term))
+        if not term_node or "DefinedTerm" not in node_types(term_node):
+            errors.append(f"person.jsonld missing DefinedTerm node: {term}")
+            continue
+        if term_node.get("name") != term:
+            errors.append(f"person.jsonld DefinedTerm name drift: {term}")
+        if term_node.get("termCode") != slugify(term):
+            errors.append(f"person.jsonld DefinedTerm termCode drift: {term}")
+        if term_node.get("description") != expected_topic_term_description(data, term):
+            errors.append(f"person.jsonld DefinedTerm description drift: {term}")
+        if term_node.get("inDefinedTermSet", {}).get("@id") != pages_topic_set_id:
+            errors.append(f"person.jsonld DefinedTerm set drift: {term}")
+        if term_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld DefinedTerm about drift: {term}")
+        if term_node.get("dateModified") != data.get("updated"):
+            errors.append(f"person.jsonld DefinedTerm dateModified drift: {term}")
     data_catalog = node_by_id(person_schema, pages_catalog_id)
     if not data_catalog or "DataCatalog" not in node_types(data_catalog):
         errors.append("person.jsonld missing GitHub Pages DataCatalog node")
@@ -1524,8 +1591,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_identifier_values = sorted(expected_identifier_values - identifier_values)
         if missing_identifier_values:
             errors.append(f"person.jsonld Dataset identifier missing value(s): {missing_identifier_values}")
-        if dataset.get("about", {}).get("@id") != person_id:
-            errors.append("person.jsonld Dataset about drift")
+        if {person_id, pages_topic_set_id} - node_ref_ids(dataset.get("about")):
+            errors.append("person.jsonld Dataset about must reference Person and topic taxonomy")
         if dataset.get("includedInDataCatalog", {}).get("@id") != pages_catalog_id:
             errors.append("person.jsonld Dataset catalog membership drift")
         if dataset.get("spatialCoverage") != data.get("availability", {}).get("areaServed", []):
