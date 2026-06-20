@@ -191,6 +191,39 @@ def jsonld_nodes(value: object) -> list[dict[str, object]]:
     return []
 
 
+def check_jsonld_graph_integrity(issues: list[str], value: object, label: str) -> None:
+    if not isinstance(value, dict):
+        issues.append(f"{label} must be a JSON-LD object")
+        return
+    if value.get("@context") != "https://schema.org":
+        issues.append(f"{label} must declare Schema.org @context")
+    graph = value.get("@graph")
+    if not isinstance(graph, list) or not graph:
+        issues.append(f"{label} must contain a non-empty @graph")
+        return
+
+    seen_ids: set[str] = set()
+    duplicate_ids: list[str] = []
+    for position, node in enumerate(graph, start=1):
+        if not isinstance(node, dict):
+            issues.append(f"{label} @graph item #{position} must be an object")
+            continue
+        node_id = node.get("@id")
+        if not isinstance(node_id, str) or not node_id:
+            issues.append(f"{label} @graph item #{position} missing stable @id")
+        elif node_id in seen_ids:
+            duplicate_ids.append(node_id)
+        else:
+            seen_ids.add(node_id)
+        raw_type = node.get("@type")
+        if not isinstance(raw_type, str) and not (
+            isinstance(raw_type, list) and any(isinstance(item, str) and item for item in raw_type)
+        ):
+            issues.append(f"{label} @graph item #{position} missing @type")
+    if duplicate_ids:
+        issues.append(f"{label} contains duplicate @id values: {sorted(set(duplicate_ids))}")
+
+
 def node_type_set(node: dict[str, object]) -> set[str]:
     value = node.get("@type")
     if isinstance(value, str):
@@ -939,7 +972,9 @@ def validate_artifact(artifact: Path) -> list[str]:
 
     for json_name in ("llms-index.json", "schema/llms-index.schema.json", "schema/person.jsonld", "schema/faq.jsonld"):
         try:
-            json.loads((artifact / json_name).read_text(encoding="utf-8"))
+            parsed_json = json.loads((artifact / json_name).read_text(encoding="utf-8"))
+            if json_name.endswith(".jsonld"):
+                check_jsonld_graph_integrity(issues, parsed_json, f"Pages artifact {json_name}")
         except Exception as exc:
             issues.append(f"invalid JSON in Pages artifact {json_name}: {exc}")
     try:
@@ -982,9 +1017,10 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index missing inline FAQ Question/Answer JSON-LD")
     public_url_values: list[str] = []
     parsed_jsonld_nodes: list[dict[str, object]] = []
-    for script in jsonld_scripts:
+    for index, script in enumerate(jsonld_scripts, start=1):
         try:
             jsonld = json.loads(script)
+            check_jsonld_graph_integrity(issues, jsonld, f"Pages index inline JSON-LD script #{index}")
             public_url_values.extend(repo_public_url_values(jsonld))
             parsed_jsonld_nodes.extend(jsonld_nodes(jsonld))
         except json.JSONDecodeError:

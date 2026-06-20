@@ -195,6 +195,36 @@ def graph_nodes(doc: dict[str, Any]) -> list[dict[str, Any]]:
     return [node for node in graph if isinstance(node, dict)]
 
 
+def check_jsonld_graph_integrity(doc: dict[str, Any], label: str) -> None:
+    if doc.get("@context") != "https://schema.org":
+        errors.append(f"{label} must declare Schema.org @context")
+    graph = doc.get("@graph")
+    if not isinstance(graph, list) or not graph:
+        errors.append(f"{label} must contain a non-empty @graph")
+        return
+
+    seen_ids: set[str] = set()
+    duplicate_ids: list[str] = []
+    for position, node in enumerate(graph, start=1):
+        if not isinstance(node, dict):
+            errors.append(f"{label} @graph item #{position} must be an object")
+            continue
+        node_id = node.get("@id")
+        if not isinstance(node_id, str) or not node_id:
+            errors.append(f"{label} @graph item #{position} missing stable @id")
+        elif node_id in seen_ids:
+            duplicate_ids.append(node_id)
+        else:
+            seen_ids.add(node_id)
+        raw_type = node.get("@type")
+        if not isinstance(raw_type, str) and not (
+            isinstance(raw_type, list) and any(isinstance(item, str) and item for item in raw_type)
+        ):
+            errors.append(f"{label} @graph item #{position} missing @type")
+    if duplicate_ids:
+        errors.append(f"{label} contains duplicate @id values: {sorted(set(duplicate_ids))}")
+
+
 def node_by_id(doc: dict[str, Any], node_id: str) -> dict[str, Any] | None:
     for node in graph_nodes(doc):
         if node.get("@id") == node_id:
@@ -218,6 +248,7 @@ def html_jsonld_nodes(html: str, surface: str) -> list[dict[str, Any]]:
             errors.append(f"{surface} contains invalid JSON-LD script #{index}: {exc}")
             continue
         if isinstance(doc, dict) and "@graph" in doc:
+            check_jsonld_graph_integrity(doc, f"{surface} JSON-LD script #{index}")
             nodes.extend(graph_nodes(doc))
         elif isinstance(doc, dict):
             nodes.append(doc)
@@ -1501,6 +1532,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     faq_schema = load_json(faq_path)
     if not index_schema or not person_schema or not faq_schema:
         return
+    check_jsonld_graph_integrity(person_schema, "person.jsonld")
+    check_jsonld_graph_integrity(faq_schema, "faq.jsonld")
     if index_schema.get("$schema") != "https://json-schema.org/draft/2020-12/schema":
         errors.append("llms-index.schema.json must declare JSON Schema draft 2020-12")
     validate_contract_subset(data, index_schema, "llms-index.json")
