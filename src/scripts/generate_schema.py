@@ -91,6 +91,15 @@ def faq_item_identifier(item_id: str, kind: str) -> dict[str, str]:
     }
 
 
+def faq_document_identifier(faq_id: str) -> dict[str, str]:
+    return {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ document",
+        "value": "mark-siazon-frequently-asked-questions",
+        "url": faq_id,
+    }
+
+
 def project_id(project: dict[str, Any]) -> str:
     return f"{project['caseStudy']}#project"
 
@@ -1374,6 +1383,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "identifier": faq_document_identifier(faq_id),
             "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "keywords": keywords,
@@ -1830,6 +1840,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "identifier": faq_document_identifier(faq_id),
             "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "keywords": profile_keywords(data),

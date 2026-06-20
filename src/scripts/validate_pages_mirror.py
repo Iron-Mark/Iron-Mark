@@ -26,6 +26,7 @@ from generate_schema import (
     download_description,
     download_id,
     download_integrity_metadata,
+    faq_document_identifier,
     faq_item_identifier,
     faq_question_id,
     featured_projects_list_description,
@@ -1504,6 +1505,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not faq_page or "FAQPage" not in node_type_set(faq_page):
         issues.append("Pages index inline JSON-LD missing FAQPage")
     else:
+        pages_faq_id = f"{PAGES_BASE}/FAQ.md#faq"
+        if faq_page.get("identifier") != faq_document_identifier(pages_faq_id):
+            issues.append("Pages index FAQPage identifier drift")
         if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
             issues.append("Pages index FAQPage isBasedOn drift")
         if faq_page.get("inLanguage") != "en":
@@ -1517,7 +1521,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         if faq_page.get("isAccessibleForFree") is not True:
             issues.append("Pages index FAQPage must be isAccessibleForFree")
         expected_question_ids = {
-            faq_question_id(f"{PAGES_BASE}/FAQ.md#faq", str(item.get("question", "")))
+            faq_question_id(pages_faq_id, str(item.get("question", "")))
             for item in index_data.get("aeo", {}).get("answerSnippets", [])
             if isinstance(item, dict)
         }

@@ -32,6 +32,7 @@ from generate_schema import (
     dataset_temporal_coverage,
     download_description,
     download_integrity_metadata,
+    faq_document_identifier,
     faq_item_identifier,
     featured_projects_list_description,
     lab_projects_list_description,
@@ -1109,8 +1110,14 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     if not any("Person" in node_types(node) and node.get("@id") == data.get("entity", {}).get("@id") for node in jsonld_nodes):
         errors.append("docs/index.html inline JSON-LD missing Person node")
     inline_faq_id = pages_faq_id(data)
-    if not any("FAQPage" in node_types(node) and node.get("@id") == inline_faq_id for node in jsonld_nodes):
+    inline_faq_node = next(
+        (node for node in jsonld_nodes if "FAQPage" in node_types(node) and node.get("@id") == inline_faq_id),
+        None,
+    )
+    if not inline_faq_node:
         errors.append("docs/index.html inline JSON-LD missing FAQPage node")
+    elif inline_faq_node.get("identifier") != faq_document_identifier(inline_faq_id):
+        errors.append("docs/index.html inline JSON-LD FAQPage identifier drift")
     question_nodes = {node.get("@id", ""): node for node in jsonld_nodes if "Question" in node_types(node)}
     for snippet in data.get("aeo", {}).get("answerSnippets", []):
         expected = faq_question_id(inline_faq_id, snippet.get("question", ""))
@@ -2153,6 +2160,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not person_faq_page or "FAQPage" not in node_types(person_faq_page):
         errors.append("person.jsonld missing FAQPage node matching identifiers.faqDocument")
     else:
+        if person_faq_page.get("identifier") != faq_document_identifier(faq_id):
+            errors.append("person.jsonld FAQPage identifier drift")
         if person_faq_page.get("inLanguage") != "en":
             errors.append("person.jsonld FAQPage inLanguage must be en")
         if person_faq_page.get("author", {}).get("@id") != person_id:
@@ -2181,6 +2190,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not faq_page or "FAQPage" not in node_types(faq_page):
         errors.append("faq.jsonld missing FAQPage node matching identifiers.faqDocument")
     else:
+        if faq_page.get("identifier") != faq_document_identifier(faq_id):
+            errors.append("faq.jsonld FAQPage identifier drift")
         if faq_page.get("dateModified") != data.get("updated"):
             errors.append("faq.jsonld FAQPage dateModified drift")
         if faq_page.get("isBasedOn") != repo.get("faqMd"):

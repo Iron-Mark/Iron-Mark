@@ -1926,6 +1926,12 @@
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
       "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ document",
+        "value": "mark-siazon-frequently-asked-questions",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
       "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "keywords": [
@@ -4691,8 +4697,8 @@
       "encodingFormat": "application/ld+json",
       "description": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
-      "contentSize": "62942 bytes",
-      "sha256": "a4ab6fa6453d28bb2c57fef146a9344e318b3b47a246655c339b80be3575242f",
+      "contentSize": "63180 bytes",
+      "sha256": "2e5c81e9b89690f1c3a04ee42b99fe4fc46b52a16a6d380f7d079149c1193f93",
       "inLanguage": "en",
       "dateModified": "2026-06-21",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",

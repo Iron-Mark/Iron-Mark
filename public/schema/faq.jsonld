@@ -52,6 +52,12 @@
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
       "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ document",
+        "value": "mark-siazon-frequently-asked-questions",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
       "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "keywords": [
