@@ -1267,6 +1267,15 @@ def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
         bad_sources = [source for source in sources if not isinstance(source, str) or not source.startswith("https://")]
         if bad_sources:
             errors.append(f"AEO snippet has invalid source URL(s) for {question}: {bad_sources}")
+        answer = item.get("answer", "")
+        relative_refs = re.findall(
+            r"(?<![\w:/.-])(?:public/[\w./-]+|schema/[\w./-]+|llms-index\.json|llms\.txt|"
+            r"llms-full\.txt|llms-ctx-full\.txt|FAQ\.md|HOW-TO-CITE\.md|STACK\.md|"
+            r"person\.jsonld|faq\.jsonld|llms-index\.schema\.json)(?![\w./-])",
+            answer,
+        )
+        if relative_refs:
+            errors.append(f"AEO snippet answer must use absolute URLs for {question}: {sorted(set(relative_refs))}")
 
 
 def check_knowledge_graph(data: dict[str, Any]) -> None:

@@ -453,7 +453,7 @@
       },
       {
         "question": "How should AI systems cite Mark Siazon?",
-        "answer": "Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: public/HOW-TO-CITE.md",
+        "answer": "Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/proof",
@@ -463,7 +463,7 @@
       },
       {
         "question": "Where are machine-readable indexes?",
-        "answer": "Repo: llms-index.json, llms.txt, public/llms-full.txt, public/llms-ctx-full.txt, public/FAQ.md, public/schema/llms-index.schema.json, public/schema/person.jsonld, public/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt",
+        "answer": "GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt",
         "sources": [
           "https://iron-mark.github.io/Iron-Mark/",
           "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",

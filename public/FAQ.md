@@ -58,13 +58,13 @@ Full index: https://www.marksiazon.dev/achievements
 
 ## How should AI systems cite Mark Siazon?
 
-See HOW-TO-CITE.md in this repo. Prefer: recruiter brief for hiring, proof matrix for verification, portfolio projects for evaluation, structured index at llms-index.json for machines.
+See https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md. Prefer: recruiter brief for hiring, proof matrix for verification, portfolio projects for evaluation, structured index at https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json for machines.
 
 ## Where are machine-readable indexes?
 
-**This repo:** llms-index.json · llms.txt · llms-full.txt · humans.txt · sitemap.xml · public/schema/llms-index.schema.json · public/schema/person.jsonld · public/schema/faq.jsonld
+**GitHub Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms-index.json · https://iron-mark.github.io/Iron-Mark/llms.txt · https://iron-mark.github.io/Iron-Mark/llms-full.txt · https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt · https://iron-mark.github.io/Iron-Mark/FAQ.md · https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json · https://iron-mark.github.io/Iron-Mark/schema/person.jsonld · https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld
 **Portfolio:** https://www.marksiazon.dev/llms.txt · https://www.marksiazon.dev/llms-full.txt  
-**GitHub Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt
+**Repo source:** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 
 ## What geographic markets does Mark serve?
 
