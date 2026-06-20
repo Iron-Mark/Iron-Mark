@@ -38,6 +38,7 @@ from generate_schema import (
     faq_item_identifier,
     featured_projects_list_description,
     lab_projects_list_description,
+    offer_availability,
     offer_description,
     pages_section_id,
     pages_section_nav_item_id,
@@ -2187,6 +2188,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                     errors.append(f"person.jsonld Offer description drift for: {focus}")
                 if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                     errors.append(f"person.jsonld Offer mainEntityOfPage drift for: {focus}")
+                if offer.get("availability") != offer_availability(data):
+                    errors.append(f"person.jsonld Offer availability drift for: {focus}")
                 if offer.get("itemOffered", {}).get("@id") != service_id:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
                 if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:

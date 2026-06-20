@@ -36,6 +36,7 @@ from generate_schema import (
     lab_project_id,
     lab_project_url,
     machine_downloads,
+    offer_availability,
     offer_description,
     pages_section_id,
     pages_section_nav_item_id,
@@ -1384,6 +1385,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Offer description drift: {focus}")
             if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                 issues.append(f"Pages index Offer mainEntityOfPage drift: {focus}")
+            if offer.get("availability") != offer_availability(index_data):
+                issues.append(f"Pages index Offer availability drift: {focus}")
             if offer.get("itemOffered", {}).get("@id") != service_id:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
             if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:

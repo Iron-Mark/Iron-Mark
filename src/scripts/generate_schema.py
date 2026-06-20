@@ -181,6 +181,12 @@ def offer_description(data: dict[str, Any], focus: str) -> str:
     return f"{status} availability for Mark Siazon {focus} service{region_text}."
 
 
+def offer_availability(data: dict[str, Any]) -> str:
+    if data.get("availability", {}).get("status") == "open":
+        return "https://schema.org/InStock"
+    return "https://schema.org/LimitedAvailability"
+
+
 def featured_projects_list_description(data: dict[str, Any]) -> str:
     count = len(data.get("featuredProjects", []))
     return f"Ordered list of {count} featured Mark Siazon project case studies for proof-backed product, AI, mobile, Web3, and client web work."
@@ -1603,7 +1609,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "description": offer_description(data, focus),
                     "url": availability.get("recruiterBrief", entity["url"]),
                     "mainEntityOfPage": availability.get("recruiterBrief", entity["url"]),
-                    "availability": "https://schema.org/InStock" if availability.get("status") == "open" else "https://schema.org/LimitedAvailability",
+                    "availability": offer_availability(data),
                     "areaServed": area_nodes,
                     "eligibleRegion": area_nodes,
                     "businessFunction": PROVIDE_SERVICE_BUSINESS_FUNCTION,
