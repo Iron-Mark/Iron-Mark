@@ -1433,6 +1433,23 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if not offer_catalog or "OfferCatalog" not in node_types(offer_catalog):
             errors.append("person.jsonld missing OfferCatalog services node")
         else:
+            expected_catalog_identifier = {
+                "@type": "PropertyValue",
+                "propertyID": "Iron-Mark service catalog",
+                "value": slugify("Mark Siazon services and availability"),
+            }
+            if offer_catalog.get("identifier") != expected_catalog_identifier:
+                errors.append("person.jsonld OfferCatalog identifier drift")
+            if offer_catalog.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+                errors.append("person.jsonld OfferCatalog mainEntityOfPage drift")
+            if offer_catalog.get("about", {}).get("@id") != person_id:
+                errors.append("person.jsonld OfferCatalog about drift")
+            if offer_catalog.get("inLanguage") != "en":
+                errors.append("person.jsonld OfferCatalog inLanguage must be en")
+            if offer_catalog.get("dateModified") != data.get("updated"):
+                errors.append("person.jsonld OfferCatalog dateModified drift")
+            if offer_catalog.get("isAccessibleForFree") is not True:
+                errors.append("person.jsonld OfferCatalog must be isAccessibleForFree")
             if offer_catalog.get("numberOfItems") != len(expected_offer_ids):
                 errors.append("person.jsonld OfferCatalog numberOfItems drift")
             if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":

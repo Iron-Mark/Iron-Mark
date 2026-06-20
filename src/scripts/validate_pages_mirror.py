@@ -990,6 +990,23 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not offer_catalog or "OfferCatalog" not in node_type_set(offer_catalog):
         issues.append("Pages index inline JSON-LD missing services OfferCatalog")
     else:
+        expected_catalog_identifier = {
+            "@type": "PropertyValue",
+            "propertyID": "Iron-Mark service catalog",
+            "value": slugify("Mark Siazon services and availability"),
+        }
+        if offer_catalog.get("identifier") != expected_catalog_identifier:
+            issues.append("Pages index OfferCatalog identifier drift")
+        if offer_catalog.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+            issues.append("Pages index OfferCatalog mainEntityOfPage drift")
+        if offer_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index OfferCatalog about drift")
+        if offer_catalog.get("inLanguage") != "en":
+            issues.append("Pages index OfferCatalog inLanguage must be en")
+        if offer_catalog.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index OfferCatalog dateModified drift")
+        if offer_catalog.get("isAccessibleForFree") is not True:
+            issues.append("Pages index OfferCatalog must be isAccessibleForFree")
         if offer_catalog.get("numberOfItems") != len(expected_offer_ids):
             issues.append("Pages index OfferCatalog numberOfItems drift")
         if offer_catalog.get("itemListOrder") != "https://schema.org/ItemListOrderAscending":

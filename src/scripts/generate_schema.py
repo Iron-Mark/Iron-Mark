@@ -996,6 +996,16 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": "Mark Siazon services and availability",
             "description": "Service catalog for Mark Siazon product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
             "url": availability.get("recruiterBrief", entity["url"]),
+            "identifier": {
+                "@type": "PropertyValue",
+                "propertyID": "Iron-Mark service catalog",
+                "value": slugify("Mark Siazon services and availability"),
+            },
+            "mainEntityOfPage": availability.get("recruiterBrief", entity["url"]),
+            "about": ref(person_id),
+            "inLanguage": "en",
+            "dateModified": updated,
+            "isAccessibleForFree": True,
             "numberOfItems": len(offer_ids),
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "itemListElement": [
