@@ -558,6 +558,8 @@ def check_person_identity_resolution(node: dict[str, Any], data: dict[str, Any],
         errors.append(f"{label} disambiguatingDescription drift")
     if node.get("identifier") != expected_person_identifiers(data):
         errors.append(f"{label} identifier drift")
+    if node.get("sameAs") != data.get("entity", {}).get("sameAs", []):
+        errors.append(f"{label} sameAs drift")
 
 
 def check_creativework_abstract(node: dict[str, Any], label: str) -> None:

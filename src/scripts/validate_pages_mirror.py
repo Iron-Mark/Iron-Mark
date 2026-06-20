@@ -542,6 +542,9 @@ def check_person_identity_resolution(
         issues.append(f"{label} disambiguatingDescription drift")
     if node.get("identifier") != expected_person_identifiers(index_data):
         issues.append(f"{label} identifier drift")
+    entity = index_data.get("entity", {})
+    if not isinstance(entity, dict) or node.get("sameAs") != entity.get("sameAs", []):
+        issues.append(f"{label} sameAs drift")
 
 
 def check_creativework_abstract(issues: list[str], node: dict[str, object], label: str) -> None:
