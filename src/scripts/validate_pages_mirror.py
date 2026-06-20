@@ -44,6 +44,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     person_occupations,
+    person_subjects,
     person_work_locations,
     primary_image_description,
     profile_page_part_ids,
@@ -1306,6 +1307,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     service_channel_id = "https://www.marksiazon.dev/#hiring-service-channel"
     if person and person.get("hasOfferCatalog", {}).get("@id") != services_catalog_id:
         issues.append("Pages index Person hasOfferCatalog drift")
+    if person:
+        expected_subjects = pages_rewrite_ids([item["@id"] for item in person_subjects(index_data)])
+        if ref_ids(person.get("subjectOf")) != expected_subjects:
+            issues.append("Pages index Person subjectOf proof/schema references drift")
     offer_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == services_catalog_id), None)
     if not offer_catalog or "OfferCatalog" not in node_type_set(offer_catalog):
         issues.append("Pages index inline JSON-LD missing services OfferCatalog")

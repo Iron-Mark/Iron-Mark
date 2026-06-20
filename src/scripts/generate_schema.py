@@ -411,6 +411,20 @@ def person_work_locations(data: dict[str, Any]) -> list[dict[str, str]]:
     return spatial_coverage(data)
 
 
+def person_subjects(data: dict[str, Any]) -> list[dict[str, str]]:
+    schema = data["schema"]
+    return [
+        ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
+        ref(f"{GITHUB_BLOB}/public/FAQ.md#creativework"),
+        ref(f"{GITHUB_BLOB}/public/PROOF.md#creativework"),
+        ref(f"{GITHUB_BLOB}/public/RECRUITER.md#creativework"),
+        ref(f"{GITHUB_BLOB}/public/schema/llms-index.schema.json#creativework"),
+        ref(schema["person"]),
+        ref(schema["faq"]),
+        ref(schema["index"]),
+    ]
+
+
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
     awards: dict[str, list[str]] = {}
     for achievement in data.get("achievements", []):
@@ -1046,16 +1060,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "workLocation": person_work_locations(data),
             "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id), ref(pages_page_id)],
             "potentialAction": ref(contact_action_id),
-            "subjectOf": [
-                ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
-                ref(f"{GITHUB_BLOB}/public/FAQ.md#creativework"),
-                ref(f"{GITHUB_BLOB}/public/PROOF.md#creativework"),
-                ref(f"{GITHUB_BLOB}/public/RECRUITER.md#creativework"),
-                ref(f"{GITHUB_BLOB}/public/schema/llms-index.schema.json#creativework"),
-                ref(schema["person"]),
-                ref(schema["faq"]),
-                ref(schema["index"]),
-            ],
+            "subjectOf": person_subjects(data),
         },
         {
             "@type": "OfferCatalog",

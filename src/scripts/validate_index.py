@@ -46,6 +46,7 @@ from generate_schema import (
     pages_section_relation_ids,
     pages_section_specs,
     person_occupations,
+    person_subjects,
     person_work_locations,
     primary_image_description,
     profile_page_part_ids,
@@ -2088,6 +2089,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person image must reference Pages primary ImageObject")
         if person.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Person potentialAction must reference hiring ContactAction")
+        if node_ref_ids(person.get("subjectOf")) != node_ref_ids(person_subjects(data)):
+            errors.append("person.jsonld Person subjectOf proof/schema references drift")
         if pages_page_id not in node_ref_ids(person.get("mainEntityOfPage")):
             errors.append("person.jsonld Person mainEntityOfPage must reference Pages CollectionPage")
         if pages_topic_set_id not in node_ref_ids(person.get("knowsAbout")):
