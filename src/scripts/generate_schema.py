@@ -15,6 +15,8 @@ INDEX = ROOT / "llms-index.json"
 
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
+PAGES_IMAGE = f"{PAGES}/assets/brand/banner.webp"
+IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -140,7 +142,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     pages_breadcrumb_id = f"{PAGES}/#breadcrumb"
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
+    pages_image_id = f"{PAGES}/#primary-image"
     portfolio_site_id = ids["portfolioWebsite"]
+    contact_action_id = fragment_id(person_id, "contact-action")
+    contact_entry_id = fragment_id(person_id, "contact-entrypoint")
     faq_id = ids["faqDocument"]
     updated = data["updated"]
     availability = data.get("availability", {})
@@ -166,6 +171,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "jobTitle": entity.get("jobTitle", []),
             "description": entity["description"],
             "url": entity["url"],
+            "image": ref(pages_image_id),
             "email": f"mailto:{entity['email']}" if not entity["email"].startswith("mailto:") else entity["email"],
             "address": entity.get("address"),
             "sameAs": entity.get("sameAs", []),
@@ -200,6 +206,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 {"@type": "VirtualLocation", "name": "Remote global"},
             ],
             "mainEntityOfPage": [ref(profile_page_id), ref(portfolio_site_id)],
+            "potentialAction": ref(contact_action_id),
             "subjectOf": [
                 ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
                 ref(f"{GITHUB_BLOB}/public/FAQ.md#creativework"),
@@ -228,6 +235,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
+            "image": ref(pages_image_id),
+            "potentialAction": ref(contact_action_id),
         },
         {
             "@type": "WebSite",
@@ -239,6 +248,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+            "image": ref(pages_image_id),
+            "potentialAction": ref(contact_action_id),
         },
         {
             "@type": "ProfilePage",
@@ -249,6 +260,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "isPartOf": ref(github_site_id),
             "dateModified": updated,
+            "primaryImageOfPage": ref(pages_image_id),
+            "thumbnailUrl": PAGES_IMAGE,
+            "potentialAction": ref(contact_action_id),
         },
         {
             "@type": "WebSite",
@@ -260,6 +274,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "image": ref(pages_image_id),
+            "potentialAction": ref(contact_action_id),
         },
         {
             "@type": "CollectionPage",
@@ -273,6 +289,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "breadcrumb": ref(pages_breadcrumb_id),
             "dateModified": updated,
             "inLanguage": "en",
+            "primaryImageOfPage": ref(pages_image_id),
+            "thumbnailUrl": PAGES_IMAGE,
+            "potentialAction": ref(contact_action_id),
             "hasPart": [
                 ref(pages_catalog_id),
                 ref(pages_dataset_id),
@@ -295,6 +314,41 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 ref(pages["sitemap"]),
                 ref(pages["robots"]),
             ],
+        },
+        {
+            "@type": "ContactAction",
+            "@id": contact_action_id,
+            "name": "Contact Mark Siazon for hiring",
+            "description": "Contact path for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+            "target": ref(contact_entry_id),
+            "recipient": ref(person_id),
+            "about": ref(person_id),
+            "object": ref(person_id),
+        },
+        {
+            "@type": "EntryPoint",
+            "@id": contact_entry_id,
+            "urlTemplate": availability.get("contact", entity["url"]),
+            "inLanguage": "en",
+            "actionPlatform": [
+                "https://schema.org/DesktopWebPlatform",
+                "https://schema.org/MobileWebPlatform",
+            ],
+        },
+        {
+            "@type": "ImageObject",
+            "@id": pages_image_id,
+            "name": IMAGE_ALT,
+            "caption": IMAGE_ALT,
+            "url": PAGES_IMAGE,
+            "contentUrl": PAGES_IMAGE,
+            "encodingFormat": "image/webp",
+            "inLanguage": "en",
+            "dateModified": updated,
+            "creator": ref(person_id),
+            "about": ref(person_id),
+            "isPartOf": ref(pages_page_id),
+            "representativeOfPage": True,
         },
         {
             "@type": "DataCatalog",

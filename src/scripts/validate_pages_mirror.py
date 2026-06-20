@@ -17,6 +17,8 @@ DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
+PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/banner.webp"
+SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
 PUBLIC_FILES = (
@@ -52,6 +54,22 @@ REQUIRED_FILES = (
 )
 FORBIDDEN_FILES = ("AGENTS.md",)
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".json", ".jsonld", ".cff"}
+
+
+def repo_public_url_values(value: object) -> list[str]:
+    if isinstance(value, dict):
+        found: list[str] = []
+        for child in value.values():
+            found.extend(repo_public_url_values(child))
+        return found
+    if isinstance(value, list):
+        found = []
+        for child in value:
+            found.extend(repo_public_url_values(child))
+        return found
+    if isinstance(value, str) and value.startswith("https://github.com/Iron-Mark/Iron-Mark/blob/main/public/"):
+        return [value]
+    return []
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -125,8 +143,41 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index must inline both Person/content and FAQ JSON-LD graphs")
     if '"@type": "Question"' not in index_text or '"acceptedAnswer"' not in index_text:
         issues.append("Pages index missing inline FAQ Question/Answer JSON-LD")
+    public_url_values: list[str] = []
+    for script in jsonld_scripts:
+        try:
+            public_url_values.extend(repo_public_url_values(json.loads(script)))
+        except json.JSONDecodeError:
+            issues.append("Pages index contains invalid inline JSON-LD")
+    if public_url_values:
+        issues.append(f"Pages index inline JSON-LD must use Pages URLs for deployed public files: {public_url_values}")
+    if "https://iron-mark.github.io/Iron-Mark/FAQ.md#faq" not in "\n".join(jsonld_scripts):
+        issues.append("Pages index inline FAQ JSON-LD must use the Pages FAQ identifier")
+    if '"@type": "ImageObject"' not in index_text:
+        issues.append("Pages index inline JSON-LD missing ImageObject")
+    if '"primaryImageOfPage"' not in index_text:
+        issues.append("Pages index inline JSON-LD missing primaryImageOfPage")
+    if PAGES_SOCIAL_IMAGE not in "\n".join(jsonld_scripts):
+        issues.append("Pages index inline JSON-LD missing Pages social image URL")
+    if '"@type": "ContactAction"' not in index_text:
+        issues.append("Pages index inline JSON-LD missing hiring ContactAction")
+    if '"@type": "EntryPoint"' not in index_text:
+        issues.append("Pages index inline JSON-LD missing hiring ContactAction EntryPoint")
+    if "https://www.marksiazon.dev/contact" not in "\n".join(jsonld_scripts):
+        issues.append("Pages index inline JSON-LD missing contact URL")
     if "Knowledge Graph" not in index_text:
         issues.append("Pages index missing visible Knowledge Graph section")
+    expected_image_tags = {
+        f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
+        f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
+        '<meta property="og:image:type" content="image/webp"/>',
+        f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
+        f'<meta name="twitter:image" content="{PAGES_SOCIAL_IMAGE}"/>',
+        f'<meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
+    }
+    for tag in expected_image_tags:
+        if tag not in index_text:
+            issues.append(f"Pages index missing social image metadata: {tag}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:

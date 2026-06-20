@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 from html import escape
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -14,8 +15,12 @@ SCHEMA_FAQ = ROOT / "public" / "schema" / "faq.jsonld"
 INDEX = ROOT / "llms-index.json"
 
 PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
+PAGES_BASE = PAGES_URL.rstrip("/")
 PORTFOLIO_URL = "https://www.marksiazon.dev"
-SOCIAL_IMAGE = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/assets/brand/banner.webp"
+SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/banner.webp"
+SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
+GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
+GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 
 
 def csv(values: list[str]) -> str:
@@ -98,10 +103,38 @@ def render_identity_links(urls: list[str]) -> str:
     return "\n".join(links)
 
 
+def pages_local_schema(value: Any) -> Any:
+    """Rewrite public source-file identifiers to the deployed Pages mirror."""
+    if isinstance(value, dict):
+        return {key: pages_local_schema(child) for key, child in value.items()}
+    if isinstance(value, list):
+        return [pages_local_schema(child) for child in value]
+    if isinstance(value, str):
+        replacements = (
+            (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
+            (f"{GITHUB_BLOB}/public/", f"{PAGES_BASE}/"),
+            (f"{GITHUB_RAW}/public/schema/", f"{PAGES_BASE}/schema/"),
+            (f"{GITHUB_RAW}/public/", f"{PAGES_BASE}/"),
+        )
+        for source, target in replacements:
+            if value.startswith(source):
+                return value.replace(source, target, 1)
+        return value
+    return value
+
+
 def main() -> None:
     data = json.loads(INDEX.read_text(encoding="utf-8"))
-    person_schema = json.dumps(json.loads(SCHEMA_PERSON.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
-    faq_schema = json.dumps(json.loads(SCHEMA_FAQ.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
+    person_schema = json.dumps(
+        pages_local_schema(json.loads(SCHEMA_PERSON.read_text(encoding="utf-8"))),
+        indent=2,
+        ensure_ascii=False,
+    )
+    faq_schema = json.dumps(
+        pages_local_schema(json.loads(SCHEMA_FAQ.read_text(encoding="utf-8"))),
+        indent=2,
+        ensure_ascii=False,
+    )
     entity = data.get("entity", {})
     availability = data.get("availability", {})
     seo = data.get("seo", {})
@@ -136,6 +169,9 @@ def main() -> None:
   <meta property="og:description" content="{escape(description)}"/>
   <meta property="og:url" content="{PAGES_URL}"/>
   <meta property="og:image" content="{SOCIAL_IMAGE}"/>
+  <meta property="og:image:secure_url" content="{SOCIAL_IMAGE}"/>
+  <meta property="og:image:type" content="image/webp"/>
+  <meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <meta property="og:site_name" content="Mark Siazon Profile Index"/>
   <meta property="profile:first_name" content="Mark"/>
   <meta property="profile:last_name" content="Siazon"/>
@@ -145,6 +181,7 @@ def main() -> None:
   <meta name="twitter:title" content="Mark Siazon - Profile Index"/>
   <meta name="twitter:description" content="{escape(description)}"/>
   <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
+  <meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <title>Mark Siazon - Profile Index</title>
   <link rel="canonical" href="{PAGES_URL}"/>
   <link rel="author" href="humans.txt"/>

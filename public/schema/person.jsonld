@@ -18,6 +18,9 @@
       ],
       "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
       "url": "https://www.marksiazon.dev",
+      "image": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
       "email": "mailto:marksiazon.dev@gmail.com",
       "address": {
         "@type": "PostalAddress",
@@ -175,6 +178,9 @@
           "@id": "https://www.marksiazon.dev/#website"
         }
       ],
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      },
       "subjectOf": [
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
@@ -240,7 +246,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies."
+      "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
+      "image": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      }
     },
     {
       "@type": "WebSite",
@@ -257,7 +269,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference."
+      "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+      "image": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      }
     },
     {
       "@type": "ProfilePage",
@@ -273,7 +291,14 @@
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
       },
-      "dateModified": "2026-06-20"
+      "dateModified": "2026-06-20",
+      "primaryImageOfPage": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      }
     },
     {
       "@type": "WebSite",
@@ -290,7 +315,13 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files."
+      "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+      "image": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      }
     },
     {
       "@type": "CollectionPage",
@@ -312,6 +343,13 @@
       },
       "dateModified": "2026-06-20",
       "inLanguage": "en",
+      "primaryImageOfPage": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "potentialAction": {
+        "@id": "https://www.marksiazon.dev/#contact-action"
+      },
       "hasPart": [
         {
           "@id": "https://iron-mark.github.io/Iron-Mark/#data-catalog"
@@ -374,6 +412,55 @@
           "@id": "https://iron-mark.github.io/Iron-Mark/robots.txt"
         }
       ]
+    },
+    {
+      "@type": "ContactAction",
+      "@id": "https://www.marksiazon.dev/#contact-action",
+      "name": "Contact Mark Siazon for hiring",
+      "description": "Contact path for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+      "target": {
+        "@id": "https://www.marksiazon.dev/#contact-entrypoint"
+      },
+      "recipient": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "object": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "EntryPoint",
+      "@id": "https://www.marksiazon.dev/#contact-entrypoint",
+      "urlTemplate": "https://www.marksiazon.dev/contact",
+      "inLanguage": "en",
+      "actionPlatform": [
+        "https://schema.org/DesktopWebPlatform",
+        "https://schema.org/MobileWebPlatform"
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image",
+      "name": "Mark Siazon product design and full-stack development profile banner",
+      "caption": "Mark Siazon product design and full-stack development profile banner",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "encodingFormat": "image/webp",
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
+      },
+      "representativeOfPage": true
     },
     {
       "@type": "DataCatalog",

@@ -33,6 +33,8 @@ GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
+PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/banner.webp"
+SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 README_PRODUCTION_FORBIDDEN_LINKS = {
     ".github/": "GitHub maintenance files",
     "docs/STRUCTURE.md": "internal repository layout docs",
@@ -96,6 +98,10 @@ def faq_question_id(faq_id: str, question: str) -> str:
     return f"{faq_url}#{slugify(question)}"
 
 
+def pages_faq_id(data: dict[str, Any]) -> str:
+    return f"{data.get('machineReadable', {}).get('pages', {}).get('faqMd', '')}#faq"
+
+
 def graph_nodes(doc: dict[str, Any]) -> list[dict[str, Any]]:
     graph = doc.get("@graph", [])
     return [node for node in graph if isinstance(node, dict)]
@@ -147,6 +153,22 @@ def node_ref_ids(values: Any) -> set[str]:
     if not isinstance(values, list):
         return set()
     return {item.get("@id", "") for item in values if isinstance(item, dict) and item.get("@id")}
+
+
+def repo_public_url_values(value: Any) -> list[str]:
+    if isinstance(value, dict):
+        found: list[str] = []
+        for child in value.values():
+            found.extend(repo_public_url_values(child))
+        return found
+    if isinstance(value, list):
+        found = []
+        for child in value:
+            found.extend(repo_public_url_values(child))
+        return found
+    if isinstance(value, str) and (value.startswith(f"{GITHUB_BLOB}/public/") or value.startswith(f"{GITHUB_RAW}/public/")):
+        return [value]
+    return []
 
 
 def area_names(values: Any) -> set[str]:
@@ -413,6 +435,17 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
+    expected_image_tags = {
+        f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
+        f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
+        '<meta property="og:image:type" content="image/webp"/>',
+        f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
+        f'<meta name="twitter:image" content="{PAGES_SOCIAL_IMAGE}"/>',
+        f'<meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
+    }
+    for tag in expected_image_tags:
+        if tag not in html:
+            errors.append(f"docs/index.html missing social image metadata: {tag}")
     if '<link rel="author" href="humans.txt"/>' not in html:
         errors.append("docs/index.html missing author link to humans.txt")
     for same_as in data.get("entity", {}).get("sameAs", []):
@@ -474,12 +507,12 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     jsonld_nodes = html_jsonld_nodes(raw_html, "docs/index.html")
     if not any("Person" in node_types(node) and node.get("@id") == data.get("entity", {}).get("@id") for node in jsonld_nodes):
         errors.append("docs/index.html inline JSON-LD missing Person node")
-    faq_id = data.get("identifiers", {}).get("faqDocument")
-    if not any("FAQPage" in node_types(node) and node.get("@id") == faq_id for node in jsonld_nodes):
+    inline_faq_id = pages_faq_id(data)
+    if not any("FAQPage" in node_types(node) and node.get("@id") == inline_faq_id for node in jsonld_nodes):
         errors.append("docs/index.html inline JSON-LD missing FAQPage node")
     question_nodes = {node.get("@id", ""): node for node in jsonld_nodes if "Question" in node_types(node)}
     for snippet in data.get("aeo", {}).get("answerSnippets", []):
-        expected = faq_question_id(faq_id, snippet.get("question", ""))
+        expected = faq_question_id(inline_faq_id, snippet.get("question", ""))
         question_node = question_nodes.get(expected)
         if not question_node:
             errors.append(f"docs/index.html inline JSON-LD missing Question node: {expected}")
@@ -487,6 +520,23 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         answer_node = question_node.get("acceptedAnswer", {})
         if not isinstance(answer_node, dict) or answer_node.get("text") != snippet.get("answer"):
             errors.append(f"docs/index.html inline JSON-LD answer drift for: {snippet.get('question')}")
+    for index, script in enumerate(
+        re.findall(
+            r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
+            raw_html,
+            flags=re.IGNORECASE | re.DOTALL,
+        ),
+        start=1,
+    ):
+        try:
+            jsonld = json.loads(script)
+        except json.JSONDecodeError:
+            continue
+        public_urls = repo_public_url_values(jsonld)
+        if public_urls:
+            errors.append(
+                f"docs/index.html inline JSON-LD script #{index} must use Pages URLs for deployed public files: {public_urls}"
+            )
 
 
 def check_people_first_search_signals(readme: str) -> None:
@@ -691,6 +741,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"llms-index.json machineReadable.pages.{key} must point to {expected}")
 
     person_id = data.get("entity", {}).get("@id")
+    person_fragment_base = f"{str(person_id).split('#', 1)[0]}#"
+    contact_action_id = f"{person_fragment_base}contact-action"
+    contact_entry_id = f"{person_fragment_base}contact-entrypoint"
     person = node_by_id(person_schema, person_id)
     if not person or "Person" not in node_types(person):
         errors.append("person.jsonld missing Person node matching llms-index entity @id")
@@ -726,11 +779,14 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if missing_contact_area:
                 errors.append(f"person.jsonld hiring contactPoint areaServed missing: {missing_contact_area}")
 
-        person_fragment_base = f"{person_id.split('#', 1)[0]}#"
         expected_offer_ids = {f"{person_fragment_base}offer-{slugify(focus)}" for focus in availability.get("focus", [])}
         missing_offer_refs = sorted(expected_offer_ids - node_ref_ids(person.get("makesOffer")))
         if missing_offer_refs:
             errors.append(f"person.jsonld Person makesOffer missing: {missing_offer_refs}")
+        if person.get("image", {}).get("@id") != f"{PAGES}/#primary-image":
+            errors.append("person.jsonld Person image must reference Pages primary ImageObject")
+        if person.get("potentialAction", {}).get("@id") != contact_action_id:
+            errors.append("person.jsonld Person potentialAction must reference hiring ContactAction")
         offer_catalog = node_by_id(person_schema, f"{person_fragment_base}services")
         if not offer_catalog or "OfferCatalog" not in node_types(offer_catalog):
             errors.append("person.jsonld missing OfferCatalog services node")
@@ -766,6 +822,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_breadcrumb_id = f"{PAGES}/#breadcrumb"
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
+    pages_image_id = f"{PAGES}/#primary-image"
     pages_page = node_by_id(person_schema, pages_page_id)
     if not pages_page or "CollectionPage" not in node_types(pages_page):
         errors.append("person.jsonld missing GitHub Pages CollectionPage node")
@@ -778,6 +835,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage mainEntity drift")
         if pages_page.get("breadcrumb", {}).get("@id") != pages_breadcrumb_id:
             errors.append("person.jsonld Pages CollectionPage breadcrumb drift")
+        if pages_page.get("primaryImageOfPage", {}).get("@id") != pages_image_id:
+            errors.append("person.jsonld Pages CollectionPage primaryImageOfPage drift")
+        if pages_page.get("thumbnailUrl") != PAGES_SOCIAL_IMAGE:
+            errors.append("person.jsonld Pages CollectionPage thumbnailUrl drift")
+        if pages_page.get("potentialAction", {}).get("@id") != contact_action_id:
+            errors.append("person.jsonld Pages CollectionPage potentialAction drift")
         required_parts = {
             pages_catalog_id,
             pages_dataset_id,
@@ -811,6 +874,46 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog dataset drift")
         if data_catalog.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld DataCatalog about drift")
+    image = node_by_id(person_schema, pages_image_id)
+    if not image or "ImageObject" not in node_types(image):
+        errors.append("person.jsonld missing Pages primary ImageObject node")
+    else:
+        if image.get("url") != PAGES_SOCIAL_IMAGE:
+            errors.append("person.jsonld ImageObject url drift")
+        if image.get("contentUrl") != PAGES_SOCIAL_IMAGE:
+            errors.append("person.jsonld ImageObject contentUrl drift")
+        if image.get("encodingFormat") != "image/webp":
+            errors.append("person.jsonld ImageObject encodingFormat must be image/webp")
+        if image.get("caption") != SOCIAL_IMAGE_ALT:
+            errors.append("person.jsonld ImageObject caption drift")
+        if image.get("creator", {}).get("@id") != person_id:
+            errors.append("person.jsonld ImageObject creator drift")
+        if image.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld ImageObject about drift")
+        if image.get("isPartOf", {}).get("@id") != pages_page_id:
+            errors.append("person.jsonld ImageObject isPartOf drift")
+        if image.get("representativeOfPage") is not True:
+            errors.append("person.jsonld ImageObject must be representativeOfPage")
+    contact_action = node_by_id(person_schema, contact_action_id)
+    if not contact_action or "ContactAction" not in node_types(contact_action):
+        errors.append("person.jsonld missing hiring ContactAction node")
+    else:
+        if contact_action.get("target", {}).get("@id") != contact_entry_id:
+            errors.append("person.jsonld ContactAction target drift")
+        if contact_action.get("recipient", {}).get("@id") != person_id:
+            errors.append("person.jsonld ContactAction recipient drift")
+        if contact_action.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld ContactAction about drift")
+        if contact_action.get("object", {}).get("@id") != person_id:
+            errors.append("person.jsonld ContactAction object drift")
+    contact_entry = node_by_id(person_schema, contact_entry_id)
+    if not contact_entry or "EntryPoint" not in node_types(contact_entry):
+        errors.append("person.jsonld missing hiring ContactAction EntryPoint node")
+    else:
+        if contact_entry.get("urlTemplate") != data.get("availability", {}).get("contact"):
+            errors.append("person.jsonld ContactAction EntryPoint urlTemplate drift")
+        if contact_entry.get("inLanguage") != "en":
+            errors.append("person.jsonld ContactAction EntryPoint inLanguage must be en")
     dataset = node_by_id(person_schema, pages_dataset_id)
     downloads = expected_downloads(pages)
     expected_download_ids = {download_id(key) for key in downloads}
