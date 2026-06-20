@@ -2154,6 +2154,15 @@
       },
       "inLanguage": "en",
       "dateModified": "2026-06-21",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/proof",
+        "https://www.marksiazon.dev/projects",
+        "https://github.com/Iron-Mark/Iron-Mark",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+      ],
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "numberOfItems": 9,
       "itemListElement": [
@@ -2221,13 +2230,23 @@
           }
         }
       ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#person"
       },
       "copyrightHolder": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "copyrightYear": 2026
+      "copyrightYear": 2026,
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-06-21",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
       "@type": [
@@ -2249,6 +2268,15 @@
       },
       "inLanguage": "en",
       "dateModified": "2026-06-21",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/proof",
+        "https://www.marksiazon.dev/projects",
+        "https://github.com/Iron-Mark/Iron-Mark",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+      ],
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "numberOfItems": 4,
       "itemListElement": [
@@ -2281,13 +2309,23 @@
           }
         }
       ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#person"
       },
       "copyrightHolder": {
         "@id": "https://www.marksiazon.dev/#person"
       },
-      "copyrightYear": 2026
+      "copyrightYear": 2026,
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-06-21",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
       "@type": "WebPageElement",

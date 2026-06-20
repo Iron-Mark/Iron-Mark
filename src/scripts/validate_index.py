@@ -2161,12 +2161,17 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld featured projects ItemList inLanguage must be en")
         if featured_list.get("dateModified") != data.get("updated"):
             errors.append("person.jsonld featured projects ItemList dateModified drift")
+        if featured_list.get("isAccessibleForFree") is not True:
+            errors.append("person.jsonld featured projects ItemList must be marked isAccessibleForFree")
         if featured_list.get("numberOfItems") != len(data.get("featuredProjects", [])):
             errors.append("person.jsonld featured projects ItemList count drift")
         missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_items:
             errors.append(f"person.jsonld featured projects ItemList missing: {missing_featured_items}")
+        check_content_usage_policy(featured_list, data, "person.jsonld featured projects ItemList")
+        check_global_citation(featured_list, data, "person.jsonld featured projects ItemList")
         check_ownership_metadata(featured_list, data, "person.jsonld featured projects ItemList")
+        check_structured_data_provenance(featured_list, data, "person.jsonld featured projects ItemList")
 
     lab_list_id = f"{GITHUB_BLOB}/llms-index.json#hackathon-lab"
     lab_list = project_nodes.get(lab_list_id)
@@ -2190,12 +2195,17 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld hackathon and lab ItemList inLanguage must be en")
         if lab_list.get("dateModified") != data.get("updated"):
             errors.append("person.jsonld hackathon and lab ItemList dateModified drift")
+        if lab_list.get("isAccessibleForFree") is not True:
+            errors.append("person.jsonld hackathon and lab ItemList must be marked isAccessibleForFree")
         if lab_list.get("numberOfItems") != len(data.get("hackathonLab", [])):
             errors.append("person.jsonld hackathon and lab ItemList count drift")
         missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_items:
             errors.append(f"person.jsonld hackathon and lab ItemList missing: {missing_lab_items}")
+        check_content_usage_policy(lab_list, data, "person.jsonld hackathon and lab ItemList")
+        check_global_citation(lab_list, data, "person.jsonld hackathon and lab ItemList")
         check_ownership_metadata(lab_list, data, "person.jsonld hackathon and lab ItemList")
+        check_structured_data_provenance(lab_list, data, "person.jsonld hackathon and lab ItemList")
 
     project_awards = awards_by_project(data)
     for project in data.get("featuredProjects", []):

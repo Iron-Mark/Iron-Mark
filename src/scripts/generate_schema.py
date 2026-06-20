@@ -1363,6 +1363,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isPartOf": ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
             "inLanguage": "en",
             "dateModified": updated,
+            "isAccessibleForFree": True,
+            "citation": citations,
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("featuredProjects", [])),
             "itemListElement": [
@@ -1373,7 +1375,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 }
                 for index, project in enumerate(data.get("featuredProjects", []), start=1)
             ],
+            **usage_policy,
             **ownership,
+            **sd_provenance,
         },
         {
             "@type": ["ItemList", "CreativeWork"],
@@ -1386,6 +1390,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isPartOf": ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
             "inLanguage": "en",
             "dateModified": updated,
+            "isAccessibleForFree": True,
+            "citation": citations,
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("hackathonLab", [])),
             "itemListElement": [
@@ -1397,7 +1403,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 for index, project in enumerate(data.get("hackathonLab", []), start=1)
                 if lab_project_url(project)
             ],
+            **usage_policy,
             **ownership,
+            **sd_provenance,
         },
     ]
 

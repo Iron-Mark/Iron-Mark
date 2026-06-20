@@ -1448,6 +1448,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index featured projects ItemList inLanguage must be en")
         if featured_list.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index featured projects ItemList dateModified drift")
+        if featured_list.get("isAccessibleForFree") is not True:
+            issues.append("Pages index featured projects ItemList must be isAccessibleForFree")
         if featured_list.get("numberOfItems") != len(featured_projects):
             issues.append("Pages index featured projects ItemList count drift")
         expected_featured_ids = {
@@ -1458,7 +1460,10 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_featured_ids = sorted(expected_featured_ids - item_list_ref_ids(featured_list.get("itemListElement")))
         if missing_featured_ids:
             issues.append(f"Pages index featured projects ItemList missing: {missing_featured_ids}")
+        check_content_usage_policy(issues, featured_list, "Pages index featured projects ItemList")
+        check_global_citation(issues, featured_list, index_data, "Pages index featured projects ItemList")
         check_ownership_metadata(issues, featured_list, index_data, "Pages index featured projects ItemList")
+        check_structured_data_provenance(issues, featured_list, index_data, "Pages index featured projects ItemList")
     lab_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#hackathon-lab")
     if not lab_list or "ItemList" not in node_type_set(lab_list):
         issues.append("Pages index inline JSON-LD missing hackathon and lab ItemList")
@@ -1481,6 +1486,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index hackathon and lab ItemList inLanguage must be en")
         if lab_list.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index hackathon and lab ItemList dateModified drift")
+        if lab_list.get("isAccessibleForFree") is not True:
+            issues.append("Pages index hackathon and lab ItemList must be isAccessibleForFree")
         if lab_list.get("numberOfItems") != len(lab_projects):
             issues.append("Pages index hackathon and lab ItemList count drift")
         expected_lab_ids = {
@@ -1491,7 +1498,10 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_lab_ids = sorted(expected_lab_ids - item_list_ref_ids(lab_list.get("itemListElement")))
         if missing_lab_ids:
             issues.append(f"Pages index hackathon and lab ItemList missing: {missing_lab_ids}")
+        check_content_usage_policy(issues, lab_list, "Pages index hackathon and lab ItemList")
+        check_global_citation(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
         check_ownership_metadata(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
+        check_structured_data_provenance(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
     project_awards = awards_by_project(index_data)
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):
