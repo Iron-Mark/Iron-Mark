@@ -17,6 +17,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
+    download_description,
     download_id,
     lab_project_id,
     lab_project_url,
@@ -1357,6 +1358,12 @@ def validate_artifact(artifact: Path) -> list[str]:
             expected_download_source = pages_rewrite_public_source(item.get("sourceUrl", ""))
             if download.get("isBasedOn") != expected_download_source:
                 issues.append(f"Pages index DataDownload isBasedOn drift: {item['key']}")
+            if download.get("description") != download_description(download.get("name", ""), item["encoding"]):
+                issues.append(f"Pages index DataDownload description drift: {item['key']}")
+            if download.get("abstract") != download.get("description"):
+                issues.append(f"Pages index DataDownload abstract drift: {item['key']}")
+            if download.get("inLanguage") != "en":
+                issues.append(f"Pages index DataDownload inLanguage must be en: {item['key']}")
             check_content_usage_policy(issues, download, f"Pages index DataDownload {item['key']}")
             check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_ownership_metadata(issues, download, index_data, f"Pages index DataDownload {item['key']}")

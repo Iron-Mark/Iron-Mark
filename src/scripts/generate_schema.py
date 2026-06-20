@@ -688,6 +688,10 @@ def machine_downloads(pages: dict[str, str], repo: dict[str, str] | None = None)
     return downloads
 
 
+def download_description(name: str, encoding: str) -> str:
+    return f"Downloadable {name} file for the Mark Siazon profile index, encoded as {encoding}."
+
+
 def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     ids = data["identifiers"]
@@ -1299,6 +1303,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "url": item["url"],
                 "contentUrl": item["url"],
                 "encodingFormat": item["encoding"],
+                "description": download_description(item["name"], item["encoding"]),
+                "abstract": download_description(item["name"], item["encoding"]),
+                "inLanguage": "en",
                 "dateModified": updated,
                 "license": data.get("license"),
                 "isAccessibleForFree": True,

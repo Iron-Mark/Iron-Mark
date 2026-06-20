@@ -24,6 +24,7 @@ from build_pages_mirror import (
     project_cover_asset,
 )
 from generate_schema import (
+    download_description,
     pages_section_id,
     pages_section_nav_item_id,
     pages_section_navigation_id,
@@ -1806,6 +1807,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_content_usage_policy(download, data, f"person.jsonld DataDownload {key}")
         if download.get("encodingFormat") != encoding:
             errors.append(f"person.jsonld DataDownload encodingFormat drift for: {key}")
+        if download.get("description") != download_description(download.get("name", ""), encoding):
+            errors.append(f"person.jsonld DataDownload description drift for: {key}")
+        if download.get("abstract") != download.get("description"):
+            errors.append(f"person.jsonld DataDownload abstract drift for: {key}")
+        if download.get("inLanguage") != "en":
+            errors.append(f"person.jsonld DataDownload inLanguage must be en for: {key}")
         if download.get("dateModified") != data.get("updated"):
             errors.append(f"person.jsonld DataDownload dateModified drift for: {key}")
         if download.get("license") != data.get("license"):
