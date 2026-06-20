@@ -35,6 +35,16 @@
         "https://www.tiktok.com/@iron_markk",
         "https://github.com/Iron-Mark/Iron-Mark"
       ],
+      "image": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
+      },
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
+      ],
       "url": "https://www.marksiazon.dev"
     },
     {

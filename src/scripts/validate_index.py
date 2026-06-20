@@ -194,6 +194,21 @@ def node_types(node: dict[str, Any]) -> set[str]:
     return set()
 
 
+def has_english_knows_language(node: dict[str, Any]) -> bool:
+    languages = node.get("knowsLanguage", [])
+    if isinstance(languages, dict):
+        languages = [languages]
+    if not isinstance(languages, list):
+        return False
+    return any(
+        isinstance(language, dict)
+        and language.get("@type") == "Language"
+        and language.get("alternateName") == "en"
+        and language.get("name") == "English"
+        for language in languages
+    )
+
+
 def node_ref_ids(values: Any) -> set[str]:
     if isinstance(values, dict):
         values = [values]
@@ -560,6 +575,10 @@ def check_person_identity_resolution(node: dict[str, Any], data: dict[str, Any],
         errors.append(f"{label} identifier drift")
     if node.get("sameAs") != data.get("entity", {}).get("sameAs", []):
         errors.append(f"{label} sameAs drift")
+    if node.get("image", {}).get("@id") != f"{PAGES}/#primary-image":
+        errors.append(f"{label} image drift")
+    if not has_english_knows_language(node):
+        errors.append(f"{label} knowsLanguage must include English language node")
 
 
 def check_creativework_abstract(node: dict[str, Any], label: str) -> None:

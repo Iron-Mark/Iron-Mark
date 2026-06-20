@@ -1729,6 +1729,8 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "disambiguatingDescription": profile_disambiguating_description(data),
             "identifier": person_identifiers(data),
             "sameAs": entity.get("sameAs", []),
+            "image": ref(f"{PAGES}/#primary-image"),
+            "knowsLanguage": [PROFILE_LANGUAGE],
             "url": entity["url"],
         },
         {

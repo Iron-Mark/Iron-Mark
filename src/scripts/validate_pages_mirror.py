@@ -545,6 +545,10 @@ def check_person_identity_resolution(
     entity = index_data.get("entity", {})
     if not isinstance(entity, dict) or node.get("sameAs") != entity.get("sameAs", []):
         issues.append(f"{label} sameAs drift")
+    if node.get("image", {}).get("@id") != f"{PAGES_BASE}/#primary-image":
+        issues.append(f"{label} image drift")
+    if not has_english_knows_language(node):
+        issues.append(f"{label} knowsLanguage must include English language node")
 
 
 def check_creativework_abstract(issues: list[str], node: dict[str, object], label: str) -> None:
