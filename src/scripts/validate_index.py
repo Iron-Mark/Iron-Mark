@@ -50,6 +50,7 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    person_core_identity,
     person_email,
     person_hiring_contact,
     person_occupations,
@@ -2057,8 +2058,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_awards = sorted(achievement_titles - schema_awards)
         if missing_awards:
             errors.append(f"person.jsonld Person award missing: {missing_awards}")
-        if person.get("jobTitle") != data.get("entity", {}).get("jobTitle", []):
-            errors.append("person.jsonld Person jobTitle drift")
+        actual_person_identity = {key: person.get(key) for key in person_core_identity(data)}
+        if actual_person_identity != person_core_identity(data):
+            errors.append("person.jsonld Person core identity drift")
         if person.get("email") != person_email(data):
             errors.append("person.jsonld Person email drift")
         if person.get("hasOccupation") != person_occupations(data):

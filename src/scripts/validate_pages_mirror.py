@@ -48,6 +48,7 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    person_core_identity,
     person_email,
     person_hiring_contact,
     person_occupations,
@@ -1299,8 +1300,9 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
     pages_topic_set_id = topic_term_set_id()
     if person:
-        if person.get("jobTitle") != index_data.get("entity", {}).get("jobTitle", []):
-            issues.append("Pages index Person jobTitle drift")
+        actual_person_identity = {key: person.get(key) for key in person_core_identity(index_data)}
+        if actual_person_identity != person_core_identity(index_data):
+            issues.append("Pages index Person core identity drift")
         if person.get("email") != person_email(index_data):
             issues.append("Pages index Person email drift")
         if person.get("hasOccupation") != person_occupations(index_data):

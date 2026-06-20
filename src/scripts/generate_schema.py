@@ -276,6 +276,18 @@ def profile_disambiguating_description(data: dict[str, Any]) -> str:
     )
 
 
+def person_core_identity(data: dict[str, Any]) -> dict[str, Any]:
+    entity = data["entity"]
+    return {
+        "name": entity["name"],
+        "alternateName": entity.get("alternateName", []),
+        "jobTitle": entity.get("jobTitle", []),
+        "description": entity["description"],
+        "url": entity["url"],
+        "address": entity.get("address"),
+    }
+
+
 def person_identifiers(data: dict[str, Any]) -> list[dict[str, str]]:
     entity = data["entity"]
     canonical = data["canonical"]
