@@ -1905,12 +1905,20 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage keywords drift")
         if faq_page.get("isAccessibleForFree") is not True:
             issues.append("Pages index FAQPage must be isAccessibleForFree")
-        missing_has_part = sorted(expected_question_ids - ref_ids(faq_page.get("hasPart")))
+        actual_has_part = ref_ids(faq_page.get("hasPart"))
+        missing_has_part = sorted(expected_question_ids - actual_has_part)
         if missing_has_part:
             issues.append(f"Pages index FAQPage hasPart missing questions: {missing_has_part}")
-        missing_main_entity = sorted(expected_question_ids - ref_ids(faq_page.get("mainEntity")))
+        extra_has_part = sorted(actual_has_part - expected_question_ids)
+        if extra_has_part:
+            issues.append(f"Pages index FAQPage hasPart unexpected questions: {extra_has_part}")
+        actual_main_entity = ref_ids(faq_page.get("mainEntity"))
+        missing_main_entity = sorted(expected_question_ids - actual_main_entity)
         if missing_main_entity:
             issues.append(f"Pages index FAQPage mainEntity missing questions: {missing_main_entity}")
+        extra_main_entity = sorted(actual_main_entity - expected_question_ids)
+        if extra_main_entity:
+            issues.append(f"Pages index FAQPage mainEntity unexpected questions: {extra_main_entity}")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")
