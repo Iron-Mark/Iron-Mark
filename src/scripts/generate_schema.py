@@ -295,8 +295,8 @@ def person_identifiers(data: dict[str, Any]) -> list[dict[str, str]]:
     ]
 
 
-def spatial_coverage(data: dict[str, Any]) -> list[str]:
-    return list(data.get("availability", {}).get("areaServed", []))
+def spatial_coverage(data: dict[str, Any]) -> list[dict[str, str]]:
+    return area_served_nodes(list(data.get("availability", {}).get("areaServed", [])))
 
 
 def dataset_variable_measurements(
@@ -783,7 +783,7 @@ def content_work(
     citations: list[str] | None = None,
     usage_policy: dict[str, str] | None = None,
     ownership: dict[str, Any] | None = None,
-    spatial: list[str] | None = None,
+    spatial: list[dict[str, str]] | None = None,
 ) -> dict[str, Any]:
     return {
         "@type": "CreativeWork",
@@ -1347,7 +1347,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "license": data.get("license"),
             "keywords": keywords,
             "citation": citations,
-            "spatialCoverage": area_served,
+            "spatialCoverage": spatial,
             "temporalCoverage": dataset_temporal_coverage(data),
             "measurementTechnique": dataset_measurement_techniques(),
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),

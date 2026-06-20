@@ -92,9 +92,18 @@
       "inLanguage": "en",
       "isAccessibleForFree": true,
       "spatialCoverage": [
-        "Philippines",
-        "Southeast Asia",
-        "remote global"
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
       ],
       "citation": [
         "https://www.marksiazon.dev/recruiter",

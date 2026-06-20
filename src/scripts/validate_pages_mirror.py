@@ -187,6 +187,20 @@ def area_names(value: object) -> set[str]:
     return {item.get("name", "") for item in value if isinstance(item, dict) and item.get("name")}
 
 
+def expected_area_nodes(regions: list[object]) -> list[dict[str, str]]:
+    nodes: list[dict[str, str]] = []
+    for region_value in regions:
+        region = str(region_value)
+        region_lower = region.lower()
+        if region_lower == "philippines":
+            nodes.append({"@type": "Country", "name": "Philippines"})
+        elif "remote" in region_lower:
+            nodes.append({"@type": "VirtualLocation", "name": region})
+        else:
+            nodes.append({"@type": "AdministrativeArea", "name": region})
+    return nodes
+
+
 def item_list_ref_ids(value: object) -> set[str]:
     if not isinstance(value, list):
         return set()
@@ -777,9 +791,12 @@ def check_spatial_coverage(
     if not isinstance(availability, dict):
         issues.append(f"{label} cannot validate spatialCoverage")
         return
-    expected = availability.get("areaServed", [])
+    area_served = availability.get("areaServed", [])
+    if not isinstance(area_served, list):
+        area_served = []
+    expected = expected_area_nodes(area_served)
     if node.get("spatialCoverage") != expected:
-        issues.append(f"{label} spatialCoverage drift")
+        issues.append(f"{label} spatialCoverage typed region drift")
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -1483,8 +1500,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index inline Dataset identifier missing value(s): {missing_values}")
         availability = index_data.get("availability", {})
         area_served = availability.get("areaServed", []) if isinstance(availability, dict) else []
-        if dataset.get("spatialCoverage") != area_served:
-            issues.append("Pages index inline Dataset spatialCoverage drift")
+        if dataset.get("spatialCoverage") != expected_area_nodes(area_served if isinstance(area_served, list) else []):
+            issues.append("Pages index inline Dataset spatialCoverage typed region drift")
         if dataset.get("temporalCoverage") != dataset_temporal_coverage(index_data):
             issues.append("Pages index inline Dataset temporalCoverage drift")
         if dataset.get("measurementTechnique") != dataset_measurement_techniques():

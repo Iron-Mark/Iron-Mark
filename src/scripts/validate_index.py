@@ -286,6 +286,19 @@ def area_names(values: Any) -> set[str]:
     return {item.get("name", "") for item in values if isinstance(item, dict) and item.get("name")}
 
 
+def expected_area_nodes(regions: list[str]) -> list[dict[str, str]]:
+    nodes: list[dict[str, str]] = []
+    for region in regions:
+        region_lower = region.lower()
+        if region_lower == "philippines":
+            nodes.append({"@type": "Country", "name": "Philippines"})
+        elif "remote" in region_lower:
+            nodes.append({"@type": "VirtualLocation", "name": region})
+        else:
+            nodes.append({"@type": "AdministrativeArea", "name": region})
+    return nodes
+
+
 def download_id(key: str) -> str:
     return f"{PAGES}/#download-{slugify(key)}"
 
@@ -829,9 +842,9 @@ def check_review_metadata(node: dict[str, Any], data: dict[str, Any], label: str
 
 
 def check_spatial_coverage(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
-    expected = data.get("availability", {}).get("areaServed", [])
+    expected = expected_area_nodes(data.get("availability", {}).get("areaServed", []))
     if node.get("spatialCoverage") != expected:
-        errors.append(f"{label} spatialCoverage drift")
+        errors.append(f"{label} spatialCoverage typed region drift")
 
 
 def check_required_index_keys(data: dict[str, Any]) -> None:
@@ -2322,8 +2335,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset about must reference Person and topic taxonomy")
         if dataset.get("includedInDataCatalog", {}).get("@id") != pages_catalog_id:
             errors.append("person.jsonld Dataset catalog membership drift")
-        if dataset.get("spatialCoverage") != data.get("availability", {}).get("areaServed", []):
-            errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
+        if dataset.get("spatialCoverage") != expected_area_nodes(data.get("availability", {}).get("areaServed", [])):
+            errors.append("person.jsonld Dataset spatialCoverage must match typed availability.areaServed")
         if dataset.get("temporalCoverage") != dataset_temporal_coverage(data):
             errors.append("person.jsonld Dataset temporalCoverage drift")
         if dataset.get("measurementTechnique") != dataset_measurement_techniques():
