@@ -19,6 +19,7 @@ PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profi
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 IMAGE_WIDTH = 400
 IMAGE_HEIGHT = 225
+PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -178,6 +179,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "address": entity.get("address"),
             "sameAs": entity.get("sameAs", []),
             "knowsAbout": knows_about,
+            "knowsLanguage": [PROFILE_LANGUAGE],
             "award": [achievement["title"] for achievement in data.get("achievements", []) if achievement.get("title")],
             "contactPoint": [
                 {

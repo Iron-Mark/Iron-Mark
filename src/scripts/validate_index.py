@@ -37,6 +37,7 @@ PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stac
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
+OPEN_GRAPH_LOCALE = "en_US"
 README_PRODUCTION_FORBIDDEN_LINKS = {
     ".github/": "GitHub maintenance files",
     "docs/STRUCTURE.md": "internal repository layout docs",
@@ -437,6 +438,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
+    if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in html:
+        errors.append("docs/index.html missing Open Graph locale metadata")
     expected_image_tags = {
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
@@ -791,6 +794,17 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person image must reference Pages primary ImageObject")
         if person.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Person potentialAction must reference hiring ContactAction")
+        known_languages = person.get("knowsLanguage", [])
+        if not isinstance(known_languages, list):
+            known_languages = [known_languages]
+        if not any(
+            isinstance(language, dict)
+            and language.get("@type") == "Language"
+            and language.get("alternateName") == "en"
+            and language.get("name") == "English"
+            for language in known_languages
+        ):
+            errors.append("person.jsonld Person knowsLanguage must include English language node")
         offer_catalog = node_by_id(person_schema, f"{person_fragment_base}services")
         if not offer_catalog or "OfferCatalog" not in node_types(offer_catalog):
             errors.append("person.jsonld missing OfferCatalog services node")

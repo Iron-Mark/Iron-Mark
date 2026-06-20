@@ -21,6 +21,7 @@ PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
+OPEN_GRAPH_LOCALE = "en_US"
 IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
@@ -73,6 +74,42 @@ def repo_public_url_values(value: object) -> list[str]:
     if isinstance(value, str) and value.startswith("https://github.com/Iron-Mark/Iron-Mark/blob/main/public/"):
         return [value]
     return []
+
+
+def jsonld_nodes(value: object) -> list[dict[str, object]]:
+    if isinstance(value, dict):
+        nodes: list[dict[str, object]] = [value]
+        graph = value.get("@graph", [])
+        if isinstance(graph, list):
+            nodes.extend(node for node in graph if isinstance(node, dict))
+        return nodes
+    if isinstance(value, list):
+        return [node for node in value if isinstance(node, dict)]
+    return []
+
+
+def node_type_set(node: dict[str, object]) -> set[str]:
+    value = node.get("@type")
+    if isinstance(value, str):
+        return {value}
+    if isinstance(value, list):
+        return {item for item in value if isinstance(item, str)}
+    return set()
+
+
+def has_english_knows_language(node: dict[str, object]) -> bool:
+    languages = node.get("knowsLanguage", [])
+    if isinstance(languages, dict):
+        languages = [languages]
+    if not isinstance(languages, list):
+        return False
+    return any(
+        isinstance(language, dict)
+        and language.get("@type") == "Language"
+        and language.get("name") == "English"
+        and language.get("alternateName") == "en"
+        for language in languages
+    )
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -147,9 +184,12 @@ def validate_artifact(artifact: Path) -> list[str]:
     if '"@type": "Question"' not in index_text or '"acceptedAnswer"' not in index_text:
         issues.append("Pages index missing inline FAQ Question/Answer JSON-LD")
     public_url_values: list[str] = []
+    parsed_jsonld_nodes: list[dict[str, object]] = []
     for script in jsonld_scripts:
         try:
-            public_url_values.extend(repo_public_url_values(json.loads(script)))
+            jsonld = json.loads(script)
+            public_url_values.extend(repo_public_url_values(jsonld))
+            parsed_jsonld_nodes.extend(jsonld_nodes(jsonld))
         except json.JSONDecodeError:
             issues.append("Pages index contains invalid inline JSON-LD")
     if public_url_values:
@@ -183,6 +223,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in expected_image_tags:
         if tag not in index_text:
             issues.append(f"Pages index missing social image metadata: {tag}")
+    if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
+        issues.append("Pages index missing Open Graph locale metadata")
+    if not any("Person" in node_type_set(node) and has_english_knows_language(node) for node in parsed_jsonld_nodes):
+        issues.append("Pages index inline JSON-LD missing Person English knowsLanguage signal")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:

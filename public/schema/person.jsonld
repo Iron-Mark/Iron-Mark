@@ -66,6 +66,13 @@
         "Web3 Stellar Celo",
         "Baybayin education technology"
       ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "English",
+          "alternateName": "en"
+        }
+      ],
       "award": [
         "UMak InfotechOlympics 2025 Android App Development Productivity Champion",
         "InfotechOlympics 2024 Android App Development winner",

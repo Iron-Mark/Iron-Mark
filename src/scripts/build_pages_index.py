@@ -21,6 +21,7 @@ SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
+OPEN_GRAPH_LOCALE = "en_US"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 
@@ -167,6 +168,7 @@ def main() -> None:
   <meta name="description" content="{escape(description)}"/>
   <meta name="author" content="Mark Siazon"/>
   <meta property="og:type" content="profile"/>
+  <meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>
   <meta property="og:title" content="Mark Siazon - Profile Index"/>
   <meta property="og:description" content="{escape(description)}"/>
   <meta property="og:url" content="{PAGES_URL}"/>
