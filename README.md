@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <source type="image/webp" srcset="assets/brand/banner.webp"/>
+    <source type="image/webp" srcset="assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"/>
     <img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/>
   </picture>
 </p>

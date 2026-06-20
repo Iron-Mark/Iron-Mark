@@ -15,8 +15,10 @@ INDEX = ROOT / "llms-index.json"
 
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
-PAGES_IMAGE = f"{PAGES}/assets/brand/banner.webp"
+PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
+IMAGE_WIDTH = 400
+IMAGE_HEIGHT = 225
 
 
 def ref(node_id: str) -> dict[str, str]:
@@ -343,6 +345,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": PAGES_IMAGE,
             "contentUrl": PAGES_IMAGE,
             "encodingFormat": "image/webp",
+            "width": IMAGE_WIDTH,
+            "height": IMAGE_HEIGHT,
             "inLanguage": "en",
             "dateModified": updated,
             "creator": ref(person_id),

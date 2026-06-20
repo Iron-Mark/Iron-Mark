@@ -27,7 +27,7 @@ The following are **original creative work** created for Mark's portfolio and pe
 
 | Path | Contents |
 |------|----------|
-| `assets/brand/` | Profile banner and brand graphics (e.g. `banner.gif`) |
+| `assets/brand/` | Profile banner and brand graphics |
 | `assets/projects/` | Project cover art, icons, and related visuals (PNG/SVG) |
 
 These files represent portfolio intellectual property. **All rights reserved.** Do not copy, redistribute, or use them in your own projects, templates, or commercial materials without written permission.

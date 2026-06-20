@@ -17,8 +17,10 @@ INDEX = ROOT / "llms-index.json"
 PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
 PAGES_BASE = PAGES_URL.rstrip("/")
 PORTFOLIO_URL = "https://www.marksiazon.dev"
-SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/banner.webp"
+SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
+SOCIAL_IMAGE_WIDTH = 400
+SOCIAL_IMAGE_HEIGHT = 225
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 
@@ -171,6 +173,8 @@ def main() -> None:
   <meta property="og:image" content="{SOCIAL_IMAGE}"/>
   <meta property="og:image:secure_url" content="{SOCIAL_IMAGE}"/>
   <meta property="og:image:type" content="image/webp"/>
+  <meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>
+  <meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>
   <meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <meta property="og:site_name" content="Mark Siazon Profile Index"/>
   <meta property="profile:first_name" content="Mark"/>

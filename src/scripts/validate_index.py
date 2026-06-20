@@ -33,8 +33,10 @@ GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
-PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/banner.webp"
+PAGES_SOCIAL_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
+SOCIAL_IMAGE_WIDTH = 400
+SOCIAL_IMAGE_HEIGHT = 225
 README_PRODUCTION_FORBIDDEN_LINKS = {
     ".github/": "GitHub maintenance files",
     "docs/STRUCTURE.md": "internal repository layout docs",
@@ -439,6 +441,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
         '<meta property="og:image:type" content="image/webp"/>',
+        f'<meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>',
+        f'<meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>',
         f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
         f'<meta name="twitter:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
@@ -884,6 +888,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ImageObject contentUrl drift")
         if image.get("encodingFormat") != "image/webp":
             errors.append("person.jsonld ImageObject encodingFormat must be image/webp")
+        if image.get("width") != SOCIAL_IMAGE_WIDTH:
+            errors.append("person.jsonld ImageObject width drift")
+        if image.get("height") != SOCIAL_IMAGE_HEIGHT:
+            errors.append("person.jsonld ImageObject height drift")
         if image.get("caption") != SOCIAL_IMAGE_ALT:
             errors.append("person.jsonld ImageObject caption drift")
         if image.get("creator", {}).get("@id") != person_id:

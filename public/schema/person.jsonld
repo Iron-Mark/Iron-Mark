@@ -295,7 +295,7 @@
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
       "potentialAction": {
         "@id": "https://www.marksiazon.dev/#contact-action"
       }
@@ -346,7 +346,7 @@
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
       "potentialAction": {
         "@id": "https://www.marksiazon.dev/#contact-action"
       },
@@ -446,9 +446,11 @@
       "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image",
       "name": "Mark Siazon product design and full-stack development profile banner",
       "caption": "Mark Siazon product design and full-stack development profile banner",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/banner.webp",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp",
       "encodingFormat": "image/webp",
+      "width": 400,
+      "height": 225,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
       "creator": {

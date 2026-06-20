@@ -17,8 +17,10 @@ DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 PAGES_HOST = "iron-mark.github.io"
-PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/banner.webp"
+PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
+SOCIAL_IMAGE_WIDTH = 400
+SOCIAL_IMAGE_HEIGHT = 225
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
 PUBLIC_FILES = (
@@ -171,6 +173,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         f'<meta property="og:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta property="og:image:secure_url" content="{PAGES_SOCIAL_IMAGE}"/>',
         '<meta property="og:image:type" content="image/webp"/>',
+        f'<meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>',
+        f'<meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>',
         f'<meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
         f'<meta name="twitter:image" content="{PAGES_SOCIAL_IMAGE}"/>',
         f'<meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>',
