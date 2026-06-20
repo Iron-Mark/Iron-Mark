@@ -105,9 +105,31 @@
             "type": "string",
             "format": "uri"
           }
+        },
+        "address": {
+          "type": "object",
+          "required": [
+            "@type",
+            "addressCountry",
+            "addressRegion"
+          ],
+          "properties": {
+            "@type": {
+              "const": "PostalAddress"
+            },
+            "addressCountry": {
+              "type": "string",
+              "minLength": 2
+            },
+            "addressRegion": {
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          "additionalProperties": false
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "identifiers": {
       "type": "object",
@@ -123,7 +145,64 @@
         "personSchema",
         "faqSchema"
       ],
-      "additionalProperties": true
+      "properties": {
+        "person": {
+          "type": "string",
+          "format": "uri"
+        },
+        "portfolioWebsite": {
+          "type": "string",
+          "format": "uri"
+        },
+        "githubProfilePage": {
+          "type": "string",
+          "format": "uri"
+        },
+        "githubProfileIndex": {
+          "type": "string",
+          "format": "uri"
+        },
+        "githubPagesMirror": {
+          "type": "string",
+          "format": "uri"
+        },
+        "faqDocument": {
+          "type": "string",
+          "format": "uri"
+        },
+        "structuredIndex": {
+          "type": "string",
+          "format": "uri"
+        },
+        "wikidata": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "wikidataGuide": {
+          "type": "string",
+          "format": "uri"
+        },
+        "entityGuide": {
+          "type": "string",
+          "format": "uri"
+        },
+        "indexSchema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "personSchema": {
+          "type": "string",
+          "format": "uri"
+        },
+        "faqSchema": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
     },
     "availability": {
       "type": "object",
@@ -139,30 +218,35 @@
       ],
       "properties": {
         "status": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2
         },
         "focus": {
           "type": "array",
           "minItems": 1,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 2
           }
         },
         "engagement": {
           "type": "array",
           "minItems": 1,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 2
           }
         },
         "location": {
-          "type": "string"
+          "type": "string",
+          "minLength": 2
         },
         "areaServed": {
           "type": "array",
           "minItems": 1,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 2
           }
         },
         "remote": {
@@ -177,7 +261,7 @@
           "format": "uri"
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "canonical": {
       "type": "object",
@@ -187,7 +271,25 @@
         "techStack",
         "proofMatrix"
       ],
-      "additionalProperties": true
+      "properties": {
+        "portfolio": {
+          "type": "string",
+          "format": "uri"
+        },
+        "githubProfileReadme": {
+          "type": "string",
+          "format": "uri"
+        },
+        "techStack": {
+          "type": "string",
+          "format": "uri"
+        },
+        "proofMatrix": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
     },
     "machineReadable": {
       "type": "object",
@@ -592,11 +694,12 @@
           "type": "array",
           "minItems": 5,
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           }
         }
       },
-      "additionalProperties": true
+      "additionalProperties": false
     },
     "seo": {
       "type": "object",
@@ -818,8 +921,41 @@
         "generatedBy",
         "validatesWith"
       ],
-      "additionalProperties": true
+      "properties": {
+        "context": {
+          "const": "https://schema.org"
+        },
+        "person": {
+          "type": "string",
+          "format": "uri"
+        },
+        "faq": {
+          "type": "string",
+          "format": "uri"
+        },
+        "index": {
+          "type": "string",
+          "format": "uri"
+        },
+        "pagesPerson": {
+          "type": "string",
+          "format": "uri"
+        },
+        "pagesFaq": {
+          "type": "string",
+          "format": "uri"
+        },
+        "generatedBy": {
+          "type": "string",
+          "pattern": "^src/scripts/[a-z0-9_]+\\.py$"
+        },
+        "validatesWith": {
+          "type": "string",
+          "pattern": "^src/scripts/[a-z0-9_]+\\.py$"
+        }
+      },
+      "additionalProperties": false
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

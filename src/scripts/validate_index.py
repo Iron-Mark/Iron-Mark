@@ -1432,6 +1432,162 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
                 errors.append(f"llms-index.schema.json machineReadable.{key}.{property_name} must be a URI string")
     properties_schema = index_schema.get("properties", {})
+    expected_top_level_properties = {
+        "$schema",
+        "version",
+        "updated",
+        "contentRoot",
+        "license",
+        "citation",
+        "entity",
+        "identifiers",
+        "availability",
+        "canonical",
+        "machineReadable",
+        "featuredProjects",
+        "hackathonLab",
+        "achievements",
+        "coreStack",
+        "stackReference",
+        "seo",
+        "aeo",
+        "triples",
+        "schema",
+    }
+    missing_top_level_properties = sorted(expected_top_level_properties - set(properties_schema))
+    if missing_top_level_properties:
+        errors.append(f"llms-index.schema.json missing top-level properties: {missing_top_level_properties}")
+    if index_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json top-level schema must disallow additionalProperties")
+
+    entity_schema = properties_schema.get("entity", {})
+    if entity_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json entity schema must disallow additionalProperties")
+    entity_expected_properties = {
+        "@type",
+        "@id",
+        "name",
+        "alternateName",
+        "jobTitle",
+        "description",
+        "url",
+        "email",
+        "sameAs",
+        "address",
+    }
+    entity_actual_properties = set(entity_schema.get("properties", {}))
+    missing_entity_properties = sorted(entity_expected_properties - entity_actual_properties)
+    if missing_entity_properties:
+        errors.append(f"llms-index.schema.json entity schema missing properties: {missing_entity_properties}")
+    address_schema = entity_schema.get("properties", {}).get("address", {})
+    if address_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json entity.address schema must disallow additionalProperties")
+    for key in ("@type", "addressCountry", "addressRegion"):
+        if key not in address_schema.get("properties", {}):
+            errors.append(f"llms-index.schema.json entity.address schema missing property: {key}")
+
+    identifier_schema = properties_schema.get("identifiers", {})
+    identifier_expected_properties = {
+        "person",
+        "portfolioWebsite",
+        "githubProfilePage",
+        "githubProfileIndex",
+        "githubPagesMirror",
+        "faqDocument",
+        "structuredIndex",
+        "wikidata",
+        "wikidataGuide",
+        "entityGuide",
+        "indexSchema",
+        "personSchema",
+        "faqSchema",
+    }
+    identifier_actual_properties = set(identifier_schema.get("properties", {}))
+    missing_identifier_properties = sorted(identifier_expected_properties - identifier_actual_properties)
+    if missing_identifier_properties:
+        errors.append(f"llms-index.schema.json identifiers schema missing properties: {missing_identifier_properties}")
+    if identifier_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json identifiers schema must disallow additionalProperties")
+    for key in sorted(identifier_expected_properties - {"wikidata"}):
+        property_schema = identifier_schema.get("properties", {}).get(key, {})
+        if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
+            errors.append(f"llms-index.schema.json identifiers.{key} must be a URI string")
+    wikidata_schema = identifier_schema.get("properties", {}).get("wikidata", {})
+    if set(wikidata_schema.get("type", [])) != {"string", "null"} or wikidata_schema.get("format") != "uri":
+        errors.append("llms-index.schema.json identifiers.wikidata must allow a URI string or null")
+
+    availability_schema = properties_schema.get("availability", {})
+    availability_expected_properties = {
+        "status",
+        "focus",
+        "engagement",
+        "location",
+        "areaServed",
+        "remote",
+        "contact",
+        "recruiterBrief",
+    }
+    availability_actual_properties = set(availability_schema.get("properties", {}))
+    missing_availability_properties = sorted(availability_expected_properties - availability_actual_properties)
+    if missing_availability_properties:
+        errors.append(f"llms-index.schema.json availability schema missing properties: {missing_availability_properties}")
+    if availability_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json availability schema must disallow additionalProperties")
+    for key in ("contact", "recruiterBrief"):
+        property_schema = availability_schema.get("properties", {}).get(key, {})
+        if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
+            errors.append(f"llms-index.schema.json availability.{key} must be a URI string")
+
+    canonical_schema = properties_schema.get("canonical", {})
+    canonical_expected_properties = {"portfolio", "githubProfileReadme", "techStack", "proofMatrix"}
+    canonical_actual_properties = set(canonical_schema.get("properties", {}))
+    missing_canonical_properties = sorted(canonical_expected_properties - canonical_actual_properties)
+    if missing_canonical_properties:
+        errors.append(f"llms-index.schema.json canonical schema missing properties: {missing_canonical_properties}")
+    if canonical_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json canonical schema must disallow additionalProperties")
+    for key in sorted(canonical_expected_properties):
+        property_schema = canonical_schema.get("properties", {}).get(key, {})
+        if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
+            errors.append(f"llms-index.schema.json canonical.{key} must be a URI string")
+
+    stack_reference_schema = properties_schema.get("stackReference", {})
+    stack_reference_expected_properties = {"file", "toolCount", "domains"}
+    stack_reference_actual_properties = set(stack_reference_schema.get("properties", {}))
+    missing_stack_reference_properties = sorted(stack_reference_expected_properties - stack_reference_actual_properties)
+    if missing_stack_reference_properties:
+        errors.append(f"llms-index.schema.json stackReference schema missing properties: {missing_stack_reference_properties}")
+    if stack_reference_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json stackReference schema must disallow additionalProperties")
+
+    schema_object_schema = properties_schema.get("schema", {})
+    schema_expected_properties = {
+        "context",
+        "person",
+        "faq",
+        "index",
+        "pagesPerson",
+        "pagesFaq",
+        "generatedBy",
+        "validatesWith",
+    }
+    schema_actual_properties = set(schema_object_schema.get("properties", {}))
+    missing_schema_properties = sorted(schema_expected_properties - schema_actual_properties)
+    if missing_schema_properties:
+        errors.append(f"llms-index.schema.json schema object missing properties: {missing_schema_properties}")
+    if schema_object_schema.get("additionalProperties") is not False:
+        errors.append("llms-index.schema.json schema object must disallow additionalProperties")
+    if schema_object_schema.get("properties", {}).get("context", {}).get("const") != "https://schema.org":
+        errors.append("llms-index.schema.json schema.context must be https://schema.org")
+    for key in ("person", "faq", "index", "pagesPerson", "pagesFaq"):
+        property_schema = schema_object_schema.get("properties", {}).get(key, {})
+        if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
+            errors.append(f"llms-index.schema.json schema.{key} must be a URI string")
+    for key in ("generatedBy", "validatesWith"):
+        property_schema = schema_object_schema.get("properties", {}).get(key, {})
+        if property_schema.get("type") != "string" or property_schema.get("pattern") != r"^src/scripts/[a-z0-9_]+\.py$":
+            errors.append(f"llms-index.schema.json schema.{key} must be a src/scripts Python path")
+
     seo_schema = properties_schema.get("seo", {})
     seo_expected_properties = {"primaryKeywords", "geoTargets", "technicalSignals", "geoSignals", "generativeSearch"}
     seo_actual_properties = set(seo_schema.get("properties", {}))
