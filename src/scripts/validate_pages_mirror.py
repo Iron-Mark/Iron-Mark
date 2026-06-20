@@ -1391,21 +1391,33 @@ def validate_artifact(artifact: Path) -> list[str]:
             question_id = str(node.get("@id", ""))
             if node.get("url") != question_id:
                 issues.append(f"Pages index Question url drift: {node.get('name')}")
+            if node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Question author drift: {node.get('name')}")
+            if node.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Question publisher drift: {node.get('name')}")
             if node.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
                 issues.append(f"Pages index Question isPartOf drift: {node.get('name')}")
             if node.get("parentItem", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
                 issues.append(f"Pages index Question parentItem drift: {node.get('name')}")
             if node.get("answerCount") != 1:
                 issues.append(f"Pages index Question answerCount drift: {node.get('name')}")
+            if node.get("isAccessibleForFree") is not True:
+                issues.append(f"Pages index Question must be isAccessibleForFree: {node.get('name')}")
+            check_content_usage_policy(issues, node, f"Pages index Question {node.get('name')}")
             check_structured_data_provenance(issues, node, index_data, f"Pages index Question {node.get('name')}")
             answer = node.get("acceptedAnswer", {})
             if isinstance(answer, dict):
                 if answer.get("url") != f"{question_id}-answer":
                     issues.append(f"Pages index Answer url drift: {node.get('name')}")
+                if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                    issues.append(f"Pages index Answer publisher drift: {node.get('name')}")
                 if answer.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
                     issues.append(f"Pages index Answer isPartOf drift: {node.get('name')}")
                 if answer.get("parentItem", {}).get("@id") != question_id:
                     issues.append(f"Pages index Answer parentItem drift: {node.get('name')}")
+                if answer.get("isAccessibleForFree") is not True:
+                    issues.append(f"Pages index Answer must be isAccessibleForFree: {node.get('name')}")
+                check_content_usage_policy(issues, answer, f"Pages index Answer {node.get('name')}")
                 check_structured_data_provenance(issues, answer, index_data, f"Pages index Answer {node.get('name')}")
     jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
     featured_list = jsonld_node_by_id.get(f"{GITHUB_BLOB}/llms-index.json#featured-projects")

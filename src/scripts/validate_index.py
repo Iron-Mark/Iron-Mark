@@ -2081,6 +2081,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question url drift for: {question.get('question')}")
         if question_node.get("about", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Question about drift for: {question.get('question')}")
+        if question_node.get("author", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Question author drift for: {question.get('question')}")
+        if question_node.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Question publisher drift for: {question.get('question')}")
         if question_node.get("isPartOf", {}).get("@id") != faq_id:
             errors.append(f"faq.jsonld Question isPartOf drift for: {question.get('question')}")
         if question_node.get("parentItem", {}).get("@id") != faq_id:
@@ -2091,6 +2095,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question inLanguage must be en for: {question.get('question')}")
         if question_node.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Question dateModified drift for: {question.get('question')}")
+        if question_node.get("isAccessibleForFree") is not True:
+            errors.append(f"faq.jsonld Question must be isAccessibleForFree for: {question.get('question')}")
+        check_content_usage_policy(question_node, data, f"faq.jsonld Question {question.get('question')}")
         check_structured_data_provenance(question_node, data, f"faq.jsonld Question {question.get('question')}")
         accepted_answer = question_node.get("acceptedAnswer", {})
         if not isinstance(accepted_answer, dict):
@@ -2102,6 +2109,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld answer drift for: {question.get('question')}")
         if accepted_answer.get("author", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Answer author drift for: {question.get('question')}")
+        if accepted_answer.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Answer publisher drift for: {question.get('question')}")
         if accepted_answer.get("about", {}).get("@id") != person_id:
             errors.append(f"faq.jsonld Answer about drift for: {question.get('question')}")
         if accepted_answer.get("isPartOf", {}).get("@id") != faq_id:
@@ -2112,6 +2121,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Answer inLanguage must be en for: {question.get('question')}")
         if accepted_answer.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Answer dateModified drift for: {question.get('question')}")
+        if accepted_answer.get("isAccessibleForFree") is not True:
+            errors.append(f"faq.jsonld Answer must be isAccessibleForFree for: {question.get('question')}")
+        check_content_usage_policy(accepted_answer, data, f"faq.jsonld Answer {question.get('question')}")
         check_structured_data_provenance(accepted_answer, data, f"faq.jsonld Answer {question.get('question')}")
         expected_citations = set(question.get("sources", []))
         answer_citations = accepted_answer.get("citation", [])
