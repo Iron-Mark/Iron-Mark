@@ -101,6 +101,33 @@ def project_image_description(project: dict[str, Any]) -> str:
     return "Project cover image."
 
 
+def _human_join(values: list[str]) -> str:
+    if not values:
+        return ""
+    if len(values) == 1:
+        return values[0]
+    if len(values) == 2:
+        return f"{values[0]} and {values[1]}"
+    return f"{', '.join(values[:-1])}, and {values[-1]}"
+
+
+def service_description(data: dict[str, Any], focus: str) -> str:
+    availability = data.get("availability", {})
+    regions = _human_join([str(value) for value in availability.get("areaServed", []) if value])
+    engagements = _human_join([str(value) for value in availability.get("engagement", []) if value])
+    region_text = f" for {regions}" if regions else ""
+    engagement_text = f" through {engagements} work" if engagements else ""
+    return f"Mark Siazon {focus} service{region_text}{engagement_text}."
+
+
+def offer_description(data: dict[str, Any], focus: str) -> str:
+    availability = data.get("availability", {})
+    status = "Open" if availability.get("status") == "open" else "Limited"
+    regions = _human_join([str(value) for value in availability.get("areaServed", []) if value])
+    region_text = f" across {regions}" if regions else ""
+    return f"{status} availability for Mark Siazon {focus} service{region_text}."
+
+
 def image_rights(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     pages = data["machineReadable"]["pages"]
@@ -1287,6 +1314,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "@id": offer_id,
                     "name": f"{focus} availability",
                     "category": focus,
+                    "description": offer_description(data, focus),
                     "url": availability.get("recruiterBrief", entity["url"]),
                     "availability": "https://schema.org/InStock" if availability.get("status") == "open" else "https://schema.org/LimitedAvailability",
                     "areaServed": area_nodes,
@@ -1298,6 +1326,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "@id": service_id,
                     "name": focus,
                     "serviceType": focus,
+                    "description": service_description(data, focus),
                     "provider": ref(person_id),
                     "url": availability.get("recruiterBrief", entity["url"]),
                     "availableChannel": ref(service_channel_id),

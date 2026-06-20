@@ -25,6 +25,7 @@ from build_pages_mirror import (
 )
 from generate_schema import (
     download_description,
+    offer_description,
     pages_section_id,
     pages_section_nav_item_id,
     pages_section_navigation_id,
@@ -32,6 +33,7 @@ from generate_schema import (
     pages_section_specs,
     primary_image_description,
     project_image_description,
+    service_description,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -1414,6 +1416,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not offer or "Offer" not in node_types(offer):
                 errors.append(f"person.jsonld missing Offer node: {offer_id}")
             else:
+                if offer.get("description") != offer_description(data, focus):
+                    errors.append(f"person.jsonld Offer description drift for: {focus}")
                 if offer.get("itemOffered", {}).get("@id") != service_id:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
                 missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))
@@ -1423,6 +1427,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not service or "Service" not in node_types(service):
                 errors.append(f"person.jsonld missing Service node: {service_id}")
             else:
+                if service.get("description") != service_description(data, focus):
+                    errors.append(f"person.jsonld Service description drift for: {focus}")
                 if service.get("provider", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Service provider drift for: {focus}")
                 if service.get("availableChannel", {}).get("@id") != service_channel_id:

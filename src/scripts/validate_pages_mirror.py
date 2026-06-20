@@ -22,6 +22,7 @@ from generate_schema import (
     lab_project_id,
     lab_project_url,
     machine_downloads,
+    offer_description,
     pages_section_id,
     pages_section_nav_item_id,
     pages_section_navigation_id,
@@ -29,6 +30,7 @@ from generate_schema import (
     pages_section_specs,
     primary_image_description,
     project_image_description,
+    service_description,
     slugify,
     unique_compact,
 )
@@ -934,12 +936,25 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index ServiceChannel about drift")
         if service_channel.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index ServiceChannel dateModified drift")
-    for service_id in expected_service_ids:
+    for focus in focus_items:
+        offer_id = f"https://www.marksiazon.dev/#offer-{slugify(str(focus))}"
+        service_id = f"https://www.marksiazon.dev/#service-{slugify(str(focus))}"
+        offer = next((node for node in parsed_jsonld_nodes if node.get("@id") == offer_id), None)
+        if not offer or "Offer" not in node_type_set(offer):
+            issues.append(f"Pages index missing Offer node: {offer_id}")
+        else:
+            if offer.get("description") != offer_description(index_data, str(focus)):
+                issues.append(f"Pages index Offer description drift: {focus}")
+            if offer.get("itemOffered", {}).get("@id") != service_id:
+                issues.append(f"Pages index Offer itemOffered drift: {focus}")
         service = next((node for node in parsed_jsonld_nodes if node.get("@id") == service_id), None)
         if not service or "Service" not in node_type_set(service):
             issues.append(f"Pages index missing Service node: {service_id}")
-        elif service.get("availableChannel", {}).get("@id") != service_channel_id:
-            issues.append(f"Pages index Service availableChannel drift: {service_id}")
+        else:
+            if service.get("description") != service_description(index_data, str(focus)):
+                issues.append(f"Pages index Service description drift: {focus}")
+            if service.get("availableChannel", {}).get("@id") != service_channel_id:
+                issues.append(f"Pages index Service availableChannel drift: {service_id}")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")

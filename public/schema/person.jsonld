@@ -3027,6 +3027,7 @@
       "@id": "https://www.marksiazon.dev/#offer-product-design",
       "name": "product design availability",
       "category": "product design",
+      "description": "Open availability for Mark Siazon product design service across Philippines, Southeast Asia, and remote global.",
       "url": "https://www.marksiazon.dev/recruiter",
       "availability": "https://schema.org/InStock",
       "areaServed": [
@@ -3055,6 +3056,7 @@
       "@id": "https://www.marksiazon.dev/#service-product-design",
       "name": "product design",
       "serviceType": "product design",
+      "description": "Mark Siazon product design service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3086,6 +3088,7 @@
       "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering",
       "name": "full-stack engineering availability",
       "category": "full-stack engineering",
+      "description": "Open availability for Mark Siazon full-stack engineering service across Philippines, Southeast Asia, and remote global.",
       "url": "https://www.marksiazon.dev/recruiter",
       "availability": "https://schema.org/InStock",
       "areaServed": [
@@ -3114,6 +3117,7 @@
       "@id": "https://www.marksiazon.dev/#service-full-stack-engineering",
       "name": "full-stack engineering",
       "serviceType": "full-stack engineering",
+      "description": "Mark Siazon full-stack engineering service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3145,6 +3149,7 @@
       "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes",
       "name": "AI workflow prototypes availability",
       "category": "AI workflow prototypes",
+      "description": "Open availability for Mark Siazon AI workflow prototypes service across Philippines, Southeast Asia, and remote global.",
       "url": "https://www.marksiazon.dev/recruiter",
       "availability": "https://schema.org/InStock",
       "areaServed": [
@@ -3173,6 +3178,7 @@
       "@id": "https://www.marksiazon.dev/#service-ai-workflow-prototypes",
       "name": "AI workflow prototypes",
       "serviceType": "AI workflow prototypes",
+      "description": "Mark Siazon AI workflow prototypes service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3204,6 +3210,7 @@
       "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux",
       "name": "mobile and Wear OS UX availability",
       "category": "mobile and Wear OS UX",
+      "description": "Open availability for Mark Siazon mobile and Wear OS UX service across Philippines, Southeast Asia, and remote global.",
       "url": "https://www.marksiazon.dev/recruiter",
       "availability": "https://schema.org/InStock",
       "areaServed": [
@@ -3232,6 +3239,7 @@
       "@id": "https://www.marksiazon.dev/#service-mobile-and-wear-os-ux",
       "name": "mobile and Wear OS UX",
       "serviceType": "mobile and Wear OS UX",
+      "description": "Mark Siazon mobile and Wear OS UX service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3263,6 +3271,7 @@
       "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems",
       "name": "Web3 proof systems availability",
       "category": "Web3 proof systems",
+      "description": "Open availability for Mark Siazon Web3 proof systems service across Philippines, Southeast Asia, and remote global.",
       "url": "https://www.marksiazon.dev/recruiter",
       "availability": "https://schema.org/InStock",
       "areaServed": [
@@ -3291,6 +3300,7 @@
       "@id": "https://www.marksiazon.dev/#service-web3-proof-systems",
       "name": "Web3 proof systems",
       "serviceType": "Web3 proof systems",
+      "description": "Mark Siazon Web3 proof systems service for Philippines, Southeast Asia, and remote global through contract and full-time work.",
       "provider": {
         "@id": "https://www.marksiazon.dev/#person"
       },
