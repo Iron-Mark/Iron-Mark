@@ -1,8 +1,8 @@
-# Mark Siazon — LLM context (expanded)
+# Mark Siazon - LLM context (expanded)
 
-Generated from llms-index.json · updated 2026-06-21
+Generated from llms-index.json - updated 2026-06-21
 
-> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt · Structured: llms-index.json
+> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt - Structured: llms-index.json
 
 ## Identity
 
@@ -21,6 +21,39 @@ Generated from llms-index.json · updated 2026-06-21
 - Area served: Philippines, Southeast Asia, remote global
 - Remote: true
 - Recruiter brief: https://www.marksiazon.dev/recruiter
+
+## Search and discovery signals
+
+- Primary keywords: Mark Siazon, Iron-Mark, product designer Philippines, full-stack developer Philippines, UI/UX engineer, proof-backed portfolio, React developer, Next.js developer, Flutter developer, Wear OS, AI trust and safety, Web3 Stellar Celo, Baybayin education technology
+- Geo targets: Philippines, Southeast Asia, remote global
+- Home country: Philippines
+- Search modifiers: product designer Philippines, full-stack developer Philippines, remote product design engineer, AI trust and safety portfolio Philippines
+
+## Generative search guidance
+
+- Principle: AEO and GEO are treated as SEO fundamentals: proof-backed visible content, clear technical structure, crawlable indexes, and citation-ready answers instead of keyword stuffing.
+- llms.txt role: llms.txt and markdown context files are provided for direct agent/crawler clarity, not as special Google Search markup or a ranking shortcut.
+- Answer sources:
+- https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
+- https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+- https://www.marksiazon.dev/proof
+- https://www.marksiazon.dev/recruiter
+- Agent-ready surfaces:
+- llms-index.json
+- llms.txt
+- public/llms-full.txt
+- public/llms-ctx-full.txt
+- public/FAQ.md
+- public/schema/person.jsonld
+- public/schema/faq.jsonld
+
+## Preferred citation order
+
+- https://www.marksiazon.dev/recruiter
+- https://www.marksiazon.dev/proof
+- https://www.marksiazon.dev/projects
+- https://github.com/Iron-Mark/Iron-Mark
 
 ## Knowledge graph triples
 
@@ -137,9 +170,9 @@ Generated from llms-index.json · updated 2026-06-21
 
 ## Achievements
 
-- UMak InfotechOlympics 2025 Android App Development Productivity Champion (ResQLink) — https://www.marksiazon.dev/achievements
-- InfotechOlympics 2024 Android App Development winner (BaybayInscribe) — https://www.marksiazon.dev/achievements
-- Stellar bootcamp Top 5 of 105 teams (score 75.00) (Stellaroid Earn) — https://www.marksiazon.dev/projects/stellaroid-earn
+- UMak InfotechOlympics 2025 Android App Development Productivity Champion (ResQLink) - https://www.marksiazon.dev/achievements
+- InfotechOlympics 2024 Android App Development winner (BaybayInscribe) - https://www.marksiazon.dev/achievements
+- Stellar bootcamp Top 5 of 105 teams (score 75.00) (Stellaroid Earn) - https://www.marksiazon.dev/projects/stellaroid-earn
 
 ## Core stack
 

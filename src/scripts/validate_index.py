@@ -1271,6 +1271,39 @@ def check_generated_context(data: dict[str, Any]) -> None:
         errors.append("public/llms-ctx-full.txt missing Knowledge graph triples section")
     if "## Hackathon and lab projects" not in text:
         errors.append("public/llms-ctx-full.txt missing Hackathon and lab projects section")
+    seo = data.get("seo", {})
+    geo_signals = seo.get("geoSignals", {})
+    generative = seo.get("generativeSearch", {})
+    if "## Search and discovery signals" not in text:
+        errors.append("public/llms-ctx-full.txt missing Search and discovery signals section")
+    expected_search_lines = [
+        f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}",
+        f"- Geo targets: {', '.join(seo.get('geoTargets', []))}",
+        f"- Home country: {geo_signals.get('homeCountry', '')}",
+        f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}",
+    ]
+    for line in expected_search_lines:
+        if line not in text:
+            errors.append(f"public/llms-ctx-full.txt missing search signal line: {line}")
+    if "## Generative search guidance" not in text:
+        errors.append("public/llms-ctx-full.txt missing Generative search guidance section")
+    for line in (
+        f"- Principle: {generative.get('principle', '')}",
+        f"- llms.txt role: {generative.get('llmsTxtRole', '')}",
+    ):
+        if line not in text:
+            errors.append(f"public/llms-ctx-full.txt missing generative guidance line: {line}")
+    for source in generative.get("answerSources", []):
+        if f"- {source}" not in text:
+            errors.append(f"public/llms-ctx-full.txt missing generative answer source: {source}")
+    for surface in generative.get("agentReadySurfaces", []):
+        if f"- {surface}" not in text:
+            errors.append(f"public/llms-ctx-full.txt missing agent-ready surface: {surface}")
+    if "## Preferred citation order" not in text:
+        errors.append("public/llms-ctx-full.txt missing Preferred citation order section")
+    for source in data.get("aeo", {}).get("preferredCitationOrder", []):
+        if f"- {source}" not in text:
+            errors.append(f"public/llms-ctx-full.txt missing preferred citation source: {source}")
     for triple in data.get("triples", []):
         if isinstance(triple, list) and len(triple) == 3:
             line = f"- {triple[0]} | {triple[1]} | {triple[2]}"

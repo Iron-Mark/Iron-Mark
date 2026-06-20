@@ -12,15 +12,21 @@ FAQ = ROOT / "public" / "FAQ.md"
 OUT = ROOT / "public" / "llms-ctx-full.txt"
 
 
+def append_items(lines: list[str], items: list[str]) -> None:
+    for item in items:
+        if item:
+            lines.append(f"- {item}")
+
+
 def main() -> None:
     data = json.loads(INDEX.read_text(encoding="utf-8"))
     entity = data["entity"]
     lines = [
-        "# Mark Siazon — LLM context (expanded)",
+        "# Mark Siazon - LLM context (expanded)",
         "",
-        f"Generated from llms-index.json · updated {data.get('updated', 'unknown')}",
+        f"Generated from llms-index.json - updated {data.get('updated', 'unknown')}",
         "",
-        "> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt · Structured: llms-index.json",
+        "> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt - Structured: llms-index.json",
         "",
         "## Identity",
         "",
@@ -41,6 +47,29 @@ def main() -> None:
     lines.append(f"- Area served: {', '.join(avail.get('areaServed', []))}")
     lines.append(f"- Remote: {str(avail.get('remote', False)).lower()}")
     lines.append(f"- Recruiter brief: {avail.get('recruiterBrief', '')}")
+    lines.append("")
+    seo = data.get("seo", {})
+    geo_signals = seo.get("geoSignals", {})
+    lines.append("## Search and discovery signals")
+    lines.append("")
+    lines.append(f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}")
+    lines.append(f"- Geo targets: {', '.join(seo.get('geoTargets', []))}")
+    lines.append(f"- Home country: {geo_signals.get('homeCountry', '')}")
+    lines.append(f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}")
+    lines.append("")
+    generative = seo.get("generativeSearch", {})
+    lines.append("## Generative search guidance")
+    lines.append("")
+    lines.append(f"- Principle: {generative.get('principle', '')}")
+    lines.append(f"- llms.txt role: {generative.get('llmsTxtRole', '')}")
+    lines.append("- Answer sources:")
+    append_items(lines, generative.get("answerSources", []))
+    lines.append("- Agent-ready surfaces:")
+    append_items(lines, generative.get("agentReadySurfaces", []))
+    lines.append("")
+    lines.append("## Preferred citation order")
+    lines.append("")
+    append_items(lines, data.get("aeo", {}).get("preferredCitationOrder", []))
     lines.append("")
     lines.append("## Knowledge graph triples")
     lines.append("")
@@ -71,7 +100,7 @@ def main() -> None:
     lines.append("## Achievements")
     lines.append("")
     for a in data.get("achievements", []):
-        lines.append(f"- {a['title']} ({a.get('project', '')}) — {a.get('proof', '')}")
+        lines.append(f"- {a['title']} ({a.get('project', '')}) - {a.get('proof', '')}")
     lines.append("")
     lines.append("## Core stack")
     lines.append("")

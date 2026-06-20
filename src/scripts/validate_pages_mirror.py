@@ -523,6 +523,65 @@ def pages_rewrite_ids(values: list[str]) -> set[str]:
     return {pages_rewrite_public_source(value) for value in values if value}
 
 
+def pages_rewrite_agent_surface(surface: str) -> str:
+    if surface.startswith("public/"):
+        return surface.removeprefix("public/")
+    return surface
+
+
+def check_pages_generated_context(issues: list[str], artifact: Path, index_data: dict[str, object]) -> None:
+    path = artifact / "llms-ctx-full.txt"
+    if not path.exists():
+        issues.append("Pages artifact missing llms-ctx-full.txt")
+        return
+    text = path.read_text(encoding="utf-8")
+    seo = index_data.get("seo", {})
+    if not isinstance(seo, dict):
+        seo = {}
+    geo_signals = seo.get("geoSignals", {})
+    if not isinstance(geo_signals, dict):
+        geo_signals = {}
+    generative = seo.get("generativeSearch", {})
+    if not isinstance(generative, dict):
+        generative = {}
+    if "## Search and discovery signals" not in text:
+        issues.append("Pages llms-ctx-full.txt missing Search and discovery signals section")
+    expected_search_lines = [
+        f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}",
+        f"- Geo targets: {', '.join(seo.get('geoTargets', []))}",
+        f"- Home country: {geo_signals.get('homeCountry', '')}",
+        f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}",
+    ]
+    for line in expected_search_lines:
+        if line not in text:
+            issues.append(f"Pages llms-ctx-full.txt missing search signal line: {line}")
+    if "## Generative search guidance" not in text:
+        issues.append("Pages llms-ctx-full.txt missing Generative search guidance section")
+    for line in (
+        f"- Principle: {generative.get('principle', '')}",
+        f"- llms.txt role: {generative.get('llmsTxtRole', '')}",
+    ):
+        if line not in text:
+            issues.append(f"Pages llms-ctx-full.txt missing generative guidance line: {line}")
+    for source in generative.get("answerSources", []):
+        expected = pages_rewrite_public_source(str(source))
+        if f"- {expected}" not in text:
+            issues.append(f"Pages llms-ctx-full.txt missing generative answer source: {expected}")
+    for surface in generative.get("agentReadySurfaces", []):
+        expected = pages_rewrite_agent_surface(str(surface))
+        if f"- {expected}" not in text:
+            issues.append(f"Pages llms-ctx-full.txt missing agent-ready surface: {expected}")
+    aeo = index_data.get("aeo", {})
+    if not isinstance(aeo, dict):
+        aeo = {}
+    if "## Preferred citation order" not in text:
+        issues.append("Pages llms-ctx-full.txt missing Preferred citation order section")
+    for source in aeo.get("preferredCitationOrder", []):
+        expected = pages_rewrite_public_source(str(source))
+        if f"- {expected}" not in text:
+            issues.append(f"Pages llms-ctx-full.txt missing preferred citation source: {expected}")
+
+
 def check_global_citation(
     issues: list[str],
     node: dict[str, object],
@@ -783,6 +842,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
     except Exception:
         index_data = {}
+    check_pages_generated_context(issues, artifact, index_data)
 
     index_text = (artifact / "index.html").read_text(encoding="utf-8") if (artifact / "index.html").exists() else ""
     for needle in ("schema/llms-index.schema.json", "schema/person.jsonld", "schema/faq.jsonld", "llms-index.json"):
