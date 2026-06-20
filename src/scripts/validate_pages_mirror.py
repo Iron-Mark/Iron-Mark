@@ -24,7 +24,9 @@ from generate_schema import (
     contact_action_description,
     contact_action_name,
     contact_action_platforms,
+    contact_entry_content_type,
     contact_entry_description,
+    contact_entry_http_method,
     contact_entry_name,
     data_catalog_description,
     data_catalog_name,
@@ -1209,10 +1211,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index contact EntryPoint description drift")
         if contact_entry.get("urlTemplate") != availability.get("contact"):
             issues.append("Pages index contact EntryPoint urlTemplate drift")
-        if contact_entry.get("contentType") != "text/html":
-            issues.append("Pages index contact EntryPoint contentType must be text/html")
-        if contact_entry.get("httpMethod") != "GET":
-            issues.append("Pages index contact EntryPoint httpMethod must be GET")
+        if contact_entry.get("contentType") != contact_entry_content_type():
+            issues.append("Pages index contact EntryPoint contentType drift")
+        if contact_entry.get("httpMethod") != contact_entry_http_method():
+            issues.append("Pages index contact EntryPoint httpMethod drift")
         if contact_entry.get("inLanguage") != "en":
             issues.append("Pages index contact EntryPoint inLanguage must be en")
         if contact_entry.get("actionPlatform") != contact_action_platforms():

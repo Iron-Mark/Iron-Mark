@@ -436,6 +436,14 @@ def contact_entry_description() -> str:
     return "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
 
 
+def contact_entry_content_type() -> str:
+    return "text/html"
+
+
+def contact_entry_http_method() -> str:
+    return "GET"
+
+
 def service_channel_name() -> str:
     return "Mark Siazon hiring service channel"
 
@@ -1378,8 +1386,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": contact_entry_name(),
             "description": contact_entry_description(),
             "urlTemplate": availability.get("contact", entity["url"]),
-            "contentType": "text/html",
-            "httpMethod": "GET",
+            "contentType": contact_entry_content_type(),
+            "httpMethod": contact_entry_http_method(),
             "inLanguage": "en",
             "actionPlatform": contact_action_platforms(),
         },
