@@ -20,7 +20,11 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    contact_action_description,
+    contact_action_name,
     contact_action_platforms,
+    contact_entry_description,
+    contact_entry_name,
     data_catalog_description,
     data_catalog_name,
     dataset_alternate_names,
@@ -52,6 +56,8 @@ from generate_schema import (
     profile_keywords,
     project_image_description,
     service_audience,
+    service_channel_description,
+    service_channel_name,
     service_description,
     service_focus_identifier,
     slugify,
@@ -1164,6 +1170,25 @@ def validate_artifact(artifact: Path) -> list[str]:
     availability = index_data.get("availability", {})
     if not isinstance(availability, dict):
         availability = {}
+    contact_action = next(
+        (node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#contact-action"),
+        None,
+    )
+    if not contact_action or "ContactAction" not in node_type_set(contact_action):
+        issues.append("Pages index inline JSON-LD missing ContactAction node")
+    else:
+        if contact_action.get("name") != contact_action_name():
+            issues.append("Pages index ContactAction name drift")
+        if contact_action.get("description") != contact_action_description():
+            issues.append("Pages index ContactAction description drift")
+        if contact_action.get("target", {}).get("@id") != "https://www.marksiazon.dev/#contact-entrypoint":
+            issues.append("Pages index ContactAction target drift")
+        if contact_action.get("recipient", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index ContactAction recipient drift")
+        if contact_action.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index ContactAction about drift")
+        if contact_action.get("object", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index ContactAction object drift")
     contact_entry = next(
         (node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#contact-entrypoint"),
         None,
@@ -1171,12 +1196,9 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not contact_entry or "EntryPoint" not in node_type_set(contact_entry):
         issues.append("Pages index inline JSON-LD missing contact EntryPoint node")
     else:
-        if contact_entry.get("name") != "Mark Siazon contact form entry point":
+        if contact_entry.get("name") != contact_entry_name():
             issues.append("Pages index contact EntryPoint name drift")
-        if (
-            contact_entry.get("description")
-            != "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
-        ):
+        if contact_entry.get("description") != contact_entry_description():
             issues.append("Pages index contact EntryPoint description drift")
         if contact_entry.get("urlTemplate") != availability.get("contact"):
             issues.append("Pages index contact EntryPoint urlTemplate drift")
@@ -1369,6 +1391,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not service_channel or "ServiceChannel" not in node_type_set(service_channel):
         issues.append("Pages index inline JSON-LD missing hiring ServiceChannel")
     else:
+        if service_channel.get("name") != service_channel_name():
+            issues.append("Pages index ServiceChannel name drift")
+        if service_channel.get("description") != service_channel_description():
+            issues.append("Pages index ServiceChannel description drift")
         if service_channel.get("serviceUrl") != availability.get("contact"):
             issues.append("Pages index ServiceChannel serviceUrl drift")
         if "en" not in service_channel.get("availableLanguage", []):

@@ -400,6 +400,30 @@ def contact_action_platforms() -> list[str]:
     ]
 
 
+def contact_action_name() -> str:
+    return "Contact Mark Siazon for hiring"
+
+
+def contact_action_description() -> str:
+    return "Contact path for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work."
+
+
+def contact_entry_name() -> str:
+    return "Mark Siazon contact form entry point"
+
+
+def contact_entry_description() -> str:
+    return "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
+
+
+def service_channel_name() -> str:
+    return "Mark Siazon hiring service channel"
+
+
+def service_channel_description() -> str:
+    return "Web contact channel for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work."
+
+
 def person_occupations(data: dict[str, Any]) -> list[dict[str, Any]]:
     return [
         {
@@ -1262,8 +1286,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "ContactAction",
             "@id": contact_action_id,
-            "name": "Contact Mark Siazon for hiring",
-            "description": "Contact path for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+            "name": contact_action_name(),
+            "description": contact_action_description(),
             "target": ref(contact_entry_id),
             "recipient": ref(person_id),
             "about": ref(person_id),
@@ -1309,8 +1333,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "EntryPoint",
             "@id": contact_entry_id,
-            "name": "Mark Siazon contact form entry point",
-            "description": "Web entry point for Mark Siazon hiring contact and recruiter inquiries.",
+            "name": contact_entry_name(),
+            "description": contact_entry_description(),
             "urlTemplate": availability.get("contact", entity["url"]),
             "contentType": "text/html",
             "httpMethod": "GET",
@@ -1320,8 +1344,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "ServiceChannel",
             "@id": service_channel_id,
-            "name": "Mark Siazon hiring service channel",
-            "description": "Web contact channel for product design, full-stack engineering, AI workflow, mobile, and Web3 proof work.",
+            "name": service_channel_name(),
+            "description": service_channel_description(),
             "serviceUrl": availability.get("contact", entity["url"]),
             "availableLanguage": ["en"],
             "providesService": [ref(service_id) for service_id in service_ids],

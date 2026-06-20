@@ -27,7 +27,11 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    contact_action_description,
+    contact_action_name,
     contact_action_platforms,
+    contact_entry_description,
+    contact_entry_name,
     data_catalog_description,
     data_catalog_name,
     dataset_alternate_names,
@@ -54,6 +58,8 @@ from generate_schema import (
     profile_keywords,
     project_image_description,
     service_audience,
+    service_channel_description,
+    service_channel_name,
     service_description,
     service_focus_identifier,
 )
@@ -2168,6 +2174,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if not service_channel or "ServiceChannel" not in node_types(service_channel):
             errors.append("person.jsonld missing hiring ServiceChannel node")
         else:
+            if service_channel.get("name") != service_channel_name():
+                errors.append("person.jsonld ServiceChannel name drift")
+            if service_channel.get("description") != service_channel_description():
+                errors.append("person.jsonld ServiceChannel description drift")
             if service_channel.get("serviceUrl") != availability.get("contact"):
                 errors.append("person.jsonld ServiceChannel serviceUrl drift")
             if "en" not in service_channel.get("availableLanguage", []):
@@ -2629,6 +2639,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not contact_action or "ContactAction" not in node_types(contact_action):
         errors.append("person.jsonld missing hiring ContactAction node")
     else:
+        if contact_action.get("name") != contact_action_name():
+            errors.append("person.jsonld ContactAction name drift")
+        if contact_action.get("description") != contact_action_description():
+            errors.append("person.jsonld ContactAction description drift")
         if contact_action.get("target", {}).get("@id") != contact_entry_id:
             errors.append("person.jsonld ContactAction target drift")
         if contact_action.get("recipient", {}).get("@id") != person_id:
@@ -2643,12 +2657,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if contact_entry.get("urlTemplate") != data.get("availability", {}).get("contact"):
             errors.append("person.jsonld ContactAction EntryPoint urlTemplate drift")
-        if contact_entry.get("name") != "Mark Siazon contact form entry point":
+        if contact_entry.get("name") != contact_entry_name():
             errors.append("person.jsonld ContactAction EntryPoint name drift")
-        if (
-            contact_entry.get("description")
-            != "Web entry point for Mark Siazon hiring contact and recruiter inquiries."
-        ):
+        if contact_entry.get("description") != contact_entry_description():
             errors.append("person.jsonld ContactAction EntryPoint description drift")
         if contact_entry.get("contentType") != "text/html":
             errors.append("person.jsonld ContactAction EntryPoint contentType must be text/html")
