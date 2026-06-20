@@ -1372,6 +1372,65 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     for key in ("title", "project", "proof"):
         if key not in achievement_required:
             errors.append(f"llms-index.schema.json achievements item schema missing required key: {key}")
+    machine_readable_schema = index_schema.get("properties", {}).get("machineReadable", {}).get("properties", {})
+    machine_readable_contracts = {
+        "repo": {
+            "llmsTxt",
+            "llmsFullTxt",
+            "llmsIndexJson",
+            "llmsCtxFullTxt",
+            "faqMd",
+            "recruiterMd",
+            "proofMd",
+            "profileMd",
+            "readmeMd",
+            "howToCiteMd",
+            "licenseMd",
+            "citationCff",
+            "schemaPerson",
+            "schemaFaq",
+            "schemaIndex",
+            "humansTxt",
+            "stackMd",
+            "sitemap",
+            "robots",
+        },
+        "pages": {
+            "home",
+            "llmsTxt",
+            "llmsFullTxt",
+            "llmsIndexJson",
+            "llmsCtxFullTxt",
+            "faqMd",
+            "recruiterMd",
+            "proofMd",
+            "profileMd",
+            "readmeMd",
+            "howToCiteMd",
+            "licenseMd",
+            "citationCff",
+            "schemaPerson",
+            "schemaFaq",
+            "schemaIndex",
+            "humansTxt",
+            "stackMd",
+            "sitemap",
+            "robots",
+        },
+        "portfolio": {"llmsTxt", "llmsFullTxt", "humansTxt", "sitemap", "rss", "jsonFeed"},
+    }
+    for key, expected_properties in machine_readable_contracts.items():
+        item_schema = machine_readable_schema.get(key, {})
+        actual_properties = set(item_schema.get("properties", {}))
+        missing_properties = sorted(expected_properties - actual_properties)
+        if missing_properties:
+            errors.append(f"llms-index.schema.json machineReadable.{key} schema missing properties: {missing_properties}")
+        if item_schema.get("additionalProperties") is not False:
+            errors.append(f"llms-index.schema.json machineReadable.{key} schema must disallow additionalProperties")
+        for property_name in expected_properties & actual_properties:
+            property_schema = item_schema.get("properties", {}).get(property_name, {})
+            if property_schema.get("type") != "string" or property_schema.get("format") != "uri":
+                errors.append(f"llms-index.schema.json machineReadable.{key}.{property_name} must be a URI string")
     schema_index_url = data.get("schema", {}).get("index")
     if schema_index_url != f"{GITHUB_BLOB}/public/schema/llms-index.schema.json":
         errors.append("llms-index.json schema.index must point to public/schema/llms-index.schema.json")

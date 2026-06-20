@@ -220,7 +220,85 @@
             "sitemap",
             "robots"
           ],
-          "additionalProperties": true
+          "properties": {
+            "llmsTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsIndexJson": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsCtxFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "faqMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "recruiterMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "proofMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "profileMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "readmeMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "howToCiteMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "licenseMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "citationCff": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaPerson": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaFaq": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaIndex": {
+              "type": "string",
+              "format": "uri"
+            },
+            "humansTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "stackMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "sitemap": {
+              "type": "string",
+              "format": "uri"
+            },
+            "robots": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
         },
         "pages": {
           "type": "object",
@@ -246,7 +324,89 @@
             "sitemap",
             "robots"
           ],
-          "additionalProperties": true
+          "properties": {
+            "home": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsIndexJson": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsCtxFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "faqMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "recruiterMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "proofMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "profileMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "readmeMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "howToCiteMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "licenseMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "citationCff": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaPerson": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaFaq": {
+              "type": "string",
+              "format": "uri"
+            },
+            "schemaIndex": {
+              "type": "string",
+              "format": "uri"
+            },
+            "humansTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "stackMd": {
+              "type": "string",
+              "format": "uri"
+            },
+            "sitemap": {
+              "type": "string",
+              "format": "uri"
+            },
+            "robots": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
         },
         "portfolio": {
           "type": "object",
@@ -258,7 +418,33 @@
             "rss",
             "jsonFeed"
           ],
-          "additionalProperties": true
+          "properties": {
+            "llmsTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "llmsFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "humansTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "sitemap": {
+              "type": "string",
+              "format": "uri"
+            },
+            "rss": {
+              "type": "string",
+              "format": "uri"
+            },
+            "jsonFeed": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
