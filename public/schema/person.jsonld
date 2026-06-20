@@ -354,6 +354,7 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark",
       "dateModified": "2026-06-20",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
@@ -380,6 +381,7 @@
         "Mark Siazon GitHub Profile Index"
       ],
       "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#website"
       },
@@ -552,6 +554,7 @@
       "name": "Mark Siazon machine-readable profile catalog",
       "url": "https://iron-mark.github.io/Iron-Mark/",
       "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "publisher": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -598,6 +601,7 @@
         }
       ],
       "sameAs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "version": "2026-06-20",
       "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
       "creator": {
@@ -770,6 +774,7 @@
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
       "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-20",
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
@@ -1220,6 +1225,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1253,6 +1259,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1286,6 +1293,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1319,6 +1327,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1352,6 +1361,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1385,6 +1395,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1418,6 +1429,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1451,6 +1463,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1484,6 +1497,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROFILE.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1517,6 +1531,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/README.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1550,6 +1565,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1583,6 +1599,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1616,6 +1633,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1649,6 +1667,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1682,6 +1701,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1715,6 +1735,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1748,6 +1769,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1781,6 +1803,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",
@@ -1814,6 +1837,7 @@
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
       ],
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt",
       "sdPublisher": {
         "@type": "Person",
         "@id": "https://www.marksiazon.dev/#person",

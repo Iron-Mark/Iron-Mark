@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 PUBLIC = ROOT / "public"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
+GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 PAGES_HOST = "iron-mark.github.io"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = {"Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"}
@@ -229,6 +230,17 @@ def expected_citation_targets(index_data: dict[str, object]) -> list[str]:
             output.append(value)
             seen.add(value)
     return output
+
+
+def pages_rewrite_public_source(source: str) -> str:
+    replacements = (
+        (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
+        (f"{GITHUB_BLOB}/public/", f"{PAGES_BASE}/"),
+    )
+    for prefix, replacement in replacements:
+        if source.startswith(prefix):
+            return source.replace(prefix, replacement, 1)
+    return source
 
 
 def check_global_citation(
@@ -460,20 +472,33 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline JSON-LD WebSite url drift")
         if pages_site.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index inline JSON-LD WebSite dateModified drift")
+        canonical = index_data.get("canonical", {})
+        expected_based_on = canonical.get("githubProfileReadme") if isinstance(canonical, dict) else None
+        if pages_site.get("isBasedOn") != expected_based_on:
+            issues.append("Pages index WebSite isBasedOn drift")
         check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
             issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
+    machine_readable_for_sources = index_data.get("machineReadable", {})
+    repo_sources = machine_readable_for_sources.get("repo", {}) if isinstance(machine_readable_for_sources, dict) else {}
+    if not isinstance(repo_sources, dict):
+        repo_sources = {}
+    expected_based_on = repo_sources.get("llmsIndexJson")
     pages_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#webpage"), None)
     if not pages_page or "CollectionPage" not in node_type_set(pages_page):
         issues.append("Pages index inline JSON-LD missing CollectionPage")
     else:
+        if pages_page.get("isBasedOn") != expected_based_on:
+            issues.append("Pages index CollectionPage isBasedOn drift")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
     if not data_catalog or "DataCatalog" not in node_type_set(data_catalog):
         issues.append("Pages index inline JSON-LD missing DataCatalog")
     else:
+        if data_catalog.get("isBasedOn") != expected_based_on:
+            issues.append("Pages index DataCatalog isBasedOn drift")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
@@ -494,6 +519,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if dataset.get("sameAs") != "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json":
             issues.append("Pages index inline Dataset sameAs source drift")
+        if dataset.get("isBasedOn") != "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json":
+            issues.append("Pages index inline Dataset isBasedOn drift")
         if dataset.get("version") != index_data.get("updated"):
             issues.append("Pages index inline Dataset version drift")
         identifiers = dataset.get("identifier", [])
@@ -516,6 +543,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not faq_page or "FAQPage" not in node_type_set(faq_page):
         issues.append("Pages index inline JSON-LD missing FAQPage")
     else:
+        if faq_page.get("isBasedOn") != f"{PAGES_BASE}/FAQ.md":
+            issues.append("Pages index FAQPage isBasedOn drift")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:
@@ -558,11 +587,14 @@ def validate_artifact(artifact: Path) -> list[str]:
     machine_readable = index_data.get("machineReadable", {})
     pages_for_downloads = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
     if isinstance(pages_for_downloads, dict):
-        for item in machine_downloads(pages_for_downloads):
+        for item in machine_downloads(pages_for_downloads, repo_sources):
             download = jsonld_node_by_id.get(download_id(item["key"]))
             if not download or "DataDownload" not in node_type_set(download):
                 issues.append(f"Pages index inline JSON-LD missing DataDownload: {item['key']}")
                 continue
+            expected_download_source = pages_rewrite_public_source(item.get("sourceUrl", ""))
+            if download.get("isBasedOn") != expected_download_source:
+                issues.append(f"Pages index DataDownload isBasedOn drift: {item['key']}")
             check_global_citation(issues, download, index_data, f"Pages index DataDownload {item['key']}")
             check_structured_data_provenance(issues, download, index_data, f"Pages index DataDownload {item['key']}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:

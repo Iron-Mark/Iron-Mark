@@ -224,6 +224,31 @@ def expected_downloads(pages: dict[str, str]) -> dict[str, tuple[str, str]]:
     }
 
 
+def expected_download_sources(repo: dict[str, str]) -> dict[str, str]:
+    key_map = {
+        "llms-index-json": "llmsIndexJson",
+        "llms-txt": "llmsTxt",
+        "llms-full-txt": "llmsFullTxt",
+        "llms-ctx-full-txt": "llmsCtxFullTxt",
+        "faq-md": "faqMd",
+        "recruiter-md": "recruiterMd",
+        "proof-md": "proofMd",
+        "stack-md": "stackMd",
+        "profile-md": "profileMd",
+        "readme-md": "readmeMd",
+        "how-to-cite-md": "howToCiteMd",
+        "license-md": "licenseMd",
+        "citation-cff": "citationCff",
+        "person-jsonld": "schemaPerson",
+        "faq-jsonld": "schemaFaq",
+        "schema-json": "schemaIndex",
+        "humans-txt": "humansTxt",
+        "sitemap-xml": "sitemap",
+        "robots-txt": "robots",
+    }
+    return {download_key: repo.get(repo_key, "") for download_key, repo_key in key_map.items()}
+
+
 def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> list[dict[str, Any]]:
     area_served = data.get("availability", {}).get("areaServed", [])
     return [
@@ -1014,6 +1039,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages WebSite url drift")
         if pages_site.get("dateModified") != data.get("updated"):
             errors.append("person.jsonld Pages WebSite dateModified drift")
+        if pages_site.get("isBasedOn") != data.get("canonical", {}).get("githubProfileReadme"):
+            errors.append("person.jsonld Pages WebSite isBasedOn drift")
         check_structured_data_provenance(pages_site, data, "person.jsonld Pages WebSite")
         missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_site_alternates:
@@ -1041,6 +1068,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage thumbnailUrl drift")
         if pages_page.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Pages CollectionPage potentialAction drift")
+        if pages_page.get("isBasedOn") != repo.get("llmsIndexJson"):
+            errors.append("person.jsonld Pages CollectionPage isBasedOn drift")
         check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")
         check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
         required_parts = {
@@ -1076,6 +1105,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog dataset drift")
         if data_catalog.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld DataCatalog about drift")
+        if data_catalog.get("isBasedOn") != repo.get("llmsIndexJson"):
+            errors.append("person.jsonld DataCatalog isBasedOn drift")
         check_global_citation(data_catalog, data, "person.jsonld DataCatalog")
         check_structured_data_provenance(data_catalog, data, "person.jsonld DataCatalog")
     image = node_by_id(person_schema, pages_image_id)
@@ -1131,6 +1162,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset url drift")
         if dataset.get("sameAs") != repo.get("llmsIndexJson"):
             errors.append("person.jsonld Dataset sameAs source drift")
+        if dataset.get("isBasedOn") != repo.get("llmsIndexJson"):
+            errors.append("person.jsonld Dataset isBasedOn drift")
         if dataset.get("version") != data.get("updated"):
             errors.append("person.jsonld Dataset version must match updated date")
         identifiers = dataset.get("identifier", [])
@@ -1177,6 +1210,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld DataDownload contentUrl drift for: {key}")
         if download.get("url") != content_url:
             errors.append(f"person.jsonld DataDownload url drift for: {key}")
+        download_sources = expected_download_sources(repo)
+        if download.get("isBasedOn") != download_sources.get(key):
+            errors.append(f"person.jsonld DataDownload isBasedOn drift for: {key}")
         if download.get("encodingFormat") != encoding:
             errors.append(f"person.jsonld DataDownload encodingFormat drift for: {key}")
         if download.get("dateModified") != data.get("updated"):
@@ -1248,6 +1284,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if faq_page.get("dateModified") != data.get("updated"):
             errors.append("faq.jsonld FAQPage dateModified drift")
+        if faq_page.get("isBasedOn") != repo.get("faqMd"):
+            errors.append("faq.jsonld FAQPage isBasedOn drift")
         if faq_page.get("author", {}).get("@id") != person_id:
             errors.append("faq.jsonld FAQPage author drift")
         if faq_page.get("about", {}).get("@id") != person_id:

@@ -217,28 +217,35 @@ def download_id(key: str) -> str:
     return f"{PAGES}/#download-{slugify(key)}"
 
 
-def machine_downloads(pages: dict[str, str]) -> list[dict[str, str]]:
-    return [
-        {"key": "llms-index-json", "name": "Structured entity index", "url": pages["llmsIndexJson"], "encoding": "application/json"},
-        {"key": "llms-txt", "name": "LLM manifest", "url": pages["llmsTxt"], "encoding": "text/plain"},
-        {"key": "llms-full-txt", "name": "Full LLM context", "url": pages["llmsFullTxt"], "encoding": "text/plain"},
-        {"key": "llms-ctx-full-txt", "name": "Expanded generated agent context", "url": pages["llmsCtxFullTxt"], "encoding": "text/plain"},
-        {"key": "faq-md", "name": "FAQ question and answer corpus", "url": pages["faqMd"], "encoding": "text/markdown"},
-        {"key": "recruiter-md", "name": "Recruiter brief", "url": pages["recruiterMd"], "encoding": "text/markdown"},
-        {"key": "proof-md", "name": "Claim verification map", "url": pages["proofMd"], "encoding": "text/markdown"},
-        {"key": "stack-md", "name": "Full stack reference", "url": pages["stackMd"], "encoding": "text/markdown"},
-        {"key": "profile-md", "name": "Structured profile summary", "url": pages["profileMd"], "encoding": "text/markdown"},
-        {"key": "readme-md", "name": "Machine-readable mirror README", "url": pages["readmeMd"], "encoding": "text/markdown"},
-        {"key": "how-to-cite-md", "name": "Citation guide", "url": pages["howToCiteMd"], "encoding": "text/markdown"},
-        {"key": "license-md", "name": "Content license", "url": pages["licenseMd"], "encoding": "text/markdown"},
-        {"key": "citation-cff", "name": "Citation File Format metadata", "url": pages["citationCff"], "encoding": "text/plain"},
-        {"key": "person-jsonld", "name": "Schema.org Person graph", "url": pages["schemaPerson"], "encoding": "application/ld+json"},
-        {"key": "faq-jsonld", "name": "Schema.org FAQ graph", "url": pages["schemaFaq"], "encoding": "application/ld+json"},
-        {"key": "schema-json", "name": "llms-index JSON Schema contract", "url": pages["schemaIndex"], "encoding": "application/schema+json"},
-        {"key": "humans-txt", "name": "Humans and entity credits", "url": pages["humansTxt"], "encoding": "text/plain"},
-        {"key": "sitemap-xml", "name": "GitHub Pages sitemap", "url": pages["sitemap"], "encoding": "application/xml"},
-        {"key": "robots-txt", "name": "GitHub Pages robots hints", "url": pages["robots"], "encoding": "text/plain"},
+def machine_downloads(pages: dict[str, str], repo: dict[str, str] | None = None) -> list[dict[str, str]]:
+    rows = [
+        ("llms-index-json", "Structured entity index", "llmsIndexJson", "application/json"),
+        ("llms-txt", "LLM manifest", "llmsTxt", "text/plain"),
+        ("llms-full-txt", "Full LLM context", "llmsFullTxt", "text/plain"),
+        ("llms-ctx-full-txt", "Expanded generated agent context", "llmsCtxFullTxt", "text/plain"),
+        ("faq-md", "FAQ question and answer corpus", "faqMd", "text/markdown"),
+        ("recruiter-md", "Recruiter brief", "recruiterMd", "text/markdown"),
+        ("proof-md", "Claim verification map", "proofMd", "text/markdown"),
+        ("stack-md", "Full stack reference", "stackMd", "text/markdown"),
+        ("profile-md", "Structured profile summary", "profileMd", "text/markdown"),
+        ("readme-md", "Machine-readable mirror README", "readmeMd", "text/markdown"),
+        ("how-to-cite-md", "Citation guide", "howToCiteMd", "text/markdown"),
+        ("license-md", "Content license", "licenseMd", "text/markdown"),
+        ("citation-cff", "Citation File Format metadata", "citationCff", "text/plain"),
+        ("person-jsonld", "Schema.org Person graph", "schemaPerson", "application/ld+json"),
+        ("faq-jsonld", "Schema.org FAQ graph", "schemaFaq", "application/ld+json"),
+        ("schema-json", "llms-index JSON Schema contract", "schemaIndex", "application/schema+json"),
+        ("humans-txt", "Humans and entity credits", "humansTxt", "text/plain"),
+        ("sitemap-xml", "GitHub Pages sitemap", "sitemap", "application/xml"),
+        ("robots-txt", "GitHub Pages robots hints", "robots", "text/plain"),
     ]
+    downloads: list[dict[str, str]] = []
+    for key, name, source_key, encoding in rows:
+        item = {"key": key, "name": name, "url": pages[source_key], "encoding": encoding}
+        if repo and repo.get(source_key):
+            item["sourceUrl"] = repo[source_key]
+        downloads.append(item)
+    return downloads
 
 
 def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
@@ -265,7 +272,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     area_served = availability.get("areaServed") or data.get("seo", {}).get("geoSignals", {}).get("serviceRegions", [])
     area_nodes = area_served_nodes(area_served)
     offer_ids = [fragment_id(person_id, f"offer-{slugify(focus)}") for focus in availability.get("focus", [])]
-    downloads = machine_downloads(pages)
+    downloads = machine_downloads(pages, repo)
 
     knows_about = data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", [])
     dataset_keywords = unique_compact(
@@ -395,6 +402,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
             "image": ref(pages_image_id),
             "potentialAction": ref(contact_action_id),
@@ -407,6 +415,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": PAGES_SITE_NAME,
             "alternateName": PAGES_SITE_ALTERNATE_NAMES,
             "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+            "isBasedOn": repo["llmsIndexJson"],
             "isPartOf": ref(pages_site_id),
             "about": ref(person_id),
             "mainEntity": ref(person_id),
@@ -484,6 +493,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": "Mark Siazon machine-readable profile catalog",
             "url": pages["home"],
             "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+            "isBasedOn": repo["llmsIndexJson"],
             "publisher": ref(person_id),
             "about": ref(person_id),
             "dataset": ref(pages_dataset_id),
@@ -510,6 +520,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 },
             ],
             "sameAs": repo["llmsIndexJson"],
+            "isBasedOn": repo["llmsIndexJson"],
             "version": updated,
             "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
             "creator": ref(person_id),
@@ -550,6 +561,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "isBasedOn": repo["faqMd"],
             "dateModified": updated,
             "author": ref(person_id),
             "about": ref(person_id),
@@ -621,6 +633,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "isPartOf": ref(pages_dataset_id),
                 "about": ref(person_id),
                 "citation": citations,
+                **({"isBasedOn": item["sourceUrl"]} if item.get("sourceUrl") else {}),
                 **sd_provenance,
             }
         )
@@ -769,6 +782,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "isBasedOn": repo["faqMd"],
             "dateModified": data["updated"],
             "author": ref(person_id),
             "about": ref(person_id),

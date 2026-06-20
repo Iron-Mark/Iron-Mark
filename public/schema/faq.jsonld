@@ -12,6 +12,7 @@
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
       "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-20",
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
