@@ -1,10 +1,8 @@
 # Tech Stack, Tools & Fields
 
-<!-- SEO/LLM: Mark Siazon | @Iron-Mark | tech stack | web development | React | Next.js | TypeScript | Tailwind | Flutter | Kotlin | Wear OS | Python | PyTorch | LangChain | Web3 | Stellar | Soroban | Celo | Solidity | Hardhat | MiniPay | MetaMask | Figma | UI/UX | game dev | Unity | Godot | AI workflow | Cursor | GitHub Copilot | Claude Code | design systems | full-stack | product engineer | Philippines | marksiazon.dev -->
+<p align="center"><strong>Mark Siazon (@Iron-Mark)</strong> — full technology reference for the <a href="../README.md">GitHub profile README</a>.</p>
 
-<p align="center"><strong>Mark Siazon (@Iron-Mark)</strong> — full technology reference for the <a href="README.md">GitHub profile README</a>.</p>
-
-<p align="center"><sub>Core stack (16 tools, domain-grouped) on <a href="README.md#tech-stack">README</a> · Proof-backed projects at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
+<p align="center"><sub>Core stack (16 tools, domain-grouped) on <a href="../README.md#tech-stack">README</a> · Proof-backed projects at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
 
 <p align="center"><sub>(Things I know and Like to learn)</sub></p>
 
@@ -281,6 +279,6 @@
 
 ---
 
-<p align="center"><sub>← <a href="README.md">Profile README</a> · <a href="llms.txt">llms.txt</a> · <a href="llms-index.json">llms-index.json</a> · <a href="https://www.marksiazon.dev/projects">Portfolio projects</a> · <a href="https://www.marksiazon.dev/proof">Proof matrix</a></sub></p>
+<p align="center"><sub>← <a href="../README.md">Profile README</a> · <a href="../llms.txt">llms.txt</a> · <a href="../llms-index.json">llms-index.json</a> · <a href="https://www.marksiazon.dev/projects">Portfolio projects</a> · <a href="https://www.marksiazon.dev/proof">Proof matrix</a></sub></p>
 
 <p align="center"><sub><strong>Domains:</strong> Web Development · Mobile · Backend · Web3 · Deploy · Game Dev · UI/UX · Creative · AI · AI-Assisted Development Workflow</sub></p>

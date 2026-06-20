@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Build docs/index.html for the GitHub Pages machine-readable mirror."""
+
+from __future__ import annotations
+
+import json
+from html import escape
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+DOCS = ROOT / "docs"
+SCHEMA_PERSON = ROOT / "public" / "schema" / "person.jsonld"
+INDEX = ROOT / "llms-index.json"
+
+PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
+PORTFOLIO_URL = "https://www.marksiazon.dev"
+SOCIAL_IMAGE = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/assets/brand/banner.webp"
+
+
+def csv(values: list[str]) -> str:
+    return ", ".join(escape(value) for value in values if value)
+
+
+def linked(url: str, label: str) -> str:
+    return f'<a href="{escape(url, quote=True)}">{escape(label)}</a>'
+
+
+def render_projects(projects: list[dict[str, str]]) -> str:
+    items: list[str] = []
+    for project in projects:
+        links = [
+            linked(project["caseStudy"], "case study") if project.get("caseStudy") else "",
+            linked(project["live"], "live") if project.get("live") else "",
+            linked(project["repo"], "repo") if project.get("repo") else "",
+            linked(project["model"], "model") if project.get("model") else "",
+        ]
+        proof_links = " | ".join(link for link in links if link)
+        proof = f" <span class=\"meta\">({proof_links})</span>" if proof_links else ""
+        items.append(
+            "      <li>"
+            f"<strong>{escape(project.get('name', 'Project'))}</strong> - "
+            f"{escape(project.get('focus', 'featured work'))}.{proof}"
+            "</li>"
+        )
+    return "\n".join(items)
+
+
+def render_answers(snippets: list[dict[str, str]]) -> str:
+    items: list[str] = []
+    for item in snippets:
+        source_links = [
+            linked(source, source)
+            for source in item.get("sources", [])
+            if isinstance(source, str) and source
+        ]
+        sources = ""
+        if source_links:
+            sources = f"<br/><span class=\"meta\">Sources: {' | '.join(source_links)}</span>"
+        items.append(
+            "      <li>"
+            f"<strong>{escape(item.get('question', 'Question'))}</strong><br/>"
+            f"{escape(item.get('answer', ''))}"
+            f"{sources}"
+            "</li>"
+        )
+    return "\n".join(items)
+
+
+def render_citation_links(urls: list[str]) -> str:
+    items: list[str] = []
+    for index, url in enumerate(urls, start=1):
+        items.append(f"      <li>{index}. {linked(url, url)}</li>")
+    return "\n".join(items)
+
+
+def main() -> None:
+    data = json.loads(INDEX.read_text(encoding="utf-8"))
+    schema = json.dumps(json.loads(SCHEMA_PERSON.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
+    entity = data.get("entity", {})
+    availability = data.get("availability", {})
+    seo = data.get("seo", {})
+    aeo = data.get("aeo", {})
+    description = (
+        "Machine-readable GitHub profile index for Mark Siazon: structured entity data, "
+        "FAQ, proof map, recruiter brief, llms.txt, and Schema.org JSON-LD."
+    )
+    updated = data.get("updated", "")
+    job_titles = csv(entity.get("jobTitle", []))
+    focus = csv(availability.get("focus", []))
+    engagement = csv(availability.get("engagement", []))
+    area_served = csv(availability.get("areaServed", []))
+    primary_keywords = csv(seo.get("primaryKeywords", []))
+    geo_targets = csv(seo.get("geoTargets", []))
+    projects = render_projects(data.get("featuredProjects", []))
+    answers = render_answers(aeo.get("answerSnippets", []))
+    citation_links = render_citation_links(aeo.get("preferredCitationOrder", []))
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <meta name="description" content="{escape(description)}"/>
+  <meta name="author" content="Mark Siazon"/>
+  <meta property="og:type" content="profile"/>
+  <meta property="og:title" content="Mark Siazon - Profile Index"/>
+  <meta property="og:description" content="{escape(description)}"/>
+  <meta property="og:url" content="{PAGES_URL}"/>
+  <meta property="og:image" content="{SOCIAL_IMAGE}"/>
+  <meta name="date" content="{escape(updated)}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Mark Siazon - Profile Index"/>
+  <meta name="twitter:description" content="{escape(description)}"/>
+  <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
+  <title>Mark Siazon - Profile Index</title>
+  <link rel="canonical" href="{PAGES_URL}"/>
+  <link rel="alternate" type="application/json" href="llms-index.json"/>
+  <link rel="alternate" type="text/plain" href="llms.txt"/>
+  <link rel="alternate" type="text/plain" href="llms-full.txt"/>
+  <link rel="alternate" type="text/plain" href="llms-ctx-full.txt"/>
+  <link rel="alternate" type="text/markdown" href="FAQ.md"/>
+  <link rel="alternate" type="text/markdown" href="RECRUITER.md"/>
+  <link rel="alternate" type="text/markdown" href="PROOF.md"/>
+  <link rel="alternate" type="text/markdown" href="STACK.md"/>
+  <link rel="alternate" type="text/markdown" href="PROFILE.md"/>
+  <link rel="alternate" type="text/markdown" href="README.md"/>
+  <link rel="alternate" type="text/markdown" href="HOW-TO-CITE.md"/>
+  <link rel="alternate" type="text/markdown" href="LICENSE.md"/>
+  <link rel="alternate" type="text/plain" href="CITATION.cff"/>
+  <link rel="alternate" type="text/plain" href="humans.txt"/>
+  <link rel="license" href="LICENSE.md"/>
+  <link rel="alternate" type="application/ld+json" href="schema/person.jsonld"/>
+  <link rel="alternate" type="application/ld+json" href="schema/faq.jsonld"/>
+  <link rel="alternate" type="application/schema+json" href="schema/llms-index.schema.json"/>
+  <link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+  <script type="application/ld+json">
+{schema}
+  </script>
+  <style>
+    :root {{ color-scheme: light dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
+    body {{ margin: 0; line-height: 1.55; }}
+    main {{ max-width: 920px; margin: 0 auto; padding: 48px 20px; }}
+    h1 {{ font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.05; margin: 0 0 12px; letter-spacing: 0; }}
+    h2 {{ margin-top: 32px; }}
+    a {{ color: #2563eb; }}
+    ul {{ padding-left: 1.25rem; }}
+    li {{ margin: 8px 0; }}
+    code {{ font-size: 0.95em; }}
+    .meta {{ color: #64748b; }}
+    .facts {{ display: grid; gap: 10px; padding-left: 0; list-style: none; }}
+    .facts li {{ margin: 0; }}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mark Siazon - GitHub Profile Index</h1>
+    <p>{escape(entity.get("description", description))}</p>
+    <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
+    <h2>Profile Facts</h2>
+    <ul class="facts">
+      <li><strong>Name:</strong> {escape(entity.get("name", "Mark Siazon"))} ({csv(entity.get("alternateName", []))})</li>
+      <li><strong>Roles:</strong> {job_titles}</li>
+      <li><strong>Availability:</strong> {escape(availability.get("status", "open"))}; {engagement}; {focus}</li>
+      <li><strong>Geography:</strong> based in {escape(availability.get("location", "Philippines"))}; serves {area_served}</li>
+      <li><strong>Contact:</strong> {linked(availability.get("contact", f"{PORTFOLIO_URL}/contact"), "contact form")} | {escape(entity.get("email", ""))}</li>
+      <li><strong>Recruiter brief:</strong> {linked(availability.get("recruiterBrief", f"{PORTFOLIO_URL}/recruiter"), "marksiazon.dev/recruiter")}</li>
+    </ul>
+    <h2>Featured Work</h2>
+    <ul>
+{projects}
+    </ul>
+    <h2>Answer Corpus</h2>
+    <ul>
+{answers}
+    </ul>
+    <h2>Geo And Topic Signals</h2>
+    <p><strong>Primary search topics:</strong> {primary_keywords}</p>
+    <p><strong>Service regions:</strong> {geo_targets}</p>
+    <h2>Start Here</h2>
+    <ul>
+      <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, SEO, AEO, and GEO index</li>
+      <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> - expanded agent context</li>
+      <li><a href="FAQ.md">FAQ.md</a> - visible question and answer corpus</li>
+      <li><a href="RECRUITER.md">RECRUITER.md</a> - recruiter brief</li>
+      <li><a href="PROOF.md">PROOF.md</a> - claim verification map</li>
+      <li><a href="llms.txt">llms.txt</a> - LLM manifest</li>
+      <li><a href="schema/llms-index.schema.json">schema/llms-index.schema.json</a> - JSON Schema contract for llms-index.json</li>
+      <li><a href="schema/person.jsonld">schema/person.jsonld</a> - Person, profile, project, and content graph</li>
+      <li><a href="schema/faq.jsonld">schema/faq.jsonld</a> - FAQPage, Question, and Answer graph</li>
+    </ul>
+    <h2>Citation</h2>
+    <p><a href="HOW-TO-CITE.md">HOW-TO-CITE.md</a> and <a href="PROOF.md">PROOF.md</a> define citation order, verification boundaries, and public evidence.</p>
+    <ol>
+{citation_links}
+    </ol>
+    <p class="meta">This mirror exposes the same facts in readable HTML, JSON, Markdown, text, sitemap, and Schema.org JSON-LD formats; the portfolio remains the canonical human-facing site.</p>
+  </main>
+</body>
+</html>
+"""
+    DOCS.mkdir(parents=True, exist_ok=True)
+    (DOCS / "index.html").write_text(html, encoding="utf-8")
+    print("Wrote docs/index.html")
+
+
+if __name__ == "__main__":
+    main()

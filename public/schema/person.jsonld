@@ -5,9 +5,18 @@
       "@type": "Person",
       "@id": "https://www.marksiazon.dev/#person",
       "name": "Mark Siazon",
-      "alternateName": ["Iron-Mark", "mark-siazon"],
-      "jobTitle": "Product Designer and Full-Stack Developer",
-      "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products in AI trust and safety, mobile, and Web3.",
+      "alternateName": [
+        "Iron-Mark",
+        "mark-siazon"
+      ],
+      "jobTitle": [
+        "Product Designer",
+        "Full-Stack Developer",
+        "Product Engineer",
+        "UI/UX Designer",
+        "Front-end Specialist"
+      ],
+      "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
       "url": "https://www.marksiazon.dev",
       "email": "mailto:marksiazon.dev@gmail.com",
       "address": {
@@ -20,7 +29,200 @@
         "https://github.com/mark-siazon",
         "https://www.linkedin.com/in/mark-siazon/",
         "https://www.frontendmentor.io/profile/Iron-Mark",
+        "https://www.tiktok.com/@iron_markk",
         "https://github.com/Iron-Mark/Iron-Mark"
+      ],
+      "knowsAbout": [
+        "Figma",
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Flutter",
+        "Kotlin",
+        "Cursor",
+        "GitHub Copilot",
+        "Claude",
+        "Stellar",
+        "Celo",
+        "Python",
+        "Supabase",
+        "GitHub Actions CI/CD",
+        "Docker",
+        "Mark Siazon",
+        "Iron-Mark",
+        "product designer Philippines",
+        "full-stack developer Philippines",
+        "UI/UX engineer",
+        "proof-backed portfolio",
+        "React developer",
+        "Next.js developer",
+        "Flutter developer",
+        "Wear OS",
+        "AI trust and safety",
+        "Web3 Stellar Celo",
+        "Baybayin education technology"
+      ],
+      "award": [
+        "UMak InfotechOlympics 2025 Android App Development Productivity Champion",
+        "InfotechOlympics 2024 Android App Development winner",
+        "Stellar bootcamp Top 5 of 105 teams (score 75.00)"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "@id": "https://www.marksiazon.dev/#hiring-contact",
+          "contactType": "hiring",
+          "email": "mailto:marksiazon.dev@gmail.com",
+          "url": "https://www.marksiazon.dev/contact",
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Philippines"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Southeast Asia"
+            },
+            {
+              "@type": "VirtualLocation",
+              "name": "remote global"
+            }
+          ],
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "makesOffer": [
+        {
+          "@id": "https://www.marksiazon.dev/#offer-product-design"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
+        }
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Product Designer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Philippines"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Full-Stack Developer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Philippines"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Product Engineer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Philippines"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "UI/UX Designer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Philippines"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Front-end Specialist",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "Philippines"
+          }
+        }
+      ],
+      "workLocation": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "Remote global"
+        }
+      ],
+      "mainEntityOfPage": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark#profilepage"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#website"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#creativework"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md#creativework"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md#creativework"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json#creativework"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json"
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://www.marksiazon.dev/#services",
+      "name": "Mark Siazon services and availability",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "itemListElement": [
+        {
+          "@id": "https://www.marksiazon.dev/#offer-product-design"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
+        },
+        {
+          "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
+        }
       ]
     },
     {
@@ -28,39 +230,1338 @@
       "@id": "https://www.marksiazon.dev/#website",
       "name": "Mark Siazon Portfolio",
       "url": "https://www.marksiazon.dev",
-      "author": { "@id": "https://www.marksiazon.dev/#person" },
-      "description": "Proof-backed portfolio — product design, full-stack development, AI, mobile, and Web3 case studies."
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies."
     },
     {
       "@type": "WebSite",
       "@id": "https://github.com/Iron-Mark/Iron-Mark#website",
       "name": "Mark Siazon GitHub Profile Index",
       "url": "https://github.com/Iron-Mark/Iron-Mark",
-      "author": { "@id": "https://www.marksiazon.dev/#person" },
-      "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, and tech stack reference."
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference."
     },
     {
       "@type": "ProfilePage",
       "@id": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
-      "mainEntity": { "@id": "https://www.marksiazon.dev/#person" },
       "url": "https://github.com/Iron-Mark/Iron-Mark",
-      "isPartOf": { "@id": "https://github.com/Iron-Mark/Iron-Mark#website" }
+      "name": "Mark Siazon GitHub profile README",
+      "mainEntity": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
+      },
+      "dateModified": "2026-06-20"
     },
     {
       "@type": "WebSite",
       "@id": "https://iron-mark.github.io/Iron-Mark/#website",
       "name": "Mark Siazon Profile Index (GitHub Pages)",
       "url": "https://iron-mark.github.io/Iron-Mark/",
-      "author": { "@id": "https://www.marksiazon.dev/#person" },
-      "description": "Static mirror of llms-index.json, FAQ.md, and related machine-readable profile files."
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files."
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#webpage",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "name": "Mark Siazon GitHub Profile Index",
+      "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#website"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "mainEntity": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "breadcrumb": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#breadcrumb"
+      },
+      "dateModified": "2026-06-20",
+      "inLanguage": "en",
+      "hasPart": [
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#data-catalog"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/llms-index.json"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/llms.txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/FAQ.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/RECRUITER.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/PROOF.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/STACK.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/PROFILE.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/README.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/HOW-TO-CITE.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/LICENSE.md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/CITATION.cff"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/schema/person.jsonld"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/humans.txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/sitemap.xml"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/robots.txt"
+        }
+      ]
+    },
+    {
+      "@type": "DataCatalog",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#data-catalog",
+      "name": "Mark Siazon machine-readable profile catalog",
+      "url": "https://iron-mark.github.io/Iron-Mark/",
+      "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "dataset": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset",
+      "name": "Mark Siazon machine-readable profile dataset",
+      "url": "https://iron-mark.github.io/Iron-Mark/llms-index.json",
+      "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "keywords": [
+        "Mark Siazon",
+        "Iron-Mark",
+        "product designer Philippines",
+        "full-stack developer Philippines",
+        "UI/UX engineer",
+        "proof-backed portfolio",
+        "React developer",
+        "Next.js developer",
+        "Flutter developer",
+        "Wear OS",
+        "AI trust and safety",
+        "Web3 Stellar Celo",
+        "Baybayin education technology",
+        "Philippines",
+        "Southeast Asia",
+        "remote global"
+      ],
+      "includedInDataCatalog": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#data-catalog"
+      },
+      "isAccessibleForFree": true,
+      "distribution": [
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-index-json"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-full-txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-ctx-full-txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-faq-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-recruiter-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-proof-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-stack-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-profile-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-readme-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-how-to-cite-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-license-md"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-citation-cff"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-person-jsonld"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-faq-jsonld"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-schema-json"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-humans-txt"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-sitemap-xml"
+        },
+        {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#download-robots-txt"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Mark Siazon Portfolio",
+          "item": "https://www.marksiazon.dev"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "GitHub Profile Index",
+          "item": "https://iron-mark.github.io/Iron-Mark/"
+        }
+      ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
-      "name": "Mark Siazon — Frequently Asked Questions",
+      "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
-      "author": { "@id": "https://www.marksiazon.dev/#person" },
-      "isPartOf": { "@id": "https://github.com/Iron-Mark/Iron-Mark#website" }
+      "dateModified": "2026-06-20",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#featured-projects",
+      "name": "Mark Siazon featured projects",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 9,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/hireproof#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/stellaroid-earn#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/resqlink#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/flowfit#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/palengkepay#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/gawainyah#project"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@id": "https://www.marksiazon.dev/projects/baybayinscribe#project"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.marksiazon.dev/#offer-product-design",
+      "name": "product design availability",
+      "category": "product design",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "availability": "https://schema.org/InStock",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "offeredBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "itemOffered": {
+        "@id": "https://www.marksiazon.dev/#service-product-design"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.marksiazon.dev/#service-product-design",
+      "name": "product design",
+      "serviceType": "product design",
+      "provider": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "url": "https://www.marksiazon.dev/recruiter",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering",
+      "name": "full-stack engineering availability",
+      "category": "full-stack engineering",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "availability": "https://schema.org/InStock",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "offeredBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "itemOffered": {
+        "@id": "https://www.marksiazon.dev/#service-full-stack-engineering"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.marksiazon.dev/#service-full-stack-engineering",
+      "name": "full-stack engineering",
+      "serviceType": "full-stack engineering",
+      "provider": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "url": "https://www.marksiazon.dev/recruiter",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes",
+      "name": "AI workflow prototypes availability",
+      "category": "AI workflow prototypes",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "availability": "https://schema.org/InStock",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "offeredBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "itemOffered": {
+        "@id": "https://www.marksiazon.dev/#service-ai-workflow-prototypes"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.marksiazon.dev/#service-ai-workflow-prototypes",
+      "name": "AI workflow prototypes",
+      "serviceType": "AI workflow prototypes",
+      "provider": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "url": "https://www.marksiazon.dev/recruiter",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux",
+      "name": "mobile and Wear OS UX availability",
+      "category": "mobile and Wear OS UX",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "availability": "https://schema.org/InStock",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "offeredBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "itemOffered": {
+        "@id": "https://www.marksiazon.dev/#service-mobile-and-wear-os-ux"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.marksiazon.dev/#service-mobile-and-wear-os-ux",
+      "name": "mobile and Wear OS UX",
+      "serviceType": "mobile and Wear OS UX",
+      "provider": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "url": "https://www.marksiazon.dev/recruiter",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems",
+      "name": "Web3 proof systems availability",
+      "category": "Web3 proof systems",
+      "url": "https://www.marksiazon.dev/recruiter",
+      "availability": "https://schema.org/InStock",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "offeredBy": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "itemOffered": {
+        "@id": "https://www.marksiazon.dev/#service-web3-proof-systems"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.marksiazon.dev/#service-web3-proof-systems",
+      "name": "Web3 proof systems",
+      "serviceType": "Web3 proof systems",
+      "provider": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "url": "https://www.marksiazon.dev/recruiter",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Philippines"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Southeast Asia"
+        },
+        {
+          "@type": "VirtualLocation",
+          "name": "remote global"
+        }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-index-json",
+      "name": "Structured entity index",
+      "url": "https://iron-mark.github.io/Iron-Mark/llms-index.json",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/llms-index.json",
+      "encodingFormat": "application/json",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-txt",
+      "name": "LLM manifest",
+      "url": "https://iron-mark.github.io/Iron-Mark/llms.txt",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/llms.txt",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-full-txt",
+      "name": "Full LLM context",
+      "url": "https://iron-mark.github.io/Iron-Mark/llms-full.txt",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/llms-full.txt",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-llms-ctx-full-txt",
+      "name": "Expanded generated agent context",
+      "url": "https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-faq-md",
+      "name": "FAQ question and answer corpus",
+      "url": "https://iron-mark.github.io/Iron-Mark/FAQ.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/FAQ.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-recruiter-md",
+      "name": "Recruiter brief",
+      "url": "https://iron-mark.github.io/Iron-Mark/RECRUITER.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/RECRUITER.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-proof-md",
+      "name": "Claim verification map",
+      "url": "https://iron-mark.github.io/Iron-Mark/PROOF.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/PROOF.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-stack-md",
+      "name": "Full stack reference",
+      "url": "https://iron-mark.github.io/Iron-Mark/STACK.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/STACK.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-profile-md",
+      "name": "Structured profile summary",
+      "url": "https://iron-mark.github.io/Iron-Mark/PROFILE.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/PROFILE.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-readme-md",
+      "name": "Machine-readable mirror README",
+      "url": "https://iron-mark.github.io/Iron-Mark/README.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/README.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-how-to-cite-md",
+      "name": "Citation guide",
+      "url": "https://iron-mark.github.io/Iron-Mark/HOW-TO-CITE.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/HOW-TO-CITE.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-license-md",
+      "name": "Content license",
+      "url": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "encodingFormat": "text/markdown",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-citation-cff",
+      "name": "Citation File Format metadata",
+      "url": "https://iron-mark.github.io/Iron-Mark/CITATION.cff",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/CITATION.cff",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-person-jsonld",
+      "name": "Schema.org Person graph",
+      "url": "https://iron-mark.github.io/Iron-Mark/schema/person.jsonld",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/schema/person.jsonld",
+      "encodingFormat": "application/ld+json",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-faq-jsonld",
+      "name": "Schema.org FAQ graph",
+      "url": "https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld",
+      "encodingFormat": "application/ld+json",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-schema-json",
+      "name": "llms-index JSON Schema contract",
+      "url": "https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json",
+      "encodingFormat": "application/schema+json",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-humans-txt",
+      "name": "Humans and entity credits",
+      "url": "https://iron-mark.github.io/Iron-Mark/humans.txt",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/humans.txt",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-sitemap-xml",
+      "name": "GitHub Pages sitemap",
+      "url": "https://iron-mark.github.io/Iron-Mark/sitemap.xml",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/sitemap.xml",
+      "encodingFormat": "application/xml",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "DataDownload",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#download-robots-txt",
+      "name": "GitHub Pages robots hints",
+      "url": "https://iron-mark.github.io/Iron-Mark/robots.txt",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/robots.txt",
+      "encodingFormat": "text/plain",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/hireproof#project",
+      "name": "HireProof",
+      "url": "https://www.marksiazon.dev/projects/hireproof",
+      "description": "AI trust and safety for job seekers",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://hireproof.tech/portfolio"
+      ],
+      "keywords": [
+        "hireproof",
+        "AI trust and safety for job seekers"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/stellaroid-earn#project",
+      "name": "Stellaroid Earn",
+      "url": "https://www.marksiazon.dev/projects/stellaroid-earn",
+      "description": "Web3 credential proof on Stellar testnet",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://stellaroid.tech"
+      ],
+      "keywords": [
+        "stellaroid-earn",
+        "Web3 credential proof on Stellar testnet"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/resqlink#project",
+      "name": "ResQLink",
+      "url": "https://www.marksiazon.dev/projects/resqlink",
+      "description": "Offline-first emergency response platform",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://github.com/UMakLumen/ResQLinkWeb"
+      ],
+      "keywords": [
+        "resqlink",
+        "Offline-first emergency response platform"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/lexinsights#project",
+      "name": "LexInSight",
+      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "description": "AI legal compliance chat",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://lexinsights.vercel.app",
+        "https://github.com/Iron-Mark/Hackathon-LexInsights"
+      ],
+      "keywords": [
+        "lexinsights",
+        "AI legal compliance chat"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/good-to-live#project",
+      "name": "Good To Live",
+      "url": "https://www.marksiazon.dev/projects/good-to-live",
+      "description": "Client podcast web launch and SEO",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://www.goodtolivepodcast.com"
+      ],
+      "keywords": [
+        "good-to-live",
+        "Client podcast web launch and SEO"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/flowfit#project",
+      "name": "FlowFit",
+      "url": "https://www.marksiazon.dev/projects/flowfit",
+      "description": "Wear OS health and sensor companion",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [],
+      "keywords": [
+        "flowfit",
+        "Wear OS health and sensor companion"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/palengkepay#project",
+      "name": "PalengkePay",
+      "url": "https://www.marksiazon.dev/projects/palengkepay",
+      "description": "Stellar fintech PWA for wet markets",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://palengke-pay.vercel.app"
+      ],
+      "keywords": [
+        "palengkepay",
+        "Stellar fintech PWA for wet markets"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/gawainyah#project",
+      "name": "GawainYah",
+      "url": "https://www.marksiazon.dev/projects/gawainyah",
+      "description": "MiniPay AI utility with payment guardrails",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://gawainyah-minipay.vercel.app"
+      ],
+      "keywords": [
+        "gawainyah",
+        "MiniPay AI utility with payment guardrails"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://www.marksiazon.dev/projects/baybayinscribe#project",
+      "name": "BaybayInscribe",
+      "url": "https://www.marksiazon.dev/projects/baybayinscribe",
+      "description": "Baybayin ML and cultural education UX",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://www.marksiazon.dev/#website"
+      },
+      "sameAs": [
+        "https://huggingface.co/gilas/baybayinscribe"
+      ],
+      "keywords": [
+        "baybayinscribe",
+        "Baybayin ML and cultural education UX"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework",
+      "name": "llms-index.json structured entity index",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+      "encodingFormat": "application/json",
+      "description": "Structured entity, project, FAQ, SEO, AEO, GEO, and citation index for Mark Siazon.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#creativework",
+      "name": "Mark Siazon FAQ",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "encodingFormat": "text/markdown",
+      "description": "Visible question and answer corpus for hiring, projects, verification, and citation.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md#creativework",
+      "name": "Mark Siazon proof map",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "encodingFormat": "text/markdown",
+      "description": "Claims mapped to public verification URLs and proof boundaries.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md#creativework",
+      "name": "Mark Siazon recruiter brief",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md",
+      "encodingFormat": "text/markdown",
+      "description": "Recruiter-first role fit, verified achievements, stack summary, and contact paths.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md#creativework",
+      "name": "Mark Siazon stack reference",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+      "encodingFormat": "text/markdown",
+      "description": "Full 113-tool stack reference grouped by domain.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json#creativework",
+      "name": "llms-index.json schema contract",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json",
+      "encodingFormat": "application/schema+json",
+      "description": "JSON Schema contract for the structured entity, proof, SEO, AEO, GEO, and citation index.",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "isAccessibleForFree": true
     }
   ]
 }

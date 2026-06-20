@@ -12,8 +12,10 @@ Also add to site footer / portfolio `humans.txt` if not present.
 |------|--------|
 | `/github-index.json` | redirect to raw GitHub `llms-index.json` |
 | `/github-faq.md` | redirect to raw GitHub `public/FAQ.md` |
+| `/github-person.jsonld` | redirect to raw GitHub `public/schema/person.jsonld` |
+| `/github-faq.jsonld` | redirect to raw GitHub `public/schema/faq.jsonld` |
 
-## Verify after deploy
+## Verify live mirror
 
 ```bash
 python3 src/scripts/check_portfolio_mirror.py

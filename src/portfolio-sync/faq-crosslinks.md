@@ -5,6 +5,7 @@ See [marksiazon-dev-llms-snippet.md](marksiazon-dev-llms-snippet.md) for the com
 
 Extended FAQ (15+ Q&A, repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md  
 Structured answer snippets (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json  
+FAQ schema (JSON-LD): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 Entity @id: https://www.marksiazon.dev/#person
 
 | Question | Start on portfolio | Full answer (GitHub FAQ) |
@@ -32,7 +33,7 @@ Entity @id: https://www.marksiazon.dev/#person
 </p>
 ```
 
-Verify after deploy:
+Verify live mirror:
 
 ```bash
 python3 src/scripts/check_portfolio_mirror.py

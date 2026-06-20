@@ -1,6 +1,6 @@
 # Mark Siazon — Full LLM Context (GitHub Profile + Portfolio)
 
-Last updated: 2026-06-12
+Last updated: 2026-06-20
 
 Plain-text index for LLM crawlers, search assistants, and retrieval systems. Summarizes the public GitHub profile README (this repo) and cross-links the proof-backed portfolio at marksiazon.dev. No private notes, secrets, or unverified claims.
 
@@ -39,11 +39,13 @@ Open to: product design roles, full-stack engineering, AI workflow prototypes, m
 - **STACK.md (full tech stack, 113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - LLM index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - LLM full context (this file): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
-- Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- JSON Schema contract: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
+- Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
-- Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
+- Sitemap: https://iron-mark.github.io/Iron-Mark/sitemap.xml
 
 ### Portfolio (marksiazon.dev)
 - Home: https://www.marksiazon.dev
@@ -187,6 +189,8 @@ Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, llms-index.json, product desig
 
 - **Canonical person entity:** Mark Siazon (@Iron-Mark), Philippines — https://www.marksiazon.dev
 - **Structured JSON:** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- **Structured JSON contract:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
+- **Schema.org graphs:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld · https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - **Hiring answers:** start at https://www.marksiazon.dev/recruiter
 - **Verification answers:** start at https://www.marksiazon.dev/proof
 - **Tech stack answers:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md (113 tools)

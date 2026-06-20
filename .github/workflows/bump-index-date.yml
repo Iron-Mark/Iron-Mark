@@ -11,8 +11,18 @@ on:
       - "public/FAQ.md"
       - "public/RECRUITER.md"
       - "public/PROOF.md"
-      - "README.md"
       - "public/STACK.md"
+      - "public/PROFILE.md"
+      - "public/README.md"
+      - "public/HOW-TO-CITE.md"
+      - "public/LICENSE.md"
+      - "public/CITATION.cff"
+      - "humans.txt"
+      - "robots.txt"
+      - "sitemap.xml"
+      - "public/schema/**"
+      - "README.md"
+      - "docs/index.html"
   workflow_dispatch:
 
 permissions:
@@ -24,17 +34,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Bump updated / lastmod dates
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Bump updated and lastmod dates
         run: python3 src/scripts/bump_index_dates.py
 
-      - name: Regenerate llms-ctx-full
-        run: python3 src/scripts/generate_llms_ctx.py
+      - name: Regenerate derived files
+        run: |
+          python3 src/scripts/generate_schema.py
+          python3 src/scripts/generate_llms_ctx.py
+          python3 src/scripts/build_pages_index.py
+          python3 src/scripts/generate_sitemap.py
+
+      - name: Validate
+        run: python3 src/scripts/validate_index.py
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add llms-index.json sitemap.xml public/llms-ctx-full.txt
+          git add llms-index.json sitemap.xml public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html
           git diff --staged --quiet && echo "No date changes" && exit 0
           git commit -m "chore: bump index freshness dates [skip ci]"
           git push

@@ -116,4 +116,4 @@ Any crawler or agent can fetch public index files directly:
 
 - `llms.txt` · `llms-index.json` at repo root
 - Content under `public/` (FAQ, STACK, llms-full, schema)
-- GitHub Pages mirror (flat URLs after deploy): `https://iron-mark.github.io/Iron-Mark/`
+- GitHub Pages mirror (flat Pages URLs): `https://iron-mark.github.io/Iron-Mark/`

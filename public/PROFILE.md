@@ -1,6 +1,6 @@
 # Mark Siazon — Profile (plain markdown)
 
-Last updated: 2026-06-12  
+Last updated: 2026-06-20
 **Visual profile:** [README.md](../README.md) · **Portfolio:** https://www.marksiazon.dev
 
 ---
@@ -42,4 +42,4 @@ Full (113 tools): [STACK.md](STACK.md)
 
 ## Machine-readable
 
-- [llms-index.json](../llms-index.json) · [FAQ.md](FAQ.md) · [llms.txt](../llms.txt) · [llms-full.txt](llms-full.txt)
+- [llms-index.json](../llms-index.json) · [FAQ.md](FAQ.md) · [llms.txt](../llms.txt) · [llms-full.txt](llms-full.txt) · [person.jsonld](schema/person.jsonld) · [faq.jsonld](schema/faq.jsonld)

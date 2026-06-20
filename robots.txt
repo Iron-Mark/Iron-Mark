@@ -1,7 +1,7 @@
 # Mark Siazon GitHub profile README — crawler hints
 # Repo: https://github.com/Iron-Mark/Iron-Mark
 # Entity @id: https://www.marksiazon.dev/#person
-# Last updated: 2026-06-12
+# Last updated: 2026-06-20
 
 User-agent: *
 Allow: /
@@ -56,7 +56,6 @@ Allow: /llms-index.json
 Allow: /public/
 
 # --- Sitemaps ---
-Sitemap: https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/sitemap.xml
 Sitemap: https://iron-mark.github.io/Iron-Mark/sitemap.xml
 
 # Portfolio (canonical site — separate robots.txt)

@@ -9,25 +9,25 @@
 ```markdown
 ## GitHub profile index (Iron-Mark/Iron-Mark)
 
-Cross-linked machine-readable index for the GitHub profile README repo. Portfolio remains canonical for case studies; GitHub repo adds structured FAQ, stack reference, and agent tools.
+Cross-linked machine-readable index for the GitHub profile README repo. Portfolio remains canonical for case studies; GitHub repo adds structured FAQ, proof, stack, and Schema.org references.
 
 - Visual profile README: https://github.com/Iron-Mark
 - Repo root manifest: https://github.com/Iron-Mark/Iron-Mark
 - Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
+- Structured index contract (JSON Schema): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
 - LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - Expanded agent context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - Full LLM context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
-- Proof map (claims → URLs): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
+- Proof map (claims -> URLs): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
 - Tech stack (113 tools): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
-- Schema.org JSON-LD: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
-- Agent instructions: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/AGENTS.md
-- MCP server (optional): https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md
+- Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
 - Entity @id: https://www.marksiazon.dev/#person
 
-### FAQ cross-links (portfolio ↔ GitHub)
+### FAQ cross-links (portfolio <-> GitHub)
 
 | Question | Start on portfolio | Full answer (GitHub FAQ) |
 |----------|-------------------|---------------------------|
@@ -40,7 +40,7 @@ Cross-linked machine-readable index for the GitHub profile README repo. Portfoli
 | BaybayInscribe? | https://www.marksiazon.dev/projects/baybayinscribe | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe |
 | Stellaroid Earn? | https://www.marksiazon.dev/projects/stellaroid-earn | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn |
 | Awards? | https://www.marksiazon.dev/achievements | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won |
-| Contact for hiring? | https://www.marksiazon.dev/contact · https://www.marksiazon.dev/contact#faq | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring |
+| Contact for hiring? | https://www.marksiazon.dev/contact / https://www.marksiazon.dev/contact#faq | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring |
 | Machine-readable indexes? | https://www.marksiazon.dev/llms.txt | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes |
 | How should AI cite Mark? | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon |
 ```
@@ -52,12 +52,13 @@ Cross-linked machine-readable index for the GitHub profile README repo. Portfoli
 ```html
 <p>Extended FAQ (15+ Q&amp;A) and structured index:
   <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md">GitHub FAQ.md</a>
-  · <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json">llms-index.json</a>
-  · <a href="https://iron-mark.github.io/Iron-Mark/">Pages mirror</a>
+  / <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json">llms-index.json</a>
+  / <a href="https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld">FAQ JSON-LD</a>
+  / <a href="https://iron-mark.github.io/Iron-Mark/">Pages mirror</a>
 </p>
 ```
 
-## Verify after deploy
+## Verify live mirror
 
 ```bash
 python3 src/scripts/check_portfolio_mirror.py

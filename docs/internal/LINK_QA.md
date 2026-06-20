@@ -2,7 +2,7 @@
 
 **Last run:** 2026-06-13  
 **Script:** `src/scripts/link_qa.py`  
-**Scope:** `README.md`, `public/STACK.md`, `public/FAQ.md`, `public/RECRUITER.md`, `llms.txt`, `public/llms-full.txt`, `humans.txt`, `sitemap.xml`
+**Scope:** external URLs in `README.md`, `public/STACK.md`, `public/FAQ.md`, `public/RECRUITER.md`, `llms.txt`, `public/llms-full.txt`, `public/schema/llms-index.schema.json`, `public/schema/person.jsonld`, `public/schema/faq.jsonld`, `humans.txt`, `sitemap.xml`, `docs/index.html`; local relative links in production-facing markdown docs.
 
 ## Latest result
 
@@ -21,6 +21,7 @@ python3 src/scripts/link_qa.py
 
 ## CI
 
+- **PR/push local links:** `.github/workflows/validate-index.yml` runs `python3 src/scripts/link_qa.py --local-only`
 - **Monthly:** `.github/workflows/link-qa-monthly.yml` (opens issue on failure)
 - **Portfolio mirror:** `src/scripts/check_portfolio_mirror.py` (run after marksiazon.dev update)
 
@@ -37,6 +38,7 @@ python3 src/scripts/link_qa.py
 | Date | Notes |
 |------|-------|
 | 2026-06-13 | Layout refactor `public/` + `src/`; 105 URLs, 0 issues |
+| 2026-06-20 | Added Schema.org Person/FAQ JSON-LD and Pages index coverage |
 | 2026-06-12 | Phase 1 automation; local blob check for pre-merge files |
 | 2026-06-10 | Initial audit post stack split |
 

@@ -7,8 +7,6 @@
 
 <h1 align="center">Mark Siazon 👋</h1>
 
-<p align="center"><sub>Index layout: <a href="docs/STRUCTURE.md">docs/STRUCTURE.md</a> · post-merge: <a href=".github/POST_MERGE.md">POST_MERGE.md</a> · content in <code>public/</code> · MCP in <code>src/mcp-server/</code></sub></p>
-
 <p align="center">
   <picture>
     <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=3"/>
@@ -16,17 +14,13 @@
   </picture>
 </p>
 
-<!-- SEO/LLM/AEO/GEO: Mark Siazon | @Iron-Mark | @mark-siazon | Product Designer | Full-Stack Developer | Philippines | proof-backed products | AI trust and safety | mobile Wear OS Flutter Kotlin | Web3 Stellar Celo Soroban MiniPay | marksiazon.dev | STACK.md llms.txt llms-full.txt llms-index.json humans.txt robots.txt sitemap.xml | recruiter brief proof matrix achievements writing lab | open to product design full-stack AI workflow remote -->
-
 <p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Frontend-Specialist | Tech Enthusiast |<br>Multi-Hackathon Champion | AI Products, Workflows &amp; Design Systems |</sub></p>
 
-<p align="center"><sub>Part-time · contract · full-time · Philippines &amp; remote · mobile &amp; Web3 · case studies &amp; live demos below</sub></p>
+<p align="center"><sub>Contract · full-time · Philippines &amp; remote · mobile &amp; Web3 · case studies &amp; live demos below</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
   <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
-  <a href="public/RECRUITER.md" aria-label="Recruiter brief markdown in this repo"><img src="https://img.shields.io/badge/Recruiter_MD-repo-374151?style=for-the-badge" alt="Recruiter MD in repo"/></a>
-  <a href="public/FAQ.md" aria-label="FAQ for search and LLM crawlers"><img src="https://img.shields.io/badge/FAQ-→-6B7280?style=for-the-badge" alt="FAQ"/></a>
   <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
 </p>
 
@@ -303,23 +297,4 @@
   <a href="https://www.tiktok.com/@iron_markk" rel="noopener noreferrer" aria-label="Iron-Mark on TikTok"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok profile"/></a>
 </p>
 
-<details>
-<summary><sub>Profile index for search &amp; LLM crawlers</sub></summary>
-
-<p><strong>Mark Siazon</strong> (<code>@Iron-Mark</code>, <code>@mark-siazon</code>) — Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer, Polymath / Jack of All Trades. Based in the Philippines. Builds proof-backed products in AI (trust &amp; safety, agents, ML UX), mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web. Contact: <a href="mailto:marksiazon.dev@gmail.com">marksiazon.dev@gmail.com</a> · <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer">marksiazon.dev/contact</a>.</p>
-
-<p><strong>Featured work:</strong> <a href="https://www.marksiazon.dev/projects/hireproof" rel="noopener noreferrer">HireProof</a> (AI trust &amp; safety) · <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer">Stellaroid Earn</a> (Web3 credentials) · <a href="https://www.marksiazon.dev/projects/resqlink" rel="noopener noreferrer">ResQLink</a> (offline-first emergency) · <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a> (AI legal chat) · <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a> (client launch) · <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a> (Wear OS) · <a href="https://www.marksiazon.dev/projects/palengkepay" rel="noopener noreferrer">PalengkePay</a> (Stellar fintech PWA) · <a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a> (MiniPay AI) · <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer">BaybayInscribe</a> (Baybayin ML · cultural education UX).</p>
-
-<p><strong>Tech stack:</strong> <a href="public/STACK.md">STACK.md</a> (full reference) · core stack on README grouped by domain — Design (Figma); Web (React, Next.js, TypeScript, Tailwind); Mobile (Flutter, Kotlin); AI workflow (Cursor, Copilot, Claude); Web3 (Stellar, Celo); Backend &amp; ship (Python, Supabase, CI/CD, Docker).</p>
-
-<p><strong>Hackathon &amp; lab:</strong> qwen-ui-lab · Smart Profile · Kudlit · Pulse · <a href="https://www.marksiazon.dev/lab" rel="noopener noreferrer">lab hub</a>.</p>
-
-<p><strong>Portfolio routes:</strong> <a href="https://www.marksiazon.dev" rel="noopener noreferrer">home</a> · <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer">projects</a> · <a href="https://www.marksiazon.dev/proof" rel="noopener noreferrer">proof matrix</a> · <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer">recruiter brief</a> · <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer">achievements</a> · <a href="https://www.marksiazon.dev/writing" rel="noopener noreferrer">writing</a>.</p>
-
-<p><strong>Machine-readable (this repo):</strong> <a href="llms-index.json">llms-index.json</a> · <a href="public/llms-ctx-full.txt">llms-ctx-full.txt</a> · <a href="public/FAQ.md">FAQ.md</a> · <a href="public/RECRUITER.md">RECRUITER.md</a> · <a href="public/AGENTS.md">AGENTS.md</a> · <a href="src/mcp-server/README.md">MCP server</a> · <a href="public/STACK.md">STACK.md</a> · <a href="llms.txt">llms.txt</a> · <a href="public/llms-full.txt">llms-full.txt</a> · <a href="public/PROOF.md">PROOF.md</a> · <a href="public/schema/person.jsonld">person.jsonld</a> · <a href="humans.txt">humans.txt</a> · <a href="sitemap.xml">sitemap.xml</a> · <a href="public/LICENSE.md">LICENSE</a></p>
-
-<p><strong>Machine-readable (portfolio):</strong> <a href="https://www.marksiazon.dev/llms.txt" rel="noopener noreferrer">llms.txt</a> · <a href="https://www.marksiazon.dev/llms-full.txt" rel="noopener noreferrer">llms-full.txt</a> · <a href="https://www.marksiazon.dev/humans.txt" rel="noopener noreferrer">humans.txt</a> · <a href="https://www.marksiazon.dev/feed.xml" rel="noopener noreferrer">RSS</a> · <a href="https://www.marksiazon.dev/sitemap.xml" rel="noopener noreferrer">sitemap</a></p>
-
-<p><strong>Keywords:</strong> product design, UI/UX, full-stack development, tech stack, STACK.md, llms-index.json, AEO, GEO, SEO, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, Cursor, GitHub Copilot, Claude, trust and safety, Web3, Stellar, Soroban, Celo, MiniPay, CI/CD, proof-backed portfolio, Philippines developer, design systems, hackathon builds, Baybayin education.</p>
-
-</details>
+<p align="center"><sub>Machine-readable profile mirror: <a href="https://iron-mark.github.io/Iron-Mark/" rel="noopener noreferrer">GitHub Pages index</a> · canonical portfolio: <a href="https://www.marksiazon.dev" rel="noopener noreferrer">marksiazon.dev</a></sub></p>

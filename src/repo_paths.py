@@ -33,6 +33,11 @@ PUBLIC_CONTENT = (
     "CITATION.cff",
     "llms-full.txt",
     "llms-ctx-full.txt",
+    "schema/llms-index.schema.json",
+    "schema/person.jsonld",
+    "schema/faq.jsonld",
+    "schema/ENTITY.md",
+    "schema/WIKIDATA.md",
 )
 
 

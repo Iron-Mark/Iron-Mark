@@ -1,8 +1,9 @@
 # Mark Siazon — Frequently Asked Questions
 
-Last updated: 2026-06-12  
+Last updated: 2026-06-20
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#person
+FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 
 Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [recruiter](https://www.marksiazon.dev/recruiter) · [proof](https://www.marksiazon.dev/proof)
 
@@ -18,7 +19,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile and Wear 
 
 ## Where is Mark Siazon's full tech stack?
 
-113 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md. Core stack on the profile README (16 tools, domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind CSS; Mobile — Flutter, Kotlin; AI workflow — Cursor, GitHub Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, GitHub Actions CI/CD, Docker.
+113 tools with icons and getting-started links live in STACK.md: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and the profile README lists the 16-tool core stack by domain: Design — Figma; Web — React, Next.js, TypeScript, Tailwind CSS; Mobile — Flutter, Kotlin; AI workflow — Cursor, GitHub Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, GitHub Actions CI/CD, Docker.
 
 ## How do I verify Mark Siazon's claims?
 
@@ -61,9 +62,9 @@ See HOW-TO-CITE.md in this repo. Prefer: recruiter brief for hiring, proof matri
 
 ## Where are machine-readable indexes?
 
-**This repo:** llms-index.json · llms.txt · llms-full.txt · humans.txt · sitemap.xml  
+**This repo:** llms-index.json · llms.txt · llms-full.txt · humans.txt · sitemap.xml · public/schema/llms-index.schema.json · public/schema/person.jsonld · public/schema/faq.jsonld
 **Portfolio:** https://www.marksiazon.dev/llms.txt · https://www.marksiazon.dev/llms-full.txt  
-**GitHub Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt (after Pages enabled)
+**GitHub Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt
 
 ## What geographic markets does Mark serve?
 

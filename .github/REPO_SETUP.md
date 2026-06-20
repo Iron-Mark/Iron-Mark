@@ -1,6 +1,6 @@
 # GitHub repo & profile setup (manual)
 
-Run these once after merging to `main`. **Start here:** [POST_MERGE.md](POST_MERGE.md) (checkbox checklist).
+Internal setup notes for repository settings and mirrors. **Start here:** [MAINTAINER_CHECKLIST.md](MAINTAINER_CHECKLIST.md).
 
 > **Skipped (optional):** repo About/topics, social preview image, and pin 6 repos — not required for index/MCP/AEO functionality.
 
@@ -86,7 +86,7 @@ If README does not show on https://github.com/Iron-Mark:
 
 ## 7. Portfolio mirror (marksiazon.dev)
 
-Paste the ready-made block from [src/portfolio-sync/marksiazon-dev-llms-snippet.md](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into portfolio `llms.txt` (under `## Machine-readable indexes`).
+Paste the ready-made block from [src/portfolio-sync/marksiazon-dev-llms-snippet.md](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into portfolio `llms.txt` (under `## Machine-readable indexes`). It includes the Person and FAQ JSON-LD graph URLs.
 
 Legacy split files: [marksiazon-dev-append.md](../src/portfolio-sync/marksiazon-dev-append.md) · [faq-crosslinks.md](../src/portfolio-sync/faq-crosslinks.md)
 
@@ -95,6 +95,11 @@ Verify with:
 ```bash
 python3 src/scripts/check_portfolio_mirror.py
 ```
+
+Optional redirects on the portfolio domain:
+
+- `/github-person.jsonld` -> raw GitHub `public/schema/person.jsonld`
+- `/github-faq.jsonld` -> raw GitHub `public/schema/faq.jsonld`
 
 ## 8. LinkedIn headline sync *(optional)*
 

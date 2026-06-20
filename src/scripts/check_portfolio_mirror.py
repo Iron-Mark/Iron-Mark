@@ -10,6 +10,7 @@ PORTFOLIO_LLMS = "https://www.marksiazon.dev/llms.txt"
 REQUIRED = [
     "Iron-Mark/Iron-Mark",
     "llms-index.json",
+    "llms-index.schema.json",
     "FAQ.md",
     "STACK.md",
     "github.com/Iron-Mark",
@@ -19,6 +20,8 @@ FAQ_OPTIONAL = [
     "FAQ & GitHub",
     "contact#faq",
     "#person",
+    "person.jsonld",
+    "faq.jsonld",
 ]
 
 def main() -> int:
@@ -27,13 +30,13 @@ def main() -> int:
             body = r.read().decode("utf-8", errors="replace")
     except Exception as e:
         print(f"FAIL: could not fetch {PORTFOLIO_LLMS}: {e}")
-        print("Add src/portfolio-sync/marksiazon-dev-append.md to marksiazon.dev llms.txt")
+        print("Add src/portfolio-sync/marksiazon-dev-llms-snippet.md to marksiazon.dev llms.txt")
         return 1
 
     missing = [s for s in REQUIRED if s not in body]
     if missing:
         print(f"FAIL: marksiazon.dev/llms.txt missing references: {missing}")
-        print("See src/portfolio-sync/marksiazon-dev-append.md")
+        print("See src/portfolio-sync/marksiazon-dev-llms-snippet.md")
         return 1
 
     faq_missing = [s for s in FAQ_OPTIONAL if s not in body]

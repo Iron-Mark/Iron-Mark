@@ -37,6 +37,9 @@ def main() -> None:
     lines.append(f"- Status: {avail.get('status', 'unknown')}")
     lines.append(f"- Focus: {', '.join(avail.get('focus', []))}")
     lines.append(f"- Engagement: {', '.join(avail.get('engagement', []))}")
+    lines.append(f"- Location: {avail.get('location', '')}")
+    lines.append(f"- Area served: {', '.join(avail.get('areaServed', []))}")
+    lines.append(f"- Remote: {str(avail.get('remote', False)).lower()}")
     lines.append(f"- Recruiter brief: {avail.get('recruiterBrief', '')}")
     lines.append("")
     lines.append("## Featured projects")
@@ -65,6 +68,9 @@ def main() -> None:
     for item in data.get("aeo", {}).get("answerSnippets", []):
         lines.append(f"### {item['question']}")
         lines.append(item["answer"])
+        sources = item.get("sources", [])
+        if sources:
+            lines.append(f"Sources: {', '.join(sources)}")
         lines.append("")
     if FAQ.exists():
         lines.append("## FAQ (full)")

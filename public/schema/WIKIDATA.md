@@ -1,6 +1,6 @@
 # Wikidata entity — Mark Siazon
 
-No Wikidata item exists yet for Mark Siazon (@Iron-Mark) as of 2026-06-12. Create one manually to strengthen entity disambiguation and knowledge-graph links.
+No Wikidata item exists yet for Mark Siazon (@Iron-Mark) as of 2026-06-20. Create one manually to strengthen entity disambiguation and knowledge-graph links.
 
 ## Before you create
 

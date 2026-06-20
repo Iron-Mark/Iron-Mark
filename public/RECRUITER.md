@@ -1,6 +1,6 @@
 # Recruiter brief — Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-06-12  
+Last updated: 2026-06-20
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -49,7 +49,7 @@ Details: https://www.marksiazon.dev/achievements
 
 **Design:** Figma · **Web:** React · Next.js · TypeScript · Tailwind CSS · **Mobile:** Flutter · Kotlin · **AI workflow:** Cursor · GitHub Copilot · Claude · **Web3:** Stellar · Celo · **Backend & ship:** Python · Supabase · CI/CD (GitHub Actions) · Docker
 
-Full reference (113 tools): [STACK.md](public/STACK.md)
+Full reference (113 tools): [STACK.md](STACK.md)
 
 ## Contact
 
@@ -60,9 +60,10 @@ Full reference (113 tools): [STACK.md](public/STACK.md)
 ## Machine-readable (for ATS / AI screening)
 
 - Structured index: [llms-index.json](../llms-index.json)
-- FAQ: [FAQ.md](public/FAQ.md)
-- Full context: [llms-full.txt](public/llms-full.txt)
+- FAQ: [FAQ.md](FAQ.md)
+- Full context: [llms-full.txt](llms-full.txt)
+- Schema graphs: [person.jsonld](schema/person.jsonld) · [faq.jsonld](schema/faq.jsonld)
 
 ---
 
-← [Profile README](README.md) · [Proof matrix](https://www.marksiazon.dev/proof) · [All projects](https://www.marksiazon.dev/projects)
+← [Profile README](../README.md) · [Proof matrix](https://www.marksiazon.dev/proof) · [All projects](https://www.marksiazon.dev/projects)

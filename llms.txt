@@ -2,7 +2,7 @@
 
 > Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer × designer, and polymath / jack of all trades. Builds proof-backed digital products across AI, mobile, Web3, and client web — portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-> **Machines start here:** [llms-index.json](llms-index.json) (structured) · [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) · [FAQ.md](public/FAQ.md) (Q&A) · [AGENTS.md](public/AGENTS.md) (agent rules)
+> **Machines start here:** [llms-index.json](llms-index.json) (structured) · [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) · [FAQ.md](public/FAQ.md) (Q&A) · [llms-index.schema.json](public/schema/llms-index.schema.json) (contract) · [person.jsonld](public/schema/person.jsonld) / [faq.jsonld](public/schema/faq.jsonld) (Schema.org)
 
 Mark Siazon ships end-to-end: research and UX flows → design systems → React/Next.js/Flutter/Kotlin → APIs and Web3 proofs → deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
@@ -20,7 +20,7 @@ Mark Siazon ships end-to-end: research and UX flows → design systems → React
 
 ## Availability
 
-- Open to: part-time · product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 systems
+- Open to: product design · full-stack engineering · AI workflow prototypes · mobile/Wear OS UX · Web3 systems
 - Engagement: contract or full-time · Philippines & remote
 
 ## Hire & contact
@@ -100,11 +100,11 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 
 ## Machine-readable indexes
 
-### Repo root (crawler entrypoints)
+### Repo source files
 - **Structured entity index (JSON):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
-- Sitemap: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
+- Sitemap source: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
 - Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
 
 ### public/ (content)
@@ -112,11 +112,19 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - **Expanded context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - **FAQ.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - **STACK.md (113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
-- Schema.org: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- JSON Schema contract: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
+- Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
+- Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 
-### src/ (optional MCP server)
-- MCP docs: https://github.com/Iron-Mark/Iron-Mark/blob/main/src/mcp-server/README.md
-- HTTP endpoint (self-hosted): `http://HOST:8000/mcp`
+### GitHub Pages mirror (crawlable)
+- Home: https://iron-mark.github.io/Iron-Mark/
+- LLM manifest: https://iron-mark.github.io/Iron-Mark/llms.txt
+- Structured entity index: https://iron-mark.github.io/Iron-Mark/llms-index.json
+- Expanded context: https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt
+- FAQ: https://iron-mark.github.io/Iron-Mark/FAQ.md
+- Schema graphs: https://iron-mark.github.io/Iron-Mark/schema/person.jsonld · https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld
+- Sitemap: https://iron-mark.github.io/Iron-Mark/sitemap.xml
+- Robots: https://iron-mark.github.io/Iron-Mark/robots.txt
 
 ### Portfolio
 - Sitemap: https://www.marksiazon.dev/sitemap.xml
@@ -124,15 +132,3 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - JSON Feed: https://www.marksiazon.dev/feed.json
 - Robots: https://www.marksiazon.dev/robots.txt
 - Humans: https://www.marksiazon.dev/humans.txt
-
-## Optional
-
-- [STACK.md](public/STACK.md): Full 113-tool stack with icons — skip for short hiring context
-- [src/mcp-server/README.md](src/mcp-server/README.md): Optional MCP server (tools, resources, prompts for agents)
-- [docs/internal/LINK_QA.md](docs/internal/LINK_QA.md): Internal link audit report
-- [LICENSE.md](public/LICENSE.md): Usage terms for README, indexes, and original assets
-- [CITATION.cff](public/CITATION.cff): Academic/software citation metadata
-- [person.jsonld](public/schema/person.jsonld): Schema.org JSON-LD entity graph
-- [schema/ENTITY.md](public/schema/ENTITY.md): Canonical @id map
-- [schema/WIKIDATA.md](public/schema/WIKIDATA.md): Wikidata item creation guide
-- [PROFILE.md](public/PROFILE.md): Plain markdown profile mirror (no HTML tables)

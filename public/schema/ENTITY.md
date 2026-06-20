@@ -11,6 +11,9 @@ Use these URIs consistently across Schema.org JSON-LD, `llms-index.json`, portfo
 | **GitHub Pages mirror** | `https://iron-mark.github.io/Iron-Mark/#website` | Static mirror of machine-readable files |
 | **FAQ document** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq` | AEO Q&A corpus |
 | **Structured index** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json` | JSON entity + answer snippets |
+| **Structured index schema** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json` | JSON Schema contract for `llms-index.json` |
+| **Person schema graph** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld` | Schema.org Person, profile, projects, and content graph |
+| **FAQ schema graph** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld` | Schema.org FAQPage, Question, and Answer graph |
 
 ## Rules
 
@@ -22,6 +25,8 @@ Use these URIs consistently across Schema.org JSON-LD, `llms-index.json`, portfo
 ## Files that must stay in sync
 
 - `schema/person.jsonld`
+- `schema/faq.jsonld`
+- `schema/llms-index.schema.json`
 - `llms-index.json` → `entity`, `identifiers`
 - `humans.txt` → `/* ENTITY */`
 - `HOW-TO-CITE.md`

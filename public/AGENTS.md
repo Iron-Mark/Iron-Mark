@@ -9,6 +9,8 @@ This repository is Mark Siazon's **GitHub profile index** — not an application
 3. **FAQ:** [FAQ.md](FAQ.md) — question/answer pairs for hiring and project questions
 4. **Recruiter screen:** [RECRUITER.md](RECRUITER.md) · live https://www.marksiazon.dev/recruiter
 5. **Proof map:** [PROOF.md](PROOF.md) · live https://www.marksiazon.dev/proof
+6. **JSON contract:** [llms-index.schema.json](schema/llms-index.schema.json)
+7. **Schema graphs:** [person.jsonld](schema/person.jsonld) · [faq.jsonld](schema/faq.jsonld)
 
 ## Raw URLs (for context injection)
 
@@ -17,6 +19,9 @@ https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/llms-index.json
 https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/llms-full.txt
 https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/llms-ctx-full.txt
 https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/FAQ.md
+https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/llms-index.schema.json
+https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/person.jsonld
+https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/faq.jsonld
 ```
 
 ## Rules for agents
@@ -44,7 +49,9 @@ python3 src/scripts/test_mcp_http.py   # HTTP transport
 ## Maintenance
 
 - `src/scripts/validate_index.py` — asset + index consistency checks
+- `src/scripts/generate_schema.py` — regenerates Schema.org Person/project and FAQ graphs
 - `src/scripts/generate_llms_ctx.py` — regenerates public/llms-ctx-full.txt
+- `src/scripts/build_pages_index.py` — regenerates docs/index.html with metadata and inline JSON-LD
 - `src/scripts/test_mcp_server.py` · `src/scripts/test_mcp_http.py` — MCP e2e
 - `.github/workflows/validate-index.yml` · `.github/workflows/mcp-server.yml`
 

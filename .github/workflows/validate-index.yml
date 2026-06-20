@@ -2,10 +2,13 @@ name: Validate index
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, dev]
   push:
-    branches: [main, cursor/**]
+    branches: [main, dev, cursor/**]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -13,16 +16,54 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Validate llms-index and assets
-        run: python3 src/scripts/validate_index.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate schema graphs and check drift
+        run: |
+          python3 src/scripts/generate_schema.py
+          git diff --exit-code public/schema/person.jsonld public/schema/faq.jsonld || (
+            echo "::error::Schema JSON-LD is out of date - run src/scripts/generate_schema.py"
+            exit 1
+          )
 
       - name: Regenerate llms-ctx-full and check drift
         run: |
           python3 src/scripts/generate_llms_ctx.py
           git diff --exit-code public/llms-ctx-full.txt || (
-            echo "::error::public/llms-ctx-full.txt is out of date — run src/scripts/generate_llms_ctx.py"
+            echo "::error::public/llms-ctx-full.txt is out of date - run src/scripts/generate_llms_ctx.py"
             exit 1
           )
 
+      - name: Build Pages index and check drift
+        run: |
+          python3 src/scripts/build_pages_index.py
+          git diff --exit-code docs/index.html || (
+            echo "::error::docs/index.html is out of date - run src/scripts/build_pages_index.py"
+            exit 1
+          )
+
+      - name: Generate sitemap and check drift
+        run: |
+          python3 src/scripts/generate_sitemap.py
+          git diff --exit-code sitemap.xml || (
+            echo "::error::sitemap.xml is out of date - run src/scripts/generate_sitemap.py"
+            exit 1
+          )
+
+      - name: Validate llms-index, assets, schema, and crawl files
+        run: python3 src/scripts/validate_index.py
+
+      - name: Validate Pages mirror artifact
+        run: python3 src/scripts/validate_pages_mirror.py
+
+      - name: Validate local links
+        run: python3 src/scripts/link_qa.py --local-only
+
       - name: Validate JSON
-        run: python3 -m json.tool llms-index.json > /dev/null
+        run: |
+          python3 -m json.tool llms-index.json > /dev/null
+          python3 -m json.tool public/schema/llms-index.schema.json > /dev/null
+          python3 -m json.tool public/schema/person.jsonld > /dev/null
+          python3 -m json.tool public/schema/faq.jsonld > /dev/null

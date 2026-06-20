@@ -23,48 +23,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate derived files
+        run: |
+          python3 src/scripts/generate_schema.py
+          python3 src/scripts/generate_llms_ctx.py
+          python3 src/scripts/build_pages_index.py
+          python3 src/scripts/generate_sitemap.py
+
+      - name: Validate source metadata
+        run: python3 src/scripts/validate_index.py
+
       - name: Build docs mirror
         run: |
           mkdir -p docs
-          # Root crawler entrypoints
           for f in llms.txt llms-index.json humans.txt robots.txt sitemap.xml; do
             cp "$f" "docs/$f"
           done
-          # Flatten public/ into docs/ for stable Pages URLs (…/FAQ.md not …/public/FAQ.md)
-          cp public/*.md public/*.txt public/*.cff docs/ 2>/dev/null || true
+          for f in README.md FAQ.md RECRUITER.md PROOF.md PROFILE.md STACK.md HOW-TO-CITE.md LICENSE.md CITATION.cff llms-full.txt llms-ctx-full.txt; do
+            cp "public/$f" "docs/$f"
+          done
+          rm -rf docs/assets
+          cp -r assets docs/
+          rm -rf docs/schema
           cp -r public/schema docs/
-          cp docs/index.html docs/index.html.bak 2>/dev/null || true
-          cat > docs/index.html <<'HTML'
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-            <meta charset="utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta name="description" content="Mark Siazon (@Iron-Mark) — machine-readable GitHub profile index, FAQ, and portfolio links."/>
-            <title>Mark Siazon — Profile Index</title>
-            <link rel="canonical" href="https://www.marksiazon.dev"/>
-          </head>
-          <body>
-            <main>
-              <h1>Mark Siazon — GitHub profile index</h1>
-              <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Visual profile: <a href="https://github.com/Iron-Mark">github.com/Iron-Mark</a> · Portfolio: <a href="https://www.marksiazon.dev">marksiazon.dev</a></p>
-              <h2>Start here</h2>
-              <ul>
-                <li><a href="llms-index.json">llms-index.json</a> — structured entity index</li>
-                <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> — expanded agent context</li>
-                <li><a href="FAQ.md">FAQ.md</a> — question/answer pairs</li>
-                <li><a href="RECRUITER.md">RECRUITER.md</a> — recruiter brief</li>
-                <li><a href="llms.txt">llms.txt</a> — LLM manifest</li>
-                <li><a href="schema/person.jsonld">schema/person.jsonld</a> — Schema.org JSON-LD</li>
-                <li><a href="https://github.com/Iron-Mark/Iron-Mark/tree/main/src/mcp-server">MCP server</a> — optional agent tools (stdio + HTTP)</li>
-              </ul>
-              <h2>Citation</h2>
-              <p><a href="HOW-TO-CITE.md">HOW-TO-CITE.md</a> · <a href="PROOF.md">PROOF.md</a></p>
-            </main>
-          </body>
-          </html>
-          HTML
           python3 src/scripts/build_pages_mirror.py
+
+      - name: Validate docs mirror
+        run: python3 src/scripts/validate_pages_mirror.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

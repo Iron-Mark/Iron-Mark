@@ -15,11 +15,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Run link QA
         id: qa
         run: |
+          set +e
           python3 src/scripts/link_qa.py 2>&1 | tee link-qa-output.txt
-          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          status=${PIPESTATUS[0]}
+          echo "exit=$status" >> "$GITHUB_OUTPUT"
+          exit "$status"
         continue-on-error: true
 
       - name: Check portfolio mirror

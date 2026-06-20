@@ -17,6 +17,27 @@ GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".jsonld", ".cff"}
 SKIP_NAMES = {"index.html"}
+PAGES_SITEMAP_ENTRIES = (
+    ("", "weekly", "0.9"),
+    ("llms.txt", "weekly", "0.9"),
+    ("llms-index.json", "weekly", "0.9"),
+    ("llms-full.txt", "weekly", "0.85"),
+    ("llms-ctx-full.txt", "weekly", "0.85"),
+    ("FAQ.md", "monthly", "0.85"),
+    ("RECRUITER.md", "monthly", "0.85"),
+    ("PROOF.md", "monthly", "0.85"),
+    ("STACK.md", "monthly", "0.8"),
+    ("PROFILE.md", "monthly", "0.75"),
+    ("README.md", "monthly", "0.75"),
+    ("HOW-TO-CITE.md", "yearly", "0.7"),
+    ("LICENSE.md", "yearly", "0.5"),
+    ("CITATION.cff", "yearly", "0.5"),
+    ("humans.txt", "monthly", "0.75"),
+    ("robots.txt", "monthly", "0.55"),
+    ("schema/person.jsonld", "monthly", "0.85"),
+    ("schema/faq.jsonld", "monthly", "0.85"),
+    ("schema/llms-index.schema.json", "monthly", "0.8"),
+)
 
 
 def rewrite_github_public_urls(text: str) -> str:
@@ -30,9 +51,14 @@ def rewrite_github_public_urls(text: str) -> str:
     return text
 
 
-def rewrite_relative_public_paths(text: str) -> str:
+def rewrite_relative_public_paths(text: str, path: Path) -> str:
     """Strip public/ prefix from relative links and plain-text references."""
     text = text.replace("public/schema/", "schema/")
+    text = text.replace("../assets/", "assets/")
+    if path.parent.name != "schema":
+        for root_name in ("llms.txt", "llms-index.json", "robots.txt", "sitemap.xml", "humans.txt"):
+            text = text.replace(f"../{root_name}", root_name)
+        text = text.replace("../README.md", f"{GITHUB_BLOB}/README.md")
     text = re.sub(r"\((public/)", "(", text)
     text = re.sub(r'href="(public/)', 'href="', text)
     text = re.sub(
@@ -46,7 +72,9 @@ def rewrite_relative_public_paths(text: str) -> str:
 def rewrite_repo_only_paths(text: str) -> str:
     """Send src/ and docs/ relative links to GitHub (not deployed on Pages)."""
     text = re.sub(r"\]\((src/[^)]+)\)", rf"]({GITHUB_BLOB}/\1)", text)
+    text = re.sub(r"\]\(\.\./(src/[^)]+)\)", rf"]({GITHUB_BLOB}/\1)", text)
     text = re.sub(r'href="(src/[^"]+)"', rf'href="{GITHUB_BLOB}/\1"', text)
+    text = re.sub(r'href="\.\./(src/[^"]+)"', rf'href="{GITHUB_BLOB}/\1"', text)
     text = re.sub(
         r"\]\((?:\.\./)?docs/([^)]+)\)",
         rf"]({GITHUB_BLOB}/docs/\1)",
@@ -56,7 +84,37 @@ def rewrite_repo_only_paths(text: str) -> str:
 
 
 def rewrite_robots(text: str) -> str:
-    return text.replace("Allow: /public/", "Allow: /")
+    text = text.replace("Allow: /public/", "Allow: /")
+    text = re.sub(
+        rf"^Sitemap:\s+{re.escape(GITHUB_RAW)}/sitemap\.xml\s*$\n?",
+        "",
+        text,
+        flags=re.MULTILINE,
+    )
+    return text
+
+
+def build_pages_sitemap(lastmod: str) -> str:
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for path, changefreq, priority in PAGES_SITEMAP_ENTRIES:
+        loc = f"{PAGES_BASE}/{path}" if path else f"{PAGES_BASE}/"
+        lines.extend(
+            [
+                "  <url>",
+                f"    <loc>{loc}</loc>",
+                f"    <lastmod>{lastmod}</lastmod>",
+                f"    <changefreq>{changefreq}</changefreq>",
+                f"    <priority>{priority}</priority>",
+                "  </url>",
+            ]
+        )
+    lines.append("</urlset>")
+    return "\n".join(lines) + "\n"
+
+
+def rewrite_sitemap(text: str) -> str:
+    match = re.search(r"<lastmod>(\d{4}-\d{2}-\d{2})</lastmod>", text)
+    return build_pages_sitemap(match.group(1) if match else "")
 
 
 def rewrite_llms_index(text: str) -> str:
@@ -76,14 +134,21 @@ def rewrite_file(path: Path) -> bool:
         return False
 
     original = path.read_text(encoding="utf-8")
+    if path.name == "llms-index.json":
+        updated = rewrite_llms_index(original)
+        if updated != original:
+            path.write_text(updated, encoding="utf-8")
+            return True
+        return False
+
     updated = original
     updated = rewrite_github_public_urls(updated)
-    updated = rewrite_relative_public_paths(updated)
+    updated = rewrite_relative_public_paths(updated, path)
     updated = rewrite_repo_only_paths(updated)
     if path.name == "robots.txt":
         updated = rewrite_robots(updated)
-    if path.name == "llms-index.json":
-        updated = rewrite_llms_index(updated)
+    if path.name == "sitemap.xml":
+        updated = rewrite_sitemap(updated)
 
     if updated != original:
         path.write_text(updated, encoding="utf-8")

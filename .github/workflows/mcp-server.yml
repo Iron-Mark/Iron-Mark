@@ -9,11 +9,14 @@ on:
       - "src/scripts/test_mcp_server.py"
       - "src/scripts/test_mcp_http.py"
   push:
-    branches: [main]
+    branches: [main, dev]
     paths:
       - "src/mcp-server/**"
       - "src/scripts/test_mcp_*.py"
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   mcp-e2e:
