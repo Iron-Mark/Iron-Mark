@@ -132,6 +132,10 @@ def review_metadata(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def spatial_coverage(data: dict[str, Any]) -> list[str]:
+    return list(data.get("availability", {}).get("areaServed", []))
+
+
 def dataset_variable_measurements(
     data: dict[str, Any],
     area_served: list[str],
@@ -312,6 +316,7 @@ def content_work(
     citations: list[str] | None = None,
     usage_policy: dict[str, str] | None = None,
     ownership: dict[str, Any] | None = None,
+    spatial: list[str] | None = None,
 ) -> dict[str, Any]:
     return {
         "@type": "CreativeWork",
@@ -327,6 +332,7 @@ def content_work(
         "license": license_url,
         "isAccessibleForFree": True,
         "citation": citations or [],
+        **({"spatialCoverage": spatial} if spatial else {}),
         **(usage_policy or {}),
         **(ownership or {}),
         **(sd_provenance or {}),
@@ -419,6 +425,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     project_awards = awards_by_project(data)
     ownership = ownership_metadata(data)
     review = review_metadata(data)
+    spatial = spatial_coverage(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -495,6 +502,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
             "image": ref(pages_image_id),
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **ownership,
@@ -511,6 +519,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "image": ref(pages_image_id),
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **usage_policy,
@@ -528,6 +537,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "significantLink": profile_significant_links(data),
             "relatedLink": profile_related_links(data),
@@ -551,6 +561,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
             "image": ref(pages_image_id),
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "potentialAction": ref(contact_action_id),
             **usage_policy,
@@ -573,6 +584,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "significantLink": pages_significant_links(data),
             "relatedLink": pages_related_links(data),
@@ -654,6 +666,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dataset": ref(pages_dataset_id),
             "inLanguage": "en",
             "dateModified": updated,
+            "spatialCoverage": spatial,
             "mentions": mentioned_entities,
             "citation": citations,
             **usage_policy,
@@ -727,6 +740,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "author": ref(person_id),
             "about": ref(person_id),
             "isPartOf": ref(github_site_id),
+            "spatialCoverage": spatial,
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **usage_policy,
@@ -926,6 +940,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/FAQ.md#creativework",
@@ -940,6 +955,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/PROOF.md#creativework",
@@ -954,6 +970,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/RECRUITER.md#creativework",
@@ -968,6 +985,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/STACK.md#creativework",
@@ -982,6 +1000,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
             content_work(
                 f"{GITHUB_BLOB}/public/schema/llms-index.schema.json#creativework",
@@ -996,6 +1015,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 citations,
                 usage_policy,
                 ownership,
+                spatial,
             ),
         ]
     )
@@ -1015,6 +1035,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
     citations = citation_targets(data)
     ownership = ownership_metadata(data)
     review = review_metadata(data)
+    spatial = spatial_coverage(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -1033,6 +1054,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "author": ref(person_id),
             "about": ref(person_id),
             "inLanguage": "en",
+            "spatialCoverage": spatial,
             "citation": citations,
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
             **usage_policy,

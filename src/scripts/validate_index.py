@@ -629,6 +629,12 @@ def check_review_metadata(node: dict[str, Any], data: dict[str, Any], label: str
         errors.append(f"{label} lastReviewed drift")
 
 
+def check_spatial_coverage(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    expected = data.get("availability", {}).get("areaServed", [])
+    if node.get("spatialCoverage") != expected:
+        errors.append(f"{label} spatialCoverage drift")
+
+
 def check_required_index_keys(data: dict[str, Any]) -> None:
     for key in ("updated", "entity", "featuredProjects", "hackathonLab", "aeo", "triples", "schema", "machineReadable"):
         if key not in data:
@@ -1233,6 +1239,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             continue
         check_expected_mentions(node, expected_mentions, label)
         check_ownership_metadata(node, data, label)
+        check_spatial_coverage(node, data, label)
 
     profile_page = node_by_id(person_schema, profile_page_id)
     if not profile_page or "ProfilePage" not in node_types(profile_page):
@@ -1243,6 +1250,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if profile_page.get("relatedLink") != profile_related_links(data):
             errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
         check_review_metadata(profile_page, data, "person.jsonld GitHub ProfilePage")
+        check_spatial_coverage(profile_page, data, "person.jsonld GitHub ProfilePage")
 
     pages_site = node_by_id(person_schema, pages_site_id)
     if not pages_site or "WebSite" not in node_types(pages_site):
@@ -1487,6 +1495,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_content_usage_policy(work, data, f"person.jsonld CreativeWork {node_id}")
         check_global_citation(work, data, f"person.jsonld CreativeWork {node_id}")
         check_ownership_metadata(work, data, f"person.jsonld CreativeWork {node_id}")
+        check_spatial_coverage(work, data, f"person.jsonld CreativeWork {node_id}")
         check_structured_data_provenance(work, data, f"person.jsonld CreativeWork {node_id}")
     breadcrumb = node_by_id(person_schema, pages_breadcrumb_id)
     if not breadcrumb or "BreadcrumbList" not in node_types(breadcrumb):
@@ -1511,6 +1520,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         errors.append("person.jsonld missing FAQPage node matching identifiers.faqDocument")
     else:
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
+        check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
     if not faq_page or "FAQPage" not in node_types(faq_page):
         errors.append("faq.jsonld missing FAQPage node matching identifiers.faqDocument")
@@ -1529,6 +1539,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_review_metadata(faq_page, data, "faq.jsonld FAQPage")
         check_ownership_metadata(faq_page, data, "faq.jsonld FAQPage")
+        check_spatial_coverage(faq_page, data, "faq.jsonld FAQPage")
         check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 
     question_nodes = [node for node in graph_nodes(faq_schema) if "Question" in node_types(node)]

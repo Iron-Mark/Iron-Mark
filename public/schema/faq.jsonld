@@ -21,6 +21,11 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "inLanguage": "en",
+      "spatialCoverage": [
+        "Philippines",
+        "Southeast Asia",
+        "remote global"
+      ],
       "citation": [
         "https://www.marksiazon.dev/recruiter",
         "https://www.marksiazon.dev/proof",

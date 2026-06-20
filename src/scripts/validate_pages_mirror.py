@@ -491,6 +491,21 @@ def check_review_metadata(
         issues.append(f"{label} lastReviewed drift")
 
 
+def check_spatial_coverage(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    availability = index_data.get("availability", {})
+    if not isinstance(availability, dict):
+        issues.append(f"{label} cannot validate spatialCoverage")
+        return
+    expected = availability.get("areaServed", [])
+    if node.get("spatialCoverage") != expected:
+        issues.append(f"{label} spatialCoverage drift")
+
+
 def copy_tree(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -654,6 +669,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
     else:
         check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
+        check_spatial_coverage(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
     if not pages_site or "WebSite" not in node_type_set(pages_site):
         issues.append("Pages index inline JSON-LD missing Pages WebSite node")
@@ -670,6 +686,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index WebSite isBasedOn drift")
         check_content_usage_policy(issues, pages_site, "Pages index WebSite")
         check_ownership_metadata(issues, pages_site, index_data, "Pages index WebSite")
+        check_spatial_coverage(issues, pages_site, index_data, "Pages index WebSite")
         check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
         check_expected_mentions(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
@@ -694,6 +711,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_ownership_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
+        check_spatial_coverage(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
         check_expected_mentions(issues, pages_page, index_data, "Pages index CollectionPage")
     data_catalog = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#data-catalog"), None)
@@ -705,6 +723,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_ownership_metadata(issues, data_catalog, index_data, "Pages index DataCatalog")
+        check_spatial_coverage(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_structured_data_provenance(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_expected_mentions(issues, data_catalog, index_data, "Pages index DataCatalog")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
@@ -746,6 +765,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_content_usage_policy(issues, dataset, "Pages index Dataset")
         check_global_citation(issues, dataset, index_data, "Pages index Dataset")
         check_ownership_metadata(issues, dataset, index_data, "Pages index Dataset")
+        check_spatial_coverage(issues, dataset, index_data, "Pages index Dataset")
         check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
         check_expected_mentions(issues, dataset, index_data, "Pages index Dataset")
     faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
@@ -758,6 +778,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")
         check_ownership_metadata(issues, faq_page, index_data, "Pages index FAQPage")
+        check_spatial_coverage(issues, faq_page, index_data, "Pages index FAQPage")
         check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
     for node in parsed_jsonld_nodes:
         node_types = node_type_set(node)
