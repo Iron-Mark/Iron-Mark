@@ -53,6 +53,7 @@ from generate_schema import (
     person_core_identity,
     person_email,
     person_hiring_contact,
+    person_knows_about,
     person_main_entity_pages,
     person_occupations,
     person_subjects,
@@ -2109,6 +2110,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Person subjectOf proof/schema references drift")
         if node_ref_ids(person.get("mainEntityOfPage")) != node_ref_ids(person_main_entity_pages(data)):
             errors.append("person.jsonld Person mainEntityOfPage identity references drift")
+        if person.get("knowsAbout") != person_knows_about(data):
+            errors.append("person.jsonld Person knowsAbout drift")
         if pages_topic_set_id not in node_ref_ids(person.get("knowsAbout")):
             errors.append("person.jsonld Person knowsAbout must reference topic taxonomy")
         missing_known_terms = sorted(

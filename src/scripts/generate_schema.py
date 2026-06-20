@@ -482,6 +482,15 @@ def person_main_entity_pages(data: dict[str, Any]) -> list[dict[str, str]]:
     ]
 
 
+def person_knows_about(data: dict[str, Any]) -> list[str | dict[str, str]]:
+    topic_terms = topic_term_values(data)
+    return (
+        unique_compact(data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []))
+        + [ref(topic_term_id(term)) for term in topic_terms]
+        + [ref(topic_term_set_id())]
+    )
+
+
 def person_subjects(data: dict[str, Any]) -> list[dict[str, str]]:
     schema = data["schema"]
     return [
@@ -1076,11 +1085,6 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     )
 
     topic_terms = topic_term_values(data)
-    knows_about = (
-        unique_compact(data.get("coreStack", []) + data.get("seo", {}).get("primaryKeywords", []))
-        + [ref(topic_term_id(term)) for term in topic_terms]
-        + [ref(pages_topic_set_id)]
-    )
     keywords = profile_keywords(data)
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     sd_provenance = structured_data_provenance(data)
@@ -1111,7 +1115,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "email": person_email(data),
             "address": entity.get("address"),
             "sameAs": entity.get("sameAs", []),
-            "knowsAbout": knows_about,
+            "knowsAbout": person_knows_about(data),
             "knowsLanguage": [PROFILE_LANGUAGE],
             "award": [achievement["title"] for achievement in data.get("achievements", []) if achievement.get("title")],
             "contactPoint": [person_hiring_contact(data)],

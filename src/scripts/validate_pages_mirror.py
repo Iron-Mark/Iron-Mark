@@ -51,6 +51,7 @@ from generate_schema import (
     person_core_identity,
     person_email,
     person_hiring_contact,
+    person_knows_about,
     person_main_entity_pages,
     person_occupations,
     person_subjects,
@@ -1325,9 +1326,11 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index Person missing hiring contactPoint")
         elif hiring_contact != person_hiring_contact(index_data):
             issues.append("Pages index Person hiring contactPoint drift")
-    if person and pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
-        issues.append("Pages index Person knowsAbout missing topic taxonomy")
     if person:
+        if person.get("knowsAbout") != person_knows_about(index_data):
+            issues.append("Pages index Person knowsAbout drift")
+        if pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
+            issues.append("Pages index Person knowsAbout missing topic taxonomy")
         missing_known_terms = sorted(
             {topic_term_id(term) for term in expected_topic_terms(index_data)}
             - ref_ids(person.get("knowsAbout"))
