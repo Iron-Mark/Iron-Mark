@@ -65,6 +65,24 @@ def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
     return None
 
 
+def image_rights(data: dict[str, Any]) -> dict[str, Any]:
+    entity = data["entity"]
+    pages = data["machineReadable"]["pages"]
+    availability = data.get("availability", {})
+    return {
+        "license": pages["licenseMd"],
+        "acquireLicensePage": availability.get("contact", entity["url"]),
+        "creditText": entity["name"],
+        "copyrightNotice": f"Copyright {entity['name']}",
+        "creator": {
+            "@type": "Person",
+            "@id": entity["@id"],
+            "name": entity["name"],
+            "url": entity["url"],
+        },
+    }
+
+
 def compact(values: list[str | None]) -> list[str]:
     return [value for value in values if value]
 
@@ -187,6 +205,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         + area_served
     )
     snippets = data.get("aeo", {}).get("answerSnippets", [])
+    image_rights_metadata = image_rights(data)
 
     graph: list[dict[str, Any]] = [
         {
@@ -377,7 +396,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "height": IMAGE_HEIGHT,
             "inLanguage": "en",
             "dateModified": updated,
-            "creator": ref(person_id),
+            **image_rights_metadata,
             "about": ref(person_id),
             "isPartOf": ref(pages_page_id),
             "representativeOfPage": True,
@@ -553,7 +572,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "encodingFormat": image["encodingFormat"],
                     "inLanguage": "en",
                     "dateModified": updated,
-                    "creator": ref(person_id),
+                    **image_rights_metadata,
                     "about": ref(project_id(project)),
                     "isPartOf": ref(project_id(project)),
                 }

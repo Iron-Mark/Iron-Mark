@@ -144,6 +144,35 @@ def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
     }
 
 
+def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
+    entity = index_data.get("entity", {})
+    availability = index_data.get("availability", {})
+    if not isinstance(entity, dict) or not isinstance(availability, dict):
+        issues.append(f"{label} cannot validate image rights metadata")
+        return
+    expected_name = entity.get("name")
+    if node.get("license") != f"{PAGES_BASE}/LICENSE.md":
+        issues.append(f"{label} license drift")
+    if node.get("acquireLicensePage") != availability.get("contact"):
+        issues.append(f"{label} acquireLicensePage drift")
+    if node.get("creditText") != expected_name:
+        issues.append(f"{label} creditText drift")
+    if node.get("copyrightNotice") != f"Copyright {expected_name}":
+        issues.append(f"{label} copyrightNotice drift")
+    creator = node.get("creator", {})
+    if not isinstance(creator, dict):
+        issues.append(f"{label} creator must be a Person object")
+        return
+    if creator.get("@id") != entity.get("@id"):
+        issues.append(f"{label} creator @id drift")
+    if creator.get("@type") != "Person":
+        issues.append(f"{label} creator type drift")
+    if creator.get("name") != expected_name:
+        issues.append(f"{label} creator name drift")
+    if creator.get("url") != entity.get("url"):
+        issues.append(f"{label} creator url drift")
+
+
 def copy_tree(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -238,6 +267,11 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing primaryImageOfPage")
     if PAGES_SOCIAL_IMAGE not in "\n".join(jsonld_scripts):
         issues.append("Pages index inline JSON-LD missing Pages social image URL")
+    primary_image = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#primary-image"), None)
+    if not primary_image or "ImageObject" not in node_type_set(primary_image):
+        issues.append("Pages index inline JSON-LD missing primary ImageObject node")
+    else:
+        check_image_rights(issues, primary_image, index_data, "Pages index primary ImageObject")
     if '"@type": "ContactAction"' not in index_text:
         issues.append("Pages index inline JSON-LD missing hiring ContactAction")
     if '"@type": "EntryPoint"' not in index_text:
@@ -356,6 +390,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             issues.append(f"Pages index featured project image encodingFormat drift: {project.get('name')}")
+        check_image_rights(issues, image_node, index_data, f"Pages index featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected_project_id:
             issues.append(f"Pages index featured project image about drift: {project.get('name')}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:

@@ -325,6 +325,34 @@ def expected_project_image(project: dict[str, Any]) -> dict[str, str] | None:
     }
 
 
+def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    entity = data.get("entity", {})
+    pages = data.get("machineReadable", {}).get("pages", {})
+    availability = data.get("availability", {})
+    expected_creator_id = entity.get("@id")
+    expected_name = entity.get("name")
+    if node.get("license") != pages.get("licenseMd"):
+        errors.append(f"{label} license drift")
+    if node.get("acquireLicensePage") != availability.get("contact"):
+        errors.append(f"{label} acquireLicensePage drift")
+    if node.get("creditText") != expected_name:
+        errors.append(f"{label} creditText drift")
+    if node.get("copyrightNotice") != f"Copyright {expected_name}":
+        errors.append(f"{label} copyrightNotice drift")
+    creator = node.get("creator", {})
+    if not isinstance(creator, dict):
+        errors.append(f"{label} creator must be a Person object")
+        return
+    if creator.get("@id") != expected_creator_id:
+        errors.append(f"{label} creator @id drift")
+    if creator.get("@type") != "Person":
+        errors.append(f"{label} creator must be Person")
+    if creator.get("name") != expected_name:
+        errors.append(f"{label} creator name drift")
+    if creator.get("url") != entity.get("url"):
+        errors.append(f"{label} creator url drift")
+
+
 def check_required_index_keys(data: dict[str, Any]) -> None:
     for key in ("updated", "entity", "featuredProjects", "hackathonLab", "aeo", "triples", "schema", "machineReadable"):
         if key not in data:
@@ -976,8 +1004,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ImageObject height drift")
         if image.get("caption") != SOCIAL_IMAGE_ALT:
             errors.append("person.jsonld ImageObject caption drift")
-        if image.get("creator", {}).get("@id") != person_id:
-            errors.append("person.jsonld ImageObject creator drift")
+        check_image_rights(image, data, "person.jsonld primary ImageObject")
         if image.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld ImageObject about drift")
         if image.get("isPartOf", {}).get("@id") != pages_page_id:
@@ -1211,8 +1238,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             errors.append(f"person.jsonld featured project image encodingFormat drift: {project.get('name')}")
-        if image_node.get("creator", {}).get("@id") != person_id:
-            errors.append(f"person.jsonld featured project image creator drift: {project.get('name')}")
+        check_image_rights(image_node, data, f"person.jsonld featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected:
             errors.append(f"person.jsonld featured project image about drift: {project.get('name')}")
         if image_node.get("isPartOf", {}).get("@id") != expected:

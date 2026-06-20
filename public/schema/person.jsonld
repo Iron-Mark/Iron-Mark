@@ -472,8 +472,15 @@
       "height": 225,
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
@@ -1414,8 +1421,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/hireproof#project"
@@ -1467,8 +1481,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/stellaroid-earn#project"
@@ -1520,8 +1541,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/resqlink#project"
@@ -1574,8 +1602,15 @@
       "encodingFormat": "image/svg+xml",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
@@ -1627,8 +1662,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1678,8 +1720,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/flowfit#project"
@@ -1731,8 +1780,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/palengkepay#project"
@@ -1784,8 +1840,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/gawainyah#project"
@@ -1837,8 +1900,15 @@
       "encodingFormat": "image/webp",
       "inLanguage": "en",
       "dateModified": "2026-06-20",
+      "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
+      "acquireLicensePage": "https://www.marksiazon.dev/contact",
+      "creditText": "Mark Siazon",
+      "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
       },
       "about": {
         "@id": "https://www.marksiazon.dev/projects/baybayinscribe#project"
