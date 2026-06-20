@@ -1108,6 +1108,21 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index WebSite isBasedOn drift")
         if pages_site.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index WebSite keywords drift")
+        if pages_site.get("significantLink") != pages_significant_links(index_data):
+            issues.append("Pages index WebSite significantLink drift")
+        if pages_site.get("relatedLink") != pages_related_links(index_data):
+            issues.append("Pages index WebSite relatedLink drift")
+        required_site_parts = {
+            f"{PAGES_BASE}/#webpage",
+            f"{PAGES_BASE}/#data-catalog",
+            f"{PAGES_BASE}/#machine-readable-dataset",
+            f"{PAGES_BASE}/#main-content",
+            pages_section_navigation_id(),
+            pages_topic_set_id,
+        }
+        missing_site_parts = sorted(required_site_parts - ref_ids(pages_site.get("hasPart")))
+        if missing_site_parts:
+            issues.append(f"Pages index WebSite hasPart missing: {missing_site_parts}")
         check_content_usage_policy(issues, pages_site, "Pages index WebSite")
         check_ownership_metadata(issues, pages_site, index_data, "Pages index WebSite")
         check_spatial_coverage(issues, pages_site, index_data, "Pages index WebSite")

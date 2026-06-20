@@ -1579,6 +1579,21 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages WebSite dateModified drift")
         if pages_site.get("isBasedOn") != data.get("canonical", {}).get("githubProfileReadme"):
             errors.append("person.jsonld Pages WebSite isBasedOn drift")
+        if pages_site.get("significantLink") != pages_significant_links(data):
+            errors.append("person.jsonld Pages WebSite significantLink drift")
+        if pages_site.get("relatedLink") != pages_related_links(data):
+            errors.append("person.jsonld Pages WebSite relatedLink drift")
+        required_site_parts = {
+            pages_page_id,
+            pages_catalog_id,
+            pages_dataset_id,
+            pages_main_content_id,
+            pages_section_nav_id,
+            pages_topic_set_id,
+        }
+        missing_site_parts = sorted(required_site_parts - node_ref_ids(pages_site.get("hasPart")))
+        if missing_site_parts:
+            errors.append(f"person.jsonld Pages WebSite hasPart missing: {missing_site_parts}")
         check_content_usage_policy(pages_site, data, "person.jsonld Pages WebSite")
         check_structured_data_provenance(pages_site, data, "person.jsonld Pages WebSite")
         missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
