@@ -917,6 +917,14 @@ def download_description(name: str, encoding: str) -> str:
     return f"Downloadable {name} file for the Mark Siazon profile index, encoded as {encoding}."
 
 
+def data_catalog_name() -> str:
+    return "Mark Siazon machine-readable profile catalog"
+
+
+def data_catalog_description() -> str:
+    return "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon."
+
+
 def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     entity = data["entity"]
     ids = data["identifiers"]
@@ -1324,10 +1332,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "DataCatalog",
             "@id": pages_catalog_id,
-            "name": "Mark Siazon machine-readable profile catalog",
+            "name": data_catalog_name(),
             "url": pages["home"],
-            "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
-            "abstract": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+            "description": data_catalog_description(),
+            "abstract": data_catalog_description(),
             "keywords": keywords,
             "isBasedOn": repo["llmsIndexJson"],
             "creator": ref(person_id),

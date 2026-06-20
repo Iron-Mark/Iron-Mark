@@ -27,6 +27,8 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    data_catalog_description,
+    data_catalog_name,
     dataset_alternate_names,
     dataset_measurement_techniques,
     dataset_temporal_coverage,
@@ -2428,6 +2430,14 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     if not data_catalog or "DataCatalog" not in node_types(data_catalog):
         errors.append("person.jsonld missing GitHub Pages DataCatalog node")
     else:
+        if data_catalog.get("name") != data_catalog_name():
+            errors.append("person.jsonld DataCatalog name drift")
+        if data_catalog.get("url") != pages.get("home"):
+            errors.append("person.jsonld DataCatalog url drift")
+        if data_catalog.get("description") != data_catalog_description():
+            errors.append("person.jsonld DataCatalog description drift")
+        if data_catalog.get("abstract") != data_catalog.get("description"):
+            errors.append("person.jsonld DataCatalog abstract drift")
         if data_catalog.get("dataset", {}).get("@id") != pages_dataset_id:
             errors.append("person.jsonld DataCatalog dataset drift")
         if data_catalog.get("about", {}).get("@id") != person_id:
@@ -2436,10 +2446,18 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog isBasedOn drift")
         if data_catalog.get("creator", {}).get("@id") != person_id:
             errors.append("person.jsonld DataCatalog creator drift")
+        if data_catalog.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld DataCatalog publisher drift")
+        if data_catalog.get("inLanguage") != "en":
+            errors.append("person.jsonld DataCatalog inLanguage must be en")
         if data_catalog.get("datePublished") != DATASET_DATE_PUBLISHED:
             errors.append("person.jsonld DataCatalog datePublished drift")
+        if data_catalog.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld DataCatalog dateModified drift")
         if data_catalog.get("license") != data.get("license"):
             errors.append("person.jsonld DataCatalog license drift")
+        if data_catalog.get("keywords") != profile_keywords(data):
+            errors.append("person.jsonld DataCatalog keywords drift")
         if data_catalog.get("temporalCoverage") != dataset_temporal_coverage(data):
             errors.append("person.jsonld DataCatalog temporalCoverage drift")
         if data_catalog.get("measurementTechnique") != dataset_measurement_techniques():

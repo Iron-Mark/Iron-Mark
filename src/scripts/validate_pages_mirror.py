@@ -20,6 +20,8 @@ from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
     SERVICE_PROVIDER_MOBILITY,
+    data_catalog_description,
+    data_catalog_name,
     dataset_alternate_names,
     dataset_measurement_techniques,
     dataset_temporal_coverage,
@@ -1560,14 +1562,32 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not data_catalog or "DataCatalog" not in node_type_set(data_catalog):
         issues.append("Pages index inline JSON-LD missing DataCatalog")
     else:
+        if data_catalog.get("name") != data_catalog_name():
+            issues.append("Pages index DataCatalog name drift")
+        if data_catalog.get("url") != f"{PAGES_BASE}/":
+            issues.append("Pages index DataCatalog url drift")
+        if data_catalog.get("description") != data_catalog_description():
+            issues.append("Pages index DataCatalog description drift")
+        if data_catalog.get("abstract") != data_catalog.get("description"):
+            issues.append("Pages index DataCatalog abstract drift")
+        if data_catalog.get("dataset", {}).get("@id") != f"{PAGES_BASE}/#machine-readable-dataset":
+            issues.append("Pages index DataCatalog dataset drift")
+        if data_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index DataCatalog about drift")
         if data_catalog.get("isBasedOn") != expected_based_on:
             issues.append("Pages index DataCatalog isBasedOn drift")
         if data_catalog.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index DataCatalog keywords drift")
         if data_catalog.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#person":
             issues.append("Pages index DataCatalog creator drift")
+        if data_catalog.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index DataCatalog publisher drift")
+        if data_catalog.get("inLanguage") != "en":
+            issues.append("Pages index DataCatalog inLanguage must be en")
         if data_catalog.get("datePublished") != DATASET_DATE_PUBLISHED:
             issues.append("Pages index DataCatalog datePublished drift")
+        if data_catalog.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index DataCatalog dateModified drift")
         if data_catalog.get("license") != f"{PAGES_BASE}/LICENSE.md":
             issues.append("Pages index DataCatalog license drift")
         if data_catalog.get("temporalCoverage") != dataset_temporal_coverage(index_data):
