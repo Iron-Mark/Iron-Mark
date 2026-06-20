@@ -1904,6 +1904,9 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_has_part = sorted(expected_question_ids - ref_ids(faq_page.get("hasPart")))
         if missing_has_part:
             issues.append(f"Pages index FAQPage hasPart missing questions: {missing_has_part}")
+        missing_main_entity = sorted(expected_question_ids - ref_ids(faq_page.get("mainEntity")))
+        if missing_main_entity:
+            issues.append(f"Pages index FAQPage mainEntity missing questions: {missing_main_entity}")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")

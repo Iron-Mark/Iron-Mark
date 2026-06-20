@@ -2867,6 +2867,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_has_part = sorted(expected_question_ids - node_ref_ids(person_faq_page.get("hasPart")))
         if missing_has_part:
             errors.append(f"person.jsonld FAQPage hasPart missing questions: {missing_has_part}")
+        missing_main_entity = sorted(expected_question_ids - node_ref_ids(person_faq_page.get("mainEntity")))
+        if missing_main_entity:
+            errors.append(f"person.jsonld FAQPage mainEntity missing questions: {missing_main_entity}")
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
@@ -2903,6 +2906,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_has_part = sorted(expected_question_ids - node_ref_ids(faq_page.get("hasPart")))
         if missing_has_part:
             errors.append(f"faq.jsonld FAQPage hasPart missing questions: {missing_has_part}")
+        missing_main_entity = sorted(expected_question_ids - node_ref_ids(faq_page.get("mainEntity")))
+        if missing_main_entity:
+            errors.append(f"faq.jsonld FAQPage mainEntity missing questions: {missing_main_entity}")
         check_content_usage_policy(faq_page, data, "faq.jsonld FAQPage")
         check_global_citation(faq_page, data, "faq.jsonld FAQPage")
         check_review_metadata(faq_page, data, "faq.jsonld FAQPage")
