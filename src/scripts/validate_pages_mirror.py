@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import shutil
@@ -179,6 +180,15 @@ def expected_project_image(project: dict[str, object]) -> dict[str, str] | None:
         "@id": f"{url}#image",
         "url": url,
         "encodingFormat": PROJECT_IMAGE_ENCODING.get(Path(asset).suffix, ""),
+        **file_integrity_metadata(ROOT / asset),
+    }
+
+
+def file_integrity_metadata(path: Path) -> dict[str, str]:
+    data = path.read_bytes()
+    return {
+        "contentSize": f"{len(data)} bytes",
+        "sha256": hashlib.sha256(data).hexdigest(),
     }
 
 
@@ -752,6 +762,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing primaryImageOfPage")
     if PAGES_SOCIAL_IMAGE not in "\n".join(jsonld_scripts):
         issues.append("Pages index inline JSON-LD missing Pages social image URL")
+    social_image_path = artifact / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
     primary_image = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#primary-image"), None)
     if not primary_image or "ImageObject" not in node_type_set(primary_image):
         issues.append("Pages index inline JSON-LD missing primary ImageObject node")
@@ -768,6 +779,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index primary ImageObject height drift")
         if primary_image.get("caption") != SOCIAL_IMAGE_ALT:
             issues.append("Pages index primary ImageObject caption drift")
+        if social_image_path.exists():
+            for key, expected in file_integrity_metadata(social_image_path).items():
+                if primary_image.get(key) != expected:
+                    issues.append(f"Pages index primary ImageObject {key} drift")
         check_image_rights(issues, primary_image, index_data, "Pages index primary ImageObject")
     if '"@type": "ContactAction"' not in index_text:
         issues.append("Pages index inline JSON-LD missing hiring ContactAction")
@@ -804,7 +819,6 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in expected_image_tags:
         if tag not in index_text:
             issues.append(f"Pages index missing social image metadata: {tag}")
-    social_image_path = artifact / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
     if png_dimensions(social_image_path, issues) != (SOCIAL_IMAGE_WIDTH, SOCIAL_IMAGE_HEIGHT):
         issues.append("Pages primary social image dimensions must match metadata")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
@@ -1280,6 +1294,9 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             issues.append(f"Pages index featured project image encodingFormat drift: {project.get('name')}")
+        for key in ("contentSize", "sha256"):
+            if image_node.get(key) != expected_image[key]:
+                issues.append(f"Pages index featured project image {key} drift: {project.get('name')}")
         check_image_rights(issues, image_node, index_data, f"Pages index featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected_project_id:
             issues.append(f"Pages index featured project image about drift: {project.get('name')}")

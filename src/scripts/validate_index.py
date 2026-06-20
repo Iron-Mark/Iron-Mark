@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
@@ -648,6 +649,14 @@ def check_assets(slug: str) -> None:
         errors.append(f"Missing featured project cover: assets/projects/{slug}/cover.(webp|png|svg)")
 
 
+def file_integrity_metadata(path: Path) -> dict[str, str]:
+    data = path.read_bytes()
+    return {
+        "contentSize": f"{len(data)} bytes",
+        "sha256": hashlib.sha256(data).hexdigest(),
+    }
+
+
 def expected_project_image(project: dict[str, Any]) -> dict[str, str] | None:
     asset = project_cover_asset(str(project.get("slug", "")))
     if not asset:
@@ -657,6 +666,7 @@ def expected_project_image(project: dict[str, Any]) -> dict[str, str] | None:
         "@id": f"{url}#image",
         "url": url,
         "encodingFormat": PROJECT_IMAGE_ENCODING.get(Path(asset).suffix, ""),
+        **file_integrity_metadata(ROOT / asset),
     }
 
 
@@ -1698,6 +1708,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld ImageObject height drift")
         if image.get("caption") != SOCIAL_IMAGE_ALT:
             errors.append("person.jsonld ImageObject caption drift")
+        for key, expected in file_integrity_metadata(SOCIAL_IMAGE_ASSET).items():
+            if image.get(key) != expected:
+                errors.append(f"person.jsonld ImageObject {key} drift")
         check_image_rights(image, data, "person.jsonld primary ImageObject")
         if image.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld ImageObject about drift")
@@ -2012,6 +2025,9 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project image contentUrl drift: {project.get('name')}")
         if image_node.get("encodingFormat") != expected_image["encodingFormat"]:
             errors.append(f"person.jsonld featured project image encodingFormat drift: {project.get('name')}")
+        for key in ("contentSize", "sha256"):
+            if image_node.get(key) != expected_image[key]:
+                errors.append(f"person.jsonld featured project image {key} drift: {project.get('name')}")
         check_image_rights(image_node, data, f"person.jsonld featured project image {project.get('name')}")
         if image_node.get("about", {}).get("@id") != expected:
             errors.append(f"person.jsonld featured project image about drift: {project.get('name')}")

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -18,6 +19,7 @@ PAGES = "https://iron-mark.github.io/Iron-Mark"
 PAGES_SITE_NAME = "Mark Siazon Profile Index"
 PAGES_SITE_ALTERNATE_NAMES = ["Iron-Mark Profile Index", "Mark Siazon GitHub Profile Index"]
 PAGES_IMAGE = f"{PAGES}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
+PAGES_IMAGE_ASSET = ROOT / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
 IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 IMAGE_WIDTH = 1200
 IMAGE_HEIGHT = 675
@@ -57,6 +59,14 @@ def lab_project_id(project: dict[str, Any]) -> str:
     return f"{lab_project_url(project)}#project"
 
 
+def file_integrity_metadata(path: Path) -> dict[str, str]:
+    data = path.read_bytes()
+    return {
+        "contentSize": f"{len(data)} bytes",
+        "sha256": hashlib.sha256(data).hexdigest(),
+    }
+
+
 def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
     slug = str(project.get("slug", ""))
     if not slug:
@@ -69,6 +79,7 @@ def project_image_info(project: dict[str, Any]) -> dict[str, str] | None:
                 "@id": f"{url}#image",
                 "url": url,
                 "encodingFormat": encoding,
+                **file_integrity_metadata(path),
             }
     return None
 
@@ -1022,6 +1033,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "encodingFormat": "image/png",
             "width": IMAGE_WIDTH,
             "height": IMAGE_HEIGHT,
+            **file_integrity_metadata(PAGES_IMAGE_ASSET),
             "inLanguage": "en",
             "dateModified": updated,
             **image_rights_metadata,
@@ -1338,6 +1350,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "url": image["url"],
                     "contentUrl": image["url"],
                     "encodingFormat": image["encodingFormat"],
+                    "contentSize": image["contentSize"],
+                    "sha256": image["sha256"],
                     "inLanguage": "en",
                     "dateModified": updated,
                     **image_rights_metadata,
