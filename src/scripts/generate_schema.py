@@ -38,6 +38,7 @@ IMAGE_HEIGHT = 675
 PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
 PROVIDE_SERVICE_BUSINESS_FUNCTION = "http://purl.org/goodrelations/v1#ProvideService"
 DATASET_DATE_PUBLISHED = "2026-06-13"
+SERVICE_PROVIDER_MOBILITY = "dynamic"
 PROJECT_IMAGE_EXTENSIONS = (
     (".webp", "image/webp"),
     (".png", "image/png"),
@@ -350,6 +351,22 @@ def dataset_measurement_techniques() -> list[str]:
 
 def dataset_temporal_coverage(data: dict[str, Any]) -> str:
     return f"{DATASET_DATE_PUBLISHED}/{data['updated']}"
+
+
+def service_focus_identifier(focus: str, kind: str) -> dict[str, str]:
+    return {
+        "@type": "PropertyValue",
+        "propertyID": f"Iron-Mark {kind} focus",
+        "name": focus,
+        "value": slugify(focus),
+    }
+
+
+def service_audience() -> dict[str, str]:
+    return {
+        "@type": "Audience",
+        "audienceType": "recruiters, founders, product teams, and engineering teams",
+    }
 
 
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
@@ -1491,8 +1508,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "@id": offer_id,
                     "name": f"{focus} availability",
                     "category": focus,
+                    "identifier": service_focus_identifier(focus, "offer"),
                     "description": offer_description(data, focus),
                     "url": availability.get("recruiterBrief", entity["url"]),
+                    "mainEntityOfPage": availability.get("recruiterBrief", entity["url"]),
                     "availability": "https://schema.org/InStock" if availability.get("status") == "open" else "https://schema.org/LimitedAvailability",
                     "areaServed": area_nodes,
                     "eligibleRegion": area_nodes,
@@ -1506,16 +1525,17 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "@id": service_id,
                     "name": focus,
                     "serviceType": focus,
+                    "identifier": service_focus_identifier(focus, "service"),
                     "description": service_description(data, focus),
                     "provider": ref(person_id),
                     "offers": ref(offer_id),
                     "url": availability.get("recruiterBrief", entity["url"]),
+                    "mainEntityOfPage": availability.get("recruiterBrief", entity["url"]),
                     "availableChannel": ref(service_channel_id),
                     "areaServed": area_nodes,
-                    "audience": {
-                        "@type": "Audience",
-                        "audienceType": "recruiters, founders, product teams, and engineering teams",
-                    },
+                    "providerMobility": SERVICE_PROVIDER_MOBILITY,
+                    "audience": service_audience(),
+                    "serviceAudience": service_audience(),
                 },
             ]
         )

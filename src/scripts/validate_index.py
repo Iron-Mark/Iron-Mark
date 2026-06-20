@@ -26,6 +26,7 @@ from build_pages_mirror import (
 from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
+    SERVICE_PROVIDER_MOBILITY,
     dataset_alternate_names,
     dataset_measurement_techniques,
     dataset_temporal_coverage,
@@ -42,7 +43,9 @@ from generate_schema import (
     primary_image_description,
     profile_keywords,
     project_image_description,
+    service_audience,
     service_description,
+    service_focus_identifier,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -1482,8 +1485,12 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not offer or "Offer" not in node_types(offer):
                 errors.append(f"person.jsonld missing Offer node: {offer_id}")
             else:
+                if offer.get("identifier") != service_focus_identifier(focus, "offer"):
+                    errors.append(f"person.jsonld Offer identifier drift for: {focus}")
                 if offer.get("description") != offer_description(data, focus):
                     errors.append(f"person.jsonld Offer description drift for: {focus}")
+                if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+                    errors.append(f"person.jsonld Offer mainEntityOfPage drift for: {focus}")
                 if offer.get("itemOffered", {}).get("@id") != service_id:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
                 if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
@@ -1502,14 +1509,24 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             if not service or "Service" not in node_types(service):
                 errors.append(f"person.jsonld missing Service node: {service_id}")
             else:
+                if service.get("identifier") != service_focus_identifier(focus, "service"):
+                    errors.append(f"person.jsonld Service identifier drift for: {focus}")
                 if service.get("description") != service_description(data, focus):
                     errors.append(f"person.jsonld Service description drift for: {focus}")
+                if service.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+                    errors.append(f"person.jsonld Service mainEntityOfPage drift for: {focus}")
                 if service.get("provider", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Service provider drift for: {focus}")
                 if service.get("offers", {}).get("@id") != offer_id:
                     errors.append(f"person.jsonld Service offers drift for: {focus}")
                 if service.get("availableChannel", {}).get("@id") != service_channel_id:
                     errors.append(f"person.jsonld Service availableChannel drift for: {focus}")
+                if service.get("providerMobility") != SERVICE_PROVIDER_MOBILITY:
+                    errors.append(f"person.jsonld Service providerMobility drift for: {focus}")
+                if service.get("audience") != service_audience():
+                    errors.append(f"person.jsonld Service audience drift for: {focus}")
+                if service.get("serviceAudience") != service_audience():
+                    errors.append(f"person.jsonld Service serviceAudience drift for: {focus}")
                 missing_service_area = sorted(area_served - area_names(service.get("areaServed")))
                 if missing_service_area:
                     errors.append(f"person.jsonld Service areaServed missing for {focus}: {missing_service_area}")

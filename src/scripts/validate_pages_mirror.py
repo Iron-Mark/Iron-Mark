@@ -19,6 +19,7 @@ from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
     DATASET_DATE_PUBLISHED,
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
+    SERVICE_PROVIDER_MOBILITY,
     dataset_alternate_names,
     dataset_measurement_techniques,
     dataset_temporal_coverage,
@@ -40,7 +41,9 @@ from generate_schema import (
     primary_image_description,
     profile_keywords,
     project_image_description,
+    service_audience,
     service_description,
+    service_focus_identifier,
     slugify,
     unique_compact,
 )
@@ -1039,8 +1042,12 @@ def validate_artifact(artifact: Path) -> list[str]:
         if not offer or "Offer" not in node_type_set(offer):
             issues.append(f"Pages index missing Offer node: {offer_id}")
         else:
+            if offer.get("identifier") != service_focus_identifier(str(focus), "offer"):
+                issues.append(f"Pages index Offer identifier drift: {focus}")
             if offer.get("description") != offer_description(index_data, str(focus)):
                 issues.append(f"Pages index Offer description drift: {focus}")
+            if offer.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+                issues.append(f"Pages index Offer mainEntityOfPage drift: {focus}")
             if offer.get("itemOffered", {}).get("@id") != service_id:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
             if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
@@ -1055,12 +1062,22 @@ def validate_artifact(artifact: Path) -> list[str]:
         if not service or "Service" not in node_type_set(service):
             issues.append(f"Pages index missing Service node: {service_id}")
         else:
+            if service.get("identifier") != service_focus_identifier(str(focus), "service"):
+                issues.append(f"Pages index Service identifier drift: {focus}")
             if service.get("description") != service_description(index_data, str(focus)):
                 issues.append(f"Pages index Service description drift: {focus}")
+            if service.get("mainEntityOfPage") != availability.get("recruiterBrief"):
+                issues.append(f"Pages index Service mainEntityOfPage drift: {focus}")
             if service.get("offers", {}).get("@id") != offer_id:
                 issues.append(f"Pages index Service offers drift: {focus}")
             if service.get("availableChannel", {}).get("@id") != service_channel_id:
                 issues.append(f"Pages index Service availableChannel drift: {service_id}")
+            if service.get("providerMobility") != SERVICE_PROVIDER_MOBILITY:
+                issues.append(f"Pages index Service providerMobility drift: {focus}")
+            if service.get("audience") != service_audience():
+                issues.append(f"Pages index Service audience drift: {focus}")
+            if service.get("serviceAudience") != service_audience():
+                issues.append(f"Pages index Service serviceAudience drift: {focus}")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
