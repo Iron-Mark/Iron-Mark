@@ -50,6 +50,8 @@ from generate_schema import (
     pages_section_navigation_id,
     pages_section_relation_ids,
     pages_section_specs,
+    person_email,
+    person_hiring_contact,
     person_occupations,
     person_subjects,
     person_work_locations,
@@ -2057,6 +2059,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld Person award missing: {missing_awards}")
         if person.get("jobTitle") != data.get("entity", {}).get("jobTitle", []):
             errors.append("person.jsonld Person jobTitle drift")
+        if person.get("email") != person_email(data):
+            errors.append("person.jsonld Person email drift")
         if person.get("hasOccupation") != person_occupations(data):
             errors.append("person.jsonld Person hasOccupation drift")
         if person.get("workLocation") != person_work_locations(data):
@@ -2078,6 +2082,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if not hiring_contact:
             errors.append("person.jsonld Person missing hiring contactPoint")
         else:
+            if hiring_contact != person_hiring_contact(data):
+                errors.append("person.jsonld hiring contactPoint drift")
             missing_contact_area = sorted(area_served - area_names(hiring_contact.get("areaServed")))
             if missing_contact_area:
                 errors.append(f"person.jsonld hiring contactPoint areaServed missing: {missing_contact_area}")

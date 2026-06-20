@@ -442,6 +442,25 @@ def person_work_locations(data: dict[str, Any]) -> list[dict[str, str]]:
     return spatial_coverage(data)
 
 
+def person_email(data: dict[str, Any]) -> str:
+    email = data["entity"]["email"]
+    return email if email.startswith("mailto:") else f"mailto:{email}"
+
+
+def person_hiring_contact(data: dict[str, Any]) -> dict[str, Any]:
+    entity = data["entity"]
+    availability = data.get("availability", {})
+    return {
+        "@type": "ContactPoint",
+        "@id": fragment_id(entity["@id"], "hiring-contact"),
+        "contactType": "hiring",
+        "email": person_email(data),
+        "url": availability.get("contact", entity["url"]),
+        "areaServed": spatial_coverage(data),
+        "availableLanguage": ["en"],
+    }
+
+
 def person_subjects(data: dict[str, Any]) -> list[dict[str, str]]:
     schema = data["schema"]
     return [
@@ -1068,23 +1087,13 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "identifier": person_identifiers(data),
             "url": entity["url"],
             "image": ref(pages_image_id),
-            "email": f"mailto:{entity['email']}" if not entity["email"].startswith("mailto:") else entity["email"],
+            "email": person_email(data),
             "address": entity.get("address"),
             "sameAs": entity.get("sameAs", []),
             "knowsAbout": knows_about,
             "knowsLanguage": [PROFILE_LANGUAGE],
             "award": [achievement["title"] for achievement in data.get("achievements", []) if achievement.get("title")],
-            "contactPoint": [
-                {
-                    "@type": "ContactPoint",
-                    "@id": fragment_id(person_id, "hiring-contact"),
-                    "contactType": "hiring",
-                    "email": f"mailto:{entity['email']}" if not entity["email"].startswith("mailto:") else entity["email"],
-                    "url": availability.get("contact", entity["url"]),
-                    "areaServed": area_nodes,
-                    "availableLanguage": ["en"],
-                }
-            ],
+            "contactPoint": [person_hiring_contact(data)],
             "hasOfferCatalog": ref(fragment_id(person_id, "services")),
             "makesOffer": [ref(offer_id) for offer_id in offer_ids],
             "hasOccupation": person_occupations(data),
