@@ -499,6 +499,12 @@
       "description": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
       "abstract": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
       "inLanguage": "en",
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
       "mainEntity": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -762,6 +768,12 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "mainEntity": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
         "@id": "https://www.marksiazon.dev/#person"
       },
       "breadcrumb": {
@@ -1644,6 +1656,9 @@
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-20",
       "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
         "@id": "https://www.marksiazon.dev/#person"
       },
       "about": {

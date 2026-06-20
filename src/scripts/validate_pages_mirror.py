@@ -963,6 +963,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if profile_page.get("inLanguage") != "en":
             issues.append("Pages index GitHub ProfilePage inLanguage must be en")
+        if profile_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index GitHub ProfilePage author drift")
+        if profile_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index GitHub ProfilePage publisher drift")
         check_review_metadata(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
         check_spatial_coverage(issues, profile_page, index_data, "Pages index GitHub ProfilePage")
     pages_site = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#website"), None)
@@ -1014,6 +1018,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage speakable drift")
         if pages_page.get("mainContentOfPage", {}).get("@id") != pages_main_content_id:
             issues.append("Pages index CollectionPage mainContentOfPage drift")
+        if pages_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index CollectionPage author drift")
+        if pages_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index CollectionPage publisher drift")
         if pages_topic_set_id not in ref_ids(pages_page.get("hasPart")):
             issues.append("Pages index CollectionPage hasPart missing topic taxonomy")
         if pages_main_content_id not in ref_ids(pages_page.get("hasPart")):
@@ -1243,6 +1251,10 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage isBasedOn drift")
         if faq_page.get("inLanguage") != "en":
             issues.append("Pages index FAQPage inLanguage must be en")
+        if faq_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index FAQPage author drift")
+        if faq_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index FAQPage publisher drift")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")

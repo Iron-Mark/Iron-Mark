@@ -1466,6 +1466,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
         if profile_page.get("inLanguage") != "en":
             errors.append("person.jsonld GitHub ProfilePage inLanguage must be en")
+        if profile_page.get("author", {}).get("@id") != person_id:
+            errors.append("person.jsonld GitHub ProfilePage author drift")
+        if profile_page.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld GitHub ProfilePage publisher drift")
         check_review_metadata(profile_page, data, "person.jsonld GitHub ProfilePage")
         check_spatial_coverage(profile_page, data, "person.jsonld GitHub ProfilePage")
 
@@ -1501,6 +1505,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage isPartOf drift")
         if pages_page.get("mainEntity", {}).get("@id") != person_id:
             errors.append("person.jsonld Pages CollectionPage mainEntity drift")
+        if pages_page.get("author", {}).get("@id") != person_id:
+            errors.append("person.jsonld Pages CollectionPage author drift")
+        if pages_page.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld Pages CollectionPage publisher drift")
         if pages_page.get("breadcrumb", {}).get("@id") != pages_breadcrumb_id:
             errors.append("person.jsonld Pages CollectionPage breadcrumb drift")
         if pages_page.get("mainContentOfPage", {}).get("@id") != pages_main_content_id:
@@ -1906,6 +1914,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if person_faq_page.get("inLanguage") != "en":
             errors.append("person.jsonld FAQPage inLanguage must be en")
+        if person_faq_page.get("author", {}).get("@id") != person_id:
+            errors.append("person.jsonld FAQPage author drift")
+        if person_faq_page.get("publisher", {}).get("@id") != person_id:
+            errors.append("person.jsonld FAQPage publisher drift")
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
@@ -1923,6 +1935,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage isBasedOn drift")
         if faq_page.get("author", {}).get("@id") != person_id:
             errors.append("faq.jsonld FAQPage author drift")
+        if faq_page.get("publisher", {}).get("@id") != person_id:
+            errors.append("faq.jsonld FAQPage publisher drift")
         if faq_page.get("about", {}).get("@id") != person_id:
             errors.append("faq.jsonld FAQPage about drift")
         if faq_page.get("inLanguage") != "en":

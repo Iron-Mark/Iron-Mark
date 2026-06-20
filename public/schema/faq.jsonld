@@ -41,6 +41,9 @@
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
       },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
