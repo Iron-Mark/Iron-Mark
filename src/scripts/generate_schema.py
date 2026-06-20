@@ -312,6 +312,115 @@ def pages_speakable_spec(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def pages_section_id(fragment: str) -> str:
+    return f"{PAGES}/#{fragment}"
+
+
+def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
+    entity = data.get("entity", {})
+    availability = data.get("availability", {})
+    seo = data.get("seo", {})
+    aeo = data.get("aeo", {})
+    featured = data.get("featuredProjects", [])
+    triples = data.get("triples", [])
+    machine_readable = data.get("machineReadable", {})
+    pages = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
+
+    role_text = ", ".join(entity.get("jobTitle", []))
+    focus_text = ", ".join(availability.get("focus", []))
+    area_text = ", ".join(availability.get("areaServed", []))
+    project_text = "; ".join(
+        f"{project.get('name', 'Project')}: {project.get('focus', 'featured work')}"
+        for project in featured
+        if isinstance(project, dict)
+    )
+    topic_text = ", ".join(
+        unique_compact(
+            seo.get("primaryKeywords", [])
+            + seo.get("geoTargets", [])
+            + availability.get("areaServed", [])
+        )
+    )
+    triple_text = "; ".join(
+        " | ".join(triple)
+        for triple in triples
+        if isinstance(triple, list) and len(triple) == 3 and all(isinstance(part, str) for part in triple)
+    )
+    start_files = unique_compact(
+        [
+            pages.get("llmsIndexJson"),
+            pages.get("llmsCtxFullTxt"),
+            pages.get("faqMd"),
+            pages.get("recruiterMd"),
+            pages.get("proofMd"),
+            pages.get("llmsTxt"),
+            pages.get("schemaIndex"),
+            pages.get("schemaPerson"),
+            pages.get("schemaFaq"),
+        ]
+    )
+    citation_text = "; ".join(citation_targets(data))
+
+    return [
+        {
+            "fragment": "profile-facts",
+            "heading": "Profile Facts",
+            "name": "Mark Siazon profile facts",
+            "description": "Visible profile facts for Mark Siazon name, roles, availability, service geography, contact, and recruiter brief.",
+            "text": (
+                f"{entity.get('name', 'Mark Siazon')}; roles: {role_text}; "
+                f"availability: {availability.get('status', 'open')}; focus: {focus_text}; "
+                f"location: {availability.get('location', 'Philippines')}; serves: {area_text}."
+            ),
+        },
+        {
+            "fragment": "featured-work",
+            "heading": "Featured Work",
+            "name": "Mark Siazon featured work",
+            "description": "Visible featured project list for Mark Siazon proof-backed product, AI, mobile, Web3, and client web work.",
+            "text": project_text,
+        },
+        {
+            "fragment": "answer-corpus",
+            "heading": "Answer Corpus",
+            "name": "Mark Siazon answer corpus",
+            "description": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+            "text": (
+                f"{len(aeo.get('answerSnippets', []))} answer snippets covering hiring, projects, "
+                "stack, verification, geography, and citation."
+            ),
+        },
+        {
+            "fragment": "geo-topic-signals",
+            "heading": "Geo And Topic Signals",
+            "name": "Mark Siazon geo and topic signals",
+            "description": "Visible search topics and service regions for Mark Siazon AEO, SEO, and GEO discovery.",
+            "text": topic_text,
+        },
+        {
+            "fragment": "knowledge-graph",
+            "heading": "Knowledge Graph",
+            "name": "Mark Siazon knowledge graph",
+            "description": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
+            "text": triple_text,
+        },
+        {
+            "fragment": "start-here",
+            "heading": "Start Here",
+            "name": "Mark Siazon machine-readable starting points",
+            "description": "Visible entry links to Mark Siazon structured profile, answer, proof, recruiter, LLM, and Schema.org files.",
+            "text": "; ".join(start_files),
+        },
+        {
+            "fragment": "citation",
+            "heading": "Citation",
+            "name": "Mark Siazon citation guidance",
+            "description": "Visible citation order and verification boundaries for Mark Siazon public profile facts.",
+            "text": f"Preferred citation order: {citation_text}.",
+        },
+    ]
+
+
 def topic_term_values(data: dict[str, Any]) -> list[str]:
     return unique_compact(
         data.get("seo", {}).get("primaryKeywords", [])
@@ -510,6 +619,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     ownership = ownership_metadata(data)
     review = review_metadata(data)
     spatial = spatial_coverage(data)
+    page_sections = pages_section_specs(data)
+    page_section_refs = [ref(pages_section_id(section["fragment"])) for section in page_sections]
 
     graph: list[dict[str, Any]] = [
         {
@@ -696,6 +807,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 ref(pages_catalog_id),
                 ref(pages_dataset_id),
                 ref(pages_main_content_id),
+                *page_section_refs,
                 ref(pages["llmsIndexJson"]),
                 ref(pages["llmsTxt"]),
                 ref(pages["llmsCtxFullTxt"]),
@@ -741,6 +853,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": updated,
             "isAccessibleForFree": True,
             "citation": citations,
+            "hasPart": page_section_refs,
             **usage_policy,
             **ownership,
             **sd_provenance,
@@ -932,6 +1045,29 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             **ownership,
         },
     ]
+
+    for section in page_sections:
+        description = section["description"]
+        graph.append(
+            {
+                "@type": "WebPageElement",
+                "@id": pages_section_id(section["fragment"]),
+                "name": section["name"],
+                "url": f"{pages['home']}#{section['fragment']}",
+                "description": description,
+                "abstract": description,
+                "text": section["text"],
+                "about": ref(person_id),
+                "isPartOf": ref(pages_page_id),
+                "inLanguage": "en",
+                "dateModified": updated,
+                "isAccessibleForFree": True,
+                "citation": citations,
+                **usage_policy,
+                **ownership,
+                **sd_provenance,
+            }
+        )
 
     for term in topic_terms:
         graph.append(

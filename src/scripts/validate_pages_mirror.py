@@ -20,6 +20,8 @@ from generate_schema import (
     lab_project_id,
     lab_project_url,
     machine_downloads,
+    pages_section_id,
+    pages_section_specs,
     slugify,
     unique_compact,
 )
@@ -746,6 +748,10 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index missing visible Knowledge Graph section")
     if '<main id="main-content">' not in index_text:
         issues.append("Pages index main content must expose #main-content")
+    for section in pages_section_specs(index_data):
+        heading_tag = f'<h2 id="{section["fragment"]}">{section["heading"]}</h2>'
+        if heading_tag not in index_text:
+            issues.append(f"Pages index missing visible anchored section: {heading_tag}")
     for selector in expected_pages_speakable_selectors(index_data):
         if selector.startswith("#") and f'id="{selector[1:]}"' not in index_text:
             issues.append(f"Pages index missing speakable selector target: {selector}")
@@ -905,6 +911,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         repo_sources = {}
     expected_based_on = repo_sources.get("llmsIndexJson")
     pages_main_content_id = f"{PAGES_BASE}/#main-content"
+    pages_section_ids = {pages_section_id(section["fragment"]) for section in pages_section_specs(index_data)}
     pages_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#webpage"), None)
     if not pages_page or "CollectionPage" not in node_type_set(pages_page):
         issues.append("Pages index inline JSON-LD missing CollectionPage")
@@ -923,6 +930,9 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage hasPart missing topic taxonomy")
         if pages_main_content_id not in ref_ids(pages_page.get("hasPart")):
             issues.append("Pages index CollectionPage hasPart missing main content")
+        missing_section_parts = sorted(pages_section_ids - ref_ids(pages_page.get("hasPart")))
+        if missing_section_parts:
+            issues.append(f"Pages index CollectionPage hasPart missing sections: {missing_section_parts}")
         check_review_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
@@ -952,6 +962,36 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_global_citation(issues, main_content, index_data, "Pages index main WebPageElement")
         check_ownership_metadata(issues, main_content, index_data, "Pages index main WebPageElement")
         check_structured_data_provenance(issues, main_content, index_data, "Pages index main WebPageElement")
+        missing_section_parts = sorted(pages_section_ids - ref_ids(main_content.get("hasPart")))
+        if missing_section_parts:
+            issues.append(f"Pages index main WebPageElement hasPart missing sections: {missing_section_parts}")
+    for section in pages_section_specs(index_data):
+        section_id = pages_section_id(section["fragment"])
+        section_node = next((node for node in parsed_jsonld_nodes if node.get("@id") == section_id), None)
+        label = f"Pages index section WebPageElement {section['fragment']}"
+        if not section_node or "WebPageElement" not in node_type_set(section_node):
+            issues.append(f"Pages index inline JSON-LD missing section WebPageElement: {section_id}")
+            continue
+        if section_node.get("name") != section["name"]:
+            issues.append(f"{label} name drift")
+        if section_node.get("url") != f"{PAGES_BASE}/#{section['fragment']}":
+            issues.append(f"{label} url drift")
+        if section_node.get("description") != section["description"]:
+            issues.append(f"{label} description drift")
+        if section_node.get("text") != section["text"]:
+            issues.append(f"{label} text drift")
+        if section_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append(f"{label} about drift")
+        if section_node.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#webpage":
+            issues.append(f"{label} isPartOf drift")
+        if section_node.get("dateModified") != index_data.get("updated"):
+            issues.append(f"{label} dateModified drift")
+        if section_node.get("isAccessibleForFree") is not True:
+            issues.append(f"{label} must be isAccessibleForFree")
+        check_content_usage_policy(issues, section_node, label)
+        check_global_citation(issues, section_node, index_data, label)
+        check_ownership_metadata(issues, section_node, index_data, label)
+        check_structured_data_provenance(issues, section_node, index_data, label)
     topic_terms = expected_topic_terms(index_data)
     topic_set = next((node for node in parsed_jsonld_nodes if node.get("@id") == pages_topic_set_id), None)
     if not topic_set or "DefinedTermSet" not in node_type_set(topic_set):

@@ -262,7 +262,7 @@ def main() -> None:
     <h1>{SITE_NAME}</h1>
     <p id="profile-summary">{escape(entity.get("description", description))}</p>
     <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
-    <h2>Profile Facts</h2>
+    <h2 id="profile-facts">Profile Facts</h2>
     <ul class="facts">
       <li><strong>Name:</strong> {escape(entity.get("name", "Mark Siazon"))} ({csv(entity.get("alternateName", []))})</li>
       <li><strong>Roles:</strong> {job_titles}</li>
@@ -271,7 +271,7 @@ def main() -> None:
       <li><strong>Contact:</strong> {linked(availability.get("contact", f"{PORTFOLIO_URL}/contact"), "contact form")} | {escape(entity.get("email", ""))}</li>
       <li><strong>Recruiter brief:</strong> {linked(availability.get("recruiterBrief", f"{PORTFOLIO_URL}/recruiter"), "marksiazon.dev/recruiter")}</li>
     </ul>
-    <h2>Featured Work</h2>
+    <h2 id="featured-work">Featured Work</h2>
     <ul>
 {projects}
     </ul>
@@ -279,14 +279,14 @@ def main() -> None:
     <ul>
 {answers}
     </ul>
-    <h2>Geo And Topic Signals</h2>
+    <h2 id="geo-topic-signals">Geo And Topic Signals</h2>
     <p><strong>Primary search topics:</strong> {primary_keywords}</p>
     <p><strong>Service regions:</strong> {geo_targets}</p>
-    <h2>Knowledge Graph</h2>
+    <h2 id="knowledge-graph">Knowledge Graph</h2>
     <ul>
 {triples}
     </ul>
-    <h2>Start Here</h2>
+    <h2 id="start-here">Start Here</h2>
     <ul>
       <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, SEO, AEO, and GEO index</li>
       <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> - expanded agent context</li>
@@ -298,7 +298,7 @@ def main() -> None:
       <li><a href="schema/person.jsonld">schema/person.jsonld</a> - Person, profile, project, and content graph</li>
       <li><a href="schema/faq.jsonld">schema/faq.jsonld</a> - FAQPage, Question, and Answer graph</li>
     </ul>
-    <h2>Citation</h2>
+    <h2 id="citation">Citation</h2>
     <p><a href="HOW-TO-CITE.md">HOW-TO-CITE.md</a> and <a href="PROOF.md">PROOF.md</a> define citation order, verification boundaries, and public evidence.</p>
     <ol>
 {citation_links}

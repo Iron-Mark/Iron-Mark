@@ -22,6 +22,7 @@ from build_pages_mirror import (
     featured_project_cover_urls,
     project_cover_asset,
 )
+from generate_schema import pages_section_id, pages_section_specs
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -940,9 +941,10 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     for same_as in data.get("entity", {}).get("sameAs", []):
         if isinstance(same_as, str) and same_as.startswith("https://") and f'<link rel="me" href="{same_as}"/>' not in html:
             errors.append(f"docs/index.html missing rel=me identity link: {same_as}")
-    for heading in ("Profile Facts", "Featured Work", "Answer Corpus", "Geo And Topic Signals", "Knowledge Graph", "Citation"):
-        if heading not in html:
-            errors.append(f"docs/index.html missing visible section: {heading}")
+    for section in pages_section_specs(data):
+        heading_tag = f'<h2 id="{section["fragment"]}">{section["heading"]}</h2>'
+        if heading_tag not in html:
+            errors.append(f"docs/index.html missing visible anchored section: {heading_tag}")
     for selector in expected_pages_speakable_selectors(data):
         if selector.startswith("#") and f'id="{selector[1:]}"' not in html:
             errors.append(f"docs/index.html missing speakable selector target: {selector}")
@@ -1259,6 +1261,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
     pages_main_content_id = f"{PAGES}/#main-content"
+    pages_section_ids = {pages_section_id(section["fragment"]) for section in pages_section_specs(data)}
     pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
@@ -1486,6 +1489,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             pages.get("robots", ""),
             pages_topic_set_id,
         }
+        required_parts.update(pages_section_ids)
         missing_parts = sorted(required_parts - node_ref_ids(pages_page.get("hasPart")))
         if missing_parts:
             errors.append(f"person.jsonld Pages CollectionPage hasPart missing: {missing_parts}")
@@ -1509,6 +1513,36 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_global_citation(main_content, data, "person.jsonld main WebPageElement")
         check_ownership_metadata(main_content, data, "person.jsonld main WebPageElement")
         check_structured_data_provenance(main_content, data, "person.jsonld main WebPageElement")
+        missing_section_parts = sorted(pages_section_ids - node_ref_ids(main_content.get("hasPart")))
+        if missing_section_parts:
+            errors.append(f"person.jsonld main WebPageElement hasPart missing: {missing_section_parts}")
+    for section in pages_section_specs(data):
+        section_id = pages_section_id(section["fragment"])
+        section_node = node_by_id(person_schema, section_id)
+        label = f"person.jsonld section WebPageElement {section['fragment']}"
+        if not section_node or "WebPageElement" not in node_types(section_node):
+            errors.append(f"person.jsonld missing section WebPageElement node: {section_id}")
+            continue
+        if section_node.get("name") != section["name"]:
+            errors.append(f"{label} name drift")
+        if section_node.get("url") != f"{pages.get('home')}#{section['fragment']}":
+            errors.append(f"{label} url drift")
+        if section_node.get("description") != section["description"]:
+            errors.append(f"{label} description drift")
+        if section_node.get("text") != section["text"]:
+            errors.append(f"{label} text drift")
+        if section_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"{label} about drift")
+        if section_node.get("isPartOf", {}).get("@id") != pages_page_id:
+            errors.append(f"{label} isPartOf drift")
+        if section_node.get("dateModified") != data.get("updated"):
+            errors.append(f"{label} dateModified drift")
+        if section_node.get("isAccessibleForFree") is not True:
+            errors.append(f"{label} must be isAccessibleForFree")
+        check_content_usage_policy(section_node, data, label)
+        check_global_citation(section_node, data, label)
+        check_ownership_metadata(section_node, data, label)
+        check_structured_data_provenance(section_node, data, label)
     topic_terms = expected_topic_terms(data)
     topic_set = node_by_id(person_schema, pages_topic_set_id)
     if not topic_set or "DefinedTermSet" not in node_types(topic_set):
