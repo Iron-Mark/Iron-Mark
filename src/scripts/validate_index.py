@@ -1350,6 +1350,28 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     for key in ("updated", "entity", "featuredProjects", "hackathonLab", "seo", "aeo", "triples", "schema"):
         if key not in required_index_keys:
             errors.append(f"llms-index.schema.json missing required key: {key}")
+    project_contracts = {
+        "featuredProjects": {"name", "slug", "caseStudy", "focus", "live", "repo", "model"},
+        "hackathonLab": {"name", "focus", "caseStudy", "repo", "live", "demo", "model"},
+        "achievements": {"title", "project", "team", "proof"},
+    }
+    for key, expected_properties in project_contracts.items():
+        item_schema = index_schema.get("properties", {}).get(key, {}).get("items", {})
+        actual_properties = set(item_schema.get("properties", {}))
+        missing_properties = sorted(expected_properties - actual_properties)
+        if missing_properties:
+            errors.append(f"llms-index.schema.json {key} item schema missing properties: {missing_properties}")
+        if item_schema.get("additionalProperties") is not False:
+            errors.append(f"llms-index.schema.json {key} item schema must disallow additionalProperties")
+    achievement_required = set(
+        index_schema.get("properties", {})
+        .get("achievements", {})
+        .get("items", {})
+        .get("required", [])
+    )
+    for key in ("title", "project", "proof"):
+        if key not in achievement_required:
+            errors.append(f"llms-index.schema.json achievements item schema missing required key: {key}")
     schema_index_url = data.get("schema", {}).get("index")
     if schema_index_url != f"{GITHUB_BLOB}/public/schema/llms-index.schema.json":
         errors.append("llms-index.json schema.index must point to public/schema/llms-index.schema.json")

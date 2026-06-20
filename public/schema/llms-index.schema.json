@@ -290,9 +290,21 @@
           "focus": {
             "type": "string",
             "minLength": 5
+          },
+          "live": {
+            "type": "string",
+            "format": "uri"
+          },
+          "repo": {
+            "type": "string",
+            "format": "uri"
+          },
+          "model": {
+            "type": "string",
+            "format": "uri"
           }
         },
-        "additionalProperties": true
+        "additionalProperties": false
       }
     },
     "hackathonLab": {
@@ -328,20 +340,44 @@
           "demo": {
             "type": "string",
             "format": "uri"
+          },
+          "model": {
+            "type": "string",
+            "format": "uri"
           }
         },
-        "additionalProperties": true
+        "additionalProperties": false
       }
     },
     "achievements": {
       "type": "array",
+      "minItems": 3,
       "items": {
         "type": "object",
         "required": [
           "title",
+          "project",
           "proof"
         ],
-        "additionalProperties": true
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5
+          },
+          "project": {
+            "type": "string",
+            "minLength": 1
+          },
+          "team": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proof": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "additionalProperties": false
       }
     },
     "coreStack": {
