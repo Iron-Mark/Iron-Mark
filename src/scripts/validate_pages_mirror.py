@@ -316,6 +316,42 @@ def awards_by_project(index_data: dict[str, object]) -> dict[str, list[str]]:
     return awards
 
 
+def pages_significant_links(index_data: dict[str, object]) -> list[str]:
+    machine_readable = index_data.get("machineReadable", {})
+    pages = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
+    if not isinstance(pages, dict):
+        pages = {}
+    return unique_compact(
+        [
+            pages.get("llmsIndexJson"),
+            pages.get("llmsCtxFullTxt"),
+            pages.get("faqMd"),
+            pages.get("recruiterMd"),
+            pages.get("proofMd"),
+            pages.get("schemaPerson"),
+        ]
+    )
+
+
+def pages_related_links(index_data: dict[str, object]) -> list[str]:
+    machine_readable = index_data.get("machineReadable", {})
+    pages = machine_readable.get("pages", {}) if isinstance(machine_readable, dict) else {}
+    if not isinstance(pages, dict):
+        pages = {}
+    return unique_compact(
+        [
+            pages.get("schemaFaq"),
+            pages.get("schemaIndex"),
+            pages.get("stackMd"),
+            pages.get("profileMd"),
+            pages.get("howToCiteMd"),
+            pages.get("humansTxt"),
+            pages.get("sitemap"),
+            pages.get("robots"),
+        ]
+    )
+
+
 def pages_rewrite_public_source(source: str) -> str:
     replacements = (
         (f"{GITHUB_BLOB}/public/schema/", f"{PAGES_BASE}/schema/"),
@@ -604,6 +640,10 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if pages_page.get("isBasedOn") != expected_based_on:
             issues.append("Pages index CollectionPage isBasedOn drift")
+        if pages_page.get("significantLink") != pages_significant_links(index_data):
+            issues.append("Pages index CollectionPage significantLink drift")
+        if pages_page.get("relatedLink") != pages_related_links(index_data):
+            issues.append("Pages index CollectionPage relatedLink drift")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")

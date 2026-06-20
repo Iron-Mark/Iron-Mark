@@ -175,6 +175,67 @@ def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
     return awards
 
 
+def profile_significant_links(data: dict[str, Any]) -> list[str]:
+    availability = data.get("availability", {})
+    canonical = data.get("canonical", {})
+    return unique_compact(
+        [
+            canonical.get("portfolio"),
+            availability.get("recruiterBrief"),
+            availability.get("contact"),
+            canonical.get("proofMatrix"),
+            f"{canonical.get('portfolio', '').rstrip('/')}/projects",
+            f"{canonical.get('portfolio', '').rstrip('/')}/achievements",
+        ]
+    )
+
+
+def profile_related_links(data: dict[str, Any]) -> list[str]:
+    repo = data.get("machineReadable", {}).get("repo", {})
+    return unique_compact(
+        [
+            repo.get("llmsIndexJson"),
+            repo.get("llmsCtxFullTxt"),
+            repo.get("faqMd"),
+            repo.get("recruiterMd"),
+            repo.get("proofMd"),
+            repo.get("schemaPerson"),
+            repo.get("schemaFaq"),
+            repo.get("schemaIndex"),
+        ]
+    )
+
+
+def pages_significant_links(data: dict[str, Any]) -> list[str]:
+    pages = data.get("machineReadable", {}).get("pages", {})
+    return unique_compact(
+        [
+            pages.get("llmsIndexJson"),
+            pages.get("llmsCtxFullTxt"),
+            pages.get("faqMd"),
+            pages.get("recruiterMd"),
+            pages.get("proofMd"),
+            pages.get("schemaPerson"),
+        ]
+    )
+
+
+def pages_related_links(data: dict[str, Any]) -> list[str]:
+    pages = data.get("machineReadable", {}).get("pages", {})
+    return unique_compact(
+        [
+            pages.get("schemaFaq"),
+            pages.get("schemaIndex"),
+            pages.get("stackMd"),
+            pages.get("profileMd"),
+            pages.get("howToCiteMd"),
+            pages.get("humansTxt"),
+            pages.get("sitemap"),
+            pages.get("robots"),
+        ]
+    )
+
+
 def citation_targets(data: dict[str, Any]) -> list[str]:
     repo = data["machineReadable"]["repo"]
     return unique_compact(
@@ -445,6 +506,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
             "mentions": mentioned_entities,
+            "significantLink": profile_significant_links(data),
+            "relatedLink": profile_related_links(data),
             "potentialAction": ref(contact_action_id),
             **usage_policy,
             **sd_provenance,
@@ -485,6 +548,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "primaryImageOfPage": ref(pages_image_id),
             "thumbnailUrl": PAGES_IMAGE,
             "mentions": mentioned_entities,
+            "significantLink": pages_significant_links(data),
+            "relatedLink": pages_related_links(data),
             "potentialAction": ref(contact_action_id),
             "citation": citations,
             **usage_policy,

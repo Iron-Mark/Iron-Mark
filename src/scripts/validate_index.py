@@ -372,6 +372,67 @@ def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
     return awards
 
 
+def profile_significant_links(data: dict[str, Any]) -> list[str]:
+    availability = data.get("availability", {})
+    canonical = data.get("canonical", {})
+    return unique_compact(
+        [
+            canonical.get("portfolio"),
+            availability.get("recruiterBrief"),
+            availability.get("contact"),
+            canonical.get("proofMatrix"),
+            f"{canonical.get('portfolio', '').rstrip('/')}/projects",
+            f"{canonical.get('portfolio', '').rstrip('/')}/achievements",
+        ]
+    )
+
+
+def profile_related_links(data: dict[str, Any]) -> list[str]:
+    repo = data.get("machineReadable", {}).get("repo", {})
+    return unique_compact(
+        [
+            repo.get("llmsIndexJson"),
+            repo.get("llmsCtxFullTxt"),
+            repo.get("faqMd"),
+            repo.get("recruiterMd"),
+            repo.get("proofMd"),
+            repo.get("schemaPerson"),
+            repo.get("schemaFaq"),
+            repo.get("schemaIndex"),
+        ]
+    )
+
+
+def pages_significant_links(data: dict[str, Any]) -> list[str]:
+    pages = data.get("machineReadable", {}).get("pages", {})
+    return unique_compact(
+        [
+            pages.get("llmsIndexJson"),
+            pages.get("llmsCtxFullTxt"),
+            pages.get("faqMd"),
+            pages.get("recruiterMd"),
+            pages.get("proofMd"),
+            pages.get("schemaPerson"),
+        ]
+    )
+
+
+def pages_related_links(data: dict[str, Any]) -> list[str]:
+    pages = data.get("machineReadable", {}).get("pages", {})
+    return unique_compact(
+        [
+            pages.get("schemaFaq"),
+            pages.get("schemaIndex"),
+            pages.get("stackMd"),
+            pages.get("profileMd"),
+            pages.get("howToCiteMd"),
+            pages.get("humansTxt"),
+            pages.get("sitemap"),
+            pages.get("robots"),
+        ]
+    )
+
+
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
     if node.get("citation") != expected_citation_targets(data):
         errors.append(f"{label} citation chain drift")
@@ -1152,6 +1213,15 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             continue
         check_expected_mentions(node, expected_mentions, label)
 
+    profile_page = node_by_id(person_schema, profile_page_id)
+    if not profile_page or "ProfilePage" not in node_types(profile_page):
+        errors.append("person.jsonld missing GitHub ProfilePage node")
+    else:
+        if profile_page.get("significantLink") != profile_significant_links(data):
+            errors.append("person.jsonld GitHub ProfilePage significantLink drift")
+        if profile_page.get("relatedLink") != profile_related_links(data):
+            errors.append("person.jsonld GitHub ProfilePage relatedLink drift")
+
     pages_site = node_by_id(person_schema, pages_site_id)
     if not pages_site or "WebSite" not in node_types(pages_site):
         errors.append("person.jsonld missing GitHub Pages WebSite node")
@@ -1194,6 +1264,10 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage potentialAction drift")
         if pages_page.get("isBasedOn") != repo.get("llmsIndexJson"):
             errors.append("person.jsonld Pages CollectionPage isBasedOn drift")
+        if pages_page.get("significantLink") != pages_significant_links(data):
+            errors.append("person.jsonld Pages CollectionPage significantLink drift")
+        if pages_page.get("relatedLink") != pages_related_links(data):
+            errors.append("person.jsonld Pages CollectionPage relatedLink drift")
         check_content_usage_policy(pages_page, data, "person.jsonld Pages CollectionPage")
         check_global_citation(pages_page, data, "person.jsonld Pages CollectionPage")
         check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
