@@ -1326,15 +1326,37 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     if not any("Person" in node_types(node) and node.get("@id") == data.get("entity", {}).get("@id") for node in jsonld_nodes):
         errors.append("docs/index.html inline JSON-LD missing Person node")
     inline_faq_id = pages_faq_id(data)
+    expected_inline_question_ids = {
+        faq_question_id(inline_faq_id, item.get("question", ""))
+        for item in data.get("aeo", {}).get("answerSnippets", [])
+    }
     inline_faq_node = next(
         (node for node in jsonld_nodes if "FAQPage" in node_types(node) and node.get("@id") == inline_faq_id),
         None,
     )
     if not inline_faq_node:
         errors.append("docs/index.html inline JSON-LD missing FAQPage node")
-    elif inline_faq_node.get("identifier") != faq_document_identifier(inline_faq_id):
-        errors.append("docs/index.html inline JSON-LD FAQPage identifier drift")
+    else:
+        if inline_faq_node.get("identifier") != faq_document_identifier(inline_faq_id):
+            errors.append("docs/index.html inline JSON-LD FAQPage identifier drift")
+        actual_has_part = node_ref_ids(inline_faq_node.get("hasPart"))
+        missing_has_part = sorted(expected_inline_question_ids - actual_has_part)
+        if missing_has_part:
+            errors.append(f"docs/index.html inline JSON-LD FAQPage hasPart missing questions: {missing_has_part}")
+        extra_has_part = sorted(actual_has_part - expected_inline_question_ids)
+        if extra_has_part:
+            errors.append(f"docs/index.html inline JSON-LD FAQPage hasPart unexpected questions: {extra_has_part}")
+        actual_main_entity = node_ref_ids(inline_faq_node.get("mainEntity"))
+        missing_main_entity = sorted(expected_inline_question_ids - actual_main_entity)
+        if missing_main_entity:
+            errors.append(f"docs/index.html inline JSON-LD FAQPage mainEntity missing questions: {missing_main_entity}")
+        extra_main_entity = sorted(actual_main_entity - expected_inline_question_ids)
+        if extra_main_entity:
+            errors.append(f"docs/index.html inline JSON-LD FAQPage mainEntity unexpected questions: {extra_main_entity}")
     question_nodes = {node.get("@id", ""): node for node in jsonld_nodes if "Question" in node_types(node)}
+    unexpected_question_ids = sorted(set(question_nodes) - expected_inline_question_ids)
+    if unexpected_question_ids:
+        errors.append(f"docs/index.html inline JSON-LD unexpected Question nodes: {unexpected_question_ids}")
     for snippet in data.get("aeo", {}).get("answerSnippets", []):
         expected = faq_question_id(inline_faq_id, snippet.get("question", ""))
         question_node = question_nodes.get(expected)
