@@ -328,6 +328,25 @@ def dataset_variable_measurements(
     ]
 
 
+def dataset_alternate_names(data: dict[str, Any]) -> list[str]:
+    entity = data["entity"]
+    return unique_compact(
+        [
+            f"{entity['name']} structured profile dataset",
+            "Iron-Mark profile index",
+            "Iron-Mark llms-index.json",
+            "Mark Siazon machine-readable discovery dataset",
+        ]
+    )
+
+
+def dataset_measurement_techniques() -> list[str]:
+    return [
+        "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
+        "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output.",
+    ]
+
+
 def awards_by_project(data: dict[str, Any]) -> dict[str, list[str]]:
     awards: dict[str, list[str]] = {}
     for achievement in data.get("achievements", []):
@@ -1235,6 +1254,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "Dataset",
             "@id": pages_dataset_id,
             "name": "Mark Siazon machine-readable profile dataset",
+            "alternateName": dataset_alternate_names(data),
             "url": pages["llmsIndexJson"],
             "identifier": [
                 {
@@ -1261,6 +1281,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "keywords": keywords,
             "citation": citations,
             "spatialCoverage": area_served,
+            "measurementTechnique": dataset_measurement_techniques(),
             "variableMeasured": dataset_variable_measurements(data, area_served, downloads),
             "includedInDataCatalog": ref(pages_catalog_id),
             "mentions": mentioned_entities,

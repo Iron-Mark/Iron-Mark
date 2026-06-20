@@ -25,6 +25,8 @@ from build_pages_mirror import (
 )
 from generate_schema import (
     PROVIDE_SERVICE_BUSINESS_FUNCTION,
+    dataset_alternate_names,
+    dataset_measurement_techniques,
     download_description,
     download_integrity_metadata,
     featured_projects_list_description,
@@ -1870,6 +1872,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset isBasedOn drift")
         if dataset.get("version") != data.get("updated"):
             errors.append("person.jsonld Dataset version must match updated date")
+        if dataset.get("alternateName") != dataset_alternate_names(data):
+            errors.append("person.jsonld Dataset alternateName drift")
         identifiers = dataset.get("identifier", [])
         if isinstance(identifiers, dict):
             identifiers = [identifiers]
@@ -1884,6 +1888,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset catalog membership drift")
         if dataset.get("spatialCoverage") != data.get("availability", {}).get("areaServed", []):
             errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
+        if dataset.get("measurementTechnique") != dataset_measurement_techniques():
+            errors.append("person.jsonld Dataset measurementTechnique drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
             errors.append("person.jsonld Dataset variableMeasured drift")
         check_content_usage_policy(dataset, data, "person.jsonld Dataset")

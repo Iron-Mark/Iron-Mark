@@ -1576,6 +1576,12 @@
       "@type": "Dataset",
       "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset",
       "name": "Mark Siazon machine-readable profile dataset",
+      "alternateName": [
+        "Mark Siazon structured profile dataset",
+        "Iron-Mark profile index",
+        "Iron-Mark llms-index.json",
+        "Mark Siazon machine-readable discovery dataset"
+      ],
       "url": "https://iron-mark.github.io/Iron-Mark/llms-index.json",
       "identifier": [
         {
@@ -1633,6 +1639,10 @@
         "Philippines",
         "Southeast Asia",
         "remote global"
+      ],
+      "measurementTechnique": [
+        "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
+        "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output."
       ],
       "variableMeasured": [
         {
