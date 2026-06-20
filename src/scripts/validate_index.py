@@ -1326,6 +1326,7 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     if not any("Person" in node_types(node) and node.get("@id") == data.get("entity", {}).get("@id") for node in jsonld_nodes):
         errors.append("docs/index.html inline JSON-LD missing Person node")
     inline_faq_id = pages_faq_id(data)
+    person_id = data.get("entity", {}).get("@id")
     expected_inline_question_ids = {
         faq_question_id(inline_faq_id, item.get("question", ""))
         for item in data.get("aeo", {}).get("answerSnippets", [])
@@ -1367,6 +1368,24 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             errors.append(f"docs/index.html inline JSON-LD Question url drift for: {snippet.get('question')}")
         if question_node.get("identifier") != faq_item_identifier(expected, "question"):
             errors.append(f"docs/index.html inline JSON-LD Question identifier drift for: {snippet.get('question')}")
+        if question_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Question about drift for: {snippet.get('question')}")
+        if question_node.get("author", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Question author drift for: {snippet.get('question')}")
+        if question_node.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Question publisher drift for: {snippet.get('question')}")
+        if question_node.get("isPartOf", {}).get("@id") != inline_faq_id:
+            errors.append(f"docs/index.html inline JSON-LD Question isPartOf drift for: {snippet.get('question')}")
+        if question_node.get("parentItem", {}).get("@id") != inline_faq_id:
+            errors.append(f"docs/index.html inline JSON-LD Question parentItem drift for: {snippet.get('question')}")
+        if question_node.get("answerCount") != 1:
+            errors.append(f"docs/index.html inline JSON-LD Question answerCount drift for: {snippet.get('question')}")
+        if question_node.get("inLanguage") != content_language():
+            errors.append(f"docs/index.html inline JSON-LD Question inLanguage drift for: {snippet.get('question')}")
+        if question_node.get("dateModified") != data.get("updated"):
+            errors.append(f"docs/index.html inline JSON-LD Question dateModified drift for: {snippet.get('question')}")
+        if question_node.get("isAccessibleForFree") is not True:
+            errors.append(f"docs/index.html inline JSON-LD Question must be isAccessibleForFree for: {snippet.get('question')}")
         expected_citations = {pages_rewrite_public_source(str(source)) for source in snippet.get("sources", [])}
         question_citations = question_node.get("citation", [])
         if isinstance(question_citations, str):
@@ -1382,6 +1401,27 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             errors.append(f"docs/index.html inline JSON-LD Answer url drift for: {snippet.get('question')}")
         if answer_node.get("identifier") != faq_item_identifier(answer_id, "answer"):
             errors.append(f"docs/index.html inline JSON-LD Answer identifier drift for: {snippet.get('question')}")
+        if answer_node.get("author", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Answer author drift for: {snippet.get('question')}")
+        if answer_node.get("publisher", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Answer publisher drift for: {snippet.get('question')}")
+        if answer_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"docs/index.html inline JSON-LD Answer about drift for: {snippet.get('question')}")
+        if answer_node.get("isPartOf", {}).get("@id") != inline_faq_id:
+            errors.append(f"docs/index.html inline JSON-LD Answer isPartOf drift for: {snippet.get('question')}")
+        if answer_node.get("parentItem", {}).get("@id") != expected:
+            errors.append(f"docs/index.html inline JSON-LD Answer parentItem drift for: {snippet.get('question')}")
+        if answer_node.get("inLanguage") != content_language():
+            errors.append(f"docs/index.html inline JSON-LD Answer inLanguage drift for: {snippet.get('question')}")
+        if answer_node.get("dateModified") != data.get("updated"):
+            errors.append(f"docs/index.html inline JSON-LD Answer dateModified drift for: {snippet.get('question')}")
+        if answer_node.get("isAccessibleForFree") is not True:
+            errors.append(f"docs/index.html inline JSON-LD Answer must be isAccessibleForFree for: {snippet.get('question')}")
+        answer_citations = answer_node.get("citation", [])
+        if isinstance(answer_citations, str):
+            answer_citations = [answer_citations]
+        if set(answer_citations) != expected_citations:
+            errors.append(f"docs/index.html inline JSON-LD Answer citation drift for: {snippet.get('question')}")
     for index, script in enumerate(
         re.findall(
             r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
