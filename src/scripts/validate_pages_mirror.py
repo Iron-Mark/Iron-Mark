@@ -167,6 +167,14 @@ def ref_ids(value: object) -> set[str]:
     return {item.get("@id", "") for item in value if isinstance(item, dict)}
 
 
+def area_names(value: object) -> set[str]:
+    if isinstance(value, dict):
+        value = [value]
+    if not isinstance(value, list):
+        return set()
+    return {item.get("name", "") for item in value if isinstance(item, dict) and item.get("name")}
+
+
 def item_list_ref_ids(value: object) -> set[str]:
     if not isinstance(value, list):
         return set()
@@ -999,6 +1007,12 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Offer description drift: {focus}")
             if offer.get("itemOffered", {}).get("@id") != service_id:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
+            if offer.get("seller", {}).get("@id") != "https://www.marksiazon.dev/#person":
+                issues.append(f"Pages index Offer seller drift: {focus}")
+            area_served = set(availability.get("areaServed", []))
+            missing_eligible_region = sorted(area_served - area_names(offer.get("eligibleRegion")))
+            if missing_eligible_region:
+                issues.append(f"Pages index Offer eligibleRegion missing for {focus}: {missing_eligible_region}")
         service = next((node for node in parsed_jsonld_nodes if node.get("@id") == service_id), None)
         if not service or "Service" not in node_type_set(service):
             issues.append(f"Pages index missing Service node: {service_id}")

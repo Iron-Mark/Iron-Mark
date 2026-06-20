@@ -1437,9 +1437,16 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                     errors.append(f"person.jsonld Offer description drift for: {focus}")
                 if offer.get("itemOffered", {}).get("@id") != service_id:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
+                if offer.get("seller", {}).get("@id") != person_id:
+                    errors.append(f"person.jsonld Offer seller drift for: {focus}")
                 missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))
                 if missing_offer_area:
                     errors.append(f"person.jsonld Offer areaServed missing for {focus}: {missing_offer_area}")
+                missing_eligible_region = sorted(area_served - area_names(offer.get("eligibleRegion")))
+                if missing_eligible_region:
+                    errors.append(
+                        f"person.jsonld Offer eligibleRegion missing for {focus}: {missing_eligible_region}"
+                    )
             service = node_by_id(person_schema, service_id)
             if not service or "Service" not in node_types(service):
                 errors.append(f"person.jsonld missing Service node: {service_id}")

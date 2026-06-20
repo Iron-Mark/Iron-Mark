@@ -1445,7 +1445,9 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "url": availability.get("recruiterBrief", entity["url"]),
                     "availability": "https://schema.org/InStock" if availability.get("status") == "open" else "https://schema.org/LimitedAvailability",
                     "areaServed": area_nodes,
+                    "eligibleRegion": area_nodes,
                     "offeredBy": ref(person_id),
+                    "seller": ref(person_id),
                     "itemOffered": ref(service_id),
                 },
                 {
