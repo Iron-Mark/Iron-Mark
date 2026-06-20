@@ -469,6 +469,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    pages_main_content_id = f"{PAGES}/#main-content"
     pages_topic_set_id = topic_term_set_id()
     portfolio_site_id = ids["portfolioWebsite"]
     contact_action_id = fragment_id(person_id, "contact-action")
@@ -675,6 +676,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "about": ref(person_id),
             "mainEntity": ref(person_id),
             "breadcrumb": ref(pages_breadcrumb_id),
+            "mainContentOfPage": ref(pages_main_content_id),
             "dateModified": updated,
             "inLanguage": "en",
             "primaryImageOfPage": ref(pages_image_id),
@@ -693,6 +695,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "hasPart": [
                 ref(pages_catalog_id),
                 ref(pages_dataset_id),
+                ref(pages_main_content_id),
                 ref(pages["llmsIndexJson"]),
                 ref(pages["llmsTxt"]),
                 ref(pages["llmsCtxFullTxt"]),
@@ -723,6 +726,24 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "recipient": ref(person_id),
             "about": ref(person_id),
             "object": ref(person_id),
+        },
+        {
+            "@type": "WebPageElement",
+            "@id": pages_main_content_id,
+            "name": "Mark Siazon profile index main content",
+            "url": f"{pages['home']}#main-content",
+            "description": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
+            "abstract": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
+            "text": entity["description"],
+            "about": ref(person_id),
+            "isPartOf": ref(pages_page_id),
+            "inLanguage": "en",
+            "dateModified": updated,
+            "isAccessibleForFree": True,
+            "citation": citations,
+            **usage_policy,
+            **ownership,
+            **sd_provenance,
         },
         {
             "@type": "EntryPoint",

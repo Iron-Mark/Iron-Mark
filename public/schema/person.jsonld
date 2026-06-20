@@ -766,6 +766,9 @@
       "breadcrumb": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#breadcrumb"
       },
+      "mainContentOfPage": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#main-content"
+      },
       "dateModified": "2026-06-20",
       "inLanguage": "en",
       "primaryImageOfPage": {
@@ -910,6 +913,9 @@
           "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
         },
         {
+          "@id": "https://iron-mark.github.io/Iron-Mark/#main-content"
+        },
+        {
           "@id": "https://iron-mark.github.io/Iron-Mark/llms-index.json"
         },
         {
@@ -985,6 +991,49 @@
       "object": {
         "@id": "https://www.marksiazon.dev/#person"
       }
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://iron-mark.github.io/Iron-Mark/#main-content",
+      "name": "Mark Siazon profile index main content",
+      "url": "https://iron-mark.github.io/Iron-Mark/#main-content",
+      "description": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
+      "abstract": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
+      "text": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-06-20",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/proof",
+        "https://www.marksiazon.dev/projects",
+        "https://github.com/Iron-Mark/Iron-Mark",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "accountablePerson": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightHolder": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "copyrightYear": 2026,
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-06-20",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
       "@type": "EntryPoint",

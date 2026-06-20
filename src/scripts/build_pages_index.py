@@ -255,7 +255,7 @@ def main() -> None:
   </style>
 </head>
 <body>
-  <main>
+  <main id="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="{PORTFOLIO_URL}">Mark Siazon Portfolio</a> / <span>{SITE_NAME}</span>
     </nav>

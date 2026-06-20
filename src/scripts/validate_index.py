@@ -55,6 +55,7 @@ ABSTRACT_REQUIRED_TYPES = {
     "FAQPage",
     "ProfilePage",
     "WebSite",
+    "WebPageElement",
 }
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
@@ -887,6 +888,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             errors.append(f"docs/index.html missing modified-time metadata: {tag}")
     if f"Updated {updated}." not in html:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
+    if '<main id="main-content">' not in html:
+        errors.append("docs/index.html main content must expose #main-content")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
     expected_hreflangs = {
@@ -1255,6 +1258,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_catalog_id = f"{PAGES}/#data-catalog"
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
+    pages_main_content_id = f"{PAGES}/#main-content"
     pages_topic_set_id = topic_term_set_id()
     expected_mentions = expected_mention_ids(data, person_fragment_base)
     for node in graph_nodes(person_schema):
@@ -1438,6 +1442,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage mainEntity drift")
         if pages_page.get("breadcrumb", {}).get("@id") != pages_breadcrumb_id:
             errors.append("person.jsonld Pages CollectionPage breadcrumb drift")
+        if pages_page.get("mainContentOfPage", {}).get("@id") != pages_main_content_id:
+            errors.append("person.jsonld Pages CollectionPage mainContentOfPage drift")
         if pages_page.get("primaryImageOfPage", {}).get("@id") != pages_image_id:
             errors.append("person.jsonld Pages CollectionPage primaryImageOfPage drift")
         if pages_page.get("thumbnailUrl") != PAGES_SOCIAL_IMAGE:
@@ -1459,6 +1465,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         required_parts = {
             pages_catalog_id,
             pages_dataset_id,
+            pages_main_content_id,
             pages.get("llmsIndexJson", ""),
             pages.get("llmsTxt", ""),
             pages.get("llmsCtxFullTxt", ""),
@@ -1482,6 +1489,26 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         missing_parts = sorted(required_parts - node_ref_ids(pages_page.get("hasPart")))
         if missing_parts:
             errors.append(f"person.jsonld Pages CollectionPage hasPart missing: {missing_parts}")
+    main_content = node_by_id(person_schema, pages_main_content_id)
+    if not main_content or "WebPageElement" not in node_types(main_content):
+        errors.append("person.jsonld missing Pages main WebPageElement node")
+    else:
+        if main_content.get("url") != f"{pages.get('home')}#main-content":
+            errors.append("person.jsonld main WebPageElement url drift")
+        if main_content.get("text") != data.get("entity", {}).get("description"):
+            errors.append("person.jsonld main WebPageElement text drift")
+        if main_content.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld main WebPageElement about drift")
+        if main_content.get("isPartOf", {}).get("@id") != pages_page_id:
+            errors.append("person.jsonld main WebPageElement isPartOf drift")
+        if main_content.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld main WebPageElement dateModified drift")
+        if main_content.get("isAccessibleForFree") is not True:
+            errors.append("person.jsonld main WebPageElement must be isAccessibleForFree")
+        check_content_usage_policy(main_content, data, "person.jsonld main WebPageElement")
+        check_global_citation(main_content, data, "person.jsonld main WebPageElement")
+        check_ownership_metadata(main_content, data, "person.jsonld main WebPageElement")
+        check_structured_data_provenance(main_content, data, "person.jsonld main WebPageElement")
     topic_terms = expected_topic_terms(data)
     topic_set = node_by_id(person_schema, pages_topic_set_id)
     if not topic_set or "DefinedTermSet" not in node_types(topic_set):

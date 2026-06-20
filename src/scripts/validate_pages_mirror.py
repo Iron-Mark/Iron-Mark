@@ -47,6 +47,7 @@ ABSTRACT_REQUIRED_TYPES = {
     "FAQPage",
     "ProfilePage",
     "WebSite",
+    "WebPageElement",
 }
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
@@ -743,6 +744,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing contact URL")
     if "Knowledge Graph" not in index_text:
         issues.append("Pages index missing visible Knowledge Graph section")
+    if '<main id="main-content">' not in index_text:
+        issues.append("Pages index main content must expose #main-content")
     for selector in expected_pages_speakable_selectors(index_data):
         if selector.startswith("#") and f'id="{selector[1:]}"' not in index_text:
             issues.append(f"Pages index missing speakable selector target: {selector}")
@@ -901,6 +904,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     if not isinstance(repo_sources, dict):
         repo_sources = {}
     expected_based_on = repo_sources.get("llmsIndexJson")
+    pages_main_content_id = f"{PAGES_BASE}/#main-content"
     pages_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#webpage"), None)
     if not pages_page or "CollectionPage" not in node_type_set(pages_page):
         issues.append("Pages index inline JSON-LD missing CollectionPage")
@@ -913,8 +917,12 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage relatedLink drift")
         if pages_page.get("speakable") != expected_pages_speakable(index_data):
             issues.append("Pages index CollectionPage speakable drift")
+        if pages_page.get("mainContentOfPage", {}).get("@id") != pages_main_content_id:
+            issues.append("Pages index CollectionPage mainContentOfPage drift")
         if pages_topic_set_id not in ref_ids(pages_page.get("hasPart")):
             issues.append("Pages index CollectionPage hasPart missing topic taxonomy")
+        if pages_main_content_id not in ref_ids(pages_page.get("hasPart")):
+            issues.append("Pages index CollectionPage hasPart missing main content")
         check_review_metadata(issues, pages_page, index_data, "Pages index CollectionPage")
         check_content_usage_policy(issues, pages_page, "Pages index CollectionPage")
         check_global_citation(issues, pages_page, index_data, "Pages index CollectionPage")
@@ -922,6 +930,28 @@ def validate_artifact(artifact: Path) -> list[str]:
         check_spatial_coverage(issues, pages_page, index_data, "Pages index CollectionPage")
         check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
         check_expected_mentions(issues, pages_page, index_data, "Pages index CollectionPage")
+    main_content = next((node for node in parsed_jsonld_nodes if node.get("@id") == pages_main_content_id), None)
+    if not main_content or "WebPageElement" not in node_type_set(main_content):
+        issues.append("Pages index inline JSON-LD missing main WebPageElement")
+    else:
+        if main_content.get("url") != f"{PAGES_BASE}/#main-content":
+            issues.append("Pages index main WebPageElement url drift")
+        entity = index_data.get("entity", {})
+        expected_text = entity.get("description") if isinstance(entity, dict) else None
+        if main_content.get("text") != expected_text:
+            issues.append("Pages index main WebPageElement text drift")
+        if main_content.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index main WebPageElement about drift")
+        if main_content.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#webpage":
+            issues.append("Pages index main WebPageElement isPartOf drift")
+        if main_content.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index main WebPageElement dateModified drift")
+        if main_content.get("isAccessibleForFree") is not True:
+            issues.append("Pages index main WebPageElement must be isAccessibleForFree")
+        check_content_usage_policy(issues, main_content, "Pages index main WebPageElement")
+        check_global_citation(issues, main_content, index_data, "Pages index main WebPageElement")
+        check_ownership_metadata(issues, main_content, index_data, "Pages index main WebPageElement")
+        check_structured_data_provenance(issues, main_content, index_data, "Pages index main WebPageElement")
     topic_terms = expected_topic_terms(index_data)
     topic_set = next((node for node in parsed_jsonld_nodes if node.get("@id") == pages_topic_set_id), None)
     if not topic_set or "DefinedTermSet" not in node_type_set(topic_set):
