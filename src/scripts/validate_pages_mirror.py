@@ -52,6 +52,7 @@ from generate_schema import (
     person_email,
     person_hiring_contact,
     person_knows_about,
+    person_languages,
     person_main_entity_pages,
     person_occupations,
     person_subjects,
@@ -1329,6 +1330,8 @@ def validate_artifact(artifact: Path) -> list[str]:
     if person:
         if person.get("knowsAbout") != person_knows_about(index_data):
             issues.append("Pages index Person knowsAbout drift")
+        if person.get("knowsLanguage") != person_languages():
+            issues.append("Pages index Person knowsLanguage drift")
         if pages_topic_set_id not in ref_ids(person.get("knowsAbout")):
             issues.append("Pages index Person knowsAbout missing topic taxonomy")
         missing_known_terms = sorted(

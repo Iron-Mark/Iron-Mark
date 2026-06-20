@@ -66,6 +66,10 @@ DOWNLOAD_SOURCE_PATHS = {
 }
 
 
+def person_languages() -> list[dict[str, str]]:
+    return [PROFILE_LANGUAGE]
+
+
 def ref(node_id: str) -> dict[str, str]:
     return {"@id": node_id}
 
@@ -1116,7 +1120,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "address": entity.get("address"),
             "sameAs": entity.get("sameAs", []),
             "knowsAbout": person_knows_about(data),
-            "knowsLanguage": [PROFILE_LANGUAGE],
+            "knowsLanguage": person_languages(),
             "award": [achievement["title"] for achievement in data.get("achievements", []) if achievement.get("title")],
             "contactPoint": [person_hiring_contact(data)],
             "hasOfferCatalog": ref(fragment_id(person_id, "services")),
@@ -1951,7 +1955,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "identifier": person_identifiers(data),
             "sameAs": entity.get("sameAs", []),
             "image": ref(f"{PAGES}/#primary-image"),
-            "knowsLanguage": [PROFILE_LANGUAGE],
+            "knowsLanguage": person_languages(),
             "url": entity["url"],
         },
         {

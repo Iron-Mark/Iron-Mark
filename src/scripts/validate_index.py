@@ -54,6 +54,7 @@ from generate_schema import (
     person_email,
     person_hiring_contact,
     person_knows_about,
+    person_languages,
     person_main_entity_pages,
     person_occupations,
     person_subjects,
@@ -2120,6 +2121,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         )
         if missing_known_terms:
             errors.append(f"person.jsonld Person knowsAbout missing topic terms: {missing_known_terms}")
+        if person.get("knowsLanguage") != person_languages():
+            errors.append("person.jsonld Person knowsLanguage drift")
         known_languages = person.get("knowsLanguage", [])
         if not isinstance(known_languages, list):
             known_languages = [known_languages]
