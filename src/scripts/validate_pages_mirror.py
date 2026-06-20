@@ -1291,6 +1291,14 @@ def validate_artifact(artifact: Path) -> list[str]:
             featured_projects = []
         if featured_list.get("description") != featured_projects_list_description(index_data):
             issues.append("Pages index featured projects ItemList description drift")
+        if featured_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index featured projects ItemList about drift")
+        if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
+            issues.append("Pages index featured projects ItemList isPartOf drift")
+        if featured_list.get("inLanguage") != "en":
+            issues.append("Pages index featured projects ItemList inLanguage must be en")
+        if featured_list.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index featured projects ItemList dateModified drift")
         if featured_list.get("numberOfItems") != len(featured_projects):
             issues.append("Pages index featured projects ItemList count drift")
         expected_featured_ids = {
@@ -1311,6 +1319,14 @@ def validate_artifact(artifact: Path) -> list[str]:
             lab_projects = []
         if lab_list.get("description") != lab_projects_list_description(index_data):
             issues.append("Pages index hackathon and lab ItemList description drift")
+        if lab_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index hackathon and lab ItemList about drift")
+        if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
+            issues.append("Pages index hackathon and lab ItemList isPartOf drift")
+        if lab_list.get("inLanguage") != "en":
+            issues.append("Pages index hackathon and lab ItemList inLanguage must be en")
+        if lab_list.get("dateModified") != index_data.get("updated"):
+            issues.append("Pages index hackathon and lab ItemList dateModified drift")
         if lab_list.get("numberOfItems") != len(lab_projects):
             issues.append("Pages index hackathon and lab ItemList count drift")
         expected_lab_ids = {

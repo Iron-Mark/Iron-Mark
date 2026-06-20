@@ -2006,6 +2006,14 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if featured_list.get("description") != featured_projects_list_description(data):
             errors.append("person.jsonld featured projects ItemList description drift")
+        if featured_list.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld featured projects ItemList about drift")
+        if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
+            errors.append("person.jsonld featured projects ItemList isPartOf drift")
+        if featured_list.get("inLanguage") != "en":
+            errors.append("person.jsonld featured projects ItemList inLanguage must be en")
+        if featured_list.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld featured projects ItemList dateModified drift")
         if featured_list.get("numberOfItems") != len(data.get("featuredProjects", [])):
             errors.append("person.jsonld featured projects ItemList count drift")
         missing_featured_items = sorted(expected_featured_project_ids - item_list_ref_ids(featured_list.get("itemListElement")))
@@ -2021,6 +2029,14 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if lab_list.get("description") != lab_projects_list_description(data):
             errors.append("person.jsonld hackathon and lab ItemList description drift")
+        if lab_list.get("about", {}).get("@id") != person_id:
+            errors.append("person.jsonld hackathon and lab ItemList about drift")
+        if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
+            errors.append("person.jsonld hackathon and lab ItemList isPartOf drift")
+        if lab_list.get("inLanguage") != "en":
+            errors.append("person.jsonld hackathon and lab ItemList inLanguage must be en")
+        if lab_list.get("dateModified") != data.get("updated"):
+            errors.append("person.jsonld hackathon and lab ItemList dateModified drift")
         if lab_list.get("numberOfItems") != len(data.get("hackathonLab", [])):
             errors.append("person.jsonld hackathon and lab ItemList count drift")
         missing_lab_items = sorted(expected_lab_project_ids - item_list_ref_ids(lab_list.get("itemListElement")))

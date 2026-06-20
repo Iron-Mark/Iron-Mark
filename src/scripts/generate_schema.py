@@ -1241,6 +1241,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": f"{GITHUB_BLOB}/llms-index.json#featured-projects",
             "name": "Mark Siazon featured projects",
             "description": featured_projects_list_description(data),
+            "about": ref(person_id),
+            "isPartOf": ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
+            "inLanguage": "en",
+            "dateModified": updated,
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("featuredProjects", [])),
             "itemListElement": [
@@ -1258,6 +1262,10 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": f"{GITHUB_BLOB}/llms-index.json#hackathon-lab",
             "name": "Mark Siazon hackathon and lab projects",
             "description": lab_projects_list_description(data),
+            "about": ref(person_id),
+            "isPartOf": ref(f"{GITHUB_BLOB}/llms-index.json#creativework"),
+            "inLanguage": "en",
+            "dateModified": updated,
             "itemListOrder": "https://schema.org/ItemListOrderAscending",
             "numberOfItems": len(data.get("hackathonLab", [])),
             "itemListElement": [
