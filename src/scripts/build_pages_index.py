@@ -193,10 +193,13 @@ def main() -> None:
   <meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>
   <meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <meta property="og:site_name" content="{SITE_NAME}"/>
+  <meta property="og:updated_time" content="{escape(updated)}"/>
+  <meta property="article:modified_time" content="{escape(updated)}"/>
   <meta property="profile:first_name" content="Mark"/>
   <meta property="profile:last_name" content="Siazon"/>
   <meta property="profile:username" content="Iron-Mark"/>
   <meta name="date" content="{escape(updated)}"/>
+  <meta itemprop="dateModified" content="{escape(updated)}"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="{SITE_NAME}"/>
   <meta name="twitter:description" content="{escape(description)}"/>

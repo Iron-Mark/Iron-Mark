@@ -877,6 +877,14 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     updated = str(data.get("updated", ""))
     if f'<meta name="date" content="{updated}"/>' not in html:
         errors.append("docs/index.html meta date must match llms-index.json updated")
+    expected_modified_tags = {
+        f'<meta property="og:updated_time" content="{updated}"/>',
+        f'<meta property="article:modified_time" content="{updated}"/>',
+        f'<meta itemprop="dateModified" content="{updated}"/>',
+    }
+    for tag in expected_modified_tags:
+        if tag not in html:
+            errors.append(f"docs/index.html missing modified-time metadata: {tag}")
     if f"Updated {updated}." not in html:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:

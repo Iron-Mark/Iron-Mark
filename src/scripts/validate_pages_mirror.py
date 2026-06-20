@@ -761,6 +761,15 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index missing social image metadata: {tag}")
     if f'<meta property="og:locale" content="{OPEN_GRAPH_LOCALE}"/>' not in index_text:
         issues.append("Pages index missing Open Graph locale metadata")
+    updated = str(index_data.get("updated", ""))
+    expected_modified_tags = {
+        f'<meta property="og:updated_time" content="{updated}"/>',
+        f'<meta property="article:modified_time" content="{updated}"/>',
+        f'<meta itemprop="dateModified" content="{updated}"/>',
+    }
+    for tag in expected_modified_tags:
+        if tag not in index_text:
+            issues.append(f"Pages index missing modified-time metadata: {tag}")
     expected_site_name_tags = {
         f"<title>{PAGES_SITE_NAME}</title>",
         f'<meta property="og:title" content="{PAGES_SITE_NAME}"/>',
