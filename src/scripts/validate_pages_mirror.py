@@ -116,6 +116,21 @@ def validate_artifact(artifact: Path) -> list[str]:
     for needle in ("schema/llms-index.schema.json", "schema/person.jsonld", "schema/faq.jsonld", "llms-index.json"):
         if needle not in index_text:
             issues.append(f"Pages index missing reference: {needle}")
+    jsonld_scripts = re.findall(
+        r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
+        index_text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if len(jsonld_scripts) < 2:
+        issues.append("Pages index must inline both Person/content and FAQ JSON-LD graphs")
+    if '"@type": "Question"' not in index_text or '"acceptedAnswer"' not in index_text:
+        issues.append("Pages index missing inline FAQ Question/Answer JSON-LD")
+    if "Knowledge Graph" not in index_text:
+        issues.append("Pages index missing visible Knowledge Graph section")
+    if '<link rel="author" href="humans.txt"/>' not in index_text:
+        issues.append("Pages index missing author link to humans.txt")
+    if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:
+        issues.append("Pages index missing rel=me identity link")
 
     index_data = json.loads((artifact / "llms-index.json").read_text(encoding="utf-8"))
     if index_data.get("contentRoot") != "./":

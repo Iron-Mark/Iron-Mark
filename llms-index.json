@@ -498,8 +498,38 @@
     ],
     [
       "Mark Siazon",
+      "isA",
+      "Product Engineer"
+    ],
+    [
+      "Mark Siazon",
+      "isA",
+      "UI/UX Designer"
+    ],
+    [
+      "Mark Siazon",
+      "isA",
+      "Front-end Specialist"
+    ],
+    [
+      "Mark Siazon",
       "basedIn",
       "Philippines"
+    ],
+    [
+      "Mark Siazon",
+      "serves",
+      "Philippines"
+    ],
+    [
+      "Mark Siazon",
+      "serves",
+      "Southeast Asia"
+    ],
+    [
+      "Mark Siazon",
+      "serves",
+      "remote global"
     ],
     [
       "Mark Siazon",
@@ -509,12 +539,27 @@
     [
       "HireProof",
       "focusesOn",
-      "AI trust and safety"
+      "AI trust and safety for job seekers"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "Stellaroid Earn"
+    ],
+    [
+      "Stellaroid Earn",
+      "focusesOn",
+      "Web3 credential proof on Stellar testnet"
     ],
     [
       "Mark Siazon",
       "built",
       "ResQLink"
+    ],
+    [
+      "ResQLink",
+      "focusesOn",
+      "Offline-first emergency response platform"
     ],
     [
       "ResQLink",
@@ -524,7 +569,62 @@
     [
       "Mark Siazon",
       "built",
+      "LexInSight"
+    ],
+    [
+      "LexInSight",
+      "focusesOn",
+      "AI legal compliance chat"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "Good To Live"
+    ],
+    [
+      "Good To Live",
+      "focusesOn",
+      "Client podcast web launch and SEO"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "FlowFit"
+    ],
+    [
+      "FlowFit",
+      "focusesOn",
+      "Wear OS health and sensor companion"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "PalengkePay"
+    ],
+    [
+      "PalengkePay",
+      "focusesOn",
+      "Stellar fintech PWA for wet markets"
+    ],
+    [
+      "Mark Siazon",
+      "built",
+      "GawainYah"
+    ],
+    [
+      "GawainYah",
+      "focusesOn",
+      "MiniPay AI utility with payment guardrails"
+    ],
+    [
+      "Mark Siazon",
+      "built",
       "BaybayInscribe"
+    ],
+    [
+      "BaybayInscribe",
+      "focusesOn",
+      "Baybayin ML and cultural education UX"
     ],
     [
       "BaybayInscribe",
@@ -533,18 +633,33 @@
     ],
     [
       "Mark Siazon",
-      "built",
-      "Stellaroid Earn"
+      "maintains",
+      "qwen-ui-lab"
     ],
     [
-      "Stellaroid Earn",
-      "ranked",
-      "Stellar bootcamp Top 5 of 105"
+      "Mark Siazon",
+      "maintains",
+      "Smart Profile"
+    ],
+    [
+      "Mark Siazon",
+      "maintains",
+      "Kudlit"
+    ],
+    [
+      "Mark Siazon",
+      "maintains",
+      "Pulse"
     ],
     [
       "Mark Siazon",
       "maintains",
       "STACK.md"
+    ],
+    [
+      "Stellaroid Earn",
+      "ranked",
+      "Stellar bootcamp Top 5 of 105"
     ],
     [
       "STACK.md",

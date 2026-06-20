@@ -429,7 +429,11 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "description": project.get("focus", ""),
                 "creator": ref(person_id),
                 "author": ref(person_id),
+                "about": ref(person_id),
                 "isPartOf": ref(portfolio_site_id),
+                "inLanguage": "en",
+                "dateModified": updated,
+                "isAccessibleForFree": True,
                 "sameAs": compact([project.get("live"), project.get("repo"), project.get("model")]),
                 "keywords": compact([project.get("slug"), project.get("focus")]),
             }
@@ -526,6 +530,7 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "dateModified": data["updated"],
             "author": ref(person_id),
             "about": ref(person_id),
+            "inLanguage": "en",
             "mainEntity": [ref(faq_question_id(faq_id, item["question"])) for item in snippets],
         },
     ]
@@ -537,11 +542,18 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "@type": "Question",
                 "@id": question_id,
                 "name": item["question"],
+                "url": question_id,
+                "about": ref(person_id),
+                "inLanguage": "en",
+                "dateModified": data["updated"],
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "@id": f"{question_id}-answer",
                     "text": item["answer"],
                     "author": ref(person_id),
+                    "about": ref(person_id),
+                    "inLanguage": "en",
+                    "dateModified": data["updated"],
                     "citation": item.get("sources", []),
                 },
             }

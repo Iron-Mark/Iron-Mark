@@ -108,6 +108,30 @@ def node_by_id(doc: dict[str, Any], node_id: str) -> dict[str, Any] | None:
     return None
 
 
+def html_jsonld_nodes(html: str, surface: str) -> list[dict[str, Any]]:
+    nodes: list[dict[str, Any]] = []
+    scripts = re.findall(
+        r"<script\s+type=[\"']application/ld\+json[\"']>\s*(.*?)\s*</script>",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if len(scripts) < 2:
+        errors.append(f"{surface} must inline both Person/content and FAQ JSON-LD graphs")
+    for index, script in enumerate(scripts, start=1):
+        try:
+            doc = json.loads(script)
+        except json.JSONDecodeError as exc:
+            errors.append(f"{surface} contains invalid JSON-LD script #{index}: {exc}")
+            continue
+        if isinstance(doc, dict) and "@graph" in doc:
+            nodes.extend(graph_nodes(doc))
+        elif isinstance(doc, dict):
+            nodes.append(doc)
+        else:
+            errors.append(f"{surface} JSON-LD script #{index} must be an object or @graph")
+    return nodes
+
+
 def node_types(node: dict[str, Any]) -> set[str]:
     raw = node.get("@type", [])
     if isinstance(raw, str):
@@ -218,6 +242,9 @@ def validate_contract_subset(value: Any, schema: dict[str, Any], path: str) -> N
         min_items = schema.get("minItems")
         if isinstance(min_items, int) and len(value) < min_items:
             errors.append(f"{path} must contain at least {min_items} items")
+        max_items = schema.get("maxItems")
+        if isinstance(max_items, int) and len(value) > max_items:
+            errors.append(f"{path} must contain at most {max_items} items")
         item_schema = schema.get("items")
         if isinstance(item_schema, dict):
             for index, item in enumerate(value):
@@ -246,7 +273,7 @@ def check_assets(slug: str) -> None:
 
 
 def check_required_index_keys(data: dict[str, Any]) -> None:
-    for key in ("updated", "entity", "featuredProjects", "aeo", "schema", "machineReadable"):
+    for key in ("updated", "entity", "featuredProjects", "hackathonLab", "aeo", "triples", "schema", "machineReadable"):
         if key not in data:
             errors.append(f"llms-index.json missing key: {key}")
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(data.get("updated", ""))):
@@ -377,7 +404,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     if not DOCS_INDEX.exists():
         errors.append("Missing docs/index.html")
         return
-    html = unescape(DOCS_INDEX.read_text(encoding="utf-8"))
+    raw_html = DOCS_INDEX.read_text(encoding="utf-8")
+    html = unescape(raw_html)
     updated = str(data.get("updated", ""))
     if f'<meta name="date" content="{updated}"/>' not in html:
         errors.append("docs/index.html meta date must match llms-index.json updated")
@@ -385,7 +413,12 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         errors.append("docs/index.html visible updated date must match llms-index.json updated")
     if f'<link rel="canonical" href="{PAGES}/"/>' not in html:
         errors.append("docs/index.html canonical must point to the GitHub Pages mirror")
-    for heading in ("Profile Facts", "Featured Work", "Answer Corpus", "Geo And Topic Signals", "Citation"):
+    if '<link rel="author" href="humans.txt"/>' not in html:
+        errors.append("docs/index.html missing author link to humans.txt")
+    for same_as in data.get("entity", {}).get("sameAs", []):
+        if isinstance(same_as, str) and same_as.startswith("https://") and f'<link rel="me" href="{same_as}"/>' not in html:
+            errors.append(f"docs/index.html missing rel=me identity link: {same_as}")
+    for heading in ("Profile Facts", "Featured Work", "Answer Corpus", "Geo And Topic Signals", "Knowledge Graph", "Citation"):
         if heading not in html:
             errors.append(f"docs/index.html missing visible section: {heading}")
     required_alternates = {
@@ -433,6 +466,27 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
             errors.append(f"docs/index.html missing visible answer question: {question}")
         if answer and answer not in html:
             errors.append(f"docs/index.html missing visible answer text for: {question}")
+    for triple in data.get("triples", []):
+        if isinstance(triple, list) and len(triple) == 3:
+            for part in triple:
+                if part not in html:
+                    errors.append(f"docs/index.html missing visible knowledge graph term: {part}")
+    jsonld_nodes = html_jsonld_nodes(raw_html, "docs/index.html")
+    if not any("Person" in node_types(node) and node.get("@id") == data.get("entity", {}).get("@id") for node in jsonld_nodes):
+        errors.append("docs/index.html inline JSON-LD missing Person node")
+    faq_id = data.get("identifiers", {}).get("faqDocument")
+    if not any("FAQPage" in node_types(node) and node.get("@id") == faq_id for node in jsonld_nodes):
+        errors.append("docs/index.html inline JSON-LD missing FAQPage node")
+    question_nodes = {node.get("@id", ""): node for node in jsonld_nodes if "Question" in node_types(node)}
+    for snippet in data.get("aeo", {}).get("answerSnippets", []):
+        expected = faq_question_id(faq_id, snippet.get("question", ""))
+        question_node = question_nodes.get(expected)
+        if not question_node:
+            errors.append(f"docs/index.html inline JSON-LD missing Question node: {expected}")
+            continue
+        answer_node = question_node.get("acceptedAnswer", {})
+        if not isinstance(answer_node, dict) or answer_node.get("text") != snippet.get("answer"):
+            errors.append(f"docs/index.html inline JSON-LD answer drift for: {snippet.get('question')}")
 
 
 def check_people_first_search_signals(readme: str) -> None:
@@ -498,6 +552,49 @@ def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"AEO snippet has invalid source URL(s) for {question}: {bad_sources}")
 
 
+def check_knowledge_graph(data: dict[str, Any]) -> None:
+    triples_raw = data.get("triples", [])
+    if not isinstance(triples_raw, list):
+        errors.append("llms-index.json triples must be a list")
+        return
+    triples: set[tuple[str, str, str]] = set()
+    for index, triple in enumerate(triples_raw):
+        if (
+            not isinstance(triple, list)
+            or len(triple) != 3
+            or not all(isinstance(part, str) and part.strip() for part in triple)
+        ):
+            errors.append(f"llms-index.json triples[{index}] must be [subject, predicate, object] strings")
+            continue
+        item = (triple[0], triple[1], triple[2])
+        if item in triples:
+            errors.append(f"llms-index.json duplicate triple: {item}")
+        triples.add(item)
+
+    entity_name = data.get("entity", {}).get("name", "Mark Siazon")
+    required: set[tuple[str, str, str]] = set()
+    required.add((entity_name, "basedIn", data.get("availability", {}).get("location", "")))
+    for title in data.get("entity", {}).get("jobTitle", []):
+        required.add((entity_name, "isA", title))
+    for region in data.get("availability", {}).get("areaServed", []):
+        required.add((entity_name, "serves", region))
+    for project in data.get("featuredProjects", []):
+        name = project.get("name", "")
+        focus = project.get("focus", "")
+        if name:
+            required.add((entity_name, "built", name))
+        if name and focus:
+            required.add((name, "focusesOn", focus))
+    for project in data.get("hackathonLab", []):
+        name = project.get("name", "")
+        if name:
+            required.add((entity_name, "maintains", name))
+
+    missing = sorted(item for item in required if item not in triples)
+    if missing:
+        errors.append(f"llms-index.json triples missing required knowledge facts: {missing}")
+
+
 def check_generated_context(data: dict[str, Any]) -> None:
     if not LLMS_CTX.exists():
         errors.append("Missing public/llms-ctx-full.txt")
@@ -509,6 +606,13 @@ def check_generated_context(data: dict[str, Any]) -> None:
             errors.append(f"public/llms-ctx-full.txt missing availability areaServed region: {region}")
     if "- Remote:" not in text:
         errors.append("public/llms-ctx-full.txt missing Availability remote flag")
+    if "## Knowledge graph triples" not in text:
+        errors.append("public/llms-ctx-full.txt missing Knowledge graph triples section")
+    for triple in data.get("triples", []):
+        if isinstance(triple, list) and len(triple) == 3:
+            line = f"- {triple[0]} | {triple[1]} | {triple[2]}"
+            if line not in text:
+                errors.append(f"public/llms-ctx-full.txt missing knowledge graph triple: {line}")
 
 
 def check_schema(data: dict[str, Any], questions: list[str]) -> None:
@@ -524,7 +628,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         errors.append("llms-index.schema.json must declare JSON Schema draft 2020-12")
     validate_contract_subset(data, index_schema, "llms-index.json")
     required_index_keys = set(index_schema.get("required", []))
-    for key in ("updated", "entity", "featuredProjects", "seo", "aeo", "schema"):
+    for key in ("updated", "entity", "featuredProjects", "hackathonLab", "seo", "aeo", "triples", "schema"):
         if key not in required_index_keys:
             errors.append(f"llms-index.schema.json missing required key: {key}")
     schema_index_url = data.get("schema", {}).get("index")
@@ -805,6 +909,15 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     faq_page = node_by_id(faq_schema, faq_id)
     if not faq_page or "FAQPage" not in node_types(faq_page):
         errors.append("faq.jsonld missing FAQPage node matching identifiers.faqDocument")
+    else:
+        if faq_page.get("dateModified") != data.get("updated"):
+            errors.append("faq.jsonld FAQPage dateModified drift")
+        if faq_page.get("author", {}).get("@id") != person_id:
+            errors.append("faq.jsonld FAQPage author drift")
+        if faq_page.get("about", {}).get("@id") != person_id:
+            errors.append("faq.jsonld FAQPage about drift")
+        if faq_page.get("inLanguage") != "en":
+            errors.append("faq.jsonld FAQPage inLanguage must be en")
 
     question_nodes = [node for node in graph_nodes(faq_schema) if "Question" in node_types(node)]
     if len(question_nodes) < len(questions):
@@ -816,12 +929,29 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if expected not in question_ids:
             errors.append(f"faq.jsonld missing Question node: {expected}")
             continue
-        accepted_answer = question_by_id[expected].get("acceptedAnswer", {})
+        question_node = question_by_id[expected]
+        if question_node.get("url") != expected:
+            errors.append(f"faq.jsonld Question url drift for: {question.get('question')}")
+        if question_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Question about drift for: {question.get('question')}")
+        if question_node.get("inLanguage") != "en":
+            errors.append(f"faq.jsonld Question inLanguage must be en for: {question.get('question')}")
+        if question_node.get("dateModified") != data.get("updated"):
+            errors.append(f"faq.jsonld Question dateModified drift for: {question.get('question')}")
+        accepted_answer = question_node.get("acceptedAnswer", {})
         if not isinstance(accepted_answer, dict):
             errors.append(f"faq.jsonld Question missing acceptedAnswer: {expected}")
             continue
         if accepted_answer.get("text") != question.get("answer"):
             errors.append(f"faq.jsonld answer drift for: {question.get('question')}")
+        if accepted_answer.get("author", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Answer author drift for: {question.get('question')}")
+        if accepted_answer.get("about", {}).get("@id") != person_id:
+            errors.append(f"faq.jsonld Answer about drift for: {question.get('question')}")
+        if accepted_answer.get("inLanguage") != "en":
+            errors.append(f"faq.jsonld Answer inLanguage must be en for: {question.get('question')}")
+        if accepted_answer.get("dateModified") != data.get("updated"):
+            errors.append(f"faq.jsonld Answer dateModified drift for: {question.get('question')}")
         expected_citations = set(question.get("sources", []))
         answer_citations = accepted_answer.get("citation", [])
         if isinstance(answer_citations, str):
@@ -829,11 +959,31 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         if set(answer_citations) != expected_citations:
             errors.append(f"faq.jsonld citation drift for: {question.get('question')}")
 
-    project_ids = {node.get("@id", "") for node in graph_nodes(person_schema)}
+    project_nodes = {node.get("@id", ""): node for node in graph_nodes(person_schema)}
     for project in data.get("featuredProjects", []):
         expected = f"{project.get('caseStudy')}#project"
-        if expected not in project_ids:
+        project_node = project_nodes.get(expected)
+        if not project_node:
             errors.append(f"person.jsonld missing featured project node: {project.get('name')}")
+            continue
+        if "CreativeWork" not in node_types(project_node):
+            errors.append(f"person.jsonld featured project node must be CreativeWork: {project.get('name')}")
+        if project_node.get("url") != project.get("caseStudy"):
+            errors.append(f"person.jsonld featured project url drift: {project.get('name')}")
+        if project_node.get("description") != project.get("focus"):
+            errors.append(f"person.jsonld featured project description drift: {project.get('name')}")
+        if project_node.get("creator", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld featured project creator drift: {project.get('name')}")
+        if project_node.get("author", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld featured project author drift: {project.get('name')}")
+        if project_node.get("about", {}).get("@id") != person_id:
+            errors.append(f"person.jsonld featured project about drift: {project.get('name')}")
+        if project_node.get("inLanguage") != "en":
+            errors.append(f"person.jsonld featured project inLanguage must be en: {project.get('name')}")
+        if project_node.get("dateModified") != data.get("updated"):
+            errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
+        if project_node.get("isAccessibleForFree") is not True:
+            errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
 
 
 def sitemap_entries() -> list[dict[str, str]]:
@@ -942,6 +1092,7 @@ def main() -> int:
     check_pages_index_visible_content(data)
     questions = faq_questions()
     check_aeo_coverage(data, questions)
+    check_knowledge_graph(data)
     check_generated_context(data)
     check_schema(data, questions)
     check_crawl_files(data)

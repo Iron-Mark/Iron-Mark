@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 SCHEMA_PERSON = ROOT / "public" / "schema" / "person.jsonld"
+SCHEMA_FAQ = ROOT / "public" / "schema" / "faq.jsonld"
 INDEX = ROOT / "llms-index.json"
 
 PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
@@ -66,16 +67,41 @@ def render_answers(snippets: list[dict[str, str]]) -> str:
     return "\n".join(items)
 
 
+def render_triples(triples: list[list[str]]) -> str:
+    items: list[str] = []
+    for triple in triples:
+        if len(triple) != 3:
+            continue
+        subject, predicate, object_value = triple
+        items.append(
+            "      <li>"
+            f"<strong>{escape(subject)}</strong> "
+            f"<span class=\"meta\">{escape(predicate)}</span> "
+            f"{escape(object_value)}"
+            "</li>"
+        )
+    return "\n".join(items)
+
+
 def render_citation_links(urls: list[str]) -> str:
     items: list[str] = []
-    for index, url in enumerate(urls, start=1):
-        items.append(f"      <li>{index}. {linked(url, url)}</li>")
+    for url in urls:
+        items.append(f"      <li>{linked(url, url)}</li>")
     return "\n".join(items)
+
+
+def render_identity_links(urls: list[str]) -> str:
+    links: list[str] = []
+    for url in urls:
+        if isinstance(url, str) and url.startswith("https://"):
+            links.append(f'  <link rel="me" href="{escape(url, quote=True)}"/>')
+    return "\n".join(links)
 
 
 def main() -> None:
     data = json.loads(INDEX.read_text(encoding="utf-8"))
-    schema = json.dumps(json.loads(SCHEMA_PERSON.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
+    person_schema = json.dumps(json.loads(SCHEMA_PERSON.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
+    faq_schema = json.dumps(json.loads(SCHEMA_FAQ.read_text(encoding="utf-8")), indent=2, ensure_ascii=False)
     entity = data.get("entity", {})
     availability = data.get("availability", {})
     seo = data.get("seo", {})
@@ -93,7 +119,9 @@ def main() -> None:
     geo_targets = csv(seo.get("geoTargets", []))
     projects = render_projects(data.get("featuredProjects", []))
     answers = render_answers(aeo.get("answerSnippets", []))
+    triples = render_triples(data.get("triples", []))
     citation_links = render_citation_links(aeo.get("preferredCitationOrder", []))
+    identity_links = render_identity_links(entity.get("sameAs", []))
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -108,6 +136,10 @@ def main() -> None:
   <meta property="og:description" content="{escape(description)}"/>
   <meta property="og:url" content="{PAGES_URL}"/>
   <meta property="og:image" content="{SOCIAL_IMAGE}"/>
+  <meta property="og:site_name" content="Mark Siazon Profile Index"/>
+  <meta property="profile:first_name" content="Mark"/>
+  <meta property="profile:last_name" content="Siazon"/>
+  <meta property="profile:username" content="Iron-Mark"/>
   <meta name="date" content="{escape(updated)}"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Mark Siazon - Profile Index"/>
@@ -115,6 +147,8 @@ def main() -> None:
   <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
   <title>Mark Siazon - Profile Index</title>
   <link rel="canonical" href="{PAGES_URL}"/>
+  <link rel="author" href="humans.txt"/>
+{identity_links}
   <link rel="alternate" type="application/json" href="llms-index.json"/>
   <link rel="alternate" type="text/plain" href="llms.txt"/>
   <link rel="alternate" type="text/plain" href="llms-full.txt"/>
@@ -135,7 +169,10 @@ def main() -> None:
   <link rel="alternate" type="application/schema+json" href="schema/llms-index.schema.json"/>
   <link rel="sitemap" type="application/xml" href="sitemap.xml"/>
   <script type="application/ld+json">
-{schema}
+{person_schema}
+  </script>
+  <script type="application/ld+json">
+{faq_schema}
   </script>
   <style>
     :root {{ color-scheme: light dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
@@ -177,6 +214,10 @@ def main() -> None:
     <h2>Geo And Topic Signals</h2>
     <p><strong>Primary search topics:</strong> {primary_keywords}</p>
     <p><strong>Service regions:</strong> {geo_targets}</p>
+    <h2>Knowledge Graph</h2>
+    <ul>
+{triples}
+    </ul>
     <h2>Start Here</h2>
     <ul>
       <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, SEO, AEO, and GEO index</li>

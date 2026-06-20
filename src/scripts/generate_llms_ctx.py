@@ -42,6 +42,12 @@ def main() -> None:
     lines.append(f"- Remote: {str(avail.get('remote', False)).lower()}")
     lines.append(f"- Recruiter brief: {avail.get('recruiterBrief', '')}")
     lines.append("")
+    lines.append("## Knowledge graph triples")
+    lines.append("")
+    for triple in data.get("triples", []):
+        if isinstance(triple, list) and len(triple) == 3:
+            lines.append(f"- {triple[0]} | {triple[1]} | {triple[2]}")
+    lines.append("")
     lines.append("## Featured projects")
     lines.append("")
     for p in data.get("featuredProjects", []):
