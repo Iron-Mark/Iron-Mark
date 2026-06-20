@@ -378,6 +378,20 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": pages_dataset_id,
             "name": "Mark Siazon machine-readable profile dataset",
             "url": pages["llmsIndexJson"],
+            "identifier": [
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "GitHub repository",
+                    "value": "Iron-Mark/Iron-Mark",
+                },
+                {
+                    "@type": "PropertyValue",
+                    "propertyID": "GitHub Pages dataset",
+                    "value": pages_dataset_id,
+                },
+            ],
+            "sameAs": repo["llmsIndexJson"],
+            "version": updated,
             "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
             "creator": ref(person_id),
             "publisher": ref(person_id),

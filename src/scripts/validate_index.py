@@ -988,6 +988,18 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     else:
         if dataset.get("url") != pages.get("llmsIndexJson"):
             errors.append("person.jsonld Dataset url drift")
+        if dataset.get("sameAs") != repo.get("llmsIndexJson"):
+            errors.append("person.jsonld Dataset sameAs source drift")
+        if dataset.get("version") != data.get("updated"):
+            errors.append("person.jsonld Dataset version must match updated date")
+        identifiers = dataset.get("identifier", [])
+        if isinstance(identifiers, dict):
+            identifiers = [identifiers]
+        identifier_values = {item.get("value") for item in identifiers if isinstance(item, dict)}
+        expected_identifier_values = {"Iron-Mark/Iron-Mark", pages_dataset_id}
+        missing_identifier_values = sorted(expected_identifier_values - identifier_values)
+        if missing_identifier_values:
+            errors.append(f"person.jsonld Dataset identifier missing value(s): {missing_identifier_values}")
         if dataset.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld Dataset about drift")
         if dataset.get("includedInDataCatalog", {}).get("@id") != pages_catalog_id:

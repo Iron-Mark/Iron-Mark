@@ -294,6 +294,22 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append("Pages index inline BreadcrumbList portfolio item drift")
             if items[1].get("name") != PAGES_SITE_NAME or items[1].get("item") != f"{PAGES_BASE}/":
                 issues.append("Pages index inline BreadcrumbList Pages item drift")
+    dataset = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#machine-readable-dataset"), None)
+    if not dataset or "Dataset" not in node_type_set(dataset):
+        issues.append("Pages index inline JSON-LD missing Dataset")
+    else:
+        if dataset.get("sameAs") != "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json":
+            issues.append("Pages index inline Dataset sameAs source drift")
+        if dataset.get("version") != index_data.get("updated"):
+            issues.append("Pages index inline Dataset version drift")
+        identifiers = dataset.get("identifier", [])
+        if isinstance(identifiers, dict):
+            identifiers = [identifiers]
+        identifier_values = {item.get("value") for item in identifiers if isinstance(item, dict)}
+        expected_values = {"Iron-Mark/Iron-Mark", f"{PAGES_BASE}/#machine-readable-dataset"}
+        missing_values = sorted(expected_values - identifier_values)
+        if missing_values:
+            issues.append(f"Pages index inline Dataset identifier missing value(s): {missing_values}")
     if '<link rel="author" href="humans.txt"/>' not in index_text:
         issues.append("Pages index missing author link to humans.txt")
     if '<link rel="me" href="https://github.com/Iron-Mark"/>' not in index_text:
