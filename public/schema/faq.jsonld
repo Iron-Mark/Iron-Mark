@@ -5,6 +5,28 @@
       "@type": "Person",
       "@id": "https://www.marksiazon.dev/#person",
       "name": "Mark Siazon",
+      "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+      "disambiguatingDescription": "Mark Siazon is the Philippines-based product designer and full-stack developer behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, mobile, Web3, and client web case studies.",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "GitHub username",
+          "value": "Iron-Mark",
+          "url": "https://github.com/Iron-Mark"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Canonical portfolio",
+          "value": "https://www.marksiazon.dev",
+          "url": "https://www.marksiazon.dev"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "GitHub profile repository",
+          "value": "Iron-Mark/Iron-Mark",
+          "url": "https://github.com/Iron-Mark/Iron-Mark"
+        }
+      ],
       "url": "https://www.marksiazon.dev"
     },
     {
@@ -12,6 +34,8 @@
       "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq",
       "name": "Mark Siazon Frequently Asked Questions",
       "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
+      "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+      "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-20",
       "author": {

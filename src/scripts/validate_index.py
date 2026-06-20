@@ -47,6 +47,15 @@ SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
+ABSTRACT_REQUIRED_TYPES = {
+    "CollectionPage",
+    "CreativeWork",
+    "DataCatalog",
+    "Dataset",
+    "FAQPage",
+    "ProfilePage",
+    "WebSite",
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -353,6 +362,40 @@ def expected_mention_ids(data: dict[str, Any], person_fragment_base: str) -> set
     }
 
 
+def expected_profile_disambiguating_description(data: dict[str, Any]) -> str:
+    entity = data.get("entity", {})
+    return (
+        f"{entity.get('name')} is the Philippines-based product designer and full-stack developer "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "mobile, Web3, and client web case studies."
+    )
+
+
+def expected_person_identifiers(data: dict[str, Any]) -> list[dict[str, str]]:
+    entity = data.get("entity", {})
+    canonical = data.get("canonical", {})
+    return [
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub username",
+            "value": "Iron-Mark",
+            "url": "https://github.com/Iron-Mark",
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Canonical portfolio",
+            "value": entity.get("url", ""),
+            "url": entity.get("url", ""),
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub profile repository",
+            "value": "Iron-Mark/Iron-Mark",
+            "url": canonical.get("githubProfileReadme", ""),
+        },
+    ]
+
+
 def lab_project_url(project: dict[str, Any]) -> str:
     return str(project.get("caseStudy") or project.get("demo") or project.get("live") or project.get("repo") or "")
 
@@ -463,6 +506,23 @@ def check_expected_mentions(node: dict[str, Any], expected: set[str], label: str
     missing = sorted(expected - node_ref_ids(node.get("mentions")))
     if missing:
         errors.append(f"{label} mentions missing: {missing}")
+
+
+def check_person_identity_resolution(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
+    if node.get("disambiguatingDescription") != expected_profile_disambiguating_description(data):
+        errors.append(f"{label} disambiguatingDescription drift")
+    if node.get("identifier") != expected_person_identifiers(data):
+        errors.append(f"{label} identifier drift")
+
+
+def check_creativework_abstract(node: dict[str, Any], label: str) -> None:
+    if not (node_types(node) & ABSTRACT_REQUIRED_TYPES):
+        return
+    description = node.get("description")
+    if not isinstance(description, str) or not description:
+        return
+    if node.get("abstract") != description:
+        errors.append(f"{label} abstract must match description")
 
 
 def schema_type_ok(value: Any, schema_type: str) -> bool:
@@ -1163,10 +1223,15 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
     pages_dataset_id = f"{PAGES}/#machine-readable-dataset"
     pages_image_id = f"{PAGES}/#primary-image"
     expected_mentions = expected_mention_ids(data, person_fragment_base)
+    for node in graph_nodes(person_schema):
+        check_creativework_abstract(node, f"person.jsonld {node.get('@id', node.get('name', 'node'))}")
+    for node in graph_nodes(faq_schema):
+        check_creativework_abstract(node, f"faq.jsonld {node.get('@id', node.get('name', 'node'))}")
     person = node_by_id(person_schema, person_id)
     if not person or "Person" not in node_types(person):
         errors.append("person.jsonld missing Person node matching llms-index entity @id")
     else:
+        check_person_identity_resolution(person, data, "person.jsonld Person")
         index_same_as = set(data.get("entity", {}).get("sameAs", []))
         schema_same_as = set(person.get("sameAs", []))
         missing_same_as = sorted(index_same_as - schema_same_as)
@@ -1548,6 +1613,11 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
         check_review_metadata(person_faq_page, data, "person.jsonld FAQPage")
         check_spatial_coverage(person_faq_page, data, "person.jsonld FAQPage")
     faq_page = node_by_id(faq_schema, faq_id)
+    faq_person = node_by_id(faq_schema, person_id)
+    if not faq_person or "Person" not in node_types(faq_person):
+        errors.append("faq.jsonld missing Person node matching llms-index entity @id")
+    else:
+        check_person_identity_resolution(faq_person, data, "faq.jsonld Person")
     if not faq_page or "FAQPage" not in node_types(faq_page):
         errors.append("faq.jsonld missing FAQPage node matching identifiers.faqDocument")
     else:

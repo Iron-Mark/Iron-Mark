@@ -132,6 +132,40 @@ def review_metadata(data: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def profile_disambiguating_description(data: dict[str, Any]) -> str:
+    entity = data["entity"]
+    return (
+        f"{entity['name']} is the Philippines-based product designer and full-stack developer "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "mobile, Web3, and client web case studies."
+    )
+
+
+def person_identifiers(data: dict[str, Any]) -> list[dict[str, str]]:
+    entity = data["entity"]
+    canonical = data["canonical"]
+    return [
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub username",
+            "value": "Iron-Mark",
+            "url": "https://github.com/Iron-Mark",
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Canonical portfolio",
+            "value": entity["url"],
+            "url": entity["url"],
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub profile repository",
+            "value": "Iron-Mark/Iron-Mark",
+            "url": canonical["githubProfileReadme"],
+        },
+    ]
+
+
 def spatial_coverage(data: dict[str, Any]) -> list[str]:
     return list(data.get("availability", {}).get("areaServed", []))
 
@@ -346,6 +380,7 @@ def content_work(
         "url": url,
         "encodingFormat": encoding,
         "description": description,
+        "abstract": description,
         "author": ref(person_id),
         "about": ref(person_id),
         "inLanguage": "en",
@@ -456,6 +491,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "alternateName": entity.get("alternateName", []),
             "jobTitle": entity.get("jobTitle", []),
             "description": entity["description"],
+            "disambiguatingDescription": profile_disambiguating_description(data),
+            "identifier": person_identifiers(data),
             "url": entity["url"],
             "image": ref(pages_image_id),
             "email": f"mailto:{entity['email']}" if not entity["email"].startswith("mailto:") else entity["email"],
@@ -522,6 +559,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
+            "abstract": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
             "mentions": mentioned_entities,
@@ -539,6 +577,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+            "abstract": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
             "mentions": mentioned_entities,
@@ -552,6 +591,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": profile_page_id,
             "url": data["canonical"]["githubProfileReadme"],
             "name": "Mark Siazon GitHub profile README",
+            "description": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
+            "abstract": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
             "mainEntity": ref(person_id),
             "about": ref(person_id),
             "isPartOf": ref(github_site_id),
@@ -579,6 +620,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "inLanguage": "en",
             "about": ref(person_id),
             "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "abstract": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
             "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
             "image": ref(pages_image_id),
@@ -596,6 +638,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": PAGES_SITE_NAME,
             "alternateName": PAGES_SITE_ALTERNATE_NAMES,
             "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+            "abstract": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
             "isBasedOn": repo["llmsIndexJson"],
             "isPartOf": ref(pages_site_id),
             "about": ref(person_id),
@@ -682,6 +725,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "name": "Mark Siazon machine-readable profile catalog",
             "url": pages["home"],
             "description": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
+            "abstract": "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon.",
             "isBasedOn": repo["llmsIndexJson"],
             "publisher": ref(person_id),
             "about": ref(person_id),
@@ -716,6 +760,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "isBasedOn": repo["llmsIndexJson"],
             "version": updated,
             "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
+            "abstract": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
             "creator": ref(person_id),
             "publisher": ref(person_id),
             "about": ref(person_id),
@@ -757,6 +802,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+            "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "isBasedOn": repo["faqMd"],
             "dateModified": updated,
             "author": ref(person_id),
@@ -866,6 +913,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": project["caseStudy"],
             "mainEntityOfPage": project["caseStudy"],
             "description": project.get("focus", ""),
+            "abstract": project.get("focus", ""),
             "creator": ref(person_id),
             "author": ref(person_id),
             "about": ref(person_id),
@@ -930,6 +978,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "url": url,
                 "mainEntityOfPage": url,
                 "description": project.get("focus", "Hackathon and lab project maintained by Mark Siazon."),
+                "abstract": project.get("focus", "Hackathon and lab project maintained by Mark Siazon."),
                 "creator": ref(person_id),
                 "author": ref(person_id),
                 "about": ref(person_id),
@@ -1064,6 +1113,9 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@type": "Person",
             "@id": person_id,
             "name": entity["name"],
+            "description": entity["description"],
+            "disambiguatingDescription": profile_disambiguating_description(data),
+            "identifier": person_identifiers(data),
             "url": entity["url"],
         },
         {
@@ -1071,6 +1123,8 @@ def build_faq_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": faq_id,
             "name": "Mark Siazon Frequently Asked Questions",
             "url": repo["faqMd"],
+            "description": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
+            "abstract": "Question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
             "isBasedOn": repo["faqMd"],
             "dateModified": data["updated"],
             "author": ref(person_id),

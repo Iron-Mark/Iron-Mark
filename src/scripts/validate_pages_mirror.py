@@ -39,6 +39,15 @@ SOCIAL_IMAGE_HEIGHT = 225
 OPEN_GRAPH_LOCALE = "en_US"
 FAVICON_HREF = "assets/brand/mark-siazon-favicon.svg"
 IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
+ABSTRACT_REQUIRED_TYPES = {
+    "CollectionPage",
+    "CreativeWork",
+    "DataCatalog",
+    "Dataset",
+    "FAQPage",
+    "ProfilePage",
+    "WebSite",
+}
 PROJECT_IMAGE_ENCODING = {
     ".webp": "image/webp",
     ".png": "image/png",
@@ -300,6 +309,43 @@ def expected_mention_ids(index_data: dict[str, object]) -> set[str]:
     }
 
 
+def expected_profile_disambiguating_description(index_data: dict[str, object]) -> str:
+    entity = index_data.get("entity", {})
+    name = entity.get("name") if isinstance(entity, dict) else ""
+    return (
+        f"{name} is the Philippines-based product designer and full-stack developer "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "mobile, Web3, and client web case studies."
+    )
+
+
+def expected_person_identifiers(index_data: dict[str, object]) -> list[dict[str, str]]:
+    entity = index_data.get("entity", {})
+    canonical = index_data.get("canonical", {})
+    entity_url = entity.get("url", "") if isinstance(entity, dict) else ""
+    github_profile = canonical.get("githubProfileReadme", "") if isinstance(canonical, dict) else ""
+    return [
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub username",
+            "value": "Iron-Mark",
+            "url": "https://github.com/Iron-Mark",
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "Canonical portfolio",
+            "value": entity_url,
+            "url": entity_url,
+        },
+        {
+            "@type": "PropertyValue",
+            "propertyID": "GitHub profile repository",
+            "value": "Iron-Mark/Iron-Mark",
+            "url": github_profile,
+        },
+    ]
+
+
 def awards_by_project(index_data: dict[str, object]) -> dict[str, list[str]]:
     awards: dict[str, list[str]] = {}
     achievements = index_data.get("achievements", [])
@@ -409,6 +455,28 @@ def check_expected_mentions(
     missing = sorted(expected_mention_ids(index_data) - ref_ids(node.get("mentions")))
     if missing:
         issues.append(f"{label} mentions missing: {missing}")
+
+
+def check_person_identity_resolution(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    if node.get("disambiguatingDescription") != expected_profile_disambiguating_description(index_data):
+        issues.append(f"{label} disambiguatingDescription drift")
+    if node.get("identifier") != expected_person_identifiers(index_data):
+        issues.append(f"{label} identifier drift")
+
+
+def check_creativework_abstract(issues: list[str], node: dict[str, object], label: str) -> None:
+    if not (node_type_set(node) & ABSTRACT_REQUIRED_TYPES):
+        return
+    description = node.get("description")
+    if not isinstance(description, str) or not description:
+        return
+    if node.get("abstract") != description:
+        issues.append(f"{label} abstract must match description")
 
 
 def check_image_rights(issues: list[str], node: dict[str, object], index_data: dict[str, object], label: str) -> None:
@@ -619,6 +687,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index contains invalid inline JSON-LD")
     if public_url_values:
         issues.append(f"Pages index inline JSON-LD must use Pages URLs for deployed public files: {public_url_values}")
+    for node in parsed_jsonld_nodes:
+        check_creativework_abstract(issues, node, f"Pages index {node.get('@id', node.get('name', 'node'))}")
     if "https://iron-mark.github.io/Iron-Mark/FAQ.md#faq" not in "\n".join(jsonld_scripts):
         issues.append("Pages index inline FAQ JSON-LD must use the Pages FAQ identifier")
     if '"@type": "ImageObject"' not in index_text:
@@ -694,6 +764,13 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages index inline JSON-LD missing Person node")
     elif f"{PAGES_BASE}/#webpage" not in ref_ids(person.get("mainEntityOfPage")):
         issues.append("Pages index inline JSON-LD Person mainEntityOfPage missing Pages CollectionPage")
+    person_nodes = [
+        node
+        for node in parsed_jsonld_nodes
+        if node.get("@id") == "https://www.marksiazon.dev/#person" and "Person" in node_type_set(node)
+    ]
+    for person_node in person_nodes:
+        check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
     profile_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://github.com/Iron-Mark/Iron-Mark#profilepage"), None)
     if not profile_page or "ProfilePage" not in node_type_set(profile_page):
         issues.append("Pages index inline JSON-LD missing GitHub ProfilePage")
