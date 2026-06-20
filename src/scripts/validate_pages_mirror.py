@@ -1333,6 +1333,8 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage publisher drift")
         if faq_page.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index FAQPage keywords drift")
+        if faq_page.get("isAccessibleForFree") is not True:
+            issues.append("Pages index FAQPage must be isAccessibleForFree")
         check_content_usage_policy(issues, faq_page, "Pages index FAQPage")
         check_global_citation(issues, faq_page, index_data, "Pages index FAQPage")
         check_review_metadata(issues, faq_page, index_data, "Pages index FAQPage")

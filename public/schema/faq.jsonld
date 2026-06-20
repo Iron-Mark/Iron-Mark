@@ -66,6 +66,7 @@
         "@id": "https://www.marksiazon.dev/#person"
       },
       "inLanguage": "en",
+      "isAccessibleForFree": true,
       "spatialCoverage": [
         "Philippines",
         "Southeast Asia",
