@@ -237,6 +237,35 @@ def check_image_rights(issues: list[str], node: dict[str, object], index_data: d
         issues.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         issues.append(f"{label} creator url drift")
+    check_structured_data_provenance(issues, node, index_data, label)
+
+
+def check_structured_data_provenance(
+    issues: list[str],
+    node: dict[str, object],
+    index_data: dict[str, object],
+    label: str,
+) -> None:
+    entity = index_data.get("entity", {})
+    if not isinstance(entity, dict):
+        issues.append(f"{label} cannot validate sdPublisher")
+        return
+    publisher = node.get("sdPublisher", {})
+    if not isinstance(publisher, dict):
+        issues.append(f"{label} missing sdPublisher Person object")
+        return
+    if publisher.get("@type") != "Person":
+        issues.append(f"{label} sdPublisher type drift")
+    if publisher.get("@id") != entity.get("@id"):
+        issues.append(f"{label} sdPublisher @id drift")
+    if publisher.get("name") != entity.get("name"):
+        issues.append(f"{label} sdPublisher name drift")
+    if publisher.get("url") != entity.get("url"):
+        issues.append(f"{label} sdPublisher url drift")
+    if node.get("sdDatePublished") != index_data.get("updated"):
+        issues.append(f"{label} sdDatePublished drift")
+    if node.get("sdLicense") != f"{PAGES_BASE}/LICENSE.md":
+        issues.append(f"{label} sdLicense drift")
 
 
 def copy_tree(src: Path, dst: Path) -> None:
@@ -400,9 +429,15 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline JSON-LD WebSite url drift")
         if pages_site.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index inline JSON-LD WebSite dateModified drift")
+        check_structured_data_provenance(issues, pages_site, index_data, "Pages index WebSite")
         missing_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_alternates:
             issues.append(f"Pages index inline JSON-LD WebSite alternateName missing: {missing_alternates}")
+    pages_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#webpage"), None)
+    if not pages_page or "CollectionPage" not in node_type_set(pages_page):
+        issues.append("Pages index inline JSON-LD missing CollectionPage")
+    else:
+        check_structured_data_provenance(issues, pages_page, index_data, "Pages index CollectionPage")
     breadcrumb = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/#breadcrumb"), None)
     if not breadcrumb or "BreadcrumbList" not in node_type_set(breadcrumb):
         issues.append("Pages index inline JSON-LD missing BreadcrumbList")
@@ -437,6 +472,19 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset spatialCoverage drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
             issues.append("Pages index inline Dataset variableMeasured drift")
+        check_structured_data_provenance(issues, dataset, index_data, "Pages index Dataset")
+    faq_page = next((node for node in parsed_jsonld_nodes if node.get("@id") == f"{PAGES_BASE}/FAQ.md#faq"), None)
+    if not faq_page or "FAQPage" not in node_type_set(faq_page):
+        issues.append("Pages index inline JSON-LD missing FAQPage")
+    else:
+        check_structured_data_provenance(issues, faq_page, index_data, "Pages index FAQPage")
+    for node in parsed_jsonld_nodes:
+        node_types = node_type_set(node)
+        if "Question" in node_types:
+            check_structured_data_provenance(issues, node, index_data, f"Pages index Question {node.get('name')}")
+            answer = node.get("acceptedAnswer", {})
+            if isinstance(answer, dict):
+                check_structured_data_provenance(issues, answer, index_data, f"Pages index Answer {node.get('name')}")
     jsonld_node_by_id = {str(node.get("@id", "")): node for node in parsed_jsonld_nodes}
     for project in index_data.get("featuredProjects", []):
         if not isinstance(project, dict):
@@ -454,6 +502,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index featured project image ref drift: {project.get('name')}")
         if project_node.get("thumbnailUrl") != expected_image["url"]:
             issues.append(f"Pages index featured project thumbnailUrl drift: {project.get('name')}")
+        check_structured_data_provenance(issues, project_node, index_data, f"Pages index featured project {project.get('name')}")
         image_node = jsonld_node_by_id.get(expected_image["@id"])
         if not image_node or "ImageObject" not in node_type_set(image_node):
             issues.append(f"Pages index inline JSON-LD missing featured project ImageObject: {project.get('name')}")

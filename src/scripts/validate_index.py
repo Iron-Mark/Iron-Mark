@@ -387,6 +387,32 @@ def check_image_rights(node: dict[str, Any], data: dict[str, Any], label: str) -
         errors.append(f"{label} creator name drift")
     if creator.get("url") != entity.get("url"):
         errors.append(f"{label} creator url drift")
+    check_structured_data_provenance(node, data, label)
+
+
+def check_structured_data_provenance(
+    node: dict[str, Any],
+    data: dict[str, Any],
+    label: str,
+    expected_license: str | None = None,
+) -> None:
+    entity = data.get("entity", {})
+    publisher = node.get("sdPublisher", {})
+    if not isinstance(publisher, dict):
+        errors.append(f"{label} missing sdPublisher Person object")
+        return
+    if publisher.get("@type") != "Person":
+        errors.append(f"{label} sdPublisher must be Person")
+    if publisher.get("@id") != entity.get("@id"):
+        errors.append(f"{label} sdPublisher @id drift")
+    if publisher.get("name") != entity.get("name"):
+        errors.append(f"{label} sdPublisher name drift")
+    if publisher.get("url") != entity.get("url"):
+        errors.append(f"{label} sdPublisher url drift")
+    if node.get("sdDatePublished") != data.get("updated"):
+        errors.append(f"{label} sdDatePublished drift")
+    if node.get("sdLicense") != (expected_license or data.get("license")):
+        errors.append(f"{label} sdLicense drift")
 
 
 def check_required_index_keys(data: dict[str, Any]) -> None:
@@ -965,6 +991,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages WebSite url drift")
         if pages_site.get("dateModified") != data.get("updated"):
             errors.append("person.jsonld Pages WebSite dateModified drift")
+        check_structured_data_provenance(pages_site, data, "person.jsonld Pages WebSite")
         missing_site_alternates = sorted(PAGES_SITE_ALTERNATE_NAMES - set(pages_site.get("alternateName", [])))
         if missing_site_alternates:
             errors.append(f"person.jsonld Pages WebSite alternateName missing: {missing_site_alternates}")
@@ -991,6 +1018,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Pages CollectionPage thumbnailUrl drift")
         if pages_page.get("potentialAction", {}).get("@id") != contact_action_id:
             errors.append("person.jsonld Pages CollectionPage potentialAction drift")
+        check_structured_data_provenance(pages_page, data, "person.jsonld Pages CollectionPage")
         required_parts = {
             pages_catalog_id,
             pages_dataset_id,
@@ -1024,6 +1052,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog dataset drift")
         if data_catalog.get("about", {}).get("@id") != person_id:
             errors.append("person.jsonld DataCatalog about drift")
+        check_structured_data_provenance(data_catalog, data, "person.jsonld DataCatalog")
     image = node_by_id(person_schema, pages_image_id)
     if not image or "ImageObject" not in node_types(image):
         errors.append("person.jsonld missing Pages primary ImageObject node")
@@ -1095,6 +1124,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld Dataset spatialCoverage must match availability.areaServed")
         if dataset.get("variableMeasured") != expected_dataset_measurements(data, len(downloads)):
             errors.append("person.jsonld Dataset variableMeasured drift")
+        check_structured_data_provenance(dataset, data, "person.jsonld Dataset")
         if dataset.get("isAccessibleForFree") is not True:
             errors.append("person.jsonld Dataset must be marked isAccessibleForFree")
         expected_keywords = set(
@@ -1133,6 +1163,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld DataDownload isPartOf drift for: {key}")
         if download.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld DataDownload about drift for: {key}")
+        check_structured_data_provenance(download, data, f"person.jsonld DataDownload {key}")
     repo = data.get("machineReadable", {}).get("repo", {})
     expected_content_works = {
         f"{GITHUB_BLOB}/llms-index.json#creativework": (repo.get("llmsIndexJson"), "application/json"),
@@ -1164,6 +1195,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld CreativeWork author drift for: {node_id}")
         if work.get("about", {}).get("@id") != person_id:
             errors.append(f"person.jsonld CreativeWork about drift for: {node_id}")
+        check_structured_data_provenance(work, data, f"person.jsonld CreativeWork {node_id}")
     breadcrumb = node_by_id(person_schema, pages_breadcrumb_id)
     if not breadcrumb or "BreadcrumbList" not in node_types(breadcrumb):
         errors.append("person.jsonld missing GitHub Pages BreadcrumbList node")
@@ -1194,6 +1226,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("faq.jsonld FAQPage about drift")
         if faq_page.get("inLanguage") != "en":
             errors.append("faq.jsonld FAQPage inLanguage must be en")
+        check_structured_data_provenance(faq_page, data, "faq.jsonld FAQPage")
 
     question_nodes = [node for node in graph_nodes(faq_schema) if "Question" in node_types(node)]
     if len(question_nodes) < len(questions):
@@ -1214,6 +1247,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Question inLanguage must be en for: {question.get('question')}")
         if question_node.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Question dateModified drift for: {question.get('question')}")
+        check_structured_data_provenance(question_node, data, f"faq.jsonld Question {question.get('question')}")
         accepted_answer = question_node.get("acceptedAnswer", {})
         if not isinstance(accepted_answer, dict):
             errors.append(f"faq.jsonld Question missing acceptedAnswer: {expected}")
@@ -1228,6 +1262,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"faq.jsonld Answer inLanguage must be en for: {question.get('question')}")
         if accepted_answer.get("dateModified") != data.get("updated"):
             errors.append(f"faq.jsonld Answer dateModified drift for: {question.get('question')}")
+        check_structured_data_provenance(accepted_answer, data, f"faq.jsonld Answer {question.get('question')}")
         expected_citations = set(question.get("sources", []))
         answer_citations = accepted_answer.get("citation", [])
         if isinstance(answer_citations, str):
@@ -1260,6 +1295,7 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append(f"person.jsonld featured project dateModified drift: {project.get('name')}")
         if project_node.get("isAccessibleForFree") is not True:
             errors.append(f"person.jsonld featured project must be marked isAccessibleForFree: {project.get('name')}")
+        check_structured_data_provenance(project_node, data, f"person.jsonld featured project {project.get('name')}")
         expected_image = expected_project_image(project)
         if not expected_image:
             errors.append(f"person.jsonld featured project cannot resolve cover image: {project.get('name')}")
