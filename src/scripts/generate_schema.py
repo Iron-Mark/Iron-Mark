@@ -36,6 +36,7 @@ IMAGE_ALT = "Mark Siazon product design and full-stack development profile banne
 IMAGE_WIDTH = 1200
 IMAGE_HEIGHT = 675
 PROFILE_LANGUAGE = {"@type": "Language", "name": "English", "alternateName": "en"}
+PROVIDE_SERVICE_BUSINESS_FUNCTION = "http://purl.org/goodrelations/v1#ProvideService"
 PROJECT_IMAGE_EXTENSIONS = (
     (".webp", "image/webp"),
     (".png", "image/png"),
@@ -1447,6 +1448,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                     "availability": "https://schema.org/InStock" if availability.get("status") == "open" else "https://schema.org/LimitedAvailability",
                     "areaServed": area_nodes,
                     "eligibleRegion": area_nodes,
+                    "businessFunction": PROVIDE_SERVICE_BUSINESS_FUNCTION,
                     "offeredBy": ref(person_id),
                     "seller": ref(person_id),
                     "itemOffered": ref(service_id),

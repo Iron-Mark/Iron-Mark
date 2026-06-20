@@ -17,6 +17,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from build_pages_mirror import featured_project_cover_urls, project_cover_asset
 from generate_schema import (
+    PROVIDE_SERVICE_BUSINESS_FUNCTION,
     download_description,
     download_id,
     download_integrity_metadata,
@@ -1007,6 +1008,8 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Offer description drift: {focus}")
             if offer.get("itemOffered", {}).get("@id") != service_id:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
+            if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
+                issues.append(f"Pages index Offer businessFunction drift: {focus}")
             if offer.get("seller", {}).get("@id") != "https://www.marksiazon.dev/#person":
                 issues.append(f"Pages index Offer seller drift: {focus}")
             area_served = set(availability.get("areaServed", []))

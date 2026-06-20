@@ -24,6 +24,7 @@ from build_pages_mirror import (
     project_cover_asset,
 )
 from generate_schema import (
+    PROVIDE_SERVICE_BUSINESS_FUNCTION,
     download_description,
     download_integrity_metadata,
     featured_projects_list_description,
@@ -1437,6 +1438,8 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
                     errors.append(f"person.jsonld Offer description drift for: {focus}")
                 if offer.get("itemOffered", {}).get("@id") != service_id:
                     errors.append(f"person.jsonld Offer itemOffered drift for: {focus}")
+                if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
+                    errors.append(f"person.jsonld Offer businessFunction drift for: {focus}")
                 if offer.get("seller", {}).get("@id") != person_id:
                     errors.append(f"person.jsonld Offer seller drift for: {focus}")
                 missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))

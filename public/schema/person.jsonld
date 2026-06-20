@@ -3318,6 +3318,7 @@
           "name": "remote global"
         }
       ],
+      "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3396,6 +3397,7 @@
           "name": "remote global"
         }
       ],
+      "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3474,6 +3476,7 @@
           "name": "remote global"
         }
       ],
+      "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3552,6 +3555,7 @@
           "name": "remote global"
         }
       ],
+      "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3630,6 +3634,7 @@
           "name": "remote global"
         }
       ],
+      "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
         "@id": "https://www.marksiazon.dev/#person"
       },
