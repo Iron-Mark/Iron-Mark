@@ -16,7 +16,7 @@ from typing import Any
 from urllib.parse import urlparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_pages_mirror import PAGES_SITEMAP_ENTRIES
+from build_pages_mirror import PAGES_PRIMARY_IMAGE, PAGES_SITEMAP_ENTRIES
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -1136,6 +1136,9 @@ def check_crawl_files(data: dict[str, Any]) -> None:
         errors.append("robots.txt must not advertise raw GitHub sitemap; use the host-specific Pages sitemap")
     if f"Sitemap: {PAGES}/sitemap.xml" not in robots:
         errors.append("robots.txt missing GitHub Pages sitemap directive")
+    sitemap_text = SITEMAP.read_text(encoding="utf-8") if SITEMAP.exists() else ""
+    if 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' not in sitemap_text:
+        errors.append("sitemap.xml missing Google image sitemap namespace")
 
     entries = sitemap_entries()
     locs = {entry["loc"] for entry in entries}
@@ -1182,6 +1185,32 @@ def check_crawl_files(data: dict[str, Any]) -> None:
     missing = sorted(required_locs - locs)
     if missing:
         errors.append(f"sitemap.xml missing schema URL(s): {missing}")
+
+    try:
+        sitemap = ET.parse(SITEMAP)
+        ns = {
+            "sm": "http://www.sitemaps.org/schemas/sitemap/0.9",
+            "image": "http://www.google.com/schemas/sitemap-image/1.1",
+        }
+        root_url = next(
+            (url for url in sitemap.findall(".//sm:url", ns) if url.findtext("sm:loc", default="", namespaces=ns) == f"{PAGES}/"),
+            None,
+        )
+        image = root_url.find("image:image", ns) if root_url is not None else None
+        if image is None:
+            errors.append("sitemap.xml root URL missing primary image sitemap entry")
+        else:
+            if image.findtext("image:loc", default="", namespaces=ns) != PAGES_PRIMARY_IMAGE:
+                errors.append("sitemap.xml primary image loc drift")
+            deprecated_image_tags = [
+                tag
+                for tag in ("caption", "geo_location", "title", "license")
+                if image.find(f"image:{tag}", ns) is not None
+            ]
+            if deprecated_image_tags:
+                errors.append(f"sitemap.xml must not use deprecated image sitemap tags: {deprecated_image_tags}")
+    except ET.ParseError:
+        pass
 
 
 def main() -> int:

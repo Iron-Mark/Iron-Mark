@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
@@ -14,6 +15,7 @@ DOCS = ROOT / "docs"
 PAGES_BASE = "https://iron-mark.github.io/Iron-Mark"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
+PAGES_PRIMARY_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"
 
 TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".jsonld", ".cff"}
 SKIP_NAMES = {"index.html"}
@@ -95,7 +97,11 @@ def rewrite_robots(text: str) -> str:
 
 
 def build_pages_sitemap(lastmod: str) -> str:
-    lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
+    ]
     for path, changefreq, priority in PAGES_SITEMAP_ENTRIES:
         loc = f"{PAGES_BASE}/{path}" if path else f"{PAGES_BASE}/"
         lines.extend(
@@ -105,9 +111,17 @@ def build_pages_sitemap(lastmod: str) -> str:
                 f"    <lastmod>{lastmod}</lastmod>",
                 f"    <changefreq>{changefreq}</changefreq>",
                 f"    <priority>{priority}</priority>",
-                "  </url>",
             ]
         )
+        if not path:
+            lines.extend(
+                [
+                    "    <image:image>",
+                    f"      <image:loc>{escape(PAGES_PRIMARY_IMAGE)}</image:loc>",
+                    "    </image:image>",
+                ]
+            )
+        lines.append("  </url>")
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
 

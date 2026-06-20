@@ -21,6 +21,7 @@ PAGES_SOCIAL_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full
 SOCIAL_IMAGE_ALT = "Mark Siazon product design and full-stack development profile banner"
 SOCIAL_IMAGE_WIDTH = 400
 SOCIAL_IMAGE_HEIGHT = 225
+IMAGE_SITEMAP_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 
 ROOT_FILES = ("llms.txt", "llms-index.json", "humans.txt", "robots.txt", "sitemap.xml")
 PUBLIC_FILES = (
@@ -231,9 +232,33 @@ def validate_artifact(artifact: Path) -> list[str]:
 
     sitemap_path = artifact / "sitemap.xml"
     try:
+        sitemap_text = sitemap_path.read_text(encoding="utf-8")
+        if f'xmlns:image="{IMAGE_SITEMAP_NS}"' not in sitemap_text:
+            issues.append("Pages sitemap missing Google image sitemap namespace")
         sitemap = ET.parse(sitemap_path)
-        ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+        ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9", "image": IMAGE_SITEMAP_NS}
         locs = [loc.text or "" for loc in sitemap.findall(".//sm:loc", ns)]
+        root_url = next(
+            (
+                url
+                for url in sitemap.findall(".//sm:url", ns)
+                if url.findtext("sm:loc", default="", namespaces=ns) == f"{PAGES_BASE}/"
+            ),
+            None,
+        )
+        image = root_url.find("image:image", ns) if root_url is not None else None
+        if image is None:
+            issues.append("Pages sitemap root URL missing primary image entry")
+        else:
+            if image.findtext("image:loc", default="", namespaces=ns) != PAGES_SOCIAL_IMAGE:
+                issues.append("Pages sitemap primary image loc drift")
+            deprecated_image_tags = [
+                tag
+                for tag in ("caption", "geo_location", "title", "license")
+                if image.find(f"image:{tag}", ns) is not None
+            ]
+            if deprecated_image_tags:
+                issues.append(f"Pages sitemap must not use deprecated image tags: {deprecated_image_tags}")
     except Exception as exc:
         issues.append(f"invalid Pages sitemap.xml: {exc}")
         locs = []
