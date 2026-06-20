@@ -1324,6 +1324,18 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index DataCatalog isBasedOn drift")
         if data_catalog.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index DataCatalog keywords drift")
+        if data_catalog.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            issues.append("Pages index DataCatalog creator drift")
+        if data_catalog.get("datePublished") != DATASET_DATE_PUBLISHED:
+            issues.append("Pages index DataCatalog datePublished drift")
+        if data_catalog.get("license") != f"{PAGES_BASE}/LICENSE.md":
+            issues.append("Pages index DataCatalog license drift")
+        if data_catalog.get("temporalCoverage") != dataset_temporal_coverage(index_data):
+            issues.append("Pages index DataCatalog temporalCoverage drift")
+        if data_catalog.get("measurementTechnique") != dataset_measurement_techniques():
+            issues.append("Pages index DataCatalog measurementTechnique drift")
+        if data_catalog.get("isAccessibleForFree") is not True:
+            issues.append("Pages index DataCatalog must be isAccessibleForFree")
         check_content_usage_policy(issues, data_catalog, "Pages index DataCatalog")
         check_global_citation(issues, data_catalog, index_data, "Pages index DataCatalog")
         check_ownership_metadata(issues, data_catalog, index_data, "Pages index DataCatalog")

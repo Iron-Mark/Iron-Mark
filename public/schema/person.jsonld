@@ -1465,6 +1465,9 @@
         "remote global"
       ],
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
+      "creator": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
       "publisher": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -1475,11 +1478,18 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "inLanguage": "en",
+      "datePublished": "2026-06-13",
       "dateModified": "2026-06-21",
+      "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "spatialCoverage": [
         "Philippines",
         "Southeast Asia",
         "remote global"
+      ],
+      "temporalCoverage": "2026-06-13/2026-06-21",
+      "measurementTechnique": [
+        "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
+        "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output."
       ],
       "mentions": [
         {
@@ -1546,6 +1556,7 @@
           "@id": "https://www.marksiazon.dev/projects/pulse#project"
         }
       ],
+      "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
         "https://www.marksiazon.dev/proof",

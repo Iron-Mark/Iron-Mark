@@ -1813,6 +1813,18 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             errors.append("person.jsonld DataCatalog about drift")
         if data_catalog.get("isBasedOn") != repo.get("llmsIndexJson"):
             errors.append("person.jsonld DataCatalog isBasedOn drift")
+        if data_catalog.get("creator", {}).get("@id") != person_id:
+            errors.append("person.jsonld DataCatalog creator drift")
+        if data_catalog.get("datePublished") != DATASET_DATE_PUBLISHED:
+            errors.append("person.jsonld DataCatalog datePublished drift")
+        if data_catalog.get("license") != data.get("license"):
+            errors.append("person.jsonld DataCatalog license drift")
+        if data_catalog.get("temporalCoverage") != dataset_temporal_coverage(data):
+            errors.append("person.jsonld DataCatalog temporalCoverage drift")
+        if data_catalog.get("measurementTechnique") != dataset_measurement_techniques():
+            errors.append("person.jsonld DataCatalog measurementTechnique drift")
+        if data_catalog.get("isAccessibleForFree") is not True:
+            errors.append("person.jsonld DataCatalog must be marked isAccessibleForFree")
         check_content_usage_policy(data_catalog, data, "person.jsonld DataCatalog")
         check_global_citation(data_catalog, data, "person.jsonld DataCatalog")
         check_structured_data_provenance(data_catalog, data, "person.jsonld DataCatalog")
