@@ -19,12 +19,13 @@ GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 PAGES_PRIMARY_IMAGE = f"{PAGES_BASE}/assets/brand/mark-siazon-product-design-full-stack-profile-banner.png"
 PROJECT_COVER_EXTENSIONS = (".webp", ".png", ".svg")
 
-TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".jsonld", ".cff"}
+TEXT_SUFFIXES = {".md", ".txt", ".xml", ".html", ".json", ".jsonld", ".cff"}
 SKIP_NAMES = {"index.html"}
 PAGES_SITEMAP_ENTRIES = (
     ("", "weekly", "0.9"),
     ("llms.txt", "weekly", "0.9"),
     ("llms-index.json", "weekly", "0.9"),
+    ("readme-intelligence.json", "weekly", "0.85"),
     ("llms-full.txt", "weekly", "0.85"),
     ("llms-ctx-full.txt", "weekly", "0.85"),
     ("FAQ.md", "monthly", "0.85"),
@@ -91,7 +92,7 @@ def rewrite_relative_public_paths(text: str, path: Path) -> str:
     text = re.sub(r"\((public/)", "(", text)
     text = re.sub(r'href="(public/)', 'href="', text)
     text = re.sub(
-        r"(?<![/\w])public/([a-zA-Z0-9_.-]+\.(?:md|txt|cff|jsonld))",
+        r"(?<![/\w])public/([a-zA-Z0-9_.-]+\.(?:md|txt|cff|json|jsonld))",
         r"\1",
         text,
     )

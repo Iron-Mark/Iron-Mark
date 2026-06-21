@@ -233,6 +233,7 @@ def main() -> None:
   <link rel="author" href="{pages_href('humans.txt')}"/>
 {identity_links}
   <link rel="alternate" type="application/json" href="{pages_href('llms-index.json')}"/>
+  <link rel="alternate" type="application/json" href="{pages_href('readme-intelligence.json')}"/>
   <link rel="alternate" type="text/plain" href="{pages_href('llms.txt')}"/>
   <link rel="alternate" type="text/plain" href="{pages_href('llms-full.txt')}"/>
   <link rel="alternate" type="text/plain" href="{pages_href('llms-ctx-full.txt')}"/>
@@ -313,6 +314,7 @@ def main() -> None:
     <h2 id="start-here">Start Here</h2>
     <ul>
       <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, SEO, AEO, and GEO index</li>
+      <li><a href="readme-intelligence.json">readme-intelligence.json</a> - generated recruiter-fit README ranking and score explanations</li>
       <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> - expanded agent context</li>
       <li><a href="FAQ.md">FAQ.md</a> - visible question and answer corpus</li>
       <li><a href="RECRUITER.md">RECRUITER.md</a> - recruiter brief</li>

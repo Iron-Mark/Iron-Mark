@@ -158,12 +158,14 @@ PUBLIC_FILES = (
     "CITATION.cff",
     "llms-full.txt",
     "llms-ctx-full.txt",
+    "readme-intelligence.json",
 )
 REQUIRED_FILES = (
     "index.html",
     "README.md",
     "llms.txt",
     "llms-index.json",
+    "readme-intelligence.json",
     "llms-full.txt",
     "llms-ctx-full.txt",
     "FAQ.md",
@@ -2256,6 +2258,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         "llmsTxt": f"{PAGES_BASE}/llms.txt",
         "llmsFullTxt": f"{PAGES_BASE}/llms-full.txt",
         "llmsIndexJson": f"{PAGES_BASE}/llms-index.json",
+        "readmeIntelligenceJson": f"{PAGES_BASE}/readme-intelligence.json",
         "llmsCtxFullTxt": f"{PAGES_BASE}/llms-ctx-full.txt",
         "faqMd": f"{PAGES_BASE}/FAQ.md",
         "recruiterMd": f"{PAGES_BASE}/RECRUITER.md",
@@ -2278,6 +2281,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages llms-index.json machineReadable.pages.{key} must be {expected}")
     required_alternate_head_links = (
         ("application/json", expected_pages["llmsIndexJson"]),
+        ("application/json", expected_pages["readmeIntelligenceJson"]),
         ("text/plain", expected_pages["llmsTxt"]),
         ("text/plain", expected_pages["llmsFullTxt"]),
         ("text/plain", expected_pages["llmsCtxFullTxt"]),

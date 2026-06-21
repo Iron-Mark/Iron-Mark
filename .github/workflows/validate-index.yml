@@ -20,11 +20,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate schema graphs and check drift
+      - name: Regenerate README intelligence and check drift
         run: |
-          python3 src/scripts/generate_schema.py
-          git diff --exit-code public/schema/person.jsonld public/schema/faq.jsonld || (
-            echo "::error::Schema JSON-LD is out of date - run src/scripts/generate_schema.py"
+          python3 src/scripts/generate_readme_intelligence.py
+          git diff --exit-code README.md public/readme-intelligence.json || (
+            echo "::error::README intelligence is out of date - run src/scripts/generate_readme_intelligence.py"
             exit 1
           )
 
@@ -33,6 +33,14 @@ jobs:
           python3 src/scripts/generate_llms_ctx.py
           git diff --exit-code public/llms-ctx-full.txt || (
             echo "::error::public/llms-ctx-full.txt is out of date - run src/scripts/generate_llms_ctx.py"
+            exit 1
+          )
+
+      - name: Regenerate schema graphs and check drift
+        run: |
+          python3 src/scripts/generate_schema.py
+          git diff --exit-code public/schema/person.jsonld public/schema/faq.jsonld || (
+            echo "::error::Schema JSON-LD is out of date - run src/scripts/generate_schema.py"
             exit 1
           )
 
@@ -72,6 +80,7 @@ jobs:
       - name: Validate JSON
         run: |
           python3 -m json.tool llms-index.json > /dev/null
+          python3 -m json.tool public/readme-intelligence.json > /dev/null
           python3 -m json.tool public/schema/llms-index.schema.json > /dev/null
           python3 -m json.tool public/schema/person.jsonld > /dev/null
           python3 -m json.tool public/schema/faq.jsonld > /dev/null

@@ -1,0 +1,775 @@
+{
+  "version": "1.0.0",
+  "generatedBy": "src/scripts/generate_readme_intelligence.py",
+  "generatedFrom": "llms-index.json",
+  "updated": "2026-06-21",
+  "objective": "recruiter-fit profile README intelligence",
+  "claimPolicy": "Scores are deterministic hints generated only from public profile data and proof links; they are not external rankings.",
+  "weights": {
+    "proof": 35,
+    "impact": 25,
+    "roleMatch": 30,
+    "coverage": 10
+  },
+  "topProjects": [
+    {
+      "name": "Stellaroid Earn",
+      "slug": "stellaroid-earn",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/stellaroid-earn",
+      "focus": "Web3 credential proof on Stellar testnet",
+      "score": 53,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 23,
+        "roleMatch": 8,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 3,
+        "Mobile and Web3 Builder": 8
+      },
+      "domains": [
+        "Web3"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/stellaroid-earn"
+        },
+        {
+          "label": "live",
+          "url": "https://stellaroid.tech"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; impact: Stellar bootcamp Top 5 of 105 teams (score 75.00); coverage: Web3; role terms: credential, stellar, web3",
+      "sourcePosition": 2
+    },
+    {
+      "name": "BaybayInscribe",
+      "slug": "baybayinscribe",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/baybayinscribe",
+      "focus": "Baybayin ML and cultural education UX",
+      "score": 50,
+      "scoreBreakdown": {
+        "proof": 17,
+        "impact": 23,
+        "roleMatch": 6,
+        "coverage": 4
+      },
+      "bestRole": "Product Design Engineer",
+      "roleScores": {
+        "Product Design Engineer": 6,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 4,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI",
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/baybayinscribe"
+        },
+        {
+          "label": "model",
+          "url": "https://huggingface.co/gilas/baybayinscribe"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, model proof; impact: InfotechOlympics 2024 Android App Development winner; coverage: AI, Product; role terms: education, ml, ux",
+      "sourcePosition": 9
+    },
+    {
+      "name": "ResQLink",
+      "slug": "resqlink",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/resqlink",
+      "focus": "Offline-first emergency response platform",
+      "score": 48,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 23,
+        "roleMatch": 3,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 3,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/resqlink"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/UMakLumen/ResQLinkWeb"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, repo proof; impact: UMak InfotechOlympics 2025 Android App Development Productivity Champion; coverage: Product; role terms: platform",
+      "sourcePosition": 3
+    },
+    {
+      "name": "LexInSight",
+      "slug": "lexinsights",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "focus": "AI legal compliance chat",
+      "score": 40,
+      "scoreBreakdown": {
+        "proof": 28,
+        "impact": 0,
+        "roleMatch": 10,
+        "coverage": 2
+      },
+      "bestRole": "AI Workflow Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 10,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/lexinsights"
+        },
+        {
+          "label": "live",
+          "url": "https://lexinsights.vercel.app"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/Iron-Mark/Hackathon-LexInsights"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof, repo proof; coverage: AI; role terms: ai, chat, legal",
+      "sourcePosition": 4
+    },
+    {
+      "name": "qwen-ui-lab",
+      "slug": "qwen-ui-lab",
+      "source": "hackathonLab",
+      "url": "https://www.marksiazon.dev/projects/qwen-ui-lab",
+      "focus": "Qwen3-VL React UI lab with Tailwind and Next.js",
+      "score": 38,
+      "scoreBreakdown": {
+        "proof": 28,
+        "impact": 0,
+        "roleMatch": 8,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 3,
+        "Full-Stack Developer": 8,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/qwen-ui-lab"
+        },
+        {
+          "label": "live",
+          "url": "https://qwen-ui-lab.vercel.app"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/Iron-Mark/qwen-ui-lab"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof, repo proof; coverage: Product; role terms: next, react, ui",
+      "sourcePosition": 10
+    }
+  ],
+  "rankedProjects": [
+    {
+      "name": "Stellaroid Earn",
+      "slug": "stellaroid-earn",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/stellaroid-earn",
+      "focus": "Web3 credential proof on Stellar testnet",
+      "score": 53,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 23,
+        "roleMatch": 8,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 3,
+        "Mobile and Web3 Builder": 8
+      },
+      "domains": [
+        "Web3"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/stellaroid-earn"
+        },
+        {
+          "label": "live",
+          "url": "https://stellaroid.tech"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; impact: Stellar bootcamp Top 5 of 105 teams (score 75.00); coverage: Web3; role terms: credential, stellar, web3",
+      "sourcePosition": 2
+    },
+    {
+      "name": "BaybayInscribe",
+      "slug": "baybayinscribe",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/baybayinscribe",
+      "focus": "Baybayin ML and cultural education UX",
+      "score": 50,
+      "scoreBreakdown": {
+        "proof": 17,
+        "impact": 23,
+        "roleMatch": 6,
+        "coverage": 4
+      },
+      "bestRole": "Product Design Engineer",
+      "roleScores": {
+        "Product Design Engineer": 6,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 4,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI",
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/baybayinscribe"
+        },
+        {
+          "label": "model",
+          "url": "https://huggingface.co/gilas/baybayinscribe"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, model proof; impact: InfotechOlympics 2024 Android App Development winner; coverage: AI, Product; role terms: education, ml, ux",
+      "sourcePosition": 9
+    },
+    {
+      "name": "ResQLink",
+      "slug": "resqlink",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/resqlink",
+      "focus": "Offline-first emergency response platform",
+      "score": 48,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 23,
+        "roleMatch": 3,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 3,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/resqlink"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/UMakLumen/ResQLinkWeb"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, repo proof; impact: UMak InfotechOlympics 2025 Android App Development Productivity Champion; coverage: Product; role terms: platform",
+      "sourcePosition": 3
+    },
+    {
+      "name": "LexInSight",
+      "slug": "lexinsights",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "focus": "AI legal compliance chat",
+      "score": 40,
+      "scoreBreakdown": {
+        "proof": 28,
+        "impact": 0,
+        "roleMatch": 10,
+        "coverage": 2
+      },
+      "bestRole": "AI Workflow Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 10,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/lexinsights"
+        },
+        {
+          "label": "live",
+          "url": "https://lexinsights.vercel.app"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/Iron-Mark/Hackathon-LexInsights"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof, repo proof; coverage: AI; role terms: ai, chat, legal",
+      "sourcePosition": 4
+    },
+    {
+      "name": "qwen-ui-lab",
+      "slug": "qwen-ui-lab",
+      "source": "hackathonLab",
+      "url": "https://www.marksiazon.dev/projects/qwen-ui-lab",
+      "focus": "Qwen3-VL React UI lab with Tailwind and Next.js",
+      "score": 38,
+      "scoreBreakdown": {
+        "proof": 28,
+        "impact": 0,
+        "roleMatch": 8,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 3,
+        "Full-Stack Developer": 8,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "Product"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/qwen-ui-lab"
+        },
+        {
+          "label": "live",
+          "url": "https://qwen-ui-lab.vercel.app"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/Iron-Mark/qwen-ui-lab"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof, repo proof; coverage: Product; role terms: next, react, ui",
+      "sourcePosition": 10
+    },
+    {
+      "name": "HireProof",
+      "slug": "hireproof",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/hireproof",
+      "focus": "AI trust and safety for job seekers",
+      "score": 33,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 11,
+        "coverage": 2
+      },
+      "bestRole": "AI Workflow Builder",
+      "roleScores": {
+        "Product Design Engineer": 4,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 11,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/hireproof"
+        },
+        {
+          "label": "live",
+          "url": "https://hireproof.tech/portfolio"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; coverage: AI; role terms: ai, safety, trust",
+      "sourcePosition": 1
+    },
+    {
+      "name": "Kudlit",
+      "slug": "kudlit",
+      "source": "hackathonLab",
+      "url": "https://www.marksiazon.dev/projects/kudlit",
+      "focus": "Flutter Baybayin learning app for Android release",
+      "score": 30,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 8,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 8
+      },
+      "domains": [
+        "Mobile"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/kudlit"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/ACSADians/kudlit-app"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, repo proof; coverage: Mobile; role terms: android, flutter",
+      "sourcePosition": 12
+    },
+    {
+      "name": "PalengkePay",
+      "slug": "palengkepay",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/palengkepay",
+      "focus": "Stellar fintech PWA for wet markets",
+      "score": 29,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 7,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 3,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 7
+      },
+      "domains": [
+        "Web3"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/palengkepay"
+        },
+        {
+          "label": "live",
+          "url": "https://palengke-pay.vercel.app"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; coverage: Web3; role terms: fintech, pwa, stellar",
+      "sourcePosition": 7
+    },
+    {
+      "name": "GawainYah",
+      "slug": "gawainyah",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/gawainyah",
+      "focus": "MiniPay AI utility with payment guardrails",
+      "score": 29,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 5,
+        "coverage": 4
+      },
+      "bestRole": "AI Workflow Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 5,
+        "Mobile and Web3 Builder": 3
+      },
+      "domains": [
+        "AI",
+        "Web3"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/gawainyah"
+        },
+        {
+          "label": "live",
+          "url": "https://gawainyah-minipay.vercel.app"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; coverage: AI, Web3; role terms: ai, minipay",
+      "sourcePosition": 8
+    },
+    {
+      "name": "Pulse",
+      "slug": "pulse",
+      "source": "hackathonLab",
+      "url": "https://www.marksiazon.dev/projects/pulse",
+      "focus": "Wear OS GPS and heart-rate telemetry companion",
+      "score": 29,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 7,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 7
+      },
+      "domains": [
+        "Mobile"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/pulse"
+        },
+        {
+          "label": "live",
+          "url": "https://pacebeats.vercel.app"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; coverage: Mobile; role terms: gps, wear",
+      "sourcePosition": 13
+    },
+    {
+      "name": "Good To Live",
+      "slug": "good-to-live",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/good-to-live",
+      "focus": "Client podcast web launch and SEO",
+      "score": 27,
+      "scoreBreakdown": {
+        "proof": 20,
+        "impact": 0,
+        "roleMatch": 5,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 4,
+        "Full-Stack Developer": 5,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "Client Web"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/good-to-live"
+        },
+        {
+          "label": "live",
+          "url": "https://www.goodtolivepodcast.com"
+        }
+      ],
+      "explanation": "proof: caseStudy proof, live proof; coverage: Client Web; role terms: client, seo, web",
+      "sourcePosition": 5
+    },
+    {
+      "name": "Smart Profile",
+      "slug": "smart-profile",
+      "source": "hackathonLab",
+      "url": "https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/",
+      "focus": "AI credentials SaaS prototype with Supabase",
+      "score": 24,
+      "scoreBreakdown": {
+        "proof": 16,
+        "impact": 0,
+        "roleMatch": 6,
+        "coverage": 2
+      },
+      "bestRole": "Full-Stack Developer",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 6,
+        "AI Workflow Builder": 5,
+        "Mobile and Web3 Builder": 0
+      },
+      "domains": [
+        "AI"
+      ],
+      "evidence": [
+        {
+          "label": "demo",
+          "url": "https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/"
+        },
+        {
+          "label": "repo",
+          "url": "https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System"
+        }
+      ],
+      "explanation": "proof: demo proof, repo proof; coverage: AI; role terms: ai, saas, supabase",
+      "sourcePosition": 11
+    },
+    {
+      "name": "FlowFit",
+      "slug": "flowfit",
+      "source": "featuredProjects",
+      "url": "https://www.marksiazon.dev/projects/flowfit",
+      "focus": "Wear OS health and sensor companion",
+      "score": 18,
+      "scoreBreakdown": {
+        "proof": 12,
+        "impact": 0,
+        "roleMatch": 4,
+        "coverage": 2
+      },
+      "bestRole": "Mobile and Web3 Builder",
+      "roleScores": {
+        "Product Design Engineer": 0,
+        "Full-Stack Developer": 0,
+        "AI Workflow Builder": 0,
+        "Mobile and Web3 Builder": 4
+      },
+      "domains": [
+        "Mobile"
+      ],
+      "evidence": [
+        {
+          "label": "case study",
+          "url": "https://www.marksiazon.dev/projects/flowfit"
+        }
+      ],
+      "explanation": "proof: caseStudy proof; coverage: Mobile; role terms: wear",
+      "sourcePosition": 6
+    }
+  ],
+  "roleSignals": [
+    {
+      "role": "AI Workflow Builder",
+      "score": 26,
+      "topProjects": [
+        {
+          "name": "HireProof",
+          "url": "https://www.marksiazon.dev/projects/hireproof",
+          "score": 11
+        },
+        {
+          "name": "LexInSight",
+          "url": "https://www.marksiazon.dev/projects/lexinsights",
+          "score": 10
+        },
+        {
+          "name": "GawainYah",
+          "url": "https://www.marksiazon.dev/projects/gawainyah",
+          "score": 5
+        }
+      ],
+      "explanation": "Ranked from public project focus terms and proof links for ai workflow builder fit."
+    },
+    {
+      "role": "Mobile and Web3 Builder",
+      "score": 23,
+      "topProjects": [
+        {
+          "name": "Stellaroid Earn",
+          "url": "https://www.marksiazon.dev/projects/stellaroid-earn",
+          "score": 8
+        },
+        {
+          "name": "Kudlit",
+          "url": "https://www.marksiazon.dev/projects/kudlit",
+          "score": 8
+        },
+        {
+          "name": "PalengkePay",
+          "url": "https://www.marksiazon.dev/projects/palengkepay",
+          "score": 7
+        }
+      ],
+      "explanation": "Ranked from public project focus terms and proof links for mobile and web3 builder fit."
+    },
+    {
+      "role": "Full-Stack Developer",
+      "score": 19,
+      "topProjects": [
+        {
+          "name": "qwen-ui-lab",
+          "url": "https://www.marksiazon.dev/projects/qwen-ui-lab",
+          "score": 8
+        },
+        {
+          "name": "Smart Profile",
+          "url": "https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/",
+          "score": 6
+        },
+        {
+          "name": "Good To Live",
+          "url": "https://www.marksiazon.dev/projects/good-to-live",
+          "score": 5
+        }
+      ],
+      "explanation": "Ranked from public project focus terms and proof links for full-stack developer fit."
+    },
+    {
+      "role": "Product Design Engineer",
+      "score": 14,
+      "topProjects": [
+        {
+          "name": "BaybayInscribe",
+          "url": "https://www.marksiazon.dev/projects/baybayinscribe",
+          "score": 6
+        },
+        {
+          "name": "HireProof",
+          "url": "https://www.marksiazon.dev/projects/hireproof",
+          "score": 4
+        },
+        {
+          "name": "Good To Live",
+          "url": "https://www.marksiazon.dev/projects/good-to-live",
+          "score": 4
+        }
+      ],
+      "explanation": "Ranked from public project focus terms and proof links for product design engineer fit."
+    }
+  ],
+  "machineReadable": {
+    "pages": "https://iron-mark.github.io/Iron-Mark/readme-intelligence.json",
+    "source": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/readme-intelligence.json"
+  }
+}

@@ -29,8 +29,9 @@ jobs:
 
       - name: Generate derived files
         run: |
-          python3 src/scripts/generate_schema.py
+          python3 src/scripts/generate_readme_intelligence.py
           python3 src/scripts/generate_llms_ctx.py
+          python3 src/scripts/generate_schema.py
           python3 src/scripts/build_pages_index.py
           python3 src/scripts/generate_sitemap.py
           python3 src/scripts/generate_portfolio_sync.py
@@ -44,7 +45,7 @@ jobs:
           for f in llms.txt llms-index.json humans.txt robots.txt sitemap.xml; do
             cp "$f" "docs/$f"
           done
-          for f in README.md FAQ.md RECRUITER.md PROOF.md PROFILE.md STACK.md HOW-TO-CITE.md LICENSE.md CITATION.cff llms-full.txt llms-ctx-full.txt; do
+          for f in README.md FAQ.md RECRUITER.md PROOF.md PROFILE.md STACK.md HOW-TO-CITE.md LICENSE.md CITATION.cff llms-full.txt llms-ctx-full.txt readme-intelligence.json; do
             cp "public/$f" "docs/$f"
           done
           rm -rf docs/assets
