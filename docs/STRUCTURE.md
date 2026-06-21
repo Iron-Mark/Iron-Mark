@@ -55,7 +55,7 @@ The GitHub Pages mirror deploys a production allowlist: root crawler files, sele
 
 ## Branch surface policy
 
-`main` is the production-facing profile branch. Its README should link only to portfolio routes and supported public/search assets:
+`main` is the production-facing profile branch. Treat it as protected: changes should merge through a pull request after validation passes, not by direct development commits. Its README should link only to portfolio routes and supported public/search assets:
 
 - Portfolio routes: `marksiazon.dev`, projects, recruiter, proof, achievements, contact.
 - Public crawler assets: `llms-index.json`, `llms.txt`, `public/FAQ.md`, `public/PROOF.md`, `public/STACK.md`, and `public/schema/*.jsonld`.
@@ -63,4 +63,4 @@ The GitHub Pages mirror deploys a production allowlist: root crawler files, sele
 
 Keep development-only material out of the README on `main`: `.github/`, `docs/internal/`, `src/`, setup checklists, branch maintenance notes, and optional local agent/server docs. `src/scripts/validate_index.py` enforces this on `main` and on pull requests targeting `main`.
 
-`dev` can carry extra experiments, notes, or tooling. Keep it aligned with `main` through `llms-index.json` as the source of truth, the generated schema/context/Page files, and the validation workflow. Deploy/date/stat workflows remain `main` only.
+`dev` is the staging branch for normal work. Create feature branches from `dev` when useful, merge them back to `dev`, then open `dev` -> `main` for production release. Keep it aligned with `main` through `llms-index.json` as the source of truth, the generated schema/context/Page files, and the validation workflow. Deploy/date/stat workflows remain `main` only.
