@@ -9,7 +9,7 @@ Internal checklist for refreshing production branch settings, Pages, stats, and 
 - [x] **GitHub Pages:** Settings -> Pages -> Source **GitHub Actions**
 - [x] **Run workflow:** Deploy GitHub Pages mirror
 - [x] **Verify Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt returns content
-- [ ] **Run workflow:** Update GitHub Stats (workflow now stages generated widgets on `dev`; merge to `main` by PR)
+- [x] **Run workflow:** Update GitHub Stats (workflow now stages generated widgets on `dev`; merge to `main` by PR)
 - [x] **Portfolio mirror:** paste [`src/portfolio-sync/marksiazon-dev-llms-snippet.md`](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into marksiazon.dev `llms.txt` (includes Person/FAQ JSON-LD links)
 - [x] **Verify portfolio mirror:** `python3 src/scripts/check_portfolio_mirror.py`
 
