@@ -4,6 +4,8 @@ Internal checklist for refreshing production branch settings, Pages, stats, and 
 
 ## Required live maintenance
 
+- [ ] **Branch workflow:** develop on `dev`; merge `dev` -> `main` through a PR after validation
+- [ ] **Branch protection:** `main` requires PR + `validate` status check; force pushes/deletion disabled
 - [ ] **GitHub Pages:** Settings -> Pages -> Source **GitHub Actions**
 - [ ] **Run workflow:** Deploy GitHub Pages mirror
 - [ ] **Verify Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt returns content
