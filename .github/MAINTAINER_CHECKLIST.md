@@ -4,14 +4,14 @@ Internal checklist for refreshing production branch settings, Pages, stats, and 
 
 ## Required live maintenance
 
-- [ ] **Branch workflow:** develop on `dev`; merge `dev` -> `main` through a PR after validation
-- [ ] **Branch protection:** `main` requires PR + `validate` status check; force pushes/deletion disabled
-- [ ] **GitHub Pages:** Settings -> Pages -> Source **GitHub Actions**
-- [ ] **Run workflow:** Deploy GitHub Pages mirror
-- [ ] **Verify Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt returns content
-- [ ] **Run workflow:** Update GitHub Stats
-- [ ] **Portfolio mirror:** paste [`src/portfolio-sync/marksiazon-dev-llms-snippet.md`](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into marksiazon.dev `llms.txt` (includes Person/FAQ JSON-LD links)
-- [ ] **Verify portfolio mirror:** `python3 src/scripts/check_portfolio_mirror.py`
+- [x] **Branch workflow:** develop on `dev`; merge `dev` -> `main` through a PR after validation
+- [x] **Branch protection:** `main` requires PR + `validate` status check; force pushes/deletion disabled
+- [x] **GitHub Pages:** Settings -> Pages -> Source **GitHub Actions**
+- [x] **Run workflow:** Deploy GitHub Pages mirror
+- [x] **Verify Pages mirror:** https://iron-mark.github.io/Iron-Mark/llms.txt returns content
+- [ ] **Run workflow:** Update GitHub Stats (workflow now stages generated widgets on `dev`; merge to `main` by PR)
+- [x] **Portfolio mirror:** paste [`src/portfolio-sync/marksiazon-dev-llms-snippet.md`](../src/portfolio-sync/marksiazon-dev-llms-snippet.md) into marksiazon.dev `llms.txt` (includes Person/FAQ JSON-LD links)
+- [x] **Verify portfolio mirror:** `python3 src/scripts/check_portfolio_mirror.py`
 
 ## Optional polish
 
@@ -33,7 +33,7 @@ Internal checklist for refreshing production branch settings, Pages, stats, and 
 | MCP e2e | MCP or index changes |
 | Bump index dates | Index file changes on `main` |
 | Link QA | Monthly (1st, 08:00 UTC) |
-| Update GitHub Stats | Daily 06:00 UTC |
+| Update GitHub Stats | Daily 06:00 UTC to `dev`; release through PR |
 | Deploy Pages | Push to `main` |
 
 ## Quick verify commands

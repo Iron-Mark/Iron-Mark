@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: dev
 
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2
@@ -47,11 +49,11 @@ jobs:
           curl -sL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB" \
             -o assets/github/streak.svg
 
-      - name: Commit updated widgets
+      - name: Commit updated widgets to dev
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg
           git diff --staged --quiet && echo "No changes" && exit 0
           git commit -m "Update GitHub profile stats cards"
-          git push
+          git push origin HEAD:dev
