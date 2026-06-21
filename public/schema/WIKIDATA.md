@@ -14,7 +14,7 @@ The API returned an empty `search` array. Creating the item still requires a log
 
 1. Search https://www.wikidata.org/w/index.php?search=Mark+Siazon.
 2. Confirm there is no duplicate for the product designer / full-stack developer behind `Iron-Mark` and `marksiazon.dev`.
-3. Use proof URLs from [PROOF.md](../PROOF.md), [ENTITY.md](ENTITY.md), and [llms-index.json](../../llms-index.json).
+3. Use proof URLs from [PROOF.md](../PROOF.md), [ENTITY.md](ENTITY.md), and [llms-index.json](../llms-index.json).
 
 ## Labels
 
