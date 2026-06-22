@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Mark Siazon @Iron-Mark, Rank: B+</title>
-        <desc id="descId">Total Stars Earned: 30, Total Commits  : 1781, Total PRs: 113</desc>
+        <desc id="descId">Total Stars Earned: 37, Total Commits  : 1805, Total PRs: 121</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 108.4800585113123;
+        stroke-dashoffset: 100.04859740444533;
       }
     }
   
@@ -151,7 +151,7 @@
         x="174.01"
         y="12.5"
         data-testid="stars"
-      >30</text>
+      >37</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -181,7 +181,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >113</text>
+      >121</text>
     </g>
   </g>
     </svg>
