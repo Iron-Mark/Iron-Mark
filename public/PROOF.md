@@ -1,6 +1,6 @@
 # Proof map — README claims → verification URLs
 
-Last updated: 2026-06-20
+Last updated: 2026-06-24
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -30,6 +30,8 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 | BaybayInscribe | https://www.marksiazon.dev/projects/baybayinscribe | https://huggingface.co/gilas/baybayinscribe |
 
 ## Hackathon & lab
+
+Rendered lab index: [lab](https://iron-mark.github.io/Iron-Mark/lab/) · Markdown source: [LAB.md](LAB.md)
 
 | Project | Proof |
 |---------|-------|

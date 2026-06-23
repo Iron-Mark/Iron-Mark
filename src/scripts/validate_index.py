@@ -1155,6 +1155,7 @@ def check_seo_geo_consistency(data: dict[str, Any]) -> None:
         "public/llms-ctx-full.txt",
         "public/readme-intelligence.json",
         "public/FAQ.md",
+        "public/LAB.md",
         "public/schema/person.jsonld",
         "public/schema/faq.jsonld",
     }
@@ -1308,6 +1309,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         if selector.startswith("#") and f'id="{selector[1:]}"' not in html:
             errors.append(f"docs/index.html missing speakable selector target: {selector}")
     required_alternates = {
+        f'type="application/rss+xml" href="{data.get("machineReadable", {}).get("portfolio", {}).get("rss", "")}"',
+        f'type="application/feed+json" href="{data.get("machineReadable", {}).get("portfolio", {}).get("jsonFeed", "")}"',
         f'type="application/json" href="{PAGES}/llms-index.json"',
         f'type="text/plain" href="{PAGES}/llms.txt"',
         f'type="text/plain" href="{PAGES}/llms-full.txt"',
@@ -1315,6 +1318,8 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
         f'type="text/markdown" href="{PAGES}/FAQ.md"',
         f'type="text/markdown" href="{PAGES}/RECRUITER.md"',
         f'type="text/markdown" href="{PAGES}/PROOF.md"',
+        f'type="text/markdown" href="{PAGES}/LAB.md"',
+        f'type="text/html" href="{PAGES}/lab/"',
         f'type="text/markdown" href="{PAGES}/STACK.md"',
         f'type="text/markdown" href="{PAGES}/PROFILE.md"',
         f'type="text/markdown" href="{PAGES}/README.md"',
@@ -1329,6 +1334,12 @@ def check_pages_index_visible_content(data: dict[str, Any]) -> None:
     for alternate in required_alternates:
         if alternate not in html:
             errors.append(f"docs/index.html missing alternate link: {alternate}")
+    for feed_url in (
+        data.get("machineReadable", {}).get("portfolio", {}).get("rss", ""),
+        data.get("machineReadable", {}).get("portfolio", {}).get("jsonFeed", ""),
+    ):
+        if feed_url and f'href="{feed_url}"' not in html:
+            errors.append(f"docs/index.html missing visible or head feed link: {feed_url}")
     required_resource_links = {
         f'<link rel="license" href="{PAGES}/LICENSE.md"/>',
         f'<link rel="sitemap" type="application/xml" href="{PAGES}/sitemap.xml"/>',
@@ -3517,6 +3528,8 @@ def check_crawl_files(data: dict[str, Any]) -> None:
         f"{PAGES}/FAQ.md",
         f"{PAGES}/RECRUITER.md",
         f"{PAGES}/PROOF.md",
+        f"{PAGES}/lab/",
+        f"{PAGES}/LAB.md",
         f"{PAGES}/STACK.md",
         f"{PAGES}/PROFILE.md",
         f"{PAGES}/README.md",

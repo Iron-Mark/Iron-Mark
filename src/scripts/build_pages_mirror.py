@@ -31,6 +31,8 @@ PAGES_SITEMAP_ENTRIES = (
     ("FAQ.md", "monthly", "0.85"),
     ("RECRUITER.md", "monthly", "0.85"),
     ("PROOF.md", "monthly", "0.85"),
+    ("lab/", "monthly", "0.85"),
+    ("LAB.md", "monthly", "0.8"),
     ("STACK.md", "monthly", "0.8"),
     ("PROFILE.md", "monthly", "0.75"),
     ("README.md", "monthly", "0.75"),

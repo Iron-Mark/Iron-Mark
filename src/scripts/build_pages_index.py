@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build docs/index.html for the GitHub Pages machine-readable mirror."""
+"""Build GitHub Pages HTML files for the machine-readable mirror."""
 
 from __future__ import annotations
 
@@ -19,6 +19,7 @@ DOCS = ROOT / "docs"
 SCHEMA_PERSON = ROOT / "public" / "schema" / "person.jsonld"
 SCHEMA_FAQ = ROOT / "public" / "schema" / "faq.jsonld"
 INDEX = ROOT / "llms-index.json"
+LAB_MD = ROOT / "public" / "LAB.md"
 
 PAGES_URL = "https://iron-mark.github.io/Iron-Mark/"
 PAGES_BASE = PAGES_URL.rstrip("/")
@@ -44,6 +45,18 @@ def linked(url: str, label: str) -> str:
 
 def pages_href(path: str) -> str:
     return f"{PAGES_BASE}/{path.lstrip('/')}"
+
+
+def linkify_plain_text(value: str) -> str:
+    escaped = escape(value)
+    return re.sub(
+        r"https://[^\s<]+",
+        lambda match: (
+            f'<a href="{match.group(0)}" rel="noopener noreferrer">'
+            f"{match.group(0)}</a>"
+        ),
+        escaped,
+    )
 
 
 def slugify(value: str) -> str:
@@ -121,6 +134,134 @@ def render_citation_links(urls: list[str]) -> str:
     return "\n".join(items)
 
 
+def render_simple_markdown(markdown: str) -> str:
+    parts: list[str] = []
+    in_list = False
+    for raw_line in markdown.splitlines():
+        line = raw_line.rstrip()
+        if not line.strip():
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            continue
+        if re.fullmatch(r"-{3,}", line.strip()):
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            parts.append("<hr/>")
+            continue
+        heading = re.match(r"^(#{1,3})\s+(.+)$", line)
+        if heading:
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            level = len(heading.group(1))
+            parts.append(f"<h{level}>{linkify_plain_text(heading.group(2))}</h{level}>")
+            continue
+        bullet = re.match(r"^-\s+(.+)$", line)
+        if bullet:
+            if not in_list:
+                parts.append("<ul>")
+                in_list = True
+            parts.append(f"<li>{linkify_plain_text(bullet.group(1))}</li>")
+            continue
+        if in_list:
+            parts.append("</ul>")
+            in_list = False
+        parts.append(f"<p>{linkify_plain_text(line)}</p>")
+    if in_list:
+        parts.append("</ul>")
+    return "\n".join(parts)
+
+
+def build_lab_page() -> None:
+    data = json.loads(INDEX.read_text(encoding="utf-8"))
+    portfolio_feeds = data.get("machineReadable", {}).get("portfolio", {})
+    rss_feed = portfolio_feeds.get("rss", f"{PORTFOLIO_URL}/feed.xml")
+    json_feed = portfolio_feeds.get("jsonFeed", f"{PORTFOLIO_URL}/feed.json")
+    markdown = LAB_MD.read_text(encoding="utf-8")
+    body = render_simple_markdown(markdown)
+    title_match = re.search(r"^#\s+(.+)$", markdown, flags=re.MULTILINE)
+    title = title_match.group(1) if title_match else "Mark Siazon - Hackathon & Lab Projects"
+    html = f"""<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+  <meta name="description" content="Rendered lab index for Mark Siazon hackathon projects across AI UI experiments, SaaS credentials, Baybayin learning, and Wear OS telemetry."/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="{escape(title)}"/>
+  <meta property="og:description" content="Hackathon and lab project index for Mark Siazon, a Philippines-based product designer and full-stack developer."/>
+  <meta property="og:url" content="{pages_href('lab/')}"/>
+  <title>{escape(title)}</title>
+  <link rel="canonical" href="{pages_href('lab/')}"/>
+  <link rel="alternate" type="application/rss+xml" href="{escape(rss_feed, quote=True)}"/>
+  <link rel="alternate" type="application/feed+json" href="{escape(json_feed, quote=True)}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('LAB.md')}"/>
+  <link rel="author" href="{PORTFOLIO_URL}"/>
+  <style>
+    :root {{
+      color-scheme: light dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f8fb;
+      color: #172033;
+    }}
+    body {{ margin: 0; }}
+    main {{ max-width: 920px; margin: 0 auto; padding: 42px 22px 70px; }}
+    article {{
+      background: #fff;
+      border: 1px solid #d8dee8;
+      border-radius: 10px;
+      padding: 34px 38px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }}
+    .eyebrow {{
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 0.83rem;
+      color: #475569;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 999px;
+      padding: 5px 10px;
+    }}
+    h1 {{ font-size: clamp(2rem, 5vw, 2.7rem); line-height: 1.08; margin: 0 0 10px; color: #0f172a; }}
+    h2 {{ font-size: 1.45rem; margin: 32px 0 8px; color: #111827; }}
+    p {{ line-height: 1.65; margin: 10px 0; color: #334155; }}
+    ul {{ margin: 10px 0 0; padding-left: 1.25rem; }}
+    li {{ margin: 7px 0; line-height: 1.55; color: #334155; }}
+    a {{ color: #2563eb; text-decoration: none; overflow-wrap: anywhere; }}
+    a:hover {{ text-decoration: underline; }}
+    hr {{ border: 0; border-top: 1px solid #e2e8f0; margin: 26px 0; }}
+    @media (prefers-color-scheme: dark) {{
+      :root {{ background: #0b1020; color: #e5e7eb; }}
+      article {{ background: #111827; border-color: #273449; box-shadow: none; }}
+      h1, h2 {{ color: #f8fafc; }}
+      p, li {{ color: #d1d5db; }}
+      hr {{ border-color: #334155; }}
+      .eyebrow {{ color: #c7d2fe; background: #1e1b4b; border-color: #3730a3; }}
+      a {{ color: #93c5fd; }}
+    }}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Rendered Pages view · source: <a href="{pages_href('LAB.md')}" rel="noopener noreferrer">LAB.md</a></div>
+    <article>
+{body}
+    </article>
+  </main>
+</body>
+</html>
+"""
+    DOCS.mkdir(parents=True, exist_ok=True)
+    lab_dir = DOCS / "lab"
+    lab_dir.mkdir(parents=True, exist_ok=True)
+    (lab_dir / "index.html").write_text(html, encoding="utf-8")
+    print("Wrote docs/lab/index.html")
+
+
 def render_identity_links(urls: list[str]) -> str:
     links: list[str] = []
     for url in urls:
@@ -186,6 +327,9 @@ def main() -> None:
     area_served = csv(availability.get("areaServed", []))
     primary_keywords = csv(seo.get("primaryKeywords", []))
     geo_targets = csv(seo.get("geoTargets", []))
+    portfolio_feeds = data.get("machineReadable", {}).get("portfolio", {})
+    rss_feed = portfolio_feeds.get("rss", f"{PORTFOLIO_URL}/feed.xml")
+    json_feed = portfolio_feeds.get("jsonFeed", f"{PORTFOLIO_URL}/feed.json")
     projects = render_projects(data.get("featuredProjects", []))
     answers = render_answers(aeo.get("answerSnippets", []))
     triples = render_triples(data.get("triples", []))
@@ -232,6 +376,8 @@ def main() -> None:
   <link rel="alternate" hreflang="x-default" href="{PAGES_URL}"/>
   <link rel="author" href="{pages_href('humans.txt')}"/>
 {identity_links}
+  <link rel="alternate" type="application/rss+xml" href="{escape(rss_feed, quote=True)}"/>
+  <link rel="alternate" type="application/feed+json" href="{escape(json_feed, quote=True)}"/>
   <link rel="alternate" type="application/json" href="{pages_href('llms-index.json')}"/>
   <link rel="alternate" type="application/json" href="{pages_href('readme-intelligence.json')}"/>
   <link rel="alternate" type="text/plain" href="{pages_href('llms.txt')}"/>
@@ -240,6 +386,8 @@ def main() -> None:
   <link rel="alternate" type="text/markdown" href="{pages_href('FAQ.md')}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('RECRUITER.md')}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('PROOF.md')}"/>
+  <link rel="alternate" type="text/markdown" href="{pages_href('LAB.md')}"/>
+  <link rel="alternate" type="text/html" href="{pages_href('lab/')}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('STACK.md')}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('PROFILE.md')}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('README.md')}"/>
@@ -319,6 +467,10 @@ def main() -> None:
       <li><a href="FAQ.md">FAQ.md</a> - visible question and answer corpus</li>
       <li><a href="RECRUITER.md">RECRUITER.md</a> - recruiter brief</li>
       <li><a href="PROOF.md">PROOF.md</a> - claim verification map</li>
+      <li><a href="LAB.md">LAB.md</a> - hackathon and lab project index</li>
+      <li><a href="lab/">lab</a> - rendered hackathon and lab project page</li>
+      <li><a href="{escape(rss_feed, quote=True)}">Portfolio RSS</a> - canonical portfolio updates feed</li>
+      <li><a href="{escape(json_feed, quote=True)}">Portfolio JSON Feed</a> - canonical machine-readable updates feed</li>
       <li><a href="llms.txt">llms.txt</a> - LLM manifest</li>
       <li><a href="schema/llms-index.schema.json">schema/llms-index.schema.json</a> - JSON Schema contract for llms-index.json</li>
       <li><a href="schema/person.jsonld">schema/person.jsonld</a> - Person, profile, project, and content graph</li>
@@ -337,6 +489,7 @@ def main() -> None:
     DOCS.mkdir(parents=True, exist_ok=True)
     (DOCS / "index.html").write_text(html, encoding="utf-8")
     print("Wrote docs/index.html")
+    build_lab_page()
 
 
 if __name__ == "__main__":
