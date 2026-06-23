@@ -151,6 +151,7 @@ PUBLIC_FILES = (
     "FAQ.md",
     "RECRUITER.md",
     "PROOF.md",
+    "LAB.md",
     "PROFILE.md",
     "STACK.md",
     "HOW-TO-CITE.md",
@@ -158,17 +159,21 @@ PUBLIC_FILES = (
     "CITATION.cff",
     "llms-full.txt",
     "llms-ctx-full.txt",
+    "readme-intelligence.json",
 )
 REQUIRED_FILES = (
     "index.html",
     "README.md",
     "llms.txt",
     "llms-index.json",
+    "readme-intelligence.json",
     "llms-full.txt",
     "llms-ctx-full.txt",
     "FAQ.md",
     "RECRUITER.md",
     "PROOF.md",
+    "lab/index.html",
+    "LAB.md",
     "STACK.md",
     "HOW-TO-CITE.md",
     "schema/llms-index.schema.json",
@@ -2249,6 +2254,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     machine_readable = index_data.get("machineReadable", {})
     repo = machine_readable.get("repo", {})
     pages = machine_readable.get("pages", {})
+    portfolio = machine_readable.get("portfolio", {})
     if not str(repo.get("llmsIndexJson", "")).startswith("https://github.com/Iron-Mark/Iron-Mark/blob/main/"):
         issues.append("Pages llms-index.json must preserve machineReadable.repo source URLs")
     expected_pages = {
@@ -2256,6 +2262,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         "llmsTxt": f"{PAGES_BASE}/llms.txt",
         "llmsFullTxt": f"{PAGES_BASE}/llms-full.txt",
         "llmsIndexJson": f"{PAGES_BASE}/llms-index.json",
+        "readmeIntelligenceJson": f"{PAGES_BASE}/readme-intelligence.json",
         "llmsCtxFullTxt": f"{PAGES_BASE}/llms-ctx-full.txt",
         "faqMd": f"{PAGES_BASE}/FAQ.md",
         "recruiterMd": f"{PAGES_BASE}/RECRUITER.md",
@@ -2277,13 +2284,18 @@ def validate_artifact(artifact: Path) -> list[str]:
         if pages.get(key) != expected:
             issues.append(f"Pages llms-index.json machineReadable.pages.{key} must be {expected}")
     required_alternate_head_links = (
+        ("application/rss+xml", portfolio.get("rss", "")),
+        ("application/feed+json", portfolio.get("jsonFeed", "")),
         ("application/json", expected_pages["llmsIndexJson"]),
+        ("application/json", expected_pages["readmeIntelligenceJson"]),
         ("text/plain", expected_pages["llmsTxt"]),
         ("text/plain", expected_pages["llmsFullTxt"]),
         ("text/plain", expected_pages["llmsCtxFullTxt"]),
         ("text/markdown", expected_pages["faqMd"]),
         ("text/markdown", expected_pages["recruiterMd"]),
         ("text/markdown", expected_pages["proofMd"]),
+        ("text/markdown", f"{PAGES_BASE}/LAB.md"),
+        ("text/html", f"{PAGES_BASE}/lab/"),
         ("text/markdown", expected_pages["stackMd"]),
         ("text/markdown", expected_pages["profileMd"]),
         ("text/markdown", expected_pages["readmeMd"]),
@@ -2308,6 +2320,13 @@ def validate_artifact(artifact: Path) -> list[str]:
     for tag in required_head_links:
         if tag not in index_text:
             issues.append(f"Pages index missing absolute head resource link: {tag}")
+    lab_text = (artifact / "lab" / "index.html").read_text(encoding="utf-8") if (artifact / "lab" / "index.html").exists() else ""
+    for tag in (
+        f'<link rel="alternate" type="application/rss+xml" href="{portfolio.get("rss", "")}"/>',
+        f'<link rel="alternate" type="application/feed+json" href="{portfolio.get("jsonFeed", "")}"/>',
+    ):
+        if tag not in lab_text:
+            issues.append(f"Pages lab page missing feed link: {tag}")
 
     robots_text = (artifact / "robots.txt").read_text(encoding="utf-8")
     if "Allow: /public/" in robots_text:
@@ -2371,6 +2390,8 @@ def validate_artifact(artifact: Path) -> list[str]:
         f"{PAGES_BASE}/FAQ.md",
         f"{PAGES_BASE}/RECRUITER.md",
         f"{PAGES_BASE}/PROOF.md",
+        f"{PAGES_BASE}/lab/",
+        f"{PAGES_BASE}/LAB.md",
         f"{PAGES_BASE}/STACK.md",
         f"{PAGES_BASE}/PROFILE.md",
         f"{PAGES_BASE}/README.md",

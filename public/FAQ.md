@@ -1,6 +1,6 @@
 # Mark Siazon — Frequently Asked Questions
 
-Last updated: 2026-06-21
+Last updated: 2026-06-24
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#person
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -43,7 +43,7 @@ Stellaroid Earn is a Web3 credential proof app on Stellar testnet with Soroban a
 
 ## What hackathon and lab projects does Mark maintain?
 
-qwen-ui-lab, Smart Profile, Kudlit, and Pulse are maintained as hackathon/lab work. Lab hub: https://www.marksiazon.dev/lab
+qwen-ui-lab, Smart Profile, Kudlit, and Pulse are maintained as hackathon/lab work. Rendered lab index: https://iron-mark.github.io/Iron-Mark/lab/. Markdown source: https://iron-mark.github.io/Iron-Mark/LAB.md. Portfolio lab hub: https://www.marksiazon.dev/lab
 
 ## Is Mark Siazon a designer or a developer?
 

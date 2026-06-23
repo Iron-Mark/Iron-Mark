@@ -312,6 +312,7 @@
             "llmsFullTxt",
             "llmsIndexJson",
             "llmsCtxFullTxt",
+            "readmeIntelligenceJson",
             "faqMd",
             "recruiterMd",
             "proofMd",
@@ -342,6 +343,10 @@
               "format": "uri"
             },
             "llmsCtxFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "readmeIntelligenceJson": {
               "type": "string",
               "format": "uri"
             },
@@ -416,6 +421,7 @@
             "llmsFullTxt",
             "llmsIndexJson",
             "llmsCtxFullTxt",
+            "readmeIntelligenceJson",
             "faqMd",
             "recruiterMd",
             "proofMd",
@@ -450,6 +456,10 @@
               "format": "uri"
             },
             "llmsCtxFullTxt": {
+              "type": "string",
+              "format": "uri"
+            },
+            "readmeIntelligenceJson": {
               "type": "string",
               "format": "uri"
             },
