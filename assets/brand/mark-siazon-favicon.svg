@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
-  <title>Mark Siazon favicon</title>
-  <rect width="96" height="96" rx="18" fill="#111827"/>
-  <path d="M18 18h60v8H18z" fill="#36bcf7"/>
-  <path d="M70 18h8v60h-8z" fill="#8b5cf6"/>
-  <path d="M22 72V24h10l16 22 16-22h10v48H62V44L48 63 34 44v28H22z" fill="#f8fafc"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img" viewBox="0 0 96 96"><title>Mark Siazon favicon</title><rect width="96" height="96" fill="#111827" rx="18"/><path fill="#36bcf7" d="M18 18h60v8H18z"/><path fill="#8b5cf6" d="M70 18h8v60h-8z"/><path fill="#f8fafc" d="M22 72V24h10l16 22 16-22h10v48H62V44L48 63 34 44v28H22z"/></svg>
