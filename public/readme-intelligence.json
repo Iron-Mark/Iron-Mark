@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "generatedBy": "src/scripts/generate_readme_intelligence.py",
   "generatedFrom": "llms-index.json",
-  "updated": "2026-06-24",
+  "updated": "2026-06-25",
   "objective": "recruiter-fit profile README intelligence",
   "claimPolicy": "Scores are deterministic hints generated only from public profile data and proof links; they are not external rankings.",
   "weights": {
