@@ -119,8 +119,8 @@ Generated from llms-index.json - updated 2026-06-24
 
 ### LexInSight
 - Focus: AI legal compliance chat
-- Case study: https://www.marksiazon.dev/projects/lexinsights
-- Live: https://lexinsights.vercel.app
+- Case study: https://www.marksiazon.dev/projects/lexinsight
+- Live: https://lexiph.vercel.app
 - Repo: https://github.com/Iron-Mark/Hackathon-LexInsights
 
 ### Good To Live

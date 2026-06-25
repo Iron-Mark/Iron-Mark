@@ -57,7 +57,7 @@ Full achievements index: https://www.marksiazon.dev/achievements
 HireProof (AI trust & safety): https://www.marksiazon.dev/projects/hireproof - Live: https://hireproof.tech/portfolio
 Stellaroid Earn (Web3 credentials): https://www.marksiazon.dev/projects/stellaroid-earn - Live: https://stellaroid.tech
 ResQLink (offline-first emergency): https://www.marksiazon.dev/projects/resqlink - Repo: https://github.com/UMakLumen/ResQLinkWeb
-LexInSight (AI legal chat): https://www.marksiazon.dev/projects/lexinsights - Live: https://lexinsights.vercel.app
+LexInSight (AI legal chat): https://www.marksiazon.dev/projects/lexinsight - Live: https://lexiph.vercel.app
 Good To Live (client web launch): https://www.marksiazon.dev/projects/good-to-live - Live: https://www.goodtolivepodcast.com
 FlowFit (Wear OS): https://www.marksiazon.dev/projects/flowfit
 PalengkePay (Stellar fintech PWA): https://www.marksiazon.dev/projects/palengkepay - Live: https://palengke-pay.vercel.app

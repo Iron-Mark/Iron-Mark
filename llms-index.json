@@ -160,9 +160,9 @@
     },
     {
       "name": "LexInSight",
-      "slug": "lexinsights",
-      "caseStudy": "https://www.marksiazon.dev/projects/lexinsights",
-      "live": "https://lexinsights.vercel.app",
+      "slug": "lexinsight",
+      "caseStudy": "https://www.marksiazon.dev/projects/lexinsight",
+      "live": "https://lexiph.vercel.app",
       "repo": "https://github.com/Iron-Mark/Hackathon-LexInsights",
       "focus": "AI legal compliance chat"
     },

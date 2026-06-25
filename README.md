@@ -107,9 +107,9 @@
   </tr>
   <tr>
     <td align="center" width="33%">
-      <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer" aria-label="LexInSight case study">
-        <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInSight"/>
-      </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://lexinsights.vercel.app" rel="noopener noreferrer" aria-label="LexInSight live app">Live ↗</a> · <a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
+      <a href="https://www.marksiazon.dev/projects/lexinsight" rel="noopener noreferrer" aria-label="LexInSight case study">
+        <img src="assets/projects/lexinsight/cover.svg" width="100%" height="140" alt="LexInSight"/>
+      </a><br><img src="assets/projects/lexinsight/icon.png" alt="LexInSight icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/lexinsight" rel="noopener noreferrer">LexInSight</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://lexiph.vercel.app" rel="noopener noreferrer" aria-label="LexInSight live app">Live ↗</a> · <a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInSight repository">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer" aria-label="Good To Live case study">

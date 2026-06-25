@@ -458,7 +458,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -594,7 +594,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -740,7 +740,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -962,7 +962,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1167,7 +1167,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1686,7 +1686,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1906,7 +1906,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -2393,9 +2393,9 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.marksiazon.dev/projects/lexinsights",
+          "url": "https://www.marksiazon.dev/projects/lexinsight",
           "item": {
-            "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+            "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
           }
         },
         {
@@ -2691,7 +2691,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -3021,7 +3021,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -4129,8 +4129,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "25585 bytes",
-      "sha256": "d381b9741df994a6f87c82e57c9365b3e1df676e7c8c015144e59d58ffd2c874",
+      "contentSize": "25578 bytes",
+      "sha256": "555f22ea1a8b1110c5adbf0348e887a1247d57281d140cc806415332f199c64c",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4180,8 +4180,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "7994 bytes",
-      "sha256": "10d6d5f714b786e3d3074b290182a53945a0cf7618742ebca88741caa191f39f",
+      "contentSize": "7988 bytes",
+      "sha256": "cc26074af7042c74456f494e2bc19a1bab84d3b3cb60fb458c5715dc03b735d3",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4231,8 +4231,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "12480 bytes",
-      "sha256": "6862e5b27d4a913d673eda2a7f3e8200fc10412b4c4d9922497535a0a9fa6781",
+      "contentSize": "12474 bytes",
+      "sha256": "a4f74d2033e3cc1cc4d6299dd8f862795a5d804f72b3a0334107c77e1acf5c93",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4282,8 +4282,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Expanded generated agent context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded generated agent context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "17108 bytes",
-      "sha256": "700d55c7214864787ea4dfaee0de7cab75dfb2116642ac003a208d88b5391a03",
+      "contentSize": "17102 bytes",
+      "sha256": "6f04eef30df9d3b19de9f9d728ff8c826a9edb53c3b3079bafb07be72e581879",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4333,8 +4333,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable README intelligence ranking file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable README intelligence ranking file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "22434 bytes",
-      "sha256": "2b85d9595ad24b760a84e83a8e4131749ebbbed262aa02563451d3ea3f3cdba9",
+      "contentSize": "22417 bytes",
+      "sha256": "6664d9d2af517071d0af14f7c5f0dbf822fe1b010340f8d337aa43ee074a4974",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4486,8 +4486,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "3291 bytes",
-      "sha256": "a76e0f0a156defc37d12b27498088f38e3f3d3a85f7adf29cd54c81834a4f3c1",
+      "contentSize": "3285 bytes",
+      "sha256": "773d78a614679b98a25f04b1242b2b3c5dfaa819f697495246679c67462438c6",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4588,8 +4588,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "2200 bytes",
-      "sha256": "11ee7d9b25d1a9cdff21b2a04df88e70a5078c03a4447b92e8f14ed558180cc0",
+      "contentSize": "2199 bytes",
+      "sha256": "27b7e4b4303f3469dee1ebb5d96d34203360efab7cf1b43f26e7b779bad20ae8",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4994,8 +4994,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "6469 bytes",
-      "sha256": "b6815b8cd5b3055d37f2ba0c8e043608c59710b7098365250629e60027379511",
+      "contentSize": "6463 bytes",
+      "sha256": "62d1650fd876a9a3ec1fbd6d7729898c709dafcc696e77b6fd8a4c4264d031d5",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -5045,8 +5045,8 @@
       "encodingFormat": "application/xml",
       "description": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
       "abstract": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
-      "contentSize": "5657 bytes",
-      "sha256": "e52cc792a03d6ce9c2b83e238ce3c56ab8e3d0484401e9168f1b4a6749ef6cdc",
+      "contentSize": "5656 bytes",
+      "sha256": "1b8bdfba512c66254851a5157f9012a1f17712c0256e8ac74c5482fef7723ffd",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -5485,10 +5485,10 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://www.marksiazon.dev/projects/lexinsights#project",
+      "@id": "https://www.marksiazon.dev/projects/lexinsight#project",
       "name": "LexInSight",
-      "url": "https://www.marksiazon.dev/projects/lexinsights",
-      "mainEntityOfPage": "https://www.marksiazon.dev/projects/lexinsights",
+      "url": "https://www.marksiazon.dev/projects/lexinsight",
+      "mainEntityOfPage": "https://www.marksiazon.dev/projects/lexinsight",
       "description": "AI legal compliance chat",
       "abstract": "AI legal compliance chat",
       "creator": {
@@ -5510,11 +5510,11 @@
       "dateModified": "2026-06-24",
       "isAccessibleForFree": true,
       "sameAs": [
-        "https://lexinsights.vercel.app",
+        "https://lexiph.vercel.app",
         "https://github.com/Iron-Mark/Hackathon-LexInsights"
       ],
       "keywords": [
-        "lexinsights",
+        "lexinsight",
         "AI legal compliance chat"
       ],
       "citation": [
@@ -5543,22 +5543,22 @@
       "sdDatePublished": "2026-06-24",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg#image",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg#image",
       "name": "LexInSight project cover image",
       "caption": "LexInSight project cover image",
       "description": "LexInSight project cover image for AI legal compliance chat.",
       "abstract": "LexInSight project cover image for AI legal compliance chat.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg",
       "encodingFormat": "image/svg+xml",
-      "contentSize": "654 bytes",
-      "sha256": "097d862bdab6f86a84a2903654f18f2450af2c94154e42251410e2e8d7021022",
+      "contentSize": "650 bytes",
+      "sha256": "0c2b71e579f2591c3611dcb12ca148482bff26487f5e2d52dbb19af25538ef7f",
       "inLanguage": "en",
       "dateModified": "2026-06-24",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -5591,10 +5591,10 @@
       "sdDatePublished": "2026-06-24",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
-        "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+        "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
       },
       "isPartOf": {
-        "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
+        "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
       }
     },
     {
