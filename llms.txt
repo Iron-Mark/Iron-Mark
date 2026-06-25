@@ -44,7 +44,7 @@ Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/N
 - HireProof - AI trust & safety for job seekers: https://www.marksiazon.dev/projects/hireproof
 - Stellaroid Earn - Web3 credential proof on Stellar: https://www.marksiazon.dev/projects/stellaroid-earn
 - ResQLink - Offline-first emergency response platform: https://www.marksiazon.dev/projects/resqlink
-- LexInSight - AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsights - Live: https://lexinsights.vercel.app
+- LexInSight - AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsight - Live: https://lexiph.vercel.app
 - Good To Live - Client podcast web launch & SEO: https://www.marksiazon.dev/projects/good-to-live
 - FlowFit - Wear OS health & sensor companion: https://www.marksiazon.dev/projects/flowfit
 - PalengkePay - Stellar fintech PWA for wet markets: https://www.marksiazon.dev/projects/palengkepay

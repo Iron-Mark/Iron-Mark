@@ -112,8 +112,8 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Recognition: UMak InfotechOlympics Android Champion 2025 (Team Lumen)
 
 ### LexInSight
-- Case study: https://www.marksiazon.dev/projects/lexinsights
-- Live: https://lexinsights.vercel.app
+- Case study: https://www.marksiazon.dev/projects/lexinsight
+- Live: https://lexiph.vercel.app
 - Repo: https://github.com/Iron-Mark/Hackathon-LexInsights
 - Focus: AI legal compliance chat
 

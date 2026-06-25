@@ -123,9 +123,9 @@
     },
     {
       "name": "LexInSight",
-      "slug": "lexinsights",
+      "slug": "lexinsight",
       "source": "featuredProjects",
-      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "url": "https://www.marksiazon.dev/projects/lexinsight",
       "focus": "AI legal compliance chat",
       "score": 40,
       "scoreBreakdown": {
@@ -147,11 +147,11 @@
       "evidence": [
         {
           "label": "case study",
-          "url": "https://www.marksiazon.dev/projects/lexinsights"
+          "url": "https://www.marksiazon.dev/projects/lexinsight"
         },
         {
           "label": "live",
-          "url": "https://lexinsights.vercel.app"
+          "url": "https://lexiph.vercel.app"
         },
         {
           "label": "repo",
@@ -314,9 +314,9 @@
     },
     {
       "name": "LexInSight",
-      "slug": "lexinsights",
+      "slug": "lexinsight",
       "source": "featuredProjects",
-      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "url": "https://www.marksiazon.dev/projects/lexinsight",
       "focus": "AI legal compliance chat",
       "score": 40,
       "scoreBreakdown": {
@@ -338,11 +338,11 @@
       "evidence": [
         {
           "label": "case study",
-          "url": "https://www.marksiazon.dev/projects/lexinsights"
+          "url": "https://www.marksiazon.dev/projects/lexinsight"
         },
         {
           "label": "live",
-          "url": "https://lexinsights.vercel.app"
+          "url": "https://lexiph.vercel.app"
         },
         {
           "label": "repo",
@@ -690,7 +690,7 @@
         },
         {
           "name": "LexInSight",
-          "url": "https://www.marksiazon.dev/projects/lexinsights",
+          "url": "https://www.marksiazon.dev/projects/lexinsight",
           "score": 10
         },
         {

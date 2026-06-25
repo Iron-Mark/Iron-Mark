@@ -22,7 +22,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 | HireProof | https://www.marksiazon.dev/projects/hireproof | https://hireproof.tech/portfolio |
 | Stellaroid Earn | https://www.marksiazon.dev/projects/stellaroid-earn | https://stellaroid.tech |
 | ResQLink | https://www.marksiazon.dev/projects/resqlink | https://github.com/UMakLumen/ResQLinkWeb |
-| LexInSight | https://www.marksiazon.dev/projects/lexinsights | https://lexinsights.vercel.app · https://github.com/Iron-Mark/Hackathon-LexInsights |
+| LexInSight | https://www.marksiazon.dev/projects/lexinsight | https://lexiph.vercel.app · https://github.com/Iron-Mark/Hackathon-LexInsights |
 | Good To Live | https://www.marksiazon.dev/projects/good-to-live | https://www.goodtolivepodcast.com |
 | FlowFit | https://www.marksiazon.dev/projects/flowfit | Case study + team repo on portfolio |
 | PalengkePay | https://www.marksiazon.dev/projects/palengkepay | https://palengke-pay.vercel.app |
