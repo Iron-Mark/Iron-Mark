@@ -25,9 +25,4 @@ jobs:
             exit 1
           fi
 
-          if [ "$BASE_REF" = "dev" ] && [ "$HEAD_REF" = "main" ]; then
-            echo "::error::Pull requests into dev must come from feature branches, not main."
-            exit 1
-          fi
-
           echo "Branch flow accepted: $HEAD_REF -> $BASE_REF"
