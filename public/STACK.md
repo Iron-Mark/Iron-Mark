@@ -2,11 +2,11 @@
 
 <p align="center"><strong>Mark Siazon (@Iron-Mark)</strong> — full technology reference for the <a href="../README.md">GitHub profile README</a>.</p>
 
-<p align="center"><sub>Core stack (16 tools, domain-grouped) on <a href="../README.md#tech-stack">README</a> · Proof-backed projects at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
+<p align="center"><sub>Core stack (16 tools, domain-grouped) on <a href="../README.md#tech-stack">README</a> · Case studies at <a href="https://www.marksiazon.dev/projects">marksiazon.dev/projects</a> · <a href="https://www.marksiazon.dev/recruiter">Recruiter brief</a></sub></p>
 
 <p align="center"><sub>(Things I know and Like to learn)</sub></p>
 
-<p align="center"><em>Jack of all trades. Curiosity is one of my hobbies.</em></p>
+<p align="center"><em>Curious across product design, engineering, and creative tooling.</em></p>
 
 <p align="center"><sub><strong>Jump to:</strong> <a href="#web-development">Web</a> · <a href="#mobile-development">Mobile</a> · <a href="#backend-development">Backend</a> · <a href="#web3">Web3</a> · <a href="#deploy-infrastructure">Deploy</a> · <a href="#game-dev">Game Dev</a> · <a href="#ui-ux">UI/UX</a> · <a href="#creative">Creative</a> · <a href="#ai">AI</a> · <a href="#ai-workflow">AI workflow</a></sub></p>
 
@@ -85,7 +85,7 @@
     <col width="11%"/>
   </colgroup>
   <tr align="center" id="backend-development"><td colspan="9"><sub><b>🔧 BACKEND DEVELOPMENT</b></sub></td></tr>
-  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for proof-backed products</sub></td></tr>
+  <tr align="center"><td colspan="9"><sub><b>Backend &amp; APIs</b> · runtimes → data layers → BaaS I wire up for shipped products</sub></td></tr>
   <tr align="center">
     <td width="11%"><img src="../assets/stack/nodejs.svg" alt="Node.js" width="40" height="40"/><br><sub>Node.js</sub></td>
     <td width="11%"><img src="../assets/stack/express.svg" alt="Express" width="40" height="40"/><br><sub>Express</sub></td>

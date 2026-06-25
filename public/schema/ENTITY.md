@@ -8,8 +8,8 @@ Use these URIs consistently across Schema.org JSON-LD, `llms-index.json`, portfo
 | **Portfolio website** | `https://www.marksiazon.dev/#website` | Canonical portfolio site |
 | **GitHub profile README** | `https://github.com/Iron-Mark/Iron-Mark#profilepage` | ProfilePage for GitHub index repo |
 | **GitHub profile index site** | `https://github.com/Iron-Mark/Iron-Mark#website` | WebSite entity for the README repo |
-| **GitHub Pages mirror** | `https://iron-mark.github.io/Iron-Mark/#website` | Static mirror of machine-readable files |
-| **FAQ document** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq` | AEO Q&A corpus |
+| **GitHub Pages mirror** | `https://iron-mark.github.io/Iron-Mark/#website` | Static mirror of public source files |
+| **FAQ document** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq` | Q&A corpus |
 | **Structured index** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json` | JSON entity + answer snippets |
 | **Structured index schema** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json` | JSON Schema contract for `llms-index.json` |
 | **Person schema graph** | `https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld` | Schema.org Person, profile, projects, and content graph |

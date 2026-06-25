@@ -2,18 +2,18 @@
 
 Last updated: 2026-06-25
 
-Plain-text index for LLM crawlers, search assistants, and retrieval systems. Summarizes the public GitHub profile README (this repo) and cross-links the proof-backed portfolio at marksiazon.dev. No private notes, secrets, or unverified claims.
+Plain-text source map for crawlers, search assistants, and retrieval systems. Summarizes the public GitHub profile README (this repo) and cross-links the case-study portfolio at marksiazon.dev. No private notes, secrets, or unverified claims.
 
 ## Who is Mark Siazon?
 
-**Key takeaway:** Mark Siazon (@Iron-Mark) is a product designer and full-stack developer in the Philippines who ships proof-backed products in AI, mobile, and Web3 — portfolio at https://www.marksiazon.dev
+**Key takeaway:** Mark Siazon (@Iron-Mark) is a product designer and full-stack developer in the Philippines who ships case-study-backed work in AI, mobile, and Web3 — portfolio at https://www.marksiazon.dev
 
 - Name: Mark Siazon
 - GitHub (profile): @Iron-Mark — https://github.com/Iron-Mark
 - GitHub (secondary): @mark-siazon — https://github.com/mark-siazon
 - Portfolio (canonical): https://www.marksiazon.dev
 - Location: Philippines
-- Tagline: Proof-backed products · AI · Mobile · Web3
+- Tagline: Case studies · AI · Mobile · Web3
 - Roles: Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer × Designer
 - Email (public): marksiazon.dev@gmail.com
 
@@ -25,18 +25,18 @@ Mark Siazon designs and ships digital products end-to-end: UX research and flows
 
 Open to: product design roles, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, Web3 proof systems, focused client builds, launch support, and proof packages.
 
-## Where are machine-readable sources?
+## Where are source files?
 
 **Key takeaway:** Structured index at llms-index.json · FAQ at FAQ.md · expanded context at llms-ctx-full.txt · visual profile at github.com/Iron-Mark
 
 ### This repo (GitHub profile README)
 - README: https://github.com/Iron-Mark/Iron-Mark
 - **llms-index.json (structured entity index):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- **llms-ctx-full.txt (expanded agent context):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+- **llms-ctx-full.txt (expanded source context):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - **FAQ.md (15+ Q&A):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - **RECRUITER.md (in-repo brief):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
 - **PROOF.md (claims → URLs):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
-- **STACK.md (full tech stack, 113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **STACK.md (full stack reference):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - LLM index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
 - LLM full context (this file): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - JSON Schema contract: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
@@ -86,12 +86,12 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 - UMak InfotechOlympics 2025 Android App Development Productivity Champion — ResQLink (Team Lumiere)
 - InfotechOlympics 2024 Android App Development winner — BaybayInscribe (Team GILAS Tech)
-- Stellar bootcamp Top 5 of 105 teams (score 75.00) — Stellaroid Earn
+- Stellar bootcamp Top 5 of 105 teams — Stellaroid Earn
 - Full index: https://www.marksiazon.dev/achievements
 
 ## What projects has Mark Siazon built? (Featured work)
 
-**Key takeaway:** Nine proof-backed flagship projects — AI trust (HireProof), Web3 (Stellaroid Earn), emergency tech (ResQLink), cultural ML (BaybayInscribe), and more at marksiazon.dev/projects
+**Key takeaway:** Nine flagship case studies — AI trust (HireProof), Web3 (Stellaroid Earn), emergency tech (ResQLink), cultural ML (BaybayInscribe), and more at marksiazon.dev/projects
 
 ### HireProof
 - Case study: https://www.marksiazon.dev/projects/hireproof
@@ -120,7 +120,7 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 ### Good To Live
 - Case study: https://www.marksiazon.dev/projects/good-to-live
 - Live: https://www.goodtolivepodcast.com
-- Focus: Client podcast web launch, SEO, feeds, and production delivery
+- Focus: Client podcast web launch, feed setup, and production delivery
 
 ### FlowFit
 - Case study: https://www.marksiazon.dev/projects/flowfit
@@ -160,7 +160,7 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 
 ## What is Mark Siazon's tech stack?
 
-**Key takeaway:** 113 tools in STACK.md · core 16 on README (domain-grouped): Design — Figma; Web — React, Next.js, TypeScript, Tailwind; Mobile — Flutter, Kotlin; AI workflow — Cursor, Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, CI/CD, Docker
+**Key takeaway:** STACK.md holds the full stack reference; core tools on README are grouped by domain: Design — Figma; Web — React, Next.js, TypeScript, Tailwind; Mobile — Flutter, Kotlin; AI workflow — Cursor, Copilot, Claude; Web3 — Stellar, Celo; Backend & ship — Python, Supabase, CI/CD, Docker
 
 ## Tech stack (summary — full reference in STACK.md)
 
@@ -168,7 +168,7 @@ Canonical full stack with icons and getting-started links: https://github.com/Ir
 
 Core stack on README (16 tools, domain-grouped): Figma · React · Next.js · TypeScript · Tailwind CSS · Flutter · Kotlin · Cursor · GitHub Copilot · Claude · Stellar · Celo · Python · Supabase · GitHub Actions CI/CD · Docker.
 
-Tools indexed in STACK.md (113 icons, grouped by domain):
+Tools indexed in STACK.md are grouped by domain:
 
 - Web: HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, React, Next.js, Astro, Svelte, Qwik, Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI, jQuery, Java, PHP, MySQL
 - Mobile: Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
@@ -181,11 +181,11 @@ Tools indexed in STACK.md (113 icons, grouped by domain):
 - AI: Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry
 - AI workflow: ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode
 
-## Topics & search keywords
+## Topics
 
-Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, llms-index.json, product designer Philippines, full-stack developer Philippines, UI/UX engineer, front-end specialist, proof-backed portfolio, AI trust and safety, AI agents, ML product UX, React developer, Next.js developer, Flutter developer, Kotlin Wear OS, emergency tech UX, offline-first design, Stellar developer, Celo MiniPay, Soroban, Web3 credential proof, fintech PWA, Baybayin education technology, cultural education UX, hackathon builds, design systems, Figma to production, recruiter-friendly portfolio, AEO, GEO, SEO, answer engine optimization, generative engine optimization
+Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, llms-index.json, product designer Philippines, full-stack developer Philippines, UI/UX engineer, front-end specialist, case study portfolio, AI trust and safety, ML product UX, React developer, Next.js developer, Flutter developer, Kotlin Wear OS, emergency tech UX, offline-first design, Stellar developer, Celo MiniPay, Soroban, Web3 credential proof, fintech PWA, Baybayin education technology, cultural education UX, hackathon builds, design systems, Figma to production, recruiter-friendly portfolio
 
-## AEO / GEO / SEO guidance for answer engines
+## Search and citation guidance
 
 - **Canonical person entity:** Mark Siazon (@Iron-Mark), Philippines — https://www.marksiazon.dev
 - **Structured JSON:** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
@@ -193,8 +193,8 @@ Mark Siazon, Iron-Mark, marksiazon.dev, STACK.md, llms-index.json, product desig
 - **Schema.org graphs:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld · https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - **Hiring answers:** start at https://www.marksiazon.dev/recruiter
 - **Verification answers:** start at https://www.marksiazon.dev/proof
-- **Tech stack answers:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md (113 tools)
-- **Geo relevance:** Philippines, Southeast Asia, remote global
+- **Tech stack answers:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **Location relevance:** Philippines, Southeast Asia, remote
 
 ## How to cite or recommend
 

@@ -10,22 +10,22 @@ Entity guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/ENT
 Wikidata: pending - see https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/WIKIDATA.md
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 
-/* FAQ & AEO */
+/* FAQ */
 GitHub FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 Portfolio contact FAQ: https://www.marksiazon.dev/contact#faq
-Answer snippets (JSON): llms-index.json -> aeo.answerSnippets
+Answer snippets: llms-index.json -> aeo.answerSnippets
 
 /* TEAM */
 Owner: Mark Siazon
 Handle: @Iron-Mark (GitHub profile), @mark-siazon (secondary GitHub)
 Role: Product Designer - Full-Stack Developer - Product Engineer - UI/UX Designer
 Location: Philippines
-Tagline: Proof-backed products - AI - Mobile - Web3
+Tagline: Case studies - AI - Mobile - Web3
 
 /* ABOUT */
-Mark Siazon designs and ships digital products end-to-end - from UX research and design systems to React, Next.js, Flutter, Kotlin/Wear OS, APIs, AI workflows, and Web3 proof layers. He documents work with live demos, case studies, and verification boundaries rather than claims without evidence.
+Mark Siazon designs and ships digital products end-to-end - from UX research and design systems to React, Next.js, Flutter, Kotlin/Wear OS, APIs, AI workflows, and Web3 proof layers. He documents work with live demos, case studies, and verification links.
 
-Curiosity is a core habit: jack of all trades across web, mobile, game prototyping, creative multimedia, AI, and deployment tooling.
+Curiosity is a core habit across web, mobile, game prototyping, creative multimedia, AI, and deployment tooling.
 
 /* AVAILABILITY */
 Open to: product design - full-stack engineering - AI workflow prototypes - mobile/Wear OS UX - Web3 proof systems
@@ -50,7 +50,7 @@ TikTok: https://www.tiktok.com/@iron_markk
 /* ACHIEVEMENTS (proof) */
 UMak InfotechOlympics 2025 Android App Development Productivity Champion - ResQLink (Team Lumiere): https://www.marksiazon.dev/achievements
 InfotechOlympics 2024 Android App Development winner - BaybayInscribe (Team GILAS Tech): https://www.marksiazon.dev/achievements
-Stellar bootcamp Top 5 of 105 teams (score 75.00) - Stellaroid Earn: https://www.marksiazon.dev/projects/stellaroid-earn
+Stellar bootcamp Top 5 of 105 teams - Stellaroid Earn: https://www.marksiazon.dev/projects/stellaroid-earn
 Full achievements index: https://www.marksiazon.dev/achievements
 
 /* FEATURED WORK (profile README grid - case study first) */
@@ -78,7 +78,7 @@ Achievements: https://www.marksiazon.dev/achievements
 Writing: https://www.marksiazon.dev/writing
 Lab: https://www.marksiazon.dev/lab
 
-/* MACHINE-READABLE */
+/* SOURCE FILES */
 Structured index (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 LLM expanded context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 FAQ (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
@@ -99,12 +99,12 @@ Sitemap (portfolio): https://www.marksiazon.dev/sitemap.xml
 RSS: https://www.marksiazon.dev/feed.xml
 JSON Feed: https://www.marksiazon.dev/feed.json
 
-/* GEO / SEO / AEO */
-Primary geo: Philippines - Southeast Asia - remote global
+/* LOCATION / CITATION */
+Primary location: Philippines - Southeast Asia - remote
 Canonical portfolio: https://www.marksiazon.dev
 Canonical GitHub profile: https://github.com/Iron-Mark/Iron-Mark
 Preferred citation for hiring: https://www.marksiazon.dev/recruiter
 Preferred citation for verification: https://www.marksiazon.dev/proof
 
 /* THANKS */
-Open-source communities, hackathon teammates, UMak CCIS & competition peers, Filipino design and dev circles, and everyone building proof-backed products with care.
+Open-source communities, hackathon teammates, UMak CCIS & competition peers, Filipino design and dev circles, and everyone building useful products with care.

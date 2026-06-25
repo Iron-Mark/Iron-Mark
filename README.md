@@ -9,14 +9,14 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=3"/>
-    <img src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;Developer+x+Designer;Polymath+%2F+Jack+of+All+Trades&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=3" alt="Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, Developer x Designer, Polymath / Jack of All Trades" width="540"/>
+    <source media="(max-width: 540px)" srcset="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;React+%2B+Next.js;Flutter+%2B+Kotlin&font=Fira+Code&pause=1600&center=true&width=320&height=40&color=8B5CF6&random=true&size=18&v=4"/>
+    <img src="https://readme-typing-svg.demolab.com/?lines=Product+Designer;Full-Stack+Developer;Product+Engineer;UI%2FUX+Designer;Front-end+Specialist;React+%2B+Next.js;Flutter+%2B+Kotlin&font=Fira+Code&pause=1600&center=true&width=540&height=54&color=8B5CF6&random=true&size=23&v=4" alt="Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist, React + Next.js, Flutter + Kotlin" width="540"/>
   </picture>
 </p>
 
-<p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Frontend-Specialist | Tech Enthusiast |<br>Multi-Hackathon Champion | AI Products, Workflows &amp; Design Systems |</sub></p>
+<p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Flutter, Kotlin, Wear OS |<br>AI, mobile &amp; Web3 case studies</sub></p>
 
-<p align="center"><sub>Contract · full-time · Philippines &amp; remote · mobile &amp; Web3 · case studies &amp; live demos below</sub></p>
+<p align="center"><sub>Contract · full-time · Philippines &amp; remote teams · case studies &amp; live demos below</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
@@ -79,7 +79,7 @@
           <source type="image/webp" srcset="assets/projects/good-to-live/cover.webp"/>
           <img src="assets/projects/good-to-live/cover.png" width="100%" height="140" alt="Good To Live"/>
         </picture>
-      </a><br><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a></b><br><sub>Client web launch & SEO</sub><br><sub><a href="https://www.goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
+      </a><br><img src="assets/projects/good-to-live/icon.png" alt="Good To Live icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/good-to-live" rel="noopener noreferrer">Good To Live</a></b><br><sub>Client web launch</sub><br><sub><a href="https://www.goodtolivepodcast.com" rel="noopener noreferrer" aria-label="Good To Live live site">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer" aria-label="FlowFit case study">
@@ -156,7 +156,7 @@
 
 <h2 align="center">Tech Stack</h2>
 
-<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference (113 tools)</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
+<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
 
 <div align="center" style="overflow-x:auto;width:100%;max-width:100%">
 
@@ -250,4 +250,4 @@
   <a href="https://www.tiktok.com/@iron_markk" rel="noopener noreferrer" aria-label="Iron-Mark on TikTok"><img src="https://img.shields.io/badge/TikTok-000000?logo=tiktok&logoColor=white&style=for-the-badge" alt="TikTok profile"/></a>
 </p>
 
-<p align="center"><sub>Machine-readable profile mirror: <a href="https://iron-mark.github.io/Iron-Mark/" rel="noopener noreferrer">GitHub Pages index</a> · canonical portfolio: <a href="https://www.marksiazon.dev" rel="noopener noreferrer">marksiazon.dev</a></sub></p>
+<p align="center"><sub>Profile mirror: <a href="https://iron-mark.github.io/Iron-Mark/" rel="noopener noreferrer">GitHub Pages index</a> · canonical portfolio: <a href="https://www.marksiazon.dev" rel="noopener noreferrer">marksiazon.dev</a></sub></p>

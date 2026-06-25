@@ -5,7 +5,7 @@ Last updated: 2026-06-20
 
 ---
 
-Mark Siazon is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI trust and safety, mobile (Flutter, Kotlin, Wear OS), and Web3 (Stellar, Celo, Soroban, MiniPay).
+Mark Siazon is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI trust and safety, mobile (Flutter, Kotlin, Wear OS), and Web3 (Stellar, Celo, Soroban, MiniPay).
 
 **Open to:** product design · full-stack engineering · AI workflow roles · contract or full-time · Philippines & remote
 
@@ -38,8 +38,8 @@ Mark Siazon is a product designer and full-stack developer based in the Philippi
 ## Tech stack
 
 Core: React, Next.js, TypeScript, Figma, Flutter, Python, Stellar, Supabase, Tailwind, Cursor, GitHub Actions, Docker  
-Full (113 tools): [STACK.md](STACK.md)
+Full reference: [STACK.md](STACK.md)
 
-## Machine-readable
+## Source files
 
 - [llms-index.json](../llms-index.json) · [FAQ.md](FAQ.md) · [llms.txt](../llms.txt) · [llms-full.txt](llms-full.txt) · [person.jsonld](schema/person.jsonld) · [faq.jsonld](schema/faq.jsonld)

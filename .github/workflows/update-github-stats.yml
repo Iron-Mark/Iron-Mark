@@ -49,6 +49,9 @@ jobs:
           curl -sL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB" \
             -o assets/github/streak.svg
 
+      - name: Staticize generated SVG cards
+        run: python src/scripts/staticize_github_svgs.py
+
       - name: Commit updated widgets to dev
         run: |
           git config user.name "github-actions[bot]"

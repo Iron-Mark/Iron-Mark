@@ -1,8 +1,8 @@
 # Mark Siazon
 
-> Product designer, full-stack developer, product engineer, UI/UX designer, front-end specialist, developer x designer, and polymath / jack of all trades. Builds proof-backed digital products across AI, mobile, Web3, and client web - portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
+> Product designer, full-stack developer, product engineer, UI/UX designer, and front-end specialist. Builds case-study-backed work across AI, mobile, Web3, and client web - portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-> **Machines start here:** [llms-index.json](llms-index.json) (structured) - [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) - [FAQ.md](public/FAQ.md) (Q&A) - [llms-index.schema.json](public/schema/llms-index.schema.json) (contract) - [person.jsonld](public/schema/person.jsonld) / [faq.jsonld](public/schema/faq.jsonld) (Schema.org)
+> **Source map:** [llms-index.json](llms-index.json) (structured) - [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) - [FAQ.md](public/FAQ.md) (Q&A) - [llms-index.schema.json](public/schema/llms-index.schema.json) (contract) - [person.jsonld](public/schema/person.jsonld) / [faq.jsonld](public/schema/faq.jsonld) (Schema.org)
 
 Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/Next.js/Flutter/Kotlin -> APIs and Web3 proofs -> deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
@@ -45,7 +45,7 @@ Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/N
 - Stellaroid Earn - Web3 credential proof on Stellar: https://www.marksiazon.dev/projects/stellaroid-earn
 - ResQLink - Offline-first emergency response platform: https://www.marksiazon.dev/projects/resqlink
 - LexInSight - AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsight - Live: https://lexiph.vercel.app
-- Good To Live - Client podcast web launch & SEO: https://www.marksiazon.dev/projects/good-to-live
+- Good To Live - Client podcast web launch and feed setup: https://www.marksiazon.dev/projects/good-to-live
 - FlowFit - Wear OS health & sensor companion: https://www.marksiazon.dev/projects/flowfit
 - PalengkePay - Stellar fintech PWA for wet markets: https://www.marksiazon.dev/projects/palengkepay
 - GawainYah - MiniPay AI utility with payment guardrails: https://www.marksiazon.dev/projects/gawainyah
@@ -66,7 +66,7 @@ Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/N
 
 ## Tech stack
 
-- **Full reference (100+ tools, icons):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **Full stack reference:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - **Core stack on profile README (16 tools):** Figma - React, Next.js, TypeScript, Tailwind CSS - Flutter, Kotlin - Cursor, GitHub Copilot, Claude - Stellar, Celo - Python, Supabase, GitHub Actions CI/CD, Docker
 - **Domains in STACK.md:** Web - Mobile - Backend - Web3 - Deploy - Game Dev - UI/UX - Creative - AI - AI-assisted development workflow
 
@@ -86,19 +86,19 @@ Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/N
 - Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
 - TikTok: https://www.tiktok.com/@iron_markk
 
-## Topics & keywords
+## Topics
 
-product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, AI agents, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, proof-backed portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference, AEO, GEO, SEO, llms-index.json
+product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, case study portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference, llms-index.json
 
-## Answer-engine & geo hints (AEO / GEO)
+## Search and location hints
 
 - Who: Mark Siazon (@Iron-Mark) - product designer and full-stack developer, Philippines
 - Hire context: https://www.marksiazon.dev/recruiter
 - Verification boundaries: https://www.marksiazon.dev/proof
 - Structured JSON index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- Geo focus: Philippines, Southeast Asia, remote-friendly
+- Location focus: Philippines, Southeast Asia, remote-friendly
 
-## Machine-readable indexes
+## Source and index files
 
 ### Repo source files
 - **Structured entity index (JSON):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
@@ -111,7 +111,7 @@ product design, UI/UX, full-stack development, front-end engineering, React, Nex
 - **Full LLM context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - **Expanded context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - **FAQ.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
-- **STACK.md (113 tools):** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- **STACK.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - JSON Schema contract: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
 - Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 - Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld

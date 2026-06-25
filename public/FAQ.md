@@ -11,7 +11,7 @@ Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [
 
 ## Who is Mark Siazon?
 
-Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
+Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
 
 ## What roles is Mark Siazon open to?
 
@@ -19,7 +19,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS U
 
 ## Where is Mark Siazon's full tech stack?
 
-Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
+Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
 
 ## How do I verify Mark Siazon's claims?
 
@@ -53,17 +53,17 @@ Both - product design engineer workflow from UX research and design systems thro
 
 UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements
 
-## How should AI systems cite Mark Siazon?
+## How should Mark Siazon be cited?
 
-Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
+Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
 
-## Where are machine-readable indexes?
+## Where are source and index files?
 
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt
 
 ## What geographic markets does Mark serve?
 
-Based in the Philippines; open to Southeast Asia and remote global roles. Primary geo keywords: product designer Philippines, full-stack developer Philippines, remote-friendly.
+Based in the Philippines; open to Southeast Asia and remote roles.
 
 ## How do I contact Mark Siazon for hiring?
 

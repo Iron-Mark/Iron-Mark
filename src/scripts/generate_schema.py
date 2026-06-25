@@ -202,7 +202,7 @@ def offer_availability(data: dict[str, Any]) -> str:
 
 def featured_projects_list_description(data: dict[str, Any]) -> str:
     count = len(data.get("featuredProjects", []))
-    return f"Ordered list of {count} featured Mark Siazon project case studies for proof-backed product, AI, mobile, Web3, and client web work."
+    return f"Ordered list of {count} featured Mark Siazon project case studies across product, AI, mobile, Web3, and client web work."
 
 
 def lab_projects_list_description(data: dict[str, Any]) -> str:
@@ -284,7 +284,7 @@ def profile_disambiguating_description(data: dict[str, Any]) -> str:
     entity = data["entity"]
     return (
         f"{entity['name']} is the Philippines-based product designer and full-stack developer "
-        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and case-study-backed AI, "
         "mobile, Web3, and client web case studies."
     )
 
@@ -363,7 +363,7 @@ def dataset_variable_measurements(
         },
         {
             "@type": "PropertyValue",
-            "name": "Primary keyword count",
+            "name": "Topic count",
             "value": len(data.get("seo", {}).get("primaryKeywords", [])),
         },
         {
@@ -373,7 +373,7 @@ def dataset_variable_measurements(
         },
         {
             "@type": "PropertyValue",
-            "name": "Machine-readable download count",
+            "name": "Source download count",
             "value": len(downloads),
         },
     ]
@@ -386,7 +386,7 @@ def dataset_alternate_names(data: dict[str, Any]) -> list[str]:
             f"{entity['name']} structured profile dataset",
             "Iron-Mark profile index",
             "Iron-Mark llms-index.json",
-            "Mark Siazon machine-readable discovery dataset",
+            "Mark Siazon source discovery dataset",
         ]
     )
 
@@ -692,7 +692,7 @@ def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
             "fragment": "featured-work",
             "heading": "Featured Work",
             "name": "Mark Siazon featured work",
-            "description": "Visible featured project list for Mark Siazon proof-backed product, AI, mobile, Web3, and client web work.",
+            "description": "Visible featured project list for Mark Siazon product, AI, mobile, Web3, and client web work.",
             "text": project_text,
         },
         {
@@ -707,9 +707,9 @@ def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
         },
         {
             "fragment": "geo-topic-signals",
-            "heading": "Geo And Topic Signals",
-            "name": "Mark Siazon geo and topic signals",
-            "description": "Visible search topics and service regions for Mark Siazon AEO, SEO, and GEO discovery.",
+            "heading": "Location And Topics",
+            "name": "Mark Siazon location and topic signals",
+            "description": "Visible search topics and service regions for Mark Siazon discovery.",
             "text": topic_text,
         },
         {
@@ -722,7 +722,7 @@ def pages_section_specs(data: dict[str, Any]) -> list[dict[str, str]]:
         {
             "fragment": "start-here",
             "heading": "Start Here",
-            "name": "Mark Siazon machine-readable starting points",
+            "name": "Mark Siazon source starting points",
             "description": "Visible entry links to Mark Siazon structured profile, answer, proof, recruiter, LLM, and Schema.org files.",
             "text": "; ".join(start_files),
         },
@@ -891,7 +891,7 @@ def topic_term_description(data: dict[str, Any], value: str) -> str:
         return f"Geographic service target for the Mark Siazon profile index: {value}."
     if value in data.get("availability", {}).get("focus", []):
         return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
-    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+    return f"Primary search topic for the Mark Siazon profile index: {value}."
 
 
 def citation_targets(data: dict[str, Any]) -> list[str]:
@@ -1026,13 +1026,13 @@ def machine_downloads(pages: dict[str, str], repo: dict[str, str] | None = None)
         ("llms-index-json", "Structured entity index", "llmsIndexJson", "application/json"),
         ("llms-txt", "LLM manifest", "llmsTxt", "text/plain"),
         ("llms-full-txt", "Full LLM context", "llmsFullTxt", "text/plain"),
-        ("llms-ctx-full-txt", "Expanded generated agent context", "llmsCtxFullTxt", "text/plain"),
+        ("llms-ctx-full-txt", "Expanded source context", "llmsCtxFullTxt", "text/plain"),
         ("faq-md", "FAQ question and answer corpus", "faqMd", "text/markdown"),
         ("recruiter-md", "Recruiter brief", "recruiterMd", "text/markdown"),
         ("proof-md", "Claim verification map", "proofMd", "text/markdown"),
         ("stack-md", "Full stack reference", "stackMd", "text/markdown"),
         ("profile-md", "Structured profile summary", "profileMd", "text/markdown"),
-        ("readme-md", "Machine-readable mirror README", "readmeMd", "text/markdown"),
+        ("readme-md", "Profile mirror README", "readmeMd", "text/markdown"),
         ("how-to-cite-md", "Citation guide", "howToCiteMd", "text/markdown"),
         ("license-md", "Content license", "licenseMd", "text/markdown"),
         ("citation-cff", "Citation File Format metadata", "citationCff", "text/plain"),
@@ -1057,11 +1057,11 @@ def download_description(name: str, encoding: str) -> str:
 
 
 def data_catalog_name() -> str:
-    return "Mark Siazon machine-readable profile catalog"
+    return "Mark Siazon profile source catalog"
 
 
 def data_catalog_description() -> str:
-    return "Catalog of crawlable machine-readable profile, FAQ, proof, and schema files for Mark Siazon."
+    return "Catalog of crawlable profile, FAQ, proof, and schema source files for Mark Siazon."
 
 
 def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
@@ -1188,8 +1188,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "publisher": ref(person_id),
             "inLanguage": "en",
             "about": ref(person_id),
-            "description": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
-            "abstract": "Proof-backed portfolio for product design, full-stack development, AI, mobile, and Web3 case studies.",
+            "description": "Case-study portfolio for product design, full-stack development, AI, mobile, and Web3 work.",
+            "abstract": "Case-study portfolio for product design, full-stack development, AI, mobile, and Web3 work.",
             "keywords": keywords,
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
@@ -1207,8 +1207,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "publisher": ref(person_id),
             "inLanguage": "en",
             "about": ref(person_id),
-            "description": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
-            "abstract": "GitHub profile README with machine-readable portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+            "description": "GitHub profile README with portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
+            "abstract": "GitHub profile README with portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
             "keywords": keywords,
             "image": ref(pages_image_id),
             "spatialCoverage": spatial,
@@ -1223,8 +1223,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": profile_page_id,
             "url": data["canonical"]["githubProfileReadme"],
             "name": "Mark Siazon GitHub profile README",
-            "description": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
-            "abstract": "Public GitHub profile README for Mark Siazon with proof-backed portfolio links and machine-readable discovery files.",
+            "description": "Public GitHub profile README for Mark Siazon with portfolio links and source files.",
+            "abstract": "Public GitHub profile README for Mark Siazon with portfolio links and source files.",
             "keywords": keywords,
             "inLanguage": "en",
             "author": ref(person_id),
@@ -1256,8 +1256,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "publisher": ref(person_id),
             "inLanguage": "en",
             "about": ref(person_id),
-            "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
-            "abstract": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related machine-readable profile files.",
+            "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related profile source files.",
+            "abstract": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related profile source files.",
             "keywords": keywords,
             "isBasedOn": data["canonical"]["githubProfileReadme"],
             "dateModified": updated,
@@ -1285,8 +1285,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "url": pages["home"],
             "name": PAGES_SITE_NAME,
             "alternateName": PAGES_SITE_ALTERNATE_NAMES,
-            "description": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
-            "abstract": "Crawlable GitHub Pages mirror for Mark Siazon machine-readable profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+            "description": "Crawlable GitHub Pages mirror for Mark Siazon profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
+            "abstract": "Crawlable GitHub Pages mirror for Mark Siazon profile indexes, FAQ, proof map, recruiter brief, and Schema.org JSON-LD.",
             "keywords": keywords,
             "isBasedOn": repo["llmsIndexJson"],
             "isPartOf": ref(pages_site_id),
@@ -1353,8 +1353,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "@id": pages_main_content_id,
             "name": "Mark Siazon profile index main content",
             "url": f"{pages['home']}#main-content",
-            "description": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
-            "abstract": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, geo signals, knowledge graph, and citation links.",
+            "description": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, location signals, knowledge graph, and citation links.",
+            "abstract": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, location signals, knowledge graph, and citation links.",
             "text": entity["description"],
             "about": ref(person_id),
             "isPartOf": ref(pages_page_id),
@@ -1457,7 +1457,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
         {
             "@type": "Dataset",
             "@id": pages_dataset_id,
-            "name": "Mark Siazon machine-readable profile dataset",
+            "name": "Mark Siazon profile source dataset",
             "alternateName": dataset_alternate_names(data),
             "url": pages["llmsIndexJson"],
             "identifier": [
@@ -1475,8 +1475,8 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "sameAs": repo["llmsIndexJson"],
             "isBasedOn": repo["llmsIndexJson"],
             "version": updated,
-            "description": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
-            "abstract": "Machine-readable entity, project, proof, FAQ, AEO, SEO, GEO, citation, and schema files mirrored on GitHub Pages.",
+            "description": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
+            "abstract": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
             "creator": ref(person_id),
             "publisher": ref(person_id),
             "inLanguage": "en",
@@ -1857,7 +1857,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "llms-index.json structured entity index",
                 repo["llmsIndexJson"],
                 "application/json",
-                "Structured entity, project, FAQ, SEO, AEO, GEO, and citation index for Mark Siazon.",
+                "Structured entity, project, FAQ, citation, and location index for Mark Siazon.",
                 person_id,
                 updated,
                 data.get("license"),
@@ -1932,7 +1932,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
                 "llms-index.json schema contract",
                 repo["schemaIndex"],
                 "application/schema+json",
-                "JSON Schema contract for the structured entity, proof, SEO, AEO, GEO, and citation index.",
+                "JSON Schema contract for the structured entity, proof, citation, and location index.",
                 person_id,
                 updated,
                 data.get("license"),

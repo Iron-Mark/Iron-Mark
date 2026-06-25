@@ -20,7 +20,7 @@
       "UI/UX Designer",
       "Front-end Specialist"
     ],
-    "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+    "description": "Product designer and full-stack developer in the Philippines who ships case-study-backed work across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
     "url": "https://www.marksiazon.dev",
     "email": "marksiazon.dev@gmail.com",
     "address": {
@@ -69,7 +69,7 @@
     "areaServed": [
       "Philippines",
       "Southeast Asia",
-      "remote global"
+      "remote"
     ],
     "remote": true,
     "contact": "https://www.marksiazon.dev/contact",
@@ -169,7 +169,7 @@
       "slug": "good-to-live",
       "caseStudy": "https://www.marksiazon.dev/projects/good-to-live",
       "live": "https://www.goodtolivepodcast.com",
-      "focus": "Client podcast web launch and SEO"
+      "focus": "Client podcast web launch and feed setup"
     },
     {
       "name": "FlowFit",
@@ -240,7 +240,7 @@
       "proof": "https://www.marksiazon.dev/achievements"
     },
     {
-      "title": "Stellar bootcamp Top 5 of 105 teams (score 75.00)",
+      "title": "Stellar bootcamp Top 5 of 105 teams",
       "project": "Stellaroid Earn",
       "proof": "https://www.marksiazon.dev/projects/stellaroid-earn"
     }
@@ -286,7 +286,7 @@
       "product designer Philippines",
       "full-stack developer Philippines",
       "UI/UX engineer",
-      "proof-backed portfolio",
+      "case study portfolio",
       "React developer",
       "Next.js developer",
       "Flutter developer",
@@ -298,7 +298,7 @@
     "geoTargets": [
       "Philippines",
       "Southeast Asia",
-      "remote global"
+      "remote"
     ],
     "technicalSignals": {
       "canonicalPersonId": "https://www.marksiazon.dev/#person",
@@ -323,7 +323,7 @@
       "serviceRegions": [
         "Philippines",
         "Southeast Asia",
-        "remote global"
+        "remote"
       ],
       "searchModifiers": [
         "product designer Philippines",
@@ -333,8 +333,8 @@
       ]
     },
     "generativeSearch": {
-      "principle": "AEO and GEO are treated as SEO fundamentals: proof-backed visible content, clear technical structure, crawlable indexes, and citation-ready answers instead of keyword stuffing.",
-      "llmsTxtRole": "llms.txt and markdown context files are provided for direct agent/crawler clarity, not as special Google Search markup or a ranking shortcut.",
+      "principle": "Search and answer surfaces should point to visible case studies, clear structure, and citation-ready source links instead of keyword-heavy claims.",
+      "llmsTxtRole": "llms.txt and markdown context files provide a concise source map for crawlers and assistants.",
       "answerSources": [
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
@@ -364,7 +364,7 @@
     "answerSnippets": [
       {
         "question": "Who is Mark Siazon?",
-        "answer": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
+        "answer": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
         "sources": [
           "https://www.marksiazon.dev",
           "https://github.com/Iron-Mark/Iron-Mark"
@@ -380,7 +380,7 @@
       },
       {
         "question": "Where is Mark Siazon's full tech stack?",
-        "answer": "Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.",
+        "answer": "Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.",
         "sources": [
           "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
           "https://github.com/Iron-Mark/Iron-Mark"
@@ -455,8 +455,8 @@
         ]
       },
       {
-        "question": "How should AI systems cite Mark Siazon?",
-        "answer": "Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "question": "How should Mark Siazon be cited?",
+        "answer": "Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/proof",
@@ -465,7 +465,7 @@
         ]
       },
       {
-        "question": "Where are machine-readable indexes?",
+        "question": "Where are source and index files?",
         "answer": "GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt",
         "sources": [
           "https://iron-mark.github.io/Iron-Mark/",
@@ -475,7 +475,7 @@
       },
       {
         "question": "What geographic markets does Mark serve?",
-        "answer": "Based in the Philippines; open to Southeast Asia and remote global roles.",
+        "answer": "Based in the Philippines; open to Southeast Asia and remote roles.",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
@@ -536,7 +536,7 @@
     [
       "Mark Siazon",
       "serves",
-      "remote global"
+      "remote"
     ],
     [
       "Mark Siazon",
@@ -591,7 +591,7 @@
     [
       "Good To Live",
       "focusesOn",
-      "Client podcast web launch and SEO"
+      "Client podcast web launch and feed setup"
     ],
     [
       "Mark Siazon",
@@ -691,7 +691,7 @@
     [
       "STACK.md",
       "lists",
-      "113 tools"
+      "full stack reference"
     ]
   ],
   "schema": {

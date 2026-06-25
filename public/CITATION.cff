@@ -9,11 +9,11 @@ authors:
     email: marksiazon.dev@gmail.com
 repository-code: https://github.com/Iron-Mark/Iron-Mark
 url: https://github.com/Iron-Mark/Iron-Mark
-abstract: "Public GitHub profile README, machine-readable portfolio indexes (llms.txt, llms-index.json), and tech stack reference for Mark Siazon (@Iron-Mark)."
+abstract: "Public GitHub profile README, portfolio source indexes (llms.txt, llms-index.json), and tech stack reference for Mark Siazon (@Iron-Mark)."
 keywords:
   - portfolio
   - product-design
   - full-stack
   - llms.txt
-  - proof-backed
+  - case-studies
 license: LicenseRef-LICENSE.md

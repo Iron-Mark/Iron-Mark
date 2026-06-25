@@ -1,13 +1,13 @@
 # Paste into marksiazon.dev llms.txt
 
-Generated from `llms-index.json`. Append under `## Machine-readable indexes` or create `## GitHub profile index`.
+Generated from `llms-index.json`. Append under `## Source and index files` or create `## GitHub profile index`.
 
 Also add links from `/recruiter` and `/contact#faq` to the GitHub FAQ.
 
 ```markdown
 ## GitHub profile index (Iron-Mark/Iron-Mark)
 
-Cross-linked machine-readable index for the GitHub profile README repo. Portfolio remains canonical for case studies; GitHub repo adds structured FAQ, proof, stack, and Schema.org references.
+Cross-linked source index for the GitHub profile README repo. Portfolio remains canonical for case studies; GitHub repo adds structured FAQ, proof, stack, and Schema.org references.
 
 - Canonical portfolio: https://www.marksiazon.dev
 - Visual profile README: https://github.com/Iron-Mark
@@ -15,12 +15,12 @@ Cross-linked machine-readable index for the GitHub profile README repo. Portfoli
 - Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - Structured index contract (JSON Schema): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
 - LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
-- Expanded agent context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
+- Expanded source context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - Full LLM context: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
 - FAQ (15+ Q&A): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - Recruiter brief (repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md
 - Proof map (claims -> URLs): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md
-- Tech stack (113 tools): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+- Tech stack reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 - Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 - Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
@@ -41,8 +41,8 @@ Cross-linked machine-readable index for the GitHub profile README repo. Portfoli
 | What hackathon and lab projects does Mark maintain? | https://www.marksiazon.dev/lab | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain |
 | Is Mark Siazon a designer or a developer? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer |
 | What awards has Mark Siazon won? | https://www.marksiazon.dev/achievements / https://www.marksiazon.dev/projects/stellaroid-earn | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won |
-| How should AI systems cite Mark Siazon? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/proof | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon |
-| Where are machine-readable indexes? | https://www.marksiazon.dev/llms.txt | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes |
+| How should Mark Siazon be cited? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/proof | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited |
+| Where are source and index files? | https://www.marksiazon.dev/llms.txt | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files |
 | What geographic markets does Mark serve? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve |
 | How do I contact Mark Siazon for hiring? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring |
 ```

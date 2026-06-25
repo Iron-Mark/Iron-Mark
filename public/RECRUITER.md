@@ -8,7 +8,7 @@ Last updated: 2026-06-20
 
 ## One-line summary
 
-Product designer and full-stack developer in the Philippines who ships **proof-backed** products in AI (trust & safety), mobile (Flutter, Wear OS), and Web3 (Stellar, Celo) — with case studies, live demos, and explicit verification boundaries.
+Product designer and full-stack developer in the Philippines who ships case-study-backed work in AI trust and safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
 
 ## Open to
 
@@ -41,7 +41,7 @@ Product designer and full-stack developer in the Philippines who ships **proof-b
 
 - **UMak InfotechOlympics 2025** — Android App Development Productivity Champion (ResQLink, Team Lumiere)
 - **InfotechOlympics 2024** — Android App Development winner (BaybayInscribe, Team GILAS Tech)
-- **Stellar bootcamp** — Top 5 of 105 teams, score 75.00 (Stellaroid Earn)
+- **Stellar bootcamp** — Top 5 of 105 teams (Stellaroid Earn)
 
 Details: https://www.marksiazon.dev/achievements
 
@@ -49,7 +49,7 @@ Details: https://www.marksiazon.dev/achievements
 
 **Design:** Figma · **Web:** React · Next.js · TypeScript · Tailwind CSS · **Mobile:** Flutter · Kotlin · **AI workflow:** Cursor · GitHub Copilot · Claude · **Web3:** Stellar · Celo · **Backend & ship:** Python · Supabase · CI/CD (GitHub Actions) · Docker
 
-Full reference (113 tools): [STACK.md](STACK.md)
+Full reference: [STACK.md](STACK.md)
 
 ## Contact
 
@@ -57,7 +57,7 @@ Full reference (113 tools): [STACK.md](STACK.md)
 - **Email:** marksiazon.dev@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/mark-siazon/
 
-## Machine-readable (for ATS / AI screening)
+## Source files
 
 - Structured index: [llms-index.json](../llms-index.json)
 - FAQ: [FAQ.md](FAQ.md)
