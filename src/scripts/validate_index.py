@@ -79,13 +79,6 @@ from generate_portfolio_sync import (
     render_faq_crosslinks,
     render_llms_snippet,
 )
-from generate_readme_intelligence import (
-    END_MARKER as README_INTELLIGENCE_END,
-    OUTPUT as README_INTELLIGENCE,
-    START_MARKER as README_INTELLIGENCE_START,
-    build_intelligence,
-    render_readme_block,
-)
 
 ROOT = Path(__file__).resolve().parents[2]
 PUBLIC = ROOT / "public"
@@ -97,7 +90,6 @@ SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
 DOCS_INDEX = ROOT / "docs" / "index.html"
 LLMS_CTX = PUBLIC / "llms-ctx-full.txt"
-README_INTELLIGENCE_PATH = PUBLIC / "readme-intelligence.json"
 FAVICON = ROOT / "assets" / "brand" / "mark-siazon-favicon.svg"
 SOCIAL_IMAGE_ASSET = ROOT / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
 
@@ -437,7 +429,6 @@ def expected_downloads(pages: dict[str, str]) -> dict[str, tuple[str, str]]:
         "llms-txt": (pages.get("llmsTxt", ""), "text/plain"),
         "llms-full-txt": (pages.get("llmsFullTxt", ""), "text/plain"),
         "llms-ctx-full-txt": (pages.get("llmsCtxFullTxt", ""), "text/plain"),
-        "readme-intelligence-json": (pages.get("readmeIntelligenceJson", ""), "application/json"),
         "faq-md": (pages.get("faqMd", ""), "text/markdown"),
         "recruiter-md": (pages.get("recruiterMd", ""), "text/markdown"),
         "proof-md": (pages.get("proofMd", ""), "text/markdown"),
@@ -462,7 +453,6 @@ def expected_download_sources(repo: dict[str, str]) -> dict[str, str]:
         "llms-txt": "llmsTxt",
         "llms-full-txt": "llmsFullTxt",
         "llms-ctx-full-txt": "llmsCtxFullTxt",
-        "readme-intelligence-json": "readmeIntelligenceJson",
         "faq-md": "faqMd",
         "recruiter-md": "recruiterMd",
         "proof-md": "proofMd",
@@ -1153,7 +1143,6 @@ def check_seo_geo_consistency(data: dict[str, Any]) -> None:
         "llms.txt",
         "public/llms-full.txt",
         "public/llms-ctx-full.txt",
-        "public/readme-intelligence.json",
         "public/FAQ.md",
         "public/LAB.md",
         "public/schema/person.jsonld",
@@ -1718,75 +1707,6 @@ def check_generated_context(data: dict[str, Any]) -> None:
             errors.append(f"public/llms-ctx-full.txt missing lab project focus: {name}")
 
 
-def check_readme_intelligence(data: dict[str, Any], readme: str) -> None:
-    if README_INTELLIGENCE != README_INTELLIGENCE_PATH:
-        errors.append("README intelligence path drift between validator and generator")
-    if not README_INTELLIGENCE_PATH.exists():
-        errors.append("Missing public/readme-intelligence.json")
-        return
-
-    try:
-        actual = json.loads(README_INTELLIGENCE_PATH.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as exc:
-        errors.append(f"Invalid public/readme-intelligence.json: {exc}")
-        return
-
-    expected = build_intelligence(data)
-    expected_text = json.dumps(expected, indent=2, ensure_ascii=False) + "\n"
-    actual_text = README_INTELLIGENCE_PATH.read_text(encoding="utf-8").replace("\r\n", "\n")
-    if actual_text != expected_text:
-        errors.append("public/readme-intelligence.json is stale; run src/scripts/generate_readme_intelligence.py")
-
-    if actual.get("generatedBy") != "src/scripts/generate_readme_intelligence.py":
-        errors.append("public/readme-intelligence.json generatedBy drift")
-    if actual.get("generatedFrom") != "llms-index.json":
-        errors.append("public/readme-intelligence.json generatedFrom drift")
-    if actual.get("updated") != data.get("updated"):
-        errors.append("public/readme-intelligence.json updated must match llms-index.json")
-    if actual.get("weights") != {"proof": 35, "impact": 25, "roleMatch": 30, "coverage": 10}:
-        errors.append("public/readme-intelligence.json weights drift")
-
-    top_projects = actual.get("topProjects", [])
-    if not isinstance(top_projects, list) or len(top_projects) < 3:
-        errors.append("public/readme-intelligence.json must expose at least 3 topProjects")
-    known_urls = {
-        value
-        for project in data.get("featuredProjects", []) + data.get("hackathonLab", [])
-        for value in (
-            project.get("caseStudy"),
-            project.get("live"),
-            project.get("demo"),
-            project.get("repo"),
-            project.get("model"),
-        )
-        if isinstance(value, str) and value
-    }
-    previous_score = 101
-    for project in top_projects:
-        if not isinstance(project, dict):
-            errors.append("public/readme-intelligence.json topProjects entries must be objects")
-            continue
-        score = project.get("score")
-        if not isinstance(score, int) or not 0 <= score <= 100:
-            errors.append(f"public/readme-intelligence.json invalid score: {project.get('name')}")
-            continue
-        if score > previous_score:
-            errors.append("public/readme-intelligence.json topProjects must be sorted by descending score")
-        previous_score = score
-        breakdown = project.get("scoreBreakdown", {})
-        if isinstance(breakdown, dict) and sum(int(breakdown.get(key, 0)) for key in ("proof", "impact", "roleMatch", "coverage")) != score:
-            errors.append(f"public/readme-intelligence.json score breakdown does not sum to score: {project.get('name')}")
-        for evidence in project.get("evidence", []):
-            if isinstance(evidence, dict) and evidence.get("url") not in known_urls:
-                errors.append(f"public/readme-intelligence.json evidence is not source-backed: {evidence.get('url')}")
-
-    expected_block = render_readme_block(expected)
-    if README_INTELLIGENCE_START not in readme or README_INTELLIGENCE_END not in readme:
-        errors.append("README.md missing generated Profile Intelligence block markers")
-    elif expected_block not in readme:
-        errors.append("README.md Profile Intelligence block is stale; run src/scripts/generate_readme_intelligence.py")
-
-
 def check_portfolio_sync_artifacts(data: dict[str, Any]) -> None:
     expected_artifacts = {
         LLMS_SNIPPET_PATH: render_llms_snippet(data),
@@ -1877,7 +1797,6 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             "llmsFullTxt",
             "llmsIndexJson",
             "llmsCtxFullTxt",
-            "readmeIntelligenceJson",
             "faqMd",
             "recruiterMd",
             "proofMd",
@@ -1900,7 +1819,6 @@ def check_schema(data: dict[str, Any], questions: list[str]) -> None:
             "llmsFullTxt",
             "llmsIndexJson",
             "llmsCtxFullTxt",
-            "readmeIntelligenceJson",
             "faqMd",
             "recruiterMd",
             "proofMd",
@@ -3524,7 +3442,6 @@ def check_crawl_files(data: dict[str, Any]) -> None:
         f"{PAGES}/",
         f"{PAGES}/llms.txt",
         f"{PAGES}/llms-index.json",
-        f"{PAGES}/readme-intelligence.json",
         f"{PAGES}/FAQ.md",
         f"{PAGES}/RECRUITER.md",
         f"{PAGES}/PROOF.md",
@@ -3605,7 +3522,6 @@ def main() -> int:
     check_aeo_coverage(data, questions)
     check_knowledge_graph(data)
     check_generated_context(data)
-    check_readme_intelligence(data, readme)
     check_portfolio_sync_artifacts(data)
     check_schema(data, questions)
     check_crawl_files(data)
