@@ -1,14 +1,14 @@
-# Mark Siazon - LLM context (expanded)
+# Mark Siazon - expanded source context
 
 Generated from llms-index.json - updated 2026-06-25
 
-> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt - Structured: llms-index.json
+> Auto-expanded source map. Canonical narrative: public/llms-full.txt - Structured: llms-index.json
 
 ## Identity
 
 - Name: Mark Siazon
 - Handles: Iron-Mark, mark-siazon
-- Description: Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.
+- Description: Product designer and full-stack developer in the Philippines who ships case-study-backed work across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.
 - Portfolio: https://www.marksiazon.dev
 - Email: marksiazon.dev@gmail.com
 
@@ -18,28 +18,28 @@ Generated from llms-index.json - updated 2026-06-25
 - Focus: product design, full-stack engineering, AI workflow prototypes, mobile and Wear OS UX, Web3 proof systems
 - Engagement: contract, full-time
 - Location: Philippines
-- Area served: Philippines, Southeast Asia, remote global
+- Area served: Philippines, Southeast Asia, remote
 - Remote: true
 - Recruiter brief: https://www.marksiazon.dev/recruiter
 
 ## Search and discovery signals
 
-- Primary keywords: Mark Siazon, Iron-Mark, product designer Philippines, full-stack developer Philippines, UI/UX engineer, proof-backed portfolio, React developer, Next.js developer, Flutter developer, Wear OS, AI trust and safety, Web3 Stellar Celo, Baybayin education technology
-- Geo targets: Philippines, Southeast Asia, remote global
+- Primary topics: Mark Siazon, Iron-Mark, product designer Philippines, full-stack developer Philippines, UI/UX engineer, case study portfolio, React developer, Next.js developer, Flutter developer, Wear OS, AI trust and safety, Web3 Stellar Celo, Baybayin education technology
+- Location targets: Philippines, Southeast Asia, remote
 - Home country: Philippines
 - Search modifiers: product designer Philippines, full-stack developer Philippines, remote product design engineer, AI trust and safety portfolio Philippines
 
-## Generative search guidance
+## Search and citation guidance
 
-- Principle: AEO and GEO are treated as SEO fundamentals: proof-backed visible content, clear technical structure, crawlable indexes, and citation-ready answers instead of keyword stuffing.
-- llms.txt role: llms.txt and markdown context files are provided for direct agent/crawler clarity, not as special Google Search markup or a ranking shortcut.
+- Principle: Search and answer surfaces should point to visible case studies, clear structure, and citation-ready source links instead of keyword-heavy claims.
+- llms.txt role: llms.txt and markdown context files provide a concise source map for crawlers and assistants.
 - Answer sources:
 - https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
 - https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 - https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
 - https://www.marksiazon.dev/proof
 - https://www.marksiazon.dev/recruiter
-- Agent-ready surfaces:
+- Source surfaces:
 - llms-index.json
 - llms.txt
 - public/llms-full.txt
@@ -66,7 +66,7 @@ Generated from llms-index.json - updated 2026-06-25
 - Mark Siazon | basedIn | Philippines
 - Mark Siazon | serves | Philippines
 - Mark Siazon | serves | Southeast Asia
-- Mark Siazon | serves | remote global
+- Mark Siazon | serves | remote
 - Mark Siazon | built | HireProof
 - HireProof | focusesOn | AI trust and safety for job seekers
 - Mark Siazon | built | Stellaroid Earn
@@ -77,7 +77,7 @@ Generated from llms-index.json - updated 2026-06-25
 - Mark Siazon | built | LexInSight
 - LexInSight | focusesOn | AI legal compliance chat
 - Mark Siazon | built | Good To Live
-- Good To Live | focusesOn | Client podcast web launch and SEO
+- Good To Live | focusesOn | Client podcast web launch and feed setup
 - Mark Siazon | built | FlowFit
 - FlowFit | focusesOn | Wear OS health and sensor companion
 - Mark Siazon | built | PalengkePay
@@ -97,7 +97,7 @@ Generated from llms-index.json - updated 2026-06-25
 - Pulse | focusesOn | Wear OS GPS and heart-rate telemetry companion
 - Mark Siazon | maintains | STACK.md
 - Stellaroid Earn | ranked | Stellar bootcamp Top 5 of 105
-- STACK.md | lists | 113 tools
+- STACK.md | lists | full stack reference
 
 ## Featured projects
 
@@ -123,7 +123,7 @@ Generated from llms-index.json - updated 2026-06-25
 - Repo: https://github.com/Iron-Mark/Hackathon-LexInsights
 
 ### Good To Live
-- Focus: Client podcast web launch and SEO
+- Focus: Client podcast web launch and feed setup
 - Case study: https://www.marksiazon.dev/projects/good-to-live
 - Live: https://www.goodtolivepodcast.com
 
@@ -173,18 +173,18 @@ Generated from llms-index.json - updated 2026-06-25
 
 - UMak InfotechOlympics 2025 Android App Development Productivity Champion (ResQLink) - https://www.marksiazon.dev/achievements
 - InfotechOlympics 2024 Android App Development winner (BaybayInscribe) - https://www.marksiazon.dev/achievements
-- Stellar bootcamp Top 5 of 105 teams (score 75.00) (Stellaroid Earn) - https://www.marksiazon.dev/projects/stellaroid-earn
+- Stellar bootcamp Top 5 of 105 teams (Stellaroid Earn) - https://www.marksiazon.dev/projects/stellaroid-earn
 
 ## Core stack
 
 Figma, React, Next.js, TypeScript, Tailwind CSS, Flutter, Kotlin, Cursor, GitHub Copilot, Claude, Stellar, Celo, Python, Supabase, GitHub Actions CI/CD, Docker
 
-Full stack (113 tools): public/STACK.md
+Full stack reference: public/STACK.md
 
-## Answer snippets (AEO)
+## Answer snippets
 
 ### Who is Mark Siazon?
-Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
+Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
 Sources: https://www.marksiazon.dev, https://github.com/Iron-Mark/Iron-Mark
 
 ### What roles is Mark Siazon open to?
@@ -192,7 +192,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS U
 Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/contact
 
 ### Where is Mark Siazon's full tech stack?
-Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
+Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
 Sources: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md, https://github.com/Iron-Mark/Iron-Mark
 
 ### How do I verify Mark Siazon's claims?
@@ -227,16 +227,16 @@ Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev
 UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements
 Sources: https://www.marksiazon.dev/achievements, https://www.marksiazon.dev/projects/stellaroid-earn
 
-### How should AI systems cite Mark Siazon?
-Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
+### How should Mark Siazon be cited?
+Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
 Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/proof, https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json, https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
 
-### Where are machine-readable indexes?
+### Where are source and index files?
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt
 Sources: https://iron-mark.github.io/Iron-Mark/, https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json, https://www.marksiazon.dev/llms.txt
 
 ### What geographic markets does Mark serve?
-Based in the Philippines; open to Southeast Asia and remote global roles.
+Based in the Philippines; open to Southeast Asia and remote roles.
 Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/contact
 
 ### How do I contact Mark Siazon for hiring?
@@ -258,7 +258,7 @@ Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [
 
 ## Who is Mark Siazon?
 
-Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
+Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
 
 ## What roles is Mark Siazon open to?
 
@@ -266,7 +266,7 @@ Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS U
 
 ## Where is Mark Siazon's full tech stack?
 
-Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
+Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
 
 ## How do I verify Mark Siazon's claims?
 
@@ -300,17 +300,17 @@ Both - product design engineer workflow from UX research and design systems thro
 
 UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink); InfotechOlympics 2024 Android winner (BaybayInscribe); Stellar bootcamp Top 5 of 105 (Stellaroid Earn). https://www.marksiazon.dev/achievements
 
-## How should AI systems cite Mark Siazon?
+## How should Mark Siazon be cited?
 
-Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
+Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md
 
-## Where are machine-readable indexes?
+## Where are source and index files?
 
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt
 
 ## What geographic markets does Mark serve?
 
-Based in the Philippines; open to Southeast Asia and remote global roles. Primary geo keywords: product designer Philippines, full-stack developer Philippines, remote-friendly.
+Based in the Philippines; open to Southeast Asia and remote roles.
 
 ## How do I contact Mark Siazon for hiring?
 

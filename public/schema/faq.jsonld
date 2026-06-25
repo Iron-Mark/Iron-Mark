@@ -5,8 +5,8 @@
       "@type": "Person",
       "@id": "https://www.marksiazon.dev/#person",
       "name": "Mark Siazon",
-      "description": "Product designer and full-stack developer in the Philippines who ships proof-backed products across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
-      "disambiguatingDescription": "Mark Siazon is the Philippines-based product designer and full-stack developer behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, mobile, Web3, and client web case studies.",
+      "description": "Product designer and full-stack developer in the Philippines who ships case-study-backed work across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+      "disambiguatingDescription": "Mark Siazon is the Philippines-based product designer and full-stack developer behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and case-study-backed AI, mobile, Web3, and client web case studies.",
       "identifier": [
         {
           "@type": "PropertyValue",
@@ -66,7 +66,7 @@
         "product designer Philippines",
         "full-stack developer Philippines",
         "UI/UX engineer",
-        "proof-backed portfolio",
+        "case study portfolio",
         "React developer",
         "Next.js developer",
         "Flutter developer",
@@ -76,7 +76,7 @@
         "Baybayin education technology",
         "Philippines",
         "Southeast Asia",
-        "remote global"
+        "remote"
       ],
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-06-25",
@@ -102,7 +102,7 @@
         },
         {
           "@type": "VirtualLocation",
-          "name": "remote global"
+          "name": "remote"
         }
       ],
       "citation": [
@@ -148,10 +148,10 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
         },
         {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited"
         },
         {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files"
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve"
@@ -195,10 +195,10 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
         },
         {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited"
         },
         {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files"
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve"
@@ -283,7 +283,7 @@
           "value": "who-is-mark-siazon-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer"
         },
-        "text": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds proof-backed products in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
+        "text": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
@@ -461,7 +461,7 @@
           "value": "where-is-mark-siazons-full-tech-stack-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack-answer"
         },
-        "text": "Full stack reference with 113 tools and doc links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.",
+        "text": "Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
@@ -1218,14 +1218,14 @@
     },
     {
       "@type": "Question",
-      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon",
-      "name": "How should AI systems cite Mark Siazon?",
-      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited",
+      "name": "How should Mark Siazon be cited?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Iron-Mark FAQ question",
-        "value": "how-should-ai-systems-cite-mark-siazon",
-        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+        "value": "how-should-mark-siazon-be-cited",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited"
       },
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
@@ -1264,15 +1264,15 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
-        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon-answer",
-        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon-answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited-answer",
         "identifier": {
           "@type": "PropertyValue",
           "propertyID": "Iron-Mark FAQ answer",
-          "value": "how-should-ai-systems-cite-mark-siazon-answer",
-          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon-answer"
+          "value": "how-should-mark-siazon-be-cited-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited-answer"
         },
-        "text": "Hiring: https://www.marksiazon.dev/recruiter. Verification: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "text": "Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https://www.marksiazon.dev/proof. Structured index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json and citation guide: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
@@ -1286,7 +1286,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
         },
         "parentItem": {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-ai-systems-cite-mark-siazon"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-25",
@@ -1311,14 +1311,14 @@
     },
     {
       "@type": "Question",
-      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes",
-      "name": "Where are machine-readable indexes?",
-      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files",
+      "name": "Where are source and index files?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Iron-Mark FAQ question",
-        "value": "where-are-machine-readable-indexes",
-        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+        "value": "where-are-source-and-index-files",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files"
       },
       "author": {
         "@id": "https://www.marksiazon.dev/#person"
@@ -1356,13 +1356,13 @@
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
-        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes-answer",
-        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes-answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files-answer",
         "identifier": {
           "@type": "PropertyValue",
           "propertyID": "Iron-Mark FAQ answer",
-          "value": "where-are-machine-readable-indexes-answer",
-          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes-answer"
+          "value": "where-are-source-and-index-files-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files-answer"
         },
         "text": "GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt",
         "author": {
@@ -1378,7 +1378,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
         },
         "parentItem": {
-          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-machine-readable-indexes"
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files"
         },
         "inLanguage": "en",
         "dateModified": "2026-06-25",
@@ -1454,7 +1454,7 @@
           "value": "what-geographic-markets-does-mark-serve-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve-answer"
         },
-        "text": "Based in the Philippines; open to Southeast Asia and remote global roles.",
+        "text": "Based in the Philippines; open to Southeast Asia and remote roles.",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },

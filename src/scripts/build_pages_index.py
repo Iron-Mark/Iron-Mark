@@ -317,7 +317,7 @@ def main() -> None:
     seo = data.get("seo", {})
     aeo = data.get("aeo", {})
     description = (
-        "Machine-readable GitHub profile index for Mark Siazon: structured entity data, "
+        "GitHub Pages profile index for Mark Siazon: structured entity data, "
         "FAQ, proof map, recruiter brief, llms.txt, and Schema.org JSON-LD."
     )
     updated = data.get("updated", "")
@@ -430,7 +430,7 @@ def main() -> None:
     </nav>
     <h1>{SITE_NAME}</h1>
     <p id="profile-summary">{escape(entity.get("description", description))}</p>
-    <p>Machine-readable mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
+    <p>Profile mirror of <a href="https://github.com/Iron-Mark/Iron-Mark">Iron-Mark/Iron-Mark</a>. Canonical portfolio: <a href="{PORTFOLIO_URL}">marksiazon.dev</a>. Updated {escape(updated)}.</p>
     <nav id="section-navigation" class="section-nav" aria-label="Profile index sections">
       {section_navigation}
     </nav>
@@ -451,7 +451,7 @@ def main() -> None:
     <ul>
 {answers}
     </ul>
-    <h2 id="geo-topic-signals">Geo And Topic Signals</h2>
+    <h2 id="geo-topic-signals">Location And Topics</h2>
     <p><strong>Primary search topics:</strong> {primary_keywords}</p>
     <p><strong>Service regions:</strong> {geo_targets}</p>
     <h2 id="knowledge-graph">Knowledge Graph</h2>
@@ -460,15 +460,15 @@ def main() -> None:
     </ul>
     <h2 id="start-here">Start Here</h2>
     <ul>
-      <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, SEO, AEO, and GEO index</li>
-      <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> - expanded agent context</li>
+      <li><a href="llms-index.json">llms-index.json</a> - structured entity, project, citation, and location index</li>
+      <li><a href="llms-ctx-full.txt">llms-ctx-full.txt</a> - expanded source context</li>
       <li><a href="FAQ.md">FAQ.md</a> - visible question and answer corpus</li>
       <li><a href="RECRUITER.md">RECRUITER.md</a> - recruiter brief</li>
       <li><a href="PROOF.md">PROOF.md</a> - claim verification map</li>
       <li><a href="LAB.md">LAB.md</a> - hackathon and lab project index</li>
       <li><a href="lab/">lab</a> - rendered hackathon and lab project page</li>
       <li><a href="{escape(rss_feed, quote=True)}">Portfolio RSS</a> - canonical portfolio updates feed</li>
-      <li><a href="{escape(json_feed, quote=True)}">Portfolio JSON Feed</a> - canonical machine-readable updates feed</li>
+      <li><a href="{escape(json_feed, quote=True)}">Portfolio JSON Feed</a> - canonical updates feed</li>
       <li><a href="llms.txt">llms.txt</a> - LLM manifest</li>
       <li><a href="schema/llms-index.schema.json">schema/llms-index.schema.json</a> - JSON Schema contract for llms-index.json</li>
       <li><a href="schema/person.jsonld">schema/person.jsonld</a> - Person, profile, project, and content graph</li>

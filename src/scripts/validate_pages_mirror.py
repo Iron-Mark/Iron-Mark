@@ -436,7 +436,7 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
         },
         {
             "@type": "PropertyValue",
-            "name": "Primary keyword count",
+            "name": "Topic count",
             "value": len(primary_keywords),
         },
         {
@@ -446,7 +446,7 @@ def expected_dataset_measurements(index_data: dict[str, object]) -> list[dict[st
         },
         {
             "@type": "PropertyValue",
-            "name": "Machine-readable download count",
+            "name": "Source download count",
             "value": len(machine_downloads(pages)),
         },
     ]
@@ -510,7 +510,7 @@ def expected_profile_disambiguating_description(index_data: dict[str, object]) -
     name = entity.get("name") if isinstance(entity, dict) else ""
     return (
         f"{name} is the Philippines-based product designer and full-stack developer "
-        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and case-study-backed AI, "
         "mobile, Web3, and client web case studies."
     )
 
@@ -651,7 +651,7 @@ def expected_topic_term_description(index_data: dict[str, object], value: str) -
         return f"Geographic service target for the Mark Siazon profile index: {value}."
     if value in focus:
         return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
-    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+    return f"Primary search topic for the Mark Siazon profile index: {value}."
 
 
 def pages_rewrite_public_source(source: str) -> str:
@@ -695,30 +695,30 @@ def check_pages_generated_context(issues: list[str], artifact: Path, index_data:
     if "## Search and discovery signals" not in text:
         issues.append("Pages llms-ctx-full.txt missing Search and discovery signals section")
     expected_search_lines = [
-        f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}",
-        f"- Geo targets: {', '.join(seo.get('geoTargets', []))}",
+        f"- Primary topics: {', '.join(seo.get('primaryKeywords', []))}",
+        f"- Location targets: {', '.join(seo.get('geoTargets', []))}",
         f"- Home country: {geo_signals.get('homeCountry', '')}",
         f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}",
     ]
     for line in expected_search_lines:
         if line not in text:
             issues.append(f"Pages llms-ctx-full.txt missing search signal line: {line}")
-    if "## Generative search guidance" not in text:
-        issues.append("Pages llms-ctx-full.txt missing Generative search guidance section")
+    if "## Search and citation guidance" not in text:
+        issues.append("Pages llms-ctx-full.txt missing Search and citation guidance section")
     for line in (
         f"- Principle: {generative.get('principle', '')}",
         f"- llms.txt role: {generative.get('llmsTxtRole', '')}",
     ):
         if line not in text:
-            issues.append(f"Pages llms-ctx-full.txt missing generative guidance line: {line}")
+            issues.append(f"Pages llms-ctx-full.txt missing search and citation guidance line: {line}")
     for source in generative.get("answerSources", []):
         expected = pages_rewrite_public_source(str(source))
         if f"- {expected}" not in text:
-            issues.append(f"Pages llms-ctx-full.txt missing generative answer source: {expected}")
+            issues.append(f"Pages llms-ctx-full.txt missing answer source: {expected}")
     for surface in generative.get("agentReadySurfaces", []):
         expected = pages_rewrite_agent_surface(str(surface))
         if f"- {expected}" not in text:
-            issues.append(f"Pages llms-ctx-full.txt missing agent-ready surface: {expected}")
+            issues.append(f"Pages llms-ctx-full.txt missing source surface: {expected}")
     aeo = index_data.get("aeo", {})
     if not isinstance(aeo, dict):
         aeo = {}

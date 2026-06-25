@@ -46,13 +46,13 @@ Rendered lab index: [lab](https://iron-mark.github.io/Iron-Mark/lab/) · Markdow
 |-------|-------|
 | UMak InfotechOlympics 2025 Android Productivity Champion | https://www.marksiazon.dev/achievements (ResQLink / Team Lumiere) |
 | InfotechOlympics 2024 Android winner | https://www.marksiazon.dev/achievements (BaybayInscribe / GILAS Tech) |
-| Stellar bootcamp Top 5 / 105, score 75.00 | https://www.marksiazon.dev/projects/stellaroid-earn |
+| Stellar bootcamp Top 5 / 105 | https://www.marksiazon.dev/projects/stellaroid-earn |
 
 ## Tech stack
 
 | Claim | Proof |
 |-------|-------|
-| 113 tools in STACK.md | [STACK.md](STACK.md) — icons + doc links |
+| Full stack reference | [STACK.md](STACK.md) — grouped tools and doc links |
 | 16-tool core on README (domain-grouped) | Visible on profile README Tech Stack section — Design · Web · Mobile · AI workflow · Web3 · Backend & ship |
 
 ## GitHub activity widgets

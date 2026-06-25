@@ -22,11 +22,11 @@ def main() -> None:
     data = json.loads(INDEX.read_text(encoding="utf-8"))
     entity = data["entity"]
     lines = [
-        "# Mark Siazon - LLM context (expanded)",
+        "# Mark Siazon - expanded source context",
         "",
         f"Generated from llms-index.json - updated {data.get('updated', 'unknown')}",
         "",
-        "> Auto-expanded context for agents. Canonical narrative: public/llms-full.txt - Structured: llms-index.json",
+        "> Auto-expanded source map. Canonical narrative: public/llms-full.txt - Structured: llms-index.json",
         "",
         "## Identity",
         "",
@@ -52,19 +52,19 @@ def main() -> None:
     geo_signals = seo.get("geoSignals", {})
     lines.append("## Search and discovery signals")
     lines.append("")
-    lines.append(f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}")
-    lines.append(f"- Geo targets: {', '.join(seo.get('geoTargets', []))}")
+    lines.append(f"- Primary topics: {', '.join(seo.get('primaryKeywords', []))}")
+    lines.append(f"- Location targets: {', '.join(seo.get('geoTargets', []))}")
     lines.append(f"- Home country: {geo_signals.get('homeCountry', '')}")
     lines.append(f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}")
     lines.append("")
     generative = seo.get("generativeSearch", {})
-    lines.append("## Generative search guidance")
+    lines.append("## Search and citation guidance")
     lines.append("")
     lines.append(f"- Principle: {generative.get('principle', '')}")
     lines.append(f"- llms.txt role: {generative.get('llmsTxtRole', '')}")
     lines.append("- Answer sources:")
     append_items(lines, generative.get("answerSources", []))
-    lines.append("- Agent-ready surfaces:")
+    lines.append("- Source surfaces:")
     append_items(lines, generative.get("agentReadySurfaces", []))
     lines.append("")
     lines.append("## Preferred citation order")
@@ -106,9 +106,9 @@ def main() -> None:
     lines.append("")
     lines.append(", ".join(data.get("coreStack", [])))
     lines.append("")
-    lines.append(f"Full stack ({data.get('stackReference', {}).get('toolCount', '?')} tools): public/STACK.md")
+    lines.append("Full stack reference: public/STACK.md")
     lines.append("")
-    lines.append("## Answer snippets (AEO)")
+    lines.append("## Answer snippets")
     lines.append("")
     for item in data.get("aeo", {}).get("answerSnippets", []):
         lines.append(f"### {item['question']}")

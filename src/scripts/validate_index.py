@@ -92,6 +92,12 @@ DOCS_INDEX = ROOT / "docs" / "index.html"
 LLMS_CTX = PUBLIC / "llms-ctx-full.txt"
 FAVICON = ROOT / "assets" / "brand" / "mark-siazon-favicon.svg"
 SOCIAL_IMAGE_ASSET = ROOT / "assets" / "brand" / "mark-siazon-product-design-full-stack-profile-banner.png"
+GITHUB_STATS_ASSETS = (
+    ROOT / "assets" / "github" / "stats.svg",
+    ROOT / "assets" / "github" / "top-langs.svg",
+    ROOT / "assets" / "github" / "activity-graph.svg",
+    ROOT / "assets" / "github" / "streak.svg",
+)
 
 GITHUB_RAW = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main"
 GITHUB_BLOB = "https://github.com/Iron-Mark/Iron-Mark/blob/main"
@@ -201,6 +207,14 @@ PRODUCTION_SURFACE_FORBIDDEN_PATTERNS = {
     r"maintenance\s+scripts?": "maintenance script notes",
     r"optional\s+local": "optional local tooling notes",
     r"internal\s+maintain(?:er|ance)": "internal maintainer notes",
+}
+GITHUB_STATS_FORBIDDEN_SVG_PATTERNS = {
+    "opacity:0": "hidden-by-default SVG content",
+    "animation:": "animation-dependent SVG content",
+    "animation-": "animation timing SVG content",
+    "@keyframes": "embedded SVG animation",
+    "stroke-dashoffset:5000": "hidden animated graph line",
+    "stroke-dasharray:5000": "animated graph dash path",
 }
 
 errors: list[str] = []
@@ -502,7 +516,7 @@ def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> 
         },
         {
             "@type": "PropertyValue",
-            "name": "Primary keyword count",
+            "name": "Topic count",
             "value": len(data.get("seo", {}).get("primaryKeywords", [])),
         },
         {
@@ -512,7 +526,7 @@ def expected_dataset_measurements(data: dict[str, Any], download_count: int) -> 
         },
         {
             "@type": "PropertyValue",
-            "name": "Machine-readable download count",
+            "name": "Source download count",
             "value": download_count,
         },
     ]
@@ -557,7 +571,7 @@ def expected_profile_disambiguating_description(data: dict[str, Any]) -> str:
     entity = data.get("entity", {})
     return (
         f"{entity.get('name')} is the Philippines-based product designer and full-stack developer "
-        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and proof-backed AI, "
+        "behind the Iron-Mark GitHub profile, marksiazon.dev portfolio, and case-study-backed AI, "
         "mobile, Web3, and client web case studies."
     )
 
@@ -709,7 +723,7 @@ def expected_topic_term_description(data: dict[str, Any], value: str) -> str:
         return f"Geographic service target for the Mark Siazon profile index: {value}."
     if value in data.get("availability", {}).get("focus", []):
         return f"Service focus for Mark Siazon hiring and collaboration discovery: {value}."
-    return f"Primary search and answer-engine topic for the Mark Siazon profile index: {value}."
+    return f"Primary search topic for the Mark Siazon profile index: {value}."
 
 
 def check_global_citation(node: dict[str, Any], data: dict[str, Any], label: str) -> None:
@@ -1170,6 +1184,17 @@ def check_readme_assets(readme: str) -> None:
         path = match[0] or match[1]
         if not (ROOT / path).exists():
             errors.append(f"README references missing asset: {path}")
+
+
+def check_github_stats_svgs() -> None:
+    for asset in GITHUB_STATS_ASSETS:
+        if not asset.exists():
+            errors.append(f"Missing GitHub stats SVG: {asset.relative_to(ROOT)}")
+            continue
+        svg = asset.read_text(encoding="utf-8")
+        for pattern, reason in GITHUB_STATS_FORBIDDEN_SVG_PATTERNS.items():
+            if pattern in svg:
+                errors.append(f"{asset.relative_to(ROOT)} contains {reason}: {pattern}")
 
 
 def check_readme_public_surface(readme: str) -> None:
@@ -1666,28 +1691,28 @@ def check_generated_context(data: dict[str, Any]) -> None:
     if "## Search and discovery signals" not in text:
         errors.append("public/llms-ctx-full.txt missing Search and discovery signals section")
     expected_search_lines = [
-        f"- Primary keywords: {', '.join(seo.get('primaryKeywords', []))}",
-        f"- Geo targets: {', '.join(seo.get('geoTargets', []))}",
+        f"- Primary topics: {', '.join(seo.get('primaryKeywords', []))}",
+        f"- Location targets: {', '.join(seo.get('geoTargets', []))}",
         f"- Home country: {geo_signals.get('homeCountry', '')}",
         f"- Search modifiers: {', '.join(geo_signals.get('searchModifiers', []))}",
     ]
     for line in expected_search_lines:
         if line not in text:
             errors.append(f"public/llms-ctx-full.txt missing search signal line: {line}")
-    if "## Generative search guidance" not in text:
-        errors.append("public/llms-ctx-full.txt missing Generative search guidance section")
+    if "## Search and citation guidance" not in text:
+        errors.append("public/llms-ctx-full.txt missing Search and citation guidance section")
     for line in (
         f"- Principle: {generative.get('principle', '')}",
         f"- llms.txt role: {generative.get('llmsTxtRole', '')}",
     ):
         if line not in text:
-            errors.append(f"public/llms-ctx-full.txt missing generative guidance line: {line}")
+            errors.append(f"public/llms-ctx-full.txt missing search and citation guidance line: {line}")
     for source in generative.get("answerSources", []):
         if f"- {source}" not in text:
-            errors.append(f"public/llms-ctx-full.txt missing generative answer source: {source}")
+            errors.append(f"public/llms-ctx-full.txt missing answer source: {source}")
     for surface in generative.get("agentReadySurfaces", []):
         if f"- {surface}" not in text:
-            errors.append(f"public/llms-ctx-full.txt missing agent-ready surface: {surface}")
+            errors.append(f"public/llms-ctx-full.txt missing source surface: {surface}")
     if "## Preferred citation order" not in text:
         errors.append("public/llms-ctx-full.txt missing Preferred citation order section")
     for source in data.get("aeo", {}).get("preferredCitationOrder", []):
@@ -3513,6 +3538,7 @@ def main() -> int:
     check_seo_geo_consistency(data)
     check_projects(data, readme)
     check_readme_assets(readme)
+    check_github_stats_svgs()
     check_people_first_search_signals(readme)
     if enforce_production_readme_surface():
         check_readme_public_surface(readme)
