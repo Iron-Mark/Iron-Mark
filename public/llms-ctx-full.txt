@@ -44,7 +44,6 @@ Generated from llms-index.json - updated 2026-06-25
 - llms.txt
 - public/llms-full.txt
 - public/llms-ctx-full.txt
-- public/readme-intelligence.json
 - public/FAQ.md
 - public/LAB.md
 - public/schema/person.jsonld
