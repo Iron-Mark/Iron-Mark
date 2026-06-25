@@ -37,7 +37,7 @@
 
 <h2 align="center">Profile Intelligence</h2>
 
-<p align="center"><sub>Deterministic recruiter-fit ranking generated from public proof links, project focus, achievements, and role signals | updated 2026-06-24 | <a href="https://iron-mark.github.io/Iron-Mark/readme-intelligence.json" rel="noopener noreferrer">machine-readable JSON</a></sub></p>
+<p align="center"><sub>Deterministic recruiter-fit ranking generated from public proof links, project focus, achievements, and role signals | updated 2026-06-25 | <a href="https://iron-mark.github.io/Iron-Mark/readme-intelligence.json" rel="noopener noreferrer">machine-readable JSON</a></sub></p>
 
 <div align="center" style="width:100%;max-width:100%;overflow-x:auto">
 
