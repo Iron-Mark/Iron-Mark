@@ -25,7 +25,6 @@ PAGES_SITEMAP_ENTRIES = (
     ("", "weekly", "0.9"),
     ("llms.txt", "weekly", "0.9"),
     ("llms-index.json", "weekly", "0.9"),
-    ("readme-intelligence.json", "weekly", "0.85"),
     ("llms-full.txt", "weekly", "0.85"),
     ("llms-ctx-full.txt", "weekly", "0.85"),
     ("FAQ.md", "monthly", "0.85"),

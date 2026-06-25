@@ -14,7 +14,6 @@ Machine-readable content and markdown packs for SEO, AEO, GEO, and AI crawlers.
 | [STACK.md](STACK.md) | Full 113-tool stack reference |
 | [llms-full.txt](llms-full.txt) | Expanded LLM context |
 | [llms-ctx-full.txt](llms-ctx-full.txt) | Generated agent context |
-| [readme-intelligence.json](readme-intelligence.json) | Generated README ranking, score breakdowns, and role-fit explanations |
 | [llms-index.schema.json](schema/llms-index.schema.json) | JSON Schema contract for `llms-index.json` |
 | [person.jsonld](schema/person.jsonld) | Schema.org Person/entity/project graph |
 | [faq.jsonld](schema/faq.jsonld) | Schema.org FAQPage/Question/Answer graph |

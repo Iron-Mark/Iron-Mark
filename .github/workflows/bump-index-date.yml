@@ -26,7 +26,9 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
+  pull-requests: write
 
 jobs:
   bump:
@@ -52,11 +54,25 @@ jobs:
       - name: Validate
         run: python3 src/scripts/validate_index.py
 
-      - name: Commit if changed
+      - name: Open freshness PR if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          branch="automation/bump-index-freshness"
+          title="chore: bump index freshness dates"
+          body="Automated freshness update from the Bump index dates workflow."
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
           git diff --staged --quiet && echo "No date changes" && exit 0
-          git commit -m "chore: bump index freshness dates [skip ci]"
-          git push
+          git switch -c "$branch"
+          git commit -m "$title"
+          git push --force-with-lease origin "$branch"
+
+          if gh pr view "$branch" --json url >/dev/null 2>&1; then
+            gh pr edit "$branch" --title "$title" --body "$body"
+          else
+            gh pr create --base main --head "$branch" --title "$title" --body "$body"
+          fi
+          gh workflow run validate-index.yml --ref "$branch" || true

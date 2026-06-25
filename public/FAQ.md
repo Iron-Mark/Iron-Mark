@@ -1,6 +1,6 @@
 # Mark Siazon — Frequently Asked Questions
 
-Last updated: 2026-06-24
+Last updated: 2026-06-25
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#person
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld

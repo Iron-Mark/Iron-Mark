@@ -44,7 +44,6 @@ Root `llms.txt` lists canonical machine-readable files. Root `sitemap.xml` is th
 Generated artifacts:
 
 - `src/scripts/generate_schema.py` rebuilds `public/schema/person.jsonld` and `public/schema/faq.jsonld` from `llms-index.json`.
-- `src/scripts/generate_readme_intelligence.py` rebuilds `public/readme-intelligence.json` and the generated Profile Intelligence block in root `README.md`.
 - `src/scripts/generate_llms_ctx.py` rebuilds `public/llms-ctx-full.txt`.
 - `src/scripts/build_pages_index.py` rebuilds `docs/index.html` with metadata and inline JSON-LD for the Pages mirror, plus `docs/lab/index.html` from `public/LAB.md`.
 - `src/scripts/generate_sitemap.py` rebuilds `sitemap.xml` as a host-specific GitHub Pages crawl sitemap.
@@ -53,7 +52,7 @@ Generated artifacts:
 - `src/scripts/validate_pages_mirror.py` builds and validates the flattened Pages artifact in a temp directory.
 - `public/schema/llms-index.schema.json` defines the validation contract for `llms-index.json`.
 
-The GitHub Pages mirror deploys a production allowlist: root crawler files, selected public docs (`FAQ`, `RECRUITER`, `PROOF`, `LAB`, `PROFILE`, `STACK`, citation/license/context files), `public/readme-intelligence.json`, assets, and `public/schema/`. Agent and maintenance docs such as `public/AGENTS.md` stay in the repo but are not deployed to Pages.
+The GitHub Pages mirror deploys a production allowlist: root crawler files, selected public docs (`FAQ`, `RECRUITER`, `PROOF`, `LAB`, `PROFILE`, `STACK`, citation/license/context files), assets, and `public/schema/`. Agent and maintenance docs such as `public/AGENTS.md` stay in the repo but are not deployed to Pages.
 
 ## Branch surface policy
 
