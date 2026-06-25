@@ -1,0 +1,33 @@
+name: Enforce PR Flow
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+
+permissions:
+  contents: read
+
+jobs:
+  enforce-pr-flow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate branch promotion path
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          set -eu
+
+          if [ "$BASE_REF" = "main" ] && [ "$HEAD_REF" != "dev" ]; then
+            echo "::error::Pull requests into main must come from dev. Open feature branches against dev first, then promote dev to main."
+            exit 1
+          fi
+
+          if [ "$BASE_REF" = "dev" ] && [ "$HEAD_REF" = "main" ]; then
+            echo "::error::Pull requests into dev must come from feature branches, not main."
+            exit 1
+          fi
+
+          echo "Branch flow accepted: $HEAD_REF -> $BASE_REF"
