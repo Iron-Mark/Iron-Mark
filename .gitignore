@@ -6,6 +6,9 @@ assets/brand/*.source.*
 .DS_Store
 Thumbs.db
 
+# Claude Code local settings
+.claude/settings.local.json
+
 # Python
 __pycache__/
 *.py[cod]

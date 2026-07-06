@@ -22,7 +22,7 @@ Mark Siazon is a product designer and full-stack developer based in the Philippi
 1. **HireProof** — AI trust & safety · https://www.marksiazon.dev/projects/hireproof
 2. **Stellaroid Earn** — Web3 credentials · https://www.marksiazon.dev/projects/stellaroid-earn
 3. **ResQLink** — Offline-first emergency · https://www.marksiazon.dev/projects/resqlink
-4. **LexInSight** — AI legal chat · https://www.marksiazon.dev/projects/lexinsight
+4. **LexInsights** — AI legal chat · https://www.marksiazon.dev/projects/lexinsights
 5. **Good To Live** — Client web launch · https://www.marksiazon.dev/projects/good-to-live
 6. **FlowFit** — Wear OS · https://www.marksiazon.dev/projects/flowfit
 7. **PalengkePay** — Stellar fintech PWA · https://www.marksiazon.dev/projects/palengkepay
