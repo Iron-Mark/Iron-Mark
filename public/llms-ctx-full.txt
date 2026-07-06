@@ -74,8 +74,8 @@ Generated from llms-index.json - updated 2026-06-25
 - Mark Siazon | built | ResQLink
 - ResQLink | focusesOn | Offline-first emergency response platform
 - ResQLink | won | UMak InfotechOlympics 2025 Android Productivity Champion
-- Mark Siazon | built | LexInSight
-- LexInSight | focusesOn | AI legal compliance chat
+- Mark Siazon | built | LexInsights
+- LexInsights | focusesOn | AI legal compliance chat
 - Mark Siazon | built | Good To Live
 - Good To Live | focusesOn | Client podcast web launch and feed setup
 - Mark Siazon | built | FlowFit
@@ -116,9 +116,9 @@ Generated from llms-index.json - updated 2026-06-25
 - Case study: https://www.marksiazon.dev/projects/resqlink
 - Repo: https://github.com/UMakLumen/ResQLinkWeb
 
-### LexInSight
+### LexInsights
 - Focus: AI legal compliance chat
-- Case study: https://www.marksiazon.dev/projects/lexinsight
+- Case study: https://www.marksiazon.dev/projects/lexinsights
 - Live: https://lexiph.vercel.app
 - Repo: https://github.com/Iron-Mark/Hackathon-LexInsights
 
