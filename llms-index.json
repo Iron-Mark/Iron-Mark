@@ -157,9 +157,9 @@
       "focus": "Offline-first emergency response platform"
     },
     {
-      "name": "LexInSight",
-      "slug": "lexinsight",
-      "caseStudy": "https://www.marksiazon.dev/projects/lexinsight",
+      "name": "LexInsights",
+      "slug": "lexinsights",
+      "caseStudy": "https://www.marksiazon.dev/projects/lexinsights",
       "live": "https://lexiph.vercel.app",
       "repo": "https://github.com/Iron-Mark/Hackathon-LexInsights",
       "focus": "AI legal compliance chat"
@@ -576,10 +576,10 @@
     [
       "Mark Siazon",
       "built",
-      "LexInSight"
+      "LexInsights"
     ],
     [
-      "LexInSight",
+      "LexInsights",
       "focusesOn",
       "AI legal compliance chat"
     ],

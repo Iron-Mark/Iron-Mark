@@ -458,7 +458,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -594,7 +594,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -740,7 +740,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -962,7 +962,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1167,7 +1167,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1686,7 +1686,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -1906,7 +1906,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -2390,9 +2390,9 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "url": "https://www.marksiazon.dev/projects/lexinsight",
+          "url": "https://www.marksiazon.dev/projects/lexinsights",
           "item": {
-            "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+            "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
           }
         },
         {
@@ -2656,7 +2656,7 @@
       "url": "https://iron-mark.github.io/Iron-Mark/#featured-work",
       "description": "Visible featured project list for Mark Siazon product, AI, mobile, Web3, and client web work.",
       "abstract": "Visible featured project list for Mark Siazon product, AI, mobile, Web3, and client web work.",
-      "text": "HireProof: AI trust and safety for job seekers; Stellaroid Earn: Web3 credential proof on Stellar testnet; ResQLink: Offline-first emergency response platform; LexInSight: AI legal compliance chat; Good To Live: Client podcast web launch and feed setup; FlowFit: Wear OS health and sensor companion; PalengkePay: Stellar fintech PWA for wet markets; GawainYah: MiniPay AI utility with payment guardrails; BaybayInscribe: Baybayin ML and cultural education UX",
+      "text": "HireProof: AI trust and safety for job seekers; Stellaroid Earn: Web3 credential proof on Stellar testnet; ResQLink: Offline-first emergency response platform; LexInsights: AI legal compliance chat; Good To Live: Client podcast web launch and feed setup; FlowFit: Wear OS health and sensor companion; PalengkePay: Stellar fintech PWA for wet markets; GawainYah: MiniPay AI utility with payment guardrails; BaybayInscribe: Baybayin ML and cultural education UX",
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -2688,7 +2688,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -2965,7 +2965,7 @@
       "url": "https://iron-mark.github.io/Iron-Mark/#knowledge-graph",
       "description": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
       "abstract": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
-      "text": "Mark Siazon | isA | Product Designer; Mark Siazon | isA | Full-Stack Developer; Mark Siazon | isA | Product Engineer; Mark Siazon | isA | UI/UX Designer; Mark Siazon | isA | Front-end Specialist; Mark Siazon | basedIn | Philippines; Mark Siazon | serves | Philippines; Mark Siazon | serves | Southeast Asia; Mark Siazon | serves | remote; Mark Siazon | built | HireProof; HireProof | focusesOn | AI trust and safety for job seekers; Mark Siazon | built | Stellaroid Earn; Stellaroid Earn | focusesOn | Web3 credential proof on Stellar testnet; Mark Siazon | built | ResQLink; ResQLink | focusesOn | Offline-first emergency response platform; ResQLink | won | UMak InfotechOlympics 2025 Android Productivity Champion; Mark Siazon | built | LexInSight; LexInSight | focusesOn | AI legal compliance chat; Mark Siazon | built | Good To Live; Good To Live | focusesOn | Client podcast web launch and feed setup; Mark Siazon | built | FlowFit; FlowFit | focusesOn | Wear OS health and sensor companion; Mark Siazon | built | PalengkePay; PalengkePay | focusesOn | Stellar fintech PWA for wet markets; Mark Siazon | built | GawainYah; GawainYah | focusesOn | MiniPay AI utility with payment guardrails; Mark Siazon | built | BaybayInscribe; BaybayInscribe | focusesOn | Baybayin ML and cultural education UX; BaybayInscribe | won | InfotechOlympics 2024 Android winner; Mark Siazon | maintains | qwen-ui-lab; qwen-ui-lab | focusesOn | Qwen3-VL React UI lab with Tailwind and Next.js; Mark Siazon | maintains | Smart Profile; Smart Profile | focusesOn | AI credentials SaaS prototype with Supabase; Mark Siazon | maintains | Kudlit; Kudlit | focusesOn | Flutter Baybayin learning app for Android release; Mark Siazon | maintains | Pulse; Pulse | focusesOn | Wear OS GPS and heart-rate telemetry companion; Mark Siazon | maintains | STACK.md; Stellaroid Earn | ranked | Stellar bootcamp Top 5 of 105; STACK.md | lists | full stack reference",
+      "text": "Mark Siazon | isA | Product Designer; Mark Siazon | isA | Full-Stack Developer; Mark Siazon | isA | Product Engineer; Mark Siazon | isA | UI/UX Designer; Mark Siazon | isA | Front-end Specialist; Mark Siazon | basedIn | Philippines; Mark Siazon | serves | Philippines; Mark Siazon | serves | Southeast Asia; Mark Siazon | serves | remote; Mark Siazon | built | HireProof; HireProof | focusesOn | AI trust and safety for job seekers; Mark Siazon | built | Stellaroid Earn; Stellaroid Earn | focusesOn | Web3 credential proof on Stellar testnet; Mark Siazon | built | ResQLink; ResQLink | focusesOn | Offline-first emergency response platform; ResQLink | won | UMak InfotechOlympics 2025 Android Productivity Champion; Mark Siazon | built | LexInsights; LexInsights | focusesOn | AI legal compliance chat; Mark Siazon | built | Good To Live; Good To Live | focusesOn | Client podcast web launch and feed setup; Mark Siazon | built | FlowFit; FlowFit | focusesOn | Wear OS health and sensor companion; Mark Siazon | built | PalengkePay; PalengkePay | focusesOn | Stellar fintech PWA for wet markets; Mark Siazon | built | GawainYah; GawainYah | focusesOn | MiniPay AI utility with payment guardrails; Mark Siazon | built | BaybayInscribe; BaybayInscribe | focusesOn | Baybayin ML and cultural education UX; BaybayInscribe | won | InfotechOlympics 2024 Android winner; Mark Siazon | maintains | qwen-ui-lab; qwen-ui-lab | focusesOn | Qwen3-VL React UI lab with Tailwind and Next.js; Mark Siazon | maintains | Smart Profile; Smart Profile | focusesOn | AI credentials SaaS prototype with Supabase; Mark Siazon | maintains | Kudlit; Kudlit | focusesOn | Flutter Baybayin learning app for Android release; Mark Siazon | maintains | Pulse; Pulse | focusesOn | Wear OS GPS and heart-rate telemetry companion; Mark Siazon | maintains | STACK.md; Stellaroid Earn | ranked | Stellar bootcamp Top 5 of 105; STACK.md | lists | full stack reference",
       "about": {
         "@id": "https://www.marksiazon.dev/#person"
       },
@@ -3018,7 +3018,7 @@
           "@id": "https://www.marksiazon.dev/projects/resqlink#project"
         },
         {
-          "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+          "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
         },
         {
           "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -4126,8 +4126,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "25238 bytes",
-      "sha256": "c91f7835d53fdce08099a8afad053d437ecc2cacf1e33e06fd891c15726ced4c",
+      "contentSize": "25243 bytes",
+      "sha256": "0dc81aee7cba49bd0b1316a2765d8c9b9236eb69c72a280d9fa283745ccdc75f",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4177,8 +4177,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "7854 bytes",
-      "sha256": "4d047e37480fa682f6790c1a89e93c15f77e7960c3ff83335f5e8d524b789e67",
+      "contentSize": "7856 bytes",
+      "sha256": "1ba71605128319557d877bc9f203538b2b0571b9fbe38e13deb03abf4a5690e2",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4228,8 +4228,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "12305 bytes",
-      "sha256": "3601e5657e3cba447555fd87b5d538dbc228e42960ce7502cbb278793a7480cc",
+      "contentSize": "12307 bytes",
+      "sha256": "561fd21318f820f188d91ac264d0119b565c19887020505fdf0ee0a79b074c24",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4279,8 +4279,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "16894 bytes",
-      "sha256": "9dd2987e2d3a4b3ef9bbcc4ffbaee0a82cc9484ceb8722034249857bfc1f2b5d",
+      "contentSize": "16898 bytes",
+      "sha256": "0828de24e19625ccd584c37ad22362d57c5a3e30cd858c03d0c2682f8d02331e",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4432,8 +4432,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "3281 bytes",
-      "sha256": "e7ef0640f532f8b07529a9ee900f26777222a6efcf56b01a09cb22634f177f84",
+      "contentSize": "3283 bytes",
+      "sha256": "2655129c321d06c93689cb5bea9f0c4f4fe17f617071f0f26ab755e2cbb4bfd6",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4534,8 +4534,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "2194 bytes",
-      "sha256": "f4df10734f0ded9bc2cb7bf6063405f2f77d18616c9ad17419fbdc21af2f6990",
+      "contentSize": "2196 bytes",
+      "sha256": "289c766b3d74a1337e971e6d9feb41edad9d02e077c01b03aba2c88dc3e4b8ce",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4940,8 +4940,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "6358 bytes",
-      "sha256": "004311e0a3b8f55ac3ec8935da6cb2495f410dc09b5378b9bb73b02edcc79717",
+      "contentSize": "6360 bytes",
+      "sha256": "58b64ad177f942b9fe2b6f306198b70b2846ec3e6b1b87c8cfe21780a44e6dba",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4991,8 +4991,8 @@
       "encodingFormat": "application/xml",
       "description": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
       "abstract": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
-      "contentSize": "5461 bytes",
-      "sha256": "2aef3e8d64bd8bb020b1f6450781f4bb1208ac8d07de9b2402286c24abd884a2",
+      "contentSize": "5462 bytes",
+      "sha256": "9d887e8765ba736093dcf199282001d7d7115f07a04d7f62fc10f1acc1a14092",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -5431,10 +5431,10 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://www.marksiazon.dev/projects/lexinsight#project",
-      "name": "LexInSight",
-      "url": "https://www.marksiazon.dev/projects/lexinsight",
-      "mainEntityOfPage": "https://www.marksiazon.dev/projects/lexinsight",
+      "@id": "https://www.marksiazon.dev/projects/lexinsights#project",
+      "name": "LexInsights",
+      "url": "https://www.marksiazon.dev/projects/lexinsights",
+      "mainEntityOfPage": "https://www.marksiazon.dev/projects/lexinsights",
       "description": "AI legal compliance chat",
       "abstract": "AI legal compliance chat",
       "creator": {
@@ -5460,7 +5460,7 @@
         "https://github.com/Iron-Mark/Hackathon-LexInsights"
       ],
       "keywords": [
-        "lexinsight",
+        "lexinsights",
         "AI legal compliance chat"
       ],
       "citation": [
@@ -5489,22 +5489,22 @@
       "sdDatePublished": "2026-06-25",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg#image",
-      "name": "LexInSight project cover image",
-      "caption": "LexInSight project cover image",
-      "description": "LexInSight project cover image for AI legal compliance chat.",
-      "abstract": "LexInSight project cover image for AI legal compliance chat.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsight/cover.svg",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg#image",
+      "name": "LexInsights project cover image",
+      "caption": "LexInsights project cover image",
+      "description": "LexInsights project cover image for AI legal compliance chat.",
+      "abstract": "LexInsights project cover image for AI legal compliance chat.",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.svg",
       "encodingFormat": "image/svg+xml",
-      "contentSize": "650 bytes",
-      "sha256": "0c2b71e579f2591c3611dcb12ca148482bff26487f5e2d52dbb19af25538ef7f",
+      "contentSize": "652 bytes",
+      "sha256": "1cf86879976b9636524a79519014629f5a0b170084604495da542cc948321309",
       "inLanguage": "en",
       "dateModified": "2026-06-25",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -5537,10 +5537,10 @@
       "sdDatePublished": "2026-06-25",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
-        "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+        "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
       },
       "isPartOf": {
-        "@id": "https://www.marksiazon.dev/projects/lexinsight#project"
+        "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
       }
     },
     {
