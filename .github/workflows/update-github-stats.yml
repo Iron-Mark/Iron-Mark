@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   update-stats:
@@ -52,11 +53,24 @@ jobs:
       - name: Staticize generated SVG cards
         run: python src/scripts/staticize_github_svgs.py
 
-      - name: Commit updated widgets to dev
+      - name: Open stats PR if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          branch="automation/github-stats-update"
+          title="Update GitHub profile stats cards"
+          body="Automated stats card refresh from the Update GitHub Stats workflow."
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg
           git diff --staged --quiet && echo "No changes" && exit 0
-          git commit -m "Update GitHub profile stats cards"
-          git push origin HEAD:dev
+          git switch -c "$branch"
+          git commit -m "$title"
+          git push --force-with-lease origin "$branch"
+
+          if gh pr view "$branch" --json url >/dev/null 2>&1; then
+            gh pr edit "$branch" --title "$title" --body "$body"
+          else
+            gh pr create --base dev --head "$branch" --title "$title" --body "$body"
+          fi
