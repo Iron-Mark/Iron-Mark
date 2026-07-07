@@ -70,7 +70,7 @@
   <tr>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer" aria-label="LexInsights case study">
-        <img src="assets/projects/lexinsights/cover.svg" width="100%" height="140" alt="LexInsights"/>
+        <img src="assets/projects/lexinsights/cover.png" width="100%" height="140" alt="LexInsights"/>
       </a><br><img src="assets/projects/lexinsights/icon.png" alt="LexInsights icon" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/lexinsights" rel="noopener noreferrer">LexInsights</a></b><br><sub>AI legal compliance chat</sub><br><sub><a href="https://lexiph.vercel.app" rel="noopener noreferrer" aria-label="LexInsights live app">Live ↗</a> · <a href="https://github.com/Iron-Mark/Hackathon-LexInsights" rel="noopener noreferrer" aria-label="LexInsights repository">Repo ↗</a></sub>
     </td>
     <td align="center" width="33%">
