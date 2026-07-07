@@ -47,8 +47,17 @@ jobs:
 
       - name: Generate contribution streak card
         run: |
-          curl -sL "https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB" \
-            -o assets/github/streak.svg
+          url="https://streak-stats.demolab.com/?user=Iron-Mark&theme=react&hide_border=true&background=0B0F14&ring=8B5CF6&fire=8B5CF6&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=E5E7EB"
+          for attempt in 1 2 3; do
+            curl -sL "$url" -o assets/github/streak.svg
+            if ! grep -q "Failed to retrieve contributions" assets/github/streak.svg; then
+              exit 0
+            fi
+            echo "Attempt $attempt: streak-stats returned an error card, retrying..."
+            sleep 10
+          done
+          echo "::error::streak-stats.demolab.com kept returning an error card after 3 attempts"
+          exit 1
 
       - name: Staticize generated SVG cards
         run: python src/scripts/staticize_github_svgs.py
@@ -69,8 +78,9 @@ jobs:
           git commit -m "$title"
           git push --force-with-lease origin "$branch"
 
-          if gh pr view "$branch" --json url >/dev/null 2>&1; then
-            gh pr edit "$branch" --title "$title" --body "$body"
+          open_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+          if [ -n "$open_pr" ]; then
+            gh pr edit "$open_pr" --title "$title" --body "$body"
           else
             gh pr create --base dev --head "$branch" --title "$title" --body "$body"
           fi
