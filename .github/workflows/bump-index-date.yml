@@ -70,8 +70,9 @@ jobs:
           git commit -m "$title"
           git push --force-with-lease origin "$branch"
 
-          if gh pr view "$branch" --json url >/dev/null 2>&1; then
-            gh pr edit "$branch" --title "$title" --body "$body"
+          open_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+          if [ -n "$open_pr" ]; then
+            gh pr edit "$open_pr" --title "$title" --body "$body"
           else
             gh pr create --base main --head "$branch" --title "$title" --body "$body"
           fi
