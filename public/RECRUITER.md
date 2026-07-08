@@ -1,4 +1,4 @@
-# Recruiter brief — Mark Siazon (@Iron-Mark)
+# Recruiter brief: Mark Siazon (@Iron-Mark)
 
 Last updated: 2026-06-20
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
@@ -8,7 +8,7 @@ Last updated: 2026-06-20
 
 ## One-line summary
 
-Product designer and full-stack developer in the Philippines who ships case-study-backed work in AI trust and safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
+Product designer & full-stack developer in the Philippines who ships case-study-backed work in AI trust & safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
 
 ## Open to
 
@@ -22,7 +22,7 @@ Product designer and full-stack developer in the Philippines who ships case-stud
 
 **Engagement:** contract or full-time · **Location:** Philippines · **Remote:** yes
 
-## 60-second screen — start here
+## 60-second screen: start here
 
 1. **GitHub profile:** https://github.com/Iron-Mark (README + activity widgets)
 2. **Portfolio hub:** https://www.marksiazon.dev/projects
@@ -39,9 +39,9 @@ Product designer and full-stack developer in the Philippines who ships case-stud
 
 ## Verified achievements
 
-- **UMak InfotechOlympics 2025** — Android App Development Productivity Champion (ResQLink, Team Lumiere)
-- **InfotechOlympics 2024** — Android App Development winner (BaybayInscribe, Team GILAS Tech)
-- **Stellar bootcamp** — Top 5 of 105 teams (Stellaroid Earn)
+- **UMak InfotechOlympics 2025**: Android App Development Productivity Champion (ResQLink, Team Lumiere)
+- **InfotechOlympics 2024**: Android App Development winner (BaybayInscribe, Team GILAS Tech)
+- **Stellar bootcamp**: Top 5 of 105 teams (Stellaroid Earn)
 
 Details: https://www.marksiazon.dev/achievements
 

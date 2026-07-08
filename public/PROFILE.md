@@ -1,11 +1,11 @@
-# Mark Siazon — Profile (plain markdown)
+# Mark Siazon: Profile (plain markdown)
 
 Last updated: 2026-06-20
 **Visual profile:** [README.md](../README.md) · **Portfolio:** https://www.marksiazon.dev
 
 ---
 
-Mark Siazon is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI trust and safety, mobile (Flutter, Kotlin, Wear OS), and Web3 (Stellar, Celo, Soroban, MiniPay).
+Mark Siazon is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI trust & safety, mobile (Flutter, Kotlin, Wear OS), and Web3 (Stellar, Celo, Soroban, MiniPay).
 
 **Open to:** product design · full-stack engineering · AI workflow roles · contract or full-time · Philippines & remote
 
@@ -19,15 +19,15 @@ Mark Siazon is a product designer and full-stack developer based in the Philippi
 
 ## Featured work
 
-1. **HireProof** — AI trust & safety · https://www.marksiazon.dev/projects/hireproof
-2. **Stellaroid Earn** — Web3 credentials · https://www.marksiazon.dev/projects/stellaroid-earn
-3. **ResQLink** — Offline-first emergency · https://www.marksiazon.dev/projects/resqlink
-4. **LexInsights** — AI legal chat · https://www.marksiazon.dev/projects/lexinsights
-5. **Good To Live** — Client web launch · https://www.marksiazon.dev/projects/good-to-live
-6. **FlowFit** — Wear OS · https://www.marksiazon.dev/projects/flowfit
-7. **PalengkePay** — Stellar fintech PWA · https://www.marksiazon.dev/projects/palengkepay
-8. **GawainYah** — MiniPay AI · https://www.marksiazon.dev/projects/gawainyah
-9. **BaybayInscribe** — Baybayin ML · https://www.marksiazon.dev/projects/baybayinscribe
+1. **HireProof**: AI trust & safety · https://www.marksiazon.dev/projects/hireproof
+2. **Stellaroid Earn**: Web3 credentials · https://www.marksiazon.dev/projects/stellaroid-earn
+3. **ResQLink**: Offline-first emergency · https://www.marksiazon.dev/projects/resqlink
+4. **LexInsights**: AI legal chat · https://www.marksiazon.dev/projects/lexinsights
+5. **Good To Live**: Client web launch · https://www.marksiazon.dev/projects/good-to-live
+6. **FlowFit**: Wear OS · https://www.marksiazon.dev/projects/flowfit
+7. **PalengkePay**: Stellar fintech PWA · https://www.marksiazon.dev/projects/palengkepay
+8. **GawainYah**: MiniPay AI · https://www.marksiazon.dev/projects/gawainyah
+9. **BaybayInscribe**: Baybayin ML · https://www.marksiazon.dev/projects/baybayinscribe
 
 ## Achievements
 

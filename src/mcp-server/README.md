@@ -1,8 +1,8 @@
 # Iron-Mark Profile MCP Server
 
-Optional [Model Context Protocol](https://modelcontextprotocol.io) server exposing Mark Siazon's GitHub profile index (`Iron-Mark/Iron-Mark`) to AI agents — tools, resources, and prompts backed by `llms-index.json`, `public/FAQ.md`, and related files.
+Optional [Model Context Protocol](https://modelcontextprotocol.io) server exposing Mark Siazon's GitHub profile index (`Iron-Mark/Iron-Mark`) to AI agents: tools, resources, and prompts backed by `llms-index.json`, `public/FAQ.md`, and related files.
 
-## Quick start (stdio — local)
+## Quick start (stdio, local)
 
 From the **repo root**:
 
@@ -96,7 +96,7 @@ Install first: `pip install -e /path/to/Iron-Mark/src/mcp-server`
 
 ## Prompts
 
-- **`evaluate_for_role`** — hiring evaluation prompt with entity, FAQ hits, and flagship projects
+- **`evaluate_for_role`**: hiring evaluation prompt with entity, FAQ hits, and flagship projects
 
 ## Data source
 
