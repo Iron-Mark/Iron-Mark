@@ -14,6 +14,10 @@ TODAY = datetime.now(PROJECT_TIMEZONE).date().isoformat()
 LAST_UPDATED_DOCS = (
     ROOT / "public/FAQ.md",
     ROOT / "public/llms-full.txt",
+    ROOT / "public/RECRUITER.md",
+    ROOT / "public/PROFILE.md",
+    ROOT / "public/PROOF.md",
+    ROOT / "llms.txt",
 )
 
 

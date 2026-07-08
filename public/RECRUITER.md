@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-06-20
+Last updated: 2026-07-09
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -20,7 +20,7 @@ Product designer & full-stack developer in the Philippines who ships case-study-
 | Mobile | Flutter, Kotlin, Wear OS companions |
 | Web3 proof | Stellar, Soroban, Celo MiniPay, testnet-first fintech |
 
-**Engagement:** contract or full-time · **Location:** Philippines · **Remote:** yes
+**Engagement:** contract or full-time · **Location:** Philippines (PHT, UTC+8) · **Remote:** yes
 
 ## 60-second screen: start here
 

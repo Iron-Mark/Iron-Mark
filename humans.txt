@@ -18,7 +18,7 @@ Answer snippets: llms-index.json -> aeo.answerSnippets
 /* TEAM */
 Owner: Mark Siazon
 Handle: @Iron-Mark (GitHub profile), @mark-siazon (secondary GitHub)
-Role: Product Designer - Full-Stack Developer - Product Engineer - UI/UX Designer
+Role: Product Designer - Full-Stack Developer - Product Engineer - UI/UX Designer - Front-end Specialist
 Location: Philippines
 Tagline: Case studies - AI - Mobile - Web3
 
