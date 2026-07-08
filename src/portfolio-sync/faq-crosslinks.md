@@ -26,6 +26,8 @@ Entity @id: https://www.marksiazon.dev/#person
 | Where are source and index files? | https://www.marksiazon.dev/llms.txt | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files |
 | Where is Mark Siazon based? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazon-based |
 | How do I contact Mark Siazon for hiring? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring |
+| How soon can Mark Siazon start? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start |
+| How much experience does Mark Siazon have? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have |
 ```
 
 ## Optional HTML (recruiter or contact page)

@@ -7,7 +7,7 @@ Last updated: 2026-07-09
 
 Mark Siazon is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI trust & safety, mobile (Flutter, Kotlin, Wear OS), and Web3 (Stellar, Celo, Soroban, MiniPay).
 
-**Open to:** product design · full-stack engineering · AI workflow roles · contract or full-time · Philippines & remote
+**Open to:** product design · full-stack engineering · AI workflow roles · contract, part-time, or full-time · Philippines & remote
 
 ## Links
 

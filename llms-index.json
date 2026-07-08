@@ -28,6 +28,11 @@
       "addressCountry": "PH",
       "addressRegion": "Philippines"
     },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Makati",
+      "sameAs": "https://www.umak.edu.ph/"
+    },
     "sameAs": [
       "https://github.com/Iron-Mark",
       "https://github.com/mark-siazon",
@@ -63,6 +68,7 @@
     ],
     "engagement": [
       "contract",
+      "part-time",
       "full-time"
     ],
     "location": "Philippines",
@@ -372,7 +378,7 @@
       },
       {
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Yes. Mark Siazon is currently open to product design and full-stack roles on a contract or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "answer": "Yes. Mark Siazon is currently open to product design and full-stack roles on a contract, part-time, or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
@@ -380,7 +386,7 @@
       },
       {
         "question": "What roles is Mark Siazon open to?",
-        "answer": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "answer": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract, part-time, or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
@@ -496,6 +502,22 @@
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact",
           "https://www.linkedin.com/in/mark-siazon/"
+        ]
+      },
+      {
+        "question": "How soon can Mark Siazon start?",
+        "answer": "Mark Siazon can typically start within about two weeks, or immediately for freelance and contract work. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "sources": [
+          "https://www.marksiazon.dev/recruiter",
+          "https://www.marksiazon.dev/contact"
+        ]
+      },
+      {
+        "question": "How much experience does Mark Siazon have?",
+        "answer": "Mark Siazon has around five years of combined experience across academic, freelance, organizational, volunteer, and professional work, having taught himself web development since before college. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "sources": [
+          "https://www.marksiazon.dev/recruiter",
+          "https://www.marksiazon.dev"
         ]
       }
     ]
