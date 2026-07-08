@@ -1,4 +1,4 @@
-# Mark Siazon — Frequently Asked Questions
+# Mark Siazon: Frequently Asked Questions
 
 Last updated: 2026-06-25
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  

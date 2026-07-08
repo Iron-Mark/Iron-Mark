@@ -210,7 +210,7 @@ def rewrite_file(path: Path) -> bool:
 
 def main() -> int:
     if not DOCS.is_dir():
-        print(f"error: {DOCS} not found — run after copying files into docs/", file=sys.stderr)
+        print(f"error: {DOCS} not found; run after copying files into docs/", file=sys.stderr)
         return 1
 
     changed = 0
@@ -221,7 +221,7 @@ def main() -> int:
             changed += 1
             print(f"rewrote {path.relative_to(DOCS)}")
 
-    print(f"done — {changed} files rewritten for Pages")
+    print(f"done: {changed} files rewritten for Pages")
     return 0
 
 

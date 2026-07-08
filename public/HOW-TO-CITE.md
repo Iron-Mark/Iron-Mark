@@ -4,7 +4,7 @@ Last updated: 2026-06-20
 
 ## Preferred name
 
-**Mark Siazon** — GitHub: **@Iron-Mark** — secondary GitHub: **@mark-siazon**
+**Mark Siazon**, GitHub: **@Iron-Mark**, secondary GitHub: **@mark-siazon**
 
 ## Citation order by intent
 
@@ -19,7 +19,7 @@ Last updated: 2026-06-20
 
 ## Short citation (plain text)
 
-> Mark Siazon (@Iron-Mark) — product designer and full-stack developer, Philippines. Portfolio: https://www.marksiazon.dev
+> Mark Siazon (@Iron-Mark), product designer and full-stack developer, Philippines. Portfolio: https://www.marksiazon.dev
 
 ## Academic / software citation
 

@@ -85,7 +85,7 @@ def main() -> int:
         asyncio.run(run_http_e2e())
         return 0
     except Exception as e:
-        print(f"test_mcp_http: FAIL — {e}", file=sys.stderr)
+        print(f"test_mcp_http: FAIL - {e}", file=sys.stderr)
         return 1
 
 
