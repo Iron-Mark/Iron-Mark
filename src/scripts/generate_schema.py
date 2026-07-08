@@ -1135,6 +1135,7 @@ def build_person_graph(data: dict[str, Any]) -> dict[str, Any]:
             "image": ref(pages_image_id),
             "email": person_email(data),
             "address": entity.get("address"),
+            "alumniOf": entity.get("alumniOf"),
             "sameAs": entity.get("sameAs", []),
             "knowsAbout": person_knows_about(data),
             "knowsLanguage": person_languages(),

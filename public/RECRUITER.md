@@ -20,7 +20,9 @@ Product designer & full-stack developer in the Philippines who ships case-study-
 | Mobile | Flutter, Kotlin, Wear OS companions |
 | Web3 proof | Stellar, Soroban, Celo MiniPay, testnet-first fintech |
 
-**Engagement:** contract or full-time · **Location:** Philippines (PHT, UTC+8) · **Remote:** yes
+**Engagement:** contract, part-time, or full-time · **Location:** Philippines (PHT, UTC+8) · **Remote:** yes
+
+**Experience:** ~5 years combined across academic, freelance, organizational, volunteer, and professional work — self-taught in web development since before college · **Notice:** ~2 weeks, or immediate for freelance/contract · **Rates:** on request
 
 ## 60-second screen: start here
 

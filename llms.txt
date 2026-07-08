@@ -24,7 +24,7 @@ Structured mirrors: [llms-index.json](llms-index.json) (structured index), [llms
 - [Recruiter brief](https://www.marksiazon.dev/recruiter): roles, engagement, and start-here proofs
 - [Contact form](https://www.marksiazon.dev/contact): direct contact for hiring
 
-Open to product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof systems - contract or full-time, Philippines and remote.
+Open to product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof systems - contract, part-time, or full-time, Philippines and remote.
 
 ## Hire and contact
 

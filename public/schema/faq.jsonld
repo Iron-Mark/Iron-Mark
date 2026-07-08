@@ -161,6 +161,12 @@
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have"
         }
       ],
       "hasPart": [
@@ -211,6 +217,12 @@
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have"
         }
       ],
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
@@ -378,7 +390,7 @@
           "value": "is-mark-siazon-available-for-hire-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire-answer"
         },
-        "text": "Yes. Mark Siazon is currently open to product design and full-stack roles on a contract or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "text": "Yes. Mark Siazon is currently open to product design and full-stack roles on a contract, part-time, or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
@@ -467,7 +479,7 @@
           "value": "what-roles-is-mark-siazon-open-to-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to-answer"
         },
-        "text": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "text": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract, part-time, or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
         "author": {
           "@id": "https://www.marksiazon.dev/#person"
         },
@@ -1664,6 +1676,184 @@
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact",
           "https://www.linkedin.com/in/mark-siazon/"
+        ],
+        "sdPublisher": {
+          "@type": "Person",
+          "@id": "https://www.marksiazon.dev/#person",
+          "name": "Mark Siazon",
+          "url": "https://www.marksiazon.dev"
+        },
+        "sdDatePublished": "2026-07-09",
+        "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+      }
+    },
+    {
+      "@type": "Question",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start",
+      "name": "How soon can Mark Siazon start?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ question",
+        "value": "how-soon-can-mark-siazon-start",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
+      "inLanguage": "en",
+      "dateModified": "2026-07-09",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev/contact"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-07-09",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start-answer",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Iron-Mark FAQ answer",
+          "value": "how-soon-can-mark-siazon-start-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start-answer"
+        },
+        "text": "Mark Siazon can typically start within about two weeks, or immediately for freelance and contract work. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "author": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "publisher": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "about": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start"
+        },
+        "inLanguage": "en",
+        "dateModified": "2026-07-09",
+        "isAccessibleForFree": true,
+        "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+        "citation": [
+          "https://www.marksiazon.dev/recruiter",
+          "https://www.marksiazon.dev/contact"
+        ],
+        "sdPublisher": {
+          "@type": "Person",
+          "@id": "https://www.marksiazon.dev/#person",
+          "name": "Mark Siazon",
+          "url": "https://www.marksiazon.dev"
+        },
+        "sdDatePublished": "2026-07-09",
+        "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+      }
+    },
+    {
+      "@type": "Question",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have",
+      "name": "How much experience does Mark Siazon have?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ question",
+        "value": "how-much-experience-does-mark-siazon-have",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#person"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
+      "inLanguage": "en",
+      "dateModified": "2026-07-09",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev/recruiter",
+        "https://www.marksiazon.dev"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#person",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-07-09",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have-answer",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Iron-Mark FAQ answer",
+          "value": "how-much-experience-does-mark-siazon-have-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have-answer"
+        },
+        "text": "Mark Siazon has around five years of combined experience across academic, freelance, organizational, volunteer, and professional work, having taught himself web development since before college. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "author": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "publisher": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "about": {
+          "@id": "https://www.marksiazon.dev/#person"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have"
+        },
+        "inLanguage": "en",
+        "dateModified": "2026-07-09",
+        "isAccessibleForFree": true,
+        "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+        "citation": [
+          "https://www.marksiazon.dev/recruiter",
+          "https://www.marksiazon.dev"
         ],
         "sdPublisher": {
           "@type": "Person",

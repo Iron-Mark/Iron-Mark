@@ -15,11 +15,11 @@ Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack deve
 
 ## What roles is Mark Siazon open to?
 
-Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter
+Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract, part-time, or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter
 
 ## Is Mark Siazon available for hire?
 
-Yes. Mark Siazon is currently open to product design and full-stack roles on a contract or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter
+Yes. Mark Siazon is currently open to product design and full-stack roles on a contract, part-time, or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter
 
 ## What is Mark Siazon's tech stack?
 
@@ -72,3 +72,11 @@ Mark Siazon is based in the Philippines and works remotely across Southeast Asia
 ## How do I contact Mark Siazon for hiring?
 
 Recruiter brief: https://www.marksiazon.dev/recruiter. Contact: https://www.marksiazon.dev/contact. Email: marksiazon.dev@gmail.com. LinkedIn: https://www.linkedin.com/in/mark-siazon/
+
+## How soon can Mark Siazon start?
+
+Mark Siazon can typically start within about two weeks, or immediately for freelance and contract work. Recruiter brief: https://www.marksiazon.dev/recruiter
+
+## How much experience does Mark Siazon have?
+
+Mark Siazon has around five years of combined experience across academic, freelance, organizational, volunteer, and professional work, having taught himself web development since before college. Recruiter brief: https://www.marksiazon.dev/recruiter

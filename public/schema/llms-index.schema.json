@@ -130,6 +130,27 @@
             }
           },
           "additionalProperties": false
+        },
+        "alumniOf": {
+          "type": "object",
+          "required": [
+            "@type",
+            "name"
+          ],
+          "properties": {
+            "@type": {
+              "const": "EducationalOrganization"
+            },
+            "name": {
+              "type": "string",
+              "minLength": 2
+            },
+            "sameAs": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "additionalProperties": false
         }
       },
       "additionalProperties": false
