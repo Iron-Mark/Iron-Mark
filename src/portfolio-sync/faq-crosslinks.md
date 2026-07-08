@@ -11,8 +11,9 @@ Entity @id: https://www.marksiazon.dev/#person
 | Question | Start on portfolio/source | Full answer (GitHub FAQ) |
 |----------|---------------------------|---------------------------|
 | Who is Mark Siazon? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon |
+| Is Mark Siazon available for hire? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire |
 | What roles is Mark Siazon open to? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to |
-| Where is Mark Siazon's full tech stack? | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazons-full-tech-stack |
+| What is Mark Siazon's tech stack? | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack |
 | How do I verify Mark Siazon's claims? | https://www.marksiazon.dev/proof / https://www.marksiazon.dev/projects | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims |
 | What is HireProof? | https://www.marksiazon.dev/projects/hireproof | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof |
 | What is ResQLink? | https://www.marksiazon.dev/projects/resqlink / https://www.marksiazon.dev/achievements | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink |
@@ -23,7 +24,7 @@ Entity @id: https://www.marksiazon.dev/#person
 | What awards has Mark Siazon won? | https://www.marksiazon.dev/achievements / https://www.marksiazon.dev/projects/stellaroid-earn | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won |
 | How should Mark Siazon be cited? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/proof | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited |
 | Where are source and index files? | https://www.marksiazon.dev/llms.txt | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files |
-| What geographic markets does Mark serve? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-geographic-markets-does-mark-serve |
+| Where is Mark Siazon based? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazon-based |
 | How do I contact Mark Siazon for hiring? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring |
 ```
 

@@ -39,7 +39,6 @@ PAGES_SITEMAP_ENTRIES = (
     ("LICENSE.md", "yearly", "0.5"),
     ("CITATION.cff", "yearly", "0.5"),
     ("humans.txt", "monthly", "0.75"),
-    ("robots.txt", "monthly", "0.55"),
     ("schema/person.jsonld", "monthly", "0.85"),
     ("schema/faq.jsonld", "monthly", "0.85"),
     ("schema/llms-index.schema.json", "monthly", "0.8"),

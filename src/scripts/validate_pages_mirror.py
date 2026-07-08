@@ -2398,7 +2398,6 @@ def validate_artifact(artifact: Path) -> list[str]:
         f"{PAGES_BASE}/schema/faq.jsonld",
         f"{PAGES_BASE}/schema/llms-index.schema.json",
         f"{PAGES_BASE}/humans.txt",
-        f"{PAGES_BASE}/robots.txt",
     }
     missing_locs = sorted(required_locs - set(locs))
     if missing_locs:

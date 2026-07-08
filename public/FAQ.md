@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-06-25
+Last updated: 2026-07-09
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#person
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -17,9 +17,13 @@ Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack deve
 
 Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter
 
-## Where is Mark Siazon's full tech stack?
+## Is Mark Siazon available for hire?
 
-Full stack reference with grouped tools and documentation links: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md and core stack on the profile README.
+Yes. Mark Siazon is currently open to product design and full-stack roles on a contract or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter
+
+## What is Mark Siazon's tech stack?
+
+Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 
 ## How do I verify Mark Siazon's claims?
 
@@ -61,9 +65,9 @@ Hiring context: https://www.marksiazon.dev/recruiter. Verification links: https:
 
 GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/llms-index.json, https://iron-mark.github.io/Iron-Mark/llms.txt, https://iron-mark.github.io/Iron-Mark/llms-full.txt, https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt, https://iron-mark.github.io/Iron-Mark/FAQ.md, https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json, https://iron-mark.github.io/Iron-Mark/schema/person.jsonld, and https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld. Portfolio: https://www.marksiazon.dev/llms.txt
 
-## What geographic markets does Mark serve?
+## Where is Mark Siazon based?
 
-Based in the Philippines; open to Southeast Asia and remote roles.
+Mark Siazon is based in the Philippines and works remotely across Southeast Asia and globally.
 
 ## How do I contact Mark Siazon for hiring?
 

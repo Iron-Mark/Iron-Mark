@@ -1,6 +1,6 @@
 # Mark Siazon: Full LLM Context (GitHub Profile + Portfolio)
 
-Last updated: 2026-06-25
+Last updated: 2026-07-09
 
 Plain-text source map for crawlers, search assistants, and retrieval systems. Summarizes the public GitHub profile README (this repo) and cross-links the case-study portfolio at marksiazon.dev. No private notes, secrets, or unverified claims.
 
@@ -109,7 +109,7 @@ For per-project evaluation briefs, proof boundaries, and verification dates, pre
 - Case study: https://www.marksiazon.dev/projects/resqlink
 - Repo: https://github.com/UMakLumen/ResQLinkWeb
 - Focus: Offline-first emergency response (Flutter mobile, React web, Fastify/Appwrite API)
-- Recognition: UMak InfotechOlympics Android Champion 2025 (Team Lumen)
+- Recognition: UMak InfotechOlympics 2025 Android App Development Productivity Champion (Team Lumiere)
 
 ### LexInsights
 - Case study: https://www.marksiazon.dev/projects/lexinsights
@@ -172,7 +172,7 @@ Tools indexed in STACK.md are grouped by domain:
 
 - Web: HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, React, Next.js, Astro, Svelte, Qwik, Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI, jQuery, Java, PHP, MySQL
 - Mobile: Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo
-- Backend: Node.js, Express, Fastify, FastAPI, PostgreSQL, MongoDB, Redis, Supabase
+- Backend: Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase
 - Web3: Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask
 - Deploy: Git, GitHub Actions CI/CD, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS
 - Game Dev: Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js

@@ -2,133 +2,135 @@
 
 > Product designer, full-stack developer, product engineer, UI/UX designer, and front-end specialist. Builds case-study-backed work across AI, mobile, Web3, and client web - portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-> **Source map:** [llms-index.json](llms-index.json) (structured) - [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded) - [FAQ.md](public/FAQ.md) (Q&A) - [llms-index.schema.json](public/schema/llms-index.schema.json) (contract) - [person.jsonld](public/schema/person.jsonld) / [faq.jsonld](public/schema/faq.jsonld) (Schema.org)
+Last updated: 2026-07-09
 
 Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/Next.js/Flutter/Kotlin -> APIs and Web3 proofs -> deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
+Structured mirrors: [llms-index.json](llms-index.json) (structured index), [llms-ctx-full.txt](public/llms-ctx-full.txt) (expanded context), [FAQ.md](public/FAQ.md) (Q&A), [llms-index.schema.json](public/schema/llms-index.schema.json) (contract), [person.jsonld](public/schema/person.jsonld) and [faq.jsonld](public/schema/faq.jsonld) (Schema.org).
+
 ## Canonical sources
 
-- Portfolio (primary): https://www.marksiazon.dev
-- Person entity @id: https://www.marksiazon.dev/#person
-- GitHub profile README (this repo): https://github.com/Iron-Mark/Iron-Mark
-- GitHub account: https://github.com/Iron-Mark
-- Secondary GitHub: https://github.com/mark-siazon
-- Full LLM context (this repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
-- Structured entity index (JSON): https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- Full LLM context (portfolio): https://www.marksiazon.dev/llms-full.txt
-- Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
+- [Portfolio (primary)](https://www.marksiazon.dev): canonical site and case studies
+- [Person entity @id](https://www.marksiazon.dev/#person): Schema.org identity anchor
+- [GitHub profile README](https://github.com/Iron-Mark/Iron-Mark): this repo, README and activity widgets
+- [GitHub account](https://github.com/Iron-Mark): primary account
+- [Secondary GitHub](https://github.com/mark-siazon): alternate account
+- [Full LLM context (repo)](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt): full narrative profile
+- [Structured entity index (JSON)](https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json): machine-readable master data
+- [Full LLM context (portfolio)](https://www.marksiazon.dev/llms-full.txt): narrative profile on the canonical site
 
 ## Availability
 
-- Open to: product design - full-stack engineering - AI workflow prototypes - mobile/Wear OS UX - Web3 systems
-- Engagement: contract or full-time - Philippines & remote
+- [Recruiter brief](https://www.marksiazon.dev/recruiter): roles, engagement, and start-here proofs
+- [Contact form](https://www.marksiazon.dev/contact): direct contact for hiring
 
-## Hire & contact
+Open to product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof systems - contract or full-time, Philippines and remote.
 
-- Recruiter brief (repo): [RECRUITER.md](public/RECRUITER.md)
-- Recruiter brief (live): https://www.marksiazon.dev/recruiter
-- Contact form: https://www.marksiazon.dev/contact
-- Email: marksiazon.dev@gmail.com
-- LinkedIn: https://www.linkedin.com/in/mark-siazon/
-- Proof matrix (verification boundaries): https://www.marksiazon.dev/proof
+## Hire and contact
+
+- [Recruiter brief (repo)](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/RECRUITER.md): 60-second recruiter screen
+- [Recruiter brief (live)](https://www.marksiazon.dev/recruiter): canonical hiring brief
+- [Contact form](https://www.marksiazon.dev/contact): message form
+- [Email](mailto:marksiazon.dev@gmail.com): marksiazon.dev@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/mark-siazon/): professional profile
+- [Proof matrix](https://www.marksiazon.dev/proof): verification boundaries and receipts
 
 ## Portfolio routes
 
-- Projects hub: https://www.marksiazon.dev/projects
-- Achievements: https://www.marksiazon.dev/achievements
-- Writing: https://www.marksiazon.dev/writing
-- Lab experiments: https://www.marksiazon.dev/lab
+- [Projects hub](https://www.marksiazon.dev/projects): all case studies
+- [Achievements](https://www.marksiazon.dev/achievements): awards and competition results
+- [Writing](https://www.marksiazon.dev/writing): technical articles
+- [Lab experiments](https://www.marksiazon.dev/lab): hackathon and prototype work
 
 ## Featured work (case studies)
 
-- HireProof - AI trust & safety for job seekers: https://www.marksiazon.dev/projects/hireproof
-- Stellaroid Earn - Web3 credential proof on Stellar: https://www.marksiazon.dev/projects/stellaroid-earn
-- ResQLink - Offline-first emergency response platform: https://www.marksiazon.dev/projects/resqlink
-- LexInsights - AI legal compliance chat: https://www.marksiazon.dev/projects/lexinsights - Live: https://lexiph.vercel.app
-- Good To Live - Client podcast web launch and feed setup: https://www.marksiazon.dev/projects/good-to-live
-- FlowFit - Wear OS health & sensor companion: https://www.marksiazon.dev/projects/flowfit
-- PalengkePay - Stellar fintech PWA for wet markets: https://www.marksiazon.dev/projects/palengkepay
-- GawainYah - MiniPay AI utility with payment guardrails: https://www.marksiazon.dev/projects/gawainyah
-- BaybayInscribe - Baybayin ML & cultural education UX: https://www.marksiazon.dev/projects/baybayinscribe - Model: https://huggingface.co/gilas/baybayinscribe
+- [HireProof](https://www.marksiazon.dev/projects/hireproof): AI trust and safety for job seekers - live at https://hireproof.tech/portfolio
+- [Stellaroid Earn](https://www.marksiazon.dev/projects/stellaroid-earn): Web3 credential proof on Stellar
+- [ResQLink](https://www.marksiazon.dev/projects/resqlink): offline-first emergency response platform
+- [LexInsights](https://www.marksiazon.dev/projects/lexinsights): AI legal compliance chat - live at https://lexiph.vercel.app
+- [Good To Live](https://www.marksiazon.dev/projects/good-to-live): client podcast web launch and feed setup
+- [FlowFit](https://www.marksiazon.dev/projects/flowfit): Wear OS health and sensor companion
+- [PalengkePay](https://www.marksiazon.dev/projects/palengkepay): Stellar fintech PWA for wet markets
+- [GawainYah](https://www.marksiazon.dev/projects/gawainyah): MiniPay AI utility with payment guardrails
+- [BaybayInscribe](https://www.marksiazon.dev/projects/baybayinscribe): Baybayin ML and cultural education UX - model at https://huggingface.co/gilas/baybayinscribe
 
-## Hackathon & lab (GitHub profile)
+## Hackathon and lab (GitHub profile)
 
-- qwen-ui-lab - AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js): https://www.marksiazon.dev/projects/qwen-ui-lab - Repo: https://github.com/Iron-Mark/qwen-ui-lab - Live: https://qwen-ui-lab.vercel.app
-- Smart Profile (AI credentials SaaS): https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System
-- Kudlit (Flutter Baybayin learning, Android release): https://www.marksiazon.dev/projects/kudlit
-- Pulse (Wear OS, GPS, heart-rate telemetry): https://www.marksiazon.dev/projects/pulse
+- [qwen-ui-lab](https://www.marksiazon.dev/projects/qwen-ui-lab): AI-assisted UI scaffolding (Qwen3-VL, React, Tailwind, Next.js) - repo https://github.com/Iron-Mark/qwen-ui-lab, live https://qwen-ui-lab.vercel.app
+- [Smart Profile](https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System): AI credentials SaaS
+- [Kudlit](https://www.marksiazon.dev/projects/kudlit): Flutter Baybayin learning, Android release - repo https://github.com/ACSADians/kudlit-app
+- [Pulse](https://www.marksiazon.dev/projects/pulse): Wear OS, GPS, heart-rate telemetry
 
 ## Achievements (proof)
 
-- UMak InfotechOlympics 2025 Android Productivity Champion - ResQLink (Team Lumiere): https://www.marksiazon.dev/achievements
-- InfotechOlympics 2024 Android App Development winner - BaybayInscribe (Team GILAS Tech): https://www.marksiazon.dev/achievements
-- Stellar bootcamp Top 5 of 105 teams - Stellaroid Earn: https://www.marksiazon.dev/projects/stellaroid-earn
+- [UMak InfotechOlympics 2025 Android Productivity Champion](https://www.marksiazon.dev/achievements): ResQLink (Team Lumiere)
+- [InfotechOlympics 2024 Android App Development winner](https://www.marksiazon.dev/achievements): BaybayInscribe (Team GILAS Tech)
+- [Stellar bootcamp Top 5 of 105 teams](https://www.marksiazon.dev/projects/stellaroid-earn): Stellaroid Earn
 
 ## Tech stack
 
-- **Full stack reference:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
-- **Core stack on profile README (16 tools):** Figma - React, Next.js, TypeScript, Tailwind CSS - Flutter, Kotlin - Cursor, GitHub Copilot, Claude - Stellar, Celo - Python, Supabase, GitHub Actions CI/CD, Docker
-- **Domains in STACK.md:** Web - Mobile - Backend - Web3 - Deploy - Game Dev - UI/UX - Creative - AI - AI-assisted development workflow
+- [Full stack reference (STACK.md)](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md): 113-tool reference grouped by domain
+
+Core stack on the profile README (16 tools): Figma - React, Next.js, TypeScript, Tailwind CSS - Flutter, Kotlin - Cursor, GitHub Copilot, Claude - Stellar, Celo - Python, Supabase, GitHub Actions CI/CD, Docker. Domains in STACK.md: Web, Mobile, Backend, Web3, Deploy, Game Dev, UI/UX, Creative, AI, and AI-assisted development workflow.
 
 ## FAQ
 
-- [FAQ.md](public/FAQ.md): 15+ question/answer pairs for hiring, projects, stack, and citation
-- [PROOF.md](public/PROOF.md): README claims mapped to verification URLs
-- [HOW-TO-CITE.md](public/HOW-TO-CITE.md): Citation guide for humans and AI
+- [FAQ.md](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md): 16 question/answer pairs for hiring, projects, stack, and citation
+- [PROOF.md](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md): README claims mapped to verification URLs
+- [HOW-TO-CITE.md](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md): citation guide for humans and AI
 
 ## Writing
 
-- Design system switcher in Next.js: https://www.marksiazon.dev/writing/design-system-switcher
-- Offline-first emergency UX (ResQLink): https://www.marksiazon.dev/writing/offline-first-ux
+- [Design system switcher in Next.js](https://www.marksiazon.dev/writing/design-system-switcher): building a runtime theme switcher
+- [Offline-first emergency UX (ResQLink)](https://www.marksiazon.dev/writing/offline-first-ux): designing for zero connectivity
 
-## Social & community
+## Social and community
 
-- Frontend Mentor: https://www.frontendmentor.io/profile/Iron-Mark
-- TikTok: https://www.tiktok.com/@iron_markk
+- [Frontend Mentor](https://www.frontendmentor.io/profile/Iron-Mark): front-end challenge profile
+- [TikTok](https://www.tiktok.com/@iron_markk): short-form build content
 
 ## Topics
 
-product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, case study portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, STACK.md, tech stack reference, llms-index.json
+product design, UI/UX, full-stack development, front-end engineering, React, Next.js, TypeScript, Flutter, Kotlin, Wear OS, AI workflows, trust and safety, ML product UX, Web3, Stellar, Celo, Soroban, Supabase, hackathon builds, case study portfolio, Philippines developer, design systems, Figma, mobile apps, fintech PWA, cultural education technology, Baybayin, tech stack reference
 
-## Search and location hints
+## Optional
 
-- Who: Mark Siazon (@Iron-Mark) - product designer and full-stack developer, Philippines
-- Hire context: https://www.marksiazon.dev/recruiter
-- Verification boundaries: https://www.marksiazon.dev/proof
-- Structured JSON index: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- Location focus: Philippines, Southeast Asia, remote-friendly
-
-## Source and index files
+Deep source index and mirrors - safe to skip in short context.
 
 ### Repo source files
-- **Structured entity index (JSON):** https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
-- LLM manifest: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt
-- Robots: https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt
-- Sitemap source: https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml
-- Humans: https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt
 
-### public/ (content)
-- **Full LLM context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt
-- **Expanded context:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt
-- **FAQ.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md
-- **STACK.md:** https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
-- JSON Schema contract: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json
-- Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
-- Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
+- [Structured entity index (JSON)](https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json): machine-readable master data
+- [LLM manifest](https://github.com/Iron-Mark/Iron-Mark/blob/main/llms.txt): this file
+- [Robots](https://github.com/Iron-Mark/Iron-Mark/blob/main/robots.txt): crawler directives
+- [Sitemap source](https://github.com/Iron-Mark/Iron-Mark/blob/main/sitemap.xml): URL index
+- [Humans](https://github.com/Iron-Mark/Iron-Mark/blob/main/humans.txt): authorship and entity block
+
+### public/ content
+
+- [Full LLM context](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-full.txt): full narrative
+- [Expanded context](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/llms-ctx-full.txt): machine-expanded index
+- [FAQ.md](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md): question and answer pairs
+- [STACK.md](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md): full tech stack reference
+- [JSON Schema contract](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/llms-index.schema.json): index schema
+- [Schema.org Person graph](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld): entity JSON-LD
+- [Schema.org FAQ graph](https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld): FAQPage JSON-LD
 
 ### GitHub Pages mirror (crawlable)
-- Home: https://iron-mark.github.io/Iron-Mark/
-- LLM manifest: https://iron-mark.github.io/Iron-Mark/llms.txt
-- Structured entity index: https://iron-mark.github.io/Iron-Mark/llms-index.json
-- Expanded context: https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt
-- FAQ: https://iron-mark.github.io/Iron-Mark/FAQ.md
-- Schema graphs: https://iron-mark.github.io/Iron-Mark/schema/person.jsonld - https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld
-- Sitemap: https://iron-mark.github.io/Iron-Mark/sitemap.xml
-- Robots: https://iron-mark.github.io/Iron-Mark/robots.txt
+
+- [Home](https://iron-mark.github.io/Iron-Mark/): rendered profile index
+- [LLM manifest](https://iron-mark.github.io/Iron-Mark/llms.txt): this file on Pages
+- [Structured entity index](https://iron-mark.github.io/Iron-Mark/llms-index.json): JSON on Pages
+- [Expanded context](https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt): expanded index on Pages
+- [FAQ](https://iron-mark.github.io/Iron-Mark/FAQ.md): FAQ on Pages
+- [Person schema](https://iron-mark.github.io/Iron-Mark/schema/person.jsonld): Person JSON-LD on Pages
+- [FAQ schema](https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld): FAQPage JSON-LD on Pages
+- [Sitemap](https://iron-mark.github.io/Iron-Mark/sitemap.xml): Pages sitemap
+- [Robots](https://iron-mark.github.io/Iron-Mark/robots.txt): Pages crawler directives
 
 ### Portfolio
-- Sitemap: https://www.marksiazon.dev/sitemap.xml
-- RSS: https://www.marksiazon.dev/feed.xml
-- JSON Feed: https://www.marksiazon.dev/feed.json
-- Robots: https://www.marksiazon.dev/robots.txt
-- Humans: https://www.marksiazon.dev/humans.txt
+
+- [Sitemap](https://www.marksiazon.dev/sitemap.xml): portfolio sitemap
+- [RSS](https://www.marksiazon.dev/feed.xml): article feed
+- [JSON Feed](https://www.marksiazon.dev/feed.json): JSON article feed
+- [Robots](https://www.marksiazon.dev/robots.txt): portfolio crawler directives
+- [Humans](https://www.marksiazon.dev/humans.txt): portfolio authorship
