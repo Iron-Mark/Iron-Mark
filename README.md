@@ -39,7 +39,7 @@
 5. 💻 <strong>More Projects & Hackathons</strong> — HireProof AI (<i>Vercel Zero to Agent Global Hackathon</i>), LexInsights AI (<i>CodeKada 2025</i>), GawainYah (<i>Celo x MiniPay Web 3 App</i>), and much more...
 
 <p align="center">
-  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer"><img src="https://img.shields.io/badge/View_All_Achievements_&_Certifications-→-8B5CF6?style=for-the-badge" alt="View all achievements & certifications"/></a>
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer"><img src="https://img.shields.io/badge/View_All_Achievements_&_Certifications-→-8B5CF6?style=for-the-badge&labelColor=1F2937" alt="View all achievements & certifications"/></a>
 </p>
 
 <h2 align="center">Featured Work</h2>
