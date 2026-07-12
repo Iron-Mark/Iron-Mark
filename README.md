@@ -17,8 +17,8 @@
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
-  <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief-→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
-  <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact-→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
+  <a href="https://www.marksiazon.dev/recruiter" rel="noopener noreferrer" aria-label="Recruiter brief"><img src="https://img.shields.io/badge/Recruiter_Brief_→-111827?style=for-the-badge" alt="Recruiter brief"/></a>
+  <a href="https://www.marksiazon.dev/contact" rel="noopener noreferrer" aria-label="Contact form at marksiazon.dev"><img src="https://img.shields.io/badge/Contact_→-6366F1?style=for-the-badge" alt="Contact at marksiazon.dev"/></a>
 </p>
 
 1. 🥇 <strong>Champion</strong> — <a href="https://www.marksiazon.dev/achievements">C(Old)(ST)art Hackathon (2025)</a> <sub>(FlowFit — Team ACSADians)</sub>
