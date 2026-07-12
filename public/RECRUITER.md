@@ -1,6 +1,6 @@
-# Recruiter brief — Mark Siazon (@Iron-Mark)
+# Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-06-20
+Last updated: 2026-07-09
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -8,7 +8,7 @@ Last updated: 2026-06-20
 
 ## One-line summary
 
-Product designer and full-stack developer in the Philippines who ships case-study-backed work in AI trust and safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
+Product designer & full-stack developer in the Philippines who ships case-study-backed work in AI trust & safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
 
 ## Open to
 
@@ -20,9 +20,11 @@ Product designer and full-stack developer in the Philippines who ships case-stud
 | Mobile | Flutter, Kotlin, Wear OS companions |
 | Web3 proof | Stellar, Soroban, Celo MiniPay, testnet-first fintech |
 
-**Engagement:** contract or full-time · **Location:** Philippines · **Remote:** yes
+**Engagement:** contract, part-time, or full-time · **Location:** Philippines (PHT, UTC+8) · **Remote:** yes
 
-## 60-second screen — start here
+**Experience:** ~5 years combined across academic, freelance, organizational, volunteer, and professional work — self-taught in web development since before college · **Notice:** ~2 weeks, or immediate for freelance/contract · **Rates:** on request
+
+## 60-second screen: start here
 
 1. **GitHub profile:** https://github.com/Iron-Mark (README + activity widgets)
 2. **Portfolio hub:** https://www.marksiazon.dev/projects
@@ -39,9 +41,9 @@ Product designer and full-stack developer in the Philippines who ships case-stud
 
 ## Verified achievements
 
-- **UMak InfotechOlympics 2025** — Android App Development Productivity Champion (ResQLink, Team Lumiere)
-- **InfotechOlympics 2024** — Android App Development winner (BaybayInscribe, Team GILAS Tech)
-- **Stellar bootcamp** — Top 5 of 105 teams (Stellaroid Earn)
+- **UMak InfotechOlympics 2025**: Android App Development Productivity Champion (ResQLink, Team Lumiere)
+- **InfotechOlympics 2024**: Android App Development winner (BaybayInscribe, Team GILAS Tech)
+- **Stellar bootcamp**: Top 5 of 105 teams (Stellaroid Earn)
 
 Details: https://www.marksiazon.dev/achievements
 

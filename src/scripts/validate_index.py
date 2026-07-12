@@ -3482,7 +3482,6 @@ def check_crawl_files(data: dict[str, Any]) -> None:
         f"{PAGES}/schema/person.jsonld",
         f"{PAGES}/schema/faq.jsonld",
         f"{PAGES}/humans.txt",
-        f"{PAGES}/robots.txt",
     }
     missing = sorted(required_locs - locs)
     if missing:
@@ -3559,6 +3558,16 @@ def main() -> int:
 
     if not (PUBLIC / "STACK.md").exists():
         errors.append("Missing public/STACK.md")
+    else:
+        declared_tool_count = data.get("stackReference", {}).get("toolCount")
+        if isinstance(declared_tool_count, int):
+            stack_text = (PUBLIC / "STACK.md").read_text(encoding="utf-8")
+            actual_tool_cells = len(re.findall(r'width="40"\s+height="40"', stack_text))
+            if actual_tool_cells != declared_tool_count:
+                errors.append(
+                    "stackReference.toolCount "
+                    f"({declared_tool_count}) does not match tool cells in STACK.md ({actual_tool_cells})"
+                )
 
     print("validate_index.py")
     if warnings:

@@ -2,16 +2,16 @@
 
 Internal setup notes for repository settings and mirrors. **Start here:** [MAINTAINER_CHECKLIST.md](MAINTAINER_CHECKLIST.md).
 
-> **Skipped (optional):** repo About/topics, social preview image, and pin 6 repos — not required for index/MCP/AEO functionality.
+> **Skipped (optional):** repo About/topics, social preview image, and pin 6 repos; not required for index/MCP/AEO functionality.
 
-## 1. Repository About & topics *(optional — skip if redundant)*
+## 1. Repository About & topics *(optional, skip if redundant)*
 
 <details>
 <summary>Only if you want extra GitHub search discoverability</summary>
 
 ```bash
 gh repo edit Iron-Mark/Iron-Mark \
-  --description "Product designer & full-stack developer (@Iron-Mark) — proof-backed AI, mobile & Web3 portfolio index. Philippines · llms.txt · STACK.md" \
+  --description "Product designer & full-stack developer (@Iron-Mark): proof-backed AI, mobile & Web3 portfolio index. Philippines · llms.txt · STACK.md" \
   --add-topic product-design \
   --add-topic full-stack \
   --add-topic react \
@@ -29,7 +29,7 @@ Remove stale topics if needed: `config`, `github-config`, `readme-template` (Set
 
 </details>
 
-## 2. Social preview image *(optional — skip if redundant)*
+## 2. Social preview image *(optional, skip if redundant)*
 
 <details>
 <summary>Only for branded link previews on social shares</summary>
@@ -40,7 +40,7 @@ Use `assets/brand/banner.gif` (or a static 1280×640 PNG export) so link shares 
 
 </details>
 
-## 3. Pin 6 repositories *(optional — skip if redundant)*
+## 3. Pin 6 repositories *(optional, skip if redundant)*
 
 <details>
 <summary>Profile pin alignment with Featured Work</summary>
@@ -122,4 +122,4 @@ python3 src/scripts/test_mcp_server.py
 
 Config: [src/mcp-server/mcp-config.example.json](../src/mcp-server/mcp-config.example.json) · Docs: [src/mcp-server/README.md](../src/mcp-server/README.md)
 
-The cloud agent token cannot edit repo settings or user pins — **you** run manual steps locally with `gh` auth as @Iron-Mark.
+The cloud agent token cannot edit repo settings or user pins: **you** run manual steps locally with `gh` auth as @Iron-Mark.

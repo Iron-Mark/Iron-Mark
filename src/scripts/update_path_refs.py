@@ -8,7 +8,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 
-# Order matters — longer / specific paths first
+# Order matters: longer / specific paths first
 REPLACEMENTS = [
     ("blob/main/public/schema/", "blob/main/public/schema/"),
     ("raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/", "raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/"),
@@ -100,7 +100,7 @@ def main() -> None:
             path.write_text(text, encoding="utf-8")
             changed += 1
             print(f"updated {path.relative_to(REPO)}")
-    print(f"done — {changed} files")
+    print(f"done: {changed} files")
 
 
 if __name__ == "__main__":

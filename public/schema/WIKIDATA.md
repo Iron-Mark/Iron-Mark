@@ -1,45 +1,74 @@
 # Wikidata entity - Mark Siazon
 
-No Wikidata item exists yet for Mark Siazon (@Iron-Mark) as of 2026-06-21.
-
-Verified with Wikidata entity search:
+No Wikidata item exists yet for Mark Siazon (@Iron-Mark). Re-verified 2026-07-09 via the entity search API (empty `search` array):
 
 ```text
 https://www.wikidata.org/w/api.php?action=wbsearchentities&search=Mark%20Siazon&language=en&format=json
 ```
 
-The API returned an empty `search` array. Creating the item still requires a logged-in Wikidata editor account; do not add a fake Q-id to this repo.
+Creating the item requires a logged-in Wikidata editor account. Do not add a fake Q-id to this repo.
 
-## Before Creation
+## Before creation
 
-1. Search https://www.wikidata.org/w/index.php?search=Mark+Siazon.
-2. Confirm there is no duplicate for the product designer / full-stack developer behind `Iron-Mark` and `marksiazon.dev`.
-3. Use proof URLs from [PROOF.md](../PROOF.md), [ENTITY.md](ENTITY.md), and [llms-index.json](../llms-index.json).
+1. Search https://www.wikidata.org/w/index.php?search=Mark+Siazon and confirm there is still no duplicate for the product designer / full-stack developer behind `Iron-Mark` and `marksiazon.dev`.
+2. Use proof URLs from [PROOF.md](../PROOF.md), [ENTITY.md](ENTITY.md), and [llms-index.json](../llms-index.json) as references.
 
-## Labels
+## Verified Q-ids and properties (checked 2026-07-09)
 
-| Language | Field | Value |
-|----------|-------|-------|
-| en | label | Mark Siazon |
-| en | description | product designer and full-stack developer from the Philippines |
+| Item / property | Id | Notes |
+|-----------------|----|-------|
+| human | Q5 | P31 value |
+| Philippines | Q928 | P27 value |
+| University of Makati | Q7895659 | P69 value (public university) |
+| web developer | Q6859454 | P106 value |
+| user experience designer | Q68200826 | P106 value |
+| instance of | P31 | |
+| country of citizenship | P27 | |
+| occupation | P106 | |
+| educated at | P69 | |
+| official website | P856 | |
+| GitHub username | P2037 | |
+| LinkedIn personal profile ID | P6634 | |
+| reference URL | P854 | use as `S854` in QuickStatements |
+| retrieved | P813 | use as `S813` in QuickStatements |
 
-## Conservative Statements
+## QuickStatements draft
 
-Only add statements you can verify from public sources.
+Paste at https://quickstatements.toolforge.org . `Len`/`Den`/`Aen` = English label/description/alias; `S854` = reference URL; `S813` = retrieved date; `LAST` = the item just created. Review each line before running.
 
-| Property | Value |
-|----------|-------|
-| P31 (instance of) | human (Q5) |
-| P27 (country of citizenship) | Philippines (Q928), only if self-identification is acceptable for the item |
-| P856 (official website) | `https://www.marksiazon.dev` |
-| P2037 (GitHub username) | `Iron-Mark` |
-| P6634 (LinkedIn personal profile ID) | `mark-siazon` |
+### Core (identity only, lowest deletion risk)
 
-Avoid adding education, employer, awards, or occupation Q-items unless each claim has a source suitable for Wikidata.
+```text
+CREATE
+LAST|Len|"Mark Siazon"
+LAST|Den|"product designer and full-stack developer from the Philippines"
+LAST|Aen|"Iron-Mark"
+LAST|Aen|"mark-siazon"
+LAST|P31|Q5
+LAST|P856|"https://www.marksiazon.dev"|S854|"https://www.marksiazon.dev"|S813|+2026-07-09T00:00:00Z/11
+LAST|P2037|"Iron-Mark"|S854|"https://github.com/Iron-Mark"|S813|+2026-07-09T00:00:00Z/11
+LAST|P6634|"mark-siazon"|S854|"https://www.linkedin.com/in/mark-siazon/"|S813|+2026-07-09T00:00:00Z/11
+```
 
-## SameAs / External Identity URLs
+### Optional (add only where the reference URL actually states the fact)
 
-Use these as source links or external references where appropriate:
+```text
+LAST|P27|Q928|S854|"https://www.marksiazon.dev"
+LAST|P106|Q6859454|S854|"https://www.marksiazon.dev"
+LAST|P106|Q68200826|S854|"https://www.marksiazon.dev"
+LAST|P69|Q7895659|S854|"<a page that explicitly states you studied at UMak>"
+```
+
+Optional gender statement (self-identification): `LAST|P21|Q6581097` (male) or `LAST|P21|Q6581072` (female). Occupation "product designer" has no clean Wikidata item, so web developer + user experience designer stand in.
+
+## Caveats
+
+- **Deletion risk.** Wikidata can delete items about living people that lack public, independent sourcing. The InfotechOlympics awards and multiple external profiles help; if the item is challenged, cite https://www.marksiazon.dev/achievements . Items backed only by self-published sources are the ones most often nominated.
+- **P69 (educated at).** Mark is a University of Makati graduate, but Wikidata wants a source that states this. Point `S854` at a page that actually declares the education (LinkedIn education section or an About page), not the competition page, which only proves the contest.
+
+## SameAs / external identity URLs
+
+Use as reference or external-identifier links where appropriate:
 
 ```text
 https://www.marksiazon.dev
@@ -50,26 +79,12 @@ https://www.linkedin.com/in/mark-siazon/
 https://www.frontendmentor.io/profile/Iron-Mark
 ```
 
-## QuickStatements Draft
-
-Review each statement before running it. Replace nothing with a Q-id before the item exists; `LAST` refers to the newly created item.
-
-```text
-CREATE
-LAST|Len|"Mark Siazon"
-LAST|Den|"product designer and full-stack developer from the Philippines"
-LAST|P31|Q5
-LAST|P856|"https://www.marksiazon.dev"
-LAST|P2037|"Iron-Mark"
-LAST|P6634|"mark-siazon"
-```
-
-## After Creation
+## After creation
 
 1. Note the new Q-id, for example `Q123456789`.
 2. Update `llms-index.json`:
-   - `identifiers.wikidata`
-   - `entity.sameAs`
+   - `identifiers.wikidata` (the Q-id or its full URL)
+   - add `https://www.wikidata.org/wiki/Q...` to `entity.sameAs`
 3. Regenerate schema/context artifacts:
    ```bash
    python3 src/scripts/generate_schema.py
@@ -80,4 +95,4 @@ LAST|P6634|"mark-siazon"
    python3 src/scripts/bump_index_dates.py
    ```
 4. Update the portfolio site JSON-LD / `llms.txt` mirror.
-5. Run validation and open `dev` -> `main` PR.
+5. Run `python3 src/scripts/validate_index.py`, then open a `dev` -> `main` PR.

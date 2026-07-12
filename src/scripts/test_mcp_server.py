@@ -103,7 +103,7 @@ def main() -> int:
         asyncio.run(run_e2e())
         return 0
     except Exception as e:
-        print(f"test_mcp_server: FAIL — {e}", file=sys.stderr)
+        print(f"test_mcp_server: FAIL - {e}", file=sys.stderr)
         return 1
 
 

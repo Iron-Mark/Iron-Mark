@@ -1,6 +1,6 @@
-# Proof map — README claims → verification URLs
+# Proof map: README claims → verification URLs
 
-Last updated: 2026-06-24
+Last updated: 2026-07-09
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -52,8 +52,8 @@ Rendered lab index: [lab](https://iron-mark.github.io/Iron-Mark/lab/) · Markdow
 
 | Claim | Proof |
 |-------|-------|
-| Full stack reference | [STACK.md](STACK.md) — grouped tools and doc links |
-| 16-tool core on README (domain-grouped) | Visible on profile README Tech Stack section — Design · Web · Mobile · AI workflow · Web3 · Backend & ship |
+| Full stack reference | [STACK.md](STACK.md): grouped tools and doc links |
+| 16-tool core on README (domain-grouped) | Visible on profile README Tech Stack section: Design · Web · Mobile · AI workflow · Web3 · Backend & ship |
 
 ## GitHub activity widgets
 

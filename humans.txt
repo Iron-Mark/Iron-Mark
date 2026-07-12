@@ -18,7 +18,7 @@ Answer snippets: llms-index.json -> aeo.answerSnippets
 /* TEAM */
 Owner: Mark Siazon
 Handle: @Iron-Mark (GitHub profile), @mark-siazon (secondary GitHub)
-Role: Product Designer - Full-Stack Developer - Product Engineer - UI/UX Designer
+Role: Product Designer - Full-Stack Developer - Product Engineer - UI/UX Designer - Front-end Specialist
 Location: Philippines
 Tagline: Case studies - AI - Mobile - Web3
 
@@ -29,7 +29,7 @@ Curiosity is a core habit across web, mobile, game prototyping, creative multime
 
 /* AVAILABILITY */
 Open to: product design - full-stack engineering - AI workflow prototypes - mobile/Wear OS UX - Web3 proof systems
-Engagement: contract or full-time - Philippines & remote
+Engagement: contract, part-time, or full-time - Philippines & remote
 Recruiter brief: https://www.marksiazon.dev/recruiter
 Contact: https://www.marksiazon.dev/contact
 Email: marksiazon.dev@gmail.com

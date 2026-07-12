@@ -42,7 +42,7 @@ PUBLIC_CONTENT = (
 
 
 def resolve_content(name: str) -> Path:
-    """Resolve a content file — root index files vs public/."""
+    """Resolve a content file: root index files vs public/."""
     if name in ROOT_INDEX_FILES or name == "README.md":
         return REPO_ROOT / name
     return PUBLIC_DIR / name

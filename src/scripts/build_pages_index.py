@@ -194,8 +194,20 @@ def build_lab_page() -> None:
   <meta property="og:title" content="{escape(title)}"/>
   <meta property="og:description" content="Hackathon and lab project index for Mark Siazon, a Philippines-based product designer and full-stack developer."/>
   <meta property="og:url" content="{pages_href('lab/')}"/>
+  <meta property="og:image" content="{SOCIAL_IMAGE}"/>
+  <meta property="og:image:secure_url" content="{SOCIAL_IMAGE}"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="{SOCIAL_IMAGE_WIDTH}"/>
+  <meta property="og:image:height" content="{SOCIAL_IMAGE_HEIGHT}"/>
+  <meta property="og:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{escape(title, quote=True)}"/>
+  <meta name="twitter:description" content="Hackathon and lab project index for Mark Siazon, a Philippines-based product designer and full-stack developer."/>
+  <meta name="twitter:image" content="{SOCIAL_IMAGE}"/>
+  <meta name="twitter:image:alt" content="{SOCIAL_IMAGE_ALT}"/>
   <title>{escape(title)}</title>
   <link rel="canonical" href="{pages_href('lab/')}"/>
+  <link rel="icon" type="image/svg+xml" href="{pages_href(FAVICON)}"/>
   <link rel="alternate" type="application/rss+xml" href="{escape(rss_feed, quote=True)}"/>
   <link rel="alternate" type="application/feed+json" href="{escape(json_feed, quote=True)}"/>
   <link rel="alternate" type="text/markdown" href="{pages_href('LAB.md')}"/>

@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source type="image/webp" srcset="assets/brand/mark-siazon-product-design-full-stack-profile-banner.webp"/>
-    <img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon — product designer and full-stack developer portfolio banner"/>
-  </picture>
+  <img src="assets/brand/banner.gif" width="70%" alt="Mark Siazon, product designer and full-stack developer portfolio banner"/>
 </p>
 
 <h1 align="center">Mark Siazon 👋</h1>
@@ -25,8 +22,8 @@
 </p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center;margin-top:4px">
-  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="UMak InfotechOlympics 2025 Android Productivity Champion — ResQLink"><img src="https://img.shields.io/badge/UMak_InfotechOlympics-2025_Android_Champion-8B5CF6?style=for-the-badge" alt="UMak InfotechOlympics 2025 Android Productivity Champion"/></a>
-  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="InfotechOlympics 2024 Android App Development winner — BaybayInscribe"><img src="https://img.shields.io/badge/InfotechOlympics-2024_Android_Winner-6366F1?style=for-the-badge" alt="InfotechOlympics 2024 Android winner"/></a>
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="UMak InfotechOlympics 2025 Android Productivity Champion (ResQLink)"><img src="https://img.shields.io/badge/UMak_InfotechOlympics-2025_Android_Champion-8B5CF6?style=for-the-badge" alt="UMak InfotechOlympics 2025 Android Productivity Champion"/></a>
+  <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="InfotechOlympics 2024 Android App Development winner (BaybayInscribe)"><img src="https://img.shields.io/badge/InfotechOlympics-2024_Android_Winner-6366F1?style=for-the-badge" alt="InfotechOlympics 2024 Android winner"/></a>
   <a href="https://www.marksiazon.dev/projects/stellaroid-earn" rel="noopener noreferrer" aria-label="Stellar bootcamp Top 5 of 105 teams"><img src="https://img.shields.io/badge/Stellar_Bootcamp-Top_5%2F105-111827?style=for-the-badge" alt="Stellar bootcamp Top 5 of 105"/></a>
   <a href="https://www.marksiazon.dev/achievements" rel="noopener noreferrer" aria-label="Full achievements and certifications"><img src="https://img.shields.io/badge/All_achievements-→-374151?style=for-the-badge" alt="All achievements"/></a>
 </p>
@@ -134,7 +131,7 @@
 <p align="center"><sub>Public contribution snapshot for <a href="https://github.com/Iron-Mark">@Iron-Mark</a> · updated daily</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;margin:0">
-  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile — stars, commits, and pull requests">
+  <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub profile: stars, commits, and pull requests">
     <img src="assets/github/stats.svg" alt="GitHub statistics for Mark Siazon (@Iron-Mark): total stars earned, commits, and pull requests across public repositories" height="165"/>
   </a>
   <a href="https://github.com/Iron-Mark" aria-label="Mark Siazon (@Iron-Mark) GitHub language breakdown in public repositories">
@@ -212,13 +209,13 @@
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 0 4px">
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
-  <img src="https://img.shields.io/badge/-GitHub_Actions_CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions CI/CD" title="GitHub Actions — validate, test, deploy"/>
+  <img src="https://img.shields.io/badge/-GitHub_Actions_CI%2FCD-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions CI/CD" title="GitHub Actions: validate, test, deploy"/>
   <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
 </p>
 
 </div>
 
-<p align="center"><sub><a href="public/STACK.md">See full stack — Web · Mobile · Backend · Web3 · Game Dev · UI/UX · Creative · AI · AI workflow →</a></sub></p>
+<p align="center"><sub><a href="public/STACK.md">See full stack: Web · Mobile · Backend · Web3 · Game Dev · UI/UX · Creative · AI · AI workflow →</a></sub></p>
 
 ---
 
@@ -230,7 +227,7 @@
   </ul>
 </div>
 
-<p align="center"><em>A thoughtful interface fosters deeper human-technology connection.</em></p>
+<p align="center"><em>Every claim on this profile links to a live demo, a case study, or a proof URL.</em></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.linkedin.com/in/mark-siazon/" rel="noopener noreferrer" aria-label="Mark Siazon on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"/></a>
