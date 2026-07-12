@@ -13,7 +13,7 @@
 
 <p align="center" style="max-width:640px;margin:0 auto;padding:0 4px;line-height:1.5"><sub>Product Design Engineer &amp; Full-Stack Developer | UI/UX |<br>React, Next.js, TypeScript | Flutter, Kotlin, Wear OS |<br>AI, mobile &amp; Web3 case studies</sub></p>
 
-<p align="center"><sub>Contract · full-time · Philippines &amp; remote teams · live demos below</sub></p>
+<p align="center"><sub>Also available for Contractual/Freelance/Part-time work - PH Based.</sub></p>
 
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center">
   <a href="https://www.marksiazon.dev" rel="noopener noreferrer" aria-label="Portfolio at marksiazon.dev"><img src="https://img.shields.io/badge/Portfolio-marksiazon.dev-36BCF7?style=for-the-badge" alt="Portfolio at marksiazon.dev"/></a>
