@@ -29,7 +29,7 @@
       .stat { font-size:12px; }
     }
     .stagger {
-      opacity: 0;
+      opacity: 1;
       
     }
     .rank-text {

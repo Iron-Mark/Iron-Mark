@@ -5014,8 +5014,8 @@
       "encodingFormat": "application/xml",
       "description": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
       "abstract": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
-      "contentSize": "5280 bytes",
-      "sha256": "92667b965dff6e5618b0cc41f375e29bf3d682b9d137aaae7edc7beab02bd2e4",
+      "contentSize": "5276 bytes",
+      "sha256": "1c9b09f61b2c1652726ca005d9294f0ccb0eab5a430100a5e8069f6dd673c0e0",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -5526,8 +5526,8 @@
       "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.png",
       "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.png",
       "encodingFormat": "image/png",
-      "contentSize": "164475 bytes",
-      "sha256": "66aee9103d9c2304fab7c302f37a36ab04083538269f42cc57d3282d6b730e21",
+      "contentSize": "1520960 bytes",
+      "sha256": "147e928c05743d34b9ee283a5ed82d33f40b32b33a5f886e7dad42201a801aa2",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -5736,22 +5736,22 @@
       "sdDatePublished": "2026-07-09",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp#image",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png#image",
       "name": "FlowFit project cover image",
       "caption": "FlowFit project cover image",
       "description": "FlowFit project cover image for Wear OS health and sensor companion.",
       "abstract": "FlowFit project cover image for Wear OS health and sensor companion.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.webp",
-      "encodingFormat": "image/webp",
-      "contentSize": "9060 bytes",
-      "sha256": "f7ff20dc9c93c0a55d06eaaa4c95b1e435a5b3be5db0259679fea9f189937f77",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png",
+      "encodingFormat": "image/png",
+      "contentSize": "252106 bytes",
+      "sha256": "083d5b859014cd868420797bf6ae82389d05a0ae01b2d6c67eafefa091b44078",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -5849,22 +5849,22 @@
       "sdDatePublished": "2026-07-09",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp#image",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png#image",
       "name": "PalengkePay project cover image",
       "caption": "PalengkePay project cover image",
       "description": "PalengkePay project cover image for Stellar fintech PWA for wet markets.",
       "abstract": "PalengkePay project cover image for Stellar fintech PWA for wet markets.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.webp",
-      "encodingFormat": "image/webp",
-      "contentSize": "6664 bytes",
-      "sha256": "aff183aa5bdd44ce710430a548ffc7ace5173da0e284e61b7937924aa796202d",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png",
+      "encodingFormat": "image/png",
+      "contentSize": "367990 bytes",
+      "sha256": "411247a5fc8030bdbe78ed5589940b0c4585e24ce0cad34f8c3adb27b29837e3",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -5962,22 +5962,22 @@
       "sdDatePublished": "2026-07-09",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp#image",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png#image",
       "name": "GawainYah project cover image",
       "caption": "GawainYah project cover image",
       "description": "GawainYah project cover image for MiniPay AI utility with payment guardrails.",
       "abstract": "GawainYah project cover image for MiniPay AI utility with payment guardrails.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.webp",
-      "encodingFormat": "image/webp",
-      "contentSize": "7202 bytes",
-      "sha256": "7c17ca7d6045ea016f360ca324866c0b3cd1fa4256edc67bac96677a5d174a29",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png",
+      "encodingFormat": "image/png",
+      "contentSize": "494181 bytes",
+      "sha256": "a1c5f72030f4ad7d5186dc7323b23a4aec99ae7196d78efc3a1ff24379842957",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
@@ -6078,22 +6078,22 @@
         "InfotechOlympics 2024 Android App Development winner"
       ],
       "image": {
-        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp#image"
+        "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.png#image"
       },
-      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp"
+      "thumbnailUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.png"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp#image",
+      "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.png#image",
       "name": "BaybayInscribe project cover image",
       "caption": "BaybayInscribe project cover image",
       "description": "BaybayInscribe project cover image for Baybayin ML and cultural education UX.",
       "abstract": "BaybayInscribe project cover image for Baybayin ML and cultural education UX.",
-      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp",
-      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.webp",
-      "encodingFormat": "image/webp",
-      "contentSize": "7064 bytes",
-      "sha256": "1a4a9dcbe6980adb55cc6cd84336b8216ce0408595a1cba64c12327f4fe2c303",
+      "url": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.png",
+      "contentUrl": "https://iron-mark.github.io/Iron-Mark/assets/projects/baybayinscribe/cover.png",
+      "encodingFormat": "image/png",
+      "contentSize": "32494 bytes",
+      "sha256": "e4c10cf0c9b396fa285048e826a92e060c7207ab00e411fe802d8b92d88c6ce7",
       "inLanguage": "en",
       "dateModified": "2026-07-09",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",

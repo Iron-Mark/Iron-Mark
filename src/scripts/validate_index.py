@@ -918,8 +918,9 @@ def validate_contract_subset(value: Any, schema: dict[str, Any], path: str) -> N
 
 def check_assets(slug: str) -> None:
     icon = ROOT / "assets" / "projects" / slug / "icon.png"
-    if not icon.exists():
-        errors.append(f"Missing icon: assets/projects/{slug}/icon.png")
+    logo = ROOT / "assets" / "projects" / slug / "logo.png"
+    if not icon.exists() and not logo.exists():
+        errors.append(f"Missing icon: assets/projects/{slug}/icon.png or logo.png")
     if not project_cover_asset(slug):
         errors.append(f"Missing featured project cover: assets/projects/{slug}/cover.(webp|png|svg)")
 
