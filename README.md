@@ -151,7 +151,10 @@
 
 <h2 align="center">Tech Stack</h2>
 
-<p align="center"><sub>Core tools I ship with · <a href="public/STACK.md">full stack reference</a> · <a href="https://www.marksiazon.dev/projects">project proof</a></sub></p>
+<p align="center"><sub>Core tools I ship with</sub></p>
+<p align="center">
+  <a href="https://www.marksiazon.dev/projects" rel="noopener noreferrer" aria-label="Project proof at marksiazon.dev"><img src="https://img.shields.io/badge/Project_Proof_→-8B5CF6?style=for-the-badge&labelColor=1F2937" alt="Project proof"/></a>
+</p>
 
 <p align="center"><sub><b>Design</b></sub></p>
 <p align="center" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin:0 0 16px">
