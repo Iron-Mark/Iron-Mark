@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
