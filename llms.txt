@@ -2,7 +2,7 @@
 
 > Product designer, full-stack developer, product engineer, UI/UX designer, and front-end specialist. Builds case-study-backed work across AI, mobile, Web3, and client web - portfolio at marksiazon.dev, GitHub profile @Iron-Mark.
 
-Last updated: 2026-07-09
+Last updated: 2026-07-21
 
 Mark Siazon ships end-to-end: research and UX flows -> design systems -> React/Next.js/Flutter/Kotlin -> APIs and Web3 proofs -> deployment and verification. Based in the Philippines. Open to product design, full-stack, AI workflow, mobile, and Web3 proof work.
 
