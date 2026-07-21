@@ -34,11 +34,23 @@ jobs:
           # Purple theme (#8B5CF6); hide rank/issues/contribs; stars + commits + PRs only
           options: username=Iron-Mark&show_icons=true&hide_border=true&include_all_commits=true&hide_rank=true&custom_title=Mark+Siazon+%40Iron-Mark&disable_animations=true&hide=issues,contribs&title_color=8B5CF6&icon_color=A78BFA&text_color=E5E7EB&bg_color=0B0F14&border_color=1F2937
           path: assets/github/stats.svg
-          # Uses a dedicated PAT (STATS_TOKEN) so the stats/top-langs GraphQL
-          # queries have enough API budget; the repo-scoped GITHUB_TOKEN hits
-          # "Resource limits for this query exceeded" with include_all_commits.
-          # Falls back to GITHUB_TOKEN if the secret is not set.
+          # Prefer a dedicated PAT (STATS_TOKEN); fall back to GITHUB_TOKEN. NOTE: a
+          # token alone does NOT clear RESOURCE_LIMITS_EXCEEDED on this account (the
+          # stats query cost is too high) — the guard step below ensures an error
+          # card is never published.
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Keep last-good stats card if the API errored
+        run: |
+          # The stats card can return an error card ("Something went wrong" /
+          # RESOURCE_LIMITS_EXCEEDED). Never publish that: restore the last committed
+          # stats.svg and let the other cards refresh normally.
+          if grep -qiE "Something went wrong|Resource limits for this query exceeded" assets/github/stats.svg; then
+            echo "::warning::Stats card returned an error card; keeping the last committed stats.svg."
+            git checkout -- assets/github/stats.svg
+          else
+            echo "Stats card generated successfully."
+          fi
 
       - name: Generate top languages card
         uses: stats-organization/github-readme-stats-action@v2
