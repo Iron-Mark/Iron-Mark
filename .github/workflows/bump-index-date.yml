@@ -68,12 +68,17 @@ jobs:
           git diff --staged --quiet && echo "No date changes" && exit 0
           git switch -c "$branch"
           git commit -m "$title"
-          git push --force-with-lease origin "$branch"
+          # Recreate the bot-owned branch each run. actions/checkout only fetches the
+          # triggering branch, so there's no remote-tracking ref and --force-with-lease
+          # rejects with "stale info"; a plain force is safe for this automation branch.
+          git push --force origin "$branch"
 
           open_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
           if [ -n "$open_pr" ]; then
             gh pr edit "$open_pr" --title "$title" --body "$body"
           else
-            gh pr create --base main --head "$branch" --title "$title" --body "$body"
+            # Target dev: enforce-pr-flow rejects PRs into main that don't come from
+            # dev, so freshness updates flow dev -> main via the normal promotion.
+            gh pr create --base dev --head "$branch" --title "$title" --body "$body"
           fi
           gh workflow run validate-index.yml --ref "$branch" || true
