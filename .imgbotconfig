@@ -1,0 +1,6 @@
+{
+  "ignoredFiles": [
+    "assets/brand/**",
+    "assets/projects/**"
+  ]
+}
