@@ -24,6 +24,11 @@ jobs:
 
       - name: Generate stats card
         uses: stats-organization/github-readme-stats-action@v2
+        env:
+          # Sum stars from the top ~100 repos only. Paginating every repository
+          # blows GitHub's GraphQL node limit (RESOURCE_LIMITS_EXCEEDED) on large
+          # accounts, which produces a "Something went wrong" error card.
+          FETCH_MULTI_PAGE_STARS: "false"
         with:
           card: stats
           # Purple theme (#8B5CF6); hide rank/issues/contribs; stars + commits + PRs only
