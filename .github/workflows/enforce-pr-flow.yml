@@ -20,9 +20,20 @@ jobs:
         run: |
           set -eu
 
-          if [ "$BASE_REF" = "main" ] && [ "$HEAD_REF" != "dev" ]; then
-            echo "::error::Pull requests into main must come from dev. Open feature branches against dev first, then promote dev to main."
-            exit 1
+          # PRs into dev are unrestricted.
+          if [ "$BASE_REF" != "main" ]; then
+            echo "Branch flow accepted: $HEAD_REF -> $BASE_REF"
+            exit 0
           fi
 
-          echo "Branch flow accepted: $HEAD_REF -> $BASE_REF"
+          # PRs into main must come from dev, or from an allowed bot branch that can't
+          # route through dev (external automation that targets the default branch).
+          case "$HEAD_REF" in
+            dev|imgbot|automation/*|dependabot/*)
+              echo "Branch flow accepted: $HEAD_REF -> main"
+              ;;
+            *)
+              echo "::error::Pull requests into main must come from dev (or an allowed bot branch: imgbot, automation/*, dependabot/*)."
+              exit 1
+              ;;
+          esac
