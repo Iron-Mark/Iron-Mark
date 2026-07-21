@@ -1,7 +1,7 @@
 # Mark Siazon GitHub profile README - crawler hints
 # Repo: https://github.com/Iron-Mark/Iron-Mark
 # Entity @id: https://www.marksiazon.dev/#person
-# Last updated: 2026-07-09
+# Last updated: 2026-07-21
 
 User-agent: *
 Allow: /
