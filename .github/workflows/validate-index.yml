@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   validate:
@@ -81,3 +82,22 @@ jobs:
           python3 -m json.tool public/schema/llms-index.schema.json > /dev/null
           python3 -m json.tool public/schema/person.jsonld > /dev/null
           python3 -m json.tool public/schema/faq.jsonld > /dev/null
+
+      - name: Alert on workflow failure
+        # Only alert for push/schedule/dispatch runs (e.g. dev or main
+        # broke), not for pull_request runs - a failing PR check is already
+        # visible on the PR itself and doesn't need a duplicate issue.
+        if: failure() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Daily automation failure: Validate index"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Validate index** workflow failed outside of a pull request (ref: %s).\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "${{ github.ref }}" "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "${{ github.repository }}" --body "$body"
+          else
+            gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"
+          fi
