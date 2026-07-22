@@ -35,5 +35,23 @@
     "contact": "https://example.test/contact",
     "recruiterBrief": "https://example.test/recruiter"
   },
+  "aeo": {
+    "answerSnippets": [
+      {
+        "question": "Home question one?",
+        "answer": "Home answer one.",
+        "sources": [
+          "https://example.test/faq"
+        ]
+      },
+      {
+        "question": "Repo-only question?",
+        "answer": "This answer is entirely repo-authored and must never change.",
+        "sources": [
+          "https://example.test/repo-only"
+        ]
+      }
+    ]
+  },
   "otherRepoAuthoredKey": "must remain untouched"
 }
