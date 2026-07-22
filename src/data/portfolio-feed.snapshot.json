@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-22T11:54:14.972630+00:00",
+  "fetchedAt": "2026-07-22T13:21:27.625491+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -20,7 +20,7 @@
       "headline": "Open for selective product design, frontend, and AI workflow opportunities",
       "summary": "Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.",
       "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
-      "note": "No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+      "note": "No public booking link is published; use the contact form so private details stay server-side.",
       "workScope": [
         "Product roles",
         "Focused client builds",
@@ -606,7 +606,7 @@
       {
         "id": "recruiter-availability",
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
         "audiences": [
           "recruiter"
         ]
@@ -636,7 +636,7 @@
         ]
       },
       {
-        "id": "contact-0",
+        "id": "contact-first-message",
         "question": "What should I include in a first message?",
         "answer": "Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.",
         "audiences": [
@@ -644,7 +644,7 @@
         ]
       },
       {
-        "id": "contact-1",
+        "id": "contact-crawler-access",
         "question": "Can AI search crawlers read this contact page?",
         "answer": "Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the contact and API surfaces. Host or CDN crawler access still needs account-side confirmation.",
         "audiences": [
@@ -652,7 +652,7 @@
         ]
       },
       {
-        "id": "contact-2",
+        "id": "contact-private-details",
         "question": "Where should private contact details live?",
         "answer": "Private recipient and sender addresses stay in server-side environment variables, not in public HTML, feeds, or LLM discovery files.",
         "audiences": [
@@ -660,7 +660,7 @@
         ]
       },
       {
-        "id": "contact-3",
+        "id": "contact-work-scope",
         "question": "What work is Mark open to?",
         "answer": "Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
         "audiences": [
