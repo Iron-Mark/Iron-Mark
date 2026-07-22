@@ -91,13 +91,25 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set +e
           title="Daily automation failure: Validate index"
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           body=$(printf 'The **Validate index** workflow failed outside of a pull request (ref: %s).\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "${{ github.ref }}" "$run_url")
 
-          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number')
-          if [ -n "$existing" ]; then
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number' 2>/dev/null)
+          if [ -n "$existing" ] && [[ "$existing" =~ ^[0-9]+$ ]]; then
             gh issue comment "$existing" --repo "${{ github.repository }}" --body "$body"
+            alerted=$?
           else
             gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"
+            alerted=$?
           fi
+
+          # gh issue calls fail outright if Issues are disabled for the repo.
+          # Never let the alert step itself add a confusing second failure -
+          # fall back to a job summary entry so the failure is still visible.
+          if [ "${alerted:-1}" != "0" ]; then
+            echo "::warning::Could not post a GitHub Issue alert (Issues may be disabled for this repository); see the job summary instead."
+            { echo "## $title"; echo; echo "$body"; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit 0
