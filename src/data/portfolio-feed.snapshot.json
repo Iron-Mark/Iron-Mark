@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-22T13:21:27.625491+00:00",
+  "fetchedAt": "2026-07-22T13:28:31.850950+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -63,6 +63,11 @@
             "type": "live"
           },
           {
+            "label": "Repository",
+            "href": "https://github.com/mark-siazon/Hackathon-HireProof",
+            "type": "github"
+          },
+          {
             "label": "Documentation",
             "href": "https://hireproof.tech/docs",
             "type": "proof"
@@ -100,6 +105,11 @@
             "label": "Live Project",
             "href": "https://stellaroid.tech",
             "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/mark-siazon/Hackathon-Stellaroid_Earn",
+            "type": "github"
           },
           {
             "label": "Demo App",
