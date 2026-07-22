@@ -1,0 +1,39 @@
+{
+  "$schema": "https://example.test/schema/llms-index.schema.json",
+  "version": "1.0.0",
+  "updated": "2026-01-01",
+  "entity": {
+    "@type": "Person",
+    "@id": "https://example.test/#person",
+    "name": "Old Name",
+    "alternateName": [
+      "OldAlt"
+    ],
+    "jobTitle": [
+      "Old Title"
+    ],
+    "description": "Old description that must be replaced by the derive script.",
+    "url": "https://example.test",
+    "email": "old@example.test",
+    "sameAs": [
+      "https://old.example.test"
+    ]
+  },
+  "availability": {
+    "status": "open",
+    "focus": [
+      "old focus"
+    ],
+    "engagement": [
+      "contract"
+    ],
+    "location": "Nowhere",
+    "areaServed": [
+      "Nowhere"
+    ],
+    "remote": true,
+    "contact": "https://example.test/contact",
+    "recruiterBrief": "https://example.test/recruiter"
+  },
+  "otherRepoAuthoredKey": "must remain untouched"
+}

@@ -15,30 +15,71 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 | Philippines-based | Portfolio contact / about; LinkedIn |
 | Product designer + full-stack | Case studies below; STACK.md |
 
-## Featured work (9 projects)
+## Verification gates & proof by project
 
-| Project | Case study | Live / repo / model |
-|---------|------------|---------------------|
-| HireProof | https://www.marksiazon.dev/projects/hireproof | https://hireproof.tech/portfolio |
-| Stellaroid Earn | https://www.marksiazon.dev/projects/stellaroid-earn | https://stellaroid.tech |
-| ResQLink | https://www.marksiazon.dev/projects/resqlink | https://github.com/UMakLumen/ResQLinkWeb |
-| LexInsights | https://www.marksiazon.dev/projects/lexinsights | https://lexiph.vercel.app · https://github.com/Iron-Mark/Hackathon-LexInsights |
-| Good To Live | https://www.marksiazon.dev/projects/good-to-live | https://www.goodtolivepodcast.com |
-| FlowFit | https://www.marksiazon.dev/projects/flowfit | Case study + team repo on portfolio |
-| PalengkePay | https://www.marksiazon.dev/projects/palengkepay | https://palengke-pay.vercel.app |
-| GawainYah | https://www.marksiazon.dev/projects/gawainyah | https://gawainyah-minipay.vercel.app |
-| BaybayInscribe | https://www.marksiazon.dev/projects/baybayinscribe | https://huggingface.co/gilas/baybayinscribe |
+<!-- BEGIN DERIVED: proof (from https://www.marksiazon.dev/llms-index.json - do not hand-edit) -->
+
+### Proof gates
+
+| Label | Owner | Status |
+|-------|-------|--------|
+| Notion public archive | User action | Manual body/table refresh remains outside repo automation. |
+| ResQLink academic awards | Record attachment | Best Thesis and Best Presentation stay user-provided until certificate, thesis, program, or official page is attached. |
+| PalengkePay payment record | Wallet/onchain QA | Needs real wallet-signed payment, transaction hash, and sponsor durability record. |
+| GawainYah MiniPay/Celo record | Device and mainnet QA | Registry is deployed; still needs physical MiniPay QA, real MiniPay payment, proof-event record, and final Talent form confirmation. |
+
+### Proof by project
+
+#### BaybayInscribe (https://www.marksiazon.dev/projects/baybayinscribe)
+
+- [Model Reference](https://huggingface.co/gilas/baybayinscribe)
+
+#### FlowFit (https://www.marksiazon.dev/projects/flowfit)
+
+- [Signed Android Release](https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21)
+- [Demo Video](https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing)
+
+#### GawainYah (https://www.marksiazon.dev/projects/gawainyah)
+
+- [Testnet QA Launcher](https://www.marksiazon.dev/gawainyah/testnet)
+- [Runtime Origin](https://gawainyah-minipay.vercel.app)
+- [Registry Source Verification](https://sourcify.dev/server/repo-ui/42220/0xfee6C135690E10ea814212aA9Aefd97508A0FC92)
+
+#### HireProof (https://www.marksiazon.dev/projects/hireproof)
+
+- [Documentation](https://hireproof.tech/docs)
+
+#### Kudlit (https://www.marksiazon.dev/projects/kudlit)
+
+- [Android Release](https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0)
+
+#### LexInsights (https://www.marksiazon.dev/projects/lexinsights)
+
+- [Legacy Showcase](https://lexinsights.vercel.app)
+
+#### PalengkePay (https://www.marksiazon.dev/projects/palengkepay)
+
+- [MVP Walkthrough](https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1)
+
+#### Pulse (https://www.marksiazon.dev/projects/pulse)
+
+- [Public Preview Asset](https://www.marksiazon.dev/project-assets/pulse/preview-running-music.png)
+
+#### Qwen UI Lab (https://www.marksiazon.dev/projects/qwen-ui-lab)
+
+- [Health Endpoint](https://qwen-ui-lab.vercel.app/api/health)
+
+#### Stellaroid Earn (https://www.marksiazon.dev/projects/stellaroid-earn)
+
+- [Demo App](https://stellaroid-earn-demo.vercel.app/)
+- [Status Route](https://stellaroid.tech/status)
+- [Events API](https://stellaroid.tech/api/events)
+
+<!-- END DERIVED: proof -->
 
 ## Hackathon & lab
 
 Rendered lab index: [lab](https://iron-mark.github.io/Iron-Mark/lab/) · Markdown source: [LAB.md](LAB.md)
-
-| Project | Proof |
-|---------|-------|
-| qwen-ui-lab | https://www.marksiazon.dev/projects/qwen-ui-lab · https://qwen-ui-lab.vercel.app |
-| Smart Profile | https://iron-mark.github.io/Hackathon-Smart-Profile-Management-System/ |
-| Kudlit | https://www.marksiazon.dev/projects/kudlit · https://github.com/ACSADians/kudlit-app |
-| Pulse | https://www.marksiazon.dev/projects/pulse · https://pacebeats.vercel.app |
 
 ## Achievements
 

@@ -23,6 +23,8 @@ on:
       - "public/schema/**"
       - "README.md"
       - "docs/index.html"
+  schedule:
+    - cron: '30 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +41,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Derive narrative content from portfolio feed
+        run: python3 src/scripts/derive_from_portfolio.py
 
       - name: Bump updated and lastmod dates
         run: python3 src/scripts/bump_index_dates.py
@@ -75,7 +80,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
+          git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/PROOF.md public/RECRUITER.md src/data/portfolio-feed.snapshot.json public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
           git diff --staged --quiet && echo "No date changes" && exit 0
           git switch -c "$branch"
           git commit -m "$title"

@@ -1,0 +1,96 @@
+{
+  "entity": {
+    "name": "Test Person",
+    "id": "https://example.test/#test-person",
+    "url": "https://example.test",
+    "title": "Test Title",
+    "summary": "Test summary sentence for the derived entity description.",
+    "sameAs": [
+      "https://github.com/test-person",
+      "https://www.linkedin.com/in/test-person/"
+    ]
+  },
+  "availability": {
+    "headline": "Open for test opportunities",
+    "summary": "Best fit: test roles and fixture QA.",
+    "firstMessage": "Share the fixture scenario you want reviewed.",
+    "note": "This is fixture data only; do not contact.",
+    "workScope": [
+      "Fixture QA",
+      "Test automation"
+    ]
+  },
+  "projects": [
+    {
+      "slug": "alpha-project",
+      "title": "Alpha Project",
+      "summary": "Alpha project summary.",
+      "role": "Test engineer",
+      "timeframe": "2026",
+      "status": "Fixture status alpha",
+      "lenses": ["test"],
+      "tags": ["Fixture"],
+      "stack": ["Python"],
+      "canonicalUrl": "https://example.test/projects/alpha-project",
+      "links": [
+        {"label": "Live", "href": "https://alpha.example.test", "type": "live"}
+      ],
+      "proofCount": 1,
+      "lastVerified": "2026-01-01"
+    },
+    {
+      "slug": "beta-project",
+      "title": "Beta Project",
+      "summary": "Beta project summary.",
+      "role": "Test designer",
+      "timeframe": "2026",
+      "status": "Fixture status beta",
+      "lenses": ["test"],
+      "tags": ["Fixture"],
+      "stack": ["TypeScript"],
+      "canonicalUrl": "https://example.test/projects/beta-project",
+      "links": [
+        {"label": "Repo", "href": "https://github.com/example/beta", "type": "repo"}
+      ],
+      "proofCount": 1,
+      "lastVerified": "2026-01-02"
+    }
+  ],
+  "writing": [],
+  "faq": [
+    {"id": "home-1", "question": "Home question one?", "answer": "Home answer one.", "audiences": ["home"]},
+    {"id": "home-2", "question": "Home question two?", "answer": "Home answer two.", "audiences": ["home", "contact"]},
+    {"id": "recruiter-1", "question": "Recruiter question one?", "answer": "Recruiter answer one.", "audiences": ["recruiter"]},
+    {"id": "recruiter-2", "question": "Recruiter question two?", "answer": "Recruiter answer two.", "audiences": ["recruiter", "home"]},
+    {"id": "contact-1", "question": "Contact question one?", "answer": "Contact answer one.", "audiences": ["contact"]},
+    {"id": "project-alpha-1", "question": "Alpha-only question?", "answer": "Alpha-only answer.", "audiences": ["project:alpha-project"]}
+  ],
+  "proof": {
+    "gates": [
+      {"label": "Fixture gate one", "owner": "QA", "status": "Open"},
+      {"label": "Fixture gate two", "owner": "Automation", "status": "Closed"}
+    ],
+    "byProject": {
+      "alpha-project": [
+        {"label": "Live", "href": "https://alpha.example.test"}
+      ],
+      "beta-project": [
+        {"label": "Repo", "href": "https://github.com/example/beta"}
+      ]
+    }
+  },
+  "services": [
+    {"title": "Fixture service", "description": "Fixture service description."}
+  ],
+  "achievements": [
+    {"title": "Fixture achievement", "tags": ["Fixture"], "compactResult": "Done"}
+  ],
+  "pointers": {
+    "site": "https://example.test",
+    "feedSelf": "https://example.test/llms-index.json",
+    "schema": "https://example.test/schema/llms-index.schema.json",
+    "githubProfileRepo": "https://github.com/example/example",
+    "generatedAt": "deadbeef1234567890",
+    "mcpEndpoint": "https://example.test/api/mcp"
+  }
+}

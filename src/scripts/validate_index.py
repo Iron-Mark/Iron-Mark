@@ -1586,6 +1586,40 @@ def faq_questions() -> list[str]:
     return [q.strip() for q in re.findall(r"^##\s+(.+?)\s*$", text, re.MULTILINE)]
 
 
+DERIVED_REGION_PATTERN = re.compile(
+    r"<!-- BEGIN DERIVED: [\w-]+ \(from https://www\.marksiazon\.dev/llms-index\.json - do not hand-edit\) -->"
+    r".*?"
+    r"<!-- END DERIVED: [\w-]+ -->",
+    re.DOTALL,
+)
+
+
+def faq_questions_excluding_derived() -> list[str]:
+    """Same as faq_questions(), but with content inside src/scripts/
+    derive_from_portfolio.py's <!-- BEGIN/END DERIVED: ... --> marker
+    regions stripped first.
+
+    Phase 4 (src/scripts/derive_from_portfolio.py) intentionally renders
+    part of FAQ.md's visible Q&A from the live, daily-changing portfolio
+    feed rather than from this repo's static aeo.answerSnippets. Static
+    per-question JSON-LD schema coverage (faq.jsonld / person.jsonld /
+    docs/index.html inline JSON-LD, all sourced from aeo.answerSnippets)
+    is intentionally NOT extended to that feed-derived content in this
+    phase - doing so would mean re-deriving schema.org Question nodes from
+    the feed too, which is out of scope here (entity.@id migration is
+    likewise deferred). Use this reduced question list only for the
+    "does the static FAQ schema cover at least as many questions as are
+    visible" sanity check; use the full faq_questions() list (including
+    derived-region questions) for AEO-snippet-vs-FAQ.md text presence
+    checks, since some aeo.answerSnippets questions/answers now legitimately
+    live inside the derived region and must still be found there.
+    """
+    if not FAQ.exists():
+        return []
+    text = DERIVED_REGION_PATTERN.sub("", FAQ.read_text(encoding="utf-8"))
+    return [q.strip() for q in re.findall(r"^##\s+(.+?)\s*$", text, re.MULTILINE)]
+
+
 def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     faq_text = FAQ.read_text(encoding="utf-8") if FAQ.exists() else ""
@@ -3549,7 +3583,7 @@ def main() -> int:
     check_knowledge_graph(data)
     check_generated_context(data)
     check_portfolio_sync_artifacts(data)
-    check_schema(data, questions)
+    check_schema(data, faq_questions_excluding_derived())
     check_crawl_files(data)
 
     mcp_readme = ROOT / "src" / "mcp-server" / "README.md"
