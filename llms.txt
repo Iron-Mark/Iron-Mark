@@ -11,7 +11,7 @@ Structured mirrors: [llms-index.json](llms-index.json) (structured index), [llms
 ## Canonical sources
 
 - [Portfolio (primary)](https://www.marksiazon.dev): canonical site and case studies
-- [Person entity @id](https://www.marksiazon.dev/#person): Schema.org identity anchor
+- [Person entity @id](https://www.marksiazon.dev/#mark-siazon): Schema.org identity anchor
 - [GitHub profile README](https://github.com/Iron-Mark/Iron-Mark): this repo, README and activity widgets
 - [GitHub account](https://github.com/Iron-Mark): primary account
 - [Secondary GitHub](https://github.com/mark-siazon): alternate account

@@ -1196,11 +1196,11 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index ContactAction description drift")
         if contact_action.get("target", {}).get("@id") != "https://www.marksiazon.dev/#contact-entrypoint":
             issues.append("Pages index ContactAction target drift")
-        if contact_action.get("recipient", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if contact_action.get("recipient", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index ContactAction recipient drift")
-        if contact_action.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if contact_action.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index ContactAction about drift")
-        if contact_action.get("object", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if contact_action.get("object", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index ContactAction object drift")
     contact_entry = next(
         (node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#contact-entrypoint"),
@@ -1296,7 +1296,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         issues.append("Pages SVG favicon must declare a square viewBox")
     if not any("Person" in node_type_set(node) and has_english_knows_language(node) for node in parsed_jsonld_nodes):
         issues.append("Pages index inline JSON-LD missing Person English knowsLanguage signal")
-    person = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#person"), None)
+    person = next((node for node in parsed_jsonld_nodes if node.get("@id") == "https://www.marksiazon.dev/#mark-siazon"), None)
     if not person or "Person" not in node_type_set(person):
         issues.append("Pages index inline JSON-LD missing Person node")
     elif ref_ids(person.get("mainEntityOfPage")) != ref_ids(person_main_entity_pages(index_data)):
@@ -1304,7 +1304,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     person_nodes = [
         node
         for node in parsed_jsonld_nodes
-        if node.get("@id") == "https://www.marksiazon.dev/#person" and "Person" in node_type_set(node)
+        if node.get("@id") == "https://www.marksiazon.dev/#mark-siazon" and "Person" in node_type_set(node)
     ]
     for person_node in person_nodes:
         check_person_identity_resolution(issues, person_node, index_data, "Pages index Person")
@@ -1384,7 +1384,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index OfferCatalog identifier drift")
         if offer_catalog.get("mainEntityOfPage") != availability.get("recruiterBrief"):
             issues.append("Pages index OfferCatalog mainEntityOfPage drift")
-        if offer_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if offer_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index OfferCatalog about drift")
         if offer_catalog.get("inLanguage") != content_language():
             issues.append("Pages index OfferCatalog inLanguage drift")
@@ -1437,7 +1437,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         missing_channel_services = sorted(expected_service_ids - ref_ids(service_channel.get("providesService")))
         if missing_channel_services:
             issues.append(f"Pages index ServiceChannel providesService missing: {missing_channel_services}")
-        if service_channel.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if service_channel.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index ServiceChannel about drift")
         if service_channel.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index ServiceChannel dateModified drift")
@@ -1467,9 +1467,9 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Offer itemOffered drift: {focus}")
             if offer.get("businessFunction") != PROVIDE_SERVICE_BUSINESS_FUNCTION:
                 issues.append(f"Pages index Offer businessFunction drift: {focus}")
-            if offer.get("offeredBy", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if offer.get("offeredBy", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Offer offeredBy drift: {focus}")
-            if offer.get("seller", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if offer.get("seller", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Offer seller drift: {focus}")
             missing_offer_area = sorted(area_served - area_names(offer.get("areaServed")))
             if missing_offer_area:
@@ -1493,7 +1493,7 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Service url drift: {focus}")
             if service.get("mainEntityOfPage") != availability.get("recruiterBrief"):
                 issues.append(f"Pages index Service mainEntityOfPage drift: {focus}")
-            if service.get("provider", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if service.get("provider", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Service provider drift: {focus}")
             if service.get("offers", {}).get("@id") != offer_id:
                 issues.append(f"Pages index Service offers drift: {focus}")
@@ -1514,15 +1514,15 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if profile_page.get("inLanguage") != "en":
             issues.append("Pages index GitHub ProfilePage inLanguage must be en")
-        if profile_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if profile_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index GitHub ProfilePage author drift")
-        if profile_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if profile_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index GitHub ProfilePage publisher drift")
         if profile_page.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index GitHub ProfilePage keywords drift")
-        if profile_page.get("mainEntity", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if profile_page.get("mainEntity", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index GitHub ProfilePage mainEntity drift")
-        if profile_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if profile_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index GitHub ProfilePage about drift")
         if profile_page.get("isPartOf", {}).get("@id") != "https://github.com/Iron-Mark/Iron-Mark#website":
             issues.append("Pages index GitHub ProfilePage isPartOf drift")
@@ -1609,9 +1609,9 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index CollectionPage speakable drift")
         if pages_page.get("mainContentOfPage", {}).get("@id") != pages_main_content_id:
             issues.append("Pages index CollectionPage mainContentOfPage drift")
-        if pages_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if pages_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index CollectionPage author drift")
-        if pages_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if pages_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index CollectionPage publisher drift")
         if pages_page.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index CollectionPage keywords drift")
@@ -1641,7 +1641,7 @@ def validate_artifact(artifact: Path) -> list[str]:
         expected_text = entity.get("description") if isinstance(entity, dict) else None
         if main_content.get("text") != expected_text:
             issues.append("Pages index main WebPageElement text drift")
-        if main_content.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if main_content.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index main WebPageElement about drift")
         if main_content.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#webpage":
             issues.append("Pages index main WebPageElement isPartOf drift")
@@ -1664,7 +1664,7 @@ def validate_artifact(artifact: Path) -> list[str]:
     else:
         if section_navigation.get("url") != f"{PAGES_BASE}/#section-navigation":
             issues.append("Pages index section navigation url drift")
-        if section_navigation.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if section_navigation.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index section navigation about drift")
         if section_navigation.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#webpage":
             issues.append("Pages index section navigation isPartOf drift")
@@ -1722,7 +1722,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"{label} description drift")
         if section_node.get("text") != section["text"]:
             issues.append(f"{label} text drift")
-        if section_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if section_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append(f"{label} about drift")
         if section_node.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#webpage":
             issues.append(f"{label} isPartOf drift")
@@ -1752,7 +1752,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index DefinedTermSet url drift")
         if topic_set.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index DefinedTermSet dateModified drift")
-        if topic_set.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if topic_set.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index DefinedTermSet about drift")
         if topic_set.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/#website":
             issues.append("Pages index DefinedTermSet isPartOf drift")
@@ -1778,7 +1778,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index DefinedTerm url drift: {term}")
         if term_node.get("inDefinedTermSet", {}).get("@id") != pages_topic_set_id:
             issues.append(f"Pages index DefinedTerm set drift: {term}")
-        if term_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if term_node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append(f"Pages index DefinedTerm about drift: {term}")
         if term_node.get("dateModified") != index_data.get("updated"):
             issues.append(f"Pages index DefinedTerm dateModified drift: {term}")
@@ -1796,15 +1796,15 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index DataCatalog abstract drift")
         if data_catalog.get("dataset", {}).get("@id") != f"{PAGES_BASE}/#machine-readable-dataset":
             issues.append("Pages index DataCatalog dataset drift")
-        if data_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if data_catalog.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index DataCatalog about drift")
         if data_catalog.get("isBasedOn") != expected_based_on:
             issues.append("Pages index DataCatalog isBasedOn drift")
         if data_catalog.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index DataCatalog keywords drift")
-        if data_catalog.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if data_catalog.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index DataCatalog creator drift")
-        if data_catalog.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if data_catalog.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index DataCatalog publisher drift")
         if data_catalog.get("inLanguage") != "en":
             issues.append("Pages index DataCatalog inLanguage must be en")
@@ -1870,7 +1870,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index inline Dataset measurementTechnique drift")
         if dataset.get("variableMeasured") != expected_dataset_measurements(index_data):
             issues.append("Pages index inline Dataset variableMeasured drift")
-        if {"https://www.marksiazon.dev/#person", pages_topic_set_id} - ref_ids(dataset.get("about")):
+        if {"https://www.marksiazon.dev/#mark-siazon", pages_topic_set_id} - ref_ids(dataset.get("about")):
             issues.append("Pages index Dataset about must reference Person and topic taxonomy")
         if dataset.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index Dataset keywords drift")
@@ -1896,13 +1896,13 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index FAQPage isBasedOn drift")
         if faq_page.get("dateModified") != index_data.get("updated"):
             issues.append("Pages index FAQPage dateModified drift")
-        if faq_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if faq_page.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index FAQPage about drift")
         if faq_page.get("inLanguage") != content_language():
             issues.append("Pages index FAQPage inLanguage drift")
-        if faq_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if faq_page.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index FAQPage author drift")
-        if faq_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if faq_page.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index FAQPage publisher drift")
         if faq_page.get("keywords") != profile_keywords(index_data):
             issues.append("Pages index FAQPage keywords drift")
@@ -1961,11 +1961,11 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Question url drift: {node.get('name')}")
             if node.get("identifier") != faq_item_identifier(question_id, "question"):
                 issues.append(f"Pages index Question identifier drift: {node.get('name')}")
-            if node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if node.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Question about drift: {node.get('name')}")
-            if node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Question author drift: {node.get('name')}")
-            if node.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if node.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Question publisher drift: {node.get('name')}")
             if node.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
                 issues.append(f"Pages index Question isPartOf drift: {node.get('name')}")
@@ -1998,11 +1998,11 @@ def validate_artifact(artifact: Path) -> list[str]:
                 issues.append(f"Pages index Answer identifier drift: {node.get('name')}")
             if answer.get("text") != faq_answers_by_question.get(question_name):
                 issues.append(f"Pages index Answer text drift: {node.get('name')}")
-            if answer.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if answer.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Answer author drift: {node.get('name')}")
-            if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if answer.get("publisher", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Answer publisher drift: {node.get('name')}")
-            if answer.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+            if answer.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
                 issues.append(f"Pages index Answer about drift: {node.get('name')}")
             if answer.get("isPartOf", {}).get("@id") != f"{PAGES_BASE}/FAQ.md#faq":
                 issues.append(f"Pages index Answer isPartOf drift: {node.get('name')}")
@@ -2035,7 +2035,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index featured projects ItemList description drift")
         if featured_list.get("abstract") != featured_list.get("description"):
             issues.append("Pages index featured projects ItemList abstract drift")
-        if featured_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if featured_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index featured projects ItemList about drift")
         check_publisher_metadata(issues, featured_list, index_data, "Pages index featured projects ItemList")
         if featured_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
@@ -2085,7 +2085,7 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append("Pages index hackathon and lab ItemList description drift")
         if lab_list.get("abstract") != lab_list.get("description"):
             issues.append("Pages index hackathon and lab ItemList abstract drift")
-        if lab_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if lab_list.get("about", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append("Pages index hackathon and lab ItemList about drift")
         check_publisher_metadata(issues, lab_list, index_data, "Pages index hackathon and lab ItemList")
         if lab_list.get("isPartOf", {}).get("@id") != f"{GITHUB_BLOB}/llms-index.json#creativework":
@@ -2184,9 +2184,9 @@ def validate_artifact(artifact: Path) -> list[str]:
             issues.append(f"Pages index hackathon/lab project mainEntityOfPage drift: {project.get('name')}")
         if project_node.get("description") != project.get("focus"):
             issues.append(f"Pages index hackathon/lab project description drift: {project.get('name')}")
-        if project_node.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if project_node.get("creator", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append(f"Pages index hackathon/lab project creator drift: {project.get('name')}")
-        if project_node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#person":
+        if project_node.get("author", {}).get("@id") != "https://www.marksiazon.dev/#mark-siazon":
             issues.append(f"Pages index hackathon/lab project author drift: {project.get('name')}")
         check_publisher_metadata(issues, project_node, index_data, f"Pages index hackathon/lab project {project.get('name')}")
         expected_parent = "https://www.marksiazon.dev/#website" if project.get("caseStudy") else "https://github.com/Iron-Mark/Iron-Mark#website"

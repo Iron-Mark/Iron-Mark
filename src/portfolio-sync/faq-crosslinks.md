@@ -6,7 +6,7 @@ See [marksiazon-dev-llms-snippet.md](marksiazon-dev-llms-snippet.md) for the com
 Extended FAQ (15+ Q&A, repo): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md  
 Structured answer snippets: https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json
 FAQ schema (JSON-LD): https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
-Entity @id: https://www.marksiazon.dev/#person
+Entity @id: https://www.marksiazon.dev/#mark-siazon
 
 | Question | Start on portfolio/source | Full answer (GitHub FAQ) |
 |----------|---------------------------|---------------------------|

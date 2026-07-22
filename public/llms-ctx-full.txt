@@ -261,7 +261,7 @@ Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev
 
 Last updated: 2026-07-22
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
-Entity @id: https://www.marksiazon.dev/#person
+Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 
 Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [recruiter](https://www.marksiazon.dev/recruiter) · [proof](https://www.marksiazon.dev/proof)

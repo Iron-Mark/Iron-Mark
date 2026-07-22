@@ -1,5 +1,5 @@
 /* ENTITY (@id) */
-Person: https://www.marksiazon.dev/#person
+Person: https://www.marksiazon.dev/#mark-siazon
 Portfolio website: https://www.marksiazon.dev/#website
 GitHub profile page: https://github.com/Iron-Mark/Iron-Mark#profilepage
 GitHub profile index: https://github.com/Iron-Mark/Iron-Mark#website
