@@ -37,6 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The daily schedule runs on main (default branch), but the freshness PR
+          # targets dev. Build the bot branch FROM dev so it can never conflict
+          # with it (same fix as update-github-stats.yml).
+          ref: dev
 
       - uses: actions/setup-python@v5
         with:
