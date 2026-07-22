@@ -29,7 +29,7 @@ Prototype fast, write clearly, check before shipping
 
 ## Is Mark Siazon available for hire?
 
-Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.
+Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 

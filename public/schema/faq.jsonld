@@ -390,7 +390,7 @@
           "value": "is-mark-siazon-available-for-hire-answer",
           "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire-answer"
         },
-        "text": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+        "text": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
         "author": {
           "@id": "https://www.marksiazon.dev/#mark-siazon"
         },
