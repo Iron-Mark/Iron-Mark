@@ -80,7 +80,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
+          git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/PROOF.md public/RECRUITER.md src/data/portfolio-feed.snapshot.json public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
           git diff --staged --quiet && echo "No date changes" && exit 0
           git switch -c "$branch"
           git commit -m "$title"
