@@ -23,6 +23,8 @@ on:
       - "public/schema/**"
       - "README.md"
       - "docs/index.html"
+  schedule:
+    - cron: '30 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +41,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Derive narrative content from portfolio feed
+        run: python3 src/scripts/derive_from_portfolio.py
 
       - name: Bump updated and lastmod dates
         run: python3 src/scripts/bump_index_dates.py
