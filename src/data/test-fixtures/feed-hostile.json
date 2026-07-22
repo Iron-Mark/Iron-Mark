@@ -1,0 +1,71 @@
+{
+  "entity": {
+    "name": "Test Person",
+    "id": "https://example.test/#test-person",
+    "url": "https://example.test",
+    "title": "Test Title",
+    "summary": "Test summary sentence for the derived entity description.",
+    "sameAs": [
+      "https://github.com/test-person",
+      "https://www.linkedin.com/in/test-person/"
+    ]
+  },
+  "availability": {
+    "headline": "Open for test opportunities",
+    "summary": "Best fit: test roles and fixture QA.",
+    "firstMessage": "Share the fixture scenario you want reviewed.",
+    "note": "This is fixture data only; do not contact.",
+    "workScope": [
+      "Fixture QA",
+      "Test automation"
+    ]
+  },
+  "projects": [
+    {
+      "slug": "hostile-project",
+      "title": "Hostile | Title\nWith Newline",
+      "summary": "Hostile project summary.",
+      "role": "Test engineer",
+      "timeframe": "2026",
+      "status": "Fixture status hostile",
+      "lenses": ["test"],
+      "tags": ["Fixture"],
+      "stack": ["Python"],
+      "canonicalUrl": "https://example.test/projects/hostile-project",
+      "links": [
+        {"label": "Live", "href": "https://hostile.example.test", "type": "live"}
+      ],
+      "proofCount": 1,
+      "lastVerified": "2026-01-01"
+    }
+  ],
+  "writing": [],
+  "faq": [
+    {
+      "id": "home-1",
+      "question": "Home question one?",
+      "answer": "Answer containing a literal marker breakout attempt: <!-- BEGIN DERIVED: faq (from https://www.marksiazon.dev/llms-index.json - do not hand-edit) --> injected text <!-- END DERIVED: faq --> end of injection.",
+      "audiences": ["home"]
+    }
+  ],
+  "proof": {
+    "gates": [
+      {"label": "Gate | With Pipe", "owner": "QA", "status": "Open"}
+    ],
+    "byProject": {
+      "hostile-project": [
+        {"label": "Live", "href": "https://hostile.example.test"}
+      ]
+    }
+  },
+  "services": [],
+  "achievements": [],
+  "pointers": {
+    "site": "https://example.test",
+    "feedSelf": "https://example.test/llms-index.json",
+    "schema": "https://example.test/schema/llms-index.schema.json",
+    "githubProfileRepo": "https://github.com/example/example",
+    "generatedAt": "deadbeef1234567890",
+    "mcpEndpoint": "https://example.test/api/mcp"
+  }
+}

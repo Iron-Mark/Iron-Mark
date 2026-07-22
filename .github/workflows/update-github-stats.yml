@@ -1,5 +1,12 @@
 name: Update GitHub Stats
 
+# NOTE: GitHub Actions always runs a *scheduled* (and workflow_dispatch)
+# event's workflow YAML from the repository's default branch (main), even
+# though the `update-stats` job below explicitly checks out `ref: dev` for
+# everything else. Keep this workflow's pipeline body simple/self-contained
+# for that reason - anything more elaborate should live in a dev-checked-out
+# script (see src/scripts/daily_freshness.py and bump-index-date.yml's
+# equivalent note for why that matters).
 on:
   schedule:
     - cron: "0 6 * * *"
@@ -12,6 +19,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
   pull-requests: write
 
 jobs:
@@ -65,9 +73,20 @@ jobs:
           # Falls back to GITHUB_TOKEN if the secret is not set.
           token: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
 
+      - name: Keep last-good top-langs card if the API errored
+        run: |
+          # Same failure mode as the stats card: an error card ("Something
+          # went wrong" / RESOURCE_LIMITS_EXCEEDED) must never be published.
+          if grep -qiE "Something went wrong|Resource limits for this query exceeded" assets/github/top-langs.svg; then
+            echo "::warning::Top languages card returned an error card; keeping the last committed top-langs.svg."
+            git checkout -- assets/github/top-langs.svg
+          else
+            echo "Top languages card generated successfully."
+          fi
+
       - name: Generate contribution activity graph
         run: |
-          curl -sL "https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180" \
+          curl -sL --fail "https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180" \
             -o assets/github/activity-graph.svg
 
       - name: Generate contribution streak card
@@ -81,8 +100,24 @@ jobs:
             echo "Attempt $attempt: streak-stats returned an error card, retrying..."
             sleep 10
           done
-          echo "::error::streak-stats.demolab.com kept returning an error card after 3 attempts"
-          exit 1
+          # One flaky third party (streak-stats.demolab.com) must not fail the
+          # whole run - keep the last committed streak.svg instead, same as
+          # the stats-card and top-langs-card guards above.
+          echo "::warning::streak-stats.demolab.com kept returning an error card after 3 attempts; keeping the last committed streak.svg."
+          git checkout -- assets/github/streak.svg
+
+      - name: Safety gate - reject hostile third-party SVGs
+        run: |
+          # Fetched SVGs come from third-party services. Never publish one
+          # that carries active content - grep each of the 4 cards for
+          # script/event-handler/foreignObject patterns; any hit reverts
+          # just that file to the last committed (known-good) version.
+          for f in assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg; do
+            if grep -qiE '<script|onload=|onerror=|javascript:|<foreignObject' "$f"; then
+              echo "::warning::$f contains disallowed active content (script/event-handler/foreignObject); keeping the last committed version."
+              git checkout -- "$f"
+            fi
+          done
 
       - name: Staticize generated SVG cards
         run: python src/scripts/staticize_github_svgs.py
@@ -120,8 +155,8 @@ jobs:
         run: |
           branch="automation/github-stats-update"
           if [ -z "${GH_TOKEN:-}" ]; then
-            echo "STATS_TOKEN not set; leaving the PR for manual merge."
-            exit 0
+            echo "::error::STATS_TOKEN not set; the stats PR was opened but cannot be auto-merged. Leaving it for manual merge."
+            exit 1
           fi
           pr=$(gh pr list --head "$branch" --base dev --state open --json number --jq '.[0].number')
           if [ -z "$pr" ]; then
@@ -133,5 +168,22 @@ jobs:
           if gh pr merge "$pr" --merge --admin; then
             echo "Merged PR #$pr into dev."
           else
-            echo "::warning::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
+            echo "::error::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
+            exit 1
+          fi
+
+      - name: Alert on workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Daily automation failure: Update GitHub Stats"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Update GitHub Stats** workflow failed.\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "${{ github.repository }}" --body "$body"
+          else
+            gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"
           fi

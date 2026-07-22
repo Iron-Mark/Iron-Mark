@@ -10,6 +10,7 @@ Invoke with: python -m unittest src.scripts.test_derive_from_portfolio -v
 
 from __future__ import annotations
 
+import copy
 import json
 import shutil
 import tempfile
@@ -327,6 +328,263 @@ class FeedValidationTests(unittest.TestCase):
         feed["entity"]["sameAs"] = "not-a-list"
         issues = derive.validate_feed_structure(feed)
         self.assertTrue(any("entity.sameAs" in issue for issue in issues))
+
+
+class AeoAnswerSnippetTests(DeriveTestCase):
+    """Finding A: aeo.answerSnippets entries that overlap the feed-derived
+    FAQ.md region must stay in sync with the feed, or a portfolio wording
+    change eventually breaks validate_index.py's verbatim check."""
+
+    def test_overlapping_snippet_synced_non_overlapping_untouched(self) -> None:
+        self.run_main()
+        data = json.loads(self.index_path.read_text(encoding="utf-8"))
+        snippets = {item["question"]: item for item in data["aeo"]["answerSnippets"]}
+
+        overlapping = snippets["Home question one?"]
+        self.assertEqual(overlapping["answer"], "Home answer one.")
+        # sources are repo-authored and must never be touched by derive.
+        self.assertEqual(overlapping["sources"], ["https://example.test/faq"])
+
+        untouched = snippets["Repo-only question?"]
+        self.assertEqual(
+            untouched["answer"],
+            "This answer is entirely repo-authored and must never change.",
+        )
+        self.assertEqual(untouched["sources"], ["https://example.test/repo-only"])
+
+    def test_feed_answer_change_propagates_and_stays_verbatim_in_faq(self) -> None:
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        for item in feed["faq"]:
+            if item["question"] == "Home question one?":
+                item["answer"] = "Home answer one, now reworded by the portfolio."
+        self.feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+        self.assertEqual(self.run_main(), 0)
+
+        data = json.loads(self.index_path.read_text(encoding="utf-8"))
+        snippets = {item["question"]: item for item in data["aeo"]["answerSnippets"]}
+        updated_answer = snippets["Home question one?"]["answer"]
+        self.assertEqual(updated_answer, "Home answer one, now reworded by the portfolio.")
+
+        # validate-style verbatim check (mirrors validate_index.py's
+        # check_aeo_coverage): every answerSnippet answer must appear
+        # byte-for-byte inside the visible FAQ.md text.
+        faq_text = self.faq_path.read_text(encoding="utf-8")
+        self.assertIn(updated_answer, faq_text)
+
+
+class ValidationErrorRoutingTests(DeriveTestCase):
+    """Finding B: a fetched-but-contract-invalid feed must fail loudly and
+    immediately (exit 2), never absorbed by the staleness fallback - even
+    when a perfectly fresh last-good snapshot exists."""
+
+    def _args_for(self, feed_path: Path) -> list[str]:
+        return [
+            "--feed-file", str(feed_path),
+            "--snapshot", str(self.snapshot_path),
+            "--faq-md", str(self.faq_path),
+            "--proof-md", str(self.proof_path),
+            "--recruiter-md", str(self.recruiter_path),
+            "--index-json", str(self.index_path),
+        ]
+
+    def _write_fresh_snapshot(self) -> str:
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        normalized = derive.normalize_feed(feed)
+        fresh = (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat()
+        payload = json.dumps({"fetchedAt": fresh, "feed": normalized}, indent=2) + "\n"
+        self.snapshot_path.write_text(payload, encoding="utf-8")
+        return payload
+
+    def test_structurally_invalid_feed_exits_two_immediately_even_with_fresh_snapshot(self) -> None:
+        before = self._write_fresh_snapshot()
+
+        invalid_feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        del invalid_feed["availability"]["headline"]
+        invalid_path = self.work_dir / "invalid-feed.json"
+        invalid_path.write_text(json.dumps(invalid_feed), encoding="utf-8")
+
+        exit_code = derive.main(self._args_for(invalid_path))
+
+        self.assertEqual(exit_code, 2)
+        # Nothing was overwritten - not even the (fresh, otherwise-usable)
+        # snapshot - because this is not routed through the fallback.
+        self.assertEqual(before, self.snapshot_path.read_text(encoding="utf-8"))
+
+    def test_network_style_fetch_failure_still_uses_staleness_fallback(self) -> None:
+        # Sanity check that splitting the two failure modes didn't disturb
+        # the other one: a genuine fetch failure must still use the
+        # staleness budget as before.
+        self._write_fresh_snapshot()
+        missing_feed = self.work_dir / "does-not-exist.json"
+
+        exit_code = derive.main(self._args_for(missing_feed))
+
+        self.assertEqual(exit_code, 0)
+
+
+class MarkerBreakoutTests(DeriveTestCase):
+    """Finding C: feed content that contains literal marker comment text
+    must never corrupt the marker structure, and a file that is already
+    corrupted must fail loudly rather than silently guessing."""
+
+    def _use_hostile_feed(self) -> None:
+        shutil.copy(FIXTURES / "feed-hostile.json", self.feed_path)
+
+    def test_marker_bearing_feed_content_stays_idempotent(self) -> None:
+        self._use_hostile_feed()
+
+        self.assertEqual(self.run_main(), 0)
+        faq_after_first = self.faq_path.read_text(encoding="utf-8")
+
+        real_begin = (
+            "<!-- BEGIN DERIVED: faq (from https://www.marksiazon.dev/"
+            "llms-index.json - do not hand-edit) -->"
+        )
+        real_end = "<!-- END DERIVED: faq -->"
+        # Exactly one real marker pair remains - the injected text did not
+        # create extra ones.
+        self.assertEqual(faq_after_first.count(real_begin), 1)
+        self.assertEqual(faq_after_first.count(real_end), 1)
+        self.assertLess(faq_after_first.index(real_begin), faq_after_first.index(real_end))
+        # The injected marker text survived, but neutralized (entity-escaped).
+        self.assertIn("&lt;!-- BEGIN DERIVED: faq", faq_after_first)
+        self.assertIn("&lt;!-- END DERIVED: faq", faq_after_first)
+        self.assertIn("injected text", faq_after_first)
+
+        # aeo.answerSnippets stays in verbatim sync even for hostile content.
+        data = json.loads(self.index_path.read_text(encoding="utf-8"))
+        snippet_answer = next(
+            item["answer"]
+            for item in data["aeo"]["answerSnippets"]
+            if item["question"] == "Home question one?"
+        )
+        self.assertIn(snippet_answer, faq_after_first)
+
+        self.assertEqual(self.run_main(), 0)
+        faq_after_second = self.faq_path.read_text(encoding="utf-8")
+        self.assertEqual(faq_after_first, faq_after_second)
+
+    def test_pre_corrupted_file_fails_loudly(self) -> None:
+        # Simulate a file that is already corrupted (e.g. from an
+        # injection before this fix existed): two BEGIN markers for the
+        # same section.
+        text = self.faq_path.read_text(encoding="utf-8")
+        begin = (
+            "<!-- BEGIN DERIVED: faq (from https://www.marksiazon.dev/"
+            "llms-index.json - do not hand-edit) -->"
+        )
+        corrupted = text.replace(begin, begin + "\n" + begin, 1)
+        self.assertNotEqual(text, corrupted)
+        self.faq_path.write_text(corrupted, encoding="utf-8")
+
+        with self.assertRaises(derive.MarkerCorruptionError):
+            self.run_main()
+
+
+class MarkdownInjectionTests(DeriveTestCase):
+    """Finding D: feed strings placed into markdown tables/headings must be
+    escaped, or a stray '|' or newline corrupts the surrounding table."""
+
+    def test_hostile_feed_strings_do_not_corrupt_tables_or_headings(self) -> None:
+        shutil.copy(FIXTURES / "feed-hostile.json", self.feed_path)
+
+        self.assertEqual(self.run_main(), 0)
+        proof_text = self.proof_path.read_text(encoding="utf-8")
+
+        # Pipe in a table cell is escaped, not a new column; newline is
+        # collapsed, not a broken row.
+        self.assertIn("| Gate \\| With Pipe | QA | Open |", proof_text)
+        self.assertNotIn("Gate | With Pipe |", proof_text)
+
+        # A newline in a heading-line value is collapsed to a single line
+        # (pipes are left alone here - only table cells need pipe-escaping;
+        # a literal '|' in a heading doesn't corrupt anything).
+        self.assertIn(
+            "#### Hostile | Title With Newline (https://example.test/projects/hostile-project)",
+            proof_text,
+        )
+        self.assertNotIn("Hostile | Title\nWith Newline", proof_text)
+
+
+class FeedUnchangedSkipTests(DeriveTestCase):
+    """Finding E: an unchanged feed must not churn the snapshot's fetchedAt
+    on every run, or dev/main never converge on daily promotion."""
+
+    def test_unchanged_feed_within_heartbeat_budget_skips_snapshot_write(self) -> None:
+        self.run_main()
+        before = self.snapshot_path.read_text(encoding="utf-8")
+
+        exit_code = self.run_main()
+
+        self.assertEqual(exit_code, 0)
+        after = self.snapshot_path.read_text(encoding="utf-8")
+        # Byte-identical: fetchedAt was NOT rewritten for an unchanged feed.
+        self.assertEqual(before, after)
+
+    def test_unchanged_feed_past_heartbeat_budget_refreshes_fetched_at_only(self) -> None:
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        normalized = derive.normalize_feed(feed)
+        stale_heartbeat = (datetime.now(timezone.utc) - timedelta(days=4)).isoformat()
+        self.snapshot_path.write_text(
+            json.dumps({"fetchedAt": stale_heartbeat, "feed": normalized}, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+        exit_code = self.run_main()
+
+        self.assertEqual(exit_code, 0)
+        after = json.loads(self.snapshot_path.read_text(encoding="utf-8"))
+        self.assertEqual(after["feed"], normalized)
+        self.assertNotEqual(after["fetchedAt"], stale_heartbeat)
+        self.assertFalse(derive.snapshot_is_stale(after["fetchedAt"], datetime.now(timezone.utc), 1))
+
+    def test_changed_feed_always_writes_fresh_snapshot(self) -> None:
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        normalized = derive.normalize_feed(feed)
+        fresh = (datetime.now(timezone.utc) - timedelta(hours=1)).isoformat()
+        old_normalized = copy.deepcopy(normalized)
+        old_normalized["availability"]["headline"] = "Old headline before this run"
+        self.snapshot_path.write_text(
+            json.dumps({"fetchedAt": fresh, "feed": old_normalized}, indent=2) + "\n",
+            encoding="utf-8",
+        )
+
+        self.run_main()
+
+        after = json.loads(self.snapshot_path.read_text(encoding="utf-8"))
+        self.assertEqual(after["feed"], normalized)
+        self.assertNotEqual(after["fetchedAt"], fresh)
+
+
+class CheckRobustnessTests(DeriveTestCase):
+    """Finding F: --check must validate the snapshot structurally (no raw
+    KeyError tracebacks) and treat a stale fetchedAt as a visible failure."""
+
+    def test_check_fails_loudly_on_malformed_snapshot_instead_of_crashing(self) -> None:
+        malformed_feed = {
+            "entity": {"name": "X"},
+            "availability": {"headline": "H"},
+            "projects": [],
+            "faq": [],
+            "proof": {"gates": [{}], "byProject": {}},
+        }
+        payload = {"fetchedAt": datetime.now(timezone.utc).isoformat(), "feed": malformed_feed}
+        self.snapshot_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+        exit_code = self.run_check()
+
+        self.assertEqual(exit_code, 1)
+
+    def test_check_fails_on_stale_fetched_at(self) -> None:
+        self.run_main()
+        snapshot = json.loads(self.snapshot_path.read_text(encoding="utf-8"))
+        snapshot["fetchedAt"] = (datetime.now(timezone.utc) - timedelta(days=8)).isoformat()
+        self.snapshot_path.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
+
+        exit_code = self.run_check()
+
+        self.assertEqual(exit_code, 1)
 
 
 if __name__ == "__main__":
