@@ -222,6 +222,22 @@ class SnapshotTests(DeriveTestCase):
         datetime.fromisoformat(snapshot["fetchedAt"])
 
 
+class ByteDeterminismTests(DeriveTestCase):
+    def test_derived_md_files_have_lf_line_endings_only(self) -> None:
+        """Verify byte-level determinism: derived markdown files contain only
+        LF line endings (\\n), never CRLF (\\r\\n), even when run on Windows."""
+        self.run_main()
+
+        # Check all three derived markdown files for carriage returns.
+        for path in [self.faq_path, self.proof_path, self.recruiter_path]:
+            with self.subTest(file=path.name):
+                raw_bytes = path.read_bytes()
+                # Assert no carriage returns are present in the raw bytes.
+                self.assertNotIn(b"\r", raw_bytes,
+                    f"{path.name} contains CRLF or CR line endings, violating "
+                    "cross-platform byte determinism")
+
+
 class CheckModeTests(DeriveTestCase):
     def test_check_passes_after_derive(self) -> None:
         self.assertEqual(self.run_main(), 0)

@@ -428,7 +428,7 @@ def build_outputs(feed: dict[str, Any], paths: dict[str, Path]) -> dict[str, str
 
 def write_outputs(outputs: dict[str, str]) -> None:
     for path_str, content in outputs.items():
-        Path(path_str).write_text(content, encoding="utf-8")
+        Path(path_str).write_text(content, encoding="utf-8", newline="\n")
 
 
 def diff_outputs(feed: dict[str, Any], paths: dict[str, Path]) -> list[str]:
@@ -468,7 +468,7 @@ def snapshot_is_stale(fetched_at: str, now: datetime) -> bool:
 def write_snapshot(snapshot_path: Path, normalized_feed: dict[str, Any], fetched_at: str) -> None:
     snapshot_path.parent.mkdir(parents=True, exist_ok=True)
     payload = {"fetchedAt": fetched_at, "feed": normalized_feed}
-    snapshot_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    snapshot_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
 
 # --------------------------------------------------------------------------
