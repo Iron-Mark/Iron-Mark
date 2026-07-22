@@ -10,9 +10,21 @@ different document from this repo's own llms-index.json), and:
       availability key in this repo's llms-index.json (entity.@id is
       intentionally left untouched - migrating it is a later, separate
       concern, not handled here);
+  (b2) keeps this repo's aeo.answerSnippets entries in sync with the
+      subset of feed FAQ items that also render into FAQ.md's derived
+      region (matched by question). validate_index.py's check_aeo_coverage
+      requires every answerSnippet answer to appear verbatim in FAQ.md, so
+      once part of FAQ.md is feed-derived, the overlapping answerSnippets
+      must be feed-derived too, or a portfolio wording change breaks that
+      check. sources and every non-overlapping (repo-authored) snippet are
+      left untouched;
   (c) writes a normalized snapshot of the feed (src/data/portfolio-feed
       .snapshot.json by default) with a fetchedAt timestamp, for staleness
-      tracking and for --check to diff against without a network call.
+      tracking and for --check to diff against without a network call. If
+      the feed's content is unchanged from the committed snapshot, the
+      snapshot is left alone (fetchedAt is not churned every run) unless
+      it has gone quiet for SNAPSHOT_HEARTBEAT_DAYS, in which case
+      fetchedAt alone is refreshed as a heartbeat.
 
 Marker format (exact, one pair per section, section in {faq, proof,
 recruiter}):
@@ -33,13 +45,22 @@ be wired into CI so hand-drift inside derived regions fails validation. If no
 snapshot exists yet, --check exits 0 with a warning (nothing to compare
 against).
 
-Staleness budget: if fetching the live feed fails, the script falls back to
+Staleness budget: this only applies to genuine fetch failures (network/IO/
+JSON-decode errors) - if the feed fetches fine but fails structural
+validation (a contract break), that is never treated as transient: it
+prints the issues and exits 2 immediately, regardless of how fresh the
+last-good snapshot is. For genuine fetch failures, the script falls back to
 the last-good snapshot (leaving all files untouched):
   - no snapshot on disk, or the snapshot's fetchedAt is more than 7 days old
     -> exit 2 and print a "::error::" line (GitHub Actions annotation);
   - snapshot exists and fetchedAt is within the 7-day budget -> exit 0 and
     print a "::warning::" line; nothing on disk is touched (the previous
     derive already reflects the last-good fetch).
+
+--check additionally treats a stale committed snapshot as a hard failure:
+if the snapshot is structurally invalid, or its fetchedAt is more than 7
+days old, --check prints a clear "::error::" and exits 1, converting a
+silently-stalled daily pipeline into a visible CI failure.
 
 No third-party dependencies (stdlib only: urllib, json, re, argparse), to
 match this repo's other src/scripts/*.py. The `jsonschema` package is not
@@ -76,6 +97,14 @@ DEFAULT_RECRUITER_MD = ROOT / "public" / "RECRUITER.md"
 DEFAULT_INDEX_JSON = ROOT / "llms-index.json"
 
 STALENESS_BUDGET_DAYS = 7
+
+# If the committed snapshot's feed is byte-identical to a freshly fetched
+# feed, run_derive skips rewriting the snapshot (so fetchedAt doesn't churn
+# on every run for no content reason - see run_derive). But if the snapshot
+# hasn't been touched in this many days, fetchedAt is refreshed anyway as a
+# heartbeat, so staleness tracking never drifts from "the pipeline is
+# actually still running fine, it just has nothing new to say."
+SNAPSHOT_HEARTBEAT_DAYS = 3
 
 # feed availability keys that get written into this repo's availability
 # object as-is. Any repo-authored availability subkey not in this set (e.g.
@@ -215,12 +244,18 @@ def validate_feed_structure(feed: Any) -> list[str]:
 
 
 def normalize_feed(feed: dict[str, Any]) -> dict[str, Any]:
-    """Return a deep copy of feed with volatile fields stripped so the
-    snapshot only changes when meaningful content changes.
+    """Return a deep copy of feed with volatile fields stripped, so
+    equality-comparing two normalized feeds reflects meaningful content
+    changes only.
 
     pointers.generatedAt is a build identifier on the live site (not a
-    timestamp of narrative content), so it is excluded from the stored/
-    compared snapshot.
+    timestamp of narrative content), so it is excluded here. This is what
+    lets run_derive tell "the feed actually changed" apart from "the feed
+    is the same but the live site rebuilt" - the comparison that decides
+    whether the committed snapshot's `feed` key gets rewritten at all (see
+    SNAPSHOT_HEARTBEAT_DAYS). Note that normalize_feed only controls the
+    `feed` key: the snapshot's `fetchedAt` key is a separate concern and
+    may still be refreshed on an unchanged feed, as a heartbeat.
     """
     normalized = copy.deepcopy(feed)
     pointers = normalized.get("pointers")
@@ -232,6 +267,32 @@ def normalize_feed(feed: dict[str, Any]) -> dict[str, Any]:
 # --------------------------------------------------------------------------
 # Rendering
 # --------------------------------------------------------------------------
+
+
+def escape_md_table_cell(value: Any) -> str:
+    """Escape a feed-sourced value for safe embedding in a markdown table
+    cell.
+
+    A literal '|' would be parsed as a new column boundary (corrupting
+    every column after it), and an embedded newline would terminate the
+    row early - so pipes are backslash-escaped and internal whitespace
+    (including newlines) is collapsed to single spaces.
+    """
+    text = value if isinstance(value, str) else str(value)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text.replace("|", "\\|")
+
+
+def escape_md_heading_text(value: Any) -> str:
+    """Escape a feed-sourced value for safe embedding in a markdown ATX
+    heading line (or other single-line construct).
+
+    A literal newline would terminate the line and let injected content
+    become new markdown structure of its own (headings, tables, etc.), so
+    internal whitespace is collapsed to single spaces.
+    """
+    text = value if isinstance(value, str) else str(value)
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def home_faq_items(feed: dict[str, Any]) -> list[dict[str, Any]]:
@@ -251,7 +312,10 @@ def recruiter_faq_items(feed: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def render_faq_body(feed: dict[str, Any]) -> str:
-    blocks = [f"## {item['question']}\n\n{item['answer']}" for item in home_faq_items(feed)]
+    blocks = [
+        f"## {escape_md_heading_text(item['question'])}\n\n{item['answer']}"
+        for item in home_faq_items(feed)
+    ]
     return "\n\n".join(blocks)
 
 
@@ -265,7 +329,10 @@ def render_proof_body(feed: dict[str, Any]) -> str:
 
     lines = ["### Proof gates", "", "| Label | Owner | Status |", "|-------|-------|--------|"]
     for gate in proof.get("gates", []):
-        lines.append(f"| {gate['label']} | {gate['owner']} | {gate['status']} |")
+        label = escape_md_table_cell(gate["label"])
+        owner = escape_md_table_cell(gate["owner"])
+        status = escape_md_table_cell(gate["status"])
+        lines.append(f"| {label} | {owner} | {status} |")
 
     lines.append("")
     lines.append("### Proof by project")
@@ -274,8 +341,8 @@ def render_proof_body(feed: dict[str, Any]) -> str:
     for slug in sorted(by_project):
         links = by_project[slug]
         project = projects_by_slug.get(slug, {})
-        title = project.get("title", slug)
-        canonical_url = project.get("canonicalUrl", "")
+        title = escape_md_heading_text(project.get("title", slug))
+        canonical_url = escape_md_heading_text(project.get("canonicalUrl", ""))
         heading = f"#### {title}" + (f" ({canonical_url})" if canonical_url else "")
         lines.append("")
         lines.append(heading)
@@ -303,7 +370,7 @@ def render_recruiter_body(feed: dict[str, Any]) -> str:
     lines.append("### Recruiter FAQ")
     for item in recruiter_faq_items(feed):
         lines.append("")
-        lines.append(f"## {item['question']}")
+        lines.append(f"## {escape_md_heading_text(item['question'])}")
         lines.append("")
         lines.append(item["answer"])
 
@@ -315,10 +382,10 @@ def render_recruiter_body(feed: dict[str, Any]) -> str:
     for project in feed.get("projects", []):
         lines.append(
             "| {title} | {role} | {status} | {canonicalUrl} |".format(
-                title=project.get("title", ""),
-                role=project.get("role", ""),
-                status=project.get("status", ""),
-                canonicalUrl=project.get("canonicalUrl", ""),
+                title=escape_md_table_cell(project.get("title", "")),
+                role=escape_md_table_cell(project.get("role", "")),
+                status=escape_md_table_cell(project.get("status", "")),
+                canonicalUrl=escape_md_table_cell(project.get("canonicalUrl", "")),
             )
         )
 
@@ -340,12 +407,67 @@ def derived_body(section: str, feed: dict[str, Any]) -> str:
 # --------------------------------------------------------------------------
 
 
+class MarkerCorruptionError(Exception):
+    """Raised when a target file has more than one BEGIN or END marker for
+    a section, or an END marker appears before its BEGIN - both signs the
+    file has already been corrupted (e.g. by a marker-breakout injection
+    from before body sanitization existed, or a hand-edit gone wrong).
+    Refuses to guess which pair is the "real" one."""
+
+
+def _marker_literals(section: str) -> tuple[str, str]:
+    begin = f"<!-- BEGIN DERIVED: {section} (from {MARKER_SOURCE_URL} - do not hand-edit) -->"
+    end = f"<!-- END DERIVED: {section} -->"
+    return begin, end
+
+
 def _marker_pattern(section: str) -> re.Pattern[str]:
-    begin = re.escape(
-        f"<!-- BEGIN DERIVED: {section} (from {MARKER_SOURCE_URL} - do not hand-edit) -->"
-    )
-    end = re.escape(f"<!-- END DERIVED: {section} -->")
-    return re.compile(f"({begin})(.*?)({end})", re.DOTALL)
+    begin, end = _marker_literals(section)
+    return re.compile(f"({re.escape(begin)})(.*?)({re.escape(end)})", re.DOTALL)
+
+
+def _assert_single_marker_pair(text: str, section: str) -> None:
+    """Guard against a target file that is already corrupted before we
+    even start: more than one BEGIN or END marker for `section`, or an END
+    that appears before its BEGIN. A file with NO markers at all is not
+    corruption (that's a new file that hasn't had markers added yet) and
+    is left to replace_derived_region's MarkerNotFoundError instead.
+    """
+    begin, end = _marker_literals(section)
+    begin_count = text.count(begin)
+    end_count = text.count(end)
+    if begin_count == 0 and end_count == 0:
+        return
+    if begin_count != 1 or end_count != 1:
+        raise MarkerCorruptionError(
+            f"Expected exactly one BEGIN and one END 'DERIVED: {section}' marker, "
+            f"found {begin_count} BEGIN and {end_count} END. The file may already be "
+            "corrupted (e.g. by injected marker text from a previous run); refusing "
+            "to guess which pair is real."
+        )
+    if text.index(begin) > text.index(end):
+        raise MarkerCorruptionError(
+            f"'DERIVED: {section}' END marker appears before its BEGIN marker - the "
+            "file is corrupted."
+        )
+
+
+_MARKER_TEXT_BREAKOUT_PATTERN = re.compile(r"<!--(\s*(?:BEGIN|END)\s+DERIVED:)")
+
+
+def sanitize_marker_breakout(text: str) -> str:
+    """Neutralize any literal '<!-- BEGIN DERIVED:' / '<!-- END DERIVED:'
+    text found inside feed-sourced content before it is written into a
+    target file.
+
+    Without this, feed content that happens to contain that exact text
+    (accidentally or adversarially) would be indistinguishable from a real
+    marker boundary the next time this script parses the file - corrupting
+    it compoundingly on every subsequent run. The HTML entity escape for
+    '<' makes the sequence inert both as an HTML comment and as a literal
+    string match for _marker_pattern()/_marker_literals().
+    """
+    return _MARKER_TEXT_BREAKOUT_PATTERN.sub(r"&lt;!--\1", text)
 
 
 def replace_derived_region(text: str, section: str, body: str) -> str:
@@ -353,8 +475,13 @@ def replace_derived_region(text: str, section: str, body: str) -> str:
     `body`, leaving everything else in `text` byte-for-byte untouched.
 
     Always fully regenerates the region (never patches in place), so
-    repeated calls with the same `body` are idempotent.
+    repeated calls with the same `body` are idempotent. `body` is
+    sanitized against marker breakout before insertion (see
+    sanitize_marker_breakout), and `text` is checked for pre-existing
+    marker corruption before any replacement is attempted (see
+    _assert_single_marker_pair).
     """
+    _assert_single_marker_pair(text, section)
     pattern = _marker_pattern(section)
     match = pattern.search(text)
     if not match:
@@ -364,7 +491,8 @@ def replace_derived_region(text: str, section: str, body: str) -> str:
             f"  <!-- END DERIVED: {section} -->\n"
             "before running derive_from_portfolio.py."
         )
-    replacement = f"{match.group(1)}\n\n{body}\n\n{match.group(3)}"
+    safe_body = sanitize_marker_breakout(body)
+    replacement = f"{match.group(1)}\n\n{safe_body}\n\n{match.group(3)}"
     return text[: match.start()] + replacement + text[match.end() :]
 
 
@@ -400,6 +528,54 @@ def apply_entity_and_availability(index_data: dict[str, Any], feed: dict[str, An
     return result
 
 
+def apply_aeo_answer_snippets(index_data: dict[str, Any], feed: dict[str, Any]) -> dict[str, Any]:
+    """Return a copy of index_data with aeo.answerSnippets entries that
+    overlap the feed-derived FAQ.md region kept in sync with the feed.
+
+    aeo.answerSnippets is otherwise hand-authored, but validate_index.py's
+    check_aeo_coverage requires every snippet's `answer` to appear
+    verbatim in FAQ.md. Now that part of FAQ.md's visible text is rendered
+    from the portfolio feed (render_faq_body), any answerSnippet that
+    duplicates one of those feed FAQ items must be re-derived from the
+    same feed on every run, or the next portfolio wording change breaks
+    that verbatim check.
+
+    Overlap is detected by matching an existing snippet's `question`
+    against the `question` of one of home_faq_items(feed) - the same feed
+    items render_faq_body() renders into FAQ.md's derived region. When
+    matched, both `question` and `answer` are overwritten from the feed
+    item, put through the exact same transforms render_faq_body applies
+    (heading-line escaping for the question, marker-breakout sanitization
+    for both), so the snippet stays byte-for-byte identical to what
+    actually ends up in FAQ.md. `sources` and every non-overlapping
+    (repo-authored) snippet are left untouched.
+    """
+    result = copy.deepcopy(index_data)
+    aeo = result.get("aeo")
+    if not isinstance(aeo, dict):
+        return result
+    snippets = aeo.get("answerSnippets")
+    if not isinstance(snippets, list):
+        return result
+
+    feed_items_by_question = {
+        item["question"]: item
+        for item in home_faq_items(feed)
+        if isinstance(item, dict) and isinstance(item.get("question"), str)
+    }
+
+    for snippet in snippets:
+        if not isinstance(snippet, dict):
+            continue
+        feed_item = feed_items_by_question.get(snippet.get("question"))
+        if feed_item is None:
+            continue
+        snippet["question"] = sanitize_marker_breakout(escape_md_heading_text(feed_item["question"]))
+        snippet["answer"] = sanitize_marker_breakout(feed_item["answer"])
+
+    return result
+
+
 # --------------------------------------------------------------------------
 # Output building (shared by derive + --check)
 # --------------------------------------------------------------------------
@@ -421,6 +597,7 @@ def build_outputs(feed: dict[str, Any], paths: dict[str, Path]) -> dict[str, str
     index_path = paths["index_json"]
     index_data = json.loads(index_path.read_text(encoding="utf-8"))
     updated_index = apply_entity_and_availability(index_data, feed)
+    updated_index = apply_aeo_answer_snippets(updated_index, feed)
     outputs[str(index_path)] = json.dumps(updated_index, indent=2, ensure_ascii=False) + "\n"
 
     return outputs
@@ -455,14 +632,14 @@ def load_snapshot(path: Path) -> dict[str, Any] | None:
         return None
 
 
-def snapshot_is_stale(fetched_at: str, now: datetime) -> bool:
+def snapshot_is_stale(fetched_at: str, now: datetime, budget_days: int = STALENESS_BUDGET_DAYS) -> bool:
     try:
         fetched_dt = datetime.fromisoformat(fetched_at)
     except (TypeError, ValueError):
         return True
     if fetched_dt.tzinfo is None:
         fetched_dt = fetched_dt.replace(tzinfo=timezone.utc)
-    return (now - fetched_dt) > timedelta(days=STALENESS_BUDGET_DAYS)
+    return (now - fetched_dt) > timedelta(days=budget_days)
 
 
 def write_snapshot(snapshot_path: Path, normalized_feed: dict[str, Any], fetched_at: str) -> None:
@@ -487,16 +664,45 @@ def run_derive(
 
     try:
         feed = fetch_feed(feed_url, feed_file)
-        issues = validate_feed_structure(feed)
-        if issues:
-            raise FeedValidationError("; ".join(issues))
-    except Exception as exc:  # noqa: BLE001 - any load/validate failure triggers the staleness fallback
+    except Exception as exc:  # noqa: BLE001 - network/IO/JSON-decode failures are transient, so
+        # (and only these) go through the staleness fallback below.
         return _handle_fetch_failure(exc, existing_snapshot, now)
+
+    issues = validate_feed_structure(feed)
+    if issues:
+        # The feed fetched fine but violates the contract this script
+        # relies on. This is deliberately NOT routed through
+        # _handle_fetch_failure/the staleness fallback above: a fetched-
+        # but-invalid feed means something upstream broke the contract,
+        # which is never transient and must fail loudly and immediately -
+        # even if the last-good snapshot is well within its budget.
+        error = FeedValidationError("; ".join(issues))
+        print(f"::error::derive_from_portfolio: fetched feed failed structural validation: {error}")
+        for issue in issues:
+            print(f"  - {issue}")
+        return 2
 
     normalized_feed = normalize_feed(feed)
     outputs = build_outputs(normalized_feed, paths)
     write_outputs(outputs)
     fetched_at = now.isoformat()
+
+    existing_feed = existing_snapshot.get("feed") if existing_snapshot else None
+    if existing_feed == normalized_feed:
+        # Content is unchanged from the committed snapshot: rewriting it
+        # anyway would only churn fetchedAt, which turns every dev->main
+        # promotion into a fetchedAt-only bot PR that never lets dev and
+        # main converge. Skip the write entirely, unless the snapshot has
+        # gone quiet long enough that fetchedAt itself needs a heartbeat
+        # refresh so staleness tracking stays honest.
+        existing_fetched_at = existing_snapshot.get("fetchedAt", "") if existing_snapshot else ""
+        if not snapshot_is_stale(existing_fetched_at, now, SNAPSHOT_HEARTBEAT_DAYS):
+            print(f"derive_from_portfolio: feed unchanged; keeping fetchedAt={existing_fetched_at}")
+            return 0
+        write_snapshot(snapshot_path, normalized_feed, fetched_at)
+        print(f"derive_from_portfolio: feed unchanged; heartbeat fetchedAt={fetched_at}")
+        return 0
+
     write_snapshot(snapshot_path, normalized_feed, fetched_at)
     print(f"derive_from_portfolio: derived ok fetchedAt={fetched_at}")
     return 0
@@ -537,6 +743,34 @@ def run_check(snapshot_path: Path, paths: dict[str, Path]) -> int:
         return 0
 
     feed = snapshot.get("feed", {})
+    issues = validate_feed_structure(feed)
+    if issues:
+        # A malformed snapshot used to surface as an uncaught KeyError deep
+        # inside diff_outputs()/render_*_body() - a confusing traceback
+        # instead of an actionable message. Validate structurally first so
+        # this fails clearly and predictably.
+        print(
+            "::error::derive_from_portfolio: --check found a structurally invalid "
+            f"committed snapshot at {snapshot_path}:"
+        )
+        for issue in issues:
+            print(f"  - {issue}")
+        return 1
+
+    fetched_at = snapshot.get("fetchedAt", "")
+    now = datetime.now(timezone.utc)
+    if snapshot_is_stale(fetched_at, now):
+        # A snapshot that never gets refreshed (the daily derive pipeline
+        # silently stalled - e.g. a broken cron, a permanently-failing
+        # fetch that never gets loud) would otherwise pass --check forever
+        # as long as nothing else drifts. Surface it instead.
+        print(
+            "::error::derive_from_portfolio: --check found the committed snapshot's "
+            f"fetchedAt={fetched_at!r} is older than {STALENESS_BUDGET_DAYS} days - the "
+            "daily derive pipeline appears to have stalled"
+        )
+        return 1
+
     diffs = diff_outputs(feed, paths)
     if diffs:
         print("::error::derive_from_portfolio: derived content out of sync with committed snapshot:")
