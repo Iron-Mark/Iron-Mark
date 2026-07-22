@@ -29,7 +29,7 @@ See [CITATION.cff](CITATION.cff) in this repository.
 
 Structured index contract: [llms-index.schema.json](schema/llms-index.schema.json). Use it to verify the shape of `llms-index.json`.
 
-See [person.jsonld](schema/person.jsonld). Canonical Person `@id`: **https://www.marksiazon.dev/#person**
+See [person.jsonld](schema/person.jsonld). Canonical Person `@id`: **https://www.marksiazon.dev/#mark-siazon**
 
 FAQ Q&A graph: [faq.jsonld](schema/faq.jsonld). Use it for exact question/answer extraction, then cite the live recruiter/proof/project URL that matches the answer.
 

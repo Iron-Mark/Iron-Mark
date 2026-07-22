@@ -3,7 +3,7 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://www.marksiazon.dev/#person",
+      "@id": "https://www.marksiazon.dev/#mark-siazon",
       "name": "Mark Siazon",
       "alternateName": [
         "Iron-Mark",
@@ -326,7 +326,7 @@
       },
       "mainEntityOfPage": "https://www.marksiazon.dev/recruiter",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
@@ -382,14 +382,14 @@
       "name": "Mark Siazon Portfolio",
       "url": "https://www.marksiazon.dev",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "description": "Case-study portfolio for product design, full-stack development, AI, mobile, and Web3 work.",
       "abstract": "Case-study portfolio for product design, full-stack development, AI, mobile, and Web3 work.",
@@ -497,15 +497,15 @@
         "@id": "https://www.marksiazon.dev/#contact-action"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -518,14 +518,14 @@
       "name": "Mark Siazon GitHub Profile Index",
       "url": "https://github.com/Iron-Mark/Iron-Mark",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "description": "GitHub profile README with portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
       "abstract": "GitHub profile README with portfolio indexes, FAQ, Schema.org graphs, proof map, and tech stack reference.",
@@ -635,15 +635,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -677,16 +677,16 @@
       ],
       "inLanguage": "en",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "mainEntity": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
@@ -855,19 +855,19 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "reviewedBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "lastReviewed": "2026-07-22",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -884,14 +884,14 @@
       ],
       "url": "https://iron-mark.github.io/Iron-Mark/",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "description": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related profile source files.",
       "abstract": "Static mirror of llms-index.json, FAQ.md, Schema.org JSON-LD, and related profile source files.",
@@ -1041,15 +1041,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -1090,16 +1090,16 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#website"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "mainEntity": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "breadcrumb": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#breadcrumb"
@@ -1234,19 +1234,19 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "reviewedBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "lastReviewed": "2026-07-22",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -1354,13 +1354,13 @@
         "@id": "https://www.marksiazon.dev/#contact-entrypoint"
       },
       "recipient": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "object": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -1372,7 +1372,7 @@
       "abstract": "Primary visible content for Mark Siazon profile facts, featured work, answer corpus, location signals, knowledge graph, and citation links.",
       "text": "Product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and release-readiness in frontend delivery.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -1417,15 +1417,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -1440,7 +1440,7 @@
       "description": "Visible section navigation for the Mark Siazon profile index.",
       "abstract": "Visible section navigation for the Mark Siazon profile index.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -1482,15 +1482,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -1538,7 +1538,7 @@
         }
       ],
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "dateModified": "2026-07-22"
     },
@@ -1565,30 +1565,30 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "sdDatePublished": "2026-07-22",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -1622,13 +1622,13 @@
       ],
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "dataset": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
@@ -1733,15 +1733,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -1777,10 +1777,10 @@
       "description": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
       "abstract": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "datePublished": "2026-06-13",
@@ -1835,7 +1835,7 @@
         {
           "@type": "PropertyValue",
           "name": "Person entity identifier",
-          "value": "https://www.marksiazon.dev/#person"
+          "value": "https://www.marksiazon.dev/#mark-siazon"
         },
         {
           "@type": "PropertyValue",
@@ -1943,7 +1943,7 @@
       ],
       "about": [
         {
-          "@id": "https://www.marksiazon.dev/#person"
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
         },
         {
           "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
@@ -2012,15 +2012,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2080,13 +2080,13 @@
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
       "dateModified": "2026-07-22",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
@@ -2229,19 +2229,19 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "reviewedBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "lastReviewed": "2026-07-22",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2257,7 +2257,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#website"
@@ -2339,15 +2339,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2364,10 +2364,10 @@
       "description": "Ordered list of 9 featured Mark Siazon project case studies across product, AI, mobile, Web3, and client web work.",
       "abstract": "Ordered list of 9 featured Mark Siazon project case studies across product, AI, mobile, Web3, and client web work.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
@@ -2462,15 +2462,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2487,10 +2487,10 @@
       "description": "Ordered list of 4 Mark Siazon hackathon and lab projects with demos, repositories, or case studies.",
       "abstract": "Ordered list of 4 Mark Siazon hackathon and lab projects with demos, repositories, or case studies.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
@@ -2545,15 +2545,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2569,7 +2569,7 @@
       "abstract": "Visible profile facts for Mark Siazon name, roles, availability, service geography, contact, and recruiter brief.",
       "text": "Mark Siazon; roles: Product Designer, Full-Stack Developer, Product Engineer, UI/UX Designer, Front-end Specialist; availability: open; focus: product design, full-stack engineering, AI workflow prototypes, mobile and Wear OS UX, Web3 proof systems; location: Philippines; serves: Philippines, Southeast Asia, remote.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -2632,15 +2632,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2665,10 +2665,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -2681,7 +2681,7 @@
       "abstract": "Visible featured project list for Mark Siazon product, AI, mobile, Web3, and client web work.",
       "text": "HireProof: AI trust and safety for job seekers; Stellaroid Earn: Web3 credential proof on Stellar testnet; ResQLink: Offline-first emergency response platform; LexInsights: AI legal compliance chat; Good To Live: Client podcast web launch and feed setup; FlowFit: Wear OS health and sensor companion; PalengkePay: Stellar fintech PWA for wet markets; GawainYah: MiniPay AI utility with payment guardrails; BaybayInscribe: Baybayin ML and cultural education UX",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -2732,15 +2732,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2765,10 +2765,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -2781,7 +2781,7 @@
       "abstract": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "text": "18 answer snippets covering hiring, projects, stack, verification, geography, and citation.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -2805,15 +2805,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2838,10 +2838,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -2854,7 +2854,7 @@
       "abstract": "Visible search topics and service regions for Mark Siazon discovery.",
       "text": "Mark Siazon, Iron-Mark, product designer Philippines, full-stack developer Philippines, UI/UX engineer, case study portfolio, React developer, Next.js developer, Flutter developer, Wear OS, AI trust and safety, Web3 Stellar Celo, Baybayin education technology, Philippines, Southeast Asia, remote",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -2941,15 +2941,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -2974,10 +2974,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -2990,7 +2990,7 @@
       "abstract": "Visible subject-predicate-object facts for Mark Siazon identity, service geography, and project relationships.",
       "text": "Mark Siazon | isA | Product Designer; Mark Siazon | isA | Full-Stack Developer; Mark Siazon | isA | Product Engineer; Mark Siazon | isA | UI/UX Designer; Mark Siazon | isA | Front-end Specialist; Mark Siazon | basedIn | Philippines; Mark Siazon | serves | Philippines; Mark Siazon | serves | Southeast Asia; Mark Siazon | serves | remote; Mark Siazon | built | HireProof; HireProof | focusesOn | AI trust and safety for job seekers; Mark Siazon | built | Stellaroid Earn; Stellaroid Earn | focusesOn | Web3 credential proof on Stellar testnet; Mark Siazon | built | ResQLink; ResQLink | focusesOn | Offline-first emergency response platform; ResQLink | won | UMak InfotechOlympics 2025 Android Productivity Champion; Mark Siazon | built | LexInsights; LexInsights | focusesOn | AI legal compliance chat; Mark Siazon | built | Good To Live; Good To Live | focusesOn | Client podcast web launch and feed setup; Mark Siazon | built | FlowFit; FlowFit | focusesOn | Wear OS health and sensor companion; Mark Siazon | built | PalengkePay; PalengkePay | focusesOn | Stellar fintech PWA for wet markets; Mark Siazon | built | GawainYah; GawainYah | focusesOn | MiniPay AI utility with payment guardrails; Mark Siazon | built | BaybayInscribe; BaybayInscribe | focusesOn | Baybayin ML and cultural education UX; BaybayInscribe | won | InfotechOlympics 2024 Android winner; Mark Siazon | maintains | qwen-ui-lab; qwen-ui-lab | focusesOn | Qwen3-VL React UI lab with Tailwind and Next.js; Mark Siazon | maintains | Smart Profile; Smart Profile | focusesOn | AI credentials SaaS prototype with Supabase; Mark Siazon | maintains | Kudlit; Kudlit | focusesOn | Flutter Baybayin learning app for Android release; Mark Siazon | maintains | Pulse; Pulse | focusesOn | Wear OS GPS and heart-rate telemetry companion; Mark Siazon | maintains | STACK.md; Stellaroid Earn | ranked | Stellar bootcamp Top 5 of 105; STACK.md | lists | full stack reference",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -3077,15 +3077,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -3110,10 +3110,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -3126,7 +3126,7 @@
       "abstract": "Visible entry links to Mark Siazon structured profile, answer, proof, recruiter, LLM, and Schema.org files.",
       "text": "https://iron-mark.github.io/Iron-Mark/llms-index.json; https://iron-mark.github.io/Iron-Mark/llms-ctx-full.txt; https://iron-mark.github.io/Iron-Mark/FAQ.md; https://iron-mark.github.io/Iron-Mark/RECRUITER.md; https://iron-mark.github.io/Iron-Mark/PROOF.md; https://iron-mark.github.io/Iron-Mark/llms.txt; https://iron-mark.github.io/Iron-Mark/schema/llms-index.schema.json; https://iron-mark.github.io/Iron-Mark/schema/person.jsonld; https://iron-mark.github.io/Iron-Mark/schema/faq.jsonld",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -3180,15 +3180,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -3213,10 +3213,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -3229,7 +3229,7 @@
       "abstract": "Visible citation order and verification boundaries for Mark Siazon public profile facts.",
       "text": "Preferred citation order: https://www.marksiazon.dev/recruiter; https://www.marksiazon.dev/proof; https://www.marksiazon.dev/projects; https://github.com/Iron-Mark/Iron-Mark; https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md; https://github.com/Iron-Mark/Iron-Mark/blob/main/public/CITATION.cff.",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
@@ -3259,15 +3259,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -3292,10 +3292,10 @@
       "dateModified": "2026-07-22",
       "isAccessibleForFree": true,
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026
     },
@@ -3312,7 +3312,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3328,7 +3328,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3344,7 +3344,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3360,7 +3360,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3376,7 +3376,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3392,7 +3392,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3408,7 +3408,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3424,7 +3424,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3440,7 +3440,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3456,7 +3456,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3472,7 +3472,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3488,7 +3488,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3504,7 +3504,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3520,7 +3520,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3536,7 +3536,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3552,7 +3552,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3568,7 +3568,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3584,7 +3584,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3600,7 +3600,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3616,7 +3616,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3632,7 +3632,7 @@
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
     },
     {
@@ -3680,10 +3680,10 @@
       ],
       "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "seller": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "itemOffered": {
         "@id": "https://www.marksiazon.dev/#service-product-design"
@@ -3702,7 +3702,7 @@
       },
       "description": "Mark Siazon product design service for Philippines, Southeast Asia, and remote through contract, part-time, and full-time work.",
       "provider": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "offers": {
         "@id": "https://www.marksiazon.dev/#offer-product-design"
@@ -3781,10 +3781,10 @@
       ],
       "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "seller": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "itemOffered": {
         "@id": "https://www.marksiazon.dev/#service-full-stack-engineering"
@@ -3803,7 +3803,7 @@
       },
       "description": "Mark Siazon full-stack engineering service for Philippines, Southeast Asia, and remote through contract, part-time, and full-time work.",
       "provider": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "offers": {
         "@id": "https://www.marksiazon.dev/#offer-full-stack-engineering"
@@ -3882,10 +3882,10 @@
       ],
       "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "seller": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "itemOffered": {
         "@id": "https://www.marksiazon.dev/#service-ai-workflow-prototypes"
@@ -3904,7 +3904,7 @@
       },
       "description": "Mark Siazon AI workflow prototypes service for Philippines, Southeast Asia, and remote through contract, part-time, and full-time work.",
       "provider": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "offers": {
         "@id": "https://www.marksiazon.dev/#offer-ai-workflow-prototypes"
@@ -3983,10 +3983,10 @@
       ],
       "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "seller": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "itemOffered": {
         "@id": "https://www.marksiazon.dev/#service-mobile-and-wear-os-ux"
@@ -4005,7 +4005,7 @@
       },
       "description": "Mark Siazon mobile and Wear OS UX service for Philippines, Southeast Asia, and remote through contract, part-time, and full-time work.",
       "provider": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "offers": {
         "@id": "https://www.marksiazon.dev/#offer-mobile-and-wear-os-ux"
@@ -4084,10 +4084,10 @@
       ],
       "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
       "offeredBy": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "seller": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "itemOffered": {
         "@id": "https://www.marksiazon.dev/#service-web3-proof-systems"
@@ -4106,7 +4106,7 @@
       },
       "description": "Mark Siazon Web3 proof systems service for Philippines, Southeast Asia, and remote through contract, part-time, and full-time work.",
       "provider": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "offers": {
         "@id": "https://www.marksiazon.dev/#offer-web3-proof-systems"
@@ -4149,8 +4149,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "27383 bytes",
-      "sha256": "f20ed800b9ae4c37bffa9b11c99c2fa5f3c4c33f8445431c8f9ad8a78f4a31ab",
+      "contentSize": "27398 bytes",
+      "sha256": "c8b9c11e7f46ef855f5bb1d6b5f2a356306845fe7948a164356b808c895b4122",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4159,10 +4159,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4176,15 +4176,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4200,8 +4200,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "9138 bytes",
-      "sha256": "59c6778dbd385981153b41b5f3ffc2ac22cbab61ba24bc267a305316cbd8faba",
+      "contentSize": "9143 bytes",
+      "sha256": "b669bbbbd7bc0e5ebc4498fc2eb83be0b9e04c54273656ce25f5901ad25b05d0",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4210,10 +4210,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4227,15 +4227,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4261,10 +4261,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4278,15 +4278,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4302,8 +4302,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "20712 bytes",
-      "sha256": "84e6ccbc31310d961629f7ecf95e708427d4b0b25b4a85c6f0668d8cdf185619",
+      "contentSize": "20717 bytes",
+      "sha256": "88cf5552d4bd05c306eae6b2a3f43b3294078c30f7f7faea15017b6106f5c6b3",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4312,10 +4312,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4329,15 +4329,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4353,8 +4353,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable FAQ question and answer corpus file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable FAQ question and answer corpus file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "6920 bytes",
-      "sha256": "819a0ac8a5179a815cef4642af29da355cda017627697c65883a784f59eadff4",
+      "contentSize": "6925 bytes",
+      "sha256": "924d91bfcf6a7ad91a35e43df29ab468597294363790e58f49a0528ed62f7995",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4363,10 +4363,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4380,15 +4380,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4414,10 +4414,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4431,15 +4431,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4465,10 +4465,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4482,15 +4482,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4516,10 +4516,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4533,15 +4533,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4567,10 +4567,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4584,15 +4584,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4618,10 +4618,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4635,15 +4635,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4659,8 +4659,8 @@
       "encodingFormat": "text/markdown",
       "description": "Downloadable Citation guide file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Citation guide file for the Mark Siazon profile index, encoded as text/markdown.",
-      "contentSize": "1961 bytes",
-      "sha256": "95c27bef1acd8eac94e60380c69cf0650ef03bceda22bd442c9357ff24bfb0d6",
+      "contentSize": "1966 bytes",
+      "sha256": "75c7238c18c9c51bade016b4dfd84f4c7fdfadec1175d974aed82d69d08165a3",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4669,10 +4669,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4686,15 +4686,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4720,10 +4720,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4737,15 +4737,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4771,10 +4771,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4788,15 +4788,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4820,10 +4820,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4837,15 +4837,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4861,8 +4861,8 @@
       "encodingFormat": "application/ld+json",
       "description": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
-      "contentSize": "75458 bytes",
-      "sha256": "c43c620cb01b5ab11962bbf5a47205b815b158add2669d979b5eb0fdc2fda05c",
+      "contentSize": "76218 bytes",
+      "sha256": "5a3ee7bfd0b6cf9ffaa78b228c3f933ad4868c4ce105a8bb2e921eb254d80d29",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4871,10 +4871,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4888,15 +4888,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4922,10 +4922,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4939,15 +4939,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -4963,8 +4963,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Humans and entity credits file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "6395 bytes",
-      "sha256": "4ca96fb838518ae49a6d249404b974ee7e44cf5ff3719875bb8479e246b0a35b",
+      "contentSize": "6400 bytes",
+      "sha256": "03c119fb8fd756e66359b21588941e0a899c2d32f09210c1aef418bca3d070bf",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4973,10 +4973,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -4990,15 +4990,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5024,10 +5024,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -5041,15 +5041,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5065,8 +5065,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "1150 bytes",
-      "sha256": "f947c8471e297748bcf45bca48128cd6f79a689f13a8091cd4ebf67a53a27080",
+      "contentSize": "1155 bytes",
+      "sha256": "6c830d6a7d991bc38e3405b3ff7ba58b03e2ef672901f0ae48a41220fa45eb47",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -5075,10 +5075,10 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#machine-readable-dataset"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -5092,15 +5092,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5116,16 +5116,16 @@
       "description": "AI trust and safety for job seekers",
       "abstract": "AI trust and safety for job seekers",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5151,15 +5151,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5191,23 +5191,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5229,16 +5229,16 @@
       "description": "Web3 credential proof on Stellar testnet",
       "abstract": "Web3 credential proof on Stellar testnet",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5264,15 +5264,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5307,23 +5307,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5345,16 +5345,16 @@
       "description": "Offline-first emergency response platform",
       "abstract": "Offline-first emergency response platform",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5380,15 +5380,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5423,23 +5423,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5461,16 +5461,16 @@
       "description": "AI legal compliance chat",
       "abstract": "AI legal compliance chat",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5497,15 +5497,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5537,23 +5537,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5575,16 +5575,16 @@
       "description": "Client podcast web launch and feed setup",
       "abstract": "Client podcast web launch and feed setup",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5610,15 +5610,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5650,23 +5650,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5688,16 +5688,16 @@
       "description": "Wear OS health and sensor companion",
       "abstract": "Wear OS health and sensor companion",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5721,15 +5721,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5761,23 +5761,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5799,16 +5799,16 @@
       "description": "Stellar fintech PWA for wet markets",
       "abstract": "Stellar fintech PWA for wet markets",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5834,15 +5834,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5874,23 +5874,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5912,16 +5912,16 @@
       "description": "MiniPay AI utility with payment guardrails",
       "abstract": "MiniPay AI utility with payment guardrails",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -5947,15 +5947,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -5987,23 +5987,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6025,16 +6025,16 @@
       "description": "Baybayin ML and cultural education UX",
       "abstract": "Baybayin ML and cultural education UX",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -6060,15 +6060,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6103,23 +6103,23 @@
       "copyrightNotice": "Copyright Mark Siazon",
       "creator": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6141,16 +6141,16 @@
       "description": "Qwen3-VL React UI lab with Tailwind and Next.js",
       "abstract": "Qwen3-VL React UI lab with Tailwind and Next.js",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -6178,15 +6178,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6202,16 +6202,16 @@
       "description": "AI credentials SaaS prototype with Supabase",
       "abstract": "AI credentials SaaS prototype with Supabase",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
@@ -6238,15 +6238,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6262,16 +6262,16 @@
       "description": "Flutter Baybayin learning app for Android release",
       "abstract": "Flutter Baybayin learning app for Android release",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -6298,15 +6298,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6322,16 +6322,16 @@
       "description": "Wear OS GPS and heart-rate telemetry companion",
       "abstract": "Wear OS GPS and heart-rate telemetry companion",
       "creator": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "isPartOf": {
         "@id": "https://www.marksiazon.dev/#website"
@@ -6358,15 +6358,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6382,17 +6382,17 @@
       "description": "Structured entity, project, FAQ, citation, and location index for Mark Siazon.",
       "abstract": "Structured entity, project, FAQ, citation, and location index for Mark Siazon.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6419,15 +6419,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6443,17 +6443,17 @@
       "description": "Visible question and answer corpus for hiring, projects, verification, and citation.",
       "abstract": "Visible question and answer corpus for hiring, projects, verification, and citation.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6480,15 +6480,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6504,17 +6504,17 @@
       "description": "Claims mapped to public verification URLs and proof boundaries.",
       "abstract": "Claims mapped to public verification URLs and proof boundaries.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6541,15 +6541,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6565,17 +6565,17 @@
       "description": "Recruiter-first role fit, verified achievements, stack summary, and contact paths.",
       "abstract": "Recruiter-first role fit, verified achievements, stack summary, and contact paths.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6602,15 +6602,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6626,17 +6626,17 @@
       "description": "Full 113-tool stack reference grouped by domain.",
       "abstract": "Full 113-tool stack reference grouped by domain.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6663,15 +6663,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
@@ -6687,17 +6687,17 @@
       "description": "JSON Schema contract for the structured entity, proof, citation, and location index.",
       "abstract": "JSON Schema contract for the structured entity, proof, citation, and location index.",
       "author": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "about": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -6724,15 +6724,15 @@
       "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
       "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
       "accountablePerson": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightHolder": {
-        "@id": "https://www.marksiazon.dev/#person"
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "copyrightYear": 2026,
       "sdPublisher": {
         "@type": "Person",
-        "@id": "https://www.marksiazon.dev/#person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
