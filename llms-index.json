@@ -20,7 +20,7 @@
       "UI/UX Designer",
       "Front-end Specialist"
     ],
-    "description": "Product designer and full-stack developer in the Philippines who ships case-study-backed work across AI trust and safety, mobile (Flutter, Kotlin, Wear OS), Web3 (Stellar, Celo, Soroban, MiniPay), and client web.",
+    "description": "Product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and release-readiness in frontend delivery.",
     "url": "https://www.marksiazon.dev",
     "email": "marksiazon.dev@gmail.com",
     "address": {
@@ -35,11 +35,11 @@
     },
     "sameAs": [
       "https://github.com/Iron-Mark",
-      "https://github.com/mark-siazon",
       "https://www.linkedin.com/in/mark-siazon/",
-      "https://www.frontendmentor.io/profile/Iron-Mark",
-      "https://www.tiktok.com/@iron_markk",
-      "https://github.com/Iron-Mark/Iron-Mark"
+      "https://github.com/mark-siazon",
+      "https://x.com/iron_markk",
+      "https://www.instagram.com/iron_markk/",
+      "https://mark-siazon.notion.site/index"
     ]
   },
   "identifiers": {
@@ -79,7 +79,20 @@
     ],
     "remote": true,
     "contact": "https://www.marksiazon.dev/contact",
-    "recruiterBrief": "https://www.marksiazon.dev/recruiter"
+    "recruiterBrief": "https://www.marksiazon.dev/recruiter",
+    "headline": "Open for selective product design, frontend, and AI workflow opportunities",
+    "summary": "Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.",
+    "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
+    "note": "No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+    "workScope": [
+      "Product roles",
+      "Focused client builds",
+      "Launch support",
+      "Case-study packages",
+      "AI workflow prototypes",
+      "Web3 trust flows",
+      "Mobile UX cleanup"
+    ]
   },
   "canonical": {
     "portfolio": "https://www.marksiazon.dev",
@@ -378,15 +391,15 @@
       },
       {
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Yes. Mark Siazon is currently open to product design and full-stack roles on a contract, part-time, or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
         ]
       },
       {
-        "question": "What roles is Mark Siazon open to?",
-        "answer": "Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract, part-time, or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter",
+        "question": "What work is Mark open to?",
+        "answer": "Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
@@ -394,10 +407,10 @@
       },
       {
         "question": "What is Mark Siazon's tech stack?",
-        "answer": "Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+        "answer": "Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.",
         "sources": [
-          "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
-          "https://github.com/Iron-Mark/Iron-Mark"
+          "https://www.marksiazon.dev/recruiter",
+          "https://www.marksiazon.dev/contact"
         ]
       },
       {

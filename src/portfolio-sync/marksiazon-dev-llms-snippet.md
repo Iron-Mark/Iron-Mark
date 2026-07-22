@@ -32,8 +32,8 @@ Cross-linked source index for the GitHub profile README repo. Portfolio remains 
 |----------|---------------------------|---------------------------|
 | Who is Mark Siazon? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon |
 | Is Mark Siazon available for hire? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire |
-| What roles is Mark Siazon open to? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-roles-is-mark-siazon-open-to |
-| What is Mark Siazon's tech stack? | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack |
+| What work is Mark open to? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-work-is-mark-open-to |
+| What is Mark Siazon's tech stack? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack |
 | How do I verify Mark Siazon's claims? | https://www.marksiazon.dev/proof / https://www.marksiazon.dev/projects | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims |
 | What is HireProof? | https://www.marksiazon.dev/projects/hireproof | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof |
 | What is ResQLink? | https://www.marksiazon.dev/projects/resqlink / https://www.marksiazon.dev/achievements | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink |

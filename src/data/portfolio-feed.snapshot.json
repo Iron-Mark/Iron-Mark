@@ -1,0 +1,1233 @@
+{
+  "fetchedAt": "2026-07-22T11:15:57.892314+00:00",
+  "feed": {
+    "entity": {
+      "name": "Mark Siazon",
+      "id": "https://www.marksiazon.dev/#mark-siazon",
+      "url": "https://www.marksiazon.dev",
+      "title": "Product Designer & Full-Stack Developer",
+      "summary": "Product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and release-readiness in frontend delivery.",
+      "sameAs": [
+        "https://github.com/Iron-Mark",
+        "https://www.linkedin.com/in/mark-siazon/",
+        "https://github.com/mark-siazon",
+        "https://x.com/iron_markk",
+        "https://www.instagram.com/iron_markk/",
+        "https://mark-siazon.notion.site/index"
+      ]
+    },
+    "availability": {
+      "headline": "Open for selective product design, frontend, and AI workflow opportunities",
+      "summary": "Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.",
+      "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
+      "note": "No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+      "workScope": [
+        "Product roles",
+        "Focused client builds",
+        "Launch support",
+        "Case-study packages",
+        "AI workflow prototypes",
+        "Web3 trust flows",
+        "Mobile UX cleanup"
+      ]
+    },
+    "projects": [
+      {
+        "slug": "hireproof",
+        "title": "HireProof",
+        "summary": "AI workflow that helps applicants review suspicious job posts, recruiter messages, screenshots, and apply links before they commit time or personal data.",
+        "role": "Product designer and full-stack builder",
+        "timeframe": "2026",
+        "status": "Live trust workflow with provider and live-check boundaries",
+        "lenses": [
+          "ai",
+          "guardrails"
+        ],
+        "tags": [
+          "AI Workflow",
+          "Trust & Safety",
+          "Next.js",
+          "Product Design"
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "AI workflow design"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/hireproof",
+        "links": [
+          {
+            "label": "Live Project",
+            "href": "https://hireproof.tech/portfolio",
+            "type": "live"
+          },
+          {
+            "label": "Documentation",
+            "href": "https://hireproof.tech/docs",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "stellaroid-earn",
+        "title": "Stellaroid Earn",
+        "summary": "On-chain credential trust app for issuing, verifying, and paying bootcamp graduates on Stellar testnet with Soroban and Freighter.",
+        "role": "Builder",
+        "timeframe": "2026",
+        "status": "Live Stellar testnet project",
+        "lenses": [
+          "web3",
+          "guardrails"
+        ],
+        "tags": [
+          "Stellar",
+          "Credentials",
+          "Web3",
+          "Trust UX"
+        ],
+        "stack": [
+          "Next.js",
+          "Soroban",
+          "Freighter",
+          "Stellar Testnet"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/stellaroid-earn",
+        "links": [
+          {
+            "label": "Live Project",
+            "href": "https://stellaroid.tech",
+            "type": "live"
+          },
+          {
+            "label": "Demo App",
+            "href": "https://stellaroid-earn-demo.vercel.app/",
+            "type": "proof"
+          },
+          {
+            "label": "Status Route",
+            "href": "https://stellaroid.tech/status",
+            "type": "proof"
+          },
+          {
+            "label": "Events API",
+            "href": "https://stellaroid.tech/api/events",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 3,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "resqlink",
+        "title": "ResQLink",
+        "summary": "Cross-platform disaster response system spanning Flutter mobile, a React/Vite web surface, and a Fastify/Appwrite backend for offline-first emergency coordination.",
+        "role": "Team product designer and full-stack developer",
+        "timeframe": "Jun 2025 - May 2026",
+        "status": "Academic capstone and competition project",
+        "lenses": [
+          "ai",
+          "mobile",
+          "guardrails"
+        ],
+        "tags": [
+          "AI Triage",
+          "Emergency Tech",
+          "Offline-first",
+          "LGU UX"
+        ],
+        "stack": [
+          "Flutter and Dart Android-first mobile app",
+          "Vite, React, TypeScript, Tailwind CSS, and shadcn/ui LGU/web surface",
+          "Fastify TypeScript API with Appwrite v1.8 realtime data and WebSocket relay",
+          "Gemini 2.5 Flash summaries and on-device YOLO disaster classification",
+          "Native Kotlin Bluetooth LE mesh with BitChat, Noise XX encryption, SQLite queues, Firebase FCM, and offline maps",
+          "Citizen, rescuer, LGU command-center, broadcast, widget, and I Am Safe UX"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/resqlink",
+        "links": [
+          {
+            "label": "Public Web Repo",
+            "href": "https://github.com/UMakLumen/ResQLinkWeb",
+            "type": "github"
+          }
+        ],
+        "proofCount": 0,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "good-to-live",
+        "title": "Good To Live Podcast Website",
+        "summary": "Full website experience for a podcast platform featuring Filipino creatives and entrepreneurs, built from strategy through UI and launch.",
+        "role": "Designer and developer",
+        "timeframe": "2025",
+        "status": "Live client project",
+        "lenses": [
+          "client"
+        ],
+        "tags": [
+          "Full-Stack",
+          "SEO",
+          "Media",
+          "Client Work"
+        ],
+        "stack": [
+          "Web strategy",
+          "UI design",
+          "Frontend development",
+          "SEO"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/good-to-live",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://www.goodtolivepodcast.com/",
+            "type": "live"
+          }
+        ],
+        "proofCount": 0,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "flowfit",
+        "title": "FlowFit",
+        "summary": "Wear OS and Android fitness app with heart-rate monitoring, IBI data, activity, sleep, nutrition, mood tracking, and Supabase sync.",
+        "role": "Team member and app contributor",
+        "timeframe": "Nov 2025",
+        "status": "Hackathon-winning project with a live web app and signed Android build",
+        "lenses": [
+          "mobile"
+        ],
+        "tags": [
+          "Flutter",
+          "Wear OS",
+          "Health Tech",
+          "Supabase"
+        ],
+        "stack": [
+          "Flutter",
+          "Dart",
+          "Samsung Health Sensor SDK",
+          "Supabase"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/flowfit",
+        "links": [
+          {
+            "label": "FlowFit Web App",
+            "href": "https://apps.marksiazon.dev/flowfit/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/KpG782/flowfit",
+            "type": "github"
+          },
+          {
+            "label": "Signed Android Release",
+            "href": "https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21",
+            "type": "proof"
+          },
+          {
+            "label": "Figma Presentation",
+            "href": "https://www.figma.com/deck/DdDkndHHQO0WL9lQkUzhYk/Flowfit-Presentation?node-id=1-42&t=qhlMVYxwhQ5L2SQV-1",
+            "type": "figma"
+          },
+          {
+            "label": "Demo Video",
+            "href": "https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 2,
+        "lastVerified": "2026-07-20"
+      },
+      {
+        "slug": "baybayinscribe",
+        "title": "BaybayInscribe",
+        "summary": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
+        "role": "Lead UI/UX and front-end developer",
+        "timeframe": "Aug 2024 - Jun 2025",
+        "status": "Academic team project",
+        "lenses": [
+          "ai",
+          "mobile"
+        ],
+        "tags": [
+          "AI",
+          "Education",
+          "Culture",
+          "Frontend"
+        ],
+        "stack": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "ML-assisted recognition"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/baybayinscribe",
+        "links": [
+          {
+            "label": "Model Reference",
+            "href": "https://huggingface.co/gilas/baybayinscribe",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "kudlit",
+        "title": "Kudlit",
+        "summary": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
+        "role": "Flutter app contributor and UI/UX hardening lead",
+        "timeframe": "Apr 2026 - May 2026",
+        "status": "Android release v1.0.0 with web QA caveats",
+        "lenses": [
+          "ai",
+          "mobile",
+          "guardrails"
+        ],
+        "tags": [
+          "Flutter",
+          "Baybayin",
+          "Education",
+          "Mobile UX"
+        ],
+        "stack": [
+          "Flutter",
+          "Dart",
+          "Riverpod",
+          "go_router",
+          "Supabase",
+          "YOLO to TFLite",
+          "Gemma 4"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/kudlit",
+        "links": [
+          {
+            "label": "Repository",
+            "href": "https://github.com/ACSADians/kudlit-app",
+            "type": "github"
+          },
+          {
+            "label": "Android Release",
+            "href": "https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "pulse",
+        "title": "Pulse",
+        "summary": "Phone and watch running platform with GPS sessions, heart-rate telemetry, music-aware workouts, and a store-ready Flutter app live on the web.",
+        "role": "Mobile app contributor and release QA lead",
+        "timeframe": "Mar 2026 - Jul 2026",
+        "status": "Store-ready release candidate with a live web app and signed Android builds",
+        "lenses": [
+          "mobile",
+          "guardrails"
+        ],
+        "tags": [
+          "Mobile",
+          "Wear OS",
+          "Health Tech",
+          "Flutter"
+        ],
+        "stack": [
+          "Kotlin",
+          "Jetpack Compose",
+          "Wear OS",
+          "Samsung Health sensors",
+          "Supabase",
+          "Spotify",
+          "Flutter",
+          "Riverpod"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/pulse",
+        "links": [
+          {
+            "label": "Pulsify Web App",
+            "href": "https://apps.marksiazon.dev/pulsify/",
+            "type": "live"
+          },
+          {
+            "label": "Public Preview Asset",
+            "href": "https://www.marksiazon.dev/project-assets/pulse/preview-running-music.png",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-07-21"
+      },
+      {
+        "slug": "palengkepay",
+        "title": "PalengkePay",
+        "summary": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and testnet-first fintech review.",
+        "role": "Fintech PWA contributor",
+        "timeframe": "May 2026",
+        "status": "Live testnet PWA with pending wallet-signed chain smoke",
+        "lenses": [
+          "mobile",
+          "web3",
+          "guardrails"
+        ],
+        "tags": [
+          "Stellar",
+          "Fintech",
+          "PWA",
+          "MSME"
+        ],
+        "stack": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Stellar SDK",
+          "Soroban",
+          "Vercel",
+          "Playwright"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/palengkepay",
+        "links": [
+          {
+            "label": "Live Project",
+            "href": "https://palengke-pay.vercel.app",
+            "type": "live"
+          },
+          {
+            "label": "MVP Walkthrough",
+            "href": "https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-06-10"
+      },
+      {
+        "slug": "gawainyah",
+        "title": "GawainYah",
+        "summary": "MiniPay-native receipt scanner that charges per task, verifies payment before AI work, and records a Celo proof receipt for completed jobs.",
+        "role": "Product builder and production-readiness lead",
+        "timeframe": "May 2026",
+        "status": "Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending",
+        "lenses": [
+          "ai",
+          "mobile",
+          "web3",
+          "guardrails"
+        ],
+        "tags": [
+          "MiniPay",
+          "Celo",
+          "AI Utility",
+          "Production Readiness"
+        ],
+        "stack": [
+          "Next.js",
+          "TypeScript",
+          "next-intl",
+          "MiniPay",
+          "Celo",
+          "Hardhat",
+          "Supabase",
+          "Vercel",
+          "Playwright",
+          "Vitest",
+          "axe-core"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/gawainyah",
+        "links": [
+          {
+            "label": "Mainnet Launcher",
+            "href": "https://www.marksiazon.dev/gawainyah/mainnet",
+            "type": "live"
+          },
+          {
+            "label": "Testnet QA Launcher",
+            "href": "https://www.marksiazon.dev/gawainyah/testnet",
+            "type": "proof"
+          },
+          {
+            "label": "Runtime Origin",
+            "href": "https://gawainyah-minipay.vercel.app",
+            "type": "proof"
+          },
+          {
+            "label": "Registry Source Verification",
+            "href": "https://sourcify.dev/server/repo-ui/42220/0xfee6C135690E10ea814212aA9Aefd97508A0FC92",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 3,
+        "lastVerified": "2026-07-14"
+      },
+      {
+        "slug": "lexinsights",
+        "title": "LexInsights",
+        "summary": "Providerless Philippine legal research and compliance assistant with local statute retrieval, draft checking, document extraction, guest chat history, and optional remote RAG fallback.",
+        "role": "Full-stack product builder",
+        "timeframe": "Jun 2026",
+        "status": "Production v0.5.2 ready at 8702afd",
+        "lenses": [
+          "ai"
+        ],
+        "tags": [
+          "AI Legal Research",
+          "Compliance UX",
+          "Next.js",
+          "Providerless RAG"
+        ],
+        "stack": [
+          "Next.js 16 App Router",
+          "React 19",
+          "TypeScript",
+          "Zustand",
+          "Clerk auth boundary",
+          "Supabase client/storage boundary",
+          "Providerless BM25-style local legal research",
+          "PDF, DOCX, DOC, Markdown, and text extraction",
+          "Playwright smoke coverage"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/lexinsights",
+        "links": [
+          {
+            "label": "Production App",
+            "href": "https://lexiph.vercel.app",
+            "type": "live"
+          },
+          {
+            "label": "Legacy Showcase",
+            "href": "https://lexinsights.vercel.app",
+            "type": "proof"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/Iron-Mark/Hackathon-LexInsights",
+            "type": "github"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-07-06"
+      },
+      {
+        "slug": "qwen-ui-lab",
+        "title": "Qwen UI Lab",
+        "summary": "Screenshot-to-React workspace that turns UI screenshots into inspectable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
+        "role": "Full-stack product builder",
+        "timeframe": "Jun - Jul 2026",
+        "status": "Live local-analysis deployment with Qwen live mode gated off",
+        "lenses": [
+          "ai",
+          "guardrails"
+        ],
+        "tags": [
+          "AI Developer Tool",
+          "Screenshot-to-React",
+          "Next.js",
+          "Export Workflow"
+        ],
+        "stack": [
+          "Next.js 16 App Router",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS 4",
+          "Qwen3-VL optional live analysis boundary",
+          "Deterministic local-analysis fixtures",
+          "React + Tailwind export packages",
+          "Share summary routes",
+          "Playwright and Node test coverage"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/qwen-ui-lab",
+        "links": [
+          {
+            "label": "Production App",
+            "href": "https://qwen-ui-lab.vercel.app",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/Iron-Mark/qwen-ui-lab",
+            "type": "github"
+          },
+          {
+            "label": "Health Endpoint",
+            "href": "https://qwen-ui-lab.vercel.app/api/health",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-07-06"
+      }
+    ],
+    "writing": [
+      {
+        "slug": "design-system-switcher",
+        "title": "Architecting a Multi-Ism Design System Switcher in Next.js",
+        "summary": "How to build a fast style switcher that lets users toggle between Modern Minimal, Glassmorphism, Neo-Brutalism, and Bento modes with zero layout shift.",
+        "publishedAt": "2026-05-18",
+        "canonicalUrl": "https://www.marksiazon.dev/writing/design-system-switcher"
+      },
+      {
+        "slug": "offline-first-ux",
+        "title": "Offline-First Emergency Response UX: Lessons from ResQLink",
+        "summary": "Designing emergency-response interfaces across Flutter mobile, React web, Appwrite realtime data, AI triage, BLE mesh resilience, and multi-agency coordination when connectivity and attention are both constrained.",
+        "publishedAt": "2026-04-12",
+        "canonicalUrl": "https://www.marksiazon.dev/writing/offline-first-ux"
+      }
+    ],
+    "faq": [
+      {
+        "id": "home-best-hired-as",
+        "question": "Who is Mark Siazon best hired as?",
+        "answer": "Product designer who also ships the frontend code",
+        "audiences": [
+          "home"
+        ]
+      },
+      {
+        "id": "home-best-contexts",
+        "question": "What contexts does Mark Siazon work best in?",
+        "answer": "AI workflows, mobile UX, Web3 trust flows, client launches",
+        "audiences": [
+          "home"
+        ]
+      },
+      {
+        "id": "home-working-style",
+        "question": "How does Mark Siazon work?",
+        "answer": "Prototype fast, write clearly, check before shipping",
+        "audiences": [
+          "home"
+        ]
+      },
+      {
+        "id": "recruiter-availability",
+        "question": "Is Mark Siazon available for hire?",
+        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "recruiter-tech-stack",
+        "question": "What is Mark Siazon's tech stack?",
+        "answer": "Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "recruiter-production-frontend",
+        "question": "Can Mark Siazon ship production frontend code?",
+        "answer": "Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, and implementation-ready UI systems, including the live Good To Live client site and the Stellaroid Earn testnet app.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "recruiter-review-first",
+        "question": "Which projects should a recruiter review first?",
+        "answer": "Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "contact-0",
+        "question": "What should I include in a first message?",
+        "answer": "Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.",
+        "audiences": [
+          "contact"
+        ]
+      },
+      {
+        "id": "contact-1",
+        "question": "Can AI search crawlers read this contact page?",
+        "answer": "Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the contact and API surfaces. Host or CDN crawler access still needs account-side confirmation.",
+        "audiences": [
+          "contact"
+        ]
+      },
+      {
+        "id": "contact-2",
+        "question": "Where should private contact details live?",
+        "answer": "Private recipient and sender addresses stay in server-side environment variables, not in public HTML, feeds, or LLM discovery files.",
+        "audiences": [
+          "contact"
+        ]
+      },
+      {
+        "id": "contact-3",
+        "question": "What work is Mark open to?",
+        "answer": "Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
+        "audiences": [
+          "contact"
+        ]
+      },
+      {
+        "id": "project-hireproof-what",
+        "question": "What is HireProof?",
+        "answer": "HireProof is positioned as a trust and safety product for job seekers. The project turns scam-detection anxiety into a source-backed review flow with clear risk notes and next steps.",
+        "audiences": [
+          "project:hireproof"
+        ]
+      },
+      {
+        "id": "project-hireproof-role",
+        "question": "What was Mark Siazon's role on HireProof?",
+        "answer": "Product designer and full-stack builder. Top outcome: Shipped surface, Live product + docs.",
+        "audiences": [
+          "project:hireproof"
+        ]
+      },
+      {
+        "id": "project-hireproof-status",
+        "question": "What is the current status of HireProof?",
+        "answer": "Live trust workflow with provider and live-check boundaries",
+        "audiences": [
+          "project:hireproof"
+        ]
+      },
+      {
+        "id": "project-hireproof-stack",
+        "question": "What is HireProof built with?",
+        "answer": "Next.js, React, TypeScript, AI workflow design.",
+        "audiences": [
+          "project:hireproof"
+        ]
+      },
+      {
+        "id": "project-stellaroid-earn-what",
+        "question": "What is Stellaroid Earn?",
+        "answer": "Stellaroid Earn turns credential and graduate payment records into a public Stellar testnet flow. The page emphasizes Top 5 bootcamp context, transaction records, blockchain UX, and payment trust without presenting it as a production finance product.",
+        "audiences": [
+          "project:stellaroid-earn"
+        ]
+      },
+      {
+        "id": "project-stellaroid-earn-role",
+        "question": "What was Mark Siazon's role on Stellaroid Earn?",
+        "answer": "Builder. Top outcome: Public review path, www.stellaroid.tech.",
+        "audiences": [
+          "project:stellaroid-earn"
+        ]
+      },
+      {
+        "id": "project-stellaroid-earn-status",
+        "question": "What is the current status of Stellaroid Earn?",
+        "answer": "Live Stellar testnet project",
+        "audiences": [
+          "project:stellaroid-earn"
+        ]
+      },
+      {
+        "id": "project-stellaroid-earn-stack",
+        "question": "What is Stellaroid Earn built with?",
+        "answer": "Next.js, Soroban, Freighter, Stellar Testnet.",
+        "audiences": [
+          "project:stellaroid-earn"
+        ]
+      },
+      {
+        "id": "project-resqlink-what",
+        "question": "What is ResQLink?",
+        "answer": "ResQLink positions disaster response as actionable intelligence: one-tap SOS reporting, AI triage, proximity-based responder dispatch, BitChat BLE mesh fallback, SQLite report queues, I Am Safe acknowledgements, and LGU command workflows for citizens, rescuers, and operators.",
+        "audiences": [
+          "project:resqlink"
+        ]
+      },
+      {
+        "id": "project-resqlink-role",
+        "question": "What was Mark Siazon's role on ResQLink?",
+        "answer": "Team product designer and full-stack developer. Top outcome: Competition result, Productivity Champion.",
+        "audiences": [
+          "project:resqlink"
+        ]
+      },
+      {
+        "id": "project-resqlink-status",
+        "question": "What is the current status of ResQLink?",
+        "answer": "Academic capstone and competition project",
+        "audiences": [
+          "project:resqlink"
+        ]
+      },
+      {
+        "id": "project-resqlink-stack",
+        "question": "What is ResQLink built with?",
+        "answer": "Flutter and Dart Android-first mobile app, Vite, React, TypeScript, Tailwind CSS, and shadcn/ui LGU/web surface, Fastify TypeScript API with Appwrite v1.8 realtime data and WebSocket relay, Gemini 2.5 Flash summaries and on-device YOLO disaster classification, Native Kotlin Bluetooth LE mesh with BitChat, Noise XX encryption, SQLite queues, Firebase FCM, and offline maps, Citizen, rescuer, LGU command-center, broadcast, widget, and I Am Safe UX.",
+        "audiences": [
+          "project:resqlink"
+        ]
+      },
+      {
+        "id": "project-good-to-live-what",
+        "question": "What is Good To Live Podcast Website?",
+        "answer": "Good To Live demonstrates client-facing delivery: strategy, UI design, development, SEO, public launch execution, route/feed/sitemap coverage, and production handoff for a media-oriented website.",
+        "audiences": [
+          "project:good-to-live"
+        ]
+      },
+      {
+        "id": "project-good-to-live-role",
+        "question": "What was Mark Siazon's role on Good To Live Podcast Website?",
+        "answer": "Designer and developer. Top outcome: Launch record, Public website.",
+        "audiences": [
+          "project:good-to-live"
+        ]
+      },
+      {
+        "id": "project-good-to-live-status",
+        "question": "What is the current status of Good To Live Podcast Website?",
+        "answer": "Live client project",
+        "audiences": [
+          "project:good-to-live"
+        ]
+      },
+      {
+        "id": "project-good-to-live-stack",
+        "question": "What is Good To Live Podcast Website built with?",
+        "answer": "Web strategy, UI design, Frontend development, SEO.",
+        "audiences": [
+          "project:good-to-live"
+        ]
+      },
+      {
+        "id": "project-flowfit-what",
+        "question": "What is FlowFit?",
+        "answer": "FlowFit is a cross-device health and fitness project that combines a Wear OS watch app with an Android companion app. The page focuses on wearable data, product adaptation, and child-friendly health tracking.",
+        "audiences": [
+          "project:flowfit"
+        ]
+      },
+      {
+        "id": "project-flowfit-role",
+        "question": "What was Mark Siazon's role on FlowFit?",
+        "answer": "Team member and app contributor. Top outcome: Platform breadth, Watch + phone + web.",
+        "audiences": [
+          "project:flowfit"
+        ]
+      },
+      {
+        "id": "project-flowfit-status",
+        "question": "What is the current status of FlowFit?",
+        "answer": "Hackathon-winning project with a live web app and signed Android build",
+        "audiences": [
+          "project:flowfit"
+        ]
+      },
+      {
+        "id": "project-flowfit-stack",
+        "question": "What is FlowFit built with?",
+        "answer": "Flutter, Dart, Samsung Health Sensor SDK, Supabase.",
+        "audiences": [
+          "project:flowfit"
+        ]
+      },
+      {
+        "id": "project-baybayinscribe-what",
+        "question": "What is BaybayInscribe?",
+        "answer": "BaybayInscribe combines education, culture, and AI-assisted learning. The page highlights UI/UX direction, responsive front-end work, and competition recognition.",
+        "audiences": [
+          "project:baybayinscribe"
+        ]
+      },
+      {
+        "id": "project-baybayinscribe-role",
+        "question": "What was Mark Siazon's role on BaybayInscribe?",
+        "answer": "Lead UI/UX and front-end developer. Top outcome: Archived beta, Interface capture.",
+        "audiences": [
+          "project:baybayinscribe"
+        ]
+      },
+      {
+        "id": "project-baybayinscribe-status",
+        "question": "What is the current status of BaybayInscribe?",
+        "answer": "Academic team project",
+        "audiences": [
+          "project:baybayinscribe"
+        ]
+      },
+      {
+        "id": "project-baybayinscribe-stack",
+        "question": "What is BaybayInscribe built with?",
+        "answer": "React, Next.js, Tailwind CSS, ML-assisted recognition.",
+        "audiences": [
+          "project:baybayinscribe"
+        ]
+      },
+      {
+        "id": "project-kudlit-what",
+        "question": "What is Kudlit?",
+        "answer": "Kudlit is a Baybayin discovery app for learners who want one mobile-first place to scan glyphs, translate Filipino text, practice lessons, and ask a companion for help.",
+        "audiences": [
+          "project:kudlit"
+        ]
+      },
+      {
+        "id": "project-kudlit-role",
+        "question": "What was Mark Siazon's role on Kudlit?",
+        "answer": "Flutter app contributor and UI/UX hardening lead. Top outcome: Public artifact, Android APK release.",
+        "audiences": [
+          "project:kudlit"
+        ]
+      },
+      {
+        "id": "project-kudlit-status",
+        "question": "What is the current status of Kudlit?",
+        "answer": "Android release v1.0.0 with web QA caveats",
+        "audiences": [
+          "project:kudlit"
+        ]
+      },
+      {
+        "id": "project-kudlit-stack",
+        "question": "What is Kudlit built with?",
+        "answer": "Flutter, Dart, Riverpod, go_router, Supabase, YOLO to TFLite, Gemma 4.",
+        "audiences": [
+          "project:kudlit"
+        ]
+      },
+      {
+        "id": "project-pulse-what",
+        "question": "What is Pulse?",
+        "answer": "Pulse grew from a Kotlin Android/Wear OS stack into a store-ready Flutter app. The v0.2.0-store-rc11 release candidate ships signed Android builds hardened by a wide code review, and the hosted web app is live at apps.marksiazon.dev/pulsify.",
+        "audiences": [
+          "project:pulse"
+        ]
+      },
+      {
+        "id": "project-pulse-role",
+        "question": "What was Mark Siazon's role on Pulse?",
+        "answer": "Mobile app contributor and release QA lead. Top outcome: Store readiness, Signed release candidate.",
+        "audiences": [
+          "project:pulse"
+        ]
+      },
+      {
+        "id": "project-pulse-status",
+        "question": "What is the current status of Pulse?",
+        "answer": "Store-ready release candidate with a live web app and signed Android builds",
+        "audiences": [
+          "project:pulse"
+        ]
+      },
+      {
+        "id": "project-pulse-stack",
+        "question": "What is Pulse built with?",
+        "answer": "Kotlin, Jetpack Compose, Wear OS, Samsung Health sensors, Supabase, Spotify, Flutter, Riverpod.",
+        "audiences": [
+          "project:pulse"
+        ]
+      },
+      {
+        "id": "project-palengkepay-what",
+        "question": "What is PalengkePay?",
+        "answer": "PalengkePay frames palengke transactions through testnet payment-flow UI, receipt screens, and vendor records. The page presents contributor-scoped work from a team-delivered PWA, with shipped UI, deployed routes, and still-pending checks for wallet-signed payment and real-device validation.",
+        "audiences": [
+          "project:palengkepay"
+        ]
+      },
+      {
+        "id": "project-palengkepay-role",
+        "question": "What was Mark Siazon's role on PalengkePay?",
+        "answer": "Fintech PWA contributor. Top outcome: Public app, Live testnet PWA.",
+        "audiences": [
+          "project:palengkepay"
+        ]
+      },
+      {
+        "id": "project-palengkepay-status",
+        "question": "What is the current status of PalengkePay?",
+        "answer": "Live testnet PWA with pending wallet-signed chain smoke",
+        "audiences": [
+          "project:palengkepay"
+        ]
+      },
+      {
+        "id": "project-palengkepay-stack",
+        "question": "What is PalengkePay built with?",
+        "answer": "React, TypeScript, Vite, Stellar SDK, Soroban, Vercel, Playwright.",
+        "audiences": [
+          "project:palengkepay"
+        ]
+      },
+      {
+        "id": "project-gawainyah-what",
+        "question": "What is GawainYah?",
+        "answer": "GawainYah is a MiniPay pay-per-task MVP for tiny AI jobs: add a receipt, pay a small stablecoin fee, get structured expense data back, and keep a Celo proof receipt. It runs on Celo mainnet in six languages and takes more than one stablecoin, with every payment verified server-side before the AI runs. The real-device MiniPay QA, one real payment, and the on-chain proof event stay pending until they are run.",
+        "audiences": [
+          "project:gawainyah"
+        ]
+      },
+      {
+        "id": "project-gawainyah-role",
+        "question": "What was Mark Siazon's role on GawainYah?",
+        "answer": "Product builder and production-readiness lead. Top outcome: MVP shape, Pay per receipt task.",
+        "audiences": [
+          "project:gawainyah"
+        ]
+      },
+      {
+        "id": "project-gawainyah-status",
+        "question": "What is the current status of GawainYah?",
+        "answer": "Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending",
+        "audiences": [
+          "project:gawainyah"
+        ]
+      },
+      {
+        "id": "project-gawainyah-stack",
+        "question": "What is GawainYah built with?",
+        "answer": "Next.js, TypeScript, next-intl, MiniPay, Celo, Hardhat, Supabase, Vercel, Playwright, Vitest, axe-core.",
+        "audiences": [
+          "project:gawainyah"
+        ]
+      },
+      {
+        "id": "project-lexinsights-what",
+        "question": "What is LexInsights?",
+        "answer": "LexInsights turns Philippine legal research and compliance review into a usable chat workspace. The 2026-07-06 live check found production serving v0.5.2 from Iron-Mark/Hackathon-LexInsights at 8702afd, with lexiph.vercel.app treated as the current app and lexinsights.vercel.app kept as legacy showcase context.",
+        "audiences": [
+          "project:lexinsights"
+        ]
+      },
+      {
+        "id": "project-lexinsights-role",
+        "question": "What was Mark Siazon's role on LexInsights?",
+        "answer": "Full-stack product builder. Top outcome: Resilient research, Providerless default.",
+        "audiences": [
+          "project:lexinsights"
+        ]
+      },
+      {
+        "id": "project-lexinsights-status",
+        "question": "What is the current status of LexInsights?",
+        "answer": "Production v0.5.2 ready at 8702afd",
+        "audiences": [
+          "project:lexinsights"
+        ]
+      },
+      {
+        "id": "project-lexinsights-stack",
+        "question": "What is LexInsights built with?",
+        "answer": "Next.js 16 App Router, React 19, TypeScript, Zustand, Clerk auth boundary, Supabase client/storage boundary, Providerless BM25-style local legal research, PDF, DOCX, DOC, Markdown, and text extraction, Playwright smoke coverage.",
+        "audiences": [
+          "project:lexinsights"
+        ]
+      },
+      {
+        "id": "project-qwen-ui-lab-what",
+        "question": "What is Qwen UI Lab?",
+        "answer": "Qwen UI Lab is a live developer tool for uploading UI screenshots, reviewing detected structure, refining boxes, previewing a component draft, and downloading an export package. The 2026-07-06 live health check found qwen-ui-lab.vercel.app in demo/local-analysis mode with no public API key exposure and live Qwen analysis disabled by default.",
+        "audiences": [
+          "project:qwen-ui-lab"
+        ]
+      },
+      {
+        "id": "project-qwen-ui-lab-role",
+        "question": "What was Mark Siazon's role on Qwen UI Lab?",
+        "answer": "Full-stack product builder. Top outcome: Inspectable exports, Package, not magic.",
+        "audiences": [
+          "project:qwen-ui-lab"
+        ]
+      },
+      {
+        "id": "project-qwen-ui-lab-status",
+        "question": "What is the current status of Qwen UI Lab?",
+        "answer": "Live local-analysis deployment with Qwen live mode gated off",
+        "audiences": [
+          "project:qwen-ui-lab"
+        ]
+      },
+      {
+        "id": "project-qwen-ui-lab-stack",
+        "question": "What is Qwen UI Lab built with?",
+        "answer": "Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Qwen3-VL optional live analysis boundary, Deterministic local-analysis fixtures, React + Tailwind export packages, Share summary routes, Playwright and Node test coverage.",
+        "audiences": [
+          "project:qwen-ui-lab"
+        ]
+      }
+    ],
+    "proof": {
+      "gates": [
+        {
+          "label": "Notion public archive",
+          "owner": "User action",
+          "status": "Manual body/table refresh remains outside repo automation."
+        },
+        {
+          "label": "ResQLink academic awards",
+          "owner": "Record attachment",
+          "status": "Best Thesis and Best Presentation stay user-provided until certificate, thesis, program, or official page is attached."
+        },
+        {
+          "label": "PalengkePay payment record",
+          "owner": "Wallet/onchain QA",
+          "status": "Needs real wallet-signed payment, transaction hash, and sponsor durability record."
+        },
+        {
+          "label": "GawainYah MiniPay/Celo record",
+          "owner": "Device and mainnet QA",
+          "status": "Registry is deployed; still needs physical MiniPay QA, real MiniPay payment, proof-event record, and final Talent form confirmation."
+        }
+      ],
+      "byProject": {
+        "hireproof": [
+          {
+            "label": "Documentation",
+            "href": "https://hireproof.tech/docs"
+          }
+        ],
+        "stellaroid-earn": [
+          {
+            "label": "Demo App",
+            "href": "https://stellaroid-earn-demo.vercel.app/"
+          },
+          {
+            "label": "Status Route",
+            "href": "https://stellaroid.tech/status"
+          },
+          {
+            "label": "Events API",
+            "href": "https://stellaroid.tech/api/events"
+          }
+        ],
+        "flowfit": [
+          {
+            "label": "Signed Android Release",
+            "href": "https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21"
+          },
+          {
+            "label": "Demo Video",
+            "href": "https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing"
+          }
+        ],
+        "baybayinscribe": [
+          {
+            "label": "Model Reference",
+            "href": "https://huggingface.co/gilas/baybayinscribe"
+          }
+        ],
+        "kudlit": [
+          {
+            "label": "Android Release",
+            "href": "https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0"
+          }
+        ],
+        "pulse": [
+          {
+            "label": "Public Preview Asset",
+            "href": "https://www.marksiazon.dev/project-assets/pulse/preview-running-music.png"
+          }
+        ],
+        "palengkepay": [
+          {
+            "label": "MVP Walkthrough",
+            "href": "https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1"
+          }
+        ],
+        "gawainyah": [
+          {
+            "label": "Testnet QA Launcher",
+            "href": "https://www.marksiazon.dev/gawainyah/testnet"
+          },
+          {
+            "label": "Runtime Origin",
+            "href": "https://gawainyah-minipay.vercel.app"
+          },
+          {
+            "label": "Registry Source Verification",
+            "href": "https://sourcify.dev/server/repo-ui/42220/0xfee6C135690E10ea814212aA9Aefd97508A0FC92"
+          }
+        ],
+        "lexinsights": [
+          {
+            "label": "Legacy Showcase",
+            "href": "https://lexinsights.vercel.app"
+          }
+        ],
+        "qwen-ui-lab": [
+          {
+            "label": "Health Endpoint",
+            "href": "https://qwen-ui-lab.vercel.app/api/health"
+          }
+        ]
+      }
+    },
+    "services": [
+      {
+        "title": "Product design",
+        "description": "User flows, UI, and design systems, worked out in Figma and handed off with implementation notes."
+      },
+      {
+        "title": "Frontend development",
+        "description": "Client-facing React and Next.js interfaces, built from prototype to production."
+      },
+      {
+        "title": "Full-stack build",
+        "description": "End-to-end delivery from research and design through development, following a secure software development lifecycle."
+      },
+      {
+        "title": "AI-assisted prototyping",
+        "description": "Rapid mockups and buildable prototypes using AI-assisted tooling to move an idea forward fast."
+      },
+      {
+        "title": "Launch support",
+        "description": "Pre-launch QA, a performance and SEO pass, and a go-live checklist."
+      },
+      {
+        "title": "Graphics design & consultation",
+        "description": "Brand and visual assets, plus product and UX consultation."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Productivity Champion - UMak Infotech Olympics, Android App Development (2025) with team Lumiere",
+        "tags": [
+          "Award",
+          "Development"
+        ],
+        "compactResult": "Champion"
+      },
+      {
+        "title": "Champion - C(Old)(ST)art Hackathon (2025) with team ACSADians",
+        "tags": [
+          "Award",
+          "Hackathon"
+        ]
+      },
+      {
+        "title": "Top 10 Finalist out of 48 teams - PH Startup Challenge X: NCR (2025) with team Lumen",
+        "tags": [
+          "Award",
+          "Product Management"
+        ]
+      },
+      {
+        "title": "1st Runner-up - UMak 14th IT Olympics, Android Category (2025)",
+        "tags": [
+          "Award",
+          "Development"
+        ]
+      },
+      {
+        "title": "Consistent Dean's Lister and Latin Honors - BS Computer Science, UMak",
+        "tags": [
+          "Academics",
+          "Award"
+        ]
+      }
+    ],
+    "pointers": {
+      "site": "https://www.marksiazon.dev",
+      "feedSelf": "https://www.marksiazon.dev/llms-index.json",
+      "schema": "https://www.marksiazon.dev/schema/llms-index.schema.json",
+      "githubProfileRepo": "https://github.com/Iron-Mark/Iron-Mark",
+      "mcpEndpoint": "https://www.marksiazon.dev/api/mcp"
+    }
+  }
+}
