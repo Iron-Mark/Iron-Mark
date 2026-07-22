@@ -31,7 +31,7 @@ jobs:
           ref: dev
 
       - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@6269b9a08af89020bb86cde31485d18c7d41ac33 # v2
         env:
           # Sum stars from the top ~100 repos only. Paginating every repository
           # blows GitHub's GraphQL node limit (RESOURCE_LIMITS_EXCEEDED) on large
@@ -61,7 +61,7 @@ jobs:
           fi
 
       - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@6269b9a08af89020bb86cde31485d18c7d41ac33 # v2
         with:
           card: top-langs
           # Compact layout at card_width=320 (165px height to pair with stats card)
@@ -110,11 +110,11 @@ jobs:
         run: |
           # Fetched SVGs come from third-party services. Never publish one
           # that carries active content - grep each of the 4 cards for
-          # script/event-handler/foreignObject patterns; any hit reverts
+          # script/event-handler patterns (foreignObject alone is legitimate SVG text layout, used by the activity graph); any hit reverts
           # just that file to the last committed (known-good) version.
           for f in assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg; do
-            if grep -qiE '<script|onload=|onerror=|javascript:|<foreignObject' "$f"; then
-              echo "::warning::$f contains disallowed active content (script/event-handler/foreignObject); keeping the last committed version."
+            if grep -qiE '<script|onload=|onerror=|javascript:' "$f"; then
+              echo "::warning::$f contains disallowed active content (script/event-handler); keeping the last committed version."
               git checkout -- "$f"
             fi
           done
