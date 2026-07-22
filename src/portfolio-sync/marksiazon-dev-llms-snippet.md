@@ -24,7 +24,7 @@ Cross-linked source index for the GitHub profile README repo. Portfolio remains 
 - Schema.org Person graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld
 - Schema.org FAQ graph: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
 - GitHub Pages mirror: https://iron-mark.github.io/Iron-Mark/
-- Entity @id: https://www.marksiazon.dev/#person
+- Entity @id: https://www.marksiazon.dev/#mark-siazon
 
 ### FAQ cross-links (portfolio <-> GitHub)
 

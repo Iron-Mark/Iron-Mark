@@ -20,6 +20,7 @@ Canonical portfolio: https://www.marksiazon.dev
 Do not invent projects, awards, or employers not returned by these tools/resources.
 For hiring → get_profile_summary + search_faq + profile://recruiter
 For verification → get_proof + profile://proof
+Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
 """
 
 
@@ -39,19 +40,28 @@ mcp = create_mcp()
 
 @mcp.tool(title="Get profile summary")
 def get_profile_summary() -> dict[str, Any]:
-    """Return entity, availability, canonical URLs, and core stack from llms-index.json."""
+    """Return entity, availability, canonical URLs, and core stack from llms-index.json.
+
+    Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
+    """
     return store.profile_summary()
 
 
 @mcp.tool(title="Search FAQ")
 def search_faq(query: str, limit: int = 5) -> list[dict[str, str]]:
-    """Search AEO FAQ answer snippets by keyword (project name, role, stack, etc.)."""
+    """Search AEO FAQ answer snippets by keyword (project name, role, stack, etc.).
+
+    Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
+    """
     return store.search_faq(query, limit=min(max(limit, 1), 15))
 
 
 @mcp.tool(title="List projects")
 def list_projects(include_hackathon: bool = True) -> dict[str, Any]:
-    """List featured portfolio projects and optional hackathon/lab repos."""
+    """List featured portfolio projects and optional hackathon/lab repos.
+
+    Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
+    """
     data: dict[str, Any] = {"featured": store.list_featured_projects()}
     if include_hackathon:
         data["hackathonLab"] = store.list_hackathon_projects()
@@ -60,7 +70,10 @@ def list_projects(include_hackathon: bool = True) -> dict[str, Any]:
 
 @mcp.tool(title="Get project")
 def get_project(slug_or_name: str) -> dict[str, Any]:
-    """Get one project by slug or name (e.g. hireproof, ResQLink, qwen-ui-lab)."""
+    """Get one project by slug or name (e.g. hireproof, ResQLink, qwen-ui-lab).
+
+    Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
+    """
     project = store.find_project(slug_or_name)
     if not project:
         return {"error": f"Project not found: {slug_or_name}"}
@@ -69,7 +82,10 @@ def get_project(slug_or_name: str) -> dict[str, Any]:
 
 @mcp.tool(title="Get proof links")
 def get_proof(slug_or_name: str = "") -> dict[str, Any]:
-    """Return proof URLs for a project, or the global proof matrix URL if slug is empty."""
+    """Return proof URLs for a project, or the global proof matrix URL if slug is empty.
+
+    Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP at https://www.marksiazon.dev/api/mcp
+    """
     if not slug_or_name.strip():
         index = store.load_index()
         return {

@@ -19,7 +19,7 @@ REQUIRED = [
 FAQ_OPTIONAL = [
     "FAQ & GitHub",
     "contact#faq",
-    "#person",
+    "#mark-siazon",
     "person.jsonld",
     "faq.jsonld",
 ]

@@ -7,7 +7,7 @@
   "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
   "entity": {
     "@type": "Person",
-    "@id": "https://www.marksiazon.dev/#person",
+    "@id": "https://www.marksiazon.dev/#mark-siazon",
     "name": "Mark Siazon",
     "alternateName": [
       "Iron-Mark",
@@ -43,7 +43,7 @@
     ]
   },
   "identifiers": {
-    "person": "https://www.marksiazon.dev/#person",
+    "person": "https://www.marksiazon.dev/#mark-siazon",
     "portfolioWebsite": "https://www.marksiazon.dev/#website",
     "githubProfilePage": "https://github.com/Iron-Mark/Iron-Mark#profilepage",
     "githubProfileIndex": "https://github.com/Iron-Mark/Iron-Mark#website",
@@ -320,7 +320,7 @@
       "remote"
     ],
     "technicalSignals": {
-      "canonicalPersonId": "https://www.marksiazon.dev/#person",
+      "canonicalPersonId": "https://www.marksiazon.dev/#mark-siazon",
       "canonicalPortfolio": "https://www.marksiazon.dev",
       "schemaGraphs": [
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/person.jsonld",
