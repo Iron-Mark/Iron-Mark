@@ -13,15 +13,55 @@ Portfolio FAQ routes: [contact#faq](https://www.marksiazon.dev/contact#faq) · [
 
 Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
 
-## What roles is Mark Siazon open to?
+<!-- BEGIN DERIVED: faq (from https://www.marksiazon.dev/llms-index.json - do not hand-edit) -->
 
-Product design, full-stack engineering, AI workflow prototypes, mobile/Wear OS UX, and Web3 proof work - contract, part-time, or full-time, Philippines and remote. Recruiter brief: https://www.marksiazon.dev/recruiter
+## Who is Mark Siazon best hired as?
+
+Product designer who also ships the frontend code
+
+## What contexts does Mark Siazon work best in?
+
+AI workflows, mobile UX, Web3 trust flows, client launches
+
+## How does Mark Siazon work?
+
+Prototype fast, write clearly, check before shipping
 
 ## Is Mark Siazon available for hire?
 
-Yes. Mark Siazon is currently open to product design and full-stack roles on a contract, part-time, or full-time basis, based in the Philippines and available for remote work. Recruiter brief: https://www.marksiazon.dev/recruiter
+Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
+
+Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.
+
+## Can Mark Siazon ship production frontend code?
+
+Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, and implementation-ready UI systems, including the live Good To Live client site and the Stellaroid Earn testnet app.
+
+## Which projects should a recruiter review first?
+
+Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+
+## What should I include in a first message?
+
+Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.
+
+## Can AI search crawlers read this contact page?
+
+Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the contact and API surfaces. Host or CDN crawler access still needs account-side confirmation.
+
+## Where should private contact details live?
+
+Private recipient and sender addresses stay in server-side environment variables, not in public HTML, feeds, or LLM discovery files.
+
+## What work is Mark open to?
+
+Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
+
+<!-- END DERIVED: faq -->
+
+## Where can I see Mark Siazon's full tech stack reference?
 
 Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
 

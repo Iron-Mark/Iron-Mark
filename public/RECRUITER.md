@@ -10,34 +10,65 @@ Last updated: 2026-07-22
 
 Product designer & full-stack developer in the Philippines who ships case-study-backed work in AI trust & safety, mobile (Flutter, Wear OS), and Web3 (Stellar, Celo), with live demos and clear verification links.
 
-## Open to
-
-| Area | Examples |
-|------|----------|
-| Product design | UX flows, design systems, Figma → production |
-| Full-stack | React, Next.js, TypeScript, APIs, deploy |
-| AI workflows | Trust & safety UX, agents, ML product surfaces |
-| Mobile | Flutter, Kotlin, Wear OS companions |
-| Web3 proof | Stellar, Soroban, Celo MiniPay, testnet-first fintech |
-
 **Engagement:** contract, part-time, or full-time · **Location:** Philippines (PHT, UTC+8) · **Remote:** yes
 
 **Experience:** ~5 years combined across academic, freelance, organizational, volunteer, and professional work — self-taught in web development since before college · **Notice:** ~2 weeks, or immediate for freelance/contract · **Rates:** on request
 
-## 60-second screen: start here
+## Start here
 
 1. **GitHub profile:** https://github.com/Iron-Mark (README + activity widgets)
 2. **Portfolio hub:** https://www.marksiazon.dev/projects
-3. **Pick 2 flagship proofs by role fit:**
 
-| If you care about… | Start with… |
-|--------------------|-------------|
-| AI / trust & safety | [HireProof](https://www.marksiazon.dev/projects/hireproof) |
-| Mobile / emergency UX | [ResQLink](https://www.marksiazon.dev/projects/resqlink) |
-| Web3 / credentials | [Stellaroid Earn](https://www.marksiazon.dev/projects/stellaroid-earn) |
-| Fintech PWA | [PalengkePay](https://www.marksiazon.dev/projects/palengkepay) |
-| Wear OS | [FlowFit](https://www.marksiazon.dev/projects/flowfit) |
-| Cultural ML / education | [BaybayInscribe](https://www.marksiazon.dev/projects/baybayinscribe) |
+<!-- BEGIN DERIVED: recruiter (from https://www.marksiazon.dev/llms-index.json - do not hand-edit) -->
+
+### Availability
+
+**Open for selective product design, frontend, and AI workflow opportunities**
+
+Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.
+
+First message: Share the role, problem, timeline, and work you want reviewed.
+
+Note: No public booking link or direct email address is published; use the contact form so private details stay server-side.
+
+Work scope: Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, Mobile UX cleanup
+
+### Recruiter FAQ
+
+## Is Mark Siazon available for hire?
+
+Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link or direct email address is published; use the contact form so private details stay server-side.
+
+## What is Mark Siazon's tech stack?
+
+Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.
+
+## Can Mark Siazon ship production frontend code?
+
+Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, and implementation-ready UI systems, including the live Good To Live client site and the Stellaroid Earn testnet app.
+
+## Which projects should a recruiter review first?
+
+Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+
+### Projects
+
+| Project | Role | Status | Link |
+|---------|------|--------|------|
+| HireProof | Product designer and full-stack builder | Live trust workflow with provider and live-check boundaries | https://www.marksiazon.dev/projects/hireproof |
+| Stellaroid Earn | Builder | Live Stellar testnet project | https://www.marksiazon.dev/projects/stellaroid-earn |
+| ResQLink | Team product designer and full-stack developer | Academic capstone and competition project | https://www.marksiazon.dev/projects/resqlink |
+| Good To Live Podcast Website | Designer and developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
+| FlowFit | Team member and app contributor | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
+| BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |
+| Kudlit | Flutter app contributor and UI/UX hardening lead | Android release v1.0.0 with web QA caveats | https://www.marksiazon.dev/projects/kudlit |
+| Pulse | Mobile app contributor and release QA lead | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |
+| PalengkePay | Fintech PWA contributor | Live testnet PWA with pending wallet-signed chain smoke | https://www.marksiazon.dev/projects/palengkepay |
+| GawainYah | Product builder and production-readiness lead | Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending | https://www.marksiazon.dev/projects/gawainyah |
+| LexInsights | Full-stack product builder | Production v0.5.2 ready at 8702afd | https://www.marksiazon.dev/projects/lexinsights |
+| Qwen UI Lab | Full-stack product builder | Live local-analysis deployment with Qwen live mode gated off | https://www.marksiazon.dev/projects/qwen-ui-lab |
+
+<!-- END DERIVED: recruiter -->
 
 ## Verified achievements
 

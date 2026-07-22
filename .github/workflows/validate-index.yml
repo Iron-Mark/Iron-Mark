@@ -60,6 +60,12 @@ jobs:
             exit 1
           )
 
+      - name: Check derived regions match snapshot
+        run: python3 src/scripts/derive_from_portfolio.py --check
+
+      - name: Run derive unit tests
+        run: python3 -m unittest src.scripts.test_derive_from_portfolio
+
       - name: Validate llms-index, assets, schema, and crawl files
         run: python3 src/scripts/validate_index.py
 
