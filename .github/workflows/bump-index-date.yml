@@ -1,28 +1,19 @@
 name: Bump index dates
 
+# NOTE: GitHub Actions always runs a *scheduled* (and workflow_dispatch)
+# event's workflow YAML from the repository's default branch (main), even
+# though the `bump` job below explicitly checks out `ref: dev` for
+# everything else. That means this YAML file is always main's copy on a
+# schedule - only the checked-out scripts (src/scripts/*.py) reflect dev.
+# The pipeline body (derive -> bump dates -> regenerate -> validate) is
+# consolidated into src/scripts/daily_freshness.py for exactly this reason:
+# so the pipeline's actual shape lives on dev with the scripts it drives,
+# and this file only needs to invoke it as a single step.
 on:
   push:
     branches: [main]
     paths:
-      - "llms-index.json"
-      - "llms.txt"
-      - "public/llms-full.txt"
-      - "public/llms-ctx-full.txt"
-      - "public/FAQ.md"
-      - "public/RECRUITER.md"
-      - "public/PROOF.md"
-      - "public/STACK.md"
-      - "public/PROFILE.md"
-      - "public/README.md"
-      - "public/HOW-TO-CITE.md"
-      - "public/LICENSE.md"
-      - "public/CITATION.cff"
-      - "humans.txt"
-      - "robots.txt"
-      - "sitemap.xml"
-      - "public/schema/**"
-      - "README.md"
-      - "docs/index.html"
+      - ".github/workflows/bump-index-date.yml"
   schedule:
     - cron: '30 6 * * *'
   workflow_dispatch:
@@ -30,6 +21,7 @@ on:
 permissions:
   actions: write
   contents: write
+  issues: write
   pull-requests: write
 
 jobs:
@@ -47,33 +39,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Derive narrative content from portfolio feed
-        run: python3 src/scripts/derive_from_portfolio.py
-
-      - name: Bump updated and lastmod dates
-        run: python3 src/scripts/bump_index_dates.py
-
-      - name: Regenerate derived files
-        run: |
-          # Regenerate until the tree is stable. Bumped dates change the manifest
-          # files, which shifts the sha256 hashes embedded in person.jsonld and
-          # docs/index.html, so a single pass is not always a fixpoint and would
-          # leave drift that fails `Validate index`.
-          for pass in 1 2 3 4 5; do
-            python3 src/scripts/generate_llms_ctx.py
-            python3 src/scripts/generate_sitemap.py
-            python3 src/scripts/generate_schema.py
-            python3 src/scripts/build_pages_index.py
-            python3 src/scripts/generate_portfolio_sync.py
-            if git diff --quiet; then
-              echo "Derived files stable after pass $pass."
-              break
-            fi
-            git add -A
-          done
-
-      - name: Validate
-        run: python3 src/scripts/validate_index.py
+      - name: Run daily freshness pipeline (derive, bump dates, regenerate, validate)
+        run: python3 src/scripts/daily_freshness.py
 
       - name: Open freshness PR if changed
         env:
@@ -110,8 +77,8 @@ jobs:
         run: |
           branch="automation/bump-index-freshness"
           if [ -z "${GH_TOKEN:-}" ]; then
-            echo "STATS_TOKEN not set; leaving the PR for manual merge."
-            exit 0
+            echo "::error::STATS_TOKEN not set; the freshness PR was opened but cannot be auto-merged. Leaving it for manual merge."
+            exit 1
           fi
           pr=$(gh pr list --head "$branch" --base dev --state open --json number --jq '.[0].number')
           if [ -z "$pr" ]; then
@@ -123,5 +90,22 @@ jobs:
           if gh pr merge "$pr" --merge --admin; then
             echo "Merged PR #$pr into dev."
           else
-            echo "::warning::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
+            echo "::error::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
+            exit 1
+          fi
+
+      - name: Alert on workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Daily automation failure: Bump index dates"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Bump index dates** workflow failed.\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --repo "${{ github.repository }}" --body "$body"
+          else
+            gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"
           fi
