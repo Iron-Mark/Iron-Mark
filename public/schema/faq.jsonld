@@ -127,6 +127,9 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack"
         },
         {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
+        },
+        {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
         },
         {
@@ -181,6 +184,9 @@
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
@@ -592,6 +598,95 @@
         "citation": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"
+        ],
+        "sdPublisher": {
+          "@type": "Person",
+          "@id": "https://www.marksiazon.dev/#mark-siazon",
+          "name": "Mark Siazon",
+          "url": "https://www.marksiazon.dev"
+        },
+        "sdDatePublished": "2026-07-26",
+        "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+      }
+    },
+    {
+      "@type": "Question",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference",
+      "name": "Where can I see Mark Siazon's full tech stack reference?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ question",
+        "value": "where-can-i-see-mark-siazons-full-tech-stack-reference",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
+      "inLanguage": "en",
+      "dateModified": "2026-07-26",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+        "https://www.marksiazon.dev"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-07-26",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference-answer",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Iron-Mark FAQ answer",
+          "value": "where-can-i-see-mark-siazons-full-tech-stack-reference-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference-answer"
+        },
+        "text": "Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+        "author": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "publisher": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "about": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
+        },
+        "inLanguage": "en",
+        "dateModified": "2026-07-26",
+        "isAccessibleForFree": true,
+        "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+        "citation": [
+          "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+          "https://www.marksiazon.dev"
         ],
         "sdPublisher": {
           "@type": "Person",

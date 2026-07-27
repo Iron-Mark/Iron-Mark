@@ -414,6 +414,14 @@
         ]
       },
       {
+        "question": "Where can I see Mark Siazon's full tech stack reference?",
+        "answer": "Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+        "sources": [
+          "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
+          "https://www.marksiazon.dev"
+        ]
+      },
+      {
         "question": "How do I verify Mark Siazon's claims?",
         "answer": "Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects",
         "sources": [
