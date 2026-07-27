@@ -26,7 +26,7 @@ jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: dev
 
@@ -121,6 +121,21 @@ jobs:
 
       - name: Staticize generated SVG cards
         run: python src/scripts/staticize_github_svgs.py
+
+      - name: Safety gate - reject SVGs that are not well-formed XML
+        run: |
+          # A malformed card (like the 2026-07-21 streak.svg, truncated by a
+          # staticizing regex that ate across single-quoted attribute
+          # boundaries) must never be published silently. Parse each of the
+          # 4 cards; any file that is not well-formed XML is reverted to the
+          # last committed (known-good) version, same pattern as the guards
+          # above.
+          for f in assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg; do
+            if ! python3 -c "import sys, xml.dom.minidom; xml.dom.minidom.parse(sys.argv[1])" "$f"; then
+              echo "::warning::$f is not well-formed XML; keeping the last committed version."
+              git checkout -- "$f"
+            fi
+          done
 
       - name: Open stats PR if changed
         env:
