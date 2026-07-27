@@ -1855,7 +1855,7 @@
         {
           "@type": "PropertyValue",
           "name": "Answer snippet count",
-          "value": 18
+          "value": 19
         },
         {
           "@type": "PropertyValue",
@@ -2128,6 +2128,9 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack"
         },
         {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
+        },
+        {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
         },
         {
@@ -2182,6 +2185,9 @@
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack"
+        },
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
         },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
@@ -2779,7 +2785,7 @@
       "url": "https://iron-mark.github.io/Iron-Mark/#answer-corpus",
       "description": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "abstract": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
-      "text": "18 answer snippets covering hiring, projects, stack, verification, geography, and citation.",
+      "text": "19 answer snippets covering hiring, projects, stack, verification, geography, and citation.",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -4149,8 +4155,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "27350 bytes",
-      "sha256": "9bcdf72a812563ea0e22c42fa3879786b92d224fb87b01c0dcee16ccf88cbb51",
+      "contentSize": "27909 bytes",
+      "sha256": "c35a1748430f77c5a9c770129b622fa9eaf38963ef39c388a4bebcedbdef9c0e",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4302,8 +4308,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "20669 bytes",
-      "sha256": "69aa4b06d42bcf342fd2abfef8af9eedf120278017679d41134ffda1a1da3164",
+      "contentSize": "21090 bytes",
+      "sha256": "c07dba18289878a95abf23312cf70afdca0786acd768d876431ca8d5bcbc5039",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4861,8 +4867,8 @@
       "encodingFormat": "application/ld+json",
       "description": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
-      "contentSize": "76194 bytes",
-      "sha256": "10881c2ad995f1e631c50009ebbc0aed9b00019ad0192b1f48099c457af1d1f7",
+      "contentSize": "80445 bytes",
+      "sha256": "9cbc695b760b2ba4ffbef17377cf1444fd2650991e5d7e49c5f7cc1ff324c559",
       "inLanguage": "en",
       "dateModified": "2026-07-22",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",

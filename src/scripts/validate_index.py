@@ -1609,10 +1609,14 @@ def faq_questions_excluding_derived() -> list[str]:
     the feed too, which is out of scope here (entity.@id migration is
     likewise deferred). Use this reduced question list only for the
     "does the static FAQ schema cover at least as many questions as are
-    visible" sanity check; use the full faq_questions() list (including
-    derived-region questions) for AEO-snippet-vs-FAQ.md text presence
-    checks, since some aeo.answerSnippets questions/answers now legitimately
-    live inside the derived region and must still be found there.
+    visible" sanity check and for the "FAQ question(s) not in
+    answerSnippets" coverage recommendation (feed-derived questions are
+    intentionally outside static snippet/schema coverage, so recommending
+    snippets for them would contradict the paragraph above); use the full
+    faq_questions() list (including derived-region questions) for
+    AEO-snippet-vs-FAQ.md text presence checks, since some
+    aeo.answerSnippets questions/answers now legitimately live inside the
+    derived region and must still be found there.
     """
     if not FAQ.exists():
         return []
@@ -1620,7 +1624,22 @@ def faq_questions_excluding_derived() -> list[str]:
     return [q.strip() for q in re.findall(r"^##\s+(.+?)\s*$", text, re.MULTILINE)]
 
 
-def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
+def check_aeo_coverage(
+    data: dict[str, Any], questions: list[str], repo_authored_questions: list[str]
+) -> None:
+    """`questions` is the FULL visible FAQ.md question list (including the
+    feed-derived region) - snippet questions/answers may legitimately live
+    inside the derived region, so presence checks use it.
+
+    `repo_authored_questions` excludes the derived region and scopes the
+    "FAQ question(s) not in answerSnippets" coverage recommendation:
+    answerSnippets is the source of the static per-question JSON-LD schema
+    (faq.jsonld / person.jsonld / docs/index.html inline JSON-LD), and
+    Phase 4 intentionally does NOT extend that static schema coverage to
+    feed-derived FAQ content (see faq_questions_excluding_derived's
+    docstring) - so warning that a feed-derived question lacks a snippet
+    would be asking for exactly what that design decision defers.
+    """
     snippets = data.get("aeo", {}).get("answerSnippets", [])
     faq_text = FAQ.read_text(encoding="utf-8") if FAQ.exists() else ""
     if len(snippets) < 15:
@@ -1634,7 +1653,7 @@ def check_aeo_coverage(data: dict[str, Any], questions: list[str]) -> None:
     missing_from_faq = sorted(q for q in snippet_questions if q and q not in questions)
     if missing_from_faq:
         errors.append(f"AEO snippets missing visible FAQ question(s): {missing_from_faq}")
-    missing_from_snippets = sorted(q for q in questions if q not in snippet_questions)
+    missing_from_snippets = sorted(q for q in repo_authored_questions if q not in snippet_questions)
     if missing_from_snippets:
         warnings.append(f"FAQ question(s) not in answerSnippets: {missing_from_snippets}")
     for item in snippets:
@@ -3579,7 +3598,7 @@ def main() -> int:
         check_public_surface()
     check_pages_index_visible_content(data)
     questions = faq_questions()
-    check_aeo_coverage(data, questions)
+    check_aeo_coverage(data, questions, faq_questions_excluding_derived())
     check_knowledge_graph(data)
     check_generated_context(data)
     check_portfolio_sync_artifacts(data)

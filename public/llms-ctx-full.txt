@@ -199,6 +199,10 @@ Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/contac
 Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.
 Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/contact
 
+### Where can I see Mark Siazon's full tech stack reference?
+Mark Siazon's core stack is React, Next.js, TypeScript, and Tailwind CSS for web; Flutter and Kotlin for mobile; Python and Supabase on the backend; and Figma for design, with Stellar and Celo for Web3. Full 113-tool reference: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md
+Sources: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md, https://www.marksiazon.dev
+
 ### How do I verify Mark Siazon's claims?
 Use the proof matrix for verification boundaries and public receipts: https://www.marksiazon.dev/proof. Project case studies: https://www.marksiazon.dev/projects
 Sources: https://www.marksiazon.dev/proof, https://www.marksiazon.dev/projects
