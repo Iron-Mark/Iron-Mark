@@ -8,6 +8,7 @@ from pathlib import Path
 
 from src.scripts.check_promotion_scope import (
     AUTOMATION_PATHS,
+    PROFILE_CARD_PATHS,
     foreign_paths,
     main,
     normalize,
@@ -130,6 +131,40 @@ class WorkflowDriftTests(unittest.TestCase):
         # entries) should be revisited.
         source = Path("src/scripts/daily_freshness.py").read_text(encoding="utf-8")
         self.assertIn('_git("add", "-A")', source)
+
+
+
+
+class ProfileCardTests(unittest.TestCase):
+    """The cards-only fallback keeps the visible profile fresh while a full
+    promotion waits for review, so its path list has to stay honest."""
+
+    def test_cards_are_a_subset_of_automation_owned_paths(self):
+        self.assertEqual(sorted(set(PROFILE_CARD_PATHS) - AUTOMATION_PATHS), [])
+
+    def test_cards_match_what_the_stats_cron_stages(self):
+        # The fallback promotes exactly the cards that workflow produces; if it
+        # ever generates a fifth card, this fails instead of silently leaving
+        # the new one stranded on dev.
+        self.assertEqual(
+            set(PROFILE_CARD_PATHS),
+            staged_paths("update-github-stats.yml"),
+        )
+
+    def test_print_cards_emits_one_path_per_line(self):
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = main(["prog", "--print-cards"])
+
+        self.assertEqual(code, 0)
+        self.assertEqual(buffer.getvalue().split(), list(PROFILE_CARD_PATHS))
+
+    def test_print_cards_is_not_confused_with_a_changed_path(self):
+        # Guard the argv branch: "--print-cards" must never be scanned as a diff.
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            main(["prog", "--print-cards"])
+        self.assertNotIn("automation-owned", buffer.getvalue())
 
 
 if __name__ == "__main__":
