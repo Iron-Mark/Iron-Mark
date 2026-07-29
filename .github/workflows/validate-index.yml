@@ -70,6 +70,9 @@ jobs:
       - name: Run SVG staticizer unit tests
         run: python3 -m unittest src.scripts.test_staticize_github_svgs
 
+      - name: Run promotion scope unit tests
+        run: python3 -m unittest src.scripts.test_check_promotion_scope
+
       - name: Validate llms-index, assets, schema, and crawl files
         run: python3 src/scripts/validate_index.py
 
