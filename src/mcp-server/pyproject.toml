@@ -7,11 +7,12 @@ requires-python = ">=3.11"
 license = { text = "See LICENSE.md in repo root" }
 authors = [{ name = "Mark Siazon", email = "marksiazon.dev@gmail.com" }]
 dependencies = [
-  # Upper bound is deliberate: mcp 2.0.0 (2026-07-28) removed the bundled
-  # mcp.server.fastmcp module this server builds on, so an unpinned
-  # ">=1.0" started resolving to a release that cannot import. Keep the 1.x
-  # line until server.py is migrated to the 2.x API.
-  "mcp>=1.0,<2",
+  # server.py builds on mcp.server.MCPServer, the high-level API that replaced
+  # mcp.server.fastmcp.FastMCP when it was removed in mcp 2.0.0 (2026-07-28).
+  # It does not exist on the 1.x line, hence the lower bound. The upper bound is
+  # deliberate: pin out the next major so a repeat of that removal cannot break
+  # CI on an unpinned resolve.
+  "mcp>=2.0,<3",
 ]
 
 [project.scripts]

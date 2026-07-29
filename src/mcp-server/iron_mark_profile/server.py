@@ -8,7 +8,7 @@ import json
 import os
 from typing import Any
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server import MCPServer
 
 from iron_mark_profile import store
 
@@ -24,14 +24,22 @@ Canonical source: marksiazon.dev. For the full profile connect to the hosted MCP
 """
 
 
-def create_mcp(host: str = "127.0.0.1", port: int = 8000) -> FastMCP:
-    return FastMCP(
+# Path the streamable-HTTP transport is served on. In the 1.x FastMCP API this was
+# constructor state; in 2.x it is a per-run transport option, so keep it here to
+# guarantee the endpoint stays http://<host>:<port>/mcp.
+HTTP_PATH = "/mcp"
+
+
+def create_mcp() -> MCPServer:
+    """Build the server.
+
+    Transport binding (host/port/path) is no longer constructor state in the 2.x
+    SDK; it is passed to ``run()`` instead. See ``main()``.
+    """
+    return MCPServer(
         "iron-mark-profile",
         instructions=INSTRUCTIONS,
         website_url="https://github.com/Iron-Mark/Iron-Mark",
-        host=host,
-        port=port,
-        streamable_http_path="/mcp",
     )
 
 
@@ -171,11 +179,18 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=int(os.environ.get("MCP_PORT", "8000")))
     args = parser.parse_args()
 
-    if args.transport != "stdio":
-        mcp.settings.host = args.host
-        mcp.settings.port = args.port
-
-    mcp.run(transport=args.transport)
+    # 2.x takes transport options as run() kwargs; stdio accepts none.
+    if args.transport == "stdio":
+        mcp.run(transport="stdio")
+    elif args.transport == "streamable-http":
+        mcp.run(
+            transport="streamable-http",
+            host=args.host,
+            port=args.port,
+            streamable_http_path=HTTP_PATH,
+        )
+    else:
+        mcp.run(transport="sse", host=args.host, port=args.port)
 
 
 if __name__ == "__main__":
