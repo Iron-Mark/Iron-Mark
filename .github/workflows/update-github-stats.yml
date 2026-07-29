@@ -187,6 +187,23 @@ jobs:
             exit 1
           fi
 
+      - name: Fail if a card has stopped refreshing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # The keep-last-good guards above deliberately republish the previous
+          # card whenever a generator errors, which means a persistent outage
+          # looks like a healthy green run while the published numbers sit
+          # frozen. Read each card's last commit date on dev (this runs after the
+          # merge, so today's refresh is already counted) and fail once one of
+          # them has outlived its budget, which routes into the alert below.
+          args=""
+          for f in assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg; do
+            committed=$(gh api "repos/${{ github.repository }}/commits?path=$f&sha=dev&per_page=1" --jq '.[0].commit.committer.date')
+            args="$args $f=$committed"
+          done
+          python3 src/scripts/check_card_freshness.py $args
+
       - name: Alert on workflow failure
         if: failure()
         env:

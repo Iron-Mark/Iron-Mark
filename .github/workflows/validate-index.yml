@@ -73,6 +73,9 @@ jobs:
       - name: Run promotion scope unit tests
         run: python3 -m unittest src.scripts.test_check_promotion_scope
 
+      - name: Run card freshness unit tests
+        run: python3 -m unittest src.scripts.test_check_card_freshness
+
       - name: Validate llms-index, assets, schema, and crawl files
         run: python3 src/scripts/validate_index.py
 
