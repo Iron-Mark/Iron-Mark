@@ -47,6 +47,20 @@ AUTOMATION_PATHS = frozenset(
 )
 
 
+# What the rendered GitHub profile actually shows. These four SVGs are
+# self-contained - nothing is generated from them and no other tracked file
+# embeds their contents - so they can be promoted to main on their own without
+# leaving it internally inconsistent. That makes them a safe fallback when a
+# full promotion is blocked by human work waiting on dev, which would otherwise
+# freeze the visible profile numbers for as long as that work takes.
+PROFILE_CARD_PATHS = (
+    "assets/github/stats.svg",
+    "assets/github/top-langs.svg",
+    "assets/github/activity-graph.svg",
+    "assets/github/streak.svg",
+)
+
+
 def normalize(paths) -> list[str]:
     """Drop blank entries and surrounding whitespace, de-duplicated + sorted."""
     return sorted({path.strip() for path in paths if path.strip()})
@@ -62,8 +76,17 @@ def main(argv: list[str]) -> int:
 
     Reads paths from argv, or from stdin (one per line) when none are given,
     so the workflow can pipe `git diff --name-only` straight in.
+
+    `--print-cards` instead emits the profile card paths, which the workflow
+    uses for its cards-only fallback promotion.
     """
-    raw = argv[1:] if len(argv) > 1 else sys.stdin.read().splitlines()
+    args = argv[1:]
+    if args and args[0] == "--print-cards":
+        for path in PROFILE_CARD_PATHS:
+            print(path)
+        return 0
+
+    raw = args if args else sys.stdin.read().splitlines()
     changed = normalize(raw)
     if not changed:
         print("check_promotion_scope: no differences between main and dev.")
