@@ -4,8 +4,10 @@ name: Promote automation to main
 # cards with RELATIVE paths - so visitors always see MAIN's copies. The two
 # daily crons only ever merge into dev, which left the profile showing stale
 # numbers until someone opened a "Sync Dev" PR by hand. This workflow closes
-# that gap, but ONLY for content the automation itself owns: if dev carries
-# any human change, it steps aside and leaves the promotion to review.
+# that gap, but ONLY for content the automation itself owns. If dev carries any
+# human change the wholesale promotion steps aside and leaves it to review -
+# and the four stat cards are then promoted on their own, so review-in-progress
+# on dev never freezes the numbers the profile displays.
 #
 # NOTE: GitHub Actions always runs a *scheduled* event's workflow YAML from
 # the repository's default branch (main), even though the job below checks
@@ -62,11 +64,12 @@ jobs:
             # A skip must never be silent: an unnoticed skip is precisely how
             # the rendered profile drifted stale before this workflow existed.
             {
-              echo "## Promotion skipped"
+              echo "## Full promotion skipped"
               echo
-              echo "dev was **not** promoted to main because it carries changes the daily"
-              echo "automation does not own. The rendered profile will keep showing main's"
-              echo "cards until a \`Sync Dev\` PR is merged by hand."
+              echo "dev was **not** promoted wholesale because it carries changes the daily"
+              echo "automation does not own; those wait for a \`Sync Dev\` review. The"
+              echo "profile stat cards are still promoted on their own by the next step, so"
+              echo "the rendered profile stays current either way."
               echo
               echo '```'
               echo "$verdict"
@@ -102,6 +105,60 @@ jobs:
             echo "Promoted dev to main via PR #$pr."
           else
             echo "::error::Auto-promotion of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo scope)."
+            exit 1
+          fi
+
+      - name: Promote the profile cards on their own when a full promotion is blocked
+        if: steps.scope.outputs.promote != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: |
+          # The rendered profile reads main's cards, so human work parked on dev
+          # would otherwise freeze the visible numbers for as long as it sits
+          # there. The four cards are self-contained, so they can cross to main
+          # by themselves; everything else still waits for review.
+          cards=$(python3 src/scripts/check_promotion_scope.py --print-cards)
+          git fetch origin main dev --quiet
+          if git diff --quiet origin/main origin/dev -- $cards; then
+            echo "Profile cards on main already match dev; nothing to promote."
+            exit 0
+          fi
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::error::STATS_TOKEN not set; the profile cards cannot be promoted."
+            exit 1
+          fi
+
+          branch="automation/promote-profile-cards"
+          title="chore: refresh profile stat cards"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Build the branch from main and take ONLY the card blobs from dev, so
+          # nothing else on dev can ride along into the default branch.
+          git checkout -q -B "$branch" origin/main
+          git checkout origin/dev -- $cards
+          git add $cards
+          if git diff --staged --quiet; then
+            echo "No card changes to commit; nothing to promote."
+            exit 0
+          fi
+          git commit -q -m "$title"
+          # Bot-owned branch, recreated each run; nothing else writes to it.
+          git push --force origin "$branch"
+
+          pr=$(gh pr list --base main --head "$branch" --state open --json number --jq '.[0].number')
+          if [ -z "$pr" ]; then
+            gh pr create --base main --head "$branch" --title "$title"               --body "Promotes only the generated profile stat cards from dev. A full \`Sync Dev\` promotion is blocked by changes awaiting review, and the rendered profile reads main, so the cards cross on their own to keep the displayed numbers current."
+            pr=$(gh pr list --base main --head "$branch" --state open --json number --jq '.[0].number')
+          fi
+          if [ -z "$pr" ]; then
+            echo "::error::Could not find or open the profile card promotion PR."
+            exit 1
+          fi
+          if gh pr merge "$pr" --merge --admin --delete-branch=false; then
+            echo "Promoted the profile cards to main via PR #$pr."
+            { echo "## Profile cards promoted"; echo; echo "Merged PR #$pr with the refreshed stat cards only."; } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::error::Card promotion PR #$pr could not be merged; the profile will stay stale until it is."
             exit 1
           fi
 
