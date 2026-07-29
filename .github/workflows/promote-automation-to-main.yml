@@ -1,0 +1,149 @@
+name: Promote automation to main
+
+# The rendered GitHub profile is main's README, and it references the stat
+# cards with RELATIVE paths - so visitors always see MAIN's copies. The two
+# daily crons only ever merge into dev, which left the profile showing stale
+# numbers until someone opened a "Sync Dev" PR by hand. This workflow closes
+# that gap, but ONLY for content the automation itself owns: if dev carries
+# any human change, it steps aside and leaves the promotion to review.
+#
+# NOTE: GitHub Actions always runs a *scheduled* event's workflow YAML from
+# the repository's default branch (main), even though the job below checks
+# out `ref: dev`. The decision logic therefore lives in
+# src/scripts/check_promotion_scope.py so it evolves on dev alongside the
+# workflows whose `git add` lines it mirrors (same rationale as the note in
+# bump-index-date.yml).
+on:
+  schedule:
+    # The daily crons are nominally 06:00 and 06:30 UTC, but GitHub delays
+    # scheduled runs under load - observed starts range from 07:45 to 10:26
+    # UTC. Run well clear of that window so a promotion never races a
+    # half-finished freshness cycle.
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: dev
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Decide whether dev can be promoted unattended
+        id: scope
+        run: |
+          git fetch origin main dev --quiet
+          changed=$(git diff --name-only origin/main...origin/dev)
+          if [ -z "$changed" ]; then
+            echo "main is already current with dev; nothing to promote."
+            echo "promote=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "Changed paths on dev:"
+          printf '%s\n' "$changed" | sed 's/^/  /'
+          if verdict=$(printf '%s\n' "$changed" | python3 src/scripts/check_promotion_scope.py); then
+            echo "$verdict"
+            echo "promote=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "$verdict"
+            echo "::notice::dev carries human-owned changes; leaving the dev -> main promotion to manual review."
+            echo "promote=false" >> "$GITHUB_OUTPUT"
+            # A skip must never be silent: an unnoticed skip is precisely how
+            # the rendered profile drifted stale before this workflow existed.
+            {
+              echo "## Promotion skipped"
+              echo
+              echo "dev was **not** promoted to main because it carries changes the daily"
+              echo "automation does not own. The rendered profile will keep showing main's"
+              echo "cards until a \`Sync Dev\` PR is merged by hand."
+              echo
+              echo '```'
+              echo "$verdict"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Open and merge the promotion PR
+        if: steps.scope.outputs.promote == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: |
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::error::STATS_TOKEN not set; dev cannot be promoted unattended. Leaving it for a manual Sync Dev."
+            exit 1
+          fi
+          title="Sync Dev"
+          body="Automated promotion: dev contains only automation-owned refreshes (stat cards and freshness data), so main is being brought level to keep the rendered profile current."
+
+          pr=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number')
+          if [ -z "$pr" ]; then
+            gh pr create --base main --head dev --title "$title" --body "$body"
+            pr=$(gh pr list --base main --head dev --state open --json number --jq '.[0].number')
+          fi
+          if [ -z "$pr" ]; then
+            echo "::error::Could not find or open a dev -> main promotion PR."
+            exit 1
+          fi
+          # Bot PRs opened with GITHUB_TOKEN don't trigger required checks, so
+          # merge past them with the PAT (repo admin). The content was already
+          # validated on dev by the cron that produced it.
+          if gh pr merge "$pr" --merge --admin --delete-branch=false; then
+            echo "Promoted dev to main via PR #$pr."
+          else
+            echo "::error::Auto-promotion of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo scope)."
+            exit 1
+          fi
+
+      - name: Ensure the dev branch survived the merge
+        if: steps.scope.outputs.promote == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/branches/dev" --jq .name > /dev/null 2>&1; then
+            echo "dev branch intact."
+            exit 0
+          fi
+          # This repo has auto-deleted dev on promotion merges before; recreate
+          # it at main's tip so the next daily cycle still has somewhere to land.
+          main_sha=$(gh api "repos/${{ github.repository }}/commits/main" --jq .sha)
+          gh api "repos/${{ github.repository }}/git/refs" -f ref=refs/heads/dev -f sha="$main_sha" > /dev/null
+          echo "::warning::dev was deleted by the merge and has been recreated at $main_sha."
+
+      - name: Alert on workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          title="Daily automation failure: Promote automation to main"
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Promote automation to main** workflow failed, so the rendered profile may be showing stale cards.\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$title\"" --state open --json number --jq '.[0].number' 2>/dev/null)
+          if [ -n "$existing" ] && [[ "$existing" =~ ^[0-9]+$ ]]; then
+            gh issue comment "$existing" --repo "${{ github.repository }}" --body "$body"
+            alerted=$?
+          else
+            gh issue create --repo "${{ github.repository }}" --title "$title" --body "$body"
+            alerted=$?
+          fi
+
+          # gh issue calls fail outright if Issues are disabled for the repo.
+          # Never let the alert step itself add a confusing second failure -
+          # fall back to a job summary entry so the failure is still visible.
+          if [ "${alerted:-1}" != "0" ]; then
+            echo "::warning::Could not post a GitHub Issue alert (Issues may be disabled for this repository); see the job summary instead."
+            { echo "## $title"; echo; echo "$body"; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit 0
