@@ -50,14 +50,14 @@ async def run_http_e2e() -> None:
                 err = proc.stderr.read().decode() if proc.stderr else ""
                 raise RuntimeError(f"HTTP MCP server exited early: {err}")
             try:
-                async with streamable_http_client(URL) as (read, write, _):
+                async with streamable_http_client(URL) as (read, write):
                     async with ClientSession(read, write) as session:
                         await session.initialize()
                         tools = await session.list_tools()
                         if not any(t.name == "search_faq" for t in tools.tools):
                             raise AssertionError("search_faq tool missing over HTTP")
                         faq = await session.call_tool("search_faq", {"query": "ResQLink", "limit": 1})
-                        if faq.isError:
+                        if faq.is_error:
                             raise AssertionError(f"search_faq HTTP error: {faq.content}")
                         res = await session.read_resource("profile://llms-index.json")
                         if not res.contents or "Mark Siazon" not in (res.contents[0].text or ""):

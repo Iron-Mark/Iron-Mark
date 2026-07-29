@@ -31,8 +31,8 @@ async def run_e2e() -> None:
     async with stdio_client(params) as (read, write):
         async with ClientSession(read, write) as session:
             init = await session.initialize()
-            assert init.serverInfo is not None
-            assert "iron-mark-profile" in (init.serverInfo.name or "")
+            assert init.server_info is not None
+            assert "iron-mark-profile" in (init.server_info.name or "")
 
             tools = await session.list_tools()
             tool_names = {t.name for t in tools.tools}
@@ -59,7 +59,7 @@ async def run_e2e() -> None:
                     raise AssertionError(f"Missing resource: {uri}")
 
             templates = await session.list_resource_templates()
-            if not any("project" in t.uriTemplate for t in templates.resourceTemplates):
+            if not any("project" in t.uri_template for t in templates.resource_templates):
                 raise AssertionError("Missing project resource template")
 
             prompts = await session.list_prompts()
@@ -67,19 +67,19 @@ async def run_e2e() -> None:
                 raise AssertionError("Missing evaluate_for_role prompt")
 
             summary = await session.call_tool("get_profile_summary", {})
-            if summary.isError:
+            if summary.is_error:
                 raise AssertionError(f"get_profile_summary error: {summary.content}")
 
             faq = await session.call_tool("search_faq", {"query": "HireProof", "limit": 2})
-            if faq.isError:
+            if faq.is_error:
                 raise AssertionError(f"search_faq error: {faq.content}")
 
             project = await session.call_tool("get_project", {"slug_or_name": "resqlink"})
-            if project.isError:
+            if project.is_error:
                 raise AssertionError(f"get_project error: {project.content}")
 
             proof = await session.call_tool("get_proof", {})
-            if proof.isError:
+            if proof.is_error:
                 raise AssertionError(f"get_proof error: {proof.content}")
 
             faq_res = await session.read_resource("profile://faq.md")
