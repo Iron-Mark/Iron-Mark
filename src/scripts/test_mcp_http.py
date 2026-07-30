@@ -11,7 +11,6 @@ import sys
 import time
 from pathlib import Path
 
-import httpx
 from mcp import ClientSession
 from mcp.client.streamable_http import streamable_http_client
 
@@ -19,6 +18,10 @@ REPO = Path(__file__).resolve().parents[2]
 MCP_DIR = REPO / "src" / "mcp-server"
 PORT = int(os.environ.get("MCP_TEST_PORT", "8765"))
 URL = f"http://127.0.0.1:{PORT}/mcp"
+
+# The HTTP stack differs by mcp line (1.x: httpx/httpcore, 2.x: httpx2), so
+# classify transport errors by exception origin instead of importing either.
+_TRANSPORT_MODULES = {"httpx", "httpx2", "httpcore", "httpcore2"}
 
 
 def _is_connection_error(exc: BaseException) -> bool:
@@ -31,7 +34,10 @@ def _is_connection_error(exc: BaseException) -> bool:
     """
     if isinstance(exc, BaseExceptionGroup):
         return all(_is_connection_error(e) for e in exc.exceptions)
-    return isinstance(exc, (httpx.TransportError, ConnectionError, OSError))
+    if isinstance(exc, (ConnectionError, OSError)):
+        return True
+    module = (type(exc).__module__ or "").split(".")[0]
+    return module in _TRANSPORT_MODULES
 
 
 async def run_http_e2e() -> None:
