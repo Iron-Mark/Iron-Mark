@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-29T09:21:07.143402+00:00",
+  "fetchedAt": "2026-07-30T09:13:26.158809+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -573,6 +573,13 @@
       }
     ],
     "writing": [
+      {
+        "slug": "taming-ai-agent-disk-io",
+        "title": "Codex CLI Pinned My Windows Disk at 100%: Bounding the Log Growth Upstream Won't",
+        "summary": "Codex CLI pinned a Windows disk at 100%: unbounded SQLite trace logging under ~/.codex, and the layered fix (measure, rotate after exit, scope scanning) that took it to ~3%.",
+        "publishedAt": "2026-07-29",
+        "canonicalUrl": "https://www.marksiazon.dev/writing/taming-ai-agent-disk-io"
+      },
       {
         "slug": "design-system-switcher",
         "title": "Architecting a Multi-Ism Design System Switcher in Next.js",
