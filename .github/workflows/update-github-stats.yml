@@ -178,8 +178,36 @@ jobs:
             echo "No open PR to merge."
             exit 0
           fi
-          # Bot PRs opened via GITHUB_TOKEN don't trigger required checks, so merge
-          # past them with the PAT (repo admin). Card content is generated + low-risk.
+          # The PR is opened with STATS_TOKEN (a PAT), so its required checks DO
+          # run - they just have not reported yet seconds after creation, and a
+          # required check still in "expected" state cannot be bypassed even by
+          # an admin merge under enforce_admins. Same race and fix as
+          # promote-automation-to-main.yml (kept in sync by hand - if you edit
+          # one wait loop, edit the other).
+          checks_done=false
+          for _ in $(seq 1 60); do
+            buckets=$(gh pr checks "$pr" --required --json bucket --jq '[.[].bucket] | unique | join(",")' 2>/dev/null || true)
+            case "$buckets" in
+              "")
+                ;;
+              *fail*|*cancel*)
+                echo "::error::A required check failed on stats PR #$pr ($buckets); leaving it for manual review."
+                exit 1
+                ;;
+              *pending*)
+                ;;
+              *)
+                checks_done=true
+                break
+                ;;
+            esac
+            sleep 15
+          done
+          if [ "$checks_done" != "true" ]; then
+            echo "::error::Required checks on stats PR #$pr did not finish within 15 minutes; leaving it for manual merge."
+            exit 1
+          fi
+          # --admin stays: it bypasses the strict "branch up to date" rule.
           if gh pr merge "$pr" --merge --admin; then
             echo "Merged PR #$pr into dev."
           else
