@@ -139,7 +139,12 @@ jobs:
 
       - name: Open stats PR if changed
         env:
-          GH_TOKEN: ${{ github.token }}
+          # MUST be the PAT, not github.token: GitHub never fires pull_request
+          # events for PRs created (or heads pushed) by GITHUB_TOKEN, so the
+          # required checks would not exist and the wait-then-merge step below
+          # would time out. With the PAT, checks run for real - which also
+          # means identity-guard actually scans these PRs.
+          GH_TOKEN: ${{ secrets.STATS_TOKEN || github.token }}
         run: |
           branch="automation/github-stats-update"
           title="Update GitHub profile stats cards"
@@ -155,7 +160,9 @@ jobs:
           # fetches `dev`, so there is no remote-tracking ref for this branch and
           # --force-with-lease rejects with "stale info". A plain force is safe here
           # because nothing else writes to this automation branch.
-          git push --force origin "$branch"
+          # Push with the PAT too: a synchronize caused by a GITHUB_TOKEN push
+          # would not re-fire checks on a reused PR.
+          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$branch"
 
           open_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
           if [ -n "$open_pr" ]; then
