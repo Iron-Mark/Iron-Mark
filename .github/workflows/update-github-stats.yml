@@ -22,6 +22,14 @@ permissions:
   issues: write
   pull-requests: write
 
+# The push trigger above fires when this file changes on main, which can land
+# seconds apart from a cron/dispatch run. Two concurrent runs force-push the
+# same automation branch over each other (observed 2026-07-30: heads diverged
+# 11s apart and the loser's PR checks were orphaned). Queue, never overlap.
+concurrency:
+  group: update-github-stats
+  cancel-in-progress: false
+
 jobs:
   update-stats:
     runs-on: ubuntu-latest
@@ -161,8 +169,12 @@ jobs:
           # --force-with-lease rejects with "stale info". A plain force is safe here
           # because nothing else writes to this automation branch.
           # Push with the PAT too: a synchronize caused by a GITHUB_TOKEN push
-          # would not re-fire checks on a reused PR.
-          git push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$branch"
+          # would not re-fire checks on a reused PR. The -c is load-bearing:
+          # actions/checkout persists github.token as an http.extraheader that
+          # silently outranks the URL credential, attributing the push to
+          # github-actions[bot] and landing its PR checks in the
+          # awaiting-approval state (observed 2026-07-30).
+          git -c http.https://github.com/.extraheader= push --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$branch"
 
           open_pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
           if [ -n "$open_pr" ]; then
