@@ -19,6 +19,26 @@ MCP_DIR = REPO / "src" / "mcp-server"
 PORT = int(os.environ.get("MCP_TEST_PORT", "8765"))
 URL = f"http://127.0.0.1:{PORT}/mcp"
 
+# The HTTP stack differs by mcp line (1.x: httpx/httpcore, 2.x: httpx2), so
+# classify transport errors by exception origin instead of importing either.
+_TRANSPORT_MODULES = {"httpx", "httpx2", "httpcore", "httpcore2"}
+
+
+def _is_connection_error(exc: BaseException) -> bool:
+    """True only for the server-not-listening-yet family of failures.
+
+    The startup loop must retry those and nothing else: retrying every
+    Exception once masked a real client bug as a bland TimeoutError (a
+    ValueError from the mcp 2.x streamable_http_client tuple change).
+    anyio surfaces task failures as ExceptionGroup, so unwrap those too.
+    """
+    if isinstance(exc, BaseExceptionGroup):
+        return all(_is_connection_error(e) for e in exc.exceptions)
+    if isinstance(exc, (ConnectionError, OSError)):
+        return True
+    module = (type(exc).__module__ or "").split(".")[0]
+    return module in _TRANSPORT_MODULES
+
 
 async def run_http_e2e() -> None:
     env = os.environ.copy()
@@ -68,9 +88,11 @@ async def run_http_e2e() -> None:
             except AssertionError:
                 raise
             except Exception as e:
+                if not _is_connection_error(e):
+                    raise
                 last_err = e
                 await asyncio.sleep(0.35)
-        raise TimeoutError(f"MCP HTTP server not ready at {URL}: {last_err}")
+        raise TimeoutError(f"MCP HTTP server not ready at {URL}: {last_err}") from last_err
     finally:
         if proc.poll() is None:
             proc.send_signal(signal.SIGTERM)

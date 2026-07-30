@@ -98,9 +98,40 @@ jobs:
             echo "::error::Could not find or open a dev -> main promotion PR."
             exit 1
           fi
-          # Bot PRs opened with GITHUB_TOKEN don't trigger required checks, so
-          # merge past them with the PAT (repo admin). The content was already
-          # validated on dev by the cron that produced it.
+          # The PR is opened with STATS_TOKEN (a PAT), so its required checks
+          # DO run - they just have not reported yet in the seconds after
+          # creation. A required check still in "expected" state cannot be
+          # bypassed even by an admin merge under enforce_admins, which is
+          # exactly how the first scheduled run of this workflow failed
+          # (run 30457415756: 'Required status check "enforce-pr-flow" is
+          # expected'). So: wait for the required checks to finish, then
+          # merge. --admin stays, because it is still needed to bypass the
+          # strict "branch up to date" rule (dev is perpetually behind main
+          # by promotion merge commits).
+          checks_done=false
+          for _ in $(seq 1 60); do
+            buckets=$(gh pr checks "$pr" --required --json bucket --jq '[.[].bucket] | unique | join(",")' 2>/dev/null || true)
+            case "$buckets" in
+              "")
+                # Checks have not registered yet; keep waiting.
+                ;;
+              *fail*|*cancel*)
+                echo "::error::A required check failed on promotion PR #$pr ($buckets); leaving it for manual review."
+                exit 1
+                ;;
+              *pending*)
+                ;;
+              *)
+                checks_done=true
+                break
+                ;;
+            esac
+            sleep 15
+          done
+          if [ "$checks_done" != "true" ]; then
+            echo "::error::Required checks on promotion PR #$pr did not finish within 15 minutes; leaving it for manual merge."
+            exit 1
+          fi
           if gh pr merge "$pr" --merge --admin --delete-branch=false; then
             echo "Promoted dev to main via PR #$pr."
           else
