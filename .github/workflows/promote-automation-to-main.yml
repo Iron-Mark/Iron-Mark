@@ -132,10 +132,33 @@ jobs:
             echo "::error::Required checks on promotion PR #$pr did not finish within 15 minutes; leaving it for manual merge."
             exit 1
           fi
-          if gh pr merge "$pr" --merge --admin --delete-branch=false; then
+          # The wait above can pass early on a dev->main PR: its head commit is
+          # dev's tip, whose check runs from the earlier dev-side PR are green,
+          # and gh pr checks reads that commit-level rollup while branch
+          # protection still counts THIS PR's fresh runs as "expected" (run
+          # 30546875285 failed exactly so, 4s after PR creation). The merge is
+          # the only authoritative probe - retry it while GitHub still reports
+          # expected/pending required checks.
+          merged=false
+          for _ in $(seq 1 40); do
+            if out=$(gh pr merge "$pr" --merge --admin --delete-branch=false 2>&1); then
+              merged=true
+              break
+            fi
+            case "$out" in
+              *"is expected"*|*"required status check"*|*"Required status check"*)
+                sleep 20
+                ;;
+              *)
+                echo "::error::Auto-promotion of PR #$pr failed: ${out}"
+                exit 1
+                ;;
+            esac
+          done
+          if [ "$merged" = "true" ]; then
             echo "Promoted dev to main via PR #$pr."
           else
-            echo "::error::Auto-promotion of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo scope)."
+            echo "::error::Auto-promotion of PR #$pr still blocked by unreported checks after 13 minutes; leaving it for manual merge."
             exit 1
           fi
 
