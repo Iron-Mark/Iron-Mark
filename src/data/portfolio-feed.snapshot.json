@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-30T09:13:26.158809+00:00",
+  "fetchedAt": "2026-07-31T09:23:41.157993+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -1232,10 +1232,60 @@
         ]
       },
       {
-        "title": "Consistent Dean's Lister and Latin Honors - BS Computer Science, UMak",
+        "title": "Consistent Dean's Lister (8 of 8 semesters) and Cum Laude - BS Computer Science, UMak",
         "tags": [
           "Academics",
           "Award"
+        ],
+        "compactResult": "Consistent Dean's Lister"
+      },
+      {
+        "title": "Best Thesis Project - Overall CCIS College (2025)",
+        "tags": [
+          "Award",
+          "Academics"
+        ]
+      },
+      {
+        "title": "Best Presented Thesis Project - Overall CCIS College (2025)",
+        "tags": [
+          "Award",
+          "Academics"
+        ]
+      },
+      {
+        "title": "Top 5 of 105 teams - Stellar Bootcamp (April 2026)",
+        "tags": [
+          "Award",
+          "Development"
+        ]
+      },
+      {
+        "title": "Global Monthly Builder - Stellar (April to July 2026)",
+        "tags": [
+          "Program",
+          "Development"
+        ]
+      },
+      {
+        "title": "Speaker - Stellar June Monthly Builder (2026)",
+        "tags": [
+          "Speaking",
+          "Development"
+        ]
+      },
+      {
+        "title": "Speaker - QwenUI Labs (May 2026)",
+        "tags": [
+          "Speaking",
+          "Design"
+        ]
+      },
+      {
+        "title": "Speaker - Codex AI Community Meetup (April 2026)",
+        "tags": [
+          "Speaking",
+          "Development"
         ]
       }
     ],
