@@ -43,6 +43,7 @@ LOCAL_LINK_FILES = [
 ]
 
 SKIP_SUBSTR = ("linkedin.com", "tiktok.com")
+TRANSIENT_HTTP_STATUSES = frozenset({429})
 LOCAL_BLOB_PREFIX = "https://github.com/Iron-Mark/Iron-Mark/blob/main/"
 LOCAL_RAW_PREFIX = "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/"
 PRE_PAGES_PREFIX = "https://iron-mark.github.io/Iron-Mark/"
@@ -63,6 +64,14 @@ def curl_status(args: list[str]) -> int:
     if status == 0 and r.stdout.strip().isdigit():
         status = int(r.stdout.strip())
     return status
+
+
+def classify_http_status(status: int) -> str:
+    if 200 <= status < 400:
+        return "ok"
+    if status in TRANSIENT_HTTP_STATUSES:
+        return f"transient:{status}"
+    return f"fail:{status}"
 
 
 def extract_urls() -> set[str]:
@@ -149,9 +158,7 @@ def check(url: str) -> tuple[str, str]:
                     url,
                 ]
             )
-        if 200 <= status < 400:
-            return url, "ok"
-        return url, f"fail:{status}"
+        return url, classify_http_status(status)
     except Exception as e:
         return url, f"err:{e}"
 
@@ -174,18 +181,26 @@ def main() -> int:
 
     urls = sorted(extract_urls())
     issues: list[tuple[str, str]] = []
+    transients: list[tuple[str, str]] = []
     with ThreadPoolExecutor(max_workers=10) as ex:
         futs = {ex.submit(check, u): u for u in urls}
         for fut in as_completed(futs):
             url, status = fut.result()
-            if status not in ("ok", "skip", "local", "prepages"):
+            if status.startswith("transient:"):
+                transients.append((url, status))
+            elif status not in ("ok", "skip", "local", "prepages"):
                 issues.append((url, status))
 
-    print(f"link_qa: checked {len(urls)} urls, issues {len(issues)}, local issues {len(local_issues)}")
+    print(
+        f"link_qa: checked {len(urls)} urls, issues {len(issues)}, "
+        f"transient warnings {len(transients)}, local issues {len(local_issues)}"
+    )
     for issue in sorted(local_issues):
         print(f"  local {issue}")
     for url, status in sorted(issues):
         print(f"  {status} {url[:100]}")
+    for url, status in sorted(transients):
+        print(f"  warning:{status} {url[:100]}")
     return 1 if issues or local_issues else 0
 
 

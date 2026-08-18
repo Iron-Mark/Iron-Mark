@@ -78,6 +78,9 @@ jobs:
       - name: Run card freshness unit tests
         run: python3 -m unittest src.scripts.test_check_card_freshness
 
+      - name: Run link QA unit tests
+        run: python3 -m unittest src.scripts.test_link_qa
+
       - name: Validate llms-index, assets, schema, and crawl files
         run: python3 src/scripts/validate_index.py
 
