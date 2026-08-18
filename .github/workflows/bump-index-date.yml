@@ -24,9 +24,18 @@ permissions:
   issues: write
   pull-requests: write
 
+# A schedule, manual dispatch, and workflow-file push can land close together.
+# Every run force-pushes the same automation branch, so queue them rather than
+# letting one run replace another run's head while its PR is being merged.
+concurrency:
+  group: bump-index-dates
+  cancel-in-progress: false
+
 jobs:
   bump:
     runs-on: ubuntu-latest
+    env:
+      FAILURE_ISSUE_TITLE: "Daily automation failure: Bump index dates"
     steps:
       - uses: actions/checkout@v5
         with:
@@ -94,13 +103,37 @@ jobs:
             exit 1
           fi
 
+      - name: Close recovered failure issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Bump index dates** workflow has recovered successfully.\n\nSuccessful run: %s\n\nClosing this reusable failure alert.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$FAILURE_ISSUE_TITLE\"" --state open --json number --jq '.[0].number' 2>/dev/null)
+          listed=$?
+          if [ "$listed" != "0" ]; then
+            echo "::warning::Could not check for a recovered failure issue (Issues may be disabled for this repository)."
+          elif [ -n "$existing" ] && [[ "$existing" =~ ^[0-9]+$ ]]; then
+            if gh issue close "$existing" --repo "${{ github.repository }}" --reason completed --comment "$body"; then
+              echo "Closed recovered failure issue #$existing."
+            else
+              echo "::warning::Could not close recovered failure issue #$existing."
+            fi
+          else
+            echo "No open failure issue to close."
+          fi
+          exit 0
+
       - name: Alert on workflow failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set +e
-          title="Daily automation failure: Bump index dates"
+          title="$FAILURE_ISSUE_TITLE"
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           body=$(printf 'The **Bump index dates** workflow failed.\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "$run_url")
 
