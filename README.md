@@ -97,7 +97,7 @@
         <picture>
           <img src="assets/projects/flowfit/cover.png" width="100%" height="140" alt="FlowFit"/>
         </picture>
-      </a><br><img src="assets/projects/flowfit/icon.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer" aria-label="FlowFit case study">Case study ↗</a> · <a href="https://www.figma.com/deck/DdDkndHHQO0WL9lQkUzhYk/Flowfit-Presentation?node-id=1-42&t=qhlMVYxwhQ5L2SQV-1" rel="noopener noreferrer" aria-label="FlowFit presentation deck">Deck ↗</a> · <a href="https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing" rel="noopener noreferrer" aria-label="FlowFit demo video presentation">Demo ↗</a></sub>
+      </a><br><img src="assets/projects/flowfit/icon.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer">FlowFit</a></b><br><sub>Wear OS · health & sensors</sub><br><sub><a href="https://www.marksiazon.dev/projects/flowfit" rel="noopener noreferrer" aria-label="FlowFit case study">Case study ↗</a> · <a href="https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing" rel="noopener noreferrer" aria-label="FlowFit demo video presentation">Demo ↗</a></sub>
     </td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@
         <picture>
           <img src="assets/projects/gawainyah/cover.png" width="100%" height="140" alt="GawainYah"/>
         </picture>
-      </a><br><img src="assets/projects/gawainyah/icon.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a> · <a href="https://github.com/Iron-Mark/Hackathon-MiniPay" rel="noopener noreferrer" aria-label="GawainYah repository">Repo ↗</a></sub>
+      </a><br><img src="assets/projects/gawainyah/icon.png" alt="" width="20" height="20" style="vertical-align:middle;margin-right:4px"/><b><a href="https://www.marksiazon.dev/projects/gawainyah" rel="noopener noreferrer">GawainYah</a></b><br><sub>MiniPay AI utility</sub><br><sub><a href="https://gawainyah-minipay.vercel.app" rel="noopener noreferrer" aria-label="GawainYah live app">Live ↗</a></sub>
     </td>
     <td align="center" width="33%">
       <a href="https://www.marksiazon.dev/projects/baybayinscribe" rel="noopener noreferrer" aria-label="BaybayInscribe case study">
