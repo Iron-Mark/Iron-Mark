@@ -14,6 +14,8 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    env:
+      FAILURE_ISSUE_TITLE: "Daily automation failure: Validate index"
     steps:
       - uses: actions/checkout@v5
 
@@ -92,6 +94,32 @@ jobs:
           python3 -m json.tool public/schema/person.jsonld > /dev/null
           python3 -m json.tool public/schema/faq.jsonld > /dev/null
 
+      - name: Close recovered failure issue
+        # Pull-request checks never create these issues, so they must not close
+        # an alert raised by a failed push, schedule, or manual dispatch.
+        if: success() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Validate index** workflow has recovered successfully.\n\nSuccessful run: %s\n\nClosing this reusable failure alert.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$FAILURE_ISSUE_TITLE\"" --state open --json number --jq '.[0].number' 2>/dev/null)
+          listed=$?
+          if [ "$listed" != "0" ]; then
+            echo "::warning::Could not check for a recovered failure issue (Issues may be disabled for this repository)."
+          elif [ -n "$existing" ] && [[ "$existing" =~ ^[0-9]+$ ]]; then
+            if gh issue close "$existing" --repo "${{ github.repository }}" --reason completed --comment "$body"; then
+              echo "Closed recovered failure issue #$existing."
+            else
+              echo "::warning::Could not close recovered failure issue #$existing."
+            fi
+          else
+            echo "No open failure issue to close."
+          fi
+          exit 0
+
       - name: Alert on workflow failure
         # Only alert for push/schedule/dispatch runs (e.g. dev or main
         # broke), not for pull_request runs - a failing PR check is already
@@ -101,7 +129,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set +e
-          title="Daily automation failure: Validate index"
+          title="$FAILURE_ISSUE_TITLE"
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           body=$(printf 'The **Validate index** workflow failed outside of a pull request (ref: %s).\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "${{ github.ref }}" "$run_url")
 

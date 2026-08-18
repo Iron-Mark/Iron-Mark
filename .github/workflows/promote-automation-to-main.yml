@@ -29,9 +29,18 @@ permissions:
   issues: write
   pull-requests: write
 
+# Manual dispatches can overlap the daily schedule. Both runs inspect dev and
+# operate on the same promotion PRs, so serialize them without cancelling the
+# earlier run midway through a merge.
+concurrency:
+  group: promote-automation-to-main
+  cancel-in-progress: false
+
 jobs:
   promote:
     runs-on: ubuntu-latest
+    env:
+      FAILURE_ISSUE_TITLE: "Daily automation failure: Promote automation to main"
     steps:
       - uses: actions/checkout@v5
         with:
@@ -261,13 +270,37 @@ jobs:
           gh api "repos/${{ github.repository }}/git/refs" -f ref=refs/heads/dev -f sha="$main_sha" > /dev/null
           echo "::warning::dev was deleted by the merge and has been recreated at $main_sha."
 
+      - name: Close recovered failure issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body=$(printf 'The **Promote automation to main** workflow has recovered successfully.\n\nSuccessful run: %s\n\nClosing this reusable failure alert.' "$run_url")
+
+          existing=$(gh issue list --repo "${{ github.repository }}" --search "in:title \"$FAILURE_ISSUE_TITLE\"" --state open --json number --jq '.[0].number' 2>/dev/null)
+          listed=$?
+          if [ "$listed" != "0" ]; then
+            echo "::warning::Could not check for a recovered failure issue (Issues may be disabled for this repository)."
+          elif [ -n "$existing" ] && [[ "$existing" =~ ^[0-9]+$ ]]; then
+            if gh issue close "$existing" --repo "${{ github.repository }}" --reason completed --comment "$body"; then
+              echo "Closed recovered failure issue #$existing."
+            else
+              echo "::warning::Could not close recovered failure issue #$existing."
+            fi
+          else
+            echo "No open failure issue to close."
+          fi
+          exit 0
+
       - name: Alert on workflow failure
         if: failure()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set +e
-          title="Daily automation failure: Promote automation to main"
+          title="$FAILURE_ISSUE_TITLE"
           run_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           body=$(printf 'The **Promote automation to main** workflow failed, so the rendered profile may be showing stale cards.\n\nRun: %s\n\nThis issue is reused across failures until the workflow succeeds again.' "$run_url")
 
