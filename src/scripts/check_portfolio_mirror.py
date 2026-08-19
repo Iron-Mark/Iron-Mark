@@ -4,9 +4,13 @@
 from __future__ import annotations
 
 import sys
+import time
 import urllib.request
 
 PORTFOLIO_LLMS = "https://www.marksiazon.dev/llms.txt"
+FETCH_ATTEMPTS = 3
+RETRY_DELAYS_SECONDS = (2, 4)
+USER_AGENT = "Mozilla/5.0 (compatible; IronMarkMirrorQA/1.0; +https://github.com/Iron-Mark/Iron-Mark)"
 REQUIRED = [
     "Iron-Mark/Iron-Mark",
     "llms-index.json",
@@ -15,8 +19,6 @@ REQUIRED = [
     "STACK.md",
     "github.com/Iron-Mark",
     "iron-mark.github.io",
-]
-FAQ_OPTIONAL = [
     "FAQ & GitHub",
     "contact#faq",
     "#mark-siazon",
@@ -24,12 +26,31 @@ FAQ_OPTIONAL = [
     "faq.jsonld",
 ]
 
+
+def fetch_portfolio_llms() -> str:
+    request = urllib.request.Request(PORTFOLIO_LLMS, headers={"User-Agent": USER_AGENT})
+    for attempt in range(1, FETCH_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except Exception as error:  # noqa: BLE001 - retry all fixed-URL transport failures
+            if attempt == FETCH_ATTEMPTS:
+                raise
+            delay = RETRY_DELAYS_SECONDS[attempt - 1]
+            print(
+                f"WARN: portfolio mirror fetch attempt {attempt}/{FETCH_ATTEMPTS} failed; "
+                f"retrying in {delay}s: {error}"
+            )
+            time.sleep(delay)
+
+    raise RuntimeError("portfolio mirror retry loop exited unexpectedly")
+
+
 def main() -> int:
     try:
-        with urllib.request.urlopen(PORTFOLIO_LLMS, timeout=20) as r:
-            body = r.read().decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"FAIL: could not fetch {PORTFOLIO_LLMS}: {e}")
+        body = fetch_portfolio_llms()
+    except Exception as error:
+        print(f"FAIL: could not fetch {PORTFOLIO_LLMS} after {FETCH_ATTEMPTS} attempts: {error}")
         print("Add src/portfolio-sync/marksiazon-dev-llms-snippet.md to marksiazon.dev llms.txt")
         return 1
 
@@ -38,11 +59,6 @@ def main() -> int:
         print(f"FAIL: marksiazon.dev/llms.txt missing references: {missing}")
         print("See src/portfolio-sync/marksiazon-dev-llms-snippet.md")
         return 1
-
-    faq_missing = [s for s in FAQ_OPTIONAL if s not in body]
-    if faq_missing:
-        print(f"WARN: FAQ cross-links not yet in portfolio llms.txt: {faq_missing}")
-        print("See src/portfolio-sync/faq-crosslinks.md")
 
     print(f"OK: {PORTFOLIO_LLMS} references GitHub profile index")
     return 0
