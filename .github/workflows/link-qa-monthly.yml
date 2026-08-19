@@ -25,20 +25,30 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Run link QA
+      - name: Run link and portfolio mirror QA
         id: qa
         shell: bash
         run: |
           set +e
           python3 src/scripts/link_qa.py 2>&1 | tee link-qa-output.txt
-          status=${PIPESTATUS[0]}
+          link_status=${PIPESTATUS[0]}
+          python3 src/scripts/check_portfolio_mirror.py 2>&1 | tee portfolio-mirror-output.txt
+          mirror_status=${PIPESTATUS[0]}
           set -e
-          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
-          echo "report_b64=$(base64 -w 0 link-qa-output.txt)" >> "$GITHUB_OUTPUT"
 
-      - name: Check portfolio mirror
-        run: python3 src/scripts/check_portfolio_mirror.py
-        continue-on-error: true
+          {
+            printf '%s\n' '## External and local links'
+            cat link-qa-output.txt
+            printf '\n%s\n' '## Portfolio mirror'
+            cat portfolio-mirror-output.txt
+          } > monthly-qa-output.txt
+
+          status=0
+          if (( link_status != 0 || mirror_status != 0 )); then
+            status=1
+          fi
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          echo "report_b64=$(base64 -w 0 monthly-qa-output.txt)" >> "$GITHUB_OUTPUT"
 
   manage-issue:
     needs: check
@@ -75,9 +85,9 @@ jobs:
               gh issue close "$issue_number" \
                 --repo "$GITHUB_REPOSITORY" \
                 --reason completed \
-                --comment "Link QA recovered successfully. Clean run: $run_url"
+                --comment "Link and portfolio mirror QA recovered successfully. Clean run: $run_url"
             else
-              echo "Link QA is clean; no open recovery issue exists."
+              echo "Link and portfolio mirror QA is clean; no open recovery issue exists."
             fi
             exit 0
           fi
@@ -87,7 +97,7 @@ jobs:
           fi
 
           if [[ "$CHECK_EXIT" == "1" ]]; then
-            summary="Monthly link QA found broken URLs or local links."
+            summary="Monthly QA found broken links or missing portfolio mirror references."
           else
             summary="Monthly link QA could not complete (exit code: ${CHECK_EXIT:-missing})."
           fi
@@ -98,7 +108,7 @@ jobs:
             printf '%s\n' '```text'
             head -n 80 link-qa-output.txt
             printf '%s\n\n' '```'
-            printf '%s\n' 'Run locally: `python3 src/scripts/link_qa.py`'
+            printf '%s\n' 'Run locally: `python3 src/scripts/link_qa.py` and `python3 src/scripts/check_portfolio_mirror.py`'
           } > issue-body.md
 
           if [[ -n "$issue_number" ]]; then
