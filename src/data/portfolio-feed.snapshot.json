@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-18T07:13:53.990020+00:00",
+  "fetchedAt": "2026-08-19T07:15:54.308424+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -238,11 +238,6 @@
             "label": "Signed Android Release",
             "href": "https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21",
             "type": "proof"
-          },
-          {
-            "label": "Figma Presentation",
-            "href": "https://www.figma.com/deck/DdDkndHHQO0WL9lQkUzhYk/Flowfit-Presentation?node-id=1-42&t=qhlMVYxwhQ5L2SQV-1",
-            "type": "figma"
           },
           {
             "label": "Demo Video",
