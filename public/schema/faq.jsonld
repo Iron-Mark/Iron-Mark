@@ -79,7 +79,7 @@
         "remote"
       ],
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "author": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -236,7 +236,7 @@
       "reviewedBy": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
-      "lastReviewed": "2026-08-22",
+      "lastReviewed": "2026-08-23",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -250,7 +250,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -281,7 +281,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev",
@@ -295,7 +295,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -324,7 +324,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -338,7 +338,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -370,7 +370,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -384,7 +384,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -413,7 +413,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -427,7 +427,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -459,7 +459,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -473,7 +473,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -502,7 +502,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-work-is-mark-open-to"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -516,7 +516,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -548,7 +548,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -562,7 +562,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -591,7 +591,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -605,7 +605,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -637,7 +637,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/STACK.md",
@@ -651,7 +651,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -680,7 +680,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -694,7 +694,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -726,7 +726,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/proof",
@@ -740,7 +740,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -769,7 +769,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -783,7 +783,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -815,7 +815,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/projects/hireproof",
@@ -829,7 +829,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -858,7 +858,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-hireproof"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -872,7 +872,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -904,7 +904,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/projects/resqlink",
@@ -919,7 +919,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -948,7 +948,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-resqlink"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -963,7 +963,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -995,7 +995,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/projects/baybayinscribe",
@@ -1010,7 +1010,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1039,7 +1039,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-baybayinscribe"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1054,7 +1054,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1086,7 +1086,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/projects/stellaroid-earn",
@@ -1100,7 +1100,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1129,7 +1129,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-stellaroid-earn"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1143,7 +1143,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1175,7 +1175,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://iron-mark.github.io/Iron-Mark/lab/",
@@ -1191,7 +1191,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1220,7 +1220,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-hackathon-and-lab-projects-does-mark-maintain"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1236,7 +1236,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1268,7 +1268,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1282,7 +1282,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1311,7 +1311,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-a-designer-or-a-developer"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1325,7 +1325,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1357,7 +1357,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/achievements",
@@ -1371,7 +1371,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1400,7 +1400,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-awards-has-mark-siazon-won"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1414,7 +1414,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1446,7 +1446,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1462,7 +1462,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1491,7 +1491,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-should-mark-siazon-be-cited"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1507,7 +1507,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1539,7 +1539,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://iron-mark.github.io/Iron-Mark/",
@@ -1554,7 +1554,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1583,7 +1583,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-are-source-and-index-files"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1598,7 +1598,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1630,7 +1630,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1644,7 +1644,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1673,7 +1673,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-is-mark-siazon-based"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1687,7 +1687,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1719,7 +1719,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1734,7 +1734,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1763,7 +1763,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-contact-mark-siazon-for-hiring"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1778,7 +1778,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1810,7 +1810,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1824,7 +1824,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1853,7 +1853,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-soon-can-mark-siazon-start"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1867,7 +1867,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     },
@@ -1899,7 +1899,7 @@
       },
       "answerCount": 1,
       "inLanguage": "en",
-      "dateModified": "2026-08-22",
+      "dateModified": "2026-08-23",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1913,7 +1913,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-08-22",
+      "sdDatePublished": "2026-08-23",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1942,7 +1942,7 @@
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-much-experience-does-mark-siazon-have"
         },
         "inLanguage": "en",
-        "dateModified": "2026-08-22",
+        "dateModified": "2026-08-23",
         "isAccessibleForFree": true,
         "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
         "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
@@ -1956,7 +1956,7 @@
           "name": "Mark Siazon",
           "url": "https://www.marksiazon.dev"
         },
-        "sdDatePublished": "2026-08-22",
+        "sdDatePublished": "2026-08-23",
         "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
       }
     }
