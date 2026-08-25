@@ -96,8 +96,19 @@ jobs:
 
       - name: Generate contribution activity graph
         run: |
-          curl -sL --fail "https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180" \
-            -o assets/github/activity-graph.svg
+          url="https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180"
+          for attempt in 1 2 3; do
+            if curl -sL --fail "$url" -o assets/github/activity-graph.svg; then
+              exit 0
+            fi
+            echo "Attempt $attempt: activity-graph fetch failed, retrying..."
+            sleep 10
+          done
+          # One flaky third party (github-readme-activity-graph.vercel.app) must
+          # not fail the whole run - keep the last committed activity-graph.svg
+          # instead, same as the streak-card guard above.
+          echo "::warning::github-readme-activity-graph.vercel.app failed after 3 attempts; keeping the last committed activity-graph.svg."
+          git checkout -- assets/github/activity-graph.svg
 
       - name: Generate contribution streak card
         run: |
