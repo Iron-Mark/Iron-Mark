@@ -5,7 +5,13 @@ on:
     branches: [main, dev]
   push:
     branches: [main, dev, cursor/**]
+    paths-ignore:
+      - 'assets/github/**'
   workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
