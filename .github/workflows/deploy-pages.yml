@@ -3,6 +3,15 @@ name: Deploy GitHub Pages mirror
 on:
   push:
     branches: [main]
+    paths:
+      - 'docs/**'
+      - 'public/**'
+      - 'assets/**'
+      - 'llms*.json'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'humans.txt'
+      - 'README.md'
   workflow_dispatch:
 
 permissions:
