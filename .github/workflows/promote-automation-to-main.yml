@@ -39,6 +39,7 @@ concurrency:
 jobs:
   promote:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       FAILURE_ISSUE_TITLE: "Daily automation failure: Promote automation to main"
     steps:
@@ -118,7 +119,7 @@ jobs:
           # strict "branch up to date" rule (dev is perpetually behind main
           # by promotion merge commits).
           checks_done=false
-          for _ in $(seq 1 60); do
+          for _ in $(seq 1 30); do
             buckets=$(gh pr checks "$pr" --required --json bucket --jq '[.[].bucket] | unique | join(",")' 2>/dev/null || true)
             case "$buckets" in
               "")
@@ -135,10 +136,10 @@ jobs:
                 break
                 ;;
             esac
-            sleep 15
+            sleep 10
           done
           if [ "$checks_done" != "true" ]; then
-            echo "::error::Required checks on promotion PR #$pr did not finish within 15 minutes; leaving it for manual merge."
+            echo "::error::Required checks on promotion PR #$pr did not finish within 5 minutes; leaving it for manual merge."
             exit 1
           fi
           # The wait above can pass early on a dev->main PR: its head commit is
@@ -225,7 +226,7 @@ jobs:
           # an admin merge cannot bypass a required check still in "expected"
           # state - dispatch run 30509020013 failed exactly there).
           checks_done=false
-          for _ in $(seq 1 60); do
+          for _ in $(seq 1 30); do
             buckets=$(gh pr checks "$pr" --required --json bucket --jq '[.[].bucket] | unique | join(",")' 2>/dev/null || true)
             case "$buckets" in
               "")
@@ -241,10 +242,10 @@ jobs:
                 break
                 ;;
             esac
-            sleep 15
+            sleep 10
           done
           if [ "$checks_done" != "true" ]; then
-            echo "::error::Required checks on card promotion PR #$pr did not finish within 15 minutes; leaving it for manual merge."
+            echo "::error::Required checks on card promotion PR #$pr did not finish within 5 minutes; leaving it for manual merge."
             exit 1
           fi
           if gh pr merge "$pr" --merge --admin --delete-branch=false; then

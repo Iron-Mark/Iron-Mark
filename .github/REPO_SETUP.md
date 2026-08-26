@@ -123,3 +123,18 @@ python3 src/scripts/test_mcp_server.py
 Config: [src/mcp-server/mcp-config.example.json](../src/mcp-server/mcp-config.example.json) · Docs: [src/mcp-server/README.md](../src/mcp-server/README.md)
 
 The cloud agent token cannot edit repo settings or user pins: **you** run manual steps locally with `gh` auth as @Iron-Mark.
+
+## 11. GitHub Actions usage guardrails
+
+Extra Actions usage is enabled as a safety buffer. Keep billed minutes predictable:
+
+**Billing (manual — GitHub Settings → Billing → Actions):**
+
+- Set a **monthly spending limit** on extra usage (recommended **$5–10**).
+- Enable **email alerts** at **50%, 75%, and 100%** of included + extra budget.
+- Review the [Actions usage dashboard](https://github.com/settings/billing/summary) weekly for the first month after guardrail changes, then periodically.
+
+**Workflow hygiene:**
+
+- Avoid chaining `workflow_dispatch` on **Update GitHub Stats**, **Bump index dates**, and **Promote automation to main** in one session — each run can trigger full PR-check and push-CI cascades.
+- Push-triggered workflows now skip redundant work (Pages deploy on non-Pages merges, validate on SVG-only pushes); daily automation still updates stats and freshness on schedule.
