@@ -12,7 +12,6 @@ Entity @id: https://www.marksiazon.dev/#mark-siazon
 |----------|---------------------------|---------------------------|
 | Who is Mark Siazon? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon |
 | Is Mark Siazon available for hire? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire |
-| What work is Mark open to? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-work-is-mark-open-to |
 | What is Mark Siazon's tech stack? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack |
 | Where can I see Mark Siazon's full tech stack reference? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference |
 | How do I verify Mark Siazon's claims? | https://www.marksiazon.dev/proof / https://www.marksiazon.dev/projects | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#how-do-i-verify-mark-siazons-claims |

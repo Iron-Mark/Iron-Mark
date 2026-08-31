@@ -96,19 +96,19 @@ jobs:
           fi
 
       - name: Generate contribution activity graph
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          url="https://github-readme-activity-graph.vercel.app/graph?username=Iron-Mark&theme=react&bg_color=0B0F14&color=8B5CF6&line=8B5CF6&point=A78BFA&area=true&hide_border=true&height=180"
-          for attempt in 1 2 3; do
-            if curl -sL --fail "$url" -o assets/github/activity-graph.svg; then
-              exit 0
-            fi
-            echo "Attempt $attempt: activity-graph fetch failed, retrying..."
-            sleep 10
-          done
-          # One flaky third party (github-readme-activity-graph.vercel.app) must
-          # not fail the whole run - keep the last committed activity-graph.svg
-          # instead, same as the streak-card guard above.
-          echo "::warning::github-readme-activity-graph.vercel.app failed after 3 attempts; keeping the last committed activity-graph.svg."
+          # The former third-party Vercel endpoint began returning HTTP 402 in
+          # August 2026 and froze this card for a week. Render the same public
+          # contribution data directly from GitHub's API instead. This removes
+          # an external dependency and the old 30-second retry delay.
+          if python3 src/scripts/generate_activity_graph.py \
+            --login Iron-Mark \
+            --output assets/github/activity-graph.svg; then
+            exit 0
+          fi
+          echo "::warning::GitHub contribution-calendar fetch failed; keeping the last committed activity-graph.svg."
           git checkout -- assets/github/activity-graph.svg
 
       - name: Generate contribution streak card

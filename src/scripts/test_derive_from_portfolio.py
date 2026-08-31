@@ -372,6 +372,38 @@ class AeoAnswerSnippetTests(DeriveTestCase):
         faq_text = self.faq_path.read_text(encoding="utf-8")
         self.assertIn(updated_answer, faq_text)
 
+    def test_removed_feed_question_removes_its_formerly_derived_snippet(self) -> None:
+        self.assertEqual(self.run_main(), 0)
+
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        feed["faq"] = [
+            item for item in feed["faq"] if item["question"] != "Home question one?"
+        ]
+        self.feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+        self.assertEqual(self.run_main(), 0)
+
+        data = json.loads(self.index_path.read_text(encoding="utf-8"))
+        snippets = {item["question"]: item for item in data["aeo"]["answerSnippets"]}
+        self.assertNotIn("Home question one?", snippets)
+        self.assertIn("Repo-only question?", snippets)
+
+    def test_bare_llms_reference_becomes_an_absolute_url_everywhere(self) -> None:
+        feed = json.loads(self.feed_path.read_text(encoding="utf-8"))
+        for item in feed["faq"]:
+            if item["question"] == "Home question one?":
+                item["answer"] = "AEO uses llms.txt and MCP."
+        self.feed_path.write_text(json.dumps(feed), encoding="utf-8")
+
+        self.assertEqual(self.run_main(), 0)
+
+        expected = "AEO uses https://www.marksiazon.dev/llms.txt and MCP."
+        faq_text = self.faq_path.read_text(encoding="utf-8")
+        data = json.loads(self.index_path.read_text(encoding="utf-8"))
+        snippets = {item["question"]: item for item in data["aeo"]["answerSnippets"]}
+        self.assertIn(expected, faq_text)
+        self.assertEqual(snippets["Home question one?"]["answer"], expected)
+
 
 class ValidationErrorRoutingTests(DeriveTestCase):
     """Finding B: a fetched-but-contract-invalid feed must fail loudly and
