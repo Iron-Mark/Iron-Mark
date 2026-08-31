@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-08-26
+Last updated: 2026-09-01
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -27,13 +27,21 @@ AI workflows, mobile UX, Web3 trust flows, client launches
 
 Prototype fast, write clearly, check before shipping
 
+## Who is Mark Siazon?
+
+Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.
+
+## Who is Iron Mark?
+
+Iron Mark is Mark Siazon. The same person also uses Iron-Mark and marksiazon on public profiles.
+
 ## Is Mark Siazon available for hire?
 
 Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 
-Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.
+Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics); AEO (https://www.marksiazon.dev/llms.txt, MCP); GEO (Schema.org).
 
 ## Can Mark Siazon ship production frontend code?
 
@@ -55,7 +63,7 @@ Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover
 
 Private recipient and sender addresses stay in server-side environment variables, not in public HTML, feeds, or LLM discovery files.
 
-## What work is Mark open to?
+## What work is Mark Siazon open to?
 
 Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
 

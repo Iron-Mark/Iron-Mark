@@ -1,20 +1,35 @@
 {
-  "fetchedAt": "2026-08-26T07:24:57.794968+00:00",
+  "fetchedAt": "2026-08-31T19:34:36.751762+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
+      "givenName": "Mark",
+      "familyName": "Siazon",
       "id": "https://www.marksiazon.dev/#mark-siazon",
       "url": "https://www.marksiazon.dev",
       "title": "Product Designer & Full-Stack Developer",
-      "summary": "Product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and release-readiness in frontend delivery.",
+      "summary": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.",
       "sameAs": [
         "https://github.com/Iron-Mark",
         "https://www.linkedin.com/in/mark-siazon/",
         "https://github.com/mark-siazon",
         "https://x.com/iron_markk",
+        "https://twitter.com/iron_markk",
         "https://www.instagram.com/iron_markk/",
         "https://mark-siazon.notion.site/index"
-      ]
+      ],
+      "alternateName": [
+        "Iron Mark",
+        "Iron-Mark",
+        "marksiazon"
+      ],
+      "aliases": [
+        "Iron Mark",
+        "Iron-Mark",
+        "marksiazon"
+      ],
+      "alumniOf": "University of Makati",
+      "nationality": "Philippines"
     },
     "availability": {
       "headline": "Open for selective product design, frontend, and AI workflow opportunities",
@@ -616,6 +631,22 @@
         ]
       },
       {
+        "id": "identity-who",
+        "question": "Who is Mark Siazon?",
+        "answer": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "identity-iron-mark",
+        "question": "Who is Iron Mark?",
+        "answer": "Iron Mark is Mark Siazon. The same person also uses Iron-Mark and marksiazon on public profiles.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
         "id": "recruiter-availability",
         "question": "Is Mark Siazon available for hire?",
         "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
@@ -626,7 +657,7 @@
       {
         "id": "recruiter-tech-stack",
         "question": "What is Mark Siazon's tech stack?",
-        "answer": "Design: Product Design, UI/UX Design, User Research, Figma, Design Systems. Development: React, Next.js, TypeScript, Tailwind CSS, Full-Stack Development. Specialties: AI-Driven Design, Application Development, Trust & Safety, AI Product Strategy, Product Verification.",
+        "answer": "Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics); AEO (llms.txt, MCP); GEO (Schema.org).",
         "audiences": [
           "recruiter"
         ]
@@ -673,7 +704,7 @@
       },
       {
         "id": "contact-work-scope",
-        "question": "What work is Mark open to?",
+        "question": "What work is Mark Siazon open to?",
         "answer": "Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
         "audiences": [
           "contact"
@@ -1194,6 +1225,214 @@
       {
         "title": "Graphics design & consultation",
         "description": "Brand and visual assets, plus product and UX consultation."
+      }
+    ],
+    "techStack": [
+      {
+        "group": "Design",
+        "sections": [
+          {
+            "label": "UI & UX",
+            "tools": [
+              "Figma",
+              "Framer",
+              "Miro",
+              "Notion",
+              "Webflow",
+              "Storybook",
+              "Penpot",
+              "Sketch",
+              "Hotjar"
+            ]
+          },
+          {
+            "label": "Creative & multimedia",
+            "tools": [
+              "Canva",
+              "Procreate",
+              "Photoshop",
+              "Illustrator",
+              "Premiere Pro",
+              "CapCut",
+              "OBS Studio",
+              "Audacity",
+              "Spline"
+            ]
+          },
+          {
+            "label": "CSS & design libraries",
+            "tools": [
+              "Tailwind CSS",
+              "Bootstrap",
+              "Sass",
+              "BEM",
+              "shadcn/ui",
+              "MUI",
+              "Ant Design",
+              "daisyUI"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Development",
+        "sections": [
+          {
+            "label": "Web",
+            "tools": [
+              "HTML5",
+              "CSS3",
+              "JavaScript",
+              "TypeScript",
+              "Vite",
+              "TanStack",
+              "Java",
+              "PHP",
+              "jQuery",
+              "React",
+              "Next.js",
+              "Astro",
+              "Svelte",
+              "Qwik"
+            ]
+          },
+          {
+            "label": "Mobile",
+            "tools": [
+              "Android Studio",
+              "Kotlin",
+              "Wear OS",
+              "Flutter",
+              "Dart",
+              "Capacitor",
+              "React Native",
+              "Expo"
+            ]
+          },
+          {
+            "label": "Backend & APIs",
+            "tools": [
+              "Node.js",
+              "Express",
+              "Fastify",
+              "FastAPI",
+              "PostgreSQL",
+              "MySQL",
+              "MongoDB",
+              "Redis",
+              "Supabase"
+            ]
+          },
+          {
+            "label": "Web3",
+            "tools": [
+              "Solidity",
+              "Hardhat",
+              "Move",
+              "Morph",
+              "Celo",
+              "Stellar",
+              "Soroban",
+              "Freighter",
+              "MiniPay",
+              "MetaMask"
+            ]
+          },
+          {
+            "label": "Deploy & infrastructure",
+            "tools": [
+              "Git",
+              "GitHub Actions",
+              "Docker",
+              "Vercel",
+              "Netlify",
+              "Railway",
+              "Cloudflare",
+              "Appwrite",
+              "AWS"
+            ]
+          },
+          {
+            "label": "Game dev",
+            "tools": [
+              "Unity",
+              "C#",
+              "Visual Studio",
+              "Blender",
+              "Aseprite",
+              "Godot",
+              "RPG Maker",
+              "Phaser",
+              "Three.js"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Specialties",
+        "sections": [
+          {
+            "label": "AI",
+            "tools": [
+              "Python",
+              "PyTorch",
+              "Hugging Face",
+              "LangChain",
+              "Groq",
+              "Vercel AI SDK",
+              "GCP",
+              "AWS Bedrock",
+              "Azure AI Foundry"
+            ]
+          },
+          {
+            "label": "AI-assisted workflow",
+            "tools": [
+              "ChatGPT",
+              "Claude",
+              "Gemini",
+              "Deepseek",
+              "Perplexity",
+              "Grok",
+              "Qwen",
+              "Lovable",
+              "Replit",
+              "Codex",
+              "Claude Code",
+              "Antigravity",
+              "Cursor",
+              "v0",
+              "GitHub Copilot",
+              "Qwen Code",
+              "Kiro",
+              "OpenCode"
+            ]
+          },
+          {
+            "label": "SEO",
+            "tools": [
+              "GA4",
+              "Google Search Console",
+              "Bing Webmaster",
+              "Lighthouse",
+              "IndexNow",
+              "Vercel Analytics"
+            ]
+          },
+          {
+            "label": "AEO",
+            "tools": [
+              "llms.txt",
+              "MCP"
+            ]
+          },
+          {
+            "label": "GEO",
+            "tools": [
+              "Schema.org"
+            ]
+          }
+        ]
       }
     ],
     "achievements": [

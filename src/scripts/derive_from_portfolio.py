@@ -117,6 +117,12 @@ DERIVED_AVAILABILITY_KEYS = ("headline", "summary", "firstMessage", "note", "wor
 # excluded (those belong to per-project pages, not this repo).
 FAQ_HOME_AUDIENCES = {"home", "recruiter", "contact"}
 
+# Feed answers are visible prose in this repository. Normalize known bare
+# machine-readable filenames into useful absolute URLs before publishing.
+ABSOLUTE_FEED_REFERENCES = {
+    "llms.txt": "https://www.marksiazon.dev/llms.txt",
+}
+
 
 class FeedValidationError(Exception):
     """Raised when the fetched/loaded feed is missing required keys or has
@@ -311,9 +317,25 @@ def recruiter_faq_items(feed: dict[str, Any]) -> list[dict[str, Any]]:
     ]
 
 
+def normalize_feed_question(question: str) -> str:
+    return sanitize_marker_breakout(escape_md_heading_text(question))
+
+
+def normalize_feed_answer(answer: str) -> str:
+    """Sanitize a feed answer and absolutize known bare file references."""
+    normalized = sanitize_marker_breakout(answer)
+    for reference, absolute_url in ABSOLUTE_FEED_REFERENCES.items():
+        normalized = re.sub(
+            rf"(?<![\w:/.-]){re.escape(reference)}(?![\w./-])",
+            absolute_url,
+            normalized,
+        )
+    return normalized
+
+
 def render_faq_body(feed: dict[str, Any]) -> str:
     blocks = [
-        f"## {escape_md_heading_text(item['question'])}\n\n{item['answer']}"
+        f"## {normalize_feed_question(item['question'])}\n\n{normalize_feed_answer(item['answer'])}"
         for item in home_faq_items(feed)
     ]
     return "\n\n".join(blocks)
@@ -528,7 +550,11 @@ def apply_entity_and_availability(index_data: dict[str, Any], feed: dict[str, An
     return result
 
 
-def apply_aeo_answer_snippets(index_data: dict[str, Any], feed: dict[str, Any]) -> dict[str, Any]:
+def apply_aeo_answer_snippets(
+    index_data: dict[str, Any],
+    feed: dict[str, Any],
+    previous_derived_questions: set[str] | None = None,
+) -> dict[str, Any]:
     """Return a copy of index_data with aeo.answerSnippets entries that
     overlap the feed-derived FAQ.md region kept in sync with the feed.
 
@@ -548,7 +574,10 @@ def apply_aeo_answer_snippets(index_data: dict[str, Any], feed: dict[str, Any]) 
     (heading-line escaping for the question, marker-breakout sanitization
     for both), so the snippet stays byte-for-byte identical to what
     actually ends up in FAQ.md. `sources` and every non-overlapping
-    (repo-authored) snippet are left untouched.
+    (repo-authored) snippet are left untouched. If a question was in the
+    previous feed-derived region but is no longer in the current feed, its
+    formerly-derived snippet is removed so static AEO/schema data cannot claim
+    an answer that is no longer visible.
     """
     result = copy.deepcopy(index_data)
     aeo = result.get("aeo")
@@ -559,19 +588,30 @@ def apply_aeo_answer_snippets(index_data: dict[str, Any], feed: dict[str, Any]) 
         return result
 
     feed_items_by_question = {
-        item["question"]: item
+        normalize_feed_question(item["question"]): item
         for item in home_faq_items(feed)
         if isinstance(item, dict) and isinstance(item.get("question"), str)
     }
 
-    for snippet in snippets:
+    previous = previous_derived_questions or set()
+    aeo["answerSnippets"] = [
+        snippet
+        for snippet in snippets
+        if not (
+            isinstance(snippet, dict)
+            and snippet.get("question") in previous
+            and snippet.get("question") not in feed_items_by_question
+        )
+    ]
+
+    for snippet in aeo["answerSnippets"]:
         if not isinstance(snippet, dict):
             continue
         feed_item = feed_items_by_question.get(snippet.get("question"))
         if feed_item is None:
             continue
-        snippet["question"] = sanitize_marker_breakout(escape_md_heading_text(feed_item["question"]))
-        snippet["answer"] = sanitize_marker_breakout(feed_item["answer"])
+        snippet["question"] = normalize_feed_question(feed_item["question"])
+        snippet["answer"] = normalize_feed_answer(feed_item["answer"])
 
     return result
 
@@ -588,16 +628,24 @@ def build_outputs(feed: dict[str, Any], paths: dict[str, Path]) -> dict[str, str
     preserved exactly)."""
     outputs: dict[str, str] = {}
 
+    previous_derived_questions: set[str] = set()
     for section, key in (("faq", "faq_md"), ("proof", "proof_md"), ("recruiter", "recruiter_md")):
         path = paths[key]
         text = path.read_text(encoding="utf-8")
+        if section == "faq":
+            match = _marker_pattern("faq").search(text)
+            if match:
+                previous_derived_questions = {
+                    question.strip()
+                    for question in re.findall(r"^##\s+(.+?)\s*$", match.group(2), re.MULTILINE)
+                }
         body = derived_body(section, feed)
         outputs[str(path)] = replace_derived_region(text, section, body)
 
     index_path = paths["index_json"]
     index_data = json.loads(index_path.read_text(encoding="utf-8"))
     updated_index = apply_entity_and_availability(index_data, feed)
-    updated_index = apply_aeo_answer_snippets(updated_index, feed)
+    updated_index = apply_aeo_answer_snippets(updated_index, feed, previous_derived_questions)
     outputs[str(index_path)] = json.dumps(updated_index, indent=2, ensure_ascii=False) + "\n"
 
     return outputs
