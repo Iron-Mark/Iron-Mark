@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-01
+Last updated: 2026-09-02
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 

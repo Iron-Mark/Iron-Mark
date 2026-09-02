@@ -330,7 +330,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "numberOfItems": 5,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
@@ -510,7 +510,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -648,7 +648,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -692,7 +692,7 @@
       "isPartOf": {
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
@@ -858,7 +858,7 @@
       "reviewedBy": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
-      "lastReviewed": "2026-09-01",
+      "lastReviewed": "2026-09-02",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -872,7 +872,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -915,7 +915,7 @@
         "remote"
       ],
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
       },
@@ -1054,7 +1054,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -1108,7 +1108,7 @@
       "mainContentOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#main-content"
       },
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "inLanguage": "en",
       "primaryImageOfPage": {
         "@id": "https://iron-mark.github.io/Iron-Mark/#primary-image"
@@ -1237,7 +1237,7 @@
       "reviewedBy": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
-      "lastReviewed": "2026-09-01",
+      "lastReviewed": "2026-09-02",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -1251,7 +1251,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "hasPart": [
         {
@@ -1379,7 +1379,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1430,7 +1430,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -1447,7 +1447,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -1495,7 +1495,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -1541,7 +1541,7 @@
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
-      "dateModified": "2026-09-01"
+      "dateModified": "2026-09-02"
     },
     {
       "@type": "ImageObject",
@@ -1558,7 +1558,7 @@
       "contentSize": "450470 bytes",
       "sha256": "bb5a0f2774680e6ad57663d5ff5711d846fc28a05e82cd670ddc5ebbccf6aae0",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -1586,7 +1586,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -1636,7 +1636,7 @@
       },
       "inLanguage": "en",
       "datePublished": "2026-06-13",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "spatialCoverage": [
         {
@@ -1652,7 +1652,7 @@
           "name": "remote"
         }
       ],
-      "temporalCoverage": "2026-06-13/2026-09-01",
+      "temporalCoverage": "2026-06-13/2026-09-02",
       "measurementTechnique": [
         "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
         "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output."
@@ -1746,7 +1746,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -1774,7 +1774,7 @@
       ],
       "sameAs": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json",
-      "version": "2026-09-01",
+      "version": "2026-09-02",
       "description": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
       "abstract": "Entity, project, proof, FAQ, citation, and schema source files mirrored on GitHub Pages.",
       "creator": {
@@ -1785,7 +1785,7 @@
       },
       "inLanguage": "en",
       "datePublished": "2026-06-13",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "keywords": [
         "Mark Siazon",
@@ -1827,7 +1827,7 @@
           "name": "remote"
         }
       ],
-      "temporalCoverage": "2026-06-13/2026-09-01",
+      "temporalCoverage": "2026-06-13/2026-09-02",
       "measurementTechnique": [
         "Generated from llms-index.json, public Markdown files, and Schema.org JSON-LD graph output.",
         "Computed byte-size and SHA-256 integrity metadata from the GitHub Pages mirror output."
@@ -2025,7 +2025,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2079,7 +2079,7 @@
       ],
       "inLanguage": "en",
       "isBasedOn": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "author": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -2232,7 +2232,7 @@
       "reviewedBy": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
-      "lastReviewed": "2026-09-01",
+      "lastReviewed": "2026-09-02",
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -2246,7 +2246,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2256,7 +2256,7 @@
       "description": "Controlled topic, service, and geography terms used by the Mark Siazon profile index.",
       "url": "https://iron-mark.github.io/Iron-Mark/",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -2352,7 +2352,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2374,7 +2374,7 @@
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2475,7 +2475,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2497,7 +2497,7 @@
         "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/llms-index.json#creativework"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2558,7 +2558,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2576,7 +2576,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2645,7 +2645,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2663,7 +2663,7 @@
       },
       "position": 1,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -2688,7 +2688,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2745,7 +2745,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2763,7 +2763,7 @@
       },
       "position": 2,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -2788,7 +2788,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2818,7 +2818,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2836,7 +2836,7 @@
       },
       "position": 3,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -2861,7 +2861,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -2954,7 +2954,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -2972,7 +2972,7 @@
       },
       "position": 4,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -2997,7 +2997,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -3090,7 +3090,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -3108,7 +3108,7 @@
       },
       "position": 5,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -3133,7 +3133,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -3193,7 +3193,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -3211,7 +3211,7 @@
       },
       "position": 6,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -3236,7 +3236,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#webpage"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "citation": [
         "https://www.marksiazon.dev/recruiter",
@@ -3272,7 +3272,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -3290,7 +3290,7 @@
       },
       "position": 7,
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "accountablePerson": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
@@ -3311,7 +3311,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3327,7 +3327,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3343,7 +3343,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3359,7 +3359,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3375,7 +3375,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3391,7 +3391,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3407,7 +3407,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3423,7 +3423,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3439,7 +3439,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3455,7 +3455,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3471,7 +3471,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3487,7 +3487,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3503,7 +3503,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3519,7 +3519,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3535,7 +3535,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3551,7 +3551,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3567,7 +3567,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3583,7 +3583,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3599,7 +3599,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3615,7 +3615,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -3631,7 +3631,7 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#topic-taxonomy"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       }
@@ -4151,9 +4151,9 @@
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "contentSize": "28741 bytes",
-      "sha256": "740f736ee74e052d3fccb75f2bcd16808ae33a07d0c0c118b85cbe16317bbf4b",
+      "sha256": "108e6c427cdd9eb2cdbc2abd9e6bfa097f1123925270ee102ea732732436ab8c",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4189,7 +4189,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4202,9 +4202,9 @@
       "description": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable LLM manifest file for the Mark Siazon profile index, encoded as text/plain.",
       "contentSize": "9143 bytes",
-      "sha256": "7a43ffef522d2f6642206699ce7fdc0b970defaacd9496ad6cd6e56844afbb15",
+      "sha256": "e4d4bcdcc05d49efe0160c760d4ddff25cef7b6f2f4b0b30eb15cffcd1752182",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4240,7 +4240,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4253,9 +4253,9 @@
       "description": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Full LLM context file for the Mark Siazon profile index, encoded as text/plain.",
       "contentSize": "12297 bytes",
-      "sha256": "0e2430a8dc4f55aa90d1b64453f18f3283667d27ce14bc0af2dc276ac0a3c893",
+      "sha256": "addb29374f7e5d9a8e2e3441ca9ead144d938aeb1e8dc59f5ac424d190313559",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4291,7 +4291,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4304,9 +4304,9 @@
       "description": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "contentSize": "23455 bytes",
-      "sha256": "177c6a4c54a9036ef83771050105f43887b87599675494798fcd15d7315d132a",
+      "sha256": "39b7c1bca0069140f5a7f5095c680452ab58574855230b51f801a0e3d7372203",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4342,7 +4342,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4355,9 +4355,9 @@
       "description": "Downloadable FAQ question and answer corpus file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable FAQ question and answer corpus file for the Mark Siazon profile index, encoded as text/markdown.",
       "contentSize": "8372 bytes",
-      "sha256": "5b1e6fe076894fad2f758400c2d4eb4b7bd06c32b632f3f3d2ec82485750b875",
+      "sha256": "679ee8de96d0776dad9e41276f0ac6a075214f94f355c255be1c3b7211e4177c",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4393,7 +4393,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4406,9 +4406,9 @@
       "description": "Downloadable Recruiter brief file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Recruiter brief file for the Mark Siazon profile index, encoded as text/markdown.",
       "contentSize": "7445 bytes",
-      "sha256": "7e3a558a2d282cc1d85320912a6b834d01ee1db32705d9afad7ada50e2a822aa",
+      "sha256": "6174fbee5a26007504ac67e1152362eebdea4b09953feca9ceab6bd0b64d85b0",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4444,7 +4444,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4457,9 +4457,9 @@
       "description": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Claim verification map file for the Mark Siazon profile index, encoded as text/markdown.",
       "contentSize": "4380 bytes",
-      "sha256": "ea8681fac257d66f139dfa2aad57aeffc78f02c43b064fff19714d22f403f445",
+      "sha256": "ea6a49dfe41d92365be9a373c2fee741ae2225b20a8b193cc8904d210a8656ba",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4495,7 +4495,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4510,7 +4510,7 @@
       "contentSize": "23022 bytes",
       "sha256": "cb72da1d3a400d263b5ac437e8debc021fc08515024996a2d193de48d5ddfb0f",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4546,7 +4546,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4559,9 +4559,9 @@
       "description": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
       "abstract": "Downloadable Structured profile summary file for the Mark Siazon profile index, encoded as text/markdown.",
       "contentSize": "2176 bytes",
-      "sha256": "cb8fb230335afeb975669f333eb89124247be8a73ad37f085b96f965445fa910",
+      "sha256": "8ec10380922d969c98c62faa95194e1327e3aabdf30a40a2964015b4ecd51231",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4597,7 +4597,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4612,7 +4612,7 @@
       "contentSize": "1008 bytes",
       "sha256": "17ca0c7c5519daf70a724887f4b1900be7cca4af77378b2ea7bad026abeb65c8",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4648,7 +4648,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4663,7 +4663,7 @@
       "contentSize": "1966 bytes",
       "sha256": "75c7238c18c9c51bade016b4dfd84f4c7fdfadec1175d974aed82d69d08165a3",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4699,7 +4699,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4714,7 +4714,7 @@
       "contentSize": "5688 bytes",
       "sha256": "01d49774a0c864d2c9c43ae90a394f627ffe4431e0adfb20fe1de53a1caa0696",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4750,7 +4750,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4765,7 +4765,7 @@
       "contentSize": "688 bytes",
       "sha256": "ac17274fe974f3899a2134afbc62daa06a98b58837da0a133322d83c290f9b2e",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4801,7 +4801,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4814,7 +4814,7 @@
       "description": "Downloadable Schema.org Person graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org Person graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4850,7 +4850,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4863,9 +4863,9 @@
       "description": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "contentSize": "77872 bytes",
-      "sha256": "827dc682c4d6e572e7234cb6cd6f804cdae0d20faea8fcfe618f0c19aa1c2b7e",
+      "sha256": "a61843a70af2ef9d0a1f4e24a26a565b2402b49d0662c650f67f2f152d0141d9",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4901,7 +4901,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4916,7 +4916,7 @@
       "contentSize": "24782 bytes",
       "sha256": "b02b243d6ab49cfd584fe6ccf29abf4d9502c833b139561b1ffc38791f611792",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -4952,7 +4952,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -4967,7 +4967,7 @@
       "contentSize": "6400 bytes",
       "sha256": "03c119fb8fd756e66359b21588941e0a899c2d32f09210c1aef418bca3d070bf",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -5003,7 +5003,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -5016,9 +5016,9 @@
       "description": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
       "abstract": "Downloadable GitHub Pages sitemap file for the Mark Siazon profile index, encoded as application/xml.",
       "contentSize": "5276 bytes",
-      "sha256": "add1fb1e41588e4970726beb38a02b422bd50e3378e14f2719a5d2bc1e3b859e",
+      "sha256": "b6510f576694b20940e2053e235030e76af8d3fbf2f81995cb1ec8dddd18c60b",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -5054,7 +5054,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -5067,9 +5067,9 @@
       "description": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable GitHub Pages robots hints file for the Mark Siazon profile index, encoded as text/plain.",
       "contentSize": "1155 bytes",
-      "sha256": "30ed5b509382ae756a487000914eaca1c897f0c716616aafaca165439f69a5c6",
+      "sha256": "72123f5dd6dc8a98735721fe50dc952c6267c989a1882a600eb9b9e0dc634d60",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "isPartOf": {
@@ -5105,7 +5105,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -5132,7 +5132,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://hireproof.tech/portfolio"
@@ -5164,7 +5164,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/hireproof/cover.webp#image"
@@ -5184,7 +5184,7 @@
       "contentSize": "12176 bytes",
       "sha256": "365c6f42d3eb5b95db58196796fe62bc55660d61443a197244c82efe3e394c8f",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5212,7 +5212,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/hireproof#project"
@@ -5245,7 +5245,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://stellaroid.tech"
@@ -5277,7 +5277,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "award": [
         "Stellar bootcamp Top 5 of 105 teams"
@@ -5300,7 +5300,7 @@
       "contentSize": "8580 bytes",
       "sha256": "55dabdb78b9ad9053b2cad7f72a5fb173279276a804c50abaa5c1b89825f5d8e",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5328,7 +5328,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/stellaroid-earn#project"
@@ -5361,7 +5361,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://github.com/UMakLumen/ResQLinkWeb"
@@ -5393,7 +5393,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "award": [
         "UMak InfotechOlympics 2025 Android App Development Productivity Champion"
@@ -5416,7 +5416,7 @@
       "contentSize": "8992 bytes",
       "sha256": "b001b10f0c43ab88063e170da4dabe56da7c132a27f4e4221aabc5b6cf3fd4a8",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5444,7 +5444,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/resqlink#project"
@@ -5477,7 +5477,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://lexiph.vercel.app",
@@ -5510,7 +5510,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/lexinsights/cover.png#image"
@@ -5530,7 +5530,7 @@
       "contentSize": "1422712 bytes",
       "sha256": "b213685e86663bc127685e1ca5b26ce37a8dc74cde287918a4e359db5b55e831",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5558,7 +5558,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/lexinsights#project"
@@ -5591,7 +5591,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://www.goodtolivepodcast.com"
@@ -5623,7 +5623,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/good-to-live/cover.webp#image"
@@ -5643,7 +5643,7 @@
       "contentSize": "8460 bytes",
       "sha256": "c37fa36e90541c470201a30bda01f661d7f3897f7b13d01ac05fed61e91b8ec9",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5671,7 +5671,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/good-to-live#project"
@@ -5704,7 +5704,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [],
       "keywords": [
@@ -5734,7 +5734,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/flowfit/cover.png#image"
@@ -5754,7 +5754,7 @@
       "contentSize": "188473 bytes",
       "sha256": "0f0afa51d051068a16ae73b52d2764ac6045ec84c006d2134a4dc98668d2e330",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5782,7 +5782,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/flowfit#project"
@@ -5815,7 +5815,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://palengke-pay.vercel.app"
@@ -5847,7 +5847,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/palengkepay/cover.png#image"
@@ -5867,7 +5867,7 @@
       "contentSize": "313053 bytes",
       "sha256": "ed27deacfdedc6eb80d4ab6b019ef2f70c3e7845643a8b0b0b03265ac786d474",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -5895,7 +5895,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/palengkepay#project"
@@ -5928,7 +5928,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://gawainyah-minipay.vercel.app"
@@ -5960,7 +5960,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "image": {
         "@id": "https://iron-mark.github.io/Iron-Mark/assets/projects/gawainyah/cover.png#image"
@@ -5980,7 +5980,7 @@
       "contentSize": "411656 bytes",
       "sha256": "f2962bcd6a64a61e4e15c94a233540776454d09ca38b73f7a481c0a044eb95cb",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -6008,7 +6008,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/gawainyah#project"
@@ -6041,7 +6041,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://huggingface.co/gilas/baybayinscribe"
@@ -6073,7 +6073,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "award": [
         "InfotechOlympics 2024 Android App Development winner"
@@ -6096,7 +6096,7 @@
       "contentSize": "32494 bytes",
       "sha256": "e4c10cf0c9b396fa285048e826a92e060c7207ab00e411fe802d8b92d88c6ce7",
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "usageInfo": "https://iron-mark.github.io/Iron-Mark/LICENSE.md",
       "acquireLicensePage": "https://www.marksiazon.dev/contact",
@@ -6124,7 +6124,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "about": {
         "@id": "https://www.marksiazon.dev/projects/baybayinscribe#project"
@@ -6157,7 +6157,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://qwen-ui-lab.vercel.app",
@@ -6191,7 +6191,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6218,7 +6218,7 @@
         "@id": "https://github.com/Iron-Mark/Iron-Mark#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://github.com/Iron-Mark/Hackathon-Smart-Profile-Management-System"
@@ -6251,7 +6251,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6278,7 +6278,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://github.com/ACSADians/kudlit-app"
@@ -6311,7 +6311,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6338,7 +6338,7 @@
         "@id": "https://www.marksiazon.dev/#website"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "isAccessibleForFree": true,
       "sameAs": [
         "https://pacebeats.vercel.app"
@@ -6371,7 +6371,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6389,7 +6389,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6432,7 +6432,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6450,7 +6450,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6493,7 +6493,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6511,7 +6511,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6554,7 +6554,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6572,7 +6572,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6615,7 +6615,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6633,7 +6633,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6676,7 +6676,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     },
     {
@@ -6694,7 +6694,7 @@
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-02",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
       "isAccessibleForFree": true,
       "publisher": {
@@ -6737,7 +6737,7 @@
         "name": "Mark Siazon",
         "url": "https://www.marksiazon.dev"
       },
-      "sdDatePublished": "2026-09-01",
+      "sdDatePublished": "2026-09-02",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
     }
   ]
