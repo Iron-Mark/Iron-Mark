@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -57,7 +57,7 @@ Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, 
 
 ## Which projects should a recruiter review first?
 
-Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
 
 ### Projects
 
