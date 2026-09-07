@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-04T11:33:36.625412+00:00",
+  "fetchedAt": "2026-09-07T12:54:20.899888+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -68,7 +68,11 @@
           "Next.js",
           "React",
           "TypeScript",
-          "AI workflow design"
+          "Tailwind CSS",
+          "LangChain",
+          "MCP",
+          "Vercel",
+          "v0"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/hireproof",
         "links": [
@@ -110,9 +114,13 @@
         ],
         "stack": [
           "Next.js",
+          "React",
+          "TypeScript",
           "Soroban",
           "Freighter",
-          "Stellar Testnet"
+          "Stellar Testnet",
+          "Tailwind CSS",
+          "Vercel"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/stellaroid-earn",
         "links": [
@@ -148,7 +156,7 @@
       {
         "slug": "resqlink",
         "title": "ResQLink",
-        "summary": "Cross-platform disaster response system spanning Flutter mobile, a React/Vite web surface, and a Fastify/Appwrite backend for offline-first emergency coordination.",
+        "summary": "Multi-award-winning offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "role": "Team product designer and full-stack developer",
         "timeframe": "Jun 2025 - May 2026",
         "status": "Academic capstone and competition project",
@@ -164,12 +172,21 @@
           "LGU UX"
         ],
         "stack": [
-          "Flutter and Dart Android-first mobile app",
-          "Vite, React, TypeScript, Tailwind CSS, and shadcn/ui LGU/web surface",
-          "Fastify TypeScript API with Appwrite v1.8 realtime data and WebSocket relay",
-          "Gemini 2.5 Flash summaries and on-device YOLO disaster classification",
-          "Native Kotlin Bluetooth LE mesh with BitChat, Noise XX encryption, SQLite queues, Firebase FCM, and offline maps",
-          "Citizen, rescuer, LGU command-center, broadcast, widget, and I Am Safe UX"
+          "Flutter",
+          "Gemini Flash",
+          "MobileViTv2",
+          "BLE",
+          "Appwrite",
+          "Fastify",
+          "Kotlin",
+          "Firebase",
+          "Dart",
+          "Vite",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "SQLite"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/resqlink",
         "links": [
@@ -199,10 +216,14 @@
           "Client Work"
         ],
         "stack": [
-          "Web strategy",
-          "UI design",
-          "Frontend development",
-          "SEO"
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vercel",
+          "GA4",
+          "Schema.org",
+          "Cloudflare"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/good-to-live",
         "links": [
@@ -233,6 +254,7 @@
         ],
         "stack": [
           "Flutter",
+          "Wear OS",
           "Dart",
           "Samsung Health Sensor SDK",
           "Supabase"
@@ -284,7 +306,7 @@
           "React",
           "Next.js",
           "Tailwind CSS",
-          "ML-assisted recognition"
+          "Hugging Face"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/baybayinscribe",
         "links": [
@@ -317,12 +339,12 @@
         ],
         "stack": [
           "Flutter",
-          "Dart",
-          "Riverpod",
-          "go_router",
-          "Supabase",
+          "Gemma 4",
           "YOLO to TFLite",
-          "Gemma 4"
+          "Riverpod",
+          "Supabase",
+          "go_router",
+          "Dart"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/kudlit",
         "links": [
@@ -358,13 +380,13 @@
           "Flutter"
         ],
         "stack": [
-          "Kotlin",
-          "Jetpack Compose",
-          "Wear OS",
-          "Samsung Health sensors",
-          "Supabase",
-          "Spotify",
           "Flutter",
+          "Kotlin",
+          "Wear OS",
+          "Jetpack Compose",
+          "Samsung Health sensors",
+          "Spotify",
+          "Supabase",
           "Riverpod"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/pulse",
@@ -507,8 +529,6 @@
           "Zustand",
           "Clerk auth boundary",
           "Supabase client/storage boundary",
-          "Providerless BM25-style local legal research",
-          "PDF, DOCX, DOC, Markdown, and text extraction",
           "Playwright smoke coverage"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/lexinsights",
@@ -555,9 +575,7 @@
           "TypeScript",
           "Tailwind CSS 4",
           "Qwen3-VL optional live analysis boundary",
-          "Deterministic local-analysis fixtures",
           "React + Tailwind export packages",
-          "Share summary routes",
           "Playwright and Node test coverage"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/qwen-ui-lab",
@@ -609,7 +627,7 @@
       {
         "id": "home-best-hired-as",
         "question": "Who is Mark Siazon best hired as?",
-        "answer": "Product designer who also ships the frontend code",
+        "answer": "Hybrid product designer for 0→1 product work",
         "audiences": [
           "home"
         ]
@@ -625,7 +643,7 @@
       {
         "id": "home-working-style",
         "question": "How does Mark Siazon work?",
-        "answer": "Prototype fast, write clearly, check before shipping",
+        "answer": "Frames problems first; handoff-ready specs; user checks before release",
         "audiences": [
           "home"
         ]
@@ -673,7 +691,7 @@
       {
         "id": "recruiter-review-first",
         "question": "Which projects should a recruiter review first?",
-        "answer": "Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.",
+        "answer": "Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.",
         "audiences": [
           "recruiter"
         ]
@@ -737,7 +755,7 @@
       {
         "id": "project-hireproof-stack",
         "question": "What is HireProof built with?",
-        "answer": "Next.js, React, TypeScript, AI workflow design.",
+        "answer": "Next.js, React, TypeScript, Tailwind CSS, LangChain, MCP, Vercel, v0.",
         "audiences": [
           "project:hireproof"
         ]
@@ -769,7 +787,7 @@
       {
         "id": "project-stellaroid-earn-stack",
         "question": "What is Stellaroid Earn built with?",
-        "answer": "Next.js, Soroban, Freighter, Stellar Testnet.",
+        "answer": "Next.js, React, TypeScript, Soroban, Freighter, Stellar Testnet, Tailwind CSS, Vercel.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -777,7 +795,7 @@
       {
         "id": "project-resqlink-what",
         "question": "What is ResQLink?",
-        "answer": "ResQLink positions disaster response as actionable intelligence: one-tap SOS reporting, AI triage, proximity-based responder dispatch, BitChat BLE mesh fallback, SQLite report queues, I Am Safe acknowledgements, and LGU command workflows for citizens, rescuers, and operators.",
+        "answer": "ResQLink is an offline disaster-response platform for Philippine LGUs: BLE mesh networking, real-time coordination, on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1, plus one-tap SOS, AI triage, proximity dispatch, I Am Safe acknowledgements, and LGU command workflows for citizens, rescuers, and operators.",
         "audiences": [
           "project:resqlink"
         ]
@@ -801,7 +819,7 @@
       {
         "id": "project-resqlink-stack",
         "question": "What is ResQLink built with?",
-        "answer": "Flutter and Dart Android-first mobile app, Vite, React, TypeScript, Tailwind CSS, and shadcn/ui LGU/web surface, Fastify TypeScript API with Appwrite v1.8 realtime data and WebSocket relay, Gemini 2.5 Flash summaries and on-device YOLO disaster classification, Native Kotlin Bluetooth LE mesh with BitChat, Noise XX encryption, SQLite queues, Firebase FCM, and offline maps, Citizen, rescuer, LGU command-center, broadcast, widget, and I Am Safe UX.",
+        "answer": "Flutter, Gemini Flash, MobileViTv2, BLE, Appwrite, Fastify, Kotlin, Firebase, Dart, Vite, React, TypeScript, Tailwind CSS, shadcn/ui, SQLite.",
         "audiences": [
           "project:resqlink"
         ]
@@ -833,7 +851,7 @@
       {
         "id": "project-good-to-live-stack",
         "question": "What is Good To Live Podcast Website built with?",
-        "answer": "Web strategy, UI design, Frontend development, SEO.",
+        "answer": "Next.js, React, TypeScript, Tailwind CSS, Vercel, GA4, Schema.org, Cloudflare.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -865,7 +883,7 @@
       {
         "id": "project-flowfit-stack",
         "question": "What is FlowFit built with?",
-        "answer": "Flutter, Dart, Samsung Health Sensor SDK, Supabase.",
+        "answer": "Flutter, Wear OS, Dart, Samsung Health Sensor SDK, Supabase.",
         "audiences": [
           "project:flowfit"
         ]
@@ -897,7 +915,7 @@
       {
         "id": "project-baybayinscribe-stack",
         "question": "What is BaybayInscribe built with?",
-        "answer": "React, Next.js, Tailwind CSS, ML-assisted recognition.",
+        "answer": "React, Next.js, Tailwind CSS, Hugging Face.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -929,7 +947,7 @@
       {
         "id": "project-kudlit-stack",
         "question": "What is Kudlit built with?",
-        "answer": "Flutter, Dart, Riverpod, go_router, Supabase, YOLO to TFLite, Gemma 4.",
+        "answer": "Flutter, Gemma 4, YOLO to TFLite, Riverpod, Supabase, go_router, Dart.",
         "audiences": [
           "project:kudlit"
         ]
@@ -961,7 +979,7 @@
       {
         "id": "project-pulse-stack",
         "question": "What is Pulse built with?",
-        "answer": "Kotlin, Jetpack Compose, Wear OS, Samsung Health sensors, Supabase, Spotify, Flutter, Riverpod.",
+        "answer": "Flutter, Kotlin, Wear OS, Jetpack Compose, Samsung Health sensors, Spotify, Supabase, Riverpod.",
         "audiences": [
           "project:pulse"
         ]
@@ -1057,7 +1075,7 @@
       {
         "id": "project-lexinsights-stack",
         "question": "What is LexInsights built with?",
-        "answer": "Next.js 16 App Router, React 19, TypeScript, Zustand, Clerk auth boundary, Supabase client/storage boundary, Providerless BM25-style local legal research, PDF, DOCX, DOC, Markdown, and text extraction, Playwright smoke coverage.",
+        "answer": "Next.js 16 App Router, React 19, TypeScript, Zustand, Clerk auth boundary, Supabase client/storage boundary, Playwright smoke coverage.",
         "audiences": [
           "project:lexinsights"
         ]
@@ -1089,7 +1107,7 @@
       {
         "id": "project-qwen-ui-lab-stack",
         "question": "What is Qwen UI Lab built with?",
-        "answer": "Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Qwen3-VL optional live analysis boundary, Deterministic local-analysis fixtures, React + Tailwind export packages, Share summary routes, Playwright and Node test coverage.",
+        "answer": "Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Qwen3-VL optional live analysis boundary, React + Tailwind export packages, Playwright and Node test coverage.",
         "audiences": [
           "project:qwen-ui-lab"
         ]
@@ -1105,7 +1123,7 @@
         {
           "label": "ResQLink academic awards",
           "owner": "Record attachment",
-          "status": "Best Thesis and Best Presentation stay user-provided until certificate, thesis, program, or official page is attached."
+          "status": "Best Thesis Project and Best Presented Thesis Project stay bounded until those academic certificates, a thesis page, or an official school page is attached. Owner-side Infotech Olympics, IT Olympics, and PH Startup Challenge certificates are attached and do not close that academic gate."
         },
         {
           "label": "PalengkePay payment record",
