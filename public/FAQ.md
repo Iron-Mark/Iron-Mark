@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -17,7 +17,7 @@ Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack deve
 
 ## Who is Mark Siazon best hired as?
 
-Product designer who also ships the frontend code
+Hybrid product designer for 0→1 product work
 
 ## What contexts does Mark Siazon work best in?
 
@@ -25,7 +25,7 @@ AI workflows, mobile UX, Web3 trust flows, client launches
 
 ## How does Mark Siazon work?
 
-Prototype fast, write clearly, check before shipping
+Frames problems first; handoff-ready specs; user checks before release
 
 ## Who is Mark Siazon?
 
@@ -49,7 +49,7 @@ Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, 
 
 ## Which projects should a recruiter review first?
 
-Six to scan first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
 
 ## What should I include in a first message?
 

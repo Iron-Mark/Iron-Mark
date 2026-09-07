@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-06
+Last updated: 2026-09-07
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -24,7 +24,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 | Label | Owner | Status |
 |-------|-------|--------|
 | Notion public archive | User action | Manual body/table refresh remains outside repo automation. |
-| ResQLink academic awards | Record attachment | Best Thesis and Best Presentation stay user-provided until certificate, thesis, program, or official page is attached. |
+| ResQLink academic awards | Record attachment | Best Thesis Project and Best Presented Thesis Project stay bounded until those academic certificates, a thesis page, or an official school page is attached. Owner-side Infotech Olympics, IT Olympics, and PH Startup Challenge certificates are attached and do not close that academic gate. |
 | PalengkePay payment record | Wallet/onchain QA | Needs real wallet-signed payment, transaction hash, and sponsor durability record. |
 | GawainYah MiniPay/Celo record | Device and mainnet QA | Registry is deployed; still needs physical MiniPay QA, real MiniPay payment, proof-event record, and final Talent form confirmation. |
 
