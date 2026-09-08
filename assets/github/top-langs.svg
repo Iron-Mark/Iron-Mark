@@ -45,7 +45,9 @@
     .lang-progress{
       
     }
+    .progress-background { fill: #ddd; }
     
+          
 
           
       /* Animations */
@@ -56,9 +58,15 @@
         </style>
 
         
+        <defs>
+          
+          
+        </defs>
+        
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"
@@ -102,7 +110,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="185.53"
+          width="186.14"
           height="8"
           fill="#3178c6"
         />
@@ -110,9 +118,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="185.53"
+          x="186.14"
           y="0"
-          width="50.85"
+          width="50.27"
           height="8"
           fill="#f1e05a"
         />
@@ -120,19 +128,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="236.38"
+          x="236.41"
           y="0"
-          width="12.89"
-          height="8"
-          fill="#3572A5"
-        />
-      
-        <rect
-          mask="url(#rect-mask)"
-          data-testid="lang-progress"
-          x="249.26999999999998"
-          y="0"
-          width="12.8"
+          width="12.99"
           height="8"
           fill="#663399"
         />
@@ -140,9 +138,19 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="262.07"
+          x="249.4"
           y="0"
-          width="15.120000000000001"
+          width="12.74"
+          height="8"
+          fill="#3572A5"
+        />
+      
+        <rect
+          mask="url(#rect-mask)"
+          data-testid="lang-progress"
+          x="262.14"
+          y="0"
+          width="15.1"
           height="8"
           fill="#012456"
         />
@@ -150,9 +158,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="267.19"
+          x="267.24"
           y="0"
-          width="12.8"
+          width="12.77"
           height="8"
           fill="#e34c26"
         />
@@ -163,42 +171,42 @@
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 68.72%
+        TypeScript 68.94%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 18.84%
+        JavaScript 18.62%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" >
-      <circle cx="5" cy="6" r="5" fill="#3572A5" />
+      <circle cx="5" cy="6" r="5" fill="#663399" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Python 4.77%
+        CSS 4.81%
       </text>
     </g>
   </g></g><g transform="translate(150, 0)"><g transform="translate(0, 0)">
     <g class="stagger" >
-      <circle cx="5" cy="6" r="5" fill="#663399" />
+      <circle cx="5" cy="6" r="5" fill="#3572A5" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        CSS 4.74%
+        Python 4.72%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#012456" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        PowerShell 1.90%
+        PowerShell 1.89%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#e34c26" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        HTML 1.04%
+        HTML 1.03%
       </text>
     </g>
   </g></g>

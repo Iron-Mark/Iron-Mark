@@ -30,7 +30,6 @@ Cross-linked source index for the GitHub profile README repo. Portfolio remains 
 
 | Question | Start on portfolio/source | Full answer (GitHub FAQ) |
 |----------|---------------------------|---------------------------|
-| Who is Mark Siazon? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon |
 | Is Mark Siazon available for hire? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire |
 | What is Mark Siazon's tech stack? | https://www.marksiazon.dev/recruiter / https://www.marksiazon.dev/contact | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#what-is-mark-siazons-tech-stack |
 | Where can I see Mark Siazon's full tech stack reference? | https://www.marksiazon.dev | https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#where-can-i-see-mark-siazons-full-tech-stack-reference |
