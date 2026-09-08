@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-07T12:54:20.899888+00:00",
+  "fetchedAt": "2026-09-08T11:33:57.422913+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -159,7 +159,7 @@
         "summary": "Multi-award-winning offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "role": "Team product designer and full-stack developer",
         "timeframe": "Jun 2025 - May 2026",
-        "status": "Academic capstone and competition project",
+        "status": "Live platform and academic capstone",
         "lenses": [
           "ai",
           "mobile",
@@ -190,6 +190,11 @@
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/resqlink",
         "links": [
+          {
+            "label": "Live Site",
+            "href": "https://resqlink.org",
+            "type": "live"
+          },
           {
             "label": "Public Web Repo",
             "href": "https://github.com/UMakLumen/ResQLinkWeb",
@@ -650,16 +655,8 @@
       },
       {
         "id": "identity-who",
-        "question": "Who is Mark Siazon?",
-        "answer": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.",
-        "audiences": [
-          "recruiter"
-        ]
-      },
-      {
-        "id": "identity-iron-mark",
-        "question": "Who is Iron Mark?",
-        "answer": "Iron Mark is Mark Siazon. The same person also uses Iron-Mark and marksiazon on public profiles.",
+        "question": "Who is Mark Siazon (Iron Mark)?",
+        "answer": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches. On public profiles he also uses Iron-Mark and marksiazon.",
         "audiences": [
           "recruiter"
         ]
@@ -811,7 +808,7 @@
       {
         "id": "project-resqlink-status",
         "question": "What is the current status of ResQLink?",
-        "answer": "Academic capstone and competition project",
+        "answer": "Live platform and academic capstone",
         "audiences": [
           "project:resqlink"
         ]
@@ -1115,16 +1112,6 @@
     ],
     "proof": {
       "gates": [
-        {
-          "label": "Notion public archive",
-          "owner": "User action",
-          "status": "Manual body/table refresh remains outside repo automation."
-        },
-        {
-          "label": "ResQLink academic awards",
-          "owner": "Record attachment",
-          "status": "Best Thesis Project and Best Presented Thesis Project stay bounded until those academic certificates, a thesis page, or an official school page is attached. Owner-side Infotech Olympics, IT Olympics, and PH Startup Challenge certificates are attached and do not close that academic gate."
-        },
         {
           "label": "PalengkePay payment record",
           "owner": "Wallet/onchain QA",
