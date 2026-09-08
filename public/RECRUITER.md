@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -35,13 +35,9 @@ Work scope: Product roles, Focused client builds, Launch support, Case-study pac
 
 ### Recruiter FAQ
 
-## Who is Mark Siazon?
+## Who is Mark Siazon (Iron Mark)?
 
-Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.
-
-## Who is Iron Mark?
-
-Iron Mark is Mark Siazon. The same person also uses Iron-Mark and marksiazon on public profiles.
+Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches. On public profiles he also uses Iron-Mark and marksiazon.
 
 ## Is Mark Siazon available for hire?
 
@@ -65,7 +61,7 @@ Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podca
 |---------|------|--------|------|
 | HireProof | Product designer and full-stack builder | Live trust workflow with provider and live-check boundaries | https://www.marksiazon.dev/projects/hireproof |
 | Stellaroid Earn | Builder | Live Stellar testnet project | https://www.marksiazon.dev/projects/stellaroid-earn |
-| ResQLink | Team product designer and full-stack developer | Academic capstone and competition project | https://www.marksiazon.dev/projects/resqlink |
+| ResQLink | Team product designer and full-stack developer | Live platform and academic capstone | https://www.marksiazon.dev/projects/resqlink |
 | Good To Live Podcast Website | Designer and developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
 | FlowFit | Team member and app contributor | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
 | BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |

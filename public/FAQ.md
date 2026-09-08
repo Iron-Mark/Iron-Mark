@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -27,13 +27,9 @@ AI workflows, mobile UX, Web3 trust flows, client launches
 
 Frames problems first; handoff-ready specs; user checks before release
 
-## Who is Mark Siazon?
+## Who is Mark Siazon (Iron Mark)?
 
-Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.
-
-## Who is Iron Mark?
-
-Iron Mark is Mark Siazon. The same person also uses Iron-Mark and marksiazon on public profiles.
+Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches. On public profiles he also uses Iron-Mark and marksiazon.
 
 ## Is Mark Siazon available for hire?
 
