@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-11T11:40:05.670268+00:00",
+  "fetchedAt": "2026-09-12T11:04:03.078400+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -310,8 +310,12 @@
         "stack": [
           "React",
           "Next.js",
+          "TypeScript",
           "Tailwind CSS",
-          "Hugging Face"
+          "Capacitor",
+          "TensorFlow",
+          "Hugging Face",
+          "Zustand"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/baybayinscribe",
         "links": [
@@ -912,7 +916,7 @@
       {
         "id": "project-baybayinscribe-stack",
         "question": "What is BaybayInscribe built with?",
-        "answer": "React, Next.js, Tailwind CSS, Hugging Face.",
+        "answer": "React, Next.js, TypeScript, Tailwind CSS, Capacitor, TensorFlow, Hugging Face, Zustand.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -1115,12 +1119,12 @@
         {
           "label": "PalengkePay payment record",
           "owner": "Wallet/onchain QA",
-          "status": "Needs real wallet-signed payment, transaction hash, and sponsor durability record."
+          "status": "The public route and payment-readiness/test records are verified. The next validation milestone is a real wallet-signed payment, transaction hash, and sponsor durability record."
         },
         {
           "label": "GawainYah MiniPay/Celo record",
           "owner": "Device and mainnet QA",
-          "status": "Registry is deployed; still needs physical MiniPay QA, real MiniPay payment, proof-event record, and final Talent form confirmation."
+          "status": "The deployed registry is source-verified, with existing readiness and test coverage. The next validation milestone is physical MiniPay QA, a real MiniPay payment, its proof-event record, and final account-side form confirmation."
         }
       ],
       "byProject": {
