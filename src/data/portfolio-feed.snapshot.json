@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T11:04:03.078400+00:00",
+  "fetchedAt": "2026-09-13T12:11:30.640184+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -51,7 +51,7 @@
         "slug": "hireproof",
         "title": "HireProof",
         "summary": "AI workflow that helps applicants review suspicious job posts, recruiter messages, screenshots, and apply links before they commit time or personal data.",
-        "role": "Product designer and full-stack builder",
+        "role": "Solo Product Designer & Full-stack Builder",
         "timeframe": "2026",
         "status": "Live trust workflow with provider and live-check boundaries",
         "lenses": [
@@ -69,10 +69,18 @@
           "React",
           "TypeScript",
           "Tailwind CSS",
+          "Vercel AI SDK",
           "LangChain",
           "MCP",
-          "Vercel",
-          "v0"
+          "Upstash Redis",
+          "Framer Motion",
+          "v0",
+          "Google Vision",
+          "Slack Bot",
+          "Discord Bot",
+          "Telegram Bot",
+          "n8n",
+          "npm"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/hireproof",
         "links": [
@@ -93,13 +101,13 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "stellaroid-earn",
         "title": "Stellaroid Earn",
         "summary": "On-chain credential trust app for issuing, verifying, and paying bootcamp graduates on Stellar testnet with Soroban and Freighter.",
-        "role": "Builder",
+        "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2026",
         "status": "Live Stellar testnet project",
         "lenses": [
@@ -151,14 +159,14 @@
           }
         ],
         "proofCount": 3,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "resqlink",
         "title": "ResQLink",
         "summary": "Multi-award-winning offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "role": "Team product designer and full-stack developer",
-        "timeframe": "Jun 2025 - May 2026",
+        "timeframe": "Jun 2025 - Jul 2026",
         "status": "Live platform and academic capstone",
         "lenses": [
           "ai",
@@ -169,13 +177,15 @@
           "AI Triage",
           "Emergency Tech",
           "Offline-first",
+          "On-Device AI",
+          "Geolocation",
           "LGU UX"
         ],
         "stack": [
           "Flutter",
           "Gemini Flash",
           "MobileViTv2",
-          "BLE",
+          "BLE Mesh",
           "Appwrite",
           "Fastify",
           "Kotlin",
@@ -192,7 +202,7 @@
         "links": [
           {
             "label": "Live Site",
-            "href": "https://resqlink.org",
+            "href": "https://resqlink-ph.vercel.app/",
             "type": "live"
           },
           {
@@ -202,13 +212,13 @@
           }
         ],
         "proofCount": 0,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "good-to-live",
         "title": "Good To Live Podcast Website",
         "summary": "Full website experience for a podcast platform featuring Filipino creatives and entrepreneurs, built from strategy through UI and launch.",
-        "role": "Designer and developer",
+        "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2025",
         "status": "Live client project",
         "lenses": [
@@ -239,13 +249,13 @@
           }
         ],
         "proofCount": 0,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "flowfit",
         "title": "FlowFit",
         "summary": "Wear OS and Android fitness app with heart-rate monitoring, IBI data, activity, sleep, nutrition, mood tracking, and Supabase sync.",
-        "role": "Team member and app contributor",
+        "role": "Full-stack Developer (Frontend-Focused) & Maintainer",
         "timeframe": "Nov 2025",
         "status": "Hackathon-winning project with a live web app and signed Android build",
         "lenses": [
@@ -326,15 +336,15 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "kudlit",
         "title": "Kudlit",
         "summary": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
-        "role": "Flutter app contributor and UI/UX hardening lead",
+        "role": "Flutter Developer & UI/UX Lead",
         "timeframe": "Apr 2026 - May 2026",
-        "status": "Android release v1.0.0 with web QA caveats",
+        "status": "Android release v1.0.0, some checks still device-only",
         "lenses": [
           "ai",
           "mobile",
@@ -369,13 +379,13 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "pulse",
         "title": "Pulse",
-        "summary": "Phone and watch running platform with GPS sessions, heart-rate telemetry, music-aware workouts, and a store-ready Flutter app live on the web.",
-        "role": "Mobile app contributor and release QA lead",
+        "summary": "Phone and watch running platform with pace-locked music, Galaxy Watch heart context, and Beats and streaks, in a store-ready Flutter app with a live web beta.",
+        "role": "Flutter Developer (Full-stack) & Maintainer",
         "timeframe": "Mar 2026 - Jul 2026",
         "status": "Store-ready release candidate with a live web app and signed Android builds",
         "lenses": [
@@ -392,11 +402,12 @@
           "Flutter",
           "Kotlin",
           "Wear OS",
-          "Jetpack Compose",
+          "Galaxy Watch",
           "Samsung Health sensors",
           "Spotify",
           "Supabase",
-          "Riverpod"
+          "Riverpod",
+          "Jetpack Compose"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/pulse",
         "links": [
@@ -455,13 +466,13 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-06-10"
+        "lastVerified": "2026-09-13"
       },
       {
         "slug": "gawainyah",
         "title": "GawainYah",
         "summary": "MiniPay-native receipt scanner that charges per task, verifies payment before AI work, and records a Celo proof receipt for completed jobs.",
-        "role": "Product builder and production-readiness lead",
+        "role": "Full-stack product builder",
         "timeframe": "May 2026",
         "status": "Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending",
         "lenses": [
@@ -740,7 +751,7 @@
       {
         "id": "project-hireproof-role",
         "question": "What was Mark Siazon's role on HireProof?",
-        "answer": "Product designer and full-stack builder. Top outcome: Shipped surface, Live product + docs.",
+        "answer": "Solo Product Designer & Full-stack Builder. Top outcome: Shipped surface, Live product + docs.",
         "audiences": [
           "project:hireproof"
         ]
@@ -756,7 +767,7 @@
       {
         "id": "project-hireproof-stack",
         "question": "What is HireProof built with?",
-        "answer": "Next.js, React, TypeScript, Tailwind CSS, LangChain, MCP, Vercel, v0.",
+        "answer": "Next.js, React, TypeScript, Tailwind CSS, Vercel AI SDK, LangChain, MCP, Upstash Redis, Framer Motion, v0, Google Vision, Slack Bot, Discord Bot, Telegram Bot, n8n, npm.",
         "audiences": [
           "project:hireproof"
         ]
@@ -772,7 +783,7 @@
       {
         "id": "project-stellaroid-earn-role",
         "question": "What was Mark Siazon's role on Stellaroid Earn?",
-        "answer": "Builder. Top outcome: Public review path, www.stellaroid.tech.",
+        "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Public review path, www.stellaroid.tech.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -820,7 +831,7 @@
       {
         "id": "project-resqlink-stack",
         "question": "What is ResQLink built with?",
-        "answer": "Flutter, Gemini Flash, MobileViTv2, BLE, Appwrite, Fastify, Kotlin, Firebase, Dart, Vite, React, TypeScript, Tailwind CSS, shadcn/ui, SQLite.",
+        "answer": "Flutter, Gemini Flash, MobileViTv2, BLE Mesh, Appwrite, Fastify, Kotlin, Firebase, Dart, Vite, React, TypeScript, Tailwind CSS, shadcn/ui, SQLite.",
         "audiences": [
           "project:resqlink"
         ]
@@ -836,7 +847,7 @@
       {
         "id": "project-good-to-live-role",
         "question": "What was Mark Siazon's role on Good To Live Podcast Website?",
-        "answer": "Designer and developer. Top outcome: Launch record, Public website.",
+        "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Launch record, Public website.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -868,7 +879,7 @@
       {
         "id": "project-flowfit-role",
         "question": "What was Mark Siazon's role on FlowFit?",
-        "answer": "Team member and app contributor. Top outcome: Platform breadth, Watch + phone + web.",
+        "answer": "Full-stack Developer (Frontend-Focused) & Maintainer. Top outcome: Platform breadth, Watch + phone + web.",
         "audiences": [
           "project:flowfit"
         ]
@@ -932,7 +943,7 @@
       {
         "id": "project-kudlit-role",
         "question": "What was Mark Siazon's role on Kudlit?",
-        "answer": "Flutter app contributor and UI/UX hardening lead. Top outcome: Public artifact, Android APK release.",
+        "answer": "Flutter Developer & UI/UX Lead. Top outcome: Public artifact, Android APK release.",
         "audiences": [
           "project:kudlit"
         ]
@@ -940,7 +951,7 @@
       {
         "id": "project-kudlit-status",
         "question": "What is the current status of Kudlit?",
-        "answer": "Android release v1.0.0 with web QA caveats",
+        "answer": "Android release v1.0.0, some checks still device-only",
         "audiences": [
           "project:kudlit"
         ]
@@ -956,7 +967,7 @@
       {
         "id": "project-pulse-what",
         "question": "What is Pulse?",
-        "answer": "Pulse grew from a Kotlin Android/Wear OS stack into a store-ready Flutter app. The v0.2.0-store-rc11 release candidate ships signed Android builds hardened by a wide code review, and the hosted web app is live at apps.marksiazon.dev/pulsify.",
+        "answer": "Pulse is a running companion that spans the wrist and the phone: music locked to your pace zone, live GPS and session history, and heart context read from a Galaxy Watch. Beats, badges, and streaks turn each finished run into a reason to come back. It started as a Kotlin Android and Wear OS build and now ships as a Flutter app with signed Android releases and a live web beta.",
         "audiences": [
           "project:pulse"
         ]
@@ -964,7 +975,7 @@
       {
         "id": "project-pulse-role",
         "question": "What was Mark Siazon's role on Pulse?",
-        "answer": "Mobile app contributor and release QA lead. Top outcome: Store readiness, Signed release candidate.",
+        "answer": "Flutter Developer (Full-stack) & Maintainer. Top outcome: Store readiness, Signed release candidate.",
         "audiences": [
           "project:pulse"
         ]
@@ -980,7 +991,7 @@
       {
         "id": "project-pulse-stack",
         "question": "What is Pulse built with?",
-        "answer": "Flutter, Kotlin, Wear OS, Jetpack Compose, Samsung Health sensors, Spotify, Supabase, Riverpod.",
+        "answer": "Flutter, Kotlin, Wear OS, Galaxy Watch, Samsung Health sensors, Spotify, Supabase, Riverpod, Jetpack Compose.",
         "audiences": [
           "project:pulse"
         ]
@@ -1028,7 +1039,7 @@
       {
         "id": "project-gawainyah-role",
         "question": "What was Mark Siazon's role on GawainYah?",
-        "answer": "Product builder and production-readiness lead. Top outcome: MVP shape, Pay per receipt task.",
+        "answer": "Full-stack product builder. Top outcome: MVP shape, Pay per receipt task.",
         "audiences": [
           "project:gawainyah"
         ]
@@ -1468,7 +1479,7 @@
         ]
       },
       {
-        "title": "1st Runner-up - UMak 14th IT Olympics, Android Category (2025)",
+        "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android Category (2025)",
         "tags": [
           "Award",
           "Development"
