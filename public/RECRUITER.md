@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-12
+Last updated: 2026-09-13
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -59,16 +59,16 @@ Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podca
 
 | Project | Role | Status | Link |
 |---------|------|--------|------|
-| HireProof | Product designer and full-stack builder | Live trust workflow with provider and live-check boundaries | https://www.marksiazon.dev/projects/hireproof |
-| Stellaroid Earn | Builder | Live Stellar testnet project | https://www.marksiazon.dev/projects/stellaroid-earn |
+| HireProof | Solo Product Designer & Full-stack Builder | Live trust workflow with provider and live-check boundaries | https://www.marksiazon.dev/projects/hireproof |
+| Stellaroid Earn | Solo Product Designer & Full-stack Developer | Live Stellar testnet project | https://www.marksiazon.dev/projects/stellaroid-earn |
 | ResQLink | Team product designer and full-stack developer | Live platform and academic capstone | https://www.marksiazon.dev/projects/resqlink |
-| Good To Live Podcast Website | Designer and developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
-| FlowFit | Team member and app contributor | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
+| Good To Live Podcast Website | Solo Product Designer & Full-stack Developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
+| FlowFit | Full-stack Developer (Frontend-Focused) & Maintainer | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
 | BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |
-| Kudlit | Flutter app contributor and UI/UX hardening lead | Android release v1.0.0 with web QA caveats | https://www.marksiazon.dev/projects/kudlit |
-| Pulse | Mobile app contributor and release QA lead | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |
+| Kudlit | Flutter Developer & UI/UX Lead | Android release v1.0.0, some checks still device-only | https://www.marksiazon.dev/projects/kudlit |
+| Pulse | Flutter Developer (Full-stack) & Maintainer | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |
 | PalengkePay | Fintech PWA contributor | Live testnet PWA with pending wallet-signed chain smoke | https://www.marksiazon.dev/projects/palengkepay |
-| GawainYah | Product builder and production-readiness lead | Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending | https://www.marksiazon.dev/projects/gawainyah |
+| GawainYah | Full-stack product builder | Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending | https://www.marksiazon.dev/projects/gawainyah |
 | LexInsights | Full-stack product builder | Production v0.5.2 ready at 8702afd | https://www.marksiazon.dev/projects/lexinsights |
 | Qwen UI Lab | Full-stack product builder | Live local-analysis deployment with Qwen live mode gated off | https://www.marksiazon.dev/projects/qwen-ui-lab |
 
