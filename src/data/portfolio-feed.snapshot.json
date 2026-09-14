@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-13T12:11:30.640184+00:00",
+  "fetchedAt": "2026-09-14T13:09:40.048242+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -106,7 +106,7 @@
       {
         "slug": "stellaroid-earn",
         "title": "Stellaroid Earn",
-        "summary": "On-chain credential trust app for issuing, verifying, and paying bootcamp graduates on Stellar testnet with Soroban and Freighter.",
+        "summary": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and an inspectable transaction trail.",
         "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2026",
         "status": "Live Stellar testnet project",
@@ -164,7 +164,7 @@
       {
         "slug": "resqlink",
         "title": "ResQLink",
-        "summary": "Multi-award-winning offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
+        "summary": "Offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "role": "Team product designer and full-stack developer",
         "timeframe": "Jun 2025 - Jul 2026",
         "status": "Live platform and academic capstone",
@@ -344,7 +344,7 @@
         "summary": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
         "role": "Flutter Developer & UI/UX Lead",
         "timeframe": "Apr 2026 - May 2026",
-        "status": "Android release v1.0.0, some checks still device-only",
+        "status": "Android release v1.0.0 and a public landing page, some checks still device-only",
         "lenses": [
           "ai",
           "mobile",
@@ -368,6 +368,11 @@
         "canonicalUrl": "https://www.marksiazon.dev/projects/kudlit",
         "links": [
           {
+            "label": "Landing Page",
+            "href": "https://iron-mark.github.io/Hackathon-DevKada_G4G/",
+            "type": "live"
+          },
+          {
             "label": "Repository",
             "href": "https://github.com/ACSADians/kudlit-app",
             "type": "github"
@@ -376,10 +381,15 @@
             "label": "Android Release",
             "href": "https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0",
             "type": "proof"
+          },
+          {
+            "label": "Browser Build",
+            "href": "https://iron-mark.github.io/Hackathon-DevKada_G4G/app/",
+            "type": "proof"
           }
         ],
-        "proofCount": 1,
-        "lastVerified": "2026-09-13"
+        "proofCount": 2,
+        "lastVerified": "2026-09-14"
       },
       {
         "slug": "pulse",
@@ -743,7 +753,7 @@
       {
         "id": "project-hireproof-what",
         "question": "What is HireProof?",
-        "answer": "HireProof is positioned as a trust and safety product for job seekers. The project turns scam-detection anxiety into a source-backed review flow with clear risk notes and next steps.",
+        "answer": "Job seekers have to judge fast whether an opportunity is legitimate, usually on gut feel. HireProof turns that call into a structured review: source-backed checks on a job post, recruiter message, or apply link, with clear risk notes and a next step.",
         "audiences": [
           "project:hireproof"
         ]
@@ -775,7 +785,7 @@
       {
         "id": "project-stellaroid-earn-what",
         "question": "What is Stellaroid Earn?",
-        "answer": "Stellaroid Earn turns credential and graduate payment records into a public Stellar testnet flow. The page emphasizes Top 5 bootcamp context, transaction records, blockchain UX, and payment trust without presenting it as a production finance product.",
+        "answer": "Bootcamp credentials and graduate payments are hard to verify when records live in private files, screenshots, and manual admin steps. Stellaroid Earn puts both on a public Stellar testnet flow an employer can inspect and pay against. It is a working build, not a production finance product.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -807,7 +817,7 @@
       {
         "id": "project-resqlink-what",
         "question": "What is ResQLink?",
-        "answer": "ResQLink is an offline disaster-response platform for Philippine LGUs: BLE mesh networking, real-time coordination, on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1, plus one-tap SOS, AI triage, proximity dispatch, I Am Safe acknowledgements, and LGU command workflows for citizens, rescuers, and operators.",
+        "answer": "Disaster response breaks down for Philippine LGUs when weak connectivity and incomplete reports cut citizens, rescuers, and command centers off from each other. ResQLink keeps them coordinated offline through BLE mesh networking, one-tap SOS, proximity dispatch, I Am Safe acknowledgements, and on-device AI triage (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "audiences": [
           "project:resqlink"
         ]
@@ -839,7 +849,7 @@
       {
         "id": "project-good-to-live-what",
         "question": "What is Good To Live Podcast Website?",
-        "answer": "Good To Live demonstrates client-facing delivery: strategy, UI design, development, SEO, public launch execution, route/feed/sitemap coverage, and production handoff for a media-oriented website.",
+        "answer": "The podcast needed a credible web presence that could carry its guests, stories, and brand positioning. Good To Live is that site end to end — strategy, UI design, build, SEO, and public launch, handed to the client in production.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -871,7 +881,7 @@
       {
         "id": "project-flowfit-what",
         "question": "What is FlowFit?",
-        "answer": "FlowFit is a cross-device health and fitness project that combines a Wear OS watch app with an Android companion app. The page focuses on wearable data, product adaptation, and child-friendly health tracking.",
+        "answer": "Health tracking feels abstract to young users, and raw sensor output needs somewhere to become useful feedback. FlowFit splits that across two apps: a Wear OS watch app that captures the session, and an Android companion that turns heart-rate and activity data into something a kid can act on.",
         "audiences": [
           "project:flowfit"
         ]
@@ -903,7 +913,7 @@
       {
         "id": "project-baybayinscribe-what",
         "question": "What is BaybayInscribe?",
-        "answer": "BaybayInscribe combines education, culture, and AI-assisted learning. The page highlights UI/UX direction, responsive front-end work, and competition recognition.",
+        "answer": "Baybayin matters culturally but is hard to approach without guided, interactive practice. BaybayInscribe pairs lessons with ML character recognition, so a learner can write a glyph, have it read back, and see the translation — a competition-recognised build.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -935,7 +945,7 @@
       {
         "id": "project-kudlit-what",
         "question": "What is Kudlit?",
-        "answer": "Kudlit is a Baybayin discovery app for learners who want one mobile-first place to scan glyphs, translate Filipino text, practice lessons, and ask a companion for help.",
+        "answer": "Baybayin learners usually juggle separate tools for recognition, translation, lessons, and explanation. Kudlit folds all four into one mobile path — scan a glyph, translate Filipino text, work through lessons, and ask Butty when something does not land.",
         "audiences": [
           "project:kudlit"
         ]
@@ -951,7 +961,7 @@
       {
         "id": "project-kudlit-status",
         "question": "What is the current status of Kudlit?",
-        "answer": "Android release v1.0.0, some checks still device-only",
+        "answer": "Android release v1.0.0 and a public landing page, some checks still device-only",
         "audiences": [
           "project:kudlit"
         ]
@@ -967,7 +977,7 @@
       {
         "id": "project-pulse-what",
         "question": "What is Pulse?",
-        "answer": "Pulse is a running companion that spans the wrist and the phone: music locked to your pace zone, live GPS and session history, and heart context read from a Galaxy Watch. Beats, badges, and streaks turn each finished run into a reason to come back. It started as a Kotlin Android and Wear OS build and now ships as a Flutter app with signed Android releases and a live web beta.",
+        "answer": "Most running apps count distance without reacting to effort, music, or wearable data. Pulse builds the loop the other way: music locked to your pace zone, live GPS and session history, and heart context read from a Galaxy Watch, with Beats, badges, and streaks turning each finished run into a reason to come back. It started as a Kotlin Android and Wear OS build and now ships as a Flutter app with signed Android releases and a live web beta.",
         "audiences": [
           "project:pulse"
         ]
@@ -999,7 +1009,7 @@
       {
         "id": "project-palengkepay-what",
         "question": "What is PalengkePay?",
-        "answer": "PalengkePay frames palengke transactions through testnet payment-flow UI, receipt screens, and vendor records. The page presents contributor-scoped work from a team-delivered PWA, with shipped UI, deployed routes, and still-pending checks for wallet-signed payment and real-device validation.",
+        "answer": "Wet-market vendors run on cash, paper utang, and informal trust, which leaves receipts, credit history, and repayment hard to prove. PalengkePay puts those on a Stellar PWA with QR checkout, receipt screens, and vendor records — a team build, contributor-scoped, with wallet-signed payment and real-device validation still pending.",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1031,7 +1041,7 @@
       {
         "id": "project-gawainyah-what",
         "question": "What is GawainYah?",
-        "answer": "GawainYah is a MiniPay pay-per-task MVP for tiny AI jobs: add a receipt, pay a small stablecoin fee, get structured expense data back, and keep a Celo proof receipt. It runs on Celo mainnet in six languages and takes more than one stablecoin, with every payment verified server-side before the AI runs. The real-device MiniPay QA, one real payment, and the on-chain proof event stay pending until they are run.",
+        "answer": "Small merchants and freelancers often need one useful expense output, but most AI tools want an account, a subscription, or a desktop. GawainYah charges per task instead: add a receipt, pay a small stablecoin fee, get structured expense data and a Celo proof receipt back. It runs on Celo mainnet in six languages and takes more than one stablecoin, with every payment verified server-side before the AI runs. Real-device MiniPay QA, one real payment, and the on-chain proof event stay pending until they are run.",
         "audiences": [
           "project:gawainyah"
         ]
@@ -1063,7 +1073,7 @@
       {
         "id": "project-lexinsights-what",
         "question": "What is LexInsights?",
-        "answer": "LexInsights turns Philippine legal research and compliance review into a usable chat workspace. The 2026-07-06 live check found production serving v0.5.2 from Iron-Mark/Hackathon-LexInsights at 8702afd, with lexiph.vercel.app treated as the current app and lexinsights.vercel.app kept as legacy showcase context.",
+        "answer": "Legal research demos fall over the moment a remote model or vector store is unavailable. LexInsights runs Philippine statute retrieval locally instead, ingesting documents for source-aware answers with stated limits, and keeping remote RAG as an optional fallback.",
         "audiences": [
           "project:lexinsights"
         ]
@@ -1095,7 +1105,7 @@
       {
         "id": "project-qwen-ui-lab-what",
         "question": "What is Qwen UI Lab?",
-        "answer": "Qwen UI Lab is a live developer tool for uploading UI screenshots, reviewing detected structure, refining boxes, previewing a component draft, and downloading an export package. The 2026-07-06 live health check found qwen-ui-lab.vercel.app in demo/local-analysis mode with no public API key exposure and live Qwen analysis disabled by default.",
+        "answer": "A generated screen is hard to trust when it arrives finished, with nothing to inspect. Qwen UI Lab keeps every step open: upload a screenshot, review and refine the detected boxes, preview the component draft, then download a React and Tailwind export package.",
         "audiences": [
           "project:qwen-ui-lab"
         ]
@@ -1179,6 +1189,10 @@
           {
             "label": "Android Release",
             "href": "https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0"
+          },
+          {
+            "label": "Browser Build",
+            "href": "https://iron-mark.github.io/Hackathon-DevKada_G4G/app/"
           }
         ],
         "pulse": [

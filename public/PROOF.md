@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-13
+Last updated: 2026-09-14
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -50,6 +50,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 #### Kudlit (https://www.marksiazon.dev/projects/kudlit)
 
 - [Android Release](https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0)
+- [Browser Build](https://iron-mark.github.io/Hackathon-DevKada_G4G/app/)
 
 #### LexInsights (https://www.marksiazon.dev/projects/lexinsights)
 
