@@ -66,7 +66,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add llms-index.json robots.txt sitemap.xml public/FAQ.md public/PROOF.md public/RECRUITER.md src/data/portfolio-feed.snapshot.json public/llms-full.txt public/llms-ctx-full.txt public/schema/llms-index.schema.json public/schema/person.jsonld public/schema/faq.jsonld docs/index.html src/portfolio-sync/marksiazon-dev-llms-snippet.md src/portfolio-sync/faq-crosslinks.md
-          git diff --staged --quiet && echo "No date changes" && exit 0
+          # daily_freshness may regenerate identical content; skip PR when nothing
+          # actually differs so we do not burn check/merge minutes on a no-op day.
+          if git diff --staged --quiet; then
+            echo "No freshness content changes vs HEAD; skipping freshness PR (no-op)."
+            exit 0
+          fi
           git switch -c "$branch"
           git commit -m "$title"
           # Recreate the bot-owned branch each run. actions/checkout only fetches the
@@ -132,9 +137,10 @@ jobs:
             echo "::error::Required checks on freshness PR #$pr did not finish within 5 minutes; leaving it for manual merge."
             exit 1
           fi
-          # --admin stays: it bypasses the strict "branch up to date" rule.
-          if gh pr merge "$pr" --merge --admin; then
-            echo "Merged PR #$pr into dev."
+          # Squash keeps daily freshness bumps as one commit on dev (less history
+          # noise than merge commits). --admin bypasses "branch up to date".
+          if gh pr merge "$pr" --squash --admin; then
+            echo "Squash-merged PR #$pr into dev."
           else
             echo "::error::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
             exit 1
