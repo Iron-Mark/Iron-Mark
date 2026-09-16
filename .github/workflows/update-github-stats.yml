@@ -175,7 +175,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/github/stats.svg assets/github/top-langs.svg assets/github/activity-graph.svg assets/github/streak.svg
-          git diff --staged --quiet && echo "No changes" && exit 0
+          # Keep-last-good / safety gates often restore every card; skip the PR
+          # entirely so a no-op day does not open checks or burn merge minutes.
+          if git diff --staged --quiet; then
+            echo "No SVG content changes vs HEAD; skipping stats PR (no-op)."
+            exit 0
+          fi
           git switch -c "$branch"
           git commit -m "$title"
           # Recreate the bot-owned branch from scratch each run. actions/checkout only
@@ -240,9 +245,10 @@ jobs:
             echo "::error::Required checks on stats PR #$pr did not finish within 5 minutes; leaving it for manual merge."
             exit 1
           fi
-          # --admin stays: it bypasses the strict "branch up to date" rule.
-          if gh pr merge "$pr" --merge --admin; then
-            echo "Merged PR #$pr into dev."
+          # Squash keeps daily SVG refreshes as one commit on dev (less history
+          # noise than merge commits). --admin bypasses "branch up to date".
+          if gh pr merge "$pr" --squash --admin; then
+            echo "Squash-merged PR #$pr into dev."
           else
             echo "::error::Auto-merge of PR #$pr failed; leaving it for manual merge (STATS_TOKEN may need repo/public_repo scope)."
             exit 1

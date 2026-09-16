@@ -46,7 +46,9 @@ jobs:
       - uses: actions/checkout@v5
         with:
           ref: dev
-          fetch-depth: 0
+          # Tip comparison only - no need for full history (identity-guard keeps
+          # fetch-depth: 0 on PRs). Depth 1 + explicit tip fetch stays shallow-safe.
+          fetch-depth: 1
 
       - uses: actions/setup-python@v6
         with:
@@ -55,8 +57,11 @@ jobs:
       - name: Decide whether dev can be promoted unattended
         id: scope
         run: |
-          git fetch origin main dev --quiet
-          changed=$(git diff --name-only origin/main...origin/dev)
+          # Two-dot tip diff works with shallow clones; three-dot needs merge-base
+          # history we deliberately do not fetch here.
+          git fetch --depth=1 origin main:refs/remotes/origin/main
+          git fetch --depth=1 origin dev:refs/remotes/origin/dev
+          changed=$(git diff --name-only origin/main origin/dev)
           if [ -z "$changed" ]; then
             echo "main is already current with dev; nothing to promote."
             echo "promote=false" >> "$GITHUB_OUTPUT"
@@ -151,7 +156,7 @@ jobs:
           # expected/pending required checks.
           merged=false
           for _ in $(seq 1 40); do
-            if out=$(gh pr merge "$pr" --merge --admin --delete-branch=false 2>&1); then
+            if out=$(gh pr merge "$pr" --squash --admin --delete-branch=false 2>&1); then
               merged=true
               break
             fi
@@ -182,7 +187,8 @@ jobs:
           # there. The four cards are self-contained, so they can cross to main
           # by themselves; everything else still waits for review.
           cards=$(python3 src/scripts/check_promotion_scope.py --print-cards)
-          git fetch origin main dev --quiet
+          git fetch --depth=1 origin main:refs/remotes/origin/main
+          git fetch --depth=1 origin dev:refs/remotes/origin/dev
           if git diff --quiet origin/main origin/dev -- $cards; then
             echo "Profile cards on main already match dev; nothing to promote."
             exit 0
@@ -248,8 +254,8 @@ jobs:
             echo "::error::Required checks on card promotion PR #$pr did not finish within 5 minutes; leaving it for manual merge."
             exit 1
           fi
-          if gh pr merge "$pr" --merge --admin --delete-branch=false; then
-            echo "Promoted the profile cards to main via PR #$pr."
+          if gh pr merge "$pr" --squash --admin --delete-branch=false; then
+            echo "Squash-promoted the profile cards to main via PR #$pr."
             { echo "## Profile cards promoted"; echo; echo "Merged PR #$pr with the refreshed stat cards only."; } >> "$GITHUB_STEP_SUMMARY"
           else
             echo "::error::Card promotion PR #$pr could not be merged; the profile will stay stale until it is."
