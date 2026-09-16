@@ -136,5 +136,6 @@ Extra Actions usage is enabled as a safety buffer. Keep billed minutes predictab
 
 **Workflow hygiene:**
 
+- Prefer **squash** for bot automation PRs (stats, freshness, Sync Dev promote) so daily refreshes land as one commit each instead of merge-commit noise. Repo squash merge is enabled; human Sync Dev PRs may still use merge commits when opened by hand.
 - Avoid chaining `workflow_dispatch` on **Update GitHub Stats**, **Bump index dates**, and **Promote automation to main** in one session — each run can trigger full PR-check and push-CI cascades.
 - Push-triggered workflows now skip redundant work (Pages deploy on non-Pages merges, validate on SVG-only pushes); daily automation still updates stats and freshness on schedule.
