@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -23,7 +23,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 | Label | Owner | Status |
 |-------|-------|--------|
-| PalengkePay payment record | Wallet/onchain QA | The public route and payment-readiness/test records are verified. The next validation milestone is a real wallet-signed payment, transaction hash, and sponsor durability record. |
+| PalengkePay payment record | Wallet/onchain QA | Mainnet and testnet PWAs, health checks, and Soroban contract deployments are verified from PalengkePay-Pro. The next validation milestone is wallet-signed payment, onchain transaction hash, sponsor durability, and real-device mobile wallet validation. |
 | GawainYah MiniPay/Celo record | Device and mainnet QA | The deployed registry is source-verified, with existing readiness and test coverage. The next validation milestone is physical MiniPay QA, a real MiniPay payment, its proof-event record, and final account-side form confirmation. |
 
 ### Proof by project
@@ -31,6 +31,11 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 #### BaybayInscribe (https://www.marksiazon.dev/projects/baybayinscribe)
 
 - [Model Reference](https://huggingface.co/gilas/baybayinscribe)
+
+#### Calbeans Coffee (https://www.marksiazon.dev/projects/calbeans-coffee)
+
+- [Legacy Repository](https://github.com/salig-dev/calbeans)
+- [Legacy Deploy](https://calbeans.vercel.app/)
 
 #### FlowFit (https://www.marksiazon.dev/projects/flowfit)
 
@@ -47,6 +52,10 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 - [Documentation](https://hireproof.tech/docs)
 
+#### Kopi Kount (https://www.marksiazon.dev/projects/kopi-kount)
+
+- [Original Repository](https://github.com/salig-dev/kopi-kount)
+
 #### Kudlit (https://www.marksiazon.dev/projects/kudlit)
 
 - [Android Release](https://github.com/ACSADians/kudlit-app/releases/tag/v1.0.0)
@@ -58,7 +67,9 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 #### PalengkePay (https://www.marksiazon.dev/projects/palengkepay)
 
-- [MVP Walkthrough](https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1)
+- [Testnet PWA](https://testnet.palengkepay.com)
+- [MVP Walkthrough](https://www.youtube.com/watch?v=HQw2ua1lS94)
+- [Contributor Commits](https://github.com/polsalarm/PalengkePay-Pro/commits?author=Iron-Mark)
 
 #### Pulse (https://www.marksiazon.dev/projects/pulse)
 
