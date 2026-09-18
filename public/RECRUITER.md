@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -23,15 +23,15 @@ Product designer & full-stack developer in the Philippines who ships case-study-
 
 ### Availability
 
-**Open for selective product design, frontend, and AI workflow opportunities**
+**Open to product design, frontend, and AI workflow roles**
 
-Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.
+Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.
 
 First message: Share the role, problem, timeline, and work you want reviewed.
 
 Note: No public booking link is published; use the contact form so private details stay server-side.
 
-Work scope: Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, Mobile UX cleanup
+Work scope: Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, Mobile UX cleanup
 
 ### Recruiter FAQ
 
@@ -41,7 +41,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 
@@ -67,10 +67,12 @@ Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podca
 | BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |
 | Kudlit | Flutter Developer & UI/UX Lead | Android release v1.0.0 and a public landing page, some checks still device-only | https://www.marksiazon.dev/projects/kudlit |
 | Pulse | Flutter Developer (Full-stack) & Maintainer | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |
-| PalengkePay | Fintech PWA contributor | Live testnet PWA with pending wallet-signed chain smoke | https://www.marksiazon.dev/projects/palengkepay |
+| PalengkePay | Fintech PWA contributor | Live mainnet and testnet PWAs with pending wallet-signed chain smoke | https://www.marksiazon.dev/projects/palengkepay |
 | GawainYah | Full-stack product builder | Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending | https://www.marksiazon.dev/projects/gawainyah |
 | LexInsights | Full-stack product builder | Production v0.5.2 ready at 8702afd | https://www.marksiazon.dev/projects/lexinsights |
 | Qwen UI Lab | Full-stack product builder | Live local-analysis deployment with Qwen live mode gated off | https://www.marksiazon.dev/projects/qwen-ui-lab |
+| Kopi Kount | Frontend dev (Team) | Live static promo site on Vercel | https://www.marksiazon.dev/projects/kopi-kount |
+| Calbeans Coffee | Frontend dev (Team) | Live static promo on Vercel; PHP course stack on legacy repo | https://www.marksiazon.dev/projects/calbeans-coffee |
 
 <!-- END DERIVED: recruiter -->
 

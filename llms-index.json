@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/Iron-Mark/Iron-Mark/main/public/schema/llms-index.schema.json",
   "version": "1.0.0",
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "contentRoot": "public/",
   "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
   "citation": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
@@ -81,13 +81,13 @@
     "remote": true,
     "contact": "https://www.marksiazon.dev/contact",
     "recruiterBrief": "https://www.marksiazon.dev/recruiter",
-    "headline": "Open for selective product design, frontend, and AI workflow opportunities",
-    "summary": "Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.",
+    "headline": "Open to product design, frontend, and AI workflow roles",
+    "summary": "Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.",
     "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
     "note": "No public booking link is published; use the contact form so private details stay server-side.",
     "workScope": [
       "Product roles",
-      "Focused client builds",
+      "Client builds",
       "Launch support",
       "Case-study packages",
       "AI workflow prototypes",
@@ -384,7 +384,7 @@
     "answerSnippets": [
       {
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
+        "answer": "Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
         "sources": [
           "https://www.marksiazon.dev/recruiter",
           "https://www.marksiazon.dev/contact"

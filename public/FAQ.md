@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -33,7 +33,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 
@@ -61,7 +61,7 @@ Private recipient and sender addresses stay in server-side environment variables
 
 ## What work is Mark Siazon open to?
 
-Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
+Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
 
 <!-- END DERIVED: faq -->
 
