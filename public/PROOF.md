@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-17
+Last updated: 2026-09-19
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -23,7 +23,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 | Label | Owner | Status |
 |-------|-------|--------|
-| PalengkePay payment record | Wallet/onchain QA | The public route and payment-readiness/test records are verified. The next validation milestone is a real wallet-signed payment, transaction hash, and sponsor durability record. |
+| PalengkePay payment record | Wallet/onchain QA | Mainnet and testnet PWAs, health checks, and Soroban contract deployments are verified from PalengkePay-Pro. The next validation milestone is wallet-signed payment, onchain transaction hash, sponsor durability, and real-device mobile wallet validation. |
 | GawainYah MiniPay/Celo record | Device and mainnet QA | The deployed registry is source-verified, with existing readiness and test coverage. The next validation milestone is physical MiniPay QA, a real MiniPay payment, its proof-event record, and final account-side form confirmation. |
 
 ### Proof by project
@@ -32,10 +32,19 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 - [Model Reference](https://huggingface.co/gilas/baybayinscribe)
 
+#### Calbeans Coffee (https://www.marksiazon.dev/projects/calbeans-coffee)
+
+- [Legacy Repository](https://github.com/salig-dev/calbeans)
+- [Legacy Deploy](https://calbeans.vercel.app/)
+
 #### FlowFit (https://www.marksiazon.dev/projects/flowfit)
 
 - [Signed Android Release](https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21)
 - [Demo Video](https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing)
+
+#### Frontend Mentor Lab (https://www.marksiazon.dev/projects/frontend-mentor-lab)
+
+- [FM Profile](https://www.frontendmentor.io/profile/Iron-Mark)
 
 #### GawainYah (https://www.marksiazon.dev/projects/gawainyah)
 
@@ -43,9 +52,18 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 - [Runtime Origin](https://gawainyah-minipay.vercel.app)
 - [Registry Source Verification](https://sourcify.dev/server/repo-ui/42220/0xfee6C135690E10ea814212aA9Aefd97508A0FC92)
 
+#### Heron's Nest (https://www.marksiazon.dev/projects/herons-nest)
+
+- [Release v1.0](https://github.com/salig-dev/HeronsNest/releases/tag/v1.0)
+- [Contributor Commits](https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark)
+
 #### HireProof (https://www.marksiazon.dev/projects/hireproof)
 
 - [Documentation](https://hireproof.tech/docs)
+
+#### Kopi Kount (https://www.marksiazon.dev/projects/kopi-kount)
+
+- [Original Repository](https://github.com/salig-dev/kopi-kount)
 
 #### Kudlit (https://www.marksiazon.dev/projects/kudlit)
 
@@ -58,7 +76,9 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 #### PalengkePay (https://www.marksiazon.dev/projects/palengkepay)
 
-- [MVP Walkthrough](https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1)
+- [Testnet PWA](https://testnet.palengkepay.com)
+- [MVP Walkthrough](https://www.youtube.com/watch?v=HQw2ua1lS94)
+- [Contributor Commits](https://github.com/polsalarm/PalengkePay-Pro/commits?author=Iron-Mark)
 
 #### Pulse (https://www.marksiazon.dev/projects/pulse)
 

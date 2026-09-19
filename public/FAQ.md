@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-09-17
+Last updated: 2026-09-19
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -33,7 +33,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 
@@ -45,7 +45,7 @@ Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, 
 
 ## Which projects should a recruiter review first?
 
-Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+Review these six first: HireProof (AI trust and safety product design) at https://www.marksiazon.dev/projects/hireproof; Stellaroid Earn (Web3 credential review and trust UX) at https://www.marksiazon.dev/projects/stellaroid-earn; ResQLink (Multi-award winning thesis project) at https://www.marksiazon.dev/projects/resqlink; Good To Live Podcast Website (Client web launch and SEO delivery) at https://www.marksiazon.dev/projects/good-to-live; PalengkePay (Fintech PWA contribution on mainnet and testnet Stellar rails) at https://www.marksiazon.dev/projects/palengkepay; GawainYah (MiniPay AI utility with payment guardrails) at https://www.marksiazon.dev/projects/gawainyah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
 
 ## What should I include in a first message?
 
@@ -61,7 +61,7 @@ Private recipient and sender addresses stay in server-side environment variables
 
 ## What work is Mark Siazon open to?
 
-Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
+Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
 
 <!-- END DERIVED: faq -->
 

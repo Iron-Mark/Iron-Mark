@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-14T13:09:40.048242+00:00",
+  "fetchedAt": "2026-09-19T11:19:51.346481+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -32,13 +32,13 @@
       "nationality": "Philippines"
     },
     "availability": {
-      "headline": "Open for selective product design, frontend, and AI workflow opportunities",
-      "summary": "Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup.",
+      "headline": "Open to product design, frontend, and AI workflow roles",
+      "summary": "Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.",
       "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
       "note": "No public booking link is published; use the contact form so private details stay server-side.",
       "workScope": [
         "Product roles",
-        "Focused client builds",
+        "Client builds",
         "Launch support",
         "Case-study packages",
         "AI workflow prototypes",
@@ -54,6 +54,8 @@
         "role": "Solo Product Designer & Full-stack Builder",
         "timeframe": "2026",
         "status": "Live trust workflow with provider and live-check boundaries",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
         "lenses": [
           "ai",
           "guardrails"
@@ -91,7 +93,7 @@
           },
           {
             "label": "Repository",
-            "href": "https://github.com/mark-siazon/Hackathon-HireProof",
+            "href": "https://github.com/Iron-Mark/Hackathon-HireProof",
             "type": "github"
           },
           {
@@ -110,6 +112,8 @@
         "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2026",
         "status": "Live Stellar testnet project",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
         "lenses": [
           "web3",
           "guardrails"
@@ -139,7 +143,7 @@
           },
           {
             "label": "Repository",
-            "href": "https://github.com/mark-siazon/Hackathon-Stellaroid_Earn",
+            "href": "https://github.com/Iron-Mark/Hackathon-Stellaroid_Earn",
             "type": "github"
           },
           {
@@ -166,8 +170,10 @@
         "title": "ResQLink",
         "summary": "Offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "role": "Team product designer and full-stack developer",
-        "timeframe": "Jun 2025 - Jul 2026",
+        "timeframe": "Jun 2025 – Jul 2026",
         "status": "Live platform and academic capstone",
+        "ownership": "Team delivery",
+        "builtBy": "team",
         "lenses": [
           "ai",
           "mobile",
@@ -217,10 +223,12 @@
       {
         "slug": "good-to-live",
         "title": "Good To Live Podcast Website",
-        "summary": "Full website experience for a podcast platform featuring Filipino creatives and entrepreneurs, built from strategy through UI and launch.",
+        "summary": "Podcast website for Filipino creatives and entrepreneurs, from strategy through UI and launch.",
         "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2025",
         "status": "Live client project",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
         "lenses": [
           "client"
         ],
@@ -258,6 +266,8 @@
         "role": "Full-stack Developer (Frontend-Focused) & Maintainer",
         "timeframe": "Nov 2025",
         "status": "Hackathon-winning project with a live web app and signed Android build",
+        "ownership": "Contributor",
+        "builtBy": "team",
         "lenses": [
           "mobile"
         ],
@@ -305,8 +315,10 @@
         "title": "BaybayInscribe",
         "summary": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
         "role": "Lead UI/UX and front-end developer",
-        "timeframe": "Aug 2024 - Jun 2025",
+        "timeframe": "Aug 2024 – Jun 2025",
         "status": "Academic team project",
+        "ownership": "Lead owner",
+        "builtBy": "team",
         "lenses": [
           "ai",
           "mobile"
@@ -330,6 +342,11 @@
         "canonicalUrl": "https://www.marksiazon.dev/projects/baybayinscribe",
         "links": [
           {
+            "label": "Repository",
+            "href": "https://github.com/UMak-Gilas-Tech/baybayinscribe-client",
+            "type": "github"
+          },
+          {
             "label": "Model Reference",
             "href": "https://huggingface.co/gilas/baybayinscribe",
             "type": "proof"
@@ -343,8 +360,10 @@
         "title": "Kudlit",
         "summary": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
         "role": "Flutter Developer & UI/UX Lead",
-        "timeframe": "Apr 2026 - May 2026",
+        "timeframe": "Apr 2026 – May 2026",
         "status": "Android release v1.0.0 and a public landing page, some checks still device-only",
+        "ownership": "Contributor",
+        "builtBy": "team",
         "lenses": [
           "ai",
           "mobile",
@@ -396,8 +415,10 @@
         "title": "Pulse",
         "summary": "Phone and watch running platform with pace-locked music, Galaxy Watch heart context, and Beats and streaks, in a store-ready Flutter app with a live web beta.",
         "role": "Flutter Developer (Full-stack) & Maintainer",
-        "timeframe": "Mar 2026 - Jul 2026",
+        "timeframe": "Mar 2026 – Jul 2026",
         "status": "Store-ready release candidate with a live web app and signed Android builds",
+        "ownership": "Contributor",
+        "builtBy": "team",
         "lenses": [
           "mobile",
           "guardrails"
@@ -438,10 +459,12 @@
       {
         "slug": "palengkepay",
         "title": "PalengkePay",
-        "summary": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and testnet-first fintech review.",
+        "summary": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and mainnet plus testnet Soroban contract review.",
         "role": "Fintech PWA contributor",
         "timeframe": "May 2026",
-        "status": "Live testnet PWA with pending wallet-signed chain smoke",
+        "status": "Live mainnet and testnet PWAs with pending wallet-signed chain smoke",
+        "ownership": "Contributor",
+        "builtBy": "team",
         "lenses": [
           "mobile",
           "web3",
@@ -465,18 +488,33 @@
         "canonicalUrl": "https://www.marksiazon.dev/projects/palengkepay",
         "links": [
           {
-            "label": "Live Project",
-            "href": "https://palengke-pay.vercel.app",
+            "label": "Mainnet PWA",
+            "href": "https://palengkepay.com",
             "type": "live"
           },
           {
+            "label": "Testnet PWA",
+            "href": "https://testnet.palengkepay.com",
+            "type": "proof"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/polsalarm/PalengkePay-Pro",
+            "type": "github"
+          },
+          {
             "label": "MVP Walkthrough",
-            "href": "https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1",
+            "href": "https://www.youtube.com/watch?v=HQw2ua1lS94",
+            "type": "proof"
+          },
+          {
+            "label": "Contributor Commits",
+            "href": "https://github.com/polsalarm/PalengkePay-Pro/commits?author=Iron-Mark",
             "type": "proof"
           }
         ],
-        "proofCount": 1,
-        "lastVerified": "2026-09-13"
+        "proofCount": 3,
+        "lastVerified": "2026-09-18"
       },
       {
         "slug": "gawainyah",
@@ -485,6 +523,8 @@
         "role": "Full-stack product builder",
         "timeframe": "May 2026",
         "status": "Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
         "lenses": [
           "ai",
           "mobile",
@@ -543,6 +583,8 @@
         "role": "Full-stack product builder",
         "timeframe": "Jun 2026",
         "status": "Production v0.5.2 ready at 8702afd",
+        "ownership": "Lead owner",
+        "builtBy": "team",
         "lenses": [
           "ai"
         ],
@@ -589,6 +631,8 @@
         "role": "Full-stack product builder",
         "timeframe": "Jun - Jul 2026",
         "status": "Live local-analysis deployment with Qwen live mode gated off",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
         "lenses": [
           "ai",
           "guardrails"
@@ -628,6 +672,246 @@
         ],
         "proofCount": 1,
         "lastVerified": "2026-07-06"
+      },
+      {
+        "slug": "kopi-kount",
+        "title": "Kopi Kount",
+        "summary": "Team-built promotional website for a Makati coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
+        "role": "Front-end Developer & UI/UX Designer",
+        "timeframe": "Apr 2023",
+        "status": "Live static promo site on Vercel",
+        "ownership": "Contributor",
+        "builtBy": "team",
+        "lenses": [
+          "client",
+          "guardrails"
+        ],
+        "tags": [
+          "Bootstrap",
+          "Responsive Web",
+          "Café Brand",
+          "Client Work",
+          "Team Project"
+        ],
+        "stack": [
+          "Figma",
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Bootstrap",
+          "Vercel"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/kopi-kount",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://kopi-kount.vercel.app/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/exzequel/kopi-kount",
+            "type": "github"
+          },
+          {
+            "label": "Original Repository",
+            "href": "https://github.com/salig-dev/kopi-kount",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-09-18"
+      },
+      {
+        "slug": "calbeans-coffee",
+        "title": "Calbeans Coffee",
+        "summary": "Team-built promotional website for Calbeans Coffee in East Rembo, with responsive pages, menu storytelling, maps, contact, and a later static refresh on Vercel.",
+        "role": "Front-end Developer & UI/UX Designer",
+        "timeframe": "May – Jun 2023",
+        "status": "Live static promo on Vercel; PHP course stack on legacy repo",
+        "ownership": "Contributor",
+        "builtBy": "team",
+        "lenses": [
+          "client",
+          "guardrails"
+        ],
+        "tags": [
+          "Bootstrap",
+          "Responsive Web",
+          "Café Brand",
+          "Client Work",
+          "Team Project"
+        ],
+        "stack": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Bootstrap",
+          "PHP",
+          "MySQL",
+          "Vercel"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/calbeans-coffee",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://calbeans-coffee.vercel.app/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/exzequel/calbeans-coffee",
+            "type": "github"
+          },
+          {
+            "label": "Legacy Repository",
+            "href": "https://github.com/salig-dev/calbeans",
+            "type": "proof"
+          },
+          {
+            "label": "Legacy Deploy",
+            "href": "https://calbeans.vercel.app/",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 2,
+        "lastVerified": "2026-09-18"
+      },
+      {
+        "slug": "herons-nest",
+        "title": "Heron's Nest",
+        "summary": "Team-built WinForms library management desktop app for a University of Makati coursework brief, with catalog browsing, transactions, inventory tooling, and librarian workflows.",
+        "role": "WinForms UI Contributor",
+        "timeframe": "Nov 2023 – Jan 2024",
+        "status": "Archived course team desktop app; public repo and v1.0 release as proof",
+        "ownership": "Contributor",
+        "builtBy": "team",
+        "lenses": [
+          "guardrails"
+        ],
+        "tags": [
+          "WinForms",
+          "Desktop",
+          "Library System",
+          "Team Project"
+        ],
+        "stack": [
+          "Figma",
+          "C#",
+          ".NET 8",
+          "WinForms",
+          "SQLite",
+          "Entity Framework Core",
+          "Visual Studio"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/herons-nest",
+        "links": [
+          {
+            "label": "Repository",
+            "href": "https://github.com/salig-dev/HeronsNest",
+            "type": "github"
+          },
+          {
+            "label": "Release v1.0",
+            "href": "https://github.com/salig-dev/HeronsNest/releases/tag/v1.0",
+            "type": "proof"
+          },
+          {
+            "label": "Contributor Commits",
+            "href": "https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 2,
+        "lastVerified": "2026-09-18"
+      },
+      {
+        "slug": "automata-winxp",
+        "title": "Automata Case Studies",
+        "summary": "Team-built Windows XP desktop for AUTOMATA coursework, packaging seven sequence and algorithm case studies behind a nostalgic shell with start menu, desktop icons, and embedded generator windows.",
+        "role": "Front-end Developer & UI/UX Designer",
+        "timeframe": "May 2025",
+        "status": "Live archived coursework on Vercel",
+        "ownership": "Lead owner",
+        "builtBy": "team",
+        "lenses": [
+          "guardrails"
+        ],
+        "tags": [
+          "Windows XP UI",
+          "Automata Theory",
+          "Astro",
+          "Team Project"
+        ],
+        "stack": [
+          "Astro",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vercel"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/automata-winxp",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://acads-case-studies-automata.vercel.app/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/mark-siazon/Automata-Case-Studies-WinXP_Theme",
+            "type": "github"
+          }
+        ],
+        "proofCount": 0,
+        "lastVerified": "2026-09-18"
+      },
+      {
+        "slug": "frontend-mentor-lab",
+        "title": "Frontend Mentor Lab",
+        "summary": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
+        "role": "Solo UI/UX Designer & Front-end Developer",
+        "timeframe": "Feb 2023 – May 2025",
+        "status": "21 FM challenges with public deploys; 20 published FM solutions; practice archive",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
+        "lenses": [
+          "guardrails"
+        ],
+        "tags": [
+          "Frontend Mentor",
+          "Responsive UI",
+          "HTML/CSS",
+          "SCSS",
+          "React",
+          "Practice Archive"
+        ],
+        "stack": [
+          "Figma",
+          "Photoshop",
+          "Tailwind CSS",
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React",
+          "TypeScript",
+          "npm"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/frontend-mentor-lab",
+        "links": [
+          {
+            "label": "FM Profile",
+            "href": "https://www.frontendmentor.io/profile/Iron-Mark",
+            "type": "proof"
+          },
+          {
+            "label": "Repository Index",
+            "href": "https://github.com/mark-siazon?tab=repositories&q=FM-",
+            "type": "github"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-09-18"
       }
     ],
     "writing": [
@@ -636,21 +920,21 @@
         "title": "Codex CLI Pinned My Windows Disk at 100%: Bounding the Log Growth Upstream Won't",
         "summary": "Codex CLI pinned a Windows disk at 100%: unbounded SQLite trace logging under ~/.codex, and the layered fix (measure, rotate after exit, scope scanning) that took it to ~3%.",
         "publishedAt": "2026-07-29",
-        "canonicalUrl": "https://www.marksiazon.dev/writing/taming-ai-agent-disk-io"
+        "canonicalUrl": "https://www.marksiazon.dev/blogs/taming-ai-agent-disk-io"
       },
       {
         "slug": "design-system-switcher",
-        "title": "Architecting a Multi-Ism Design System Switcher in Next.js",
-        "summary": "How to build a fast style switcher that lets users toggle between Modern Minimal, Glassmorphism, Neo-Brutalism, and Bento modes with zero layout shift.",
+        "title": "Building a Multi-Style Design System Switcher in Next.js",
+        "summary": "How to build a fast style switcher for Modern Minimal, Glass, Brutal, and Bento themes with zero layout shift.",
         "publishedAt": "2026-05-18",
-        "canonicalUrl": "https://www.marksiazon.dev/writing/design-system-switcher"
+        "canonicalUrl": "https://www.marksiazon.dev/blogs/design-system-switcher"
       },
       {
         "slug": "offline-first-ux",
         "title": "Offline-First Emergency Response UX: Lessons from ResQLink",
         "summary": "Designing emergency-response interfaces across Flutter mobile, React web, Appwrite realtime data, AI triage, BLE mesh resilience, and multi-agency coordination when connectivity and attention are both constrained.",
         "publishedAt": "2026-04-12",
-        "canonicalUrl": "https://www.marksiazon.dev/writing/offline-first-ux"
+        "canonicalUrl": "https://www.marksiazon.dev/blogs/offline-first-ux"
       }
     ],
     "faq": [
@@ -689,7 +973,7 @@
       {
         "id": "recruiter-availability",
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Open for selective product design, frontend, and AI workflow opportunities. Best fit: product roles, focused client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
+        "answer": "Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
         "audiences": [
           "recruiter"
         ]
@@ -713,7 +997,7 @@
       {
         "id": "recruiter-review-first",
         "question": "Which projects should a recruiter review first?",
-        "answer": "Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.",
+        "answer": "Review these six first: HireProof (AI trust and safety product design) at https://www.marksiazon.dev/projects/hireproof; Stellaroid Earn (Web3 credential review and trust UX) at https://www.marksiazon.dev/projects/stellaroid-earn; ResQLink (Multi-award winning thesis project) at https://www.marksiazon.dev/projects/resqlink; Good To Live Podcast Website (Client web launch and SEO delivery) at https://www.marksiazon.dev/projects/good-to-live; PalengkePay (Fintech PWA contribution on mainnet and testnet Stellar rails) at https://www.marksiazon.dev/projects/palengkepay; GawainYah (MiniPay AI utility with payment guardrails) at https://www.marksiazon.dev/projects/gawainyah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.",
         "audiences": [
           "recruiter"
         ]
@@ -745,7 +1029,7 @@
       {
         "id": "contact-work-scope",
         "question": "What work is Mark Siazon open to?",
-        "answer": "Product roles, Focused client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
+        "answer": "Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
         "audiences": [
           "contact"
         ]
@@ -753,7 +1037,7 @@
       {
         "id": "project-hireproof-what",
         "question": "What is HireProof?",
-        "answer": "Job seekers have to judge fast whether an opportunity is legitimate, usually on gut feel. HireProof turns that call into a structured review: source-backed checks on a job post, recruiter message, or apply link, with clear risk notes and a next step.",
+        "answer": "AI workflow that helps applicants review suspicious job posts, recruiter messages, screenshots, and apply links before they commit time or personal data.",
         "audiences": [
           "project:hireproof"
         ]
@@ -785,7 +1069,7 @@
       {
         "id": "project-stellaroid-earn-what",
         "question": "What is Stellaroid Earn?",
-        "answer": "Bootcamp credentials and graduate payments are hard to verify when records live in private files, screenshots, and manual admin steps. Stellaroid Earn puts both on a public Stellar testnet flow an employer can inspect and pay against. It is a working build, not a production finance product.",
+        "answer": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and an inspectable transaction trail.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -817,7 +1101,7 @@
       {
         "id": "project-resqlink-what",
         "question": "What is ResQLink?",
-        "answer": "Disaster response breaks down for Philippine LGUs when weak connectivity and incomplete reports cut citizens, rescuers, and command centers off from each other. ResQLink keeps them coordinated offline through BLE mesh networking, one-tap SOS, proximity dispatch, I Am Safe acknowledgements, and on-device AI triage (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
+        "answer": "Offline disaster-response platform for Philippine LGUs, with BLE mesh networking, real-time coordination, and on-device AI (MobileViTv2 + Gemini Flash) at 82.6% mean F1.",
         "audiences": [
           "project:resqlink"
         ]
@@ -849,7 +1133,7 @@
       {
         "id": "project-good-to-live-what",
         "question": "What is Good To Live Podcast Website?",
-        "answer": "The podcast needed a credible web presence that could carry its guests, stories, and brand positioning. Good To Live is that site end to end — strategy, UI design, build, SEO, and public launch, handed to the client in production.",
+        "answer": "Podcast website for Filipino creatives and entrepreneurs, from strategy through UI and launch.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -881,7 +1165,7 @@
       {
         "id": "project-flowfit-what",
         "question": "What is FlowFit?",
-        "answer": "Health tracking feels abstract to young users, and raw sensor output needs somewhere to become useful feedback. FlowFit splits that across two apps: a Wear OS watch app that captures the session, and an Android companion that turns heart-rate and activity data into something a kid can act on.",
+        "answer": "Wear OS and Android fitness app with heart-rate monitoring, IBI data, activity, sleep, nutrition, mood tracking, and Supabase sync.",
         "audiences": [
           "project:flowfit"
         ]
@@ -913,7 +1197,7 @@
       {
         "id": "project-baybayinscribe-what",
         "question": "What is BaybayInscribe?",
-        "answer": "Baybayin matters culturally but is hard to approach without guided, interactive practice. BaybayInscribe pairs lessons with ML character recognition, so a learner can write a glyph, have it read back, and see the translation — a competition-recognised build.",
+        "answer": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -945,7 +1229,7 @@
       {
         "id": "project-kudlit-what",
         "question": "What is Kudlit?",
-        "answer": "Baybayin learners usually juggle separate tools for recognition, translation, lessons, and explanation. Kudlit folds all four into one mobile path — scan a glyph, translate Filipino text, work through lessons, and ask Butty when something does not land.",
+        "answer": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
         "audiences": [
           "project:kudlit"
         ]
@@ -977,7 +1261,7 @@
       {
         "id": "project-pulse-what",
         "question": "What is Pulse?",
-        "answer": "Most running apps count distance without reacting to effort, music, or wearable data. Pulse builds the loop the other way: music locked to your pace zone, live GPS and session history, and heart context read from a Galaxy Watch, with Beats, badges, and streaks turning each finished run into a reason to come back. It started as a Kotlin Android and Wear OS build and now ships as a Flutter app with signed Android releases and a live web beta.",
+        "answer": "Phone and watch running platform with pace-locked music, Galaxy Watch heart context, and Beats and streaks, in a store-ready Flutter app with a live web beta.",
         "audiences": [
           "project:pulse"
         ]
@@ -1009,7 +1293,7 @@
       {
         "id": "project-palengkepay-what",
         "question": "What is PalengkePay?",
-        "answer": "Wet-market vendors run on cash, paper utang, and informal trust, which leaves receipts, credit history, and repayment hard to prove. PalengkePay puts those on a Stellar PWA with QR checkout, receipt screens, and vendor records — a team build, contributor-scoped, with wallet-signed payment and real-device validation still pending.",
+        "answer": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and mainnet plus testnet Soroban contract review.",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1017,7 +1301,7 @@
       {
         "id": "project-palengkepay-role",
         "question": "What was Mark Siazon's role on PalengkePay?",
-        "answer": "Fintech PWA contributor. Top outcome: Public app, Live testnet PWA.",
+        "answer": "Fintech PWA contributor. Top outcome: Public app, Mainnet + testnet PWAs.",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1025,7 +1309,7 @@
       {
         "id": "project-palengkepay-status",
         "question": "What is the current status of PalengkePay?",
-        "answer": "Live testnet PWA with pending wallet-signed chain smoke",
+        "answer": "Live mainnet and testnet PWAs with pending wallet-signed chain smoke",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1041,7 +1325,7 @@
       {
         "id": "project-gawainyah-what",
         "question": "What is GawainYah?",
-        "answer": "Small merchants and freelancers often need one useful expense output, but most AI tools want an account, a subscription, or a desktop. GawainYah charges per task instead: add a receipt, pay a small stablecoin fee, get structured expense data and a Celo proof receipt back. It runs on Celo mainnet in six languages and takes more than one stablecoin, with every payment verified server-side before the AI runs. Real-device MiniPay QA, one real payment, and the on-chain proof event stay pending until they are run.",
+        "answer": "MiniPay-native receipt scanner that charges per task, verifies payment before AI work, and records a Celo proof receipt for completed jobs.",
         "audiences": [
           "project:gawainyah"
         ]
@@ -1073,7 +1357,7 @@
       {
         "id": "project-lexinsights-what",
         "question": "What is LexInsights?",
-        "answer": "Legal research demos fall over the moment a remote model or vector store is unavailable. LexInsights runs Philippine statute retrieval locally instead, ingesting documents for source-aware answers with stated limits, and keeping remote RAG as an optional fallback.",
+        "answer": "Providerless Philippine legal research and compliance assistant with local statute retrieval, draft checking, document extraction, guest chat history, and optional remote RAG fallback.",
         "audiences": [
           "project:lexinsights"
         ]
@@ -1105,7 +1389,7 @@
       {
         "id": "project-qwen-ui-lab-what",
         "question": "What is Qwen UI Lab?",
-        "answer": "A generated screen is hard to trust when it arrives finished, with nothing to inspect. Qwen UI Lab keeps every step open: upload a screenshot, review and refine the detected boxes, preview the component draft, then download a React and Tailwind export package.",
+        "answer": "Screenshot-to-React workspace that turns UI screenshots into inspectable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
         "audiences": [
           "project:qwen-ui-lab"
         ]
@@ -1133,6 +1417,206 @@
         "audiences": [
           "project:qwen-ui-lab"
         ]
+      },
+      {
+        "id": "project-kopi-kount-what",
+        "question": "What is Kopi Kount?",
+        "answer": "Team-built promotional website for a Makati coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
+        "audiences": [
+          "project:kopi-kount"
+        ]
+      },
+      {
+        "id": "project-kopi-kount-role",
+        "question": "What was Mark Siazon's role on Kopi Kount?",
+        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live site, kopi-kount.vercel.app.",
+        "audiences": [
+          "project:kopi-kount"
+        ]
+      },
+      {
+        "id": "project-kopi-kount-status",
+        "question": "What is the current status of Kopi Kount?",
+        "answer": "Live static promo site on Vercel",
+        "audiences": [
+          "project:kopi-kount"
+        ]
+      },
+      {
+        "id": "project-kopi-kount-stack",
+        "question": "What is Kopi Kount built with?",
+        "answer": "Figma, HTML5, CSS3, JavaScript, Bootstrap, Vercel.",
+        "audiences": [
+          "project:kopi-kount"
+        ]
+      },
+      {
+        "id": "project-kopi-kount-scope",
+        "question": "Is Kopi Kount a flagship production product?",
+        "answer": "No. WEBTOOLS and WEBAPPS group project for a real Makati café. Pages cover home, about, menu, events, gallery, staff, and contact.",
+        "audiences": [
+          "project:kopi-kount"
+        ]
+      },
+      {
+        "id": "project-calbeans-coffee-what",
+        "question": "What is Calbeans Coffee?",
+        "answer": "Team-built promotional website for Calbeans Coffee in East Rembo, with responsive pages, menu storytelling, maps, contact, and a later static refresh on Vercel.",
+        "audiences": [
+          "project:calbeans-coffee"
+        ]
+      },
+      {
+        "id": "project-calbeans-coffee-role",
+        "question": "What was Mark Siazon's role on Calbeans Coffee?",
+        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live site, calbeans-coffee.vercel.app.",
+        "audiences": [
+          "project:calbeans-coffee"
+        ]
+      },
+      {
+        "id": "project-calbeans-coffee-status",
+        "question": "What is the current status of Calbeans Coffee?",
+        "answer": "Live static promo on Vercel; PHP course stack on legacy repo",
+        "audiences": [
+          "project:calbeans-coffee"
+        ]
+      },
+      {
+        "id": "project-calbeans-coffee-stack",
+        "question": "What is Calbeans Coffee built with?",
+        "answer": "HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL, Vercel.",
+        "audiences": [
+          "project:calbeans-coffee"
+        ]
+      },
+      {
+        "id": "project-calbeans-coffee-scope",
+        "question": "Is Calbeans Coffee a flagship production product?",
+        "answer": "No. WEBTOOLS and WEBAPPS group project for a real East Rembo café, with a website proposal, wireframes, and multi-page promotional scope.",
+        "audiences": [
+          "project:calbeans-coffee"
+        ]
+      },
+      {
+        "id": "project-herons-nest-what",
+        "question": "What is Heron's Nest?",
+        "answer": "Team-built WinForms library management desktop app for a University of Makati coursework brief, with catalog browsing, transactions, inventory tooling, and librarian workflows.",
+        "audiences": [
+          "project:herons-nest"
+        ]
+      },
+      {
+        "id": "project-herons-nest-role",
+        "question": "What was Mark Siazon's role on Heron's Nest?",
+        "answer": "WinForms UI Contributor. Top outcome: Public repo, salig-dev/HeronsNest.",
+        "audiences": [
+          "project:herons-nest"
+        ]
+      },
+      {
+        "id": "project-herons-nest-status",
+        "question": "What is the current status of Heron's Nest?",
+        "answer": "Archived course team desktop app; public repo and v1.0 release as proof",
+        "audiences": [
+          "project:herons-nest"
+        ]
+      },
+      {
+        "id": "project-herons-nest-stack",
+        "question": "What is Heron's Nest built with?",
+        "answer": "Figma, C#, .NET 8, WinForms, SQLite, Entity Framework Core, Visual Studio.",
+        "audiences": [
+          "project:herons-nest"
+        ]
+      },
+      {
+        "id": "project-herons-nest-scope",
+        "question": "Is Heron's Nest a flagship production product?",
+        "answer": "No. Salig Tech team coursework for a University of Makati library management brief. The repo lives under salig-dev, not a solo Iron-Mark ownership claim.",
+        "audiences": [
+          "project:herons-nest"
+        ]
+      },
+      {
+        "id": "project-automata-winxp-what",
+        "question": "What is Automata Case Studies?",
+        "answer": "Team-built Windows XP desktop for AUTOMATA coursework, packaging seven sequence and algorithm case studies behind a nostalgic shell with start menu, desktop icons, and embedded generator windows.",
+        "audiences": [
+          "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-automata-winxp-role",
+        "question": "What was Mark Siazon's role on Automata Case Studies?",
+        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live archive, acads-case-studies-automata.vercel.app.",
+        "audiences": [
+          "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-automata-winxp-status",
+        "question": "What is the current status of Automata Case Studies?",
+        "answer": "Live archived coursework on Vercel",
+        "audiences": [
+          "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-automata-winxp-stack",
+        "question": "What is Automata Case Studies built with?",
+        "answer": "Astro, React, TypeScript, Tailwind CSS, Vercel.",
+        "audiences": [
+          "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-automata-winxp-scope",
+        "question": "Is Automata Case Studies a flagship production product?",
+        "answer": "No. AUTOMATA coursework for III-ACSAD under Prof. Lester Diampoc. Authors on the live compilation: Baluyut, Siazon, and Villarosa.",
+        "audiences": [
+          "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-frontend-mentor-lab-what",
+        "question": "What is Frontend Mentor Lab?",
+        "answer": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
+        "audiences": [
+          "project:frontend-mentor-lab"
+        ]
+      },
+      {
+        "id": "project-frontend-mentor-lab-role",
+        "question": "What was Mark Siazon's role on Frontend Mentor Lab?",
+        "answer": "Solo UI/UX Designer & Front-end Developer. Top outcome: Inspectable collection, 21 nested challenges.",
+        "audiences": [
+          "project:frontend-mentor-lab"
+        ]
+      },
+      {
+        "id": "project-frontend-mentor-lab-status",
+        "question": "What is the current status of Frontend Mentor Lab?",
+        "answer": "21 FM challenges with public deploys; 20 published FM solutions; practice archive",
+        "audiences": [
+          "project:frontend-mentor-lab"
+        ]
+      },
+      {
+        "id": "project-frontend-mentor-lab-stack",
+        "question": "What is Frontend Mentor Lab built with?",
+        "answer": "Figma, Photoshop, Tailwind CSS, HTML5, CSS3, JavaScript, React, TypeScript, npm.",
+        "audiences": [
+          "project:frontend-mentor-lab"
+        ]
+      },
+      {
+        "id": "project-frontend-mentor-lab-scope",
+        "question": "Is Frontend Mentor Lab a flagship production product?",
+        "answer": "No. These builds are deliberate layout drills, not flagship product claims. The parent case study groups 21 nested challenges in one grid rather than listing each as its own portfolio card.",
+        "audiences": [
+          "project:frontend-mentor-lab"
+        ]
       }
     ],
     "proof": {
@@ -1140,7 +1624,7 @@
         {
           "label": "PalengkePay payment record",
           "owner": "Wallet/onchain QA",
-          "status": "The public route and payment-readiness/test records are verified. The next validation milestone is a real wallet-signed payment, transaction hash, and sponsor durability record."
+          "status": "Mainnet and testnet PWAs, health checks, and Soroban contract deployments are verified from PalengkePay-Pro. The next validation milestone is wallet-signed payment, onchain transaction hash, sponsor durability, and real-device mobile wallet validation."
         },
         {
           "label": "GawainYah MiniPay/Celo record",
@@ -1203,8 +1687,16 @@
         ],
         "palengkepay": [
           {
+            "label": "Testnet PWA",
+            "href": "https://testnet.palengkepay.com"
+          },
+          {
             "label": "MVP Walkthrough",
-            "href": "https://youtu.be/hOiuXBG5A3Q?si=lLhgmeAsGQVen8e1"
+            "href": "https://www.youtube.com/watch?v=HQw2ua1lS94"
+          },
+          {
+            "label": "Contributor Commits",
+            "href": "https://github.com/polsalarm/PalengkePay-Pro/commits?author=Iron-Mark"
           }
         ],
         "gawainyah": [
@@ -1232,6 +1724,38 @@
             "label": "Health Endpoint",
             "href": "https://qwen-ui-lab.vercel.app/api/health"
           }
+        ],
+        "kopi-kount": [
+          {
+            "label": "Original Repository",
+            "href": "https://github.com/salig-dev/kopi-kount"
+          }
+        ],
+        "calbeans-coffee": [
+          {
+            "label": "Legacy Repository",
+            "href": "https://github.com/salig-dev/calbeans"
+          },
+          {
+            "label": "Legacy Deploy",
+            "href": "https://calbeans.vercel.app/"
+          }
+        ],
+        "herons-nest": [
+          {
+            "label": "Release v1.0",
+            "href": "https://github.com/salig-dev/HeronsNest/releases/tag/v1.0"
+          },
+          {
+            "label": "Contributor Commits",
+            "href": "https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark"
+          }
+        ],
+        "frontend-mentor-lab": [
+          {
+            "label": "FM Profile",
+            "href": "https://www.frontendmentor.io/profile/Iron-Mark"
+          }
         ]
       }
     },
@@ -1246,11 +1770,11 @@
       },
       {
         "title": "Full-stack build",
-        "description": "End-to-end delivery from research and design through development, following a secure software development lifecycle."
+        "description": "From research and design through development, with security checks in the build path."
       },
       {
         "title": "AI-assisted prototyping",
-        "description": "Rapid mockups and buildable prototypes using AI-assisted tooling to move an idea forward fast."
+        "description": "Fast mockups and buildable prototypes with AI-assisted tooling when speed matters."
       },
       {
         "title": "Launch support",
@@ -1258,7 +1782,7 @@
       },
       {
         "title": "Graphics design & consultation",
-        "description": "Brand and visual assets, plus product and UX consultation."
+        "description": "Brand and visual assets, with product and UX advisory."
       }
     ],
     "techStack": [
@@ -1490,7 +2014,8 @@
         "tags": [
           "Award",
           "Product Management"
-        ]
+        ],
+        "compactResult": "Top 10 Finalist"
       },
       {
         "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android Category (2025)",
@@ -1508,14 +2033,14 @@
         "compactResult": "Consistent Dean's Lister"
       },
       {
-        "title": "Best Thesis Project - Overall CCIS College (2025)",
+        "title": "Best Thesis Project - Overall CCIS College (2026)",
         "tags": [
           "Award",
           "Academics"
         ]
       },
       {
-        "title": "Best Presented Thesis Project - Overall CCIS College (2025)",
+        "title": "Best Presented Thesis Project - Overall CCIS College (2026)",
         "tags": [
           "Award",
           "Academics"
@@ -1541,6 +2066,14 @@
           "Speaking",
           "Development"
         ]
+      },
+      {
+        "title": "2nd Place - UP SoComSci Tech Week Hack-It-Up (2026) with team STHREELAR",
+        "tags": [
+          "Award",
+          "Hackathon"
+        ],
+        "compactResult": "2nd Place"
       },
       {
         "title": "Speaker - QwenUI Labs (May 2026)",
