@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -42,11 +42,20 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 - [Signed Android Release](https://github.com/Iron-Mark/Hackathon-FlowFit/releases/tag/android-2026-07-21)
 - [Demo Video](https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing)
 
+#### Frontend Mentor Lab (https://www.marksiazon.dev/projects/frontend-mentor-lab)
+
+- [FM Profile](https://www.frontendmentor.io/profile/Iron-Mark)
+
 #### GawainYah (https://www.marksiazon.dev/projects/gawainyah)
 
 - [Testnet QA Launcher](https://www.marksiazon.dev/gawainyah/testnet)
 - [Runtime Origin](https://gawainyah-minipay.vercel.app)
 - [Registry Source Verification](https://sourcify.dev/server/repo-ui/42220/0xfee6C135690E10ea814212aA9Aefd97508A0FC92)
+
+#### Heron's Nest (https://www.marksiazon.dev/projects/herons-nest)
+
+- [Release v1.0](https://github.com/salig-dev/HeronsNest/releases/tag/v1.0)
+- [Contributor Commits](https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark)
 
 #### HireProof (https://www.marksiazon.dev/projects/hireproof)
 
