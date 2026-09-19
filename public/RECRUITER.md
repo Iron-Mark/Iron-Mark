@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-18
+Last updated: 2026-09-19
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -41,7 +41,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 
 ## What is Mark Siazon's tech stack?
 
@@ -53,7 +53,7 @@ Yes. He builds client-facing React and Next.js interfaces, API-linked surfaces, 
 
 ## Which projects should a recruiter review first?
 
-Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podcast Website, PalengkePay, GawainYah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
+Review these six first: HireProof (AI trust and safety product design) at https://www.marksiazon.dev/projects/hireproof; Stellaroid Earn (Web3 credential review and trust UX) at https://www.marksiazon.dev/projects/stellaroid-earn; ResQLink (Multi-award winning thesis project) at https://www.marksiazon.dev/projects/resqlink; Good To Live Podcast Website (Client web launch and SEO delivery) at https://www.marksiazon.dev/projects/good-to-live; PalengkePay (Fintech PWA contribution on mainnet and testnet Stellar rails) at https://www.marksiazon.dev/projects/palengkepay; GawainYah (MiniPay AI utility with payment guardrails) at https://www.marksiazon.dev/projects/gawainyah. They span AI trust, emergency tech, Web3 credentials, client web, and fintech.
 
 ### Projects
 
@@ -71,8 +71,11 @@ Review these six first: HireProof, Stellaroid Earn, ResQLink, Good To Live Podca
 | GawainYah | Full-stack product builder | Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending | https://www.marksiazon.dev/projects/gawainyah |
 | LexInsights | Full-stack product builder | Production v0.5.2 ready at 8702afd | https://www.marksiazon.dev/projects/lexinsights |
 | Qwen UI Lab | Full-stack product builder | Live local-analysis deployment with Qwen live mode gated off | https://www.marksiazon.dev/projects/qwen-ui-lab |
-| Kopi Kount | Frontend dev (Team) | Live static promo site on Vercel | https://www.marksiazon.dev/projects/kopi-kount |
-| Calbeans Coffee | Frontend dev (Team) | Live static promo on Vercel; PHP course stack on legacy repo | https://www.marksiazon.dev/projects/calbeans-coffee |
+| Kopi Kount | Front-end Developer & UI/UX Designer | Live static promo site on Vercel | https://www.marksiazon.dev/projects/kopi-kount |
+| Calbeans Coffee | Front-end Developer & UI/UX Designer | Live static promo on Vercel; PHP course stack on legacy repo | https://www.marksiazon.dev/projects/calbeans-coffee |
+| Heron's Nest | WinForms UI Contributor | Archived course team desktop app; public repo and v1.0 release as proof | https://www.marksiazon.dev/projects/herons-nest |
+| Automata Case Studies | Front-end Developer & UI/UX Designer | Live archived coursework on Vercel | https://www.marksiazon.dev/projects/automata-winxp |
+| Frontend Mentor Lab | Solo UI/UX Designer & Front-end Developer | 21 FM challenges with public deploys; 20 published FM solutions; practice archive | https://www.marksiazon.dev/projects/frontend-mentor-lab |
 
 <!-- END DERIVED: recruiter -->
 
