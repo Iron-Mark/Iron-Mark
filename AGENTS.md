@@ -43,6 +43,11 @@ No `Co-Authored-By:` lines for the agent, no "generated with" footers.
 `enforce-pr-flow`, `identity-guard`. `enforce_admins` is on, so an admin merge
 cannot bypass a check that has not reported.
 
+Merge `dev` -> `main` promotions with a merge commit, never squash or rebase.
+The merge parent records that `main` contains the exact `dev` tip; squashing
+duplicates generated changes onto unrelated history and makes later daily
+refreshes conflict. Bot feature PRs into `dev` may still be squashed.
+
 ## Automation (runs unattended — do not "fix" it casually)
 
 | Workflow | Schedule | Does |

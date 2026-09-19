@@ -132,6 +132,18 @@ class WorkflowDriftTests(unittest.TestCase):
         source = Path("src/scripts/daily_freshness.py").read_text(encoding="utf-8")
         self.assertIn('_git("add", "-A")', source)
 
+    def test_full_promotion_preserves_dev_ancestry(self):
+        # A squash promotion applies dev's generated patch to unrelated main
+        # history. The next daily refresh then modifies the same generated
+        # files on both sides and can leave the dev -> main PR conflicted.
+        source = (WORKFLOWS / "promote-automation-to-main.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(
+            'gh pr merge "$pr" --merge --admin --delete-branch=false',
+            source,
+        )
+
 
 
 
