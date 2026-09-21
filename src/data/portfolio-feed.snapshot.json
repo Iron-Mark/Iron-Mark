@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-19T11:19:51.346481+00:00",
+  "fetchedAt": "2026-09-21T13:08:17.609456+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -462,7 +462,7 @@
         "summary": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and mainnet plus testnet Soroban contract review.",
         "role": "Fintech PWA contributor",
         "timeframe": "May 2026",
-        "status": "Live mainnet and testnet PWAs with pending wallet-signed chain smoke",
+        "status": "Live mainnet and testnet PWAs with deployed Soroban contracts",
         "ownership": "Contributor",
         "builtBy": "team",
         "lenses": [
@@ -890,6 +890,7 @@
           "Figma",
           "Photoshop",
           "Tailwind CSS",
+          "Sass",
           "HTML5",
           "CSS3",
           "JavaScript",
@@ -1309,7 +1310,7 @@
       {
         "id": "project-palengkepay-status",
         "question": "What is the current status of PalengkePay?",
-        "answer": "Live mainnet and testnet PWAs with pending wallet-signed chain smoke",
+        "answer": "Live mainnet and testnet PWAs with deployed Soroban contracts",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1605,7 +1606,7 @@
       {
         "id": "project-frontend-mentor-lab-stack",
         "question": "What is Frontend Mentor Lab built with?",
-        "answer": "Figma, Photoshop, Tailwind CSS, HTML5, CSS3, JavaScript, React, TypeScript, npm.",
+        "answer": "Figma, Photoshop, Tailwind CSS, Sass, HTML5, CSS3, JavaScript, React, TypeScript, npm.",
         "audiences": [
           "project:frontend-mentor-lab"
         ]
@@ -1621,11 +1622,6 @@
     ],
     "proof": {
       "gates": [
-        {
-          "label": "PalengkePay payment record",
-          "owner": "Wallet/onchain QA",
-          "status": "Mainnet and testnet PWAs, health checks, and Soroban contract deployments are verified from PalengkePay-Pro. The next validation milestone is wallet-signed payment, onchain transaction hash, sponsor durability, and real-device mobile wallet validation."
-        },
         {
           "label": "GawainYah MiniPay/Celo record",
           "owner": "Device and mainnet QA",
@@ -2013,37 +2009,44 @@
         "title": "Top 10 Finalist out of 48 teams - PH Startup Challenge X: NCR (2025) with team Lumen",
         "tags": [
           "Award",
-          "Product Management"
+          "Development"
         ],
         "compactResult": "Top 10 Finalist"
       },
       {
-        "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android Category (2025)",
+        "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android Category (2025) with team Lumiere",
         "tags": [
           "Award",
           "Development"
         ]
       },
       {
-        "title": "Consistent Dean's Lister (8 of 8 semesters) and Cum Laude - BS Computer Science, UMak",
+        "title": "Consistent Dean's Lister (8 of 8 sem.) and Cum Laude - BS Computer Science, UMak",
         "tags": [
           "Academics",
           "Award"
         ],
-        "compactResult": "Consistent Dean's Lister"
+        "compactResult": "Cum Laude & Dean's Lister (8/8)"
       },
       {
-        "title": "Best Thesis Project - Overall CCIS College (2026)",
+        "title": "13th ICT Research Congress: Best Thesis Paper",
         "tags": [
           "Award",
           "Academics"
         ]
       },
       {
-        "title": "Best Presented Thesis Project - Overall CCIS College (2026)",
+        "title": "13th ICT Research Congress: Best Presented Thesis Paper",
         "tags": [
           "Award",
           "Academics"
+        ]
+      },
+      {
+        "title": "Certificate of Thesis Presentation - UNP Educational and University Tour (March 2026)",
+        "tags": [
+          "Academics",
+          "Development"
         ]
       },
       {
@@ -2061,7 +2064,7 @@
         ]
       },
       {
-        "title": "Speaker - Stellar June Monthly Builder (2026)",
+        "title": "Speaker - Stellar Global Monthly Builder (June 2026)",
         "tags": [
           "Speaking",
           "Development"
@@ -2083,7 +2086,7 @@
         ]
       },
       {
-        "title": "Speaker - Codex AI Community Meetup (April 2026)",
+        "title": "Speaker - Open AI Codex Community Meetup (April 2026)",
         "tags": [
           "Speaking",
           "Development"
