@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -23,7 +23,6 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 | Label | Owner | Status |
 |-------|-------|--------|
-| PalengkePay payment record | Wallet/onchain QA | Mainnet and testnet PWAs, health checks, and Soroban contract deployments are verified from PalengkePay-Pro. The next validation milestone is wallet-signed payment, onchain transaction hash, sponsor durability, and real-device mobile wallet validation. |
 | GawainYah MiniPay/Celo record | Device and mainnet QA | The deployed registry is source-verified, with existing readiness and test coverage. The next validation milestone is physical MiniPay QA, a real MiniPay payment, its proof-event record, and final account-side form confirmation. |
 
 ### Proof by project
