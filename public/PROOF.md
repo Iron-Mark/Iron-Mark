@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -72,6 +72,11 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 #### LexInsights (https://www.marksiazon.dev/projects/lexinsights)
 
 - [Legacy Showcase](https://lexinsights.vercel.app)
+
+#### Linaw AI (https://www.marksiazon.dev/projects/linaw)
+
+- [AppCon release](https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026)
+- [Demo video](https://www.youtube.com/watch?v=XsdOwdyDSSI)
 
 #### PalengkePay (https://www.marksiazon.dev/projects/palengkepay)
 
