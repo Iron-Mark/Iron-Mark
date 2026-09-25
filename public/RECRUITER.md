@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -64,6 +64,7 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 | ResQLink | Team product designer and full-stack developer | Live platform and academic capstone | https://www.marksiazon.dev/projects/resqlink |
 | Good To Live Podcast Website | Solo Product Designer & Full-stack Developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
 | FlowFit | Full-stack Developer (Frontend-Focused) & Maintainer | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
+| Linaw AI | Product builder on the AppCon team | Live AppCon 2026 submission | https://www.marksiazon.dev/projects/linaw |
 | BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |
 | Kudlit | Flutter Developer & UI/UX Lead | Android release v1.0.0 and a public landing page, some checks still device-only | https://www.marksiazon.dev/projects/kudlit |
 | Pulse | Flutter Developer (Full-stack) & Maintainer | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-21T13:08:17.609456+00:00",
+  "fetchedAt": "2026-09-25T12:03:57.807941+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -309,6 +309,62 @@
         ],
         "proofCount": 2,
         "lastVerified": "2026-07-20"
+      },
+      {
+        "slug": "linaw",
+        "title": "Linaw AI",
+        "summary": "Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
+        "role": "Product builder on the AppCon team",
+        "timeframe": "Sep 2026",
+        "status": "Live AppCon 2026 submission",
+        "ownership": "Team delivery",
+        "builtBy": "team",
+        "lenses": [
+          "ai",
+          "guardrails"
+        ],
+        "tags": [
+          "AppCon 2026",
+          "Meaning Check",
+          "Chrome extension",
+          "Next.js"
+        ],
+        "stack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "Gemini",
+          "Python",
+          "FastAPI",
+          "Supabase",
+          "Node.js"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/linaw",
+        "links": [
+          {
+            "label": "Live app",
+            "href": "https://appcon-lumiere-linawai.vercel.app/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai",
+            "type": "github"
+          },
+          {
+            "label": "AppCon release",
+            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026",
+            "type": "proof"
+          },
+          {
+            "label": "Demo video",
+            "href": "https://www.youtube.com/watch?v=XsdOwdyDSSI",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 2,
+        "lastVerified": "2026-09-24"
       },
       {
         "slug": "baybayinscribe",
@@ -1196,6 +1252,38 @@
         ]
       },
       {
+        "id": "project-linaw-what",
+        "question": "What is Linaw AI?",
+        "answer": "Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
+        "audiences": [
+          "project:linaw"
+        ]
+      },
+      {
+        "id": "project-linaw-role",
+        "question": "What was Mark Siazon's role on Linaw AI?",
+        "answer": "Product builder on the AppCon team. Top outcome: One notice, several readings, Format follows the reader.",
+        "audiences": [
+          "project:linaw"
+        ]
+      },
+      {
+        "id": "project-linaw-status",
+        "question": "What is the current status of Linaw AI?",
+        "answer": "Live AppCon 2026 submission",
+        "audiences": [
+          "project:linaw"
+        ]
+      },
+      {
+        "id": "project-linaw-stack",
+        "question": "What is Linaw AI built with?",
+        "answer": "Next.js, React, TypeScript, Tailwind CSS, Gemini, Python, FastAPI, Supabase, Node.js.",
+        "audiences": [
+          "project:linaw"
+        ]
+      },
+      {
         "id": "project-baybayinscribe-what",
         "question": "What is BaybayInscribe?",
         "answer": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
@@ -1657,6 +1745,16 @@
           {
             "label": "Demo Video",
             "href": "https://drive.google.com/file/d/1WAgKfRG0oetVSHDQWSJiACAA0jZtQ19R/view?usp=sharing"
+          }
+        ],
+        "linaw": [
+          {
+            "label": "AppCon release",
+            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026"
+          },
+          {
+            "label": "Demo video",
+            "href": "https://www.youtube.com/watch?v=XsdOwdyDSSI"
           }
         ],
         "baybayinscribe": [
