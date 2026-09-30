@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -35,6 +35,10 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 - [Legacy Repository](https://github.com/salig-dev/calbeans)
 - [Legacy Deploy](https://calbeans.vercel.app/)
+
+#### ELEC3 Cloud Portfolio (https://www.marksiazon.dev/projects/elec3-cloud-portfolio)
+
+- [Terraform Survivor demo](https://mark-siazon.github.io/AE3-Terraform_Survivor/)
 
 #### FlowFit (https://www.marksiazon.dev/projects/flowfit)
 
@@ -75,7 +79,8 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 #### Linaw AI (https://www.marksiazon.dev/projects/linaw)
 
-- [AppCon release](https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026)
+- [AppCon release](https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026/releases/tag/v1.0-appcon2026)
+- [Lumière board](https://www.facebook.com/photo/?fbid=1761723445960180)
 - [Demo video](https://www.youtube.com/watch?v=XsdOwdyDSSI)
 
 #### PalengkePay (https://www.marksiazon.dev/projects/palengkepay)
