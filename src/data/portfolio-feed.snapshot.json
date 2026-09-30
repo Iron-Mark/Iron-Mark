@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-28T14:18:29.911371+00:00",
+  "fetchedAt": "2026-09-30T12:52:42.110902+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -313,8 +313,8 @@
       {
         "slug": "linaw",
         "title": "Linaw AI",
-        "summary": "Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
-        "role": "Full-stack Product Engineer & Project Lead",
+        "summary": "Lumière’s Linaw earned the highest technical implementation score at AppCon 2026, 24 out of 30 in Technology. Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
+        "role": "Lumière team lead",
         "timeframe": "Sep 2026",
         "status": "Live AppCon 2026 submission",
         "ownership": "Team delivery",
@@ -344,17 +344,22 @@
         "links": [
           {
             "label": "Live app",
-            "href": "https://appcon-lumiere-linawai.vercel.app/",
+            "href": "https://linawai.tech",
             "type": "live"
           },
           {
             "label": "Repository",
-            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai",
+            "href": "https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026",
             "type": "github"
           },
           {
             "label": "AppCon release",
-            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026",
+            "href": "https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026/releases/tag/v1.0-appcon2026",
+            "type": "proof"
+          },
+          {
+            "label": "Lumière board",
+            "href": "https://www.facebook.com/photo/?fbid=1761723445960180",
             "type": "proof"
           },
           {
@@ -363,8 +368,8 @@
             "type": "proof"
           }
         ],
-        "proofCount": 2,
-        "lastVerified": "2026-09-24"
+        "proofCount": 3,
+        "lastVerified": "2026-09-25"
       },
       {
         "slug": "baybayinscribe",
@@ -887,7 +892,7 @@
         "summary": "Team-built Windows XP desktop for AUTOMATA coursework, packaging seven sequence and algorithm case studies behind a nostalgic shell with start menu, desktop icons, and embedded generator windows.",
         "role": "Front-end Developer & UI/UX Designer",
         "timeframe": "May 2025",
-        "status": "Live archived coursework on Vercel",
+        "status": "Live archived coursework on Vercel (Astro 7, CI)",
         "ownership": "Lead owner",
         "builtBy": "team",
         "lenses": [
@@ -900,10 +905,10 @@
           "Team Project"
         ],
         "stack": [
-          "Astro",
-          "React",
+          "Astro 7",
+          "React 19",
           "TypeScript",
-          "Tailwind CSS",
+          "Tailwind CSS 4",
           "Vercel"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/automata-winxp",
@@ -920,7 +925,59 @@
           }
         ],
         "proofCount": 0,
-        "lastVerified": "2026-09-18"
+        "lastVerified": "2026-09-30"
+      },
+      {
+        "slug": "elec3-cloud-portfolio",
+        "title": "ELEC3 Cloud Portfolio",
+        "summary": "Solo ELEC3 coursework showcase on GitHub Pages: a Qwik static portfolio cataloging cloud and DevOps assignments from Spring Boot APIs through AWS, Docker, Kubernetes, and a Terraform Survivor IaC demo.",
+        "role": "Solo Full-stack Developer & Cloud Portfolio Author",
+        "timeframe": "SY 2025–2026",
+        "status": "Live on GitHub Pages with GitHub Actions CI (Qwik SSG)",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
+        "lenses": [
+          "guardrails"
+        ],
+        "tags": [
+          "Cloud Computing",
+          "DevOps",
+          "ELEC3",
+          "GitHub Pages",
+          "Qwik"
+        ],
+        "stack": [
+          "Qwik",
+          "TypeScript",
+          "Tailwind CSS",
+          "Vite",
+          "Docker",
+          "AWS",
+          "Kubernetes",
+          "Terraform",
+          "GitHub Actions",
+          "Java"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/elec3-cloud-portfolio",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://mark-siazon.github.io/AE3-Portfolio-Cloud-DevOps/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/mark-siazon/AE3-Portfolio-Cloud-DevOps",
+            "type": "github"
+          },
+          {
+            "label": "Terraform Survivor demo",
+            "href": "https://mark-siazon.github.io/AE3-Terraform_Survivor/",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-09-30"
       },
       {
         "slug": "frontend-mentor-lab",
@@ -1254,7 +1311,7 @@
       {
         "id": "project-linaw-what",
         "question": "What is Linaw AI?",
-        "answer": "Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
+        "answer": "Lumière’s Linaw earned the highest technical implementation score at AppCon 2026, 24 out of 30 in Technology. Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
         "audiences": [
           "project:linaw"
         ]
@@ -1262,7 +1319,7 @@
       {
         "id": "project-linaw-role",
         "question": "What was Mark Siazon's role on Linaw AI?",
-        "answer": "Full-stack Product Engineer & Project Lead. Top outcome: One notice, several readings, Format follows the reader.",
+        "answer": "Lumière team lead. Top outcome: Highest technical implementation score, 24/30 in Technology.",
         "audiences": [
           "project:linaw"
         ]
@@ -1646,7 +1703,7 @@
       {
         "id": "project-automata-winxp-status",
         "question": "What is the current status of Automata Case Studies?",
-        "answer": "Live archived coursework on Vercel",
+        "answer": "Live archived coursework on Vercel (Astro 7, CI)",
         "audiences": [
           "project:automata-winxp"
         ]
@@ -1654,7 +1711,7 @@
       {
         "id": "project-automata-winxp-stack",
         "question": "What is Automata Case Studies built with?",
-        "answer": "Astro, React, TypeScript, Tailwind CSS, Vercel.",
+        "answer": "Astro 7, React 19, TypeScript, Tailwind CSS 4, Vercel.",
         "audiences": [
           "project:automata-winxp"
         ]
@@ -1665,6 +1722,38 @@
         "answer": "No. AUTOMATA coursework for III-ACSAD under Prof. Lester Diampoc. Authors on the live compilation: Baluyut, Siazon, and Villarosa.",
         "audiences": [
           "project:automata-winxp"
+        ]
+      },
+      {
+        "id": "project-elec3-cloud-portfolio-what",
+        "question": "What is ELEC3 Cloud Portfolio?",
+        "answer": "Solo ELEC3 coursework showcase on GitHub Pages: a Qwik static portfolio cataloging cloud and DevOps assignments from Spring Boot APIs through AWS, Docker, Kubernetes, and a Terraform Survivor IaC demo.",
+        "audiences": [
+          "project:elec3-cloud-portfolio"
+        ]
+      },
+      {
+        "id": "project-elec3-cloud-portfolio-role",
+        "question": "What was Mark Siazon's role on ELEC3 Cloud Portfolio?",
+        "answer": "Solo Full-stack Developer & Cloud Portfolio Author. Top outcome: Live archive, AE3 GitHub Pages.",
+        "audiences": [
+          "project:elec3-cloud-portfolio"
+        ]
+      },
+      {
+        "id": "project-elec3-cloud-portfolio-status",
+        "question": "What is the current status of ELEC3 Cloud Portfolio?",
+        "answer": "Live on GitHub Pages with GitHub Actions CI (Qwik SSG)",
+        "audiences": [
+          "project:elec3-cloud-portfolio"
+        ]
+      },
+      {
+        "id": "project-elec3-cloud-portfolio-stack",
+        "question": "What is ELEC3 Cloud Portfolio built with?",
+        "answer": "Qwik, TypeScript, Tailwind CSS, Vite, Docker, AWS, Kubernetes, Terraform, GitHub Actions, Java.",
+        "audiences": [
+          "project:elec3-cloud-portfolio"
         ]
       },
       {
@@ -1750,7 +1839,11 @@
         "linaw": [
           {
             "label": "AppCon release",
-            "href": "https://github.com/Iron-Mark/appcon-lumiere-linawai/releases/tag/v1.0-appcon2026"
+            "href": "https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026/releases/tag/v1.0-appcon2026"
+          },
+          {
+            "label": "Lumière board",
+            "href": "https://www.facebook.com/photo/?fbid=1761723445960180"
           },
           {
             "label": "Demo video",
@@ -1843,6 +1936,12 @@
           {
             "label": "Contributor Commits",
             "href": "https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark"
+          }
+        ],
+        "elec3-cloud-portfolio": [
+          {
+            "label": "Terraform Survivor demo",
+            "href": "https://mark-siazon.github.io/AE3-Terraform_Survivor/"
           }
         ],
         "frontend-mentor-lab": [
