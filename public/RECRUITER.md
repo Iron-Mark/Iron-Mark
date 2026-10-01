@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-09-30
+Last updated: 2026-10-01
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -76,6 +76,7 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 | Calbeans Coffee | Front-end Developer & UI/UX Designer | Live static promo on Vercel; PHP course stack on legacy repo | https://www.marksiazon.dev/projects/calbeans-coffee |
 | Heron's Nest | UIUX DESIGNER & Frontend Dev | Archived course team desktop app; public repo and v1.0 release as proof | https://www.marksiazon.dev/projects/herons-nest |
 | Automata Case Studies | Front-end Developer & UI/UX Designer | Live archived coursework on Vercel (Astro 7, CI) | https://www.marksiazon.dev/projects/automata-winxp |
+| III-ACSAD Gallery | Compiler & Maintainer | Live archived coursework on Vercel | https://www.marksiazon.dev/projects/automata-acsad-gallery |
 | ELEC3 Cloud Portfolio | Solo Full-stack Developer & Cloud Portfolio Author | Live on GitHub Pages with GitHub Actions CI (Qwik SSG) | https://www.marksiazon.dev/projects/elec3-cloud-portfolio |
 | Frontend Mentor Lab | Solo UI/UX Designer & Front-end Developer | 21 FM challenges with public deploys; 20 published FM solutions; practice archive | https://www.marksiazon.dev/projects/frontend-mentor-lab |
 

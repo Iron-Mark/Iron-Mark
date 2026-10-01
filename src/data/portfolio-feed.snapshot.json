@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-30T12:52:42.110902+00:00",
+  "fetchedAt": "2026-10-01T13:43:21.710850+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -928,6 +928,51 @@
         "lastVerified": "2026-09-30"
       },
       {
+        "slug": "automata-acsad-gallery",
+        "title": "III-ACSAD Gallery",
+        "summary": "Solo section gallery of III-ACSAD AUTOMATA websites for S.Y. 2024–2025 under Prof. Lester Diampoc. Mark compiled and maintained the card index; each card names the classmates who built that site.",
+        "role": "Compiler & Maintainer",
+        "timeframe": "S.Y. 2024–2025",
+        "status": "Live archived coursework on Vercel",
+        "ownership": "Lead owner",
+        "builtBy": "solo",
+        "lenses": [
+          "guardrails"
+        ],
+        "tags": [
+          "Automata Theory",
+          "Course Gallery",
+          "Astro"
+        ],
+        "stack": [
+          "Astro 7",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS 4",
+          "Vercel"
+        ],
+        "canonicalUrl": "https://www.marksiazon.dev/projects/automata-acsad-gallery",
+        "links": [
+          {
+            "label": "Live Site",
+            "href": "https://automata-case-studies-3-acsad.vercel.app/",
+            "type": "live"
+          },
+          {
+            "label": "Repository",
+            "href": "https://github.com/mark-siazon/Automata-Case-Studies-3-ACSAD",
+            "type": "github"
+          },
+          {
+            "label": "WinXP case study",
+            "href": "https://www.marksiazon.dev/projects/automata-winxp",
+            "type": "proof"
+          }
+        ],
+        "proofCount": 1,
+        "lastVerified": "2026-09-30"
+      },
+      {
         "slug": "elec3-cloud-portfolio",
         "title": "ELEC3 Cloud Portfolio",
         "summary": "Solo ELEC3 coursework showcase on GitHub Pages: a Qwik static portfolio cataloging cloud and DevOps assignments from Spring Boot APIs through AWS, Docker, Kubernetes, and a Terraform Survivor IaC demo.",
@@ -1725,6 +1770,46 @@
         ]
       },
       {
+        "id": "project-automata-acsad-gallery-what",
+        "question": "What is III-ACSAD Gallery?",
+        "answer": "Solo section gallery of III-ACSAD AUTOMATA websites for S.Y. 2024–2025 under Prof. Lester Diampoc. Mark compiled and maintained the card index; each card names the classmates who built that site.",
+        "audiences": [
+          "project:automata-acsad-gallery"
+        ]
+      },
+      {
+        "id": "project-automata-acsad-gallery-role",
+        "question": "What was Mark Siazon's role on III-ACSAD Gallery?",
+        "answer": "Compiler & Maintainer. Top outcome: Live gallery, automata-case-studies-3-acsad.vercel.app.",
+        "audiences": [
+          "project:automata-acsad-gallery"
+        ]
+      },
+      {
+        "id": "project-automata-acsad-gallery-status",
+        "question": "What is the current status of III-ACSAD Gallery?",
+        "answer": "Live archived coursework on Vercel",
+        "audiences": [
+          "project:automata-acsad-gallery"
+        ]
+      },
+      {
+        "id": "project-automata-acsad-gallery-stack",
+        "question": "What is III-ACSAD Gallery built with?",
+        "answer": "Astro 7, React 19, TypeScript, Tailwind CSS 4, Vercel.",
+        "audiences": [
+          "project:automata-acsad-gallery"
+        ]
+      },
+      {
+        "id": "project-automata-acsad-gallery-scope",
+        "question": "Is III-ACSAD Gallery a flagship production product?",
+        "answer": "No. Mark compiled and maintained the section gallery. Each card names the classmates who built that site. This entry does not claim authorship of those sites.",
+        "audiences": [
+          "project:automata-acsad-gallery"
+        ]
+      },
+      {
         "id": "project-elec3-cloud-portfolio-what",
         "question": "What is ELEC3 Cloud Portfolio?",
         "answer": "Solo ELEC3 coursework showcase on GitHub Pages: a Qwik static portfolio cataloging cloud and DevOps assignments from Spring Boot APIs through AWS, Docker, Kubernetes, and a Terraform Survivor IaC demo.",
@@ -1936,6 +2021,12 @@
           {
             "label": "Contributor Commits",
             "href": "https://github.com/salig-dev/HeronsNest/commits?author=Iron-Mark"
+          }
+        ],
+        "automata-acsad-gallery": [
+          {
+            "label": "WinXP case study",
+            "href": "https://www.marksiazon.dev/projects/automata-winxp"
           }
         ],
         "elec3-cloud-portfolio": [
