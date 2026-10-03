@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-01T13:43:21.710850+00:00",
+  "fetchedAt": "2026-10-03T11:53:08.097920+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -2315,6 +2315,14 @@
           "Award"
         ],
         "compactResult": "Cum Laude & Dean's Lister (8/8)"
+      },
+      {
+        "title": "Recognized among winners - InfotechOlympics, Android App Development (2024) with team GILAS Tech",
+        "tags": [
+          "Award",
+          "Development"
+        ],
+        "compactResult": "Recognized among winners"
       },
       {
         "title": "13th ICT Research Congress: Best Thesis Paper",
