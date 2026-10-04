@@ -1,6 +1,6 @@
 # Proof map: README claims → verification URLs
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 **Verification boundaries:** https://www.marksiazon.dev/proof
 
 This file maps public claims on the GitHub profile README to inspectable proof. If a gate is open on the portfolio proof matrix, prefer that status over this summary.
@@ -27,7 +27,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 ### Proof by project
 
-#### III-ACSAD Gallery (https://www.marksiazon.dev/projects/automata-acsad-gallery)
+#### ACSAD Gallery (https://www.marksiazon.dev/projects/automata-acsad-gallery)
 
 - [WinXP case study](https://www.marksiazon.dev/projects/automata-winxp)
 
@@ -83,6 +83,7 @@ This file maps public claims on the GitHub profile README to inspectable proof. 
 
 #### Linaw AI (https://www.marksiazon.dev/projects/linaw)
 
+- [Chrome extension](https://chromewebstore.google.com/detail/linaw-ai/bladiejecbpoaapdaalldiclgjpelnkm)
 - [AppCon release](https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026/releases/tag/v1.0-appcon2026)
 - [Lumière board](https://www.facebook.com/photo/?fbid=1761723445960180)
 - [Demo video](https://www.youtube.com/watch?v=XsdOwdyDSSI)

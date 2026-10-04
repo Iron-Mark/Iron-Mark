@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-10-03
+Last updated: 2026-10-04
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -45,7 +45,7 @@ Open to product design, frontend, and AI workflow roles. Best fit: product roles
 
 ## What is Mark Siazon's tech stack?
 
-Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics); AEO (llms.txt, MCP); GEO (Schema.org).
+Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics, llms.txt, MCP, Schema.org).
 
 ## Can Mark Siazon ship production frontend code?
 
@@ -64,7 +64,7 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 | ResQLink | Team product designer and full-stack developer | Live platform and academic capstone | https://www.marksiazon.dev/projects/resqlink |
 | Good To Live Podcast Website | Solo Product Designer & Full-stack Developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
 | FlowFit | Full-stack Developer (Frontend-Focused) & Maintainer | Hackathon-winning project with a live web app and signed Android build | https://www.marksiazon.dev/projects/flowfit |
-| Linaw AI | Lumière team lead | Live AppCon 2026 submission | https://www.marksiazon.dev/projects/linaw |
+| Linaw AI | Project Lead & Full-stack Developer | Live AppCon 2026 submission | https://www.marksiazon.dev/projects/linaw |
 | BaybayInscribe | Lead UI/UX and front-end developer | Academic team project | https://www.marksiazon.dev/projects/baybayinscribe |
 | Kudlit | Flutter Developer & UI/UX Lead | Android release v1.0.0 and a public landing page, some checks still device-only | https://www.marksiazon.dev/projects/kudlit |
 | Pulse | Flutter Developer (Full-stack) & Maintainer | Store-ready release candidate with a live web app and signed Android builds | https://www.marksiazon.dev/projects/pulse |
@@ -74,11 +74,11 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 | Qwen UI Lab | Full-stack product builder | Live local-analysis deployment with Qwen live mode gated off | https://www.marksiazon.dev/projects/qwen-ui-lab |
 | Kopi Kount | Front-end Developer & UI/UX Designer | Live static promo site on Vercel | https://www.marksiazon.dev/projects/kopi-kount |
 | Calbeans Coffee | Front-end Developer & UI/UX Designer | Live static promo on Vercel; PHP course stack on legacy repo | https://www.marksiazon.dev/projects/calbeans-coffee |
-| Heron's Nest | UIUX DESIGNER & Frontend Dev | Archived course team desktop app; public repo and v1.0 release as proof | https://www.marksiazon.dev/projects/herons-nest |
+| Heron's Nest | Front-end Developer & UI/UX Designer | Archived course team desktop app; public repo and v1.0 release as proof | https://www.marksiazon.dev/projects/herons-nest |
 | Automata Case Studies | Front-end Developer & UI/UX Designer | Live archived coursework on Vercel (Astro 7, CI) | https://www.marksiazon.dev/projects/automata-winxp |
-| III-ACSAD Gallery | Compiler & Maintainer | Live archived coursework on Vercel | https://www.marksiazon.dev/projects/automata-acsad-gallery |
+| ACSAD Gallery | Web Developer & Maintainer | Live archived coursework on Vercel | https://www.marksiazon.dev/projects/automata-acsad-gallery |
 | ELEC3 Cloud Portfolio | Solo Full-stack Developer & Cloud Portfolio Author | Live on GitHub Pages with GitHub Actions CI (Qwik SSG) | https://www.marksiazon.dev/projects/elec3-cloud-portfolio |
-| Frontend Mentor Lab | Solo UI/UX Designer & Front-end Developer | 21 FM challenges with public deploys; 20 published FM solutions; practice archive | https://www.marksiazon.dev/projects/frontend-mentor-lab |
+| Frontend Mentor Lab | Solo Front-end Developer & UI/UX Designer | 21 FM challenges with public deploys; 20 published FM solutions; practice archive | https://www.marksiazon.dev/projects/frontend-mentor-lab |
 
 <!-- END DERIVED: recruiter -->
 
