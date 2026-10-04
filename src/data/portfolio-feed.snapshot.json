@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-03T11:53:08.097920+00:00",
+  "fetchedAt": "2026-10-04T12:43:14.726831+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -223,7 +223,7 @@
       {
         "slug": "good-to-live",
         "title": "Good To Live Podcast Website",
-        "summary": "Podcast website for Filipino creatives and entrepreneurs, from strategy through UI and launch.",
+        "summary": "Podcast website for Filipino creatives and entrepreneurs, with published episodes, RSS feeds, XML sitemaps, and production smoke checks.",
         "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2025",
         "status": "Live client project",
@@ -314,7 +314,7 @@
         "slug": "linaw",
         "title": "Linaw AI",
         "summary": "Lumière’s Linaw earned the highest technical implementation score at AppCon 2026, 24 out of 30 in Technology. Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
-        "role": "Lumière team lead",
+        "role": "Project Lead & Full-stack Developer",
         "timeframe": "Sep 2026",
         "status": "Live AppCon 2026 submission",
         "ownership": "Team delivery",
@@ -338,7 +338,8 @@
           "Python",
           "FastAPI",
           "Supabase",
-          "Node.js"
+          "Node.js",
+          "Browser extension"
         ],
         "canonicalUrl": "https://www.marksiazon.dev/projects/linaw",
         "links": [
@@ -346,6 +347,11 @@
             "label": "Live app",
             "href": "https://linawai.tech",
             "type": "live"
+          },
+          {
+            "label": "Chrome extension",
+            "href": "https://chromewebstore.google.com/detail/linaw-ai/bladiejecbpoaapdaalldiclgjpelnkm",
+            "type": "proof"
           },
           {
             "label": "Repository",
@@ -368,8 +374,8 @@
             "type": "proof"
           }
         ],
-        "proofCount": 3,
-        "lastVerified": "2026-09-25"
+        "proofCount": 4,
+        "lastVerified": "2026-10-04"
       },
       {
         "slug": "baybayinscribe",
@@ -842,7 +848,7 @@
         "slug": "herons-nest",
         "title": "Heron's Nest",
         "summary": "Team-built WinForms library management desktop app for a University of Makati coursework brief, with catalog browsing, transactions, inventory tooling, and librarian workflows.",
-        "role": "UIUX DESIGNER & Frontend Dev",
+        "role": "Front-end Developer & UI/UX Designer",
         "timeframe": "Nov 2023 – Jan 2024",
         "status": "Archived course team desktop app; public repo and v1.0 release as proof",
         "ownership": "Contributor",
@@ -929,9 +935,9 @@
       },
       {
         "slug": "automata-acsad-gallery",
-        "title": "III-ACSAD Gallery",
+        "title": "ACSAD Gallery",
         "summary": "Solo section gallery of III-ACSAD AUTOMATA websites for S.Y. 2024–2025 under Prof. Lester Diampoc. Mark compiled and maintained the card index; each card names the classmates who built that site.",
-        "role": "Compiler & Maintainer",
+        "role": "Web Developer & Maintainer",
         "timeframe": "S.Y. 2024–2025",
         "status": "Live archived coursework on Vercel",
         "ownership": "Lead owner",
@@ -1028,7 +1034,7 @@
         "slug": "frontend-mentor-lab",
         "title": "Frontend Mentor Lab",
         "summary": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
-        "role": "Solo UI/UX Designer & Front-end Developer",
+        "role": "Solo Front-end Developer & UI/UX Designer",
         "timeframe": "Feb 2023 – May 2025",
         "status": "21 FM challenges with public deploys; 20 published FM solutions; practice archive",
         "ownership": "Lead owner",
@@ -1140,7 +1146,7 @@
       {
         "id": "recruiter-tech-stack",
         "question": "What is Mark Siazon's tech stack?",
-        "answer": "Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics); AEO (llms.txt, MCP); GEO (Schema.org).",
+        "answer": "Design: UI & UX (Figma, Framer, Miro, Notion, Webflow, Storybook, Penpot, Sketch, Hotjar); Creative & multimedia (Canva, Procreate, Photoshop, Illustrator, Premiere Pro, CapCut, OBS Studio, Audacity, Spline); CSS & design libraries (Tailwind CSS, Bootstrap, Sass, BEM, shadcn/ui, MUI, Ant Design, daisyUI). Development: Web (HTML5, CSS3, JavaScript, TypeScript, Vite, TanStack, Java, PHP, jQuery, React, Next.js, Astro, Svelte, Qwik); Mobile (Android Studio, Kotlin, Wear OS, Flutter, Dart, Capacitor, React Native, Expo); Backend & APIs (Node.js, Express, Fastify, FastAPI, PostgreSQL, MySQL, MongoDB, Redis, Supabase); Web3 (Solidity, Hardhat, Move, Morph, Celo, Stellar, Soroban, Freighter, MiniPay, MetaMask); Deploy & infrastructure (Git, GitHub Actions, Docker, Vercel, Netlify, Railway, Cloudflare, Appwrite, AWS); Game dev (Unity, C#, Visual Studio, Blender, Aseprite, Godot, RPG Maker, Phaser, Three.js). Specialties: AI (Python, PyTorch, Hugging Face, LangChain, Groq, Vercel AI SDK, GCP, AWS Bedrock, Azure AI Foundry); AI-assisted workflow (ChatGPT, Claude, Gemini, Deepseek, Perplexity, Grok, Qwen, Lovable, Replit, Codex, Claude Code, Antigravity, Cursor, v0, GitHub Copilot, Qwen Code, Kiro, OpenCode); SEO (GA4, Google Search Console, Bing Webmaster, Lighthouse, IndexNow, Vercel Analytics, llms.txt, MCP, Schema.org).",
         "audiences": [
           "recruiter"
         ]
@@ -1292,7 +1298,7 @@
       {
         "id": "project-good-to-live-what",
         "question": "What is Good To Live Podcast Website?",
-        "answer": "Podcast website for Filipino creatives and entrepreneurs, from strategy through UI and launch.",
+        "answer": "Podcast website for Filipino creatives and entrepreneurs, with published episodes, RSS feeds, XML sitemaps, and production smoke checks.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -1364,7 +1370,7 @@
       {
         "id": "project-linaw-role",
         "question": "What was Mark Siazon's role on Linaw AI?",
-        "answer": "Lumière team lead. Top outcome: Highest technical implementation score, 24/30 in Technology.",
+        "answer": "Project Lead & Full-stack Developer. Top outcome: Highest technical implementation score, 24/30 in Technology.",
         "audiences": [
           "project:linaw"
         ]
@@ -1380,7 +1386,7 @@
       {
         "id": "project-linaw-stack",
         "question": "What is Linaw AI built with?",
-        "answer": "Next.js, React, TypeScript, Tailwind CSS, Gemini, Python, FastAPI, Supabase, Node.js.",
+        "answer": "Next.js, React, TypeScript, Tailwind CSS, Gemini, Python, FastAPI, Supabase, Node.js, Browser extension.",
         "audiences": [
           "project:linaw"
         ]
@@ -1700,7 +1706,7 @@
       {
         "id": "project-herons-nest-role",
         "question": "What was Mark Siazon's role on Heron's Nest?",
-        "answer": "UIUX DESIGNER & Frontend Dev. Top outcome: Public repo, salig-dev/HeronsNest.",
+        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Public repo, salig-dev/HeronsNest.",
         "audiences": [
           "project:herons-nest"
         ]
@@ -1771,7 +1777,7 @@
       },
       {
         "id": "project-automata-acsad-gallery-what",
-        "question": "What is III-ACSAD Gallery?",
+        "question": "What is ACSAD Gallery?",
         "answer": "Solo section gallery of III-ACSAD AUTOMATA websites for S.Y. 2024–2025 under Prof. Lester Diampoc. Mark compiled and maintained the card index; each card names the classmates who built that site.",
         "audiences": [
           "project:automata-acsad-gallery"
@@ -1779,15 +1785,15 @@
       },
       {
         "id": "project-automata-acsad-gallery-role",
-        "question": "What was Mark Siazon's role on III-ACSAD Gallery?",
-        "answer": "Compiler & Maintainer. Top outcome: Live gallery, automata-case-studies-3-acsad.vercel.app.",
+        "question": "What was Mark Siazon's role on ACSAD Gallery?",
+        "answer": "Web Developer & Maintainer. Top outcome: Live gallery, automata-case-studies-3-acsad.vercel.app.",
         "audiences": [
           "project:automata-acsad-gallery"
         ]
       },
       {
         "id": "project-automata-acsad-gallery-status",
-        "question": "What is the current status of III-ACSAD Gallery?",
+        "question": "What is the current status of ACSAD Gallery?",
         "answer": "Live archived coursework on Vercel",
         "audiences": [
           "project:automata-acsad-gallery"
@@ -1795,7 +1801,7 @@
       },
       {
         "id": "project-automata-acsad-gallery-stack",
-        "question": "What is III-ACSAD Gallery built with?",
+        "question": "What is ACSAD Gallery built with?",
         "answer": "Astro 7, React 19, TypeScript, Tailwind CSS 4, Vercel.",
         "audiences": [
           "project:automata-acsad-gallery"
@@ -1803,7 +1809,7 @@
       },
       {
         "id": "project-automata-acsad-gallery-scope",
-        "question": "Is III-ACSAD Gallery a flagship production product?",
+        "question": "Is ACSAD Gallery a flagship production product?",
         "answer": "No. Mark compiled and maintained the section gallery. Each card names the classmates who built that site. This entry does not claim authorship of those sites.",
         "audiences": [
           "project:automata-acsad-gallery"
@@ -1852,7 +1858,7 @@
       {
         "id": "project-frontend-mentor-lab-role",
         "question": "What was Mark Siazon's role on Frontend Mentor Lab?",
-        "answer": "Solo UI/UX Designer & Front-end Developer. Top outcome: Inspectable collection, 21 nested challenges.",
+        "answer": "Solo Front-end Developer & UI/UX Designer. Top outcome: Inspectable collection, 21 nested challenges.",
         "audiences": [
           "project:frontend-mentor-lab"
         ]
@@ -1922,6 +1928,10 @@
           }
         ],
         "linaw": [
+          {
+            "label": "Chrome extension",
+            "href": "https://chromewebstore.google.com/detail/linaw-ai/bladiejecbpoaapdaalldiclgjpelnkm"
+          },
           {
             "label": "AppCon release",
             "href": "https://github.com/Iron-Mark/Hackathon-LinawAI-AppCon_2026/releases/tag/v1.0-appcon2026"
@@ -2258,19 +2268,9 @@
               "Bing Webmaster",
               "Lighthouse",
               "IndexNow",
-              "Vercel Analytics"
-            ]
-          },
-          {
-            "label": "AEO",
-            "tools": [
+              "Vercel Analytics",
               "llms.txt",
-              "MCP"
-            ]
-          },
-          {
-            "label": "GEO",
-            "tools": [
+              "MCP",
               "Schema.org"
             ]
           }
@@ -2302,7 +2302,7 @@
         "compactResult": "Top 10 Finalist"
       },
       {
-        "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android Category (2025) with team Lumiere",
+        "title": "1st Runner-up - UMak 14th IT Skills Olympics, Android App Development (2025) with team Lumiere",
         "tags": [
           "Award",
           "Development"
@@ -2317,12 +2317,12 @@
         "compactResult": "Cum Laude & Dean's Lister (8/8)"
       },
       {
-        "title": "Recognized among winners - InfotechOlympics, Android App Development (2024) with team GILAS Tech",
+        "title": "2nd Runner-up - InfotechOlympics, Android App Development (2024) with team GILAS Tech",
         "tags": [
           "Award",
           "Development"
         ],
-        "compactResult": "Recognized among winners"
+        "compactResult": "2nd Runner-up"
       },
       {
         "title": "13th ICT Research Congress: Best Thesis Paper",
