@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Mark Siazon @Iron-Mark, Rank: A-</title>
-        <desc id="descId">Total Stars Earned: 42, Total Commits  : 7218, Total PRs: 1688</desc>
+        <title id="titleId">Mark Siazon @Iron-Mark, Rank: A</title>
+        <desc id="descId">Total Stars Earned: 42, Total Commits  : 7234, Total PRs: 1699</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
