@@ -110,7 +110,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="186.96"
+          width="187.01"
           height="8"
           fill="#3178c6"
         />
@@ -118,9 +118,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="186.96"
+          x="187.01"
           y="0"
-          width="45.79"
+          width="45.76"
           height="8"
           fill="#f1e05a"
         />
@@ -128,9 +128,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="232.75"
+          x="232.76999999999998"
           y="0"
-          width="14.42"
+          width="14.41"
           height="8"
           fill="#663399"
         />
@@ -138,9 +138,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="247.17"
+          x="247.17999999999998"
           y="0"
-          width="12.32"
+          width="12.31"
           height="8"
           fill="#3572A5"
         />
@@ -148,7 +148,7 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="259.49"
+          x="259.48999999999995"
           y="0"
           width="15.780000000000001"
           height="8"
@@ -158,9 +158,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="265.27"
+          x="265.2699999999999"
           y="0"
-          width="14.73"
+          width="14.719999999999999"
           height="8"
           fill="#012456"
         />
@@ -171,14 +171,14 @@
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#3178c6" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        TypeScript 69.24%
+        TypeScript 69.26%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" >
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 16.96%
+        JavaScript 16.95%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
