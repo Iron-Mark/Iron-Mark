@@ -1133,9 +1133,9 @@
         "@id": "https://iron-mark.github.io/Iron-Mark/#speakable",
         "cssSelector": [
           "#profile-summary",
+          "#answer-who-is-mark-siazon",
           "#answer-is-mark-siazon-available-for-hire",
-          "#answer-what-is-mark-siazons-tech-stack",
-          "#answer-where-can-i-see-mark-siazons-full-tech-stack-reference"
+          "#answer-what-is-mark-siazons-tech-stack"
         ]
       },
       "mentions": [
@@ -1856,7 +1856,7 @@
         {
           "@type": "PropertyValue",
           "name": "Answer snippet count",
-          "value": 17
+          "value": 18
         },
         {
           "@type": "PropertyValue",
@@ -2117,6 +2117,9 @@
       ],
       "mainEntity": [
         {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
+        {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire"
         },
         {
@@ -2169,6 +2172,9 @@
         }
       ],
       "hasPart": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire"
         },
@@ -2774,7 +2780,7 @@
       "url": "https://iron-mark.github.io/Iron-Mark/#answer-corpus",
       "description": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
       "abstract": "Visible question and answer corpus for Mark Siazon hiring, projects, stack, verification, geography, and citation.",
-      "text": "17 answer snippets covering hiring, projects, stack, verification, geography, and citation.",
+      "text": "18 answer snippets covering hiring, projects, stack, verification, geography, and citation.",
       "about": {
         "@id": "https://www.marksiazon.dev/#mark-siazon"
       },
@@ -4144,8 +4150,8 @@
       "encodingFormat": "application/json",
       "description": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
       "abstract": "Downloadable Structured entity index file for the Mark Siazon profile index, encoded as application/json.",
-      "contentSize": "28389 bytes",
-      "sha256": "369fc9408832d2006697e34883268ef1fd7620590d4d264cda27d50292abf970",
+      "contentSize": "28812 bytes",
+      "sha256": "bbedf1d4cedee938dd529924bbf842a145844e3f079638fefb93166c7d1971b3",
       "inLanguage": "en",
       "dateModified": "2026-10-15",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4297,8 +4303,8 @@
       "encodingFormat": "text/plain",
       "description": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
       "abstract": "Downloadable Expanded source context file for the Mark Siazon profile index, encoded as text/plain.",
-      "contentSize": "23865 bytes",
-      "sha256": "51d2a6255ec43e739244a1acad24072afca058c36ebbd8c8f7da838e7312f4e6",
+      "contentSize": "24186 bytes",
+      "sha256": "8a1d9e01fb2f064ea62c7093f9f0e8438539e90e647287b9e266219e8c36fc87",
       "inLanguage": "en",
       "dateModified": "2026-10-15",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
@@ -4856,8 +4862,8 @@
       "encodingFormat": "application/ld+json",
       "description": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
       "abstract": "Downloadable Schema.org FAQ graph file for the Mark Siazon profile index, encoded as application/ld+json.",
-      "contentSize": "74231 bytes",
-      "sha256": "272c74005cb06038de757bf4dfbfeeb7daf72eaa5498fe957f82f468738bfde5",
+      "contentSize": "77978 bytes",
+      "sha256": "4fdc680c88d5668a17a61a2441bc0140f4eca1162361b5fc4740a1c092627d63",
       "inLanguage": "en",
       "dateModified": "2026-10-15",
       "license": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
