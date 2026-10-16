@@ -116,6 +116,9 @@
       ],
       "mainEntity": [
         {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
+        {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire"
         },
         {
@@ -168,6 +171,9 @@
         }
       ],
       "hasPart": [
+        {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
         {
           "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#is-mark-siazon-available-for-hire"
         },
@@ -241,6 +247,95 @@
       },
       "sdDatePublished": "2026-10-15",
       "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+    },
+    {
+      "@type": "Question",
+      "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon",
+      "name": "Who is Mark Siazon?",
+      "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Iron-Mark FAQ question",
+        "value": "who-is-mark-siazon",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+      },
+      "author": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "publisher": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "about": {
+        "@id": "https://www.marksiazon.dev/#mark-siazon"
+      },
+      "isPartOf": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "parentItem": {
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+      },
+      "answerCount": 1,
+      "inLanguage": "en",
+      "dateModified": "2026-10-15",
+      "isAccessibleForFree": true,
+      "citation": [
+        "https://www.marksiazon.dev",
+        "https://github.com/Iron-Mark/Iron-Mark"
+      ],
+      "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+      "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+      "sdPublisher": {
+        "@type": "Person",
+        "@id": "https://www.marksiazon.dev/#mark-siazon",
+        "name": "Mark Siazon",
+        "url": "https://www.marksiazon.dev"
+      },
+      "sdDatePublished": "2026-10-15",
+      "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer",
+        "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Iron-Mark FAQ answer",
+          "value": "who-is-mark-siazon-answer",
+          "url": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon-answer"
+        },
+        "text": "Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev",
+        "author": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "publisher": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "about": {
+          "@id": "https://www.marksiazon.dev/#mark-siazon"
+        },
+        "isPartOf": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#faq"
+        },
+        "parentItem": {
+          "@id": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/FAQ.md#who-is-mark-siazon"
+        },
+        "inLanguage": "en",
+        "dateModified": "2026-10-15",
+        "isAccessibleForFree": true,
+        "usageInfo": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/HOW-TO-CITE.md",
+        "publishingPrinciples": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/PROOF.md",
+        "citation": [
+          "https://www.marksiazon.dev",
+          "https://github.com/Iron-Mark/Iron-Mark"
+        ],
+        "sdPublisher": {
+          "@type": "Person",
+          "@id": "https://www.marksiazon.dev/#mark-siazon",
+          "name": "Mark Siazon",
+          "url": "https://www.marksiazon.dev"
+        },
+        "sdDatePublished": "2026-10-15",
+        "sdLicense": "https://github.com/Iron-Mark/Iron-Mark/blob/main/public/LICENSE.md"
+      }
     },
     {
       "@type": "Question",

@@ -183,6 +183,10 @@ Full stack reference: public/STACK.md
 
 ## Answer snippets
 
+### Who is Mark Siazon?
+Mark Siazon (@Iron-Mark, @mark-siazon) is a product designer and full-stack developer based in the Philippines. He builds case-study-backed work in AI, mobile, Web3, and client web. Portfolio: https://www.marksiazon.dev
+Sources: https://www.marksiazon.dev, https://github.com/Iron-Mark/Iron-Mark
+
 ### Is Mark Siazon available for hire?
 Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
 Sources: https://www.marksiazon.dev/recruiter, https://www.marksiazon.dev/contact
