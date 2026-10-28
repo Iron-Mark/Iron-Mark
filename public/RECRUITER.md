@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-10-27
+Last updated: 2026-10-28
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -37,7 +37,7 @@ Work scope: Product roles, Client builds, Launch support, Case-study packages, A
 
 ## Who is Mark Siazon (Iron Mark)?
 
-Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches. On public profiles he also uses Iron-Mark and marksiazon.
+Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer who designs interfaces in Figma and ships them in production across AI tools, mobile, and client web apps. On public profiles he also uses Iron-Mark and marksiazon.
 
 ## Is Mark Siazon available for hire?
 
