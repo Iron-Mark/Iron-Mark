@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-26T13:25:27.314837+00:00",
+  "fetchedAt": "2026-10-28T13:20:16.638368+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -8,7 +8,7 @@
       "id": "https://www.marksiazon.dev/#mark-siazon",
       "url": "https://www.marksiazon.dev",
       "title": "Product Designer & Full-Stack Developer",
-      "summary": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches.",
+      "summary": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer who designs interfaces in Figma and ships them in production across AI tools, mobile, and client web apps.",
       "sameAs": [
         "https://github.com/Iron-Mark",
         "https://www.linkedin.com/in/mark-siazon/",
@@ -1081,6 +1081,13 @@
     ],
     "writing": [
       {
+        "slug": "how-i-adapt-to-ai",
+        "title": "From Figma to Full-Stack: How I Work With AI Tools",
+        "summary": "How AI coding tools helped me grow from UI/UX and frontend into full-stack work, and why I still start every build in Figma before opening a terminal.",
+        "publishedAt": "2026-09-14",
+        "canonicalUrl": "https://www.marksiazon.dev/blogs/how-i-adapt-to-ai"
+      },
+      {
         "slug": "taming-ai-agent-disk-io",
         "title": "Codex CLI Pinned My Windows Disk at 100%: Bounding the Log Growth Upstream Won't",
         "summary": "Codex CLI pinned a Windows disk at 100%: unbounded SQLite trace logging under ~/.codex, and the layered fix (measure, rotate after exit, scope scanning) that took it to ~3%.",
@@ -1130,7 +1137,7 @@
       {
         "id": "identity-who",
         "question": "Who is Mark Siazon (Iron Mark)?",
-        "answer": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer focused on inspectable case studies, AI workflows, mobile UX, Web3 trust flows, and client-facing web launches. On public profiles he also uses Iron-Mark and marksiazon.",
+        "answer": "Mark Siazon, also known as Iron Mark, is a Philippines-based product designer and full-stack developer who designs interfaces in Figma and ships them in production across AI tools, mobile, and client web apps. On public profiles he also uses Iron-Mark and marksiazon.",
         "audiences": [
           "recruiter"
         ]
@@ -1216,22 +1223,6 @@
         ]
       },
       {
-        "id": "project-hireproof-status",
-        "question": "What is the current status of HireProof?",
-        "answer": "Live trust workflow with provider and live-check boundaries",
-        "audiences": [
-          "project:hireproof"
-        ]
-      },
-      {
-        "id": "project-hireproof-stack",
-        "question": "What is HireProof built with?",
-        "answer": "Next.js, React, TypeScript, Tailwind CSS, Vercel AI SDK, LangChain, MCP, Upstash Redis, Framer Motion, v0, Google Vision, Slack Bot, Discord Bot, Telegram Bot, n8n, npm.",
-        "audiences": [
-          "project:hireproof"
-        ]
-      },
-      {
         "id": "project-stellaroid-earn-what",
         "question": "What is Stellaroid Earn?",
         "answer": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and an inspectable transaction trail.",
@@ -1243,22 +1234,6 @@
         "id": "project-stellaroid-earn-role",
         "question": "What was Mark Siazon's role on Stellaroid Earn?",
         "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Public review path, www.stellaroid.tech.",
-        "audiences": [
-          "project:stellaroid-earn"
-        ]
-      },
-      {
-        "id": "project-stellaroid-earn-status",
-        "question": "What is the current status of Stellaroid Earn?",
-        "answer": "Live Stellar testnet project",
-        "audiences": [
-          "project:stellaroid-earn"
-        ]
-      },
-      {
-        "id": "project-stellaroid-earn-stack",
-        "question": "What is Stellaroid Earn built with?",
-        "answer": "Next.js, React, TypeScript, Soroban, Freighter, Stellar Testnet, Tailwind CSS, Vercel.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -1280,22 +1255,6 @@
         ]
       },
       {
-        "id": "project-resqlink-status",
-        "question": "What is the current status of ResQLink?",
-        "answer": "Live platform and academic capstone",
-        "audiences": [
-          "project:resqlink"
-        ]
-      },
-      {
-        "id": "project-resqlink-stack",
-        "question": "What is ResQLink built with?",
-        "answer": "Flutter, Gemini Flash, MobileViTv2, BLE Mesh, Appwrite, Fastify, Kotlin, Firebase, Dart, Vite, React, TypeScript, Tailwind CSS, shadcn/ui, SQLite.",
-        "audiences": [
-          "project:resqlink"
-        ]
-      },
-      {
         "id": "project-good-to-live-what",
         "question": "What is Good To Live Podcast Website?",
         "answer": "Podcast website for Filipino creatives and entrepreneurs, with published episodes, RSS feeds, XML sitemaps, and production smoke checks.",
@@ -1307,22 +1266,6 @@
         "id": "project-good-to-live-role",
         "question": "What was Mark Siazon's role on Good To Live Podcast Website?",
         "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Launch record, Public website.",
-        "audiences": [
-          "project:good-to-live"
-        ]
-      },
-      {
-        "id": "project-good-to-live-status",
-        "question": "What is the current status of Good To Live Podcast Website?",
-        "answer": "Live client project",
-        "audiences": [
-          "project:good-to-live"
-        ]
-      },
-      {
-        "id": "project-good-to-live-stack",
-        "question": "What is Good To Live Podcast Website built with?",
-        "answer": "Next.js, React, TypeScript, Tailwind CSS, Vercel, GA4, Schema.org, Cloudflare.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -1344,22 +1287,6 @@
         ]
       },
       {
-        "id": "project-flowfit-status",
-        "question": "What is the current status of FlowFit?",
-        "answer": "Hackathon-winning project with a live web app and signed Android build",
-        "audiences": [
-          "project:flowfit"
-        ]
-      },
-      {
-        "id": "project-flowfit-stack",
-        "question": "What is FlowFit built with?",
-        "answer": "Flutter, Wear OS, Dart, Samsung Health Sensor SDK, Supabase.",
-        "audiences": [
-          "project:flowfit"
-        ]
-      },
-      {
         "id": "project-linaw-what",
         "question": "What is Linaw AI?",
         "answer": "Lumière’s Linaw earned the highest technical implementation score at AppCon 2026, 24 out of 30 in Technology. Clarify the format. Preserve the meaning. One notice becomes full detail, key points, plain language, or audio, then Linaw checks the facts that fail quietly.",
@@ -1371,22 +1298,6 @@
         "id": "project-linaw-role",
         "question": "What was Mark Siazon's role on Linaw AI?",
         "answer": "Project Lead & Full-stack Developer. Top outcome: Highest technical implementation score, 24/30 in Technology.",
-        "audiences": [
-          "project:linaw"
-        ]
-      },
-      {
-        "id": "project-linaw-status",
-        "question": "What is the current status of Linaw AI?",
-        "answer": "Live AppCon 2026 submission",
-        "audiences": [
-          "project:linaw"
-        ]
-      },
-      {
-        "id": "project-linaw-stack",
-        "question": "What is Linaw AI built with?",
-        "answer": "Next.js, React, TypeScript, Tailwind CSS, Gemini, Python, FastAPI, Supabase, Node.js, Browser extension.",
         "audiences": [
           "project:linaw"
         ]
@@ -1408,22 +1319,6 @@
         ]
       },
       {
-        "id": "project-baybayinscribe-status",
-        "question": "What is the current status of BaybayInscribe?",
-        "answer": "Academic team project",
-        "audiences": [
-          "project:baybayinscribe"
-        ]
-      },
-      {
-        "id": "project-baybayinscribe-stack",
-        "question": "What is BaybayInscribe built with?",
-        "answer": "React, Next.js, TypeScript, Tailwind CSS, Capacitor, TensorFlow, Hugging Face, Zustand.",
-        "audiences": [
-          "project:baybayinscribe"
-        ]
-      },
-      {
         "id": "project-kudlit-what",
         "question": "What is Kudlit?",
         "answer": "Flutter Baybayin learning companion with scan, translate, lessons, Butty guidance, Android release packaging, and a bundled design system.",
@@ -1435,22 +1330,6 @@
         "id": "project-kudlit-role",
         "question": "What was Mark Siazon's role on Kudlit?",
         "answer": "Flutter Developer & UI/UX Lead. Top outcome: Public artifact, Android APK release.",
-        "audiences": [
-          "project:kudlit"
-        ]
-      },
-      {
-        "id": "project-kudlit-status",
-        "question": "What is the current status of Kudlit?",
-        "answer": "Android release v1.0.0 and a public landing page, some checks still device-only",
-        "audiences": [
-          "project:kudlit"
-        ]
-      },
-      {
-        "id": "project-kudlit-stack",
-        "question": "What is Kudlit built with?",
-        "answer": "Flutter, Gemma 4, YOLO to TFLite, Riverpod, Supabase, go_router, Dart.",
         "audiences": [
           "project:kudlit"
         ]
@@ -1472,22 +1351,6 @@
         ]
       },
       {
-        "id": "project-pulse-status",
-        "question": "What is the current status of Pulse?",
-        "answer": "Store-ready release candidate with a live web app and signed Android builds",
-        "audiences": [
-          "project:pulse"
-        ]
-      },
-      {
-        "id": "project-pulse-stack",
-        "question": "What is Pulse built with?",
-        "answer": "Flutter, Kotlin, Wear OS, Galaxy Watch, Samsung Health sensors, Spotify, Supabase, Riverpod, Jetpack Compose.",
-        "audiences": [
-          "project:pulse"
-        ]
-      },
-      {
         "id": "project-palengkepay-what",
         "question": "What is PalengkePay?",
         "answer": "Team-built Stellar PWA for wet-market vendor payments, QR checkout, vendor records, admin operations, and mainnet plus testnet Soroban contract review.",
@@ -1499,22 +1362,6 @@
         "id": "project-palengkepay-role",
         "question": "What was Mark Siazon's role on PalengkePay?",
         "answer": "App Developer Contributor and Researcher. Top outcome: Public app, Mainnet + testnet PWAs.",
-        "audiences": [
-          "project:palengkepay"
-        ]
-      },
-      {
-        "id": "project-palengkepay-status",
-        "question": "What is the current status of PalengkePay?",
-        "answer": "Live mainnet and testnet PWAs with deployed Soroban contracts",
-        "audiences": [
-          "project:palengkepay"
-        ]
-      },
-      {
-        "id": "project-palengkepay-stack",
-        "question": "What is PalengkePay built with?",
-        "answer": "React, TypeScript, Vite, Stellar SDK, Soroban, Vercel, Playwright.",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1536,22 +1383,6 @@
         ]
       },
       {
-        "id": "project-gawainyah-status",
-        "question": "What is the current status of GawainYah?",
-        "answer": "Live MiniPay MVP on Celo mainnet with six languages and multi-token payments; registry deployed, real payment and proof event pending",
-        "audiences": [
-          "project:gawainyah"
-        ]
-      },
-      {
-        "id": "project-gawainyah-stack",
-        "question": "What is GawainYah built with?",
-        "answer": "Next.js, TypeScript, next-intl, MiniPay, Celo, Hardhat, Supabase, Vercel, Playwright, Vitest, axe-core.",
-        "audiences": [
-          "project:gawainyah"
-        ]
-      },
-      {
         "id": "project-lexinsights-what",
         "question": "What is LexInsights?",
         "answer": "Providerless Philippine legal research and compliance assistant with local statute retrieval, draft checking, document extraction, guest chat history, and optional remote RAG fallback.",
@@ -1563,22 +1394,6 @@
         "id": "project-lexinsights-role",
         "question": "What was Mark Siazon's role on LexInsights?",
         "answer": "Full-stack product builder. Top outcome: Resilient research, Providerless default.",
-        "audiences": [
-          "project:lexinsights"
-        ]
-      },
-      {
-        "id": "project-lexinsights-status",
-        "question": "What is the current status of LexInsights?",
-        "answer": "Production v0.5.2 ready at 8702afd",
-        "audiences": [
-          "project:lexinsights"
-        ]
-      },
-      {
-        "id": "project-lexinsights-stack",
-        "question": "What is LexInsights built with?",
-        "answer": "Next.js 16 App Router, React 19, TypeScript, Zustand, Clerk auth boundary, Supabase client/storage boundary, Playwright smoke coverage.",
         "audiences": [
           "project:lexinsights"
         ]
@@ -1600,22 +1415,6 @@
         ]
       },
       {
-        "id": "project-qwen-ui-lab-status",
-        "question": "What is the current status of Qwen UI Lab?",
-        "answer": "Live local-analysis deployment with Qwen live mode gated off",
-        "audiences": [
-          "project:qwen-ui-lab"
-        ]
-      },
-      {
-        "id": "project-qwen-ui-lab-stack",
-        "question": "What is Qwen UI Lab built with?",
-        "answer": "Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, Qwen3-VL optional live analysis boundary, React + Tailwind export packages, Playwright and Node test coverage.",
-        "audiences": [
-          "project:qwen-ui-lab"
-        ]
-      },
-      {
         "id": "project-kopi-kount-what",
         "question": "What is Kopi Kount?",
         "answer": "Team-built promotional website for a Makati coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
@@ -1627,22 +1426,6 @@
         "id": "project-kopi-kount-role",
         "question": "What was Mark Siazon's role on Kopi Kount?",
         "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live site, kopi-kount.vercel.app.",
-        "audiences": [
-          "project:kopi-kount"
-        ]
-      },
-      {
-        "id": "project-kopi-kount-status",
-        "question": "What is the current status of Kopi Kount?",
-        "answer": "Live static promo site on Vercel",
-        "audiences": [
-          "project:kopi-kount"
-        ]
-      },
-      {
-        "id": "project-kopi-kount-stack",
-        "question": "What is Kopi Kount built with?",
-        "answer": "Figma, HTML5, CSS3, JavaScript, Bootstrap, Vercel.",
         "audiences": [
           "project:kopi-kount"
         ]
@@ -1672,22 +1455,6 @@
         ]
       },
       {
-        "id": "project-calbeans-coffee-status",
-        "question": "What is the current status of Calbeans Coffee?",
-        "answer": "Live static promo on Vercel; PHP course stack on legacy repo",
-        "audiences": [
-          "project:calbeans-coffee"
-        ]
-      },
-      {
-        "id": "project-calbeans-coffee-stack",
-        "question": "What is Calbeans Coffee built with?",
-        "answer": "HTML5, CSS3, JavaScript, Bootstrap, PHP, MySQL, Vercel.",
-        "audiences": [
-          "project:calbeans-coffee"
-        ]
-      },
-      {
         "id": "project-calbeans-coffee-scope",
         "question": "Is Calbeans Coffee a flagship production product?",
         "answer": "No. WEBTOOLS and WEBAPPS group project for a real East Rembo café, with a website proposal, wireframes, and multi-page promotional scope.",
@@ -1707,22 +1474,6 @@
         "id": "project-herons-nest-role",
         "question": "What was Mark Siazon's role on Heron's Nest?",
         "answer": "Front-end Developer & UI/UX Designer. Top outcome: Public repo, salig-dev/HeronsNest.",
-        "audiences": [
-          "project:herons-nest"
-        ]
-      },
-      {
-        "id": "project-herons-nest-status",
-        "question": "What is the current status of Heron's Nest?",
-        "answer": "Archived course team desktop app; public repo and v1.0 release as proof",
-        "audiences": [
-          "project:herons-nest"
-        ]
-      },
-      {
-        "id": "project-herons-nest-stack",
-        "question": "What is Heron's Nest built with?",
-        "answer": "Figma, C#, .NET 8, WinForms, SQLite, Entity Framework Core, Visual Studio.",
         "audiences": [
           "project:herons-nest"
         ]
@@ -1752,22 +1503,6 @@
         ]
       },
       {
-        "id": "project-automata-winxp-status",
-        "question": "What is the current status of Automata Case Studies?",
-        "answer": "Live archived coursework on Vercel (Astro 7, CI)",
-        "audiences": [
-          "project:automata-winxp"
-        ]
-      },
-      {
-        "id": "project-automata-winxp-stack",
-        "question": "What is Automata Case Studies built with?",
-        "answer": "Astro 7, React 19, TypeScript, Tailwind CSS 4, Vercel.",
-        "audiences": [
-          "project:automata-winxp"
-        ]
-      },
-      {
         "id": "project-automata-winxp-scope",
         "question": "Is Automata Case Studies a flagship production product?",
         "answer": "No. AUTOMATA coursework for III-ACSAD under Prof. Lester Diampoc. Authors on the live compilation: Baluyut, Siazon, and Villarosa.",
@@ -1787,22 +1522,6 @@
         "id": "project-automata-acsad-gallery-role",
         "question": "What was Mark Siazon's role on ACSAD Gallery?",
         "answer": "Web Developer & Maintainer. Top outcome: Live gallery, automata-case-studies-3-acsad.vercel.app.",
-        "audiences": [
-          "project:automata-acsad-gallery"
-        ]
-      },
-      {
-        "id": "project-automata-acsad-gallery-status",
-        "question": "What is the current status of ACSAD Gallery?",
-        "answer": "Live archived coursework on Vercel",
-        "audiences": [
-          "project:automata-acsad-gallery"
-        ]
-      },
-      {
-        "id": "project-automata-acsad-gallery-stack",
-        "question": "What is ACSAD Gallery built with?",
-        "answer": "Astro 7, React 19, TypeScript, Tailwind CSS 4, Vercel.",
         "audiences": [
           "project:automata-acsad-gallery"
         ]
@@ -1832,22 +1551,6 @@
         ]
       },
       {
-        "id": "project-elec3-cloud-portfolio-status",
-        "question": "What is the current status of ELEC3 Cloud Portfolio?",
-        "answer": "Live on GitHub Pages with GitHub Actions CI (Qwik SSG)",
-        "audiences": [
-          "project:elec3-cloud-portfolio"
-        ]
-      },
-      {
-        "id": "project-elec3-cloud-portfolio-stack",
-        "question": "What is ELEC3 Cloud Portfolio built with?",
-        "answer": "Qwik, TypeScript, Tailwind CSS, Vite, Docker, AWS, Kubernetes, Terraform, GitHub Actions, Java.",
-        "audiences": [
-          "project:elec3-cloud-portfolio"
-        ]
-      },
-      {
         "id": "project-frontend-mentor-lab-what",
         "question": "What is Frontend Mentor Lab?",
         "answer": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
@@ -1859,22 +1562,6 @@
         "id": "project-frontend-mentor-lab-role",
         "question": "What was Mark Siazon's role on Frontend Mentor Lab?",
         "answer": "Solo Front-end Developer & UI/UX Designer. Top outcome: Inspectable collection, 21 nested challenges.",
-        "audiences": [
-          "project:frontend-mentor-lab"
-        ]
-      },
-      {
-        "id": "project-frontend-mentor-lab-status",
-        "question": "What is the current status of Frontend Mentor Lab?",
-        "answer": "21 FM challenges with public deploys; 20 published FM solutions; practice archive",
-        "audiences": [
-          "project:frontend-mentor-lab"
-        ]
-      },
-      {
-        "id": "project-frontend-mentor-lab-stack",
-        "question": "What is Frontend Mentor Lab built with?",
-        "answer": "Figma, Photoshop, Tailwind CSS, Sass, HTML5, CSS3, JavaScript, React, TypeScript, npm.",
         "audiences": [
           "project:frontend-mentor-lab"
         ]
