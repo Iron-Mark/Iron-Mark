@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Mark Siazon @Iron-Mark, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 44, Total Commits  : 7434, Total PRs: 1853</desc>
+        <desc id="descId">Total Stars Earned: 44, Total Commits  : 7439, Total PRs: 1859</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
