@@ -42,7 +42,7 @@ jobs:
           ref: dev
 
       - name: Generate stats card
-        uses: stats-organization/github-readme-stats-action@6269b9a08af89020bb86cde31485d18c7d41ac33 # v2
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         env:
           # Sum stars from the top ~100 repos only. Paginating every repository
           # blows GitHub's GraphQL node limit (RESOURCE_LIMITS_EXCEEDED) on large
@@ -72,7 +72,7 @@ jobs:
           fi
 
       - name: Generate top languages card
-        uses: stats-organization/github-readme-stats-action@6269b9a08af89020bb86cde31485d18c7d41ac33 # v2
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
           # Compact layout at card_width=320 (165px height to pair with stats card)
