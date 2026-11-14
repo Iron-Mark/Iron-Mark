@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Mark Siazon @Iron-Mark, Rank: A</title>
-        <desc id="descId">Total Stars Earned: 44, Total Commits  : 7528, Total PRs: 1943</desc>
+        <desc id="descId">Total Stars Earned: 44, Total Commits  : 8154, Total PRs: 1951</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -152,7 +152,7 @@
         x="174.01"
         y="12.5"
         data-testid="commits"
-      >7.5k</text>
+      >8.2k</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" transform="translate(25, 0)">
@@ -167,7 +167,7 @@
         x="174.01"
         y="12.5"
         data-testid="prs"
-      >1.9k</text>
+      >2k</text>
     </g>
   </g>
     </svg>
