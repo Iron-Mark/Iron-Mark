@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-11-14
+Last updated: 2026-11-15
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -29,7 +29,7 @@ Best fit: product roles, client builds, launch support, case-study packages, and
 
 First message: Share the role, problem, timeline, and work you want reviewed.
 
-Note: No public booking link is published; use the contact form so private details stay server-side.
+Note: No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
 
 Work scope: Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, Mobile UX cleanup
 
@@ -41,7 +41,11 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
+
+## What should I include in a first message?
+
+Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.
 
 ## What is Mark Siazon's tech stack?
 
