@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-15T14:11:52.308521+00:00",
+  "fetchedAt": "2026-11-16T16:14:29.048663+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -380,7 +380,7 @@
       {
         "slug": "baybayinscribe",
         "title": "BaybayInscribe",
-        "summary": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
+        "summary": "Baybayin learning and translation app, revived as a guest showcase with sample lessons, quizzes, sketching, and local character recognition.",
         "role": "Lead UI/UX and front-end developer",
         "timeframe": "Aug 2024 – Jun 2025",
         "status": "Academic team project",
@@ -409,6 +409,11 @@
         "canonicalUrl": "https://www.marksiazon.dev/projects/baybayinscribe",
         "links": [
           {
+            "label": "Guest showcase",
+            "href": "https://baybayinscribe.vercel.app",
+            "type": "live"
+          },
+          {
             "label": "Repository",
             "href": "https://github.com/UMak-Gilas-Tech/baybayinscribe-client",
             "type": "github"
@@ -420,7 +425,7 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-09-13"
+        "lastVerified": "2026-11-16"
       },
       {
         "slug": "kudlit",
@@ -1313,7 +1318,7 @@
       {
         "id": "project-baybayinscribe-what",
         "question": "What is BaybayInscribe?",
-        "answer": "Baybayin learning and translation app with ML-powered character recognition, tutorials, cross-platform support, and Filipino culture-focused UX.",
+        "answer": "Baybayin learning and translation app, revived as a guest showcase with sample lessons, quizzes, sketching, and local character recognition.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -1321,7 +1326,7 @@
       {
         "id": "project-baybayinscribe-role",
         "question": "What was Mark Siazon's role on BaybayInscribe?",
-        "answer": "Lead UI/UX and front-end developer. Top outcome: Archived beta, Interface capture.",
+        "answer": "Lead UI/UX and front-end developer. Top outcome: Revived guest showcase, Public practice.",
         "audiences": [
           "project:baybayinscribe"
         ]
