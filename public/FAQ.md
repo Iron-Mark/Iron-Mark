@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-11-08
+Last updated: 2026-11-15
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -33,7 +33,11 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.
+Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
+
+## What should I include in a first message?
+
+Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.
 
 ## What is Mark Siazon's tech stack?
 
@@ -51,9 +55,9 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 
 Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.
 
-## Can AI search crawlers read this contact page?
+## Can AI search crawlers read private contact details?
 
-Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the contact and API surfaces. Host or CDN crawler access still needs account-side confirmation.
+Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the API surface. Host or CDN crawler access still needs account-side confirmation.
 
 ## Where should private contact details live?
 

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-08T13:44:13.441219+00:00",
+  "fetchedAt": "2026-11-15T14:11:52.308521+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -35,7 +35,7 @@
       "headline": "Open to product design, frontend, and AI workflow roles",
       "summary": "Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.",
       "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
-      "note": "No public booking link is published; use the contact form so private details stay server-side.",
+      "note": "No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.",
       "workScope": [
         "Product roles",
         "Client builds",
@@ -1145,7 +1145,15 @@
       {
         "id": "recruiter-availability",
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; use the contact form so private details stay server-side.",
+        "answer": "Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.",
+        "audiences": [
+          "recruiter"
+        ]
+      },
+      {
+        "id": "recruiter-first-message",
+        "question": "What should I include in a first message?",
+        "answer": "Share the role or project context, timeline, work you want reviewed, and the next decision you need to make.",
         "audiences": [
           "recruiter"
         ]
@@ -1184,8 +1192,8 @@
       },
       {
         "id": "contact-crawler-access",
-        "question": "Can AI search crawlers read this contact page?",
-        "answer": "Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the contact and API surfaces. Host or CDN crawler access still needs account-side confirmation.",
+        "question": "Can AI search crawlers read private contact details?",
+        "answer": "Robots.txt allows OAI-SearchBot, Claude-SearchBot, and PerplexityBot to discover public portfolio pages, but blocks them from the API surface. Host or CDN crawler access still needs account-side confirmation.",
         "audiences": [
           "contact"
         ]
