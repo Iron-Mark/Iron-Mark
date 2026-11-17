@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-16T16:14:29.048663+00:00",
+  "fetchedAt": "2026-11-17T16:20:45.222205+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -1094,8 +1094,8 @@
       },
       {
         "slug": "taming-ai-agent-disk-io",
-        "title": "Codex CLI Pinned My Windows Disk at 100%: Bounding the Log Growth Upstream Won't",
-        "summary": "Codex CLI pinned a Windows disk at 100%: unbounded SQLite trace logging under ~/.codex, and the layered fix (measure, rotate after exit, scope scanning) that took it to ~3%.",
+        "title": "Investigating Codex Disk I/O on Windows: Measurements, Mitigations, and Limits",
+        "summary": "A Windows disk-I/O case study with read-only diagnostics, SQLite WAL caveats, security trade-offs, and limits on before-and-after conclusions.",
         "publishedAt": "2026-07-29",
         "canonicalUrl": "https://www.marksiazon.dev/blogs/taming-ai-agent-disk-io"
       },
