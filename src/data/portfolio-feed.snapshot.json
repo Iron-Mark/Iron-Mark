@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-17T16:20:45.222205+00:00",
+  "fetchedAt": "2026-11-20T15:40:36.113588+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -12,6 +12,7 @@
       "sameAs": [
         "https://github.com/Iron-Mark",
         "https://www.linkedin.com/in/mark-siazon/",
+        "https://www.behance.net/mark-siazon",
         "https://github.com/mark-siazon",
         "https://x.com/iron_markk",
         "https://twitter.com/iron_markk",
@@ -1038,7 +1039,7 @@
       {
         "slug": "frontend-mentor-lab",
         "title": "Frontend Mentor Lab",
-        "summary": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
+        "summary": "A curated archive of 21 Frontend Mentor UI challenges, from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages, each with a public deploy and GitHub repo.",
         "role": "Solo Front-end Developer & UI/UX Designer",
         "timeframe": "Feb 2023 – May 2025",
         "status": "21 FM challenges with public deploys; 20 published FM solutions; practice archive",
@@ -1566,7 +1567,7 @@
       {
         "id": "project-frontend-mentor-lab-what",
         "question": "What is Frontend Mentor Lab?",
-        "answer": "A curated archive of 21 Frontend Mentor UI challenges — from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages — each with a public deploy and GitHub repo.",
+        "answer": "A curated archive of 21 Frontend Mentor UI challenges, from mobile-first HTML/CSS cards through SCSS layout drills to React, TypeScript, and Tailwind landing pages, each with a public deploy and GitHub repo.",
         "audiences": [
           "project:frontend-mentor-lab"
         ]
