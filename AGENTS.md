@@ -99,3 +99,5 @@ separate PyPI `fastmcp` package is third-party and is **not** the successor.
   Equal hashes mean the branches agree regardless of ahead/behind.
 - **CI fails on committed absolute local paths.** Never commit a
   `C:\Users\...` path.
+
+Last verified: 2026-11-20 (daily stats cards and index freshness automation green on `main`).

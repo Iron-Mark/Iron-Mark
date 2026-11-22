@@ -43,14 +43,14 @@ jobs:
     env:
       FAILURE_ISSUE_TITLE: "Daily automation failure: Promote automation to main"
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
           ref: dev
           # Tip comparison only - no need for full history (identity-guard keeps
           # fetch-depth: 0 on PRs). Depth 1 + explicit tip fetch stays shallow-safe.
           fetch-depth: 1
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: "3.12"
 
