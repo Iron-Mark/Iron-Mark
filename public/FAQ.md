@@ -1,6 +1,6 @@
 # Mark Siazon: Frequently Asked Questions
 
-Last updated: 2026-11-24
+Last updated: 2026-11-25
 Canonical portfolio: https://www.marksiazon.dev · GitHub profile index: https://github.com/Iron-Mark/Iron-Mark  
 Entity @id: https://www.marksiazon.dev/#mark-siazon
 FAQ schema: https://github.com/Iron-Mark/Iron-Mark/blob/main/public/schema/faq.jsonld
@@ -21,7 +21,7 @@ Hybrid product designer for 0→1 product work
 
 ## What contexts does Mark Siazon work best in?
 
-AI workflows, mobile UX, Web3 trust flows, client launches
+AI workflows, mobile UX, Web3 apps, client launches
 
 ## How does Mark Siazon work?
 
@@ -33,7 +33,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
+Open to product design, frontend, and full-stack roles. Available for product roles, freelance client builds, launch support, AI prototypes, and mobile UX cleanup. Open to Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
 
 ## What should I include in a first message?
 
@@ -65,7 +65,7 @@ Private recipient and sender addresses stay in server-side environment variables
 
 ## What work is Mark Siazon open to?
 
-Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.
+Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, and Mobile UX cleanup.
 
 <!-- END DERIVED: faq -->
 
