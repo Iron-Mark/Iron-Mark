@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-23T18:35:45.178035+00:00",
+  "fetchedAt": "2026-11-24T18:05:13.467658+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -33,17 +33,16 @@
       "nationality": "Philippines"
     },
     "availability": {
-      "headline": "Open to product design, frontend, and AI workflow roles",
-      "summary": "Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.",
+      "headline": "Open to product design, frontend, and full-stack roles",
+      "summary": "Available for product roles, freelance client builds, launch support, AI prototypes, and mobile UX cleanup.",
       "firstMessage": "Share the role, problem, timeline, and work you want reviewed.",
       "note": "No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.",
       "workScope": [
-        "Product roles",
-        "Client builds",
+        "Product design roles",
+        "Frontend and full-stack roles",
+        "Freelance client builds",
         "Launch support",
-        "Case-study packages",
         "AI workflow prototypes",
-        "Web3 trust flows",
         "Mobile UX cleanup"
       ]
     },
@@ -109,7 +108,7 @@
       {
         "slug": "stellaroid-earn",
         "title": "Stellaroid Earn",
-        "summary": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and an inspectable transaction trail.",
+        "summary": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and a verifiable transaction trail.",
         "role": "Solo Product Designer & Full-stack Developer",
         "timeframe": "2026",
         "status": "Live Stellar testnet project",
@@ -700,7 +699,7 @@
       {
         "slug": "qwen-ui-lab",
         "title": "Qwen UI Lab",
-        "summary": "Screenshot-to-React workspace that turns UI screenshots into inspectable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
+        "summary": "Screenshot-to-React workspace that turns UI screenshots into editable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
         "role": "Full-stack product builder",
         "timeframe": "Jun - Jul 2026",
         "status": "Live local-analysis deployment with Qwen live mode gated off",
@@ -734,7 +733,7 @@
           },
           {
             "label": "Repository",
-            "href": "https://github.com/Iron-Mark/qwen-ui-lab",
+            "href": "https://github.com/Iron-Mark/QwenUI-Lab",
             "type": "github"
           },
           {
@@ -744,12 +743,12 @@
           }
         ],
         "proofCount": 1,
-        "lastVerified": "2026-07-06"
+        "lastVerified": "2026-11-24"
       },
       {
         "slug": "kopi-kount",
         "title": "Kopi Kount",
-        "summary": "Team-built promotional website for a Makati coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
+        "summary": "Team-built promotional website for an East Rembo coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
         "role": "Front-end Developer & UI/UX Designer",
         "timeframe": "Apr 2023",
         "status": "Live static promo site on Vercel",
@@ -1090,7 +1089,7 @@
         "slug": "how-i-adapt-to-ai",
         "title": "From Figma to Full-Stack: How I Work With AI Tools",
         "summary": "How AI coding tools helped me grow from UI/UX and frontend into full-stack work, and why I still start every build in Figma before opening a terminal.",
-        "publishedAt": "2026-09-14",
+        "publishedAt": "2026-11-14",
         "canonicalUrl": "https://www.marksiazon.dev/blogs/how-i-adapt-to-ai"
       },
       {
@@ -1127,7 +1126,7 @@
       {
         "id": "home-best-contexts",
         "question": "What contexts does Mark Siazon work best in?",
-        "answer": "AI workflows, mobile UX, Web3 trust flows, client launches",
+        "answer": "AI workflows, mobile UX, Web3 apps, client launches",
         "audiences": [
           "home"
         ]
@@ -1151,7 +1150,7 @@
       {
         "id": "recruiter-availability",
         "question": "Is Mark Siazon available for hire?",
-        "answer": "Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.",
+        "answer": "Open to product design, frontend, and full-stack roles. Available for product roles, freelance client builds, launch support, AI prototypes, and mobile UX cleanup. Open to Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.",
         "audiences": [
           "recruiter"
         ]
@@ -1215,7 +1214,7 @@
       {
         "id": "contact-work-scope",
         "question": "What work is Mark Siazon open to?",
-        "answer": "Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup.",
+        "answer": "Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, and Mobile UX cleanup.",
         "audiences": [
           "contact"
         ]
@@ -1231,7 +1230,7 @@
       {
         "id": "project-hireproof-role",
         "question": "What was Mark Siazon's role on HireProof?",
-        "answer": "Solo Product Designer & Full-stack Builder. Top outcome: Shipped surface, Live product + docs.",
+        "answer": "Solo Product Designer & Full-stack Builder.",
         "audiences": [
           "project:hireproof"
         ]
@@ -1239,7 +1238,7 @@
       {
         "id": "project-stellaroid-earn-what",
         "question": "What is Stellaroid Earn?",
-        "answer": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and an inspectable transaction trail.",
+        "answer": "Credential and graduate payment app on Stellar testnet, with Soroban contracts, Freighter signing, and a verifiable transaction trail.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -1247,7 +1246,7 @@
       {
         "id": "project-stellaroid-earn-role",
         "question": "What was Mark Siazon's role on Stellaroid Earn?",
-        "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Public review path, www.stellaroid.tech.",
+        "answer": "Solo Product Designer & Full-stack Developer.",
         "audiences": [
           "project:stellaroid-earn"
         ]
@@ -1263,7 +1262,7 @@
       {
         "id": "project-resqlink-role",
         "question": "What was Mark Siazon's role on ResQLink?",
-        "answer": "Team product designer and full-stack developer. Top outcome: Competition result, Productivity Champion.",
+        "answer": "Team product designer and full-stack developer.",
         "audiences": [
           "project:resqlink"
         ]
@@ -1279,7 +1278,7 @@
       {
         "id": "project-good-to-live-role",
         "question": "What was Mark Siazon's role on Good To Live Podcast Website?",
-        "answer": "Solo Product Designer & Full-stack Developer. Top outcome: Launch record, Public website.",
+        "answer": "Solo Product Designer & Full-stack Developer.",
         "audiences": [
           "project:good-to-live"
         ]
@@ -1295,7 +1294,7 @@
       {
         "id": "project-flowfit-role",
         "question": "What was Mark Siazon's role on FlowFit?",
-        "answer": "Full-stack Developer (Frontend-Focused) & Maintainer. Top outcome: Platform breadth, Watch + phone + web.",
+        "answer": "Full-stack Developer (Frontend-Focused) & Maintainer.",
         "audiences": [
           "project:flowfit"
         ]
@@ -1311,7 +1310,7 @@
       {
         "id": "project-linaw-role",
         "question": "What was Mark Siazon's role on Linaw AI?",
-        "answer": "Project Lead & Full-stack Developer. Top outcome: Highest technical implementation score, 24/30 in Technology.",
+        "answer": "Project Lead & Full-stack Developer.",
         "audiences": [
           "project:linaw"
         ]
@@ -1327,7 +1326,7 @@
       {
         "id": "project-baybayinscribe-role",
         "question": "What was Mark Siazon's role on BaybayInscribe?",
-        "answer": "Lead UI/UX and front-end developer. Top outcome: Revived guest showcase, Public practice.",
+        "answer": "Lead UI/UX and front-end developer.",
         "audiences": [
           "project:baybayinscribe"
         ]
@@ -1343,7 +1342,7 @@
       {
         "id": "project-kudlit-role",
         "question": "What was Mark Siazon's role on Kudlit?",
-        "answer": "Flutter Developer & UI/UX Lead. Top outcome: Public artifact, Android APK release.",
+        "answer": "Flutter Developer & UI/UX Lead.",
         "audiences": [
           "project:kudlit"
         ]
@@ -1359,7 +1358,7 @@
       {
         "id": "project-pulse-role",
         "question": "What was Mark Siazon's role on Pulse?",
-        "answer": "Flutter Developer (Full-stack) & Maintainer. Top outcome: Store readiness, Signed release candidate.",
+        "answer": "Flutter Developer (Full-stack) & Maintainer.",
         "audiences": [
           "project:pulse"
         ]
@@ -1375,7 +1374,7 @@
       {
         "id": "project-palengkepay-role",
         "question": "What was Mark Siazon's role on PalengkePay?",
-        "answer": "App Developer Contributor and Researcher. Top outcome: Public app, Mainnet + testnet PWAs.",
+        "answer": "App Developer Contributor and Researcher.",
         "audiences": [
           "project:palengkepay"
         ]
@@ -1391,7 +1390,7 @@
       {
         "id": "project-gawainyah-role",
         "question": "What was Mark Siazon's role on GawainYah?",
-        "answer": "Full-stack product builder. Top outcome: MVP shape, Pay per receipt task.",
+        "answer": "Full-stack product builder.",
         "audiences": [
           "project:gawainyah"
         ]
@@ -1407,7 +1406,7 @@
       {
         "id": "project-lexinsights-role",
         "question": "What was Mark Siazon's role on LexInsights?",
-        "answer": "Full-stack product builder. Top outcome: Resilient research, Providerless default.",
+        "answer": "Full-stack product builder.",
         "audiences": [
           "project:lexinsights"
         ]
@@ -1415,7 +1414,7 @@
       {
         "id": "project-qwen-ui-lab-what",
         "question": "What is Qwen UI Lab?",
-        "answer": "Screenshot-to-React workspace that turns UI screenshots into inspectable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
+        "answer": "Screenshot-to-React workspace that turns UI screenshots into editable React and Tailwind export packages with detection review, share routes, and local-analysis guardrails.",
         "audiences": [
           "project:qwen-ui-lab"
         ]
@@ -1423,7 +1422,7 @@
       {
         "id": "project-qwen-ui-lab-role",
         "question": "What was Mark Siazon's role on Qwen UI Lab?",
-        "answer": "Full-stack product builder. Top outcome: Inspectable exports, Package, not magic.",
+        "answer": "Full-stack product builder.",
         "audiences": [
           "project:qwen-ui-lab"
         ]
@@ -1431,7 +1430,7 @@
       {
         "id": "project-kopi-kount-what",
         "question": "What is Kopi Kount?",
-        "answer": "Team-built promotional website for a Makati coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
+        "answer": "Team-built promotional website for an East Rembo coffee shop, with responsive Bootstrap layouts, menu and catering sections, Google Maps, and a contact path.",
         "audiences": [
           "project:kopi-kount"
         ]
@@ -1439,7 +1438,7 @@
       {
         "id": "project-kopi-kount-role",
         "question": "What was Mark Siazon's role on Kopi Kount?",
-        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live site, kopi-kount.vercel.app.",
+        "answer": "Front-end Developer & UI/UX Designer.",
         "audiences": [
           "project:kopi-kount"
         ]
@@ -1447,7 +1446,7 @@
       {
         "id": "project-kopi-kount-scope",
         "question": "Is Kopi Kount a flagship production product?",
-        "answer": "No. WEBTOOLS and WEBAPPS group project for a real Makati café. Pages cover home, about, menu, events, gallery, staff, and contact.",
+        "answer": "No. WEBTOOLS and WEBAPPS group project for a real East Rembo café. Pages cover home, about, menu, events, gallery, staff, and contact.",
         "audiences": [
           "project:kopi-kount"
         ]
@@ -1463,7 +1462,7 @@
       {
         "id": "project-calbeans-coffee-role",
         "question": "What was Mark Siazon's role on Calbeans Coffee?",
-        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live site, calbeans-coffee.vercel.app.",
+        "answer": "Front-end Developer & UI/UX Designer.",
         "audiences": [
           "project:calbeans-coffee"
         ]
@@ -1487,7 +1486,7 @@
       {
         "id": "project-herons-nest-role",
         "question": "What was Mark Siazon's role on Heron's Nest?",
-        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Public repo, salig-dev/HeronsNest.",
+        "answer": "Front-end Developer & UI/UX Designer.",
         "audiences": [
           "project:herons-nest"
         ]
@@ -1511,7 +1510,7 @@
       {
         "id": "project-automata-winxp-role",
         "question": "What was Mark Siazon's role on Automata Case Studies?",
-        "answer": "Front-end Developer & UI/UX Designer. Top outcome: Live archive, acads-case-studies-automata.vercel.app.",
+        "answer": "Front-end Developer & UI/UX Designer.",
         "audiences": [
           "project:automata-winxp"
         ]
@@ -1535,7 +1534,7 @@
       {
         "id": "project-automata-acsad-gallery-role",
         "question": "What was Mark Siazon's role on ACSAD Gallery?",
-        "answer": "Web Developer & Maintainer. Top outcome: Live gallery, automata-case-studies-3-acsad.vercel.app.",
+        "answer": "Web Developer & Maintainer.",
         "audiences": [
           "project:automata-acsad-gallery"
         ]
@@ -1559,7 +1558,7 @@
       {
         "id": "project-elec3-cloud-portfolio-role",
         "question": "What was Mark Siazon's role on ELEC3 Cloud Portfolio?",
-        "answer": "Solo Full-stack Developer & Cloud Portfolio Author. Top outcome: Live archive, AE3 GitHub Pages.",
+        "answer": "Solo Full-stack Developer & Cloud Portfolio Author.",
         "audiences": [
           "project:elec3-cloud-portfolio"
         ]
@@ -1575,7 +1574,7 @@
       {
         "id": "project-frontend-mentor-lab-role",
         "question": "What was Mark Siazon's role on Frontend Mentor Lab?",
-        "answer": "Solo Front-end Developer & UI/UX Designer. Top outcome: Inspectable collection, 21 nested challenges.",
+        "answer": "Solo Front-end Developer & UI/UX Designer.",
         "audiences": [
           "project:frontend-mentor-lab"
         ]
@@ -2018,7 +2017,7 @@
         "compactResult": "Cum Laude & Dean's Lister (8/8)"
       },
       {
-        "title": "2nd Runner-up - InfotechOlympics, Android App Development (2024) with team GILAS Tech",
+        "title": "2nd Runner-up - Infotech Olympics, Android App Development (2024) with team GILAS Tech",
         "tags": [
           "Award",
           "Development"

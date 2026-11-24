@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-11-24
+Last updated: 2026-11-25
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -23,15 +23,15 @@ Product designer & full-stack developer in the Philippines who ships case-study-
 
 ### Availability
 
-**Open to product design, frontend, and AI workflow roles**
+**Open to product design, frontend, and full-stack roles**
 
-Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup.
+Available for product roles, freelance client builds, launch support, AI prototypes, and mobile UX cleanup.
 
 First message: Share the role, problem, timeline, and work you want reviewed.
 
 Note: No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
 
-Work scope: Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, Mobile UX cleanup
+Work scope: Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, Mobile UX cleanup
 
 ### Recruiter FAQ
 
@@ -41,7 +41,7 @@ Mark Siazon, also known as Iron Mark, is a Philippines-based product designer an
 
 ## Is Mark Siazon available for hire?
 
-Open to product design, frontend, and AI workflow roles. Best fit: product roles, client builds, launch support, case-study packages, and mobile UX cleanup. Open to Product roles, Client builds, Launch support, Case-study packages, AI workflow prototypes, Web3 trust flows, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
+Open to product design, frontend, and full-stack roles. Available for product roles, freelance client builds, launch support, AI prototypes, and mobile UX cleanup. Open to Product design roles, Frontend and full-stack roles, Freelance client builds, Launch support, AI workflow prototypes, and Mobile UX cleanup. No public booking link is published; reach out via LinkedIn or the hiring contact section on /recruiter.
 
 ## What should I include in a first message?
 
