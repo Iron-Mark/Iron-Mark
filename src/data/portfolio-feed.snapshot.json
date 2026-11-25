@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-24T18:05:13.467658+00:00",
+  "fetchedAt": "2026-11-25T17:29:23.208132+00:00",
   "feed": {
     "entity": {
       "name": "Mark Siazon",
@@ -53,7 +53,7 @@
         "summary": "AI workflow that helps applicants review suspicious job posts, recruiter messages, screenshots, and apply links before they commit time or personal data.",
         "role": "Solo Product Designer & Full-stack Builder",
         "timeframe": "2026",
-        "status": "Live trust workflow with provider and live-check boundaries",
+        "status": "Live web app; Chrome extension in store review",
         "ownership": "Lead owner",
         "builtBy": "solo",
         "lenses": [
