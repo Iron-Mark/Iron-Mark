@@ -1,6 +1,6 @@
 # Recruiter brief: Mark Siazon (@Iron-Mark)
 
-Last updated: 2026-11-25
+Last updated: 2026-11-26
 **Live brief (canonical):** https://www.marksiazon.dev/recruiter  
 **Proof matrix:** https://www.marksiazon.dev/proof
 
@@ -63,7 +63,7 @@ Review these six first: HireProof (AI trust and safety product design) at https:
 
 | Project | Role | Status | Link |
 |---------|------|--------|------|
-| HireProof | Solo Product Designer & Full-stack Builder | Live trust workflow with provider and live-check boundaries | https://www.marksiazon.dev/projects/hireproof |
+| HireProof | Solo Product Designer & Full-stack Builder | Live web app; Chrome extension in store review | https://www.marksiazon.dev/projects/hireproof |
 | Stellaroid Earn | Solo Product Designer & Full-stack Developer | Live Stellar testnet project | https://www.marksiazon.dev/projects/stellaroid-earn |
 | ResQLink | Team product designer and full-stack developer | Live platform and academic capstone | https://www.marksiazon.dev/projects/resqlink |
 | Good To Live Podcast Website | Solo Product Designer & Full-stack Developer | Live client project | https://www.marksiazon.dev/projects/good-to-live |
